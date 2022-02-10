@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged gsoc2019</title>
-  <updated>2022-02-10T04:41:28.391239+00:00</updated>
+  <updated>2022-02-10T04:47:44.255975+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/posts/tag/gsoc2019/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
