@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bksahu’s GSoC warp up</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/bksahus-gsoc-wrap-up.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <div class="section" id="bksahu-s-gsoc-warp-up">
+<h1>bksahu’s GSoC warp up<a class="headerlink" href="#bksahu-s-gsoc-warp-up" title="Permalink to this headline"></a></h1>
+<p>Hello everyone!</p>
+<p>GSoC 2019 has almost come to an end! It’s the time to wrap up this mega
+event started back in May 2019. Under the mentorship of Mentor Hayen, my
+learning experience has undergone a roller-coaster ride and it has not
+only boosted my growth as a developer but also as an individual. Over
+the last 3 months the following are my major contributions to this
+project:</p>
+<div class="section" id="built-ins-optimizations">
+<h2>Built-ins Optimizations<a class="headerlink" href="#built-ins-optimizations" title="Permalink to this headline"></a></h2>
+<ul>
+<li><dl>
+<dt>“any”: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/246">PR #246</a></dt><dd><ul>
+<li><p><cite>nuitka.nodes.BuiltinAnyNodes</cite> node added to optimize the “any”
+built-in.</p></li>
+<li><p>Developed an algorithm to predict the “any” for arguments
+having repetitive values at compile time. For example:</p>
+<blockquote>
+<div><p>any([0]*255) -&gt; False</p>
+<p>any([False, False, True]) -&gt; True</p>
+</div></blockquote>
+</li>
+<li><p>Extended support for <cite>range</cite>, <cite>set</cite> and <cite>dict</cite> built-ins.</p></li>
+<li><p>Added the optimized C side support too</p></li>
+<li><p>Added a method <cite>getMetaClassBase</cite> to make Python 2 and Python 3
+compatible while working with metaclasses.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Issue reported and closed <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/349">Issue #349</a></dt><dd><ul class="simple">
+<li><p>Created a new module <cite>nuitka.nodes.IterationHandles</cite> to work
+with iterables.</p></li>
+<li><p>Added support of Iteration for non-mutable types.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>“all”: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/407">PR #407</a></dt><dd><ul>
+<li><p>Added <cite>nuitka.nodes.BuiltinAllNodes</cite> to optimize the “all”
+built-ins.</p></li>
+<li><p>Developed an algorithm similar to “any” to predict the “all”
+arguments. For example:</p>
+<blockquote>
+<div><p>all([0, 0, 1]) -&gt; False</p>
+<p>all([True]*100) -&gt; True</p>
+</div></blockquote>
+</li>
+<li><p>Other similar optimizations are done like “any” built-in.</p></li>
+<li><p>Additionally, added a new testing module
+<cite>tests.optimizations.CommonOptimizations</cite> to test the built-ins
+optimizations at the same place.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“abs”: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/419">PR #419</a></dt><dd><ul class="simple">
+<li><p>Added new operation node <cite>ExpressionOperationAbs</cite> to optimize
+the <cite>abs</cite> built-in.</p></li>
+<li><p>Manually added <cite>shapeSlotAbs</cite> to different shapes.</p></li>
+<li><p>Finally pre-computed the compile time constant <cite>abs</cite></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>“max” and “min”: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/442">PR #442</a></dt><dd><ul>
+<li><p>This PR is work in progress and is half complete.</p></li>
+<li><p>This is the first optimizations in which I used reformulations
+instead of added in a new node.</p></li>
+<li><p>Pseudo-code of “min” reformulation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+ <span class="n">tmp_arg1</span> <span class="o">=</span> <span class="n">a</span>
+ <span class="n">tmp_arg2</span> <span class="o">=</span> <span class="n">b</span>
+ <span class="n">tmp_arg3</span> <span class="o">=</span> <span class="n">c</span>
+ <span class="o">...</span>
+ <span class="n">result</span> <span class="o">=</span> <span class="n">tmp_arg1</span>
+ <span class="k">if</span> <span class="n">keyfunc</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="c1"># can be decided during re-formulation</span>
+     <span class="n">tmp_key_result</span> <span class="o">=</span> <span class="n">keyfunc</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+     <span class="n">tmp_key_candidate</span> <span class="o">=</span> <span class="n">keyfunc</span><span class="p">(</span><span class="n">tmp_arg2</span><span class="p">)</span>
+     <span class="k">if</span> <span class="n">tmp_key_candidate</span> <span class="o">&lt;</span> <span class="n">tmp_key_result</span><span class="p">:</span>
+         <span class="n">result</span> <span class="o">=</span> <span class="n">tmp_arg2</span>
+         <span class="n">tmp_key_result</span> <span class="o">=</span> <span class="n">tmp_key_candidate</span>
+     <span class="n">tmp_key_candidate</span> <span class="o">=</span> <span class="n">keyfunc</span><span class="p">(</span><span class="n">tmp_arg3</span><span class="p">)</span>
+     <span class="k">if</span> <span class="n">tmp_key_candidate</span> <span class="o">&lt;</span> <span class="n">tmp_key_result</span><span class="p">:</span>
+         <span class="n">result</span> <span class="o">=</span> <span class="n">tmp_arg3</span>
+         <span class="n">tmp_key_result</span> <span class="o">=</span> <span class="n">tmp_key_candidate</span>
+     <span class="o">...</span>
+ <span class="k">else</span><span class="p">:</span>
+     <span class="k">if</span> <span class="n">tmp_arg2</span> <span class="o">&lt;</span> <span class="n">result</span><span class="p">:</span>
+         <span class="n">result</span> <span class="o">=</span> <span class="n">tmp_arg2</span>
+     <span class="k">if</span> <span class="n">tmp_arg3</span> <span class="o">&lt;</span> <span class="n">result</span><span class="p">:</span>
+         <span class="n">result</span> <span class="o">=</span> <span class="n">tmp_arg3</span>
+     <span class="o">...</span>
+  <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</li>
+<li><p>Adding support for <cite>keyfunc</cite> is pending</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>“zip”: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/462">PR #462</a></dt><dd><ul class="simple">
+<li><p>This built-in uses both types of optimizations that the
+previous built-ins optimizations used.</p></li>
+<li><p><cite>zip</cite> for Python 2 uses the reformulations.</p></li>
+<li><p>Pseudo-code of “zip” reformulation:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="o">...</span> <span class="p">):</span>
+<span class="c1"># First assign, to preserve order of execution,</span>
+<span class="c1"># the arguments might be complex expressions.</span>
+<span class="n">tmp_arg1</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">tmp_arg2</span> <span class="o">=</span> <span class="n">b</span>
+<span class="n">tmp_arg3</span> <span class="o">=</span> <span class="n">c</span>
+<span class="o">...</span>
+<span class="n">tmp_iter_1</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">tmp_arg1</span><span class="p">)</span>
+<span class="n">tmp_iter_2</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">tmp_arg2</span><span class="p">)</span>
+<span class="n">tmp_iter_3</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">tmp_arg3</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="c1"># could be more</span>
+<span class="n">tmp_result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">tmp_result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="p">(</span>
+                 <span class="nb">next</span><span class="p">(</span><span class="n">tmp_iter_1</span><span class="p">),</span>
+                 <span class="nb">next</span><span class="p">(</span><span class="n">tmp_iter_2</span><span class="p">),</span>
+                 <span class="nb">next</span><span class="p">(</span><span class="n">tmp_iter_3</span><span class="p">),</span>
+                 <span class="o">...</span>
+            <span class="p">)</span>
+         <span class="p">)</span>
+   <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+       <span class="k">pass</span>
+ <span class="k">return</span> <span class="n">tmp_result</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><cite>zip</cite> for Python 3 needs a new node that calls the <cite>zip</cite>
+because unlike <cite>zip</cite> in Python 2, <cite>zip</cite> in Python 3 returns a
+<cite>zipobject</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="test-suite">
+<h2>Test suite<a class="headerlink" href="#test-suite" title="Permalink to this headline"></a></h2>
+<ul>
+<li><dl>
+<dt>Search mode “All”: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/378">PR #378</a></dt><dd><ul class="simple">
+<li><p>In the test suite, I added a new search mode “all” that will
+test all the modules and return all the results at once. For
+example:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./tests/basics/run_all.py all
+   Using concrete python <span class="m">2</span>.7.12 on x86_64
+   Comparing output of <span class="s1">&#39;Asserts.py&#39;</span> using <span class="s1">&#39;/usr/bin/python&#39;</span> with flags silent, expect_success, remove_output,     recurse_all, original_file, cpython_cache, plugin_enable:pylint-warnings ...
+   .
+   .
+   .
+   .
+   Total <span class="m">0</span> error<span class="o">(</span>s<span class="o">)</span> found.
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Search mode “Only”: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/333">PR #333</a></dt><dd><ul class="simple">
+<li><p>Added “only” search mode to test only a single module. For
+example:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./tests/basics/run_all.py only BuiltinsTest.py
+   Using concrete python <span class="m">2</span>.7.12 on x86_64
+   Skipping Asserts.py
+   Skipping Assignments.py
+   Skipping BigConstants.py
+   Skipping Branching.py
+   Skipping BuiltinOverload.py
+   Skipping BuiltinSuper.py
+   Comparing output of <span class="s1">&#39;BuiltinsTest.py&#39;</span> using <span class="s1">&#39;/usr/bin/python&#39;</span> with flags silent, expect_success, remove_output, recurse_all, original_file, cpython_cache, plugin_enable:pylint-warnings ...
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Reported and closed Issue #334: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/336">PR #336</a></dt><dd><ul class="simple">
+<li><p>Fixed the autoformat bug by reading and writing the files in
+bytes instead of string.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Nuitka git work flow: <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/485">PR #485</a></p></li>
+</ul>
+<p>And other minor doc fixes are added with their respective pull requests.</p>
+</div>
+<div class="section" id="what-i-learned">
+<h2>What I learned<a class="headerlink" href="#what-i-learned" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Learned the software engineering principles and how to keep my work
+clean.</p></li>
+<li><p>I also learned how to effectively use software designing principles
+like <a class="reference external" href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>
+and <a class="reference external" href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a>.</p></li>
+<li><p>Got exposed to Nuitka internals which helped me to better understand
+how compilers in general work.</p></li>
+<li><p>Explored how CPython works internally.</p></li>
+<li><p>Got some great advice from Mentor Hayen about starting my
+professional career in Software engineering.</p></li>
+</ul>
+<p>Overall, it was a great experience to be a part of Nuitka :)</p>
+<div class="line-block">
+<div class="line">Yours,</div>
+<div class="line">Batakrishna</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="tommy-gsoc-summary.html">
+       Intro
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nuitka-release-066.html">
+      Nuitka Release 0.6.6 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/bksahus-gsoc-wrap-up.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/bksahus-gsoc-wrap-up.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/bksahus-gsoc-wrap-up.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

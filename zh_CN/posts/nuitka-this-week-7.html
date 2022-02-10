@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+    <title>Nuitka this week #7</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="canonical" href="https://daobook.github.io/nuitka-doc/posts/nuitka-this-week-7.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../posts/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+          
+<h2>
+   
+  22 September 2018 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    >作者:</span
+  >
+   
+  <a href="author/kay-hayen.html">Kay Hayen</a>  
+</li>
+    
+<li id="tags">
+  <span
+    >标签: </span
+  >
+   
+  <a href="tag/python.html">Python</a>   
+  <a href="tag/compiler.html">compiler</a>   
+  <a href="tag/nuitka.html">Nuitka</a>   
+  <a href="tag/ntw.html">NTW</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../posts.html">最近帖子</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="next-nuitka-live-stream-30-01-2022.html"
+      >30 January - Next Nuitka Live Stream</a
+    >
+  </li>
+  
+  <li>
+    <a href="first-nuitka-live-stream.html"
+      >14 January - First Nuitka Live Stream</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0619.html"
+      >12 January - Nuitka Release 0.6.19</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0618.html"
+      >11 December - Nuitka Release 0.6.18</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0617.html"
+      >11 November - Nuitka Release 0.6.17</a
+    >
+  </li>
+  
+</ul>
+
+<h3><a href="tag.html">标签</a></h3>
+<style type="text/css">
+  ul.ablog-cloud {
+    list-style: none;
+    overflow: auto;
+  }
+  ul.ablog-cloud li {
+    float: left;
+    height: 20pt;
+    line-height: 18pt;
+    margin-right: 5px;
+  }
+  ul.ablog-cloud a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  li.ablog-cloud-1 {
+    font-size: 80%;
+  }
+  li.ablog-cloud-2 {
+    font-size: 95%;
+  }
+  li.ablog-cloud-3 {
+    font-size: 110%;
+  }
+  li.ablog-cloud-4 {
+    font-size: 125%;
+  }
+  li.ablog-cloud-5 {
+    font-size: 140%;
+  }
+</style>
+<ul class="ablog-cloud">
+   
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/android.html">Android</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/debian.html">Debian</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/ntw.html">NTW</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/nikola.html">Nikola</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/nuitka.html">Nuitka</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/python.html">Python</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/windows.html">Windows</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/automation.html">automation</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/benchmark.html">benchmark</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/compiler.html">compiler</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/conference.html">conference</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/europython.html">europython</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/family.html">family</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/git.html">git</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/gsoc2019.html">gsoc2019</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/physics.html">physics</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/portrait.html">portrait</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/presentation.html">presentation</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/pypi.html">pypi</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/pytest.html">pytest</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/quiz.html">quiz</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/standalone.html">standalone</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/tests.html">tests</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/video.html">video</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="archive.html">归档</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="2022.html">2022 (3)</a>
+  </li>
+    
+  <li>
+    <a href="2021.html">2021 (8)</a>
+  </li>
+    
+  <li>
+    <a href="2020.html">2020 (5)</a>
+  </li>
+    
+  <li>
+    <a href="2019.html">2019 (14)</a>
+  </li>
+    
+  <li>
+    <a href="2018.html">2018 (17)</a>
+  </li>
+    
+  <li>
+    <a href="2017.html">2017 (4)</a>
+  </li>
+    
+  <li>
+    <a href="2016.html">2016 (8)</a>
+  </li>
+    
+  <li>
+    <a href="2015.html">2015 (16)</a>
+  </li>
+    
+  <li>
+    <a href="2014.html">2014 (12)</a>
+  </li>
+    
+  <li>
+    <a href="2013.html">2013 (24)</a>
+  </li>
+    
+  <li>
+    <a href="2012.html">2012 (21)</a>
+  </li>
+    
+  <li>
+    <a href="2011.html">2011 (25)</a>
+  </li>
+    
+  <li>
+    <a href="2010.html">2010 (19)</a>
+  </li>
+   
+</ul>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nuitka-design-philosophy">
+   Nuitka Design Philosophy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ui-rework">
+   UI rework
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goto-generators">
+   Goto Generators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#benchmarks">
+   Benchmarks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#twitter">
+   Twitter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help-wanted">
+   Help Wanted
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#egg-files-in-pythonpath">
+   Egg files in PYTHONPATH
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#certifi">
+   Certifi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compatibility-with-pkg-resources">
+   Compatibility with pkg_resources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plans">
+   Plans
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#donations">
+   Donations
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Nuitka this week #7</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nuitka-design-philosophy">
+   Nuitka Design Philosophy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ui-rework">
+   UI rework
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goto-generators">
+   Goto Generators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#benchmarks">
+   Benchmarks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#twitter">
+   Twitter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help-wanted">
+   Help Wanted
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#egg-files-in-pythonpath">
+   Egg files in PYTHONPATH
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#certifi">
+   Certifi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compatibility-with-pkg-resources">
+   Compatibility with pkg_resources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plans">
+   Plans
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#donations">
+   Donations
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="nuitka-this-week-7">
+<h1><a class="toc-backref" href="#id3">Nuitka this week #7</a><a class="headerlink" href="#nuitka-this-week-7" title="永久链接至标题">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#nuitka-this-week-7" id="id3">Nuitka this week #7</a></p>
+<ul>
+<li><p><a class="reference internal" href="#nuitka-design-philosophy" id="id4">Nuitka Design Philosophy</a></p></li>
+<li><p><a class="reference internal" href="#ui-rework" id="id5">UI rework</a></p></li>
+<li><p><a class="reference internal" href="#goto-generators" id="id6">Goto Generators</a></p></li>
+<li><p><a class="reference internal" href="#benchmarks" id="id7">Benchmarks</a></p></li>
+<li><p><a class="reference internal" href="#twitter" id="id8">Twitter</a></p></li>
+<li><p><a class="reference internal" href="#help-wanted" id="id9">Help Wanted</a></p></li>
+<li><p><a class="reference internal" href="#egg-files-in-pythonpath" id="id10">Egg files in PYTHONPATH</a></p></li>
+<li><p><a class="reference internal" href="#certifi" id="id11">Certifi</a></p></li>
+<li><p><a class="reference internal" href="#compatibility-with-pkg-resources" id="id12">Compatibility with pkg_resources</a></p></li>
+<li><p><a class="reference internal" href="#plans" id="id13">Plans</a></p></li>
+<li><p><a class="reference internal" href="#donations" id="id14">Donations</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="nuitka-design-philosophy">
+<h2><a class="toc-backref" href="#id4">Nuitka Design Philosophy</a><a class="headerlink" href="#nuitka-design-philosophy" title="永久链接至标题">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>I wrote this as part of a discussion recently, and I think it makes
+sense to share my take on Nuitka and design. This is a lot text
+though, feel free to skip forward.</p>
+</div>
+<p>The issue with Nuitka and design mainly for me is that the requirements
+for many parts were and are largely unknown to me, until I actually
+start to do it.</p>
+<p>My goto generators approach worked out as originally designed, and that
+felt really cool for once, but the whole “C type” thing was a total
+unknown to me, until it all magically took form.</p>
+<p>But rather I know it will evolve further if I go from “bool” (complete
+and coming for 0.6.0) via “void” (should be complete already, but
+enabling will happen only for 0.6.1 likely) to “int”, not sure how long
+that will take.</p>
+<p>I really think Nuitka, unlike other software that I have designed, is
+more of a prototype project that gradually turns more and more into the
+real thing.</p>
+<p>I have literally spent <em>years</em> to inject proper design in steps into the
+optimization phase, what I call SSA, value tracing, and it is very much
+there now. I am probably going to spend similar amounts of time, to
+execute on applying type inference results to the code generation.</p>
+<p>So I turned that into something working with code strings to something
+working with variable declaration objects knowing their type for the
+goto generators, aiming at C types generally. All the while carrying the
+full weight of passing every compatibility test there is.</p>
+<p>Then e.g. suddenly cleaning up module variables to no longer have their
+special branch, but a pseudo C type, that makes them like everything
+else. Great. But when I first introduced the new thing, I postponed
+that, because I could sooner apply its benefits to some things and get
+experience from it.</p>
+<p>While doing partial solutions, the design sometimes horribly degrades,
+but only until some features can carry the full weight, and/or have been
+explored to have their final form.</p>
+<p>Making a whole Nuitka design upfront and then executing it, would
+instead give a very high probability of failing in the real world. I am
+therefore applying the more agile approach, where I make things work
+first. And then continue to work while I clean it up.</p>
+<p>For every feature I added, I actively go out, and change the thing, that
+made it hard or even fail. Always. I think Nuitka is largely developed
+by cleanups and refactoring. Goto generators were a fine example of
+that, solving many of the issues by injecting variable declarations
+objects into code generation, made it easy to indicate storage (heap or
+object or stack) right there.</p>
+<p>That is not to say that Nuitka didn’t have the typical compiler design.
+Like parsing inputs, optimizing a tree internally, producing outputs.
+But that grand top level design only tells you the obvious things really
+and is stolen anyway from knowing similar projects like gcc.</p>
+<p>There always were of course obvious designs for Nuitka, but that really
+never was what anybody would consider to make a Python compiler hard.
+But for actual compatibility of CPython, so many details were going to
+require examination with no solutions known ahead of time.</p>
+<p>I guess, I am an extreme programmer, or agile, or however they call it
+these days. At least for Nuitka. In my professional life, I have
+designed software for ATC on the drawing board, then in paper, and then
+in code, the design just worked, and got operational right after
+completion, which is rare I can tell you.</p>
+<p>But maybe that is what keeps me exciting about Nuitka. How I need to go
+beyond my abilities and stable ground to achieve it.</p>
+<p>But the complexity of Nuitka is so dramatically higher than anything I
+ever did. It is doing a complicated, i.e. detail rich work, and then it
+also is doing hard jobs where many things have to play together. And the
+wish to have something working before it is completed, if it ever is,
+makes things very different from projects I typically did.</p>
+<p>So the first version of Nuitka already had a use, and when I publicly
+showed it first, was capable of handling most complex programs, and the
+desire was to evolve gradually.</p>
+<p>I think I have described this elsewhere, but for large parts of the well
+or bad designed solutions of Nuitka, there is reliable ways of
+demonstrating it works correctly. Far better than I have ever
+encountered. i believe it’s the main reason I managed to get this off
+the ground is that. Having a test “oracle” is what makes Nuitka special,
+i.e. comparing to existing implementations.</p>
+<p>Like a calculator can be tested comparing it to one of the many already
+perfect ones out there. That again makes Nuitka relatively easy despite
+the many details to get right, there is often an easy way to tell
+correct from wrong.</p>
+<p>So for me, Nuitka is on the design level, something that goes through
+many iterations, discovery, prototyping, and is actually really exciting
+in that.</p>
+<p>Compilers typically are boring. But for Nuitka that is totally not the
+case, because Python is not made for it. Well, that*s technically
+untrue, lets say not for optimizing compilers, not for type inference,
+etc.</p>
+</div>
+<div class="section" id="ui-rework">
+<h2><a class="toc-backref" href="#id5">UI rework</a><a class="headerlink" href="#ui-rework" title="永久链接至标题">¶</a></h2>
+<p>Following up on discussion on the mailing list, the user interface of
+Nuitka will become more clear with <code class="docutils literal notranslate"><span class="pre">--include-*</span></code> options and
+<code class="docutils literal notranslate"><span class="pre">--[no]follow-import*</span></code> options that better express what is going to
+happen.</p>
+<p>Also the default for following with extension modules is now precisely
+what you say, as going beyond what you intend to deliver makes no sense
+in the normal case.</p>
+</div>
+<div class="section" id="goto-generators">
+<h2><a class="toc-backref" href="#id6">Goto Generators</a><a class="headerlink" href="#goto-generators" title="永久链接至标题">¶</a></h2>
+<p>Now release as 0.5.33 and there has been little regressions so far, but
+the one found is only in the pre-release of 0.6.0 so use that instead if
+you encounter a C compilation error.</p>
+</div>
+<div class="section" id="benchmarks">
+<h2><a class="toc-backref" href="#id7">Benchmarks</a><a class="headerlink" href="#benchmarks" title="永久链接至标题">¶</a></h2>
+<p>The performance regressions fixed for 0.6.0 impact <code class="docutils literal notranslate"><span class="pre">pystone</span></code> by a lot,
+loops were slower, so were subscripts with constant integer indexes. It
+is a pity these were introduced in previous releases during refactorings
+without noticing.</p>
+<p>We should strive to have benchmarks with trends. Right now Nuitka
+speedcenter cannot do it. Focus should definitely go to this. Like I
+said, after 0.6.0 release, this will be a priority, to make them more
+useful.</p>
+</div>
+<div class="section" id="twitter">
+<h2><a class="toc-backref" href="#id8">Twitter</a><a class="headerlink" href="#twitter" title="永久链接至标题">¶</a></h2>
+<p>I continue to be active there. I just put out a poll about the comment
+system, and disabling Disqus comments I will focus on Twitter for web
+site comments too now.</p>
+<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw">Follow &#64;kayhayen</a></p>
+<p>And lets not forget, having followers make me happy. So do re-tweets.</p>
+</div>
+<div class="section" id="help-wanted">
+<h2><a class="toc-backref" href="#id9">Help Wanted</a><a class="headerlink" href="#help-wanted" title="永久链接至标题">¶</a></h2>
+<p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a>
+and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
+<p>Nuitka definitely needs more people to work on it.</p>
+</div>
+<div class="section" id="egg-files-in-pythonpath">
+<h2><a class="toc-backref" href="#id10">Egg files in PYTHONPATH</a><a class="headerlink" href="#egg-files-in-pythonpath" title="永久链接至标题">¶</a></h2>
+<p>This is a relatively old issue that now got addressed. Basically these
+should be loaded from for compilation. Nuitka now unpacks them to a
+cache folder so it can read source code from them, so this apparently
+rare use case works now, yet again improving compatibility.</p>
+<p>Will be there for 0.6.0 release.</p>
+</div>
+<div class="section" id="certifi">
+<h2><a class="toc-backref" href="#id11">Certifi</a><a class="headerlink" href="#certifi" title="永久链接至标题">¶</a></h2>
+<p>Seems request module sometimes uses that. Nuitka now includes that data
+file starting with 0.6.0 release.</p>
+</div>
+<div class="section" id="compatibility-with-pkg-resources">
+<h2><a class="toc-backref" href="#id12">Compatibility with pkg_resources</a><a class="headerlink" href="#compatibility-with-pkg-resources" title="永久链接至标题">¶</a></h2>
+<p>It seems that getting “distributions” and taking versions from there, is
+really a thing, and Nuitka fails pkg_resources requirement checks in
+standalone mode at least, and that is of course sad.</p>
+<p>I am currently researching how to fix that, not sure yet how to do it.
+But some forms of Python installs are apparently very affected by it. I
+try looking into its data gathering, maybe compiled modules can be
+registered there too. It seems to be based on file system scans of its
+own makings, but there is always a monkey patch possible to make it
+better.</p>
+</div>
+<div class="section" id="plans">
+<h2><a class="toc-backref" href="#id13">Plans</a><a class="headerlink" href="#plans" title="永久链接至标题">¶</a></h2>
+<p>Still working on the 0.6.0 release, cleaning up open ends only. Release
+tests seem to be pretty good looking. The UI changes and stuff are a
+good time to be done now, but delay things, and there is a bunch of
+small things that are low hanging fruits while I wait for test results.</p>
+<p>But since it fixes so many performance things, it really ought to be out
+any day now.</p>
+<p>Also the in-place operations stuff, I added it to 0.6.0 too, just
+because it feels very nice, and improves some operations by a lot too.
+Initially I had made a cut for 0.6.1 already, but that is no more.</p>
+</div>
+<div class="section" id="donations">
+<h2><a class="toc-backref" href="#id14">Donations</a><a class="headerlink" href="#donations" title="永久链接至标题">¶</a></h2>
+<p>If you want to help, but cannot spend the time, please consider to
+donate to Nuitka, and go here:</p>
+<p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="nuitka-release-0533.html">
+       Nuitka Release 0.5.33
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-release-060.html">
+      Nuitka Release 0.6.0 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 Kay Hayen<br/>
+    
+        &copy; 版权 2022, Kay Hayen and Nuitka Contributors.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

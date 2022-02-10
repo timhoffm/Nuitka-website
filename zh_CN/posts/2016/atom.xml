@@ -1,0 +1,1065 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
+  <id>https://nuitka.net</id>
+  <title>Nuitka Blog - Posted in 2016</title>
+  <updated>2022-02-10T04:41:22.241089+00:00</updated>
+  <link href="https://nuitka.net"/>
+  <link href="https://nuitka.net/posts/2016/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-0518.html</id>
+    <title>Nuitka Release 0.5.18</title>
+    <updated>2016-01-16T11:41:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="nuitka-release-0-5-18"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release mainly has a scalability focus. While there are few
+compatibility improvements, the larger goal has been to make Nuitka
+compilation and the final C compilation faster.&lt;/p&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Compatibility: The nested arguments functions can now be called using
+their keyword arguments.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;someFunction&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+
+
+&lt;span class="n"&gt;someFunction&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compatibility: Generators with Python3.4 or higher now also have a
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__del__&lt;/span&gt;&lt;/code&gt; attribute, and therefore properly participate in
+finalization. This should improve their interactions with garbage
+collection reference cycles, although no issues had been observed so
+far.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Was outputting command line arguments debug information at
+program start. Fixed in 0.5.17.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="optimization"&gt;
+&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Code generated for parameter parsing is now a &lt;em&gt;lot&lt;/em&gt; less verbose.
+Python level loops and conditionals to generate code for each
+variable has been replaced with C level generic code. This will speed
+up the backend compilation by a lot.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Function calls with constant arguments were speed up specifically, as
+their call is now fully prepared, and yet using less code. Variable
+arguments are also faster, and all defaulted arguments are also much
+faster. Method calls are not affected by these improvements though.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Nested argument functions now have a quick call entry point as well,
+making them faster to call too.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;slice&lt;/span&gt;&lt;/code&gt; built-in, and internal creation of slices (e.g. in
+re-formulations of Python3 slices as subscripts) cannot raise.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Avoid inclusion of bytecode of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;unittest.test&lt;/span&gt;&lt;/code&gt;,
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sqlite3.test&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;distutils.test&lt;/span&gt;&lt;/code&gt;, and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ensurepip&lt;/span&gt;&lt;/code&gt;. These are
+not needed, but simply bloat the amount of bytecode used on e.g.
+macOS.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Speed up compilation with Nuitka itself by avoid to copying and
+constructing variable lists as much as possible using an always
+accurate variable registry.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cleanups"&gt;
+&lt;h2&gt;Cleanups&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Nested argument functions of Python2 are now re-formulated into a
+wrapping function that directly calls the actual function body with
+the unpacking of nested arguments done in nodes explicitly. This
+allows for better optimization and checks of these steps and
+potential in-lining of these functions too.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Unified slice object creation and built-in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;slice&lt;/span&gt;&lt;/code&gt; nodes, these
+were two distinct nodes before.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The code generation for all statement kinds is now done via
+dispatching from a dictionary instead of long &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;elif&lt;/span&gt;&lt;/code&gt; chains.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Named nodes more often consistently, e.g. all loop related nodes
+start with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Loop&lt;/span&gt;&lt;/code&gt; now, making them easier to group.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Parameter specifications got simplified to work without variables
+where it is possible.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="organisational"&gt;
+&lt;h2&gt;Organisational&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Nuitka is now available on the social code platforms gitlab as well.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Long standing weaknesses have been addressed in this release, also quite
+a few structural cleanups have been performed, e.g. strengthening the
+role of the variable registry to always be accurate, is groundlaying to
+further improvement of optimization.&lt;/p&gt;
+&lt;p&gt;However, this release cycle was mostly dedicated to performance of the
+actual compilation, and more accurate information was needed to e.g. not
+search for information that should be instant.&lt;/p&gt;
+&lt;p&gt;Upcoming releases will focus on usability issues and further
+optimization, it was nice however to see speedups of created code even
+from these scalability improvements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-0518.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <published>2016-01-16T11:41:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-progress-winter-2015.html</id>
+    <title>Nuitka Progress in 2015</title>
+    <updated>2016-01-29T08:08:54+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="nuitka-progress-in-2015"&gt;
+
+&lt;p&gt;For quite a bit, there have been no status posts, not for lack of news,
+but a lot has happened indeed. I just seem to post a &lt;em&gt;lot&lt;/em&gt; more to the
+mailing list than I do here. Especially about unfinished stuff, which is
+essentially for a project like Nuitka everything that’s going on.&lt;/p&gt;
+&lt;p&gt;Like I previously said, I am shy to make public postings about
+unfinished stuff and that’s going to continue. But I am breaking it, to
+keep you up to date with where Nuitka has been going lately.&lt;/p&gt;
+&lt;p&gt;And with release focuses, I have been making some actual changes that I
+think are worth talking about.&lt;/p&gt;
+&lt;div class="contents topic" id="id1"&gt;
+&lt;p class="topic-title"&gt;目录&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#nuitka-progress-in-2015" id="id2"&gt;Nuitka Progress in 2015&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#ssa-single-state-assignment-form" id="id3"&gt;SSA (Single State Assignment Form)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#function-inlining" id="id4"&gt;Function Inlining&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#scalability" id="id5"&gt;Scalability&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#parameter-parsing" id="id6"&gt;Parameter Parsing&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#variable-error-messages" id="id7"&gt;Variable Error Messages&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#code-objects" id="id8"&gt;Code Objects&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#optimization" id="id9"&gt;Optimization&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#compatibility" id="id10"&gt;Compatibility&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#performance" id="id11"&gt;Performance&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#graphs-and-benchmarks" id="id12"&gt;Graphs and Benchmarks&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#standalone" id="id13"&gt;Standalone&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#other-stuff" id="id14"&gt;Other Stuff&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#europython-2015" id="id15"&gt;EuroPython 2015&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#funding" id="id16"&gt;Funding&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#collaborators" id="id17"&gt;Collaborators&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#videos" id="id18"&gt;Videos&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#twitter" id="id19"&gt;Twitter&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#future" id="id20"&gt;Future&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#release-focus" id="id21"&gt;Release Focus&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="#summary" id="id22"&gt;Summary&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ssa-single-state-assignment-form"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;SSA (Single State Assignment Form)&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The SSA using release has been made last summer. Recent releases have
+lifted more and more restrictions on where and now it is applied and
+made sure the internal status is consistent and true. And that trend is
+going to continue even more.&lt;/p&gt;
+&lt;p&gt;For shared variables (closure variables and module variables), Nuitka is
+still too conservative to make optimization. Code does annotate value
+escapes, but it’s not yet trusting it. The next releases will focus on
+lifting that kind of restriction, and for quality of result, that will
+mean making a huge jump ahead once that works, so module variables used
+locally a lot will become even faster to use then and subject to static
+optimization too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="function-inlining"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Function Inlining&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;When doing my talk to EuroPython 2015, I was demoing it that, and
+indeed, what a break through. The circumstances under which it is done
+are still far too limited though. Essentially that ability is there, but
+will not normally be noticeable yet due to other optimization, e.g.
+functions are most often module variables and not local to the using
+function.&lt;/p&gt;
+&lt;p&gt;More code generation improvements will be needed to be able to inline
+functions that might raise an exception. Also the “cost” of inlining a
+function is also very much an unsolved issue. It will become the focus
+again, once the SSA use as indicated above expands to module variables,
+as then inlining other things than local functions will be possible too.&lt;/p&gt;
+&lt;p&gt;So there is a lot of things to do for this to really make a difference
+to your programs. But it’s still great to have that part solved so far.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="scalability"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Scalability&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="parameter-parsing"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id6"&gt;Parameter Parsing&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Recent releases have replaced some of the oldest code of Nuitka, the one
+that generated special argument parsing for each function individually,
+now replaced with generic code, that surprisingly is often even faster,
+although quick entry points were tough to beat.&lt;/p&gt;
+&lt;p&gt;That gives the C backend compiler a much easier time. Previously 3 C
+functions were created per Python level function, two of which could get
+really big with many arguments, and these are no more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="variable-error-messages"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id7"&gt;Variable Error Messages&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Something similar was going on with variable error messages. Each had
+their exception value pre-computed and created at module load time. Most
+of these are of course unused. This has been replaced with code that
+generates it on the fly, resulting in a lot less constants code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="code-objects"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id8"&gt;Code Objects&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;And another thing was to look after code objects, of which there often
+were two for each Python level function. The one used or the frame
+during run time and the one used in the function object, differered
+often, sometimes by small things like flags or local variable names.&lt;/p&gt;
+&lt;p&gt;That of course was just the result of not passing that along, but
+created cached objects with hopefully the same options, but that not
+being true.&lt;/p&gt;
+&lt;p&gt;Resolving that, and sharing the code object used for creation and then
+the frame is gives less complex C code too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="optimization"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id9"&gt;Optimization&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The scalability of Nuitka also depends much on generated code size. With
+the optimization become more clever, less code is generated, and that
+trend will continue as more structural optimization are applied.&lt;/p&gt;
+&lt;p&gt;Every time e.g. an exception is identified to not happen, this removes
+the corresponding error exits from the C code, which then makes it
+easier for the C compiler. Also more specialized code as we now have or
+dictionaries, is often less complex to it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="compatibility"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;Compatibility&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Important things have happened here. Full compatibility mode is planned
+to not be the default anymore in upcoming releases, but that will only
+mean to not be stupid compatible, but to e.g. have more complete error
+messages than CPython, more correct line numbers, or for version
+differences, the best Python version behaviour.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;The stable release has full support for Python 3.5, including the new
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;async&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;await&lt;/span&gt;&lt;/code&gt; functions. So recent releases can pronounce it
+as fully supported which was quite a feat.&lt;/p&gt;
+&lt;p&gt;I am not sure, if you can fully appreciate the catch up game needed to
+play here. CPython clearly implements a lot of features, that I have to
+emulate too. That’s going to repeat for every major release.&lt;/p&gt;
+&lt;p&gt;The good news is that the function type of Nuitka is now specialized to
+the generators and classes, and that was a massive cleanup of its core
+that was due anyway. The generators have no more their own function
+creation stuff and that has been helpful with a lot of other stuff.&lt;/p&gt;
+&lt;p&gt;Another focus driven from Python3, is to get ahead with type shape
+tracing and type inference of dictionary, and value tracing. To fully
+support Python3 classes, we need to work on something that is a
+dictionary a-like, and that will only ever be efficient if we have that.
+Good news is that the next release is making progress there too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="performance"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id11"&gt;Performance&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="graphs-and-benchmarks"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id12"&gt;Graphs and Benchmarks&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;I also presented this weak point to EuroPython 2015 and my plan on how
+to resolve it. Unfortunately, nothing really happened here. My plan is
+still to use what the PyPy people have developed as vmprof.&lt;/p&gt;
+&lt;p&gt;So that is not progressing, and I could need help with that definitely.
+Get in contact if you think you can.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="standalone"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;Standalone&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The standalone mode of Nuitka was pretty good, and continued to improve
+further, but I don’t care much.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="other-stuff"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;Other Stuff&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="europython-2015"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id15"&gt;EuroPython 2015&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This was a blast. Meeting people who knew Nuitka but not me was a
+regular occurrence. And many people well appreciate my work. It felt
+much different than the years before.&lt;/p&gt;
+&lt;p&gt;I was able to present Nuitka’s function in-lining indeed there, and this
+high goal that I set myself, quite impressed people.&lt;/p&gt;
+&lt;p&gt;Also I made many new contacts, largely with the scientific community. I
+hope to find work with data scientists in the coming years. More amd
+more it looks like my day job should be closer to Nuitka and my
+expertise in Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funding"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id16"&gt;Funding&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Nuitka receives the occasional &lt;a class="reference external" href="/pages/donations.html"&gt;donation&lt;/a&gt; and those make me very happy.
+As there is no support from organization like the PSF, I am all on my
+own there.&lt;/p&gt;
+&lt;p&gt;This year I want to travel to Europython 2016. It would be sweet if
+aside of my free time it wouldn’t also cost me money. So please consider
+donating some more, as these kind of events are really helpul to Nuitka.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="collaborators"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id17"&gt;Collaborators&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Nuitka is making more and more break through progress. And you can be a
+part of it. Now.&lt;/p&gt;
+&lt;p&gt;You can join and should do so now, just &lt;a class="reference external" href="/doc/user-manual.html#join-nuitka"&gt;follow this link&lt;/a&gt; or become part of
+the mailing list (since closed) and help me there with request I make,
+e.g. review posts of mine, test out things, pick up small jobs, answer
+questions of newcomers, you know the drill probably.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="videos"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id18"&gt;Videos&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;There is a Youtube channel of mine with &lt;a class="reference external" href="https://www.youtube.com/playlist?list=PLKO58t9ADuF6o_Dcmve1DXpUkUEEVvDux"&gt;all the videos of Nuitka so far&lt;/a&gt;
+and I have been preparing myself with proper equipment to make Videos of
+Nuitka, but so far nothing has come out of that.&lt;/p&gt;
+&lt;p&gt;I do however really want to change that. Let’s see if it happens.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="twitter"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id19"&gt;Twitter&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;I have started to use &lt;a class="reference external" href="https://twitter.com/kayhayen"&gt;my Twitter account&lt;/a&gt; on occasions. You are welcome to follow
+me there. I will highlight interesting stuff there.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="future"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id20"&gt;Future&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;So, there is multiple things going on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Type Inference&lt;/p&gt;
+&lt;p&gt;With SSA in place, Nuitka starts to recognize types, and treat things
+that work something assigned from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;{}&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict&lt;/span&gt;&lt;/code&gt; built-in with
+special nodes and code.&lt;/p&gt;
+&lt;p&gt;That’s going to be a lot of work. For &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;float&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;list&lt;/span&gt;&lt;/code&gt; there
+are very important use cases, where the code can be much better. But
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict&lt;/span&gt;&lt;/code&gt; is the hardest case, and to get the structure of shape
+tracing right, we are going there first.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Shape Analyisis&lt;/p&gt;
+&lt;p&gt;The plan for types, is not to use them, but the more general shapes,
+things that will be more prevalent than actual type information in a
+program. In fact the precise knowledge will be rare, but more often,
+we will just have a set of operations performed on a variable, and be
+able to guess from there.&lt;/p&gt;
+&lt;p&gt;Shape analysis will begin though with concrete types like &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict&lt;/span&gt;&lt;/code&gt;.
+The reason is that some re-formulations like Python3 classes should
+not use locals, but dictionary accesses throughout for full
+compatibility. Tracing that correctly to be effectively the same code
+quality will allow to make that change.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plug-ins&lt;/p&gt;
+&lt;p&gt;Something I wish I could have shown at EuroPython was plug-ins to
+Nuitka. It has become more complete, and some demo plug-ins for say
+Qt plugins or multiprocessing, are starting to work, but it’s not
+progressing recently. The API will need work and of course
+documentation. Hope is for this to expand Nuitka’s reach and appeal
+to get more contributors.&lt;/p&gt;
+&lt;p&gt;It would be sweet, if there were any takers, aiming to complete these
+things.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Nested frames&lt;/p&gt;
+&lt;p&gt;One result of in-lining will be nested frames still present for
+exceptions to be properly annotated, or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;locals&lt;/span&gt;&lt;/code&gt; giving different
+sets of locals and so on.&lt;/p&gt;
+&lt;p&gt;Some cleanup of these will be needed for code generation and SSA to
+be able to attach variables to some sort of container, and for a
+function to be able to reference different sets of these.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let me know, if you are willing to help. I really need that help to make
+things happen faster. Nuitka will become more and more important only.
+And with your help, things will be there sooner.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="release-focus"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id21"&gt;Release Focus&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;One thing I have started recently, is to make changes to Nuitka focused
+to just one goal, and to only deal with the rare bug in other fields,
+but not much else at all. So instead of across the board improvements in
+just about everything, I have e.g. in the last release added type
+inference for dictionaries and special nodes and their code generation
+for dictionary operations.&lt;/p&gt;
+&lt;p&gt;This progresses Nuitka in one field. And the next release then e.g. will
+only focus on making the performance comparison tool, and not continue
+much in other fields.&lt;/p&gt;
+&lt;p&gt;That way, more “flow” is possible and more visible progress too. As an
+example of this, these are the focuses of last releases.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Full Python 3.5 on a clean base with generators redone so that
+coroutines fit in nicely.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scalability of C compilation with argument parsing redone&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Next release soon: Shape analysis of subscript usages and
+optimization to exact dictionaries&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Next release thereafter: Comparison benchmarking (vmprof, resolving C
+level function identifiers easier)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other focuses will also happen, but that’s too far ahead. Mostly like
+some usability improvements will be the focus of a release some day.
+Focus is for things that are too complex to attack as a side project,
+and therefore never happen although surely possible.&lt;/p&gt;
+&lt;p&gt;Digging into Python3.5 coroutines and their semantics was hard enough,
+and the structural changes needed to integrate them properly with not
+too much special casing, but rather removing existing special cases
+(generator functions) was just too much work to ever happen while also
+doing other stuff.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id22"&gt;Summary&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;So I am very excited about Nuitka. It feels like the puzzle is coming
+together finally, with type inference becoming a real thing. And should
+dictionaries be sorted out, the real important types, say &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;float&lt;/span&gt;&lt;/code&gt; for
+scientific use cases, or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;list&lt;/span&gt;&lt;/code&gt; for others, will be easy to
+make.&lt;/p&gt;
+&lt;p&gt;With this, and then harder import association (knowing what other
+modules are), and module level SSA tracing that can be trusted, we can
+finally expect Nuitka to be generally fast and deserve to be called a
+compiler.&lt;/p&gt;
+&lt;p&gt;That will take a while, but it’s likely to happen in 2016. Let’s see if
+I will get the funding to go to EuroPython 2016, that would be great.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-progress-winter-2015.html" rel="alternate"/>
+    <summary>For quite a bit, there have been no status posts, not for lack of news,
+but a lot has happened indeed. I just seem to post a lot more to the
+mailing list than I do here. Especially about unfinished stuff, which is
+essentially for a project like Nuitka everything that’s going on.</summary>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <category term="europython" label="europython"/>
+    <published>2016-01-29T08:08:54+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-0519.html</id>
+    <title>Nuitka Release 0.5.19</title>
+    <updated>2016-02-02T09:04:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="nuitka-release-0-5-19"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release brings optimization improvements for dictionary using code.
+This is now lowering subscripts to dictionary accesses where possible
+and adds new code generation for known dictionary values. Besides this
+there is the usual range of bug fixes.&lt;/p&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Fix, attribute assignments or deletions where the assigned value or
+the attribute source was statically raising crashed the compiler.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, the order of evaluation during optimization was considered in
+the wrong order for attribute assignments source and value.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Fix, when &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;g++&lt;/span&gt;&lt;/code&gt; is the path, it was not used
+automatically, but now it is.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Detect the 32 bits variant of MinGW64 too.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3.4: The finalize of compiled generators could corrupt
+reference counts for shared generator objects. Fixed in 0.5.18.1
+already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3.5: The finalize of compiled coroutines could corrupt
+reference counts for shared generator objects.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="optimization"&gt;
+&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;When a variable is known to have dictionary shape (assigned from a
+constant value, result of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict&lt;/span&gt;&lt;/code&gt; built-in, or a general dictionary
+creation), or the branch merge thereof, we lower subscripts from
+expecting mapping nodes to dictionary specific nodes. These generate
+more efficient code, and some are then known to not raise an
+exception.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;someFunction&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The above function is not yet fully optimized (dictionary key/value
+tracing is not yet finished), however it at least knows that no
+exception can raise from assigning &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;value[&amp;quot;c&amp;quot;]&lt;/span&gt;&lt;/code&gt; anymore and creates
+more efficient code for the typical &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;result&lt;/span&gt; &lt;span class="pre"&gt;=&lt;/span&gt; &lt;span class="pre"&gt;{}&lt;/span&gt;&lt;/code&gt; functions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The use of “logical” sharing during optimization has been replaced
+with checks for actual sharing. So closure variables that were
+written to in dead code no longer inhibit optimization of the then no
+more shared local variable.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Global variable traces are now faster to decide definite writes
+without need to check traces for this each time.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cleanups"&gt;
+&lt;h2&gt;Cleanups&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;No more using “logical sharing” allowed to remove that function
+entirely.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using “technical sharing” less often for decisions during
+optimization and instead rely more often on proper variable registry.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Connected variables with their global variable trace statically avoid
+the need to check in variable registry for it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Removed old and mostly unused “assume unclear locals” indications, we
+use global variable traces for this now.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This release aimed at dictionary tracing. As a first step, the value
+assign is now traced to have a dictionary shape, and this this then used
+to lower the operations which used to be normal subscript operations to
+mapping, but now can be more specific.&lt;/p&gt;
+&lt;p&gt;Making use of the dictionary values knowledge, tracing keys and values
+is not yet inside the scope, but expected to follow. We got the first
+signs of type inference here, but to really take advantage, more
+specific shape tracing will be needed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-0519.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <published>2016-02-02T09:04:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-0520.html</id>
+    <title>Nuitka Release 0.5.20</title>
+    <updated>2016-03-21T09:34:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="nuitka-release-0-5-20"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release is mostly about catching up with issues. Most address
+standalone problems with special modules, but there are also some
+general compatibility corrections, as well as important fixes for
+Python3.5 and coroutines and to improve compatibility with special
+Python variants like Anaconda under the Windows system.&lt;/p&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Standalone Python3.5: The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;_decimal&lt;/span&gt;&lt;/code&gt; module at least is using a
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__name__&lt;/span&gt;&lt;/code&gt; that doesn’t match the name at load time, causing
+programs that use it to crash.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compatibility: For Python3.3 the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__loader__&lt;/span&gt;&lt;/code&gt; attribute is now set
+in all cases, and it needs to have a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__module__&lt;/span&gt;&lt;/code&gt; attribute. This
+makes inspection as done by e.g. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;flask&lt;/span&gt;&lt;/code&gt; working.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added missing hidden dependencies for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Tkinter&lt;/span&gt;&lt;/code&gt; module,
+adding support for this to work properly.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Detecting the Python DLL and EXE used at compile time and
+preserving this information use during backend compilation. This
+should make sure we use the proper ones, and avoids hacks for
+specific Python variants, enhancing the support for Anaconda,
+WinPython, and CPython installations.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--python-debug&lt;/span&gt;&lt;/code&gt; flag now properly detects if the run
+time is supporting things and error exits if it’s not available. For
+a CPython3.5 installation, it will switch between debug and non-debug
+Python binaries and DLLs.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added plug-in for the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Pwm&lt;/span&gt;&lt;/code&gt; package to properly combine
+it into a single file, suitable for distribution.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Packages from standard library, e.g. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xml&lt;/span&gt;&lt;/code&gt; now have
+proper &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__path__&lt;/span&gt;&lt;/code&gt; as a list and not as a string value, which breaks
+code of e.g. PyXML.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added missing dependency of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;twisted.protocols.tls&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3.5: When finalizing coroutines that were not finished, a
+corruption of its reference count could happen under some
+circumstances.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added missing DLL dependency of the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;uuid&lt;/span&gt;&lt;/code&gt; module at
+run time, which uses ctypes to load it.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="new-features"&gt;
+&lt;h2&gt;New Features&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Added support for Anaconda Python on this Linux. Both accelerated and
+standalone mode work now.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added support for standalone mode on FreeBSD.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The plug-in framework was expanded with new features to allow
+addressing some specific issues.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cleanups"&gt;
+&lt;h2&gt;Cleanups&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Moved memory related stuff to dedicated utils package
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.utils.MemoryUsage&lt;/span&gt;&lt;/code&gt; as part of an effort to have more
+topical modules.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins how have a dedicated module through which the core accesses
+the API, which was partially cleaned up.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;No more “early” and “late” import detections for standalone mode. We
+now scan everything at the start.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This release focused on expanding plugins. These were then used to
+enhance the success of standalone compatibility. Eventually this should
+lead to a finished and documented plug-in API, which will open up the
+Nuitka core to easier hacks and more user contribution for these topics.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-0520.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <published>2016-03-21T09:34:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-0521.html</id>
+    <title>Nuitka Release 0.5.21</title>
+    <updated>2016-04-25T12:54:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="nuitka-release-0-5-21"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release focused on scalability work. Making Nuitka more usable in
+the common case, and covering more standalone use cases.&lt;/p&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Windows: Support for newer MinGW64 was broken by a workaround for
+older MinGW64 versions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compatibility: Added support for the (unofficial) C-Python API
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Py_GetArgcArgv&lt;/span&gt;&lt;/code&gt; that was causing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;prctl&lt;/span&gt;&lt;/code&gt; module to fail loading
+on ARM platforms.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compatibility: The proper error message template for complex call
+arguments is now detected as compile time. There are changes coming,
+that are already in some pre-releases of CPython.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Wasn’t properly ignoring &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Tools&lt;/span&gt;&lt;/code&gt; and other directories
+in the standard library.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="new-features"&gt;
+&lt;h2&gt;New Features&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Windows: Detect the MinGW compiler arch and compare it to the Python
+arch. In case of a mismatch, the compiler is not used. Otherwise
+compilation or linking gives hard to understand errors. This also
+rules out MinGW32 as a compiler that can be used, as its arch doesn’t
+match MinGW64 32 bits variant.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compile modules in two passes with the option to specify which
+modules will be considered for a second pass at all (compiled without
+program optimization) or even become bytecode.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The developer mode installation of Nuitka in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;develop&lt;/span&gt;&lt;/code&gt; mode with
+the command &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pip&lt;/span&gt; &lt;span class="pre"&gt;install&lt;/span&gt; &lt;span class="pre"&gt;-e&lt;/span&gt; &lt;span class="pre"&gt;nuitka_git_checkout_dir&lt;/span&gt;&lt;/code&gt; is now
+supported too.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="optimization"&gt;
+&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Popular modules known to not be performance relevant are no longer C
+compiled, e.g. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;numpy.distutils&lt;/span&gt;&lt;/code&gt; and many others frequently
+imported (from some other module), but mostly not used and definitely
+not performance relevant.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cleanups"&gt;
+&lt;h2&gt;Cleanups&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The progress tracing and the memory tracing and now more clearly
+separate and therefore more readable.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Moved RPM related files to new &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rpm&lt;/span&gt;&lt;/code&gt; directory.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Moved documentation related files to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;doc&lt;/span&gt;&lt;/code&gt; directory.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Converted import sorting helper script to Python and made it run
+fast.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="organisational"&gt;
+&lt;h2&gt;Organisational&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The Buildbot infrastructure for Nuitka was updated to Buildbot 0.8.12
+and is now maintained up to date with Ansible.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Upgraded the Nuitka bug tracker to Roundup 1.5.1 to which I had
+previously contributed security fixes already active.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added SSL certificates from Let’s Encrypt for the web server.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This release advances the scalability of Nuitka somewhat. The two pass
+approach does not yet carry all possible fruits. Caching of single pass
+compiled modules should follow for it to become consistently fast.&lt;/p&gt;
+&lt;p&gt;More work will be needed to achieve fast and scalable compilation, and
+that is going to remain the focus for some time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-0521.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <published>2016-04-25T12:54:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-0522.html</id>
+    <title>Nuitka Release 0.5.22</title>
+    <updated>2016-08-17T14:35:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="nuitka-release-0-5-22"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release is mostly an intermediate release on the way to the large
+goal of having per module compilation that is cacheable and requires far
+less memory for large programs. This is currently in progress, but
+required many changes that are in this release, more will be needed.&lt;/p&gt;
+&lt;p&gt;It also contains a bunch of bug fixes and enhancements that are worth to
+be released, and the next changes are going to be more invasive.&lt;/p&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Compatibility: Classes with decorated &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__new__&lt;/span&gt;&lt;/code&gt; functions could
+miss out on the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;staticmethod&lt;/span&gt;&lt;/code&gt; decorator that is implicit. It’s now
+applied always, unless of course it’s already done manually. This
+corrects an issue found with Pandas. Fixed in 0.5.22.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: For at least Python 3.4 or higher, it could happen that
+the locale needed was not importable. Fixed in 0.5.22.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compatibility: Do not falsely assume that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;not&lt;/span&gt;&lt;/code&gt; expressions cannot
+raise on boolean expressions, since those arguments might raise
+during creation. This could lead to wrong optimization. Fixed in
+0.5.22.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Do not include system specific C libraries in the
+distribution created. This would lead to problems for some
+configurations on Linux in cases the glibc is no longer compatible
+with newer or older kernels. Fixed in 0.5.22.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--recurse-directory&lt;/span&gt;&lt;/code&gt; option didn’t check with decision
+mechanisms for module inclusion, making it impossible to avoid some
+things.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="optimization"&gt;
+&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Introduced specialized constant classes for empty dictionaries and
+other special constants, e.g. “True” and “False”, so that they can
+have more hard coded properties and save memory by sharing constant
+values.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The “technical” sharing of a variable is only consider for variables
+that had some sharing going in the first place, speeing things up
+quite a bit for that still critical check.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Memory savings coming from enhanced trace storage are already visible
+at about 1%. That is not as much as the reloading will mean, but
+still helpful to use less overall.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cleanups"&gt;
+&lt;h2&gt;Cleanups&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The global variable registry was removed. It was in the way of
+unloading and reloading modules easily. Instead variables are now
+attached to their owner and referenced by other users. When they are
+released, these variables are released.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Global variable traces were removed. Instead each variable has a list
+of the traces attached to it. For non-shared variables, this allows
+to sooner tell attributes of those variables, allowing for sooner
+optimization of them.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;No longer trace all initial users of a variable, just merely if there
+were such and if it constitutes sharing syntactically too. Not only
+does this save memory, it avoids useless references of the variable
+to functions that stop using it due to optimization.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create constant nodes via a factory function to avoid non-special
+instances where variants exist that would be faster to use.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Moved the C string functions to a proper &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.utils.CStrings&lt;/span&gt;&lt;/code&gt;
+package as we use it for better code names of functions and modules.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Made &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;functions&lt;/span&gt;&lt;/code&gt; and explicit child node of modules, which makes
+their use more generic, esp. for re-loading modules.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Have a dedicated function for building frame nodes, making it easier
+to see where they are created.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This release is the result of a couple of months work, and somewhat
+means that proper re-loading of cached results is becoming in sight. The
+reloading of modules still fails for some things, and more changes will
+be needed, but with that out of the way, Nuitka’s footprint is about to
+drop and making it then absolutely scalable. Something considered very
+important before starting to trace more information about values.&lt;/p&gt;
+&lt;p&gt;This next thing big ought to be one thing that structurally holds Nuitka
+back from generating C level performance code with say integer
+operations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-0522.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <published>2016-08-17T14:35:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-0523.html</id>
+    <title>Nuitka Release 0.5.23</title>
+    <updated>2016-10-03T16:55:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="nuitka-release-0-5-23"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release is focusing on optimization, the most significant part for
+the users being enhanced scalability due to memory usage, but also break
+through structural improvements for static analysis of iterators and the
+debut of type shapes and value shapes, giving way to “shape tracing”.&lt;/p&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Fix support Python 3.5.2 coroutine changes. The checks got added for
+improved mode for older 3.5.x, the new protocol is only supported
+when run with that version or higher.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, was falsely optimizing away unused iterations for non-iterable
+compile time constants.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;iter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# needs to raise.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3: Fix, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;eval&lt;/span&gt;&lt;/code&gt; must not attempt to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;strip&lt;/span&gt;&lt;/code&gt; memoryviews. The
+was preventing it from working with that type.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, calling &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;type&lt;/span&gt;&lt;/code&gt; without any arguments was crashing the
+compiler. Also the exception raised for anything but 1 or 3 arguments
+was claiming that only 3 arguments were allowed, which is not the
+compatible thing.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3.5: Fix, follow enhanced error checking for complex call
+handling of star arguments.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compatibility: The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;from&lt;/span&gt; &lt;span class="pre"&gt;x&lt;/span&gt; &lt;span class="pre"&gt;import&lt;/span&gt; &lt;span class="pre"&gt;x,&lt;/span&gt; &lt;span class="pre"&gt;y&lt;/span&gt;&lt;/code&gt; re-formulation was doing
+two &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__import__&lt;/span&gt;&lt;/code&gt; calls instead of re-using the module value.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="optimization"&gt;
+&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Uses only about 66% of the memory compared to last release, which is
+very important step for scalability independent of re-loading. This
+was achieved by making sure to break loop traces and their reference
+cycle when they become unused.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Properly detect the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;len&lt;/span&gt;&lt;/code&gt; of multiplications at compile time from
+newly introduces value shapes, so that this is e.g. statically
+optimized.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;*&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;10000000000&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Due to newly introduced type shapes, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;len&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;iter&lt;/span&gt;&lt;/code&gt; now
+properly detect more often if values will raise or not, and warn
+about detected raises.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;iter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;something&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c1"&gt;# Will always raise&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Due to newly introduced “iterator tracing”, we can now properly
+detect if the length of an unpacking matches its source or not. This
+allows to remove the check of the generic re-formulations of
+unpackings at compile time.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;  &lt;span class="c1"&gt;# Will never raise due to unpacking&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;  &lt;span class="c1"&gt;# Will always raise, 3 items cannot unpack to 2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added support for optimization of the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xrange&lt;/span&gt;&lt;/code&gt; built-in for
+Python2.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python2: Added support for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xrange&lt;/span&gt;&lt;/code&gt; iterable constant values,
+pre-building those constants ahead of time.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3: Added support and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;range&lt;/span&gt;&lt;/code&gt; iterable constant values,
+pre-building those constants ahead of time. This brings optimization
+support for Python3 ranges to what was available for Python2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Avoid having a special node variange for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;range&lt;/span&gt;&lt;/code&gt; with no arguments,
+but create the exception raising node directly.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Specialized constant value nodes are using less generic
+implementations to query e.g. their length or iteration capabilities,
+which should speed up many checks on them.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added support for the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;format&lt;/span&gt;&lt;/code&gt; built-in.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3: Added support for the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ascii&lt;/span&gt;&lt;/code&gt; built-in.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="organisational"&gt;
+&lt;h2&gt;Organisational&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The movement to pure C got the final big push. All C++ only idoms of
+C++ were removed, and everything works with C11 compilers. A C++03
+compiler can be used as a fallback, in case of MSVC or too old gcc
+for instance.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using pure C, MinGW64 6x is now working properly. The latest version
+had problems with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;hypot&lt;/span&gt;&lt;/code&gt; related changes in the C++ standard
+library. Using C11 solves that.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;This release also prepares Python 3.6 support, it includes full
+language support on the level of CPython 3.6.0b1.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The CPython 3.6 test suite was run with Python 3.5 to ensure bug
+level compatibility, and had a few findings of incompatibilities.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cleanups"&gt;
+&lt;h2&gt;Cleanups&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The last holdouts of classes in Nuitka were removed, and many idioms
+of C++ were stopped using.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Moved range related helper functions to a dedicated include file.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt; &lt;span class="pre"&gt;is&lt;/span&gt; &lt;span class="pre"&gt;not&lt;/span&gt; &lt;span class="pre"&gt;bytes&lt;/span&gt;&lt;/code&gt; to detect Python3 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt; handling or
+actual &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bytes&lt;/span&gt;&lt;/code&gt; type existence.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Trace collections were using a mix-in that was merged with the base
+class that every user of it was having.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tests"&gt;
+&lt;h2&gt;Tests&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Added more static optimization tests, a lot more has become feasible
+to decide at run time, and is now done. These are to detect
+regressions in that domain.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The CPython 3.6 test suite is now also run with CPython 3.5 which
+found some incompatibilities.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This release marks a huge step forward. We are having the structure for
+type inference now. This will expand in coming releases to cover more
+cases, and there are many low hanging fruits for optimization.
+Specialized codes for variable versions of certain known shapes seems
+feasible now.&lt;/p&gt;
+&lt;p&gt;Then there is also the move towards pure C. This will make the backend
+compilation lighter, but due to using C11, we will not suffer any loss
+of convenience compared to “C-ish”. The plan is to use continue to use
+C++ for compilation for compilers not capable of supporting C11.&lt;/p&gt;
+&lt;p&gt;The amount of static analysis done in Nuitka is now going to quickly
+expand, with more and more constructs predicted to raise errors or
+simplified. This will be an ongoing activity, as many types of
+expressions need to be enhanced, and only one missing will not let it
+optimize as well.&lt;/p&gt;
+&lt;p&gt;Also, it seems about time to add dedicated code for specific types to be
+as fast as C code. This opens up vast possibilities for acceleration and
+will lead us to zero overhead C bindings eventually. But initially the
+drive is towards enhanced &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;import&lt;/span&gt;&lt;/code&gt; analysis, to become able to know
+the precide module expected to be imported, and derive type information
+from this.&lt;/p&gt;
+&lt;p&gt;The coming work will attack to start whole program optimization, as well
+as enhanced local value shape analysis, as well specialized type code
+generation, which will make Nuitka improve speed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-0523.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <published>2016-10-03T16:55:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-0524.html</id>
+    <title>Nuitka Release 0.5.24</title>
+    <updated>2016-11-15T09:43:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="nuitka-release-0-5-24"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release is again focusing on optimization, this time very heavily
+on the generator performance, which was found to be much slower than
+CPython for some cases. Also there is the usual compatibility work and
+improvements for Pure C support.&lt;/p&gt;
+&lt;div class="section" id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Windows: The 3.5.2 coroutine new protocol implementation was using
+the wrapper from CPython, but it’s not part of the ABI on Windows.
+Have our own instead. Fixed in 0.5.23.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Fixed second compilation with MSVC failing. The files
+renamed to be C++ files already existed, crashing the compilation.
+Fixed in 0.5.23.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mac OS: Fixed creating extension modules with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.so&lt;/span&gt;&lt;/code&gt; suffix. This is
+now properly determined by looking at the importer details, leading
+to correct suffix on all platforms. Fixed in 0.5.23.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Debian: Don’t depend on a C++ compiler primarily anymore, the C
+compiler from GNU or clang will do too. Fixed in 0.5.23.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pure C: Adapted scons compiler detecting to properly consider C11
+compilers from the environment, and more gracefully report things.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="optimization"&gt;
+&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Python2: Generators were saving and restoring exceptions, updating
+the variables &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sys.exc_type&lt;/span&gt;&lt;/code&gt; for every context switch, making it
+really slow, as these are 3 dictionary updates, normally not needed.
+Now it’s only doing it if it means a change.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sped up creating generators, coroutines and coroutines by attaching
+the closure variable storage directly to the object, using one
+variable size allocation, instead of two, once of which was a
+standard &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;malloc&lt;/span&gt;&lt;/code&gt;. This makes creating them easier and avoids
+maintaining the closure pointer entirely.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using dedicated compiled cell implementation similar to
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PyCellObject&lt;/span&gt;&lt;/code&gt; but fully under our control. This allowed for
+smaller code generated, while still giving a slight performance
+improvement.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added free list implementation to cache generator, coroutines, and
+function objects, avoiding the need to create and delete this kind of
+objects in a loop.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added support for the built-in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum&lt;/span&gt;&lt;/code&gt;, making slight optimizations
+to be much faster when iterating over lists and tuples, as well as
+fast &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt; sum for Python2, and much faster &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bool&lt;/span&gt;&lt;/code&gt; sums too.
+This is using a prototype version of a “qiter” concept.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Provide type shape for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xrange&lt;/span&gt;&lt;/code&gt; calls that are not constant too,
+allowing for better optimization related to those.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tests"&gt;
+&lt;h2&gt;Tests&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Added workarounds for locks being held by Virus Scanners on Windows
+to our test runner.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enhanced constructs that test generator expressions to more clearly
+show the actual construct cost.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added construct tests for the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum&lt;/span&gt;&lt;/code&gt; built-in on various types of
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt; containers, making sure we can do all of those really fast.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This release improves very heavily on generators in Nuitka. The memory
+allocator is used more cleverly, and free lists all around save a lot of
+interactions with it. More work lies ahead in this field, as these are
+not yet as fast as they should be. However, at least Nuitka should be
+faster than CPython for these kind of usages now.&lt;/p&gt;
+&lt;p&gt;Also, proper pure C in the Scons is relatively important to cover more
+of the rarer use cases, where the C compiler is too old.&lt;/p&gt;
+&lt;p&gt;The most important part is actually how &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum&lt;/span&gt;&lt;/code&gt; optimization is staging
+a new kind of approach for code generation. This could become the
+standard code for iterators in loops eventually, making &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;for&lt;/span&gt;&lt;/code&gt; loops
+even faster. This will be for future releases to expand.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-0524.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <published>2016-11-15T09:43:00+00:00</published>
+  </entry>
+</feed>

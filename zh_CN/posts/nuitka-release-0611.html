@@ -1,0 +1,825 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+    <title>Nuitka Release 0.6.11</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="canonical" href="https://daobook.github.io/nuitka-doc/posts/nuitka-release-0611.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../posts/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+          
+<h2>
+   
+  25 January 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    >作者:</span
+  >
+   
+  <a href="author/kay-hayen.html">Kay Hayen</a>  
+</li>
+    
+<li id="tags">
+  <span
+    >标签: </span
+  >
+   
+  <a href="tag/compiler.html">compiler</a>   
+  <a href="tag/python.html">Python</a>   
+  <a href="tag/nuitka.html">Nuitka</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../posts.html">最近帖子</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="next-nuitka-live-stream-30-01-2022.html"
+      >30 January - Next Nuitka Live Stream</a
+    >
+  </li>
+  
+  <li>
+    <a href="first-nuitka-live-stream.html"
+      >14 January - First Nuitka Live Stream</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0619.html"
+      >12 January - Nuitka Release 0.6.19</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0618.html"
+      >11 December - Nuitka Release 0.6.18</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0617.html"
+      >11 November - Nuitka Release 0.6.17</a
+    >
+  </li>
+  
+</ul>
+
+<h3><a href="tag.html">标签</a></h3>
+<style type="text/css">
+  ul.ablog-cloud {
+    list-style: none;
+    overflow: auto;
+  }
+  ul.ablog-cloud li {
+    float: left;
+    height: 20pt;
+    line-height: 18pt;
+    margin-right: 5px;
+  }
+  ul.ablog-cloud a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  li.ablog-cloud-1 {
+    font-size: 80%;
+  }
+  li.ablog-cloud-2 {
+    font-size: 95%;
+  }
+  li.ablog-cloud-3 {
+    font-size: 110%;
+  }
+  li.ablog-cloud-4 {
+    font-size: 125%;
+  }
+  li.ablog-cloud-5 {
+    font-size: 140%;
+  }
+</style>
+<ul class="ablog-cloud">
+   
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/android.html">Android</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/debian.html">Debian</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/ntw.html">NTW</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/nikola.html">Nikola</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/nuitka.html">Nuitka</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/python.html">Python</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/windows.html">Windows</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/automation.html">automation</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/benchmark.html">benchmark</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/compiler.html">compiler</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/conference.html">conference</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/europython.html">europython</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/family.html">family</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/git.html">git</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/gsoc2019.html">gsoc2019</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/physics.html">physics</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/portrait.html">portrait</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/presentation.html">presentation</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/pypi.html">pypi</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/pytest.html">pytest</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/quiz.html">quiz</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/standalone.html">standalone</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/tests.html">tests</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/video.html">video</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="archive.html">归档</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="2022.html">2022 (3)</a>
+  </li>
+    
+  <li>
+    <a href="2021.html">2021 (8)</a>
+  </li>
+    
+  <li>
+    <a href="2020.html">2020 (5)</a>
+  </li>
+    
+  <li>
+    <a href="2019.html">2019 (14)</a>
+  </li>
+    
+  <li>
+    <a href="2018.html">2018 (17)</a>
+  </li>
+    
+  <li>
+    <a href="2017.html">2017 (4)</a>
+  </li>
+    
+  <li>
+    <a href="2016.html">2016 (8)</a>
+  </li>
+    
+  <li>
+    <a href="2015.html">2015 (16)</a>
+  </li>
+    
+  <li>
+    <a href="2014.html">2014 (12)</a>
+  </li>
+    
+  <li>
+    <a href="2013.html">2013 (24)</a>
+  </li>
+    
+  <li>
+    <a href="2012.html">2012 (21)</a>
+  </li>
+    
+  <li>
+    <a href="2011.html">2011 (25)</a>
+  </li>
+    
+  <li>
+    <a href="2010.html">2010 (19)</a>
+  </li>
+   
+</ul>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bug-fixes">
+   Bug Fixes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-features">
+   New Features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization">
+   Optimization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organisational">
+   Organisational
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleanups">
+   Cleanups
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tests">
+   Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Nuitka Release 0.6.11</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bug-fixes">
+   Bug Fixes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-features">
+   New Features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization">
+   Optimization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organisational">
+   Organisational
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleanups">
+   Cleanups
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tests">
+   Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="nuitka-release-0-6-11">
+<h1>Nuitka Release 0.6.11<a class="headerlink" href="#nuitka-release-0-6-11" title="永久链接至标题">¶</a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<p>This release is a massive improvement in many ways with lots of bug
+fixes and new features.</p>
+<div class="section" id="bug-fixes">
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Fix, the <code class="docutils literal notranslate"><span class="pre">.pyi</span></code> file parser didn’t handle relative imports. Fixed
+in 0.6.10.1 already.</p></li>
+<li><p>Windows: Fix, multiprocessing plugin was not working reliable
+following of imports from the additional entry point. Fixed in
+0.6.10.1 already.</p></li>
+<li><p>Pipenv: Workaround parsing issue with our <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> to allow
+installation from Github. Fixed in 0.6.10.1 already.</p></li>
+<li><p>Merging of branches in optimization could give indeterministic
+results leading to more iterations than necessary. Fixed in 0.6.10.1
+already.</p></li>
+<li><p>Windows: Avoid profile powershell when attempting to resolve
+symlinks. Fixed in 0.6.10.1 already.</p></li>
+<li><p>Windows: Fix, always check for stdin, stdout, and stderr presence.
+This was so far restricted to gui mode applications, but it seems to
+be necessary in other situations too. Fixed in 0.6.10.1 already.</p></li>
+<li><p>Python2: Fix, <code class="docutils literal notranslate"><span class="pre">--trace-execution</span></code> was not working for standalone
+mode but can be useful for debugging. Fixed in 0.6.10.1 already.</p></li>
+<li><p>Windows: Onefile could run into path length limits. Fixed in 0.6.10.3
+already.</p></li>
+<li><p>Windows: The winlib gcc download link became broken and was updated.
+Fixed in 0.6.10.3 already.</p></li>
+<li><p>Plugins: The “__main__” module was not triggering all plugin hooks,
+but it needs to for completeness.</p></li>
+<li><p>Standalone: Fix, symlinked Python installations on Windows were not
+working, with dependency walker being unable to look into these.
+Fixed in 0.6.10.4 already.</p></li>
+<li><p>Standalone: Fix support for numpy on Windows and macOS, the plugin
+failed to copy important DLLs. Fixed in 0.6.10.4 already.</p></li>
+<li><p>Python3: For versions before 3.7, the symlink resolution also needs
+to be done, but wasn’t handling the bytes output yet. Fixed in
+0.6.10.4 already.</p></li>
+<li><p>Fix, folder based inclusion would both pick up namespace folders and
+modules of the same name, crashing the compilation due to conflicts.
+Fixed in 0.6.10.4 already.</p></li>
+<li><p>Fix, the <code class="docutils literal notranslate"><span class="pre">--lto</span></code> wasn’t used for clang on non-Windows yet.</p></li>
+<li><p>Fix, the order of locals dict releases wasn’t enforced, which could
+lead to differences that break caching of C files potentially. Fixed
+in 0.6.10.5 already.</p></li>
+<li><p>Fix, <code class="docutils literal notranslate"><span class="pre">hash</span></code> nodes didn’t consider if their argument was raising,
+even if the type of the argument was <code class="docutils literal notranslate"><span class="pre">str</span></code> and therefore the
+operation should not. Fixed in 0.6.10.5 already.</p></li>
+<li><p>Fix, need to copy type shape and escape description for the
+replacement inverted comparisons when used with <code class="docutils literal notranslate"><span class="pre">not</span></code>, otherwise
+the compilation can crash as these are expected to be present at all
+times. Fixed in 0.6.10.5 already.</p></li>
+<li><p>Fix, some complex constant values could be confused, e.g. <code class="docutils literal notranslate"><span class="pre">-0j</span></code> and
+<code class="docutils literal notranslate"><span class="pre">0j</span></code>. These corner cases were not properly considered in the
+constant loading code, only for <code class="docutils literal notranslate"><span class="pre">float</span></code> so far.</p></li>
+<li><p>Standalone: Fix, bytecode only standard library modules were not
+working. This is at least used with Fedora 33.</p></li>
+<li><p>Linux: Fix, extension modules compiled with <code class="docutils literal notranslate"><span class="pre">--lto</span></code> were not
+working.</p></li>
+<li><p>Windows: Retry if updating resources fails due to Virus checkers
+keeping files locked.</p></li>
+<li><p>Plugins: Pre- and postload code of modules should not be allowed to
+cause <code class="docutils literal notranslate"><span class="pre">ImportError</span></code>, as these will be invisible to the other parts
+of optimization, instead make them unraisable error traces.</p></li>
+<li><p>Standalone: Adding missing import for SciPy 1.6 support.</p></li>
+<li><p>Windows: Fix, only export required symbols when using MinGW64 in
+module mode.</p></li>
+</ul>
+</div>
+<div class="section" id="new-features">
+<h2>New Features<a class="headerlink" href="#new-features" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Python3.9: Added official support for this version.</p></li>
+<li><p>Onefile: Added command line options to include data files. These are
+<code class="docutils literal notranslate"><span class="pre">--include-package-data</span></code> which will copy all non-DLLs and
+non-Python files of package names matching the pattern given. And
+<code class="docutils literal notranslate"><span class="pre">--include-data-file</span></code> takes source and relative target file paths
+and copies them. For onefile this is the only way to include files,
+for standalone mode they are mostly a convenience function.</p></li>
+<li><p>Onefile: Added mode where the file is unpacked to a temporary folder
+before running instead of doing it to appdata.</p></li>
+<li><p>Onefile: Added linux specific options <code class="docutils literal notranslate"><span class="pre">--linux-onefile-icon</span></code> to
+allow provision of an icon to use in onefile mode on Linux, so far
+this was only available as the hard coded path to a Python icon,
+which also didn’t exist on all platforms.</p></li>
+<li><p>UI: Major logging cleanup. Everything is now using our tracing
+classes and even error exits go through there and are therefore
+colored if possible.</p></li>
+<li><p>Plugins: Make it easier to integrate commercial plugins, now only an
+environment variable needs to point to them.</p></li>
+<li><p>UI: Enhanced option parsing gives notes. This complains about options
+that conflict or that are implied in others. Trying to catch more
+usage errors sooner.</p></li>
+<li><p>Plugins: Ignore exceptions in buggy plugin code, only warn about them
+unless in debug mode, where they still crash Nuitka.</p></li>
+<li><p>Scons: More complete scons report files, includes list values as well
+and more modes used.</p></li>
+<li><p>Windows: The <code class="docutils literal notranslate"><span class="pre">clcache</span></code> is now included and no longer used from the
+system.</p></li>
+<li><p>Output for <code class="docutils literal notranslate"><span class="pre">clcache</span></code> and <code class="docutils literal notranslate"><span class="pre">ccache</span></code> results got improved.</p></li>
+<li><p>Enhanced support for <code class="docutils literal notranslate"><span class="pre">clang</span></code>, on Windows if present near a
+<code class="docutils literal notranslate"><span class="pre">gcc.exe</span></code> like it is the case for some winlibs downloads, it will
+be used. To use it provide <code class="docutils literal notranslate"><span class="pre">--mingw64</span> <span class="pre">--clang</span></code> both. Without the
+first one, it will mean <code class="docutils literal notranslate"><span class="pre">clangcl.exe</span></code> which uses the MSVC compiler
+as a host.</p></li>
+</ul>
+</div>
+<div class="section" id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Some modules had very slow load times, e.g. if they used many list
+objects due to linear searches for memory deduplication of objects.
+We now have dictionaries of practically all constant objects loaded,
+making these more instant.</p></li>
+<li><p>Use less memory at compile time due using <code class="docutils literal notranslate"><span class="pre">__slots__</span></code> for all node
+types, finally figured out, how to achieve this with multiple
+inheritance.</p></li>
+<li><p>Use hedley for compiler macros like <code class="docutils literal notranslate"><span class="pre">unlikely</span></code> as they know best
+how to do these.</p></li>
+<li><p>Special case the merging of 2 branches avoiding generic code and
+being much faster.</p></li>
+<li><p>Hard imports have better code generated, and are being optimized into
+for the few standard library modules and builtin modules we handle,
+they also now annotate the type shape to be module.</p></li>
+<li><p>No longer annotate hard module import attribute lookups as control
+flow escapes. Not present attributes are changed into static raises.
+Trust for values is configured for a few values, and experimental.</p></li>
+<li><p>Avoid preloaded packages for modules that have no side effects and
+are in the standard library, typically <code class="docutils literal notranslate"><span class="pre">.pth</span></code> files will use e.g.
+<code class="docutils literal notranslate"><span class="pre">os</span></code> but that’s not needed to be preserved.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">incbin</span></code> for including binary data through inline assembly of
+the C compiler. This covers many more platforms than our previous
+linker option hacks, and the fallback to generated C code. In fact
+everything but Windows uses this now.</p></li>
+</ul>
+</div>
+<div class="section" id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Windows: For Scons we now require a Python 3.5 or higher to be
+installed to use it.</p></li>
+<li><p>Windows: Removed support for gcc older than version 8. This
+specifically affects CondaCC and older MinGW64 installations. Since
+Nuitka can now download the MinGW64 10, there is no point in having
+these and they cause issues.</p></li>
+<li><p>We took over the maintenance of clcache as Nuitka/clcache which is
+not yet ready for public consumption, but should become the new
+source of clache in the future.</p></li>
+<li><p>Include an inline copy of clcache in Nuitka and use it on Windows for
+MSVC and ClangCL.</p></li>
+<li><p>Removed compatibility older aliases of follow option, <code class="docutils literal notranslate"><span class="pre">--recurse-*</span></code>
+and require <code class="docutils literal notranslate"><span class="pre">--follow-*</span></code> options to be used instead.</p></li>
+<li><p>For pylint checking, the tool now supports a <code class="docutils literal notranslate"><span class="pre">--diff</span></code> mode where
+only the changed files get checked. This is much faster and allows to
+do it more often before commit.</p></li>
+<li><p>Check the versions of isort and black when doing the autoformat to
+avoid using outdated versions.</p></li>
+<li><p>Handling missing pylint more gracefully when checking source code
+quality.</p></li>
+<li><p>Make sure to use the codespell tool with Python3 and make sure to
+error exit when spelling problems were found, so we can use this in
+Github actions too.</p></li>
+<li><p>Removed Travis config, we now only use Github actions.</p></li>
+<li><p>Removed landscape config, it doesn’t really exist anymore.</p></li>
+<li><p>Bumped all PyPI dependnecies to their latest versions.</p></li>
+<li><p>Recommend ccache on Debian, as we now consider the absence of ccache
+something to warn about.</p></li>
+<li><p>Plugins: The DLLs asked for by plugins that are not found are no
+longer warned about.</p></li>
+<li><p>Allow our checker and format tools to run on outside of tree code. We
+are using that for Nuitka/clcache.</p></li>
+<li><p>Added support for Fedora 33 and openSUSE 15.3, as well as Ubuntu
+Groovy.</p></li>
+<li><p>Windows: Check if Windows SDK is installed for MSVC and ClangCL.</p></li>
+<li><p>Windows: Enhanced wording in case no compiler was found. No longer
+tell people how to manually install MinGW64, that is no longer
+necessary and <code class="docutils literal notranslate"><span class="pre">pywin32</span></code> is not needed to detect MSVC, so it’s not
+installed if not found.</p></li>
+<li><p>Detect “embeddable Python” by missing include files, and reject it
+with proper error message.</p></li>
+<li><p>Added onefile and standalone as a use case to the manual and put also
+the DLL and data files problems as typically issues.</p></li>
+</ul>
+</div>
+<div class="section" id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Avoid decimal and string comparisons for Python versions checks,
+these were lazy and are going to break once 3.10 surfaces. In testing
+we now use tuples, in Nuitka core hexacimal values much like CPython
+itself does.</p></li>
+<li><p>Stop using subnode child getters and setters, and instead only use
+subnode attributes. This was gradually changed so far, but in this
+release all remaining uses have migrated. This should also make the
+optimization stage go faster.</p></li>
+<li><p>Change node constructors to not use a decorator to resolve conflicts
+with builtin names, rather handle these with manual call changes, the
+decorator only made it difficult to read and less performant.</p></li>
+<li><p>Move safe string helpers to their own dedicated helper file, allowing
+for reuse in plugin code that doesn’t want to use all of Nuitka C
+helpers.</p></li>
+<li><p>Added utils code for inline copy imports, as we use that for quite a
+few things now.</p></li>
+<li><p>Further restructured the Scons files to use more common code.</p></li>
+<li><p>Plugins: The module name objects now reject many <code class="docutils literal notranslate"><span class="pre">str</span></code> specific
+APIs that ought to not be used, and the code got changed to use these
+instead, leading to cleaner and more correct usages.</p></li>
+<li><p>Using named tuples to specify included data files and entry points.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pkgutil</span></code> in plugins to scan for modules rather than listing
+directories.</p></li>
+</ul>
+</div>
+<div class="section" id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>New option to display executed commands during comparisons.</p></li>
+<li><p>Added test suite for onefile testing.</p></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="永久链接至标题">¶</a></h2>
+<p>This release has seen Python3.9 and Onefile both being completed. The
+later needs compression added on Windows, but that can be added in a
+coming release, for now it’s fully functional.</p>
+<p>The focus clearly has been on massive cleanups, some of which will
+affect compile time performance. There is relatively little new
+optimization otherwise.</p>
+<p>The adoption of clcache enables a very fast caching, as it’s now loaded
+directly into the Scons process, avoiding a separate process fork.</p>
+<p>Generally a lot of polishing has been applied with many cleanups
+lowering the technical debt. It will be interesting to see where the
+hard module imports can lead us in terms of more optimization. Static
+optimization of the Python version comparisons and checks is needed to
+lower the amount of imports to be processed.</p>
+<p>Important fixes are also included, e.g. the constants loading
+performance was too slow in some cases. The <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> on
+Windows and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> plugins were regressed and finally everything
+ought to be back to working fine.</p>
+<p>Future work will have to aim at enhanced scalability. In some cases,
+Nuitka still takes too much time to compile if projects like Pandas
+include virtually everything installed as an option for it to use.</p>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="nuitka-release-0610.html">
+       Nuitka Release 0.6.10
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-release-0612.html">
+      Nuitka Release 0.6.12 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 Kay Hayen<br/>
+    
+        &copy; 版权 2022, Kay Hayen and Nuitka Contributors.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

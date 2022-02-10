@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+    <title>Nuitka Release 0.3.9</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="canonical" href="https://daobook.github.io/nuitka-doc/posts/nuitka-release-039.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../posts/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+          
+<h2>
+   
+  24 April 2011 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    >作者:</span
+  >
+   
+  <a href="author/kay-hayen.html">Kay Hayen</a>  
+</li>
+    
+<li id="tags">
+  <span
+    >标签: </span
+  >
+   
+  <a href="tag/compiler.html">compiler</a>   
+  <a href="tag/python.html">Python</a>   
+  <a href="tag/nuitka.html">Nuitka</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../posts.html">最近帖子</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="next-nuitka-live-stream-30-01-2022.html"
+      >30 January - Next Nuitka Live Stream</a
+    >
+  </li>
+  
+  <li>
+    <a href="first-nuitka-live-stream.html"
+      >14 January - First Nuitka Live Stream</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0619.html"
+      >12 January - Nuitka Release 0.6.19</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0618.html"
+      >11 December - Nuitka Release 0.6.18</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0617.html"
+      >11 November - Nuitka Release 0.6.17</a
+    >
+  </li>
+  
+</ul>
+
+<h3><a href="tag.html">标签</a></h3>
+<style type="text/css">
+  ul.ablog-cloud {
+    list-style: none;
+    overflow: auto;
+  }
+  ul.ablog-cloud li {
+    float: left;
+    height: 20pt;
+    line-height: 18pt;
+    margin-right: 5px;
+  }
+  ul.ablog-cloud a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  li.ablog-cloud-1 {
+    font-size: 80%;
+  }
+  li.ablog-cloud-2 {
+    font-size: 95%;
+  }
+  li.ablog-cloud-3 {
+    font-size: 110%;
+  }
+  li.ablog-cloud-4 {
+    font-size: 125%;
+  }
+  li.ablog-cloud-5 {
+    font-size: 140%;
+  }
+</style>
+<ul class="ablog-cloud">
+   
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/android.html">Android</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/debian.html">Debian</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/ntw.html">NTW</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/nikola.html">Nikola</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/nuitka.html">Nuitka</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/python.html">Python</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/windows.html">Windows</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/automation.html">automation</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/benchmark.html">benchmark</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/compiler.html">compiler</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/conference.html">conference</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/europython.html">europython</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/family.html">family</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/git.html">git</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/gsoc2019.html">gsoc2019</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/physics.html">physics</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/portrait.html">portrait</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/presentation.html">presentation</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/pypi.html">pypi</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/pytest.html">pytest</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/quiz.html">quiz</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/standalone.html">standalone</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/tests.html">tests</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/video.html">video</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="archive.html">归档</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="2022.html">2022 (3)</a>
+  </li>
+    
+  <li>
+    <a href="2021.html">2021 (8)</a>
+  </li>
+    
+  <li>
+    <a href="2020.html">2020 (5)</a>
+  </li>
+    
+  <li>
+    <a href="2019.html">2019 (14)</a>
+  </li>
+    
+  <li>
+    <a href="2018.html">2018 (17)</a>
+  </li>
+    
+  <li>
+    <a href="2017.html">2017 (4)</a>
+  </li>
+    
+  <li>
+    <a href="2016.html">2016 (8)</a>
+  </li>
+    
+  <li>
+    <a href="2015.html">2015 (16)</a>
+  </li>
+    
+  <li>
+    <a href="2014.html">2014 (12)</a>
+  </li>
+    
+  <li>
+    <a href="2013.html">2013 (24)</a>
+  </li>
+    
+  <li>
+    <a href="2012.html">2012 (21)</a>
+  </li>
+    
+  <li>
+    <a href="2011.html">2011 (25)</a>
+  </li>
+    
+  <li>
+    <a href="2010.html">2010 (19)</a>
+  </li>
+   
+</ul>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bug-fixes">
+   Bug fixes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization">
+   Optimization
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exceptions">
+     Exceptions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function-calls">
+     Function Calls
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parameter-parsing">
+     Parameter Parsing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attribute-access">
+     Attribute Access
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constants">
+     Constants
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iteration">
+     Iteration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#built-ins">
+     Built-ins
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanups">
+     Cleanups
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-tests">
+   New Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organisational">
+   Organisational
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Nuitka Release 0.3.9</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bug-fixes">
+   Bug fixes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization">
+   Optimization
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exceptions">
+     Exceptions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function-calls">
+     Function Calls
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parameter-parsing">
+     Parameter Parsing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attribute-access">
+     Attribute Access
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constants">
+     Constants
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iteration">
+     Iteration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#built-ins">
+     Built-ins
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanups">
+     Cleanups
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-tests">
+   New Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organisational">
+   Organisational
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="nuitka-release-0-3-9">
+<h1>Nuitka Release 0.3.9<a class="headerlink" href="#nuitka-release-0-3-9" title="永久链接至标题">¶</a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<p>This is about the new release of Nuitka which some bug fixes and offers
+a good speed improvement.</p>
+<p>This new release is major milestone 2 work, enhancing practically all
+areas of Nuitka. The main focus was on faster function calls, faster
+class attributes (not instance), faster unpacking, and more built-ins
+detected and more thoroughly optimizing them.</p>
+<div class="section" id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Exceptions raised inside with statements had references to the
+exception and traceback leaked.</p></li>
+<li><p>On Windows the binaries <code class="docutils literal notranslate"><span class="pre">sys.executable</span></code> pointed to the binary
+itself instead of the Python interpreter. Changed, because some code
+uses <code class="docutils literal notranslate"><span class="pre">sys.executable</span></code> to know how to start Python scripts.</p></li>
+<li><p>There is a bug (fixed in their repository) related to C++ raw strings
+and C++ “trigraphs” that affects Nuitka, added a workaround that
+makes Nuitka not emit “trigraphs” at all.</p></li>
+<li><p>The check for mutable constants was erroneous for tuples, which could
+lead to assuming a tuple with only mutable elements to be not
+mutable, which is of course wrong.</p></li>
+</ul>
+</div>
+<div class="section" id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="永久链接至标题">¶</a></h2>
+<p>This time there are so many new optimization, it makes sense to group
+them by the subject.</p>
+<div class="section" id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>The code to add a traceback is now our own, which made it possible to
+use frames that do not contain line numbers and a code object capable
+of lookups.</p></li>
+<li><p>Raising exceptions or adding to tracebacks has been made way faster
+by reusing a cached frame objects for the task.</p></li>
+<li><p>The class used for saving exceptions temporarily (e.g. used in
+<code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">finally</span></code> code, or with statement) has been improved.</p>
+<p>It now doesn’t make a copy of the exception with a C++ <code class="docutils literal notranslate"><span class="pre">new</span></code> call,
+but it simply stores the exception properties itself and creates the
+exception object only on demand, which is more efficient.</p>
+</li>
+<li><p>When catching exceptions, the addition of tracebacks is now done
+without exporting and re-importing the exception to Python, but
+directly on the exception objects traceback, this avoids a useless
+round trip.</p></li>
+</ul>
+</div>
+<div class="section" id="function-calls">
+<h3>Function Calls<a class="headerlink" href="#function-calls" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>Uses of PyObject_Call provide <code class="docutils literal notranslate"><span class="pre">NULL</span></code> as the dictionary, instead of
+an empty dictionary, which is slightly faster for function calls.</p></li>
+<li><p>There are now dedicated variants for complex function calls with
+<code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> arguments in all forms.</p>
+<p>These can take advantage of easier cases. For example, a merge with
+star arguments is only needed if there actually were any of these.</p>
+</li>
+<li><p>The check for non-string values in the <code class="docutils literal notranslate"><span class="pre">**</span></code> arguments can now be
+completely short-cut for the case of a dictionary that has never had
+a string added. There is now code that detects this case and skips
+the check, eliminating it as a performance concern.</p></li>
+</ul>
+</div>
+<div class="section" id="parameter-parsing">
+<h3>Parameter Parsing<a class="headerlink" href="#parameter-parsing" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>Reversed the order in which parameters are checked.</p>
+<p>Now the keyword dictionary is iterated first and only then the
+positional arguments after that is done. This iteration is not only
+much faster (avoiding repeated lookups for each possible parameter),
+it also can be more correct, in case the keyword argument is derived
+from a dictionary and its keys mutate it when being compared.</p>
+</li>
+<li><p>Comparing parameter names is now done with a fast path, in which the
+pointer values are compare first. This can avoid a call to the
+comparison at all, which has become very likely due to the interning
+of parameter name strings, see below.</p></li>
+<li><p>Added a dedicated call to check for parameter equality with rich
+equality comparison, which doesn’t raise an exception.</p></li>
+<li><p>Unpacking of tuples is now using dedicated variants of the normal
+unpacking code instead of rolling out everything themselves.</p></li>
+</ul>
+</div>
+<div class="section" id="attribute-access">
+<h3>Attribute Access<a class="headerlink" href="#attribute-access" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>The class type (in executables, not yet for extension modules) is
+changed to a faster variant of our own making that doesn’t consider
+the restricted mode a possibility. This avoids very expensive calls,
+and makes accessing class attributes in compiled code and in
+non-compiled code faster.</p></li>
+<li><p>Access to attributes (but not of instances) got in-lined and
+therefore much faster. Due to other optimization, a specific step to
+intern the string used for attribute access is not necessary with
+Nuitka at all anymore. This made access to attributes about 50%
+faster which is big of course.</p></li>
+</ul>
+</div>
+<div class="section" id="constants">
+<h3>Constants<a class="headerlink" href="#constants" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>The bug for mutable tuples also caused non-mutable tuples to be
+considered as mutable, which lead to less efficient code.</p></li>
+<li><p>The constant creation with the g++ bug worked around, can now use raw
+strings to create string constants, without resorting to un-pickling
+them as a work around. This allows us to use
+<code class="docutils literal notranslate"><span class="pre">PyString_FromStringAndSize</span></code> to create strings again, which is
+obviously faster, and had not been done, because of the confusion
+caused by the g++ bug.</p></li>
+<li><p>For string constants that are usable as attributes (i.e. match the
+identifier regular expression), these are now interned, directly
+after creation. With this, the check for identical value of pointers
+for parameters has a bigger chance to succeed, and this saves some
+memory too.</p></li>
+<li><p>For empty containers (set, dict, list, tuple) the constants created
+are now are not unstreamed, but created with the dedicated API calls,
+saving a bit of code and being less ugly.</p></li>
+<li><p>For mutable empty constant access (set, dict, list) the values are no
+longer made by copying the constant, but instead with the API
+functions to create new ones. This makes code like <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">[]</span></code> a tiny
+bit faster.</p></li>
+<li><p>For slice indices the code generation now takes advantage of creating
+a C++ <code class="docutils literal notranslate"><span class="pre">Py_ssize_t</span></code> from constant value if possible. Before it was
+converting the integer constant at run time, which was of course
+wasteful even if not (very) slow.</p></li>
+</ul>
+</div>
+<div class="section" id="iteration">
+<h3>Iteration<a class="headerlink" href="#iteration" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>The creation of iterators got our own code. This avoids a function
+call and is otherwise only a small gain for anything but sequence
+iterators. These may be much faster to create now, as it avoids
+another call and repeated checks.</p></li>
+<li><p>The next on iterator got our own code too, which has simpler code
+flow, because it avoids the double check in case of NULL returned.</p></li>
+<li><p>The unpack check got similar code to the next iterator, it also has
+simpler code flow now and avoids double checks.</p></li>
+</ul>
+</div>
+<div class="section" id="built-ins">
+<h3>Built-ins<a class="headerlink" href="#built-ins" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>Added support for the <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>,
+<code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code> built-ins along with optimizing their use with
+constant parameter.</p></li>
+<li><p>Added support for the <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">long</span></code> built-ins, based on a new
+“call spec” object, that detects parameter errors at compile time and
+raises appropriate exceptions as required, plus it deals with keyword
+arguments just as well.</p>
+<p>So, to Nuitka it doesn’t matter now it you write <code class="docutils literal notranslate"><span class="pre">int(value)</span> <span class="pre">``or</span>
+<span class="pre">``int(x</span> <span class="pre">=</span> <span class="pre">value)</span></code> anymore. The <code class="docutils literal notranslate"><span class="pre">base</span></code> parameter of these built-ins
+is also supported.</p>
+<p>The use of this call spec mechanism will the expanded, currently it
+is not applied to the built-ins that take only one parameter. This is
+a work in progress as is the whole built-ins business as not all the
+built-ins are covered yet.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="cleanups">
+<h3>Cleanups<a class="headerlink" href="#cleanups" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>In 0.3.8 per module global classes were introduced, but the
+<code class="docutils literal notranslate"><span class="pre">IMPORT_MODULE</span></code> kept using the old universal class, this got
+resolved and the old class is now fully gone.</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">assertObject</span></code> in more cases, and in more places at all,
+catches errors earlier on.</p></li>
+<li><p>Moved the addition to tracebacks into the <code class="docutils literal notranslate"><span class="pre">_PythonException</span></code> class,
+where it works directly on the contained traceback. This is cleaner
+as it no longer requires to export exceptions to Python, just to add
+a traceback entry.</p></li>
+<li><p>Some <code class="docutils literal notranslate"><span class="pre">PyLint</span></code> cleanups were done, reducing the number of reports a
+bit, but there is still a lot to do.</p></li>
+<li><p>Added a <code class="docutils literal notranslate"><span class="pre">DefaultValueIdentifier</span></code> class that encapsulates the access
+to default values in the parameter parsing more cleanly.</p></li>
+<li><p>The module <code class="docutils literal notranslate"><span class="pre">CodeTemplatesListContractions</span></code> was renamed to
+<code class="docutils literal notranslate"><span class="pre">CodeTemplatesContractions</span></code> to reflect the fact that it deals with
+all kinds of contractions (also set and dict contractions), not just
+list contractions.</p></li>
+<li><p>Moved the with related template to its own module
+<code class="docutils literal notranslate"><span class="pre">CodeTemplatesWith</span></code>, so its easier to find.</p></li>
+<li><p>The options handling for g++ based compilers was cleaned up, so that
+g++ 4.6 and MinGW are better supported now.</p></li>
+<li><p>Documented more aspects of the Scons build file.</p></li>
+<li><p>Some more generated code white space fixes.</p></li>
+<li><p>Moved some helpers to dedicated files. There is now <code class="docutils literal notranslate"><span class="pre">calling.hpp</span></code>
+for function calls, an <code class="docutils literal notranslate"><span class="pre">importing.cpp</span></code> for import related stuff.</p></li>
+<li><p>Moved the manifest generation to the scons file, which now produces
+ready to use executables.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="new-tests">
+<h2>New Tests<a class="headerlink" href="#new-tests" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Added a improved version of “pybench” that can cope with the “0 ms”
+execution time that Nuitka has for some if its sub-tests.</p></li>
+<li><p>Reference counting test for with statement was added.</p></li>
+<li><p>Micro benchmarks to demonstrate try finally performance when an
+exception travels through it.</p></li>
+<li><p>Micro benchmark for with statement that eats up exceptions raised
+inside the block.</p></li>
+<li><p>Micro benchmarks for the read and write access to class attributes.</p></li>
+<li><p>Enhanced <code class="docutils literal notranslate"><span class="pre">Printing</span></code> test to cover the trigraphs constant bug case.
+Output is required to make the error detectable.</p></li>
+<li><p>Enhanced <code class="docutils literal notranslate"><span class="pre">Constants</span></code> test to cover repeated mutation of mutable
+tuple constants, this covers the bug mentioned.</p></li>
+</ul>
+</div>
+<div class="section" id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><p>Added a credits section to the “README.txt” where I give credit to
+the people who contributed to Nuitka, and the projects it is using. I
+will make it a separate posting to cite these.</p></li>
+<li><p>Documented the requirements on the compiler more clearly, document
+the fact that we require scons and which version of Python (2.6 or
+2.7).</p></li>
+<li><p>The is now a codespeed implementation up and running with historical
+data for up to Nuitka 0.3.8 runs of “PyStone” and with pybench. It
+will be updated for 0.3.9 once I have the infrastructure in place to
+do that automatically.</p></li>
+<li><p>The cleanup script now also removes .so files.</p></li>
+<li><p>The handling of options for g++ got improved, so it’s the same for
+g++ and MinGW compilers, plus adequate errors messages are given, if
+the compiler version is too low.</p></li>
+<li><p>There is now a <code class="docutils literal notranslate"><span class="pre">--unstripped</span></code> option that just keeps the debug
+information in the file, but doesn’t keep the assertions.</p>
+<p>This will be helpful when looking at generated assembler code from
+Nuitka to not have the distortions that <code class="docutils literal notranslate"><span class="pre">--debug</span></code> causes (reduced
+optimization level, assertions, etc.) and instead a clear view.</p>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="nuitka-on-pybench---good-and-bad.html">
+       Looking where Nuitka stands
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="the-new-cat.html">
+      The new cat 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 Kay Hayen<br/>
+    
+        &copy; 版权 2022, Kay Hayen and Nuitka Contributors.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

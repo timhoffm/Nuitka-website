@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+    <title>Nuitka this week #12</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="canonical" href="https://daobook.github.io/nuitka-doc/posts/nuitka-this-week-12.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../posts/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+          
+<h2>
+   
+  08 February 2019 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    >作者:</span
+  >
+   
+  <a href="author/kay-hayen.html">Kay Hayen</a>  
+</li>
+    
+<li id="tags">
+  <span
+    >标签: </span
+  >
+   
+  <a href="tag/python.html">Python</a>   
+  <a href="tag/compiler.html">compiler</a>   
+  <a href="tag/nuitka.html">Nuitka</a>   
+  <a href="tag/ntw.html">NTW</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../posts.html">最近帖子</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="next-nuitka-live-stream-30-01-2022.html"
+      >30 January - Next Nuitka Live Stream</a
+    >
+  </li>
+  
+  <li>
+    <a href="first-nuitka-live-stream.html"
+      >14 January - First Nuitka Live Stream</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0619.html"
+      >12 January - Nuitka Release 0.6.19</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0618.html"
+      >11 December - Nuitka Release 0.6.18</a
+    >
+  </li>
+  
+  <li>
+    <a href="nuitka-release-0617.html"
+      >11 November - Nuitka Release 0.6.17</a
+    >
+  </li>
+  
+</ul>
+
+<h3><a href="tag.html">标签</a></h3>
+<style type="text/css">
+  ul.ablog-cloud {
+    list-style: none;
+    overflow: auto;
+  }
+  ul.ablog-cloud li {
+    float: left;
+    height: 20pt;
+    line-height: 18pt;
+    margin-right: 5px;
+  }
+  ul.ablog-cloud a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  li.ablog-cloud-1 {
+    font-size: 80%;
+  }
+  li.ablog-cloud-2 {
+    font-size: 95%;
+  }
+  li.ablog-cloud-3 {
+    font-size: 110%;
+  }
+  li.ablog-cloud-4 {
+    font-size: 125%;
+  }
+  li.ablog-cloud-5 {
+    font-size: 140%;
+  }
+</style>
+<ul class="ablog-cloud">
+   
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/android.html">Android</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/debian.html">Debian</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/ntw.html">NTW</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/nikola.html">Nikola</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/nuitka.html">Nuitka</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/python.html">Python</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/windows.html">Windows</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/automation.html">automation</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/benchmark.html">benchmark</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/compiler.html">compiler</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/conference.html">conference</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/europython.html">europython</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/family.html">family</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/git.html">git</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/gsoc2019.html">gsoc2019</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/physics.html">physics</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/portrait.html">portrait</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/presentation.html">presentation</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/pypi.html">pypi</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/pytest.html">pytest</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/quiz.html">quiz</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/standalone.html">standalone</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/tests.html">tests</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/video.html">video</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="archive.html">归档</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="2022.html">2022 (3)</a>
+  </li>
+    
+  <li>
+    <a href="2021.html">2021 (8)</a>
+  </li>
+    
+  <li>
+    <a href="2020.html">2020 (5)</a>
+  </li>
+    
+  <li>
+    <a href="2019.html">2019 (14)</a>
+  </li>
+    
+  <li>
+    <a href="2018.html">2018 (17)</a>
+  </li>
+    
+  <li>
+    <a href="2017.html">2017 (4)</a>
+  </li>
+    
+  <li>
+    <a href="2016.html">2016 (8)</a>
+  </li>
+    
+  <li>
+    <a href="2015.html">2015 (16)</a>
+  </li>
+    
+  <li>
+    <a href="2014.html">2014 (12)</a>
+  </li>
+    
+  <li>
+    <a href="2013.html">2013 (24)</a>
+  </li>
+    
+  <li>
+    <a href="2012.html">2012 (21)</a>
+  </li>
+    
+  <li>
+    <a href="2011.html">2011 (25)</a>
+  </li>
+    
+  <li>
+    <a href="2010.html">2010 (19)</a>
+  </li>
+   
+</ul>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#communication-vs-coding">
+   Communication vs. Coding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization-work">
+   Optimization Work
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#week-of-bugfixing">
+   Week of Bugfixing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-flag-o-and-oo">
+   Python flag -O and -OO
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#virtualenv-vs-venv">
+   Virtualenv vs. venv
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-summer-of-code-for-nuitka">
+   Google Summer of Code for Nuitka
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nuitka-organisation">
+   Nuitka Organisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#windows-dependencies-from-pefile">
+   Windows Dependencies from pefile
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tkinter-plugin">
+   Tkinter Plugin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy-plugin">
+   Numpy Plugin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#twitter">
+   Twitter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help-wanted">
+   Help Wanted
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#donations">
+   Donations
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Nuitka this week #12</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#communication-vs-coding">
+   Communication vs. Coding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization-work">
+   Optimization Work
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#week-of-bugfixing">
+   Week of Bugfixing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-flag-o-and-oo">
+   Python flag -O and -OO
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#virtualenv-vs-venv">
+   Virtualenv vs. venv
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-summer-of-code-for-nuitka">
+   Google Summer of Code for Nuitka
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nuitka-organisation">
+   Nuitka Organisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#windows-dependencies-from-pefile">
+   Windows Dependencies from pefile
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tkinter-plugin">
+   Tkinter Plugin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy-plugin">
+   Numpy Plugin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#twitter">
+   Twitter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help-wanted">
+   Help Wanted
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#donations">
+   Donations
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="nuitka-this-week-12">
+<h1><a class="toc-backref" href="#id3">Nuitka this week #12</a><a class="headerlink" href="#nuitka-this-week-12" title="永久链接至标题">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#nuitka-this-week-12" id="id3">Nuitka this week #12</a></p>
+<ul>
+<li><p><a class="reference internal" href="#communication-vs-coding" id="id4">Communication vs. Coding</a></p></li>
+<li><p><a class="reference internal" href="#optimization-work" id="id5">Optimization Work</a></p></li>
+<li><p><a class="reference internal" href="#week-of-bugfixing" id="id6">Week of Bugfixing</a></p></li>
+<li><p><a class="reference internal" href="#python-flag-o-and-oo" id="id7">Python flag -O and -OO</a></p></li>
+<li><p><a class="reference internal" href="#virtualenv-vs-venv" id="id8">Virtualenv vs. venv</a></p></li>
+<li><p><a class="reference internal" href="#google-summer-of-code-for-nuitka" id="id9">Google Summer of Code for Nuitka</a></p></li>
+<li><p><a class="reference internal" href="#nuitka-organisation" id="id10">Nuitka Organisation</a></p></li>
+<li><p><a class="reference internal" href="#windows-dependencies-from-pefile" id="id11">Windows Dependencies from pefile</a></p></li>
+<li><p><a class="reference internal" href="#tkinter-plugin" id="id12">Tkinter Plugin</a></p></li>
+<li><p><a class="reference internal" href="#numpy-plugin" id="id13">Numpy Plugin</a></p></li>
+<li><p><a class="reference internal" href="#twitter" id="id14">Twitter</a></p></li>
+<li><p><a class="reference internal" href="#help-wanted" id="id15">Help Wanted</a></p></li>
+<li><p><a class="reference internal" href="#donations" id="id16">Donations</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="communication-vs-coding">
+<h2><a class="toc-backref" href="#id4">Communication vs. Coding</a><a class="headerlink" href="#communication-vs-coding" title="永久链接至标题">¶</a></h2>
+<p>Over the holiday season I sort of neglected these postings, but there
+are other fields, where I have put my focus, but I think these postings
+are now going to resume.</p>
+<p>A quick update in a while in an eternally fluent situation, and not too
+polished.</p>
+</div>
+<div class="section" id="optimization-work">
+<h2><a class="toc-backref" href="#id5">Optimization Work</a><a class="headerlink" href="#optimization-work" title="永久链接至标题">¶</a></h2>
+<p>So, the 0.6.2 optimization work has been not a lot yet. I started some
+work on <code class="docutils literal notranslate"><span class="pre">int</span></code>/<code class="docutils literal notranslate"><span class="pre">long</span></code> C type and it looked good.</p>
+</div>
+<div class="section" id="week-of-bugfixing">
+<h2><a class="toc-backref" href="#id6">Week of Bugfixing</a><a class="headerlink" href="#week-of-bugfixing" title="永久链接至标题">¶</a></h2>
+<p>So I did this, and it turned out rather long. I continued fixing things
+and finishing up open things to the point that it now is clean. I hate
+to be falling behind. I am touching on a few more interesting topics.</p>
+</div>
+<div class="section" id="python-flag-o-and-oo">
+<h2><a class="toc-backref" href="#id7">Python flag -O and -OO</a><a class="headerlink" href="#python-flag-o-and-oo" title="永久链接至标题">¶</a></h2>
+<p>Nuitka was supporting <cite>-O</cite> but doing what should only the done for <cite>-OO</cite>
+which I only learned of now. So this is going to be supported both now.</p>
+</div>
+<div class="section" id="virtualenv-vs-venv">
+<h2><a class="toc-backref" href="#id8">Virtualenv vs. venv</a><a class="headerlink" href="#virtualenv-vs-venv" title="永久链接至标题">¶</a></h2>
+<p>Accelerated binaries were not running with full <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> in the
+virtualenv, because <code class="docutils literal notranslate"><span class="pre">site</span></code> module uses <code class="docutils literal notranslate"><span class="pre">sys.prefix</span></code> and that was not
+propagated,but it now is.</p>
+</div>
+<div class="section" id="google-summer-of-code-for-nuitka">
+<h2><a class="toc-backref" href="#id9">Google Summer of Code for Nuitka</a><a class="headerlink" href="#google-summer-of-code-for-nuitka" title="永久链接至标题">¶</a></h2>
+<p>So the GSoC 2019 page is shaping up, the pull request to list Nuitka on
+the PSF project pages has been merged. More tweaking will be needed to
+get into perfect shape, and that has been my main communication time
+effort.</p>
+<p>Finally somebody had stepped up for mentor, which means a lot to me. Now
+we need to see if students are willing to pick us.</p>
+<p>And because I publish this too late. Already a bunch of stundents are
+showing interest and are hacking on Nuitka, which keeps me even more
+busy, and makes me extremely happy.</p>
+</div>
+<div class="section" id="nuitka-organisation">
+<h2><a class="toc-backref" href="#id10">Nuitka Organisation</a><a class="headerlink" href="#nuitka-organisation" title="永久链接至标题">¶</a></h2>
+<p>The Nuitka organisation on Github was introduced for my a while ago, and
+I had transferred the ownership of the Nuitka repository to there.
+Having moved the issue tracking to there, I was going more all in on it.</p>
+<p>Recently more people have submitted PRs and with incredible quality and
+willingness to support it even after merge of their PR. No dry by
+contribution, but people looking to actually improve Nuitka together
+with me.</p>
+<p>Therefore I welcome Orsiris and Jorj on board and am really happy about
+it.</p>
+</div>
+<div class="section" id="windows-dependencies-from-pefile">
+<h2><a class="toc-backref" href="#id11">Windows Dependencies from pefile</a><a class="headerlink" href="#windows-dependencies-from-pefile" title="永久链接至标题">¶</a></h2>
+<p>So Orsiris de Jong implemented a replacement for the dependency walker
+based code to scan DLLs for Windows standalone using the <cite>pefile</cite>
+module, which is likely way better at this. For starters it’s
+experimental in the next release, but I expect it to soon become the
+default.</p>
+</div>
+<div class="section" id="tkinter-plugin">
+<h2><a class="toc-backref" href="#id12">Tkinter Plugin</a><a class="headerlink" href="#tkinter-plugin" title="永久链接至标题">¶</a></h2>
+<p>And Jorj X. McKie implemented a Windows Tkinter plug-in that deals with
+copying of the TCL installation and integrating it with Nuitka
+standalone for distribution.</p>
+<p>That is very nice and seems to affect a lot of people using that GUI
+style it seems.</p>
+</div>
+<div class="section" id="numpy-plugin">
+<h2><a class="toc-backref" href="#id13">Numpy Plugin</a><a class="headerlink" href="#numpy-plugin" title="永久链接至标题">¶</a></h2>
+<p>And Jorj X. McKie also implemented a NumPy plug-in that deals with the
+various acceleration methods there are, e.g. MKL, Blas, I have no idea.
+It copies the needed DLLs along and makes sure that <cite>numpy</cite> stays fast
+in standalone mode.</p>
+</div>
+<div class="section" id="twitter">
+<h2><a class="toc-backref" href="#id14">Twitter</a><a class="headerlink" href="#twitter" title="永久链接至标题">¶</a></h2>
+<p>I continue to be very active there.</p>
+<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw">Follow &#64;kayhayen</a></p>
+<p>And lets not forget, having followers make me happy. So do re-tweets.</p>
+<p>Adding Twitter more prominently to the web site is something that is
+also going to happen.</p>
+</div>
+<div class="section" id="help-wanted">
+<h2><a class="toc-backref" href="#id15">Help Wanted</a><a class="headerlink" href="#help-wanted" title="永久链接至标题">¶</a></h2>
+<p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a>
+and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
+<p>Nuitka definitely needs more people to work on it.</p>
+</div>
+<div class="section" id="donations">
+<h2><a class="toc-backref" href="#id16">Donations</a><a class="headerlink" href="#donations" title="永久链接至标题">¶</a></h2>
+<p>If you want to help, but cannot spend the time, please consider to
+donate to Nuitka, and go here:</p>
+<p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="nuitka-release-061.html">
+       Nuitka Release 0.6.1
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-release-062.html">
+      Nuitka Release 0.6.2 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 Kay Hayen<br/>
+    
+        &copy; 版权 2022, Kay Hayen and Nuitka Contributors.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

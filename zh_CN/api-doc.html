@@ -1,0 +1,1197 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+    <title>API documentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script src="_static/asciinema-player_2.6.1.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="canonical" href="https://daobook.github.io/nuitka-doc/api-doc.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="工厂说明书" href="factory.html" />
+    <link rel="prev" title="Nuitka 开发者手册" href="developer-manual.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="posts/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/Nuitka-Logo-Symbol.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="start.html">
+   快速入门
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="download.html">
+     下载
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="user-manual.html">
+     用户手册
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="support.html">
+     支持
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="roadmap.html">
+     路线图
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="commercial.html">
+   Nuitka Commercial
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="more.html">
+   更多内容
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="developer-manual.html">
+     开发者手册
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     API 文档
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="factory.html">
+     工厂说明书
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="use.html">
+     国际化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="blog.html">
+   Nuitka 博客
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+<button><a href="/nuitka-doc/">en</a></button>
+<button><a href="/nuitka-doc/zh_CN">zh_CN</a></button>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>API documentation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="module-nuitka.Options">
+<span id="api-documentation"></span><h1>API documentation<a class="headerlink" href="#module-nuitka.Options" title="永久链接至标题">¶</a></h1>
+<p>Options module</p>
+<p>This exposes the choices made by the user. Defaults will be applied here, and
+some handling of defaults.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isVerbose">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isVerbose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isVerbose" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--verbose</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallTraceExecution">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallTraceExecution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallTraceExecution" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--trace-execution</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallExecuteImmediately">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallExecuteImmediately</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallExecuteImmediately" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--run</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallRunInDebugger">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallRunInDebugger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallRunInDebugger" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--debug</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallDumpBuiltTreeXML">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDumpBuiltTreeXML</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDumpBuiltTreeXML" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--xml</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallOnlyExecCCompilerCall">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallOnlyExecCCompilerCall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallOnlyExecCCompilerCall" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--recompile-c-only</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallNotDoExecCCompilerCall">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotDoExecCCompilerCall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotDoExecCCompilerCall" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--generate-c-only</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getFileReferenceMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getFileReferenceMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getFileReferenceMode" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em>, one of “runtime”, “original”, “frozen”, coming from <code class="docutils literal notranslate"><span class="pre">--file-reference-choice</span></code></p>
+<dl class="simple">
+<dt>Notes:</dt><dd><p>Defaults to runtime for modules and packages, as well as standalone binaries,
+otherwise original is kept.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallMakeModule">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallMakeModule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallMakeModule" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--module</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallCreatePyiFile">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreatePyiFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreatePyiFile" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">--no-pyi-file</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isAllowedToReexecute">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isAllowedToReexecute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isAllowedToReexecute" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">--must-not-re-execute</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallFollowStandardLibrary">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowStandardLibrary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowStandardLibrary" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--follow-stdlib</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallFollowNoImports">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowNoImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowNoImports" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--nofollow-imports</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallFollowAllImports">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowAllImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowAllImports" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--follow-imports</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getShallFollowInNoCase">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowInNoCase</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowInNoCase" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--nofollow-import-to=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getShallFollowModules">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowModules" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--follow-import-to=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getShallFollowExtra">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowExtra</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowExtra" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-plugin-directory=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getShallFollowExtraFilePatterns">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowExtraFilePatterns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowExtraFilePatterns" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-plugin-files=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMustIncludeModules">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMustIncludeModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMustIncludeModules" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-module=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMustIncludePackages">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMustIncludePackages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMustIncludePackages" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-package=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getShallIncludePackageData">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludePackageData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludePackageData" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-package-data=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getShallIncludeDataFiles">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludeDataFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludeDataFiles" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-data-file=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getShallIncludeDataDirs">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludeDataDirs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludeDataDirs" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-data-dir=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallWarnImplicitRaises">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallWarnImplicitRaises</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallWarnImplicitRaises" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--warn-implicit-exceptions</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallWarnUnusualCode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallWarnUnusualCode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallWarnUnusualCode" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--warn-unusual-code</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.assumeYesForDownloads">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">assumeYesForDownloads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.assumeYesForDownloads" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--assume-yes-for-downloads</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isPythonDebug">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPythonDebug</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPythonDebug" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--python-debug</span></code> or <code class="docutils literal notranslate"><span class="pre">sys.flags.debug</span></code></p>
+</dd>
+</dl>
+<p>Passed to Scons as <code class="docutils literal notranslate"><span class="pre">python_debug</span></code> so it can consider it when picking
+link libraries to choose the correct variant. Also enables the define
+<code class="docutils literal notranslate"><span class="pre">Py_DEBUG</span></code> for C headers. Reference counting checks and other debug
+asserts of Python will happen in this mode.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isUnstripped">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isUnstripped</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isUnstripped" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--unstripped</span></code> or <code class="docutils literal notranslate"><span class="pre">--profile</span></code></p>
+</dd>
+</dl>
+<p>A binary is called stripped when debug information is not present, an
+unstripped when it is present. For profiling and debugging it will be
+necessary, but it doesn’t enable debug checks like <code class="docutils literal notranslate"><span class="pre">--debug</span></code> does.</p>
+<p>Passed to Scons as <code class="docutils literal notranslate"><span class="pre">unstripped_mode</span></code> to it can ask the linker to
+include symbol information.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isProfile">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isProfile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isProfile" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--profile</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallCreateGraph">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateGraph" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--graph</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getOutputFilename">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputFilename" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em>, value of “-o”</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getOutputPath">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputPath" title="永久链接至目标">¶</a></dt>
+<dd><p>Return output pathname of a given path (filename).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getOutputDir">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputDir" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em>, value of <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> or “.”</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPositionalArgs">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPositionalArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPositionalArgs" title="永久链接至目标">¶</a></dt>
+<dd><p><em>tuple</em>, command line positional arguments</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMainArgs">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMainArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMainArgs" title="永久链接至目标">¶</a></dt>
+<dd><p><em>tuple</em>, arguments following the optional arguments</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallOptimizeStringExec">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallOptimizeStringExec</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallOptimizeStringExec" title="永久链接至目标">¶</a></dt>
+<dd><p>Inactive yet</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallClearPythonPathEnvironment">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallClearPythonPathEnvironment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallClearPythonPathEnvironment" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">--execute-with-pythonpath</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallUseStaticLibPython">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallUseStaticLibPython</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallUseStaticLibPython" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--static-libpython=yes|auto</span></code> and not module mode</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Notes:</dt><dd><p>Currently only Anaconda on non-Windows can do this and MSYS2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallTreatUninstalledPython">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallTreatUninstalledPython</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallTreatUninstalledPython" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = derived from Python installation and modes</p>
+<dl>
+<dt>Notes:</dt><dd><p>Not done for standalone mode obviously. The Python DLL will
+be a dependency of the executable and treated that way.</p>
+<p>Also not done for extension modules, they are loaded with
+a Python runtime available.</p>
+<p>Most often uninstalled Python versions are self compiled or
+from Anaconda.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isShowScons">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowScons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowScons" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--show-scons</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getJobLimit">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getJobLimit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getJobLimit" title="永久链接至目标">¶</a></dt>
+<dd><p><em>int</em>, value of <code class="docutils literal notranslate"><span class="pre">--jobs</span></code> / “-j” or number of CPU kernels</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getLtoMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getLtoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getLtoMode" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--lto</span></code> or <code class="docutils literal notranslate"><span class="pre">--pgo</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isClang">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isClang</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isClang" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--clang</span></code> or enforced by platform, e.g. macOS or FreeBSD some targets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isMingw64">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isMingw64</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isMingw64" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--mingw64</span></code>, available only on Windows, otherwise false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMsvcVersion">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMsvcVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMsvcVersion" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>str derived from <code class="docutils literal notranslate"><span class="pre">--msvc</span></code> on Windows, otherwise None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallDisableCCacheUsage">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisableCCacheUsage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisableCCacheUsage" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">disable-ccache</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallDisableConsoleWindow">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisableConsoleWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisableConsoleWindow" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--win-disable-console</span> <span class="pre">or</span> <span class="pre">``--macos-disable-console</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isShowProgress">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowProgress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowProgress" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--show-progress</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isShowMemory">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowMemory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowMemory" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--show-memory</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isShowInclusion">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowInclusion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowInclusion" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--show-modules</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isRemoveBuildDir">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isRemoveBuildDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isRemoveBuildDir" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--remove-output</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isExperimental">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isExperimental</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indication</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isExperimental" title="永久链接至目标">¶</a></dt>
+<dd><p>Check whether a given experimental feature is enabled.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>indication: (str) feature name</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getExperimentalIndications">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getExperimentalIndications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getExperimentalIndications" title="永久链接至目标">¶</a></dt>
+<dd><p><em>tuple</em>, items of <code class="docutils literal notranslate"><span class="pre">--experimental=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallExplainImports">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallExplainImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallExplainImports" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--explain-imports</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isStandaloneMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isStandaloneMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isStandaloneMode" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--standalone</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isOnefileMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isOnefileMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isOnefileMode" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isOnefileTempDirMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isOnefileTempDirMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isOnefileTempDirMode" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile-tempdir</span></code> and OS</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Notes:</dt><dd><p>On all but Linux, using a bootstrap binary that does unpack is mandatory,
+but on Linux, the AppImage tool is used by default, this enforces using
+a bootstrap binary there too.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isPgoMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPgoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPgoMode" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--pgo</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isPythonPgoMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPythonPgoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPythonPgoMode" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--pgo-python</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPythonPgoInput">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPgoInput</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPgoInput" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>str derived from <code class="docutils literal notranslate"><span class="pre">--pgo-python-input</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPgoArgs">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPgoArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPgoArgs" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list</em> = <code class="docutils literal notranslate"><span class="pre">--pgo-args</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPgoExecutable">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPgoExecutable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPgoExecutable" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> = <code class="docutils literal notranslate"><span class="pre">--pgo-args</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPythonPgoUnseenModulePolicy">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPgoUnseenModulePolicy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPgoUnseenModulePolicy" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> = <code class="docutils literal notranslate"><span class="pre">--python-pgo-unused-module-policy</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getIconPaths">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getIconPaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getIconPaths" title="永久链接至目标">¶</a></dt>
+<dd><p><em>list of str</em>, values of <code class="docutils literal notranslate"><span class="pre">--windows-icon-from-ico</span></code> and <code class="docutils literal notranslate"><span class="pre">--linux-onefile-icon</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getWindowsIconExecutablePath">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsIconExecutablePath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsIconExecutablePath" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> or <em>None</em> if not given, value of <code class="docutils literal notranslate"><span class="pre">--windows-icon-from-exe</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallAskForWindowsAdminRights">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallAskForWindowsAdminRights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallAskForWindowsAdminRights" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em>, value of <code class="docutils literal notranslate"><span class="pre">--windows-uac-admin</span></code> or <code class="docutils literal notranslate"><span class="pre">--windows-uac-uiaccess</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallAskForWindowsUIAccessRights">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallAskForWindowsUIAccessRights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallAskForWindowsUIAccessRights" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em>, value of <code class="docutils literal notranslate"><span class="pre">--windows-uac-uiaccess</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getWindowsVersionInfoStrings">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsVersionInfoStrings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsVersionInfoStrings" title="永久链接至目标">¶</a></dt>
+<dd><p><em>dict of str</em>, values of .</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getWindowsProductVersion">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsProductVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsProductVersion" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>tuple of 4 ints or None, derived from <code class="docutils literal notranslate"><span class="pre">--windows-product-version</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getWindowsFileVersion">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsFileVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsFileVersion" title="永久链接至目标">¶</a></dt>
+<dd><p>:returns tuple of 4 ints or None, derived from <code class="docutils literal notranslate"><span class="pre">--windows-file-version</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getWindowsSplashScreen">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsSplashScreen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsSplashScreen" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile-windows-splash-screen-image</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getWindowsCompanyName">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsCompanyName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsCompanyName" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> name of the company to use</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getWindowsProductName">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsProductName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsProductName" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> name of the product to use</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMacOSTargetArch">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSTargetArch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSTargetArch" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>str enum (“universal”, “arm64”, “x86_64”) derived from <code class="docutils literal notranslate"><span class="pre">--macos-target-arch</span></code> value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallCreateAppBundle">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateAppBundle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateAppBundle" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> shall create an application bundle</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMacOSAppName">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSAppName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSAppName" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> name of the app to use bundle</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMacOSSignedAppName">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSSignedAppName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSSignedAppName" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> name of the app to use during signing</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMacOSAppVersion">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSAppVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSAppVersion" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> version of the app to use for bundle</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoSite">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoSite</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoSite" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “no_site” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoAnnotations">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoAnnotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoAnnotations" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “no_annotations” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoAsserts">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoAsserts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoAsserts" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “no_asserts” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoDocstrings">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoDocstrings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoDocstrings" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “no_docstrings” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoWarnings">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoWarnings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoWarnings" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “no_docstrings” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagTraceImports">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagTraceImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagTraceImports" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “trace_imports”, “-v” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoRandomization">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoRandomization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoRandomization" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “no_randomization”, “-R”, “static_hashes” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagUnbuffered">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagUnbuffered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagUnbuffered" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “package_mode”, “-m” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagPackageMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagPackageMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagPackageMode" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = “package_mode”, “-m” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallFreezeAllStdlib">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFreezeAllStdlib</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFreezeAllStdlib" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = <strong>not</strong> shallFollowStandardLibrary</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getWindowsDependencyTool">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsDependencyTool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsDependencyTool" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em>, value of <code class="docutils literal notranslate"><span class="pre">--windows-dependency-tool=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallNotUseDependsExeCachedResults">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotUseDependsExeCachedResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotUseDependsExeCachedResults" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--disable-dll-dependency-cache</span></code> or <code class="docutils literal notranslate"><span class="pre">--force-dll-dependency-cache-update</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallNotStoreDependsExeCachedResults">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotStoreDependsExeCachedResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotStoreDependsExeCachedResults" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--disable-dll-dependency-cache</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPluginNameConsideringRenames">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginNameConsideringRenames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginNameConsideringRenames" title="永久链接至目标">¶</a></dt>
+<dd><p>Name of the plugin with renames considered.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPluginsEnabled">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginsEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginsEnabled" title="永久链接至目标">¶</a></dt>
+<dd><p><em>tuple</em>, user enabled (standard) plugins (not including user plugins)</p>
+<dl class="simple">
+<dt>Note:</dt><dd><p>Do not use this outside of main binary, as plugins are allowed
+to activate plugins themselves and that will not be visible here.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPluginsDisabled">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginsDisabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginsDisabled" title="永久链接至目标">¶</a></dt>
+<dd><p><em>tuple</em>, user disabled (standard) plugins.</p>
+<dl class="simple">
+<dt>Note:</dt><dd><p>Do not use this outside of main binary, as other plugins, e.g.
+hinted compilation will activate plugins themselves and this
+will not be visible here.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getUserPlugins">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getUserPlugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getUserPlugins" title="永久链接至目标">¶</a></dt>
+<dd><p><em>tuple</em>, items user provided of <code class="docutils literal notranslate"><span class="pre">--user-plugin=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallDetectMissingPlugins">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDetectMissingPlugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDetectMissingPlugins" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> = <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">--plugin-no-detection</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getPythonPathForScons">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPathForScons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPathForScons" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em>, value of <code class="docutils literal notranslate"><span class="pre">--python-for-scons</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallCompileWithoutBuildDirectory">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCompileWithoutBuildDirectory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCompileWithoutBuildDirectory" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> currently hard coded, not when using debugger.</p>
+<p>When this is used, compilation is executed in a fashion that it runs
+inside the build folder, hiding it, attempting to make results more
+reproducible across builds of different programs.</p>
+<p>TODO: Make this not hardcoded, but possible to disable via an
+options.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallPreferSourcecodeOverExtensionModules">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallPreferSourcecodeOverExtensionModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallPreferSourcecodeOverExtensionModules" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> prefer source code over extension modules if both are there</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallUseProgressBar">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallUseProgressBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallUseProgressBar" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> prefer source code over extension modules if both are there</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getForcedStdoutPath">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getForcedStdoutPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getForcedStdoutPath" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> force program stdout output into that filename</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getForcedStderrPath">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getForcedStderrPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getForcedStderrPath" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> force program stderr output into that filename</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallPersistModifications">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallPersistModifications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallPersistModifications" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> write plugin source changes to disk</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isLowMemory">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isLowMemory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isLowMemory" title="永久链接至目标">¶</a></dt>
+<dd><p><em>bool</em> low memory usage requested</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getCompilationReportFilename">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getCompilationReportFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getCompilationReportFilename" title="永久链接至目标">¶</a></dt>
+<dd><p><em>str</em> filename to write XML report of compilation to</p>
+</dd></dl>
+
+</div>
+
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="developer-manual.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">Nuitka 开发者手册</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="factory.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">工厂说明书</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 Kay Hayen<br/>
+    
+        &copy; 版权 2022, Kay Hayen and Nuitka Contributors.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

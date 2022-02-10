@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka Release 0.6.16</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0616.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <div class="section" id="nuitka-release-0-6-16">
+<h1>Nuitka Release 0.6.16<a class="headerlink" href="#nuitka-release-0-6-16" title="Permalink to this headline"></a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<p>This release is mostly polishing and new features. Optimization looked
+only at threading performance, and LTO improvements on Windows.</p>
+<div class="section" id="bug-fixes">
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Fix, the <code class="docutils literal notranslate"><span class="pre">pkg-resources</span></code> failed to resolve versions for
+<code class="docutils literal notranslate"><span class="pre">importlib.metadata</span></code> from its standard library at compile time.
+Fixed in 0.6.15.1 already.</p></li>
+<li><p>Standalone: Fix, <code class="docutils literal notranslate"><span class="pre">--include-module</span></code> was not including the module if
+it was an extension modules, but only for Python modules. Fixed in
+0.6.15.1 already.</p></li>
+<li><p>Standalone: Added missing implicit dependencies for <code class="docutils literal notranslate"><span class="pre">gi.overrides</span></code>.
+Fixed in 0.6.15.1 already.</p></li>
+<li><p>Python3.9: Fix, could crash when using generic aliases in certain
+configurations. Fixed in 0.6.15.2 already.</p></li>
+<li><p>Fix, the tensorflow plugin needed an update due to changed API. Fixed
+in 0.6.15.3 already.</p></li>
+<li><p>When error exiting Nuitka, it now closes any open progress bar for
+cleaner display.</p></li>
+<li><p>Standalone: Added missing dependency for <code class="docutils literal notranslate"><span class="pre">skimage</span></code>.</p></li>
+<li><p>Standalone: The <code class="docutils literal notranslate"><span class="pre">numpy</span></code> plugin now automatically includes Qt
+backend if any of the Qt binding plugins is active.</p></li>
+</ul>
+</div>
+<div class="section" id="new-features">
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Pyton3.5+: Added support for onefile compression. This is using
+<code class="docutils literal notranslate"><span class="pre">zstd</span></code> which is known to give very good compression with very high
+decompression, much better than e.g. <code class="docutils literal notranslate"><span class="pre">zlib</span></code>.</p></li>
+<li><p>macOS: Added onefile support.</p></li>
+<li><p>FreeBSD: Added onefile support.</p></li>
+<li><p>Linux: Added method to use tempdir onefile support as used on other
+platforms as an alternative to <code class="docutils literal notranslate"><span class="pre">AppImage</span></code> based.</p></li>
+<li><p>Added support for recursive addition of files from directories with
+patterns.</p></li>
+<li><p>Attaching the payload to onefile now has a progress bar too.</p></li>
+<li><p>Windows: Prelimary support for the yet unfinished Nuitka-Python that
+allows static linking and higher performance on Windows, esp. with
+Nuitka.</p></li>
+<li><p>Windows: In acceleration mode, for uninstalled Python, now a CMD file
+is created rather than copying the DLL to the binary directory. That
+avoids conflicts with architectures and of course useless file
+copies.</p></li>
+<li><p>New abilities for plugin <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> allow to make it an error
+when certain modules are imported. Added more specific options for
+usual trouble makes, esp. <code class="docutils literal notranslate"><span class="pre">setuptools</span></code>, <code class="docutils literal notranslate"><span class="pre">pytest</span></code> are causing an
+explosion for some programs, while being unused code. This makes it
+now easier to oversee this.</p></li>
+<li><p>It’s now possible to override <code class="docutils literal notranslate"><span class="pre">appdirs</span></code> decision for where cache
+files live with an environment variable <code class="docutils literal notranslate"><span class="pre">NUITKA_CACHE_DIR</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">-o</span></code> option now also works with onefile mode, it previously
+rejected anything but acceleration mode. Fixed in 0.6.15.3 already.</p></li>
+<li><p>Plugins: It’s now possible for multiple plugins to provide pre or
+post load code for the same module.</p></li>
+<li><p>Added indications for compilation modes <code class="docutils literal notranslate"><span class="pre">standalone</span></code> and
+<code class="docutils literal notranslate"><span class="pre">onefile</span></code> to the <code class="docutils literal notranslate"><span class="pre">__compiled__</span></code> attribute.</p></li>
+<li><p>Plugins: Give nicer error message in case of colliding command line
+options.</p></li>
+</ul>
+</div>
+<div class="section" id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Faster threading code is now using for Python3.8 or higher and not
+only 3.9, giving a performance boost, esp. on Windows.</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">--lto</span></code> is now the default with MSVC 2019 or higher. This
+will given smaller and faster binaries. It has been available for
+some time, but not been the default yet.</p></li>
+</ul>
+</div>
+<div class="section" id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Using different progress bar titles for C compilation of Python code
+and C compilation of onefile bootstrap.</p></li>
+<li><p>Moved platform specific detections, for FreeBSD/OpenBSD/macOS out of
+the Scons file and to common Nuitka code, sometimes eliminating
+duplications with one version being more correct than the other.</p></li>
+<li><p>Massive cleanup of datafile plugin, using pattern descriptions, so
+more code duplication can be removed.</p></li>
+<li><p>More cleanup of the scons files, sharing more common code.</p></li>
+</ul>
+</div>
+<div class="section" id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Under the name Nuitka-Python we are now also developing a fork of
+CPython with enhancements, you can follow and joint it at
+<a class="reference external" href="https://github.com/Nuitka/Nuitka-Python">https://github.com/Nuitka/Nuitka-Python</a> but at this time it is not
+yet ready for prime time.</p></li>
+<li><p>Onefile under Windows now only is temporary file mode. Until we
+figure out how to solve the problems with locking and caching, the
+mode where it installs to the AppData of the user is no longer
+available.</p></li>
+<li><p>Renamed the plugin responsible for PyQt5 support to match the names
+of others. Note however, that at this time, PySide2 or PySide6 are to
+be recommended.</p></li>
+<li><p>Make it clear that PySide 6.1.2 is actually going to be the supported
+version of PySide6.</p></li>
+<li><p>Use MSVC in Github actions.</p></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<p>This release had a massive focus on expanding existing features, esp.
+for onefile, and plugins API, such that we can now configure
+<code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> with yaml, have really nice datafile handling options,
+and have onefile on all OSes practically.</p>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="nuitka-release-0615.html">
+       Nuitka Release 0.6.15
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nuitka-release-0617.html">
+      Nuitka Release 0.6.17 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0616.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0616.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0616.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

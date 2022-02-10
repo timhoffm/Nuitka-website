@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+    <title>快速入门</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script src="_static/asciinema-player_2.6.1.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="canonical" href="https://daobook.github.io/nuitka-doc/start.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="下载 Nuitka" href="download.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="posts/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/Nuitka-Logo-Symbol.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   快速入门
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="download.html">
+     下载
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="user-manual.html">
+     用户手册
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="support.html">
+     支持
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="roadmap.html">
+     路线图
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="commercial.html">
+   Nuitka Commercial
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="more.html">
+   更多内容
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="developer-manual.html">
+     开发者手册
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api-doc.html">
+     API 文档
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="factory.html">
+     工厂说明书
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="use.html">
+     国际化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="blog.html">
+   Nuitka 博客
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+<button><a href="/nuitka-doc/">en</a></button>
+<button><a href="/nuitka-doc/zh_CN">zh_CN</a></button>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>快速入门</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="quick-start">
+<h1>快速入门<a class="headerlink" href="#quick-start" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">下载</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="download.html#general">通用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#pypi">PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#sources">源码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#packages">Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="download.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#debian-ubuntu-mint">Debian/Ubuntu/Mint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#rhel">RHEL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#centos">CentOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#fedora">Fedora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#suse">Suse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#arch">Arch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#gentoo">Gentoo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#macos">macOS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#github">Github</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user-manual.html">用户手册</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#overview">概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#usage">语法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#requirements">需求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#command-line">命令行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#installation">安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#license">许可证</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#tutorial-setup-and-build-on-windows">教程设置和在 Windows 上构建</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#setup">设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#install-python">安装 Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#install-nuitka">安装 Nuitka</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#write-some-code-and-test">编写一些代码并进行测试</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#create-a-folder-for-the-python-code">为 Python 代码创建一个文件夹</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#test-your-program">测试你的程序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#build-it-using">采用以下方式构建</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#run-it">运行它</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#distribute">分发</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#use-cases">用例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#use-case-1-program-compilation-with-all-modules-embedded">用例 1 - 嵌入所有模块的程序编译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#use-case-2-extension-module-compilation">用例2 – 扩展模块的编译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#use-case-3-package-compilation">用例3–软件包的编译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#use-case-4-program-distribution">用例4–程序分发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#use-case-5-setuptools-wheels">用例5 - Setuptools 轮子</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#tweaks">调整</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#icons">图标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#splash-screen">闪屏</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#typical-problems">典型问题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#memory-issues-and-compiler-bugs">内存问题和编译器错误</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#ask-nuitka-to-use-less-memory">要求 Nuitka 使用更少的内存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#avoid-32-bit-c-compiler-assembler-memory-limits">避免 32 位 C 语言编译器/汇编器的内存限制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#use-lto-compilation-or-not">是否使用 LTO 编译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#switch-the-c-compiler-to-clang">将 C 语言编译器切换为 clang</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#add-a-larger-swap-file-to-your-embedded-linux">在你的嵌入式 Linux 中添加一个更大的交换文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual.html#limit-the-amount-of-compilation-jobs">限制编译工作的数量</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#dynamic-sys-path">动态 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#missing-data-files-in-standalone">单机版中缺少的数据文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#missing-dlls-in-standalone">单机中缺少 DLLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#dependency-creep-in-standalone">单机中的依赖性爬升</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#onefile-finding-files">一体化文件：寻找文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#windows-programs-without-console-give-no-errors">没有控制台的 Windows 程序不会出现错误</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#tips">小贴士</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#nuitka-options-in-the-code">代码中的 Nuitka 选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#python-command-line-flags">Python 命令行旗标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#caching-compilation-results">缓存编译结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#control-where-caches-live">控制缓存的位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#runners">运行器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#fastest-c-compilers">最快的 C 语言编译器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#unexpected-slowdowns">意外的速度减慢</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#standalone-executables-and-dependencies">独立的可执行文件和依赖性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#windows-errors-with-resources">资源方面的 Windows 错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#windows-standalone-program-redistribuation">Windows 独立程序的重新分配</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#detecting-nuitka-at-run-time">在运行时检测 Nuitka</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#performance">性能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#pystone-results">pystone 结果</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#where-to-go-next">下一步该去哪里</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#follow-me-on-twitter">在 Twitter 上关注我</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#report-issues-or-bugs">报告问题或 bug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#word-of-warning">警示语</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#join-nuitka">加入 Nuitka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#donations">奉献</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#unsupported-functionality">不支持的功能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#the-co-code-attribute-of-code-objects">代码对象的 <code class="docutils literal notranslate"><span class="pre">co_code</span></code> 属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#pdb">PDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#optimization">优化</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#constant-folding">常量叠算</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#constant-propagation">常量传播</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#built-in-name-lookups">内置名称查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#built-in-call-prediction">内置回调预测</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#conditional-statement-prediction">条件性声明的预测</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#exception-propagation">异常传播</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#exception-scope-reduction">Exception Scope Reduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#exception-block-inlining">Exception Block Inlining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#empty-branch-removal">Empty Branch Removal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#unpacking-prediction">Unpacking Prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#built-in-type-inference">Built-in Type Inference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#quicker-function-calls">Quicker Function Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual.html#lowering-of-iterated-container-types">Lowering of iterated Container Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html#updates-for-this-manual">更新手册</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">支持</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="support.html#commercial-grade-support">商业级支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html#donations">贡献</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html#github-issue-tracker">Github 议题追踪</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html#chat-room">聊天室</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">路线图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#user-extensibility">用户可扩展性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#standalone">单机版</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#nuitka-python-public">Nuitka-Python (public)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#performance-public">Performance (public)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#macos-enhancements">macOS enhancements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#container-builds-commercial">Container Builds (commercial)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#support-for-next-python-version-3-10">Support for Next Python Version (3.10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#wheels-build">Wheels Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#traceback-encryption-commercial">Traceback Encryption (commercial)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#features-to-be-added-for-0-6-20">Features to be added for 0.6.20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#features-to-be-added-for-0-6-21">Features to be added for 0.6.21</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="download.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">下载 Nuitka</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 Kay Hayen<br/>
+    
+        &copy; 版权 2022, Kay Hayen and Nuitka Contributors.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
