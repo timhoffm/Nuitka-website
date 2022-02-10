@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged Nikola</title>
-  <updated>2022-02-10T04:46:49.547047+00:00</updated>
+  <updated>2022-02-10T17:09:29.660325+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/nikola/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nikola-for-nuitka-net"&gt;
+    <content type="html">&lt;section id="nikola-for-nuitka-net"&gt;
 
 &lt;p&gt;Some time ago, I &lt;a class="reference external" href="/posts/static-site-generator.html"&gt;asked about static site generators&lt;/a&gt; and tried a few, but nothing was
 as ReST friendly as I would like to. To me, ReST is to text publishing,
@@ -33,7 +33,7 @@ on. But this is a good base.&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;wordpress&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nikola-for-nuitka.html" rel="alternate"/>
     <summary>Some time ago, I asked about static site generators and tried a few, but nothing was
@@ -50,14 +50,14 @@ what Python is to programming.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nikola-speed-improvements"&gt;
+    <content type="html">&lt;section id="nikola-speed-improvements"&gt;
 
 &lt;p&gt;At end the end of May, I switched my website from a W3 Total Cache
 enhanced wordpress installation to static generated with Nikola, and
 this is what Google Webmaster tool says about it.&lt;/p&gt;
 &lt;img alt="../../_images/nikola-speed-improvements.png" src="../../_images/nikola-speed-improvements.png" /&gt;
 &lt;p&gt;The numbers are average time to download pages in milliseconds.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nikola-speed-improvements.html" rel="alternate"/>
     <summary>At end the end of May, I switched my website from a W3 Total Cache
@@ -74,12 +74,12 @@ this is what Google Webmaster tool says about it.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-speedcenter-is-back"&gt;
+    <content type="html">&lt;section id="nuitka-speedcenter-is-back"&gt;
 
 &lt;p&gt;Once a long time ago, I was benchmarking Nuitka more often. Check &lt;a class="reference external" href="/pages/overview.html"&gt;“What
 is Nuitka?”&lt;/a&gt; in case you don’t know what it
 is.&lt;/p&gt;
-&lt;div class="section" id="problem"&gt;
+&lt;section id="problem"&gt;
 &lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;And I was considering the use of codespeed, and had some data online.
 But ultimately, it got discontinued. This has 3 reasons:&lt;/p&gt;
@@ -113,8 +113,8 @@ wouldn’t have been too motivating.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="solution"&gt;
+&lt;/section&gt;
+&lt;section id="solution"&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
 &lt;p&gt;I have simply created a small wrapper:&lt;/p&gt;
 &lt;ol class="arabic"&gt;
@@ -146,8 +146,8 @@ want) to there.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/speedcenter-is-back.html" rel="alternate"/>
     <summary>Once a long time ago, I was benchmarking Nuitka more often. Check “What

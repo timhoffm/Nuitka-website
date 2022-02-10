@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts by Taofeng(Tommy) Li</title>
-  <updated>2022-02-10T04:46:47.353420+00:00</updated>
+  <updated>2022-02-10T17:09:27.722109+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/author/taofengtommy-li/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="tommy-s-google-summer-of-code-intro"&gt;
+    <content type="html">&lt;section id="tommy-s-google-summer-of-code-intro"&gt;
 
 &lt;p&gt;Hi all! :)&lt;/p&gt;
 &lt;p&gt;My name is Taofeng Li and I go by the nickname of Tommy, github handle
@@ -32,7 +32,7 @@ project abstract can be seen &lt;a class="reference external" href="https://summ
 the full details of my project can be found &lt;a class="reference external" href="https://docs.google.com/document/d/1tdbXyMy5xjVEeWociI_t2f6tlmge6czT0xmfCLyDXYg/edit?usp=sharing"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I am greatly looking forward to the many things that I’ll learn this
 summer!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-intro.html" rel="alternate"/>
     <summary>Hi all! :)</summary>
@@ -50,7 +50,7 @@ summer!&lt;/p&gt;
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="intro"&gt;
+    <content type="html">&lt;section id="intro"&gt;
 
 &lt;p&gt;This post compares the pytest results of urllib3 to its nuitka-built
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.whl&lt;/span&gt;&lt;/code&gt; counterpart.&lt;/p&gt;
@@ -75,8 +75,8 @@ similar:&lt;/p&gt;
 &lt;p&gt;The extra passes are suspicious and require more investigation into why
 they happen. To make that easy, we are going to fully automate the
 process and compare outputs with verbose pytest modes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="steps-to-reproduce"&gt;
+&lt;/section&gt;
+&lt;section id="steps-to-reproduce"&gt;
 &lt;h1&gt;Steps to Reproduce&lt;/h1&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;p&gt;Clone urllib3 and nuitka into a new folder&lt;/p&gt;&lt;/li&gt;
@@ -93,8 +93,8 @@ be found in the &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 &lt;li&gt;&lt;p&gt;Issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;python&lt;/span&gt; &lt;span class="pre"&gt;-m&lt;/span&gt; &lt;span class="pre"&gt;pytest&lt;/span&gt; &lt;span class="pre"&gt;--disable-warnings&lt;/span&gt;&lt;/code&gt;, this runs the
 nuitka-built wheel pytest for urllib3.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="section" id="uncompile-python"&gt;
+&lt;/section&gt;
+&lt;section id="uncompile-python"&gt;
 &lt;h1&gt;Uncompile Python&lt;/h1&gt;
 &lt;p&gt;urllib3 regular pytest:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python -m pytest --disable-warnings
@@ -150,8 +150,8 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
 ====== 3 failed, 836 passed, 456 skipped, 113 warnings in 47.54 seconds =======
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="compiled-with-nuitka"&gt;
+&lt;/section&gt;
+&lt;section id="compiled-with-nuitka"&gt;
 &lt;h1&gt;Compiled with Nuitka&lt;/h1&gt;
 &lt;p&gt;nuitka wheel pytest:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python -m pytest --disable-warnings
@@ -206,7 +206,7 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
 ====== 1 failed, 838 passed, 456 skipped, 113 warnings in 47.59 seconds =======
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/urllib3-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of urllib3 to its nuitka-built
@@ -224,7 +224,7 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="intro"&gt;
+    <content type="html">&lt;section id="intro"&gt;
 
 &lt;p&gt;This post compares the pytest results of dateutil to its nuitka-built
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.whl&lt;/span&gt;&lt;/code&gt; counterpart.&lt;/p&gt;
@@ -241,8 +241,8 @@ pollution.&lt;/p&gt;
 &lt;span class="n"&gt;Nuitka&lt;/span&gt; &lt;span class="n"&gt;wheel&lt;/span&gt; &lt;span class="n"&gt;pytests&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;=============&lt;/span&gt; &lt;span class="mi"&gt;1976&lt;/span&gt; &lt;span class="n"&gt;passed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;76&lt;/span&gt; &lt;span class="n"&gt;skipped&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt; &lt;span class="n"&gt;xfailed&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;7.89&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt; &lt;span class="o"&gt;=============&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="steps-to-reproduce"&gt;
+&lt;/section&gt;
+&lt;section id="steps-to-reproduce"&gt;
 &lt;h1&gt;Steps to Reproduce&lt;/h1&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;p&gt;Clone dateutil and nuitka into a new folder&lt;/p&gt;&lt;/li&gt;
@@ -259,8 +259,8 @@ should be found in the &lt;code class="docutils literal notranslate"&gt;&lt;span
 &lt;li&gt;&lt;p&gt;Issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;python&lt;/span&gt; &lt;span class="pre"&gt;-m&lt;/span&gt; &lt;span class="pre"&gt;pytest&lt;/span&gt; &lt;span class="pre"&gt;--disable-warnings&lt;/span&gt;&lt;/code&gt;, this runs the
 nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="section" id="uncompile-python"&gt;
+&lt;/section&gt;
+&lt;section id="uncompile-python"&gt;
 &lt;h1&gt;Uncompile Python&lt;/h1&gt;
 &lt;p&gt;dateutil regular pytest:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;=============================&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt; &lt;span class="n"&gt;starts&lt;/span&gt; &lt;span class="o"&gt;=============================&lt;/span&gt;
@@ -314,8 +314,8 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
 &lt;span class="o"&gt;=============&lt;/span&gt; &lt;span class="mi"&gt;1977&lt;/span&gt; &lt;span class="n"&gt;passed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;76&lt;/span&gt; &lt;span class="n"&gt;skipped&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt; &lt;span class="n"&gt;xfailed&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;7.99&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt; &lt;span class="o"&gt;=============&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="compiled-with-nuitka"&gt;
+&lt;/section&gt;
+&lt;section id="compiled-with-nuitka"&gt;
 &lt;h1&gt;Compiled with Nuitka&lt;/h1&gt;
 &lt;p&gt;nuitka wheel pytest:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;=============================&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt; &lt;span class="n"&gt;starts&lt;/span&gt; &lt;span class="o"&gt;=============================&lt;/span&gt;
@@ -368,7 +368,7 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
 &lt;span class="o"&gt;=============&lt;/span&gt; &lt;span class="mi"&gt;1976&lt;/span&gt; &lt;span class="n"&gt;passed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;76&lt;/span&gt; &lt;span class="n"&gt;skipped&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt; &lt;span class="n"&gt;xfailed&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;7.89&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt; &lt;span class="o"&gt;=============&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/dateutil-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of dateutil to its nuitka-built
@@ -386,13 +386,13 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="intro"&gt;
+    <content type="html">&lt;section id="intro"&gt;
 
 &lt;p&gt;As Google Summer of Code (GSoC) is coming to an end, I am writing this
 blog post as a final summary describing all the work I have done as well
 as my experiences in this program.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary-of-my-work"&gt;
+&lt;/section&gt;
+&lt;section id="summary-of-my-work"&gt;
 &lt;h1&gt;Summary of My Work&lt;/h1&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/314"&gt;#314 run_all.py new special-comment mechanism &amp;amp; Urllib3Using.py&lt;/a&gt;&lt;/p&gt;
@@ -531,8 +531,8 @@ improvements, readability improvements, and added documentation.&lt;/p&gt;&lt;/l
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="things-i-learned"&gt;
+&lt;/section&gt;
+&lt;section id="things-i-learned"&gt;
 &lt;h1&gt;Things I Learned&lt;/h1&gt;
 &lt;p&gt;Before GSoC, I was very uncomfortable with working inside a terminal. I
 was unfamiliar with many basic bash commands because I simply did not
@@ -552,7 +552,7 @@ believe will help me go very far in my career as a software developer.&lt;/p&gt;
 thankful to my mentor Kay Hayen as well as Google for making this
 amazing program possible.&lt;/p&gt;
 &lt;p&gt;Yours, &lt;a class="reference external" href="https://github.com/tommyli3318"&gt;Tommy&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-summary.html" rel="alternate"/>
     <summary>As Google Summer of Code (GSoC) is coming to an end, I am writing this

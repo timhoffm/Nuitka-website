@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-21">
+              <section id="nuitka-release-0-5-21">
 <h1>Nuitka Release 0.5.21<a class="headerlink" href="#nuitka-release-0-5-21" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release focused on scalability work. Making Nuitka more usable in
 the common case, and covering more standalone use cases.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Windows: Support for newer MinGW64 was broken by a workaround for
@@ -149,8 +151,8 @@ that are already in some pre-releases of CPython.</p></li>
 <li><p>Standalone: Wasn’t properly ignoring <code class="docutils literal notranslate"><span class="pre">Tools</span></code> and other directories
 in the standard library.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Windows: Detect the MinGW compiler arch and compare it to the Python
@@ -165,8 +167,8 @@ program optimization) or even become bytecode.</p></li>
 the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">nuitka_git_checkout_dir</span></code> is now
 supported too.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Popular modules known to not be performance relevant are no longer C
@@ -174,8 +176,8 @@ compiled, e.g. <code class="docutils literal notranslate"><span class="pre">nump
 imported (from some other module), but mostly not used and definitely
 not performance relevant.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The progress tracing and the memory tracing and now more clearly
@@ -185,8 +187,8 @@ separate and therefore more readable.</p></li>
 <li><p>Converted import sorting helper script to Python and made it run
 fast.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The Buildbot infrastructure for Nuitka was updated to Buildbot 0.8.12
@@ -195,16 +197,16 @@ and is now maintained up to date with Ansible.</p></li>
 previously contributed security fixes already active.</p></li>
 <li><p>Added SSL certificates from Let’s Encrypt for the web server.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release advances the scalability of Nuitka somewhat. The two pass
 approach does not yet carry all possible fruits. Caching of single pass
 compiled modules should follow for it to become consistently fast.</p>
 <p>More work will be needed to achieve fast and scalable compilation, and
 that is going to remain the focus for some time.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

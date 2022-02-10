@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="static-compilation-that-is-the-point">
+              <section id="static-compilation-that-is-the-point">
 <h1>Static Compilation - That is the point<a class="headerlink" href="#static-compilation-that-is-the-point" title="Permalink to this headline"></a></h1>
 <p>In a recent post, Stefan Behnel questioned the point of static
 compilation and suggests that in order to be useful, a static compiler
 <strong>needs</strong> to add something on top.</p>
 <p>This is going to be a rebuttal.</p>
-<div class="section" id="compatibility-i-mean-it">
+<section id="compatibility-i-mean-it">
 <h2>Compatibility, I mean it<a class="headerlink" href="#compatibility-i-mean-it" title="Permalink to this headline"></a></h2>
 <p>First of all, let me start out, by saying that Nuitka is intended to be
 the fully optimizing compiler of Python. The optimizing part is not yet
@@ -151,8 +153,8 @@ example, the parameter parsing of functions will be the same.</p></li>
 <li><p>Nuitka provides all language constructs no matter how absurd or
 unused they are.</p></li>
 </ul>
-</div>
-<div class="section" id="compatibility-slower">
+</section>
+<section id="compatibility-slower">
 <h2>Compatibility != Slower<a class="headerlink" href="#compatibility-slower" title="Permalink to this headline"></a></h2>
 <p>While generally Nuitka will have a hard time to be faster <em>and</em>
 compatible to CPython, I don’t have much concern about that. Using
@@ -162,8 +164,8 @@ very minimal type annotation and still receive respectable speedups.</p>
 <p>Of course, at this point, this is only speculation. But I somehow gather
 that the sentiment is that incompatible and fast <em>need</em> to go along. I
 totally dispute that.</p>
-</div>
-<div class="section" id="language-extensions">
+</section>
+<section id="language-extensions">
 <h2>Language Extensions<a class="headerlink" href="#language-extensions" title="Permalink to this headline"></a></h2>
 <p>Now, the “in addition” stuff, that Stefan is talking about. I don’t see
 the point at all. It is quite obvious that everything you can say with
@@ -193,8 +195,8 @@ have.</p>
 <p>Further down, I will give examples of why I think that <code class="docutils literal notranslate"><span class="pre">cdef</span></code> is
 inferior to plain Python, even from a practical point of view.</p>
 </div>
-</div>
-<div class="section" id="lack-of-interpreter-is-bad">
+</section>
+<section id="lack-of-interpreter-is-bad">
 <h2>Lack of Interpreter is bad<a class="headerlink" href="#lack-of-interpreter-is-bad" title="Permalink to this headline"></a></h2>
 <p>Static compilation vs. interpretation as a discussion has little merits
 to me. I find it totally obvious that you don’t need static compilation,
@@ -213,8 +215,8 @@ over with these benefits, what would it be left with? Right. Nothing. At
 all. Well, of course legacy users.</p>
 <p>The orinal sin fall of PyRex - that is now Cython - is nothing that
 Nuitka should repeat.</p>
-</div>
-<div class="section" id="no-lock-in">
+</section>
+<section id="no-lock-in">
 <h2>No Lock-in<a class="headerlink" href="#no-lock-in" title="Permalink to this headline"></a></h2>
 <p>The Cython language is so underspecified, I doubt anybody could make a
 compatible implementation. Should you choose to use it, you will become
@@ -236,8 +238,8 @@ non-Python language has no point to people with Python code.</p>
 create fast bindings, because Nuitka is not ready yet. But from my point
 of view, Cython has no point long term if a viable replacement that is
 Pythonic exists.</p>
-</div>
-<div class="section" id="python-alone-is-a-point">
+</section>
+<section id="python-alone-is-a-point">
 <h2>Python alone is a point<a class="headerlink" href="#python-alone-is-a-point" title="Permalink to this headline"></a></h2>
 <p>So, if you leave out static compilation vs. interpretation and JIT
 compilation, what would be the difference between PyPy and Nuitka? Well,
@@ -252,8 +254,8 @@ targets, and performances, do they all have no point? I believe taken to
 the logical conclusion, that is what Stefan suggests. I of course think
 that PyPy, Nuitka, and Jython have have as much of a point, as CPython
 does.</p>
-</div>
-<div class="section" id="type-annotations-done-right">
+</section>
+<section id="type-annotations-done-right">
 <h2>Type Annotations done right<a class="headerlink" href="#type-annotations-done-right" title="Permalink to this headline"></a></h2>
 <p>And just for fun. This is making up a use cases of type annotations:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plong</span> <span class="o">=</span> <span class="n">long</span> <span class="k">if</span> <span class="n">python_version</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="k">else</span> <span class="nb">int</span>
@@ -335,8 +337,8 @@ With every Python IDE. PyLint will find the bugs I made in that code up
 there. And Nuitka will compile it and benefit from the hints.</p>
 <p>My point here really is, that <code class="docutils literal notranslate"><span class="pre">cdef</span></code> is not flexible, not standard,
 not portable. It should die. It totally is anti-Pythonic to me.</p>
-</div>
-<div class="section" id="elsewhere">
+</section>
+<section id="elsewhere">
 <h2>Elsewhere<a class="headerlink" href="#elsewhere" title="Permalink to this headline"></a></h2>
 <p>In Java land, people compile to machine code as well. They probably also
 - like stupid me - didn’t understand that static compilation would have
@@ -352,8 +354,8 @@ change the language. With Cython I have to compile. With Nuitka I could.</p>
 <p>In fact, I would be hard pressed to find another example of a compiler
 that extends the interpreted language compiled, just so there is a point
 in having it.</p>
-</div>
-<div class="section" id="conclusion">
+</section>
+<section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline"></a></h2>
 <p>Nuitka has a point. On top of that I enjoy doing it. It’s great to have
 the time to do this thing in the correct way.</p>
@@ -388,8 +390,8 @@ to justify that, it’s actually quite obvious, isn’t it?</p>
 <div class="line">Yours,</div>
 <div class="line">Kay</div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

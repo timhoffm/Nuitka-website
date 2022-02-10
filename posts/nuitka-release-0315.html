@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-15">
+              <section id="nuitka-release-0-3-15">
 <h1>Nuitka Release 0.3.15<a class="headerlink" href="#nuitka-release-0-3-15" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -147,7 +149,7 @@ generated C++ for at least one large example is compiling with this new
 release. It won’t link, but there will be later releases.</p>
 <p>And there is a lot of cleanup going on, geared towards compatibility
 with line numbers in the frame object.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>The main module was using <code class="docutils literal notranslate"><span class="pre">__main__</span></code> in tracebacks, but it must be
@@ -171,8 +173,8 @@ correctly. This one was giving a Nuitka backtrace, now it gives a
 <li><p>Using the frame objects <code class="docutils literal notranslate"><span class="pre">f_lineno</span></code> may fix endless amounts bugs
 related to traceback line numbers.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Guesses the location of the MinGW compiler under Windows to default
@@ -183,8 +185,8 @@ Nuitka to find it.</p></li>
 is. Lets just say, it was the last absurd language feature out there,
 plus that didn’t work. It now works perfect.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>You can now download a Windows installer and a Debian package that
@@ -209,8 +211,8 @@ in the Debian package.</p></li>
 with <code class="docutils literal notranslate"><span class="pre">valgrind</span></code>. It will give better information that way, without
 changing the code.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Implemented <code class="docutils literal notranslate"><span class="pre">swapcontext</span></code> alike (<code class="docutils literal notranslate"><span class="pre">swapFiber</span></code>) for x64 to achieve
@@ -218,8 +220,8 @@ changing the code.</p></li>
 preserve signal masks. Now Nuitka is faster at frame switching than
 CPython on x64, which is already good by design.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Using the frame objects to store current line of execution avoids the
@@ -243,8 +245,8 @@ portable in more places, but not yet fully. This will need more work.</p>
 in one place.</p></li>
 <li><p>Some more PyLint cleanups.</p></li>
 </ul>
-</div>
-<div class="section" id="new-tests">
+</section>
+<section id="new-tests">
 <h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The tests are now executed by Python scripts and cover <code class="docutils literal notranslate"><span class="pre">stderr</span></code>
@@ -255,8 +257,8 @@ the frame line number improvements.</p></li>
 <li><p>The scripts to run the tests now are all in pure Python. This means,
 no more MinGW shell is needed to execute the tests.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>The Debian package, Windows installer, etc. are now automatically
 updated and uploaded. From here on, there can be such packages for the
@@ -279,8 +281,8 @@ Halchenko.</p>
 it, but <code class="docutils literal notranslate"><span class="pre">inspect.getargs()</span></code> doesn’t work yet, and is a topic for a
 future release. Won’t be easy, as <code class="docutils literal notranslate"><span class="pre">func_defaults</span></code> will be an invasive
 change too.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-4">
+              <section id="nuitka-release-0-5-4">
 <h1>Nuitka Release 0.5.4<a class="headerlink" href="#nuitka-release-0-5-4" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -138,7 +140,7 @@ based on SSA analysis, introducing a variable registry, so that
 variables no longer trace their references to themselves.</p>
 <p>Otherwise, MinGW64 support has been added, and lots of bug fixes were
 made to improve the compatibility.</p>
-<div class="section" id="optimization">
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Using new variable registry, now properly detecting actual need for
@@ -148,8 +150,8 @@ to share a variable, and then it no longer is. This also allows
 <li><p>Scons startup has been accelerated, removing scans for unused tools,
 and avoiding making more than one gcc version check.</p></li>
 </ul>
-</div>
-<div class="section" id="bug-fixes">
+</section>
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Compatibility: In case of unknown encodings, Nuitka was not giving
@@ -178,8 +180,8 @@ or back.</p></li>
 generators running concurrently (&gt;1500), one cannot be started
 anymore. Raising an <code class="docutils literal notranslate"><span class="pre">MemoryError</span></code> now.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added support for MinGW64. Currently needs to be run with <code class="docutils literal notranslate"><span class="pre">PATH</span></code>
@@ -197,24 +199,24 @@ deprecation warnings at run time.</p></li>
 <li><p>Repository for Ubuntu Raring was removed, no more supported by
 Ubuntu.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Made technical and logical sharing decisions separate functions and
 implement them in a dedicated variable registry.</p></li>
 <li><p>The Scons file has seen a major cleanup.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release is mostly a maintenance release. The Scons integrations has
 been heavily visited, as has been Python3 and esp. Python3.4
 compatibility, and results from the now possible debug test runs.</p>
 <p>Standalone should be even more practical now, and MinGW64 is an option
 for those cases, where MSVC is too slow.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="python-assert-quiz">
+              <section id="python-assert-quiz">
 <h1>Python Assert Quiz<a class="headerlink" href="#python-assert-quiz" title="Permalink to this headline"></a></h1>
 <p>At Europython conference, in my presentation, I talked about
 re-formulations of Python into simpler Python. It is my intention to
@@ -143,7 +145,7 @@ test suite to work, I noticed, how the re-formulation for Quiz
 Question 2 needed a version dependent solution.</p>
 <p>And I thought this one was easy. :-)</p>
 </div>
-<div class="section" id="quiz-question-1">
+<section id="quiz-question-1">
 <h2>Quiz Question 1<a class="headerlink" href="#quiz-question-1" title="Permalink to this headline"></a></h2>
 <p>Say you have the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
@@ -153,8 +155,8 @@ Question 2 needed a version dependent solution.</p>
 statement at all. The behavior is required to be absolutely the same.</p>
 <p>The answer is in the next paragraph, so stop reading if you want to find
 out yourself.</p>
-</div>
-<div class="section" id="solution-1">
+</section>
+<section id="solution-1">
 <h2>Solution 1<a class="headerlink" href="#solution-1" title="Permalink to this headline"></a></h2>
 <p>The correct answer is that assertions are the same as a raise exception
 in a conditional statement.</p>
@@ -169,8 +171,8 @@ that, it should be:</p>
     <span class="k">raise</span> <span class="ne">AssertionError</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="quiz-question-2">
+</section>
+<section id="quiz-question-2">
 <h2>Quiz Question 2<a class="headerlink" href="#quiz-question-2" title="Permalink to this headline"></a></h2>
 <p>But wait, there is slightly more to it. Say you have the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">,</span> <span class="n">arg</span>
@@ -180,8 +182,8 @@ that, it should be:</p>
 statement at all. The behavior is required to be absolutely the same.</p>
 <p>The answer is in the next paragraph, so stop reading if you want to find
 out yourself.</p>
-</div>
-<div class="section" id="solution-2">
+</section>
+<section id="solution-2">
 <h2>Solution 2<a class="headerlink" href="#solution-2" title="Permalink to this headline"></a></h2>
 <p>This is actually version dependent, due to recent optimizations of
 CPython.</p>
@@ -220,8 +222,8 @@ I am using this for my <a class="reference external" href="/pages/overview.html"
 which benefits from having not to deal with <code class="docutils literal notranslate"><span class="pre">assert</span></code> as anything
 special at all. See also the <a class="reference external" href="/doc/developer-manual.html#the-assert-statement">respective section in the Developer Manual</a> which explains this
 and other things.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-12">
+              <section id="nuitka-release-0-3-12">
 <h1>Nuitka Release 0.3.12<a class="headerlink" href="#nuitka-release-0-3-12" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -146,7 +148,7 @@ goal.</p>
 <p>Due to the use of the “git flow”, most of the bugs listed here were
 already fixed in on the stable release before this release. And there
 were many of these.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>The order of evaluation for base classes and class dictionaries was
@@ -202,8 +204,8 @@ backslashes in the path. Using a raw string to prevent such problems.</p></li>
 <li><p>The standard library path was hard coded. Changed to run time
 detection.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Version checks on Python runtime now use a new define
@@ -218,8 +220,8 @@ detect dead code really.</p></li>
 <li><p>Moved <code class="docutils literal notranslate"><span class="pre">nuitka.Nodes</span></code> to <code class="docutils literal notranslate"><span class="pre">nuitka.nodes.Nodes</span></code>, that is what the
 package is intended for, the split will come later.</p></li>
 </ul>
-</div>
-<div class="section" id="new-tests">
+</section>
+<section id="new-tests">
 <h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>New tests for import variants that previously didn’t work: Mixed
@@ -231,8 +233,8 @@ CPython tests, etc. used it.</p></li>
 <li><p>Added test to cover the partial success of import statements.</p></li>
 <li><p>Added test to cover evaluation order of class definitions.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Migrated the “README.txt” from org-mode to ReStructured Text, which
@@ -272,15 +274,15 @@ challenge, but it reduces the dependency on MSYS tools on Windows.</p></li>
 standard library, there is a <code class="docutils literal notranslate"><span class="pre">--really-deep</span></code> option that has to be
 given in addition to <code class="docutils literal notranslate"><span class="pre">--deep</span></code>, which forces this.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>Again, huge progress. The improved import mechanism is very beautiful.
 It appears that little is missing to compile real world programs like
 “hg” with Nuitka. The next release cycle will focus on that and continue
 to improve the Windows support which appears to have some issues.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

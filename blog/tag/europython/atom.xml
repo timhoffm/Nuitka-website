@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged europython</title>
-  <updated>2022-02-10T04:46:55.752747+00:00</updated>
+  <updated>2022-02-10T17:09:33.976757+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/europython/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="going-to-europython-2013"&gt;
+    <content type="html">&lt;section id="going-to-europython-2013"&gt;
 
 &lt;p&gt;I am going to the wonderful city of Florence, and &lt;a class="reference external" href="https://ep2013.europython.eu/"&gt;Europython 2013&lt;/a&gt; and make a presentation there. This
 time, I am not introducing Nuitka anymore, I did that in 2012, this
@@ -55,9 +55,9 @@ message why I believe it is possible.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="things-to-talk-about"&gt;
+&lt;section id="things-to-talk-about"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Things to talk about&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="section" id="status"&gt;
+&lt;section id="status"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id3"&gt;Status&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Only briefly this time, since I will be able to say that all current
 Python versions are fully supported (&lt;a class="reference external" href="nuitka-needs-you-a-call-for-help.html"&gt;surely if you help me with
@@ -84,10 +84,10 @@ will support it, likely before the conference.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;But as you see. Completion all around is there or at least in sight.
 Kind of worked on this nearby.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="last-years-questions"&gt;
+&lt;/section&gt;
+&lt;section id="last-years-questions"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id4"&gt;Last years questions&lt;/a&gt;&lt;/h3&gt;
-&lt;div class="section" id="builtins"&gt;
+&lt;section id="builtins"&gt;
 &lt;h4&gt;&lt;a class="toc-backref" href="#id5"&gt;Builtins&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;For instance, writing to built-ins, what will/did happen.&lt;/p&gt;
 &lt;p&gt;Changing builtins can be done in two ways. One is to set the value on
@@ -109,16 +109,16 @@ and the optimization of it, that will be interesting to cover.&lt;/p&gt;
 &lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;Currently Nuitka does nothing of this, but it will.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="debugger-pdb"&gt;
+&lt;/section&gt;
+&lt;section id="debugger-pdb"&gt;
 &lt;h4&gt;&lt;a class="toc-backref" href="#id6"&gt;Debugger - pdb&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;The compiled binaries work the same as the normal Python code. So you
 will be able to simply use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pdb&lt;/span&gt;&lt;/code&gt; on it instead.&lt;/p&gt;
 &lt;p&gt;Interacting with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pdb&lt;/span&gt;&lt;/code&gt; is not &lt;em&gt;totally&lt;/em&gt; out of reach, but kind of
 pointless mostly, unless you need to attach to long running operational
 programs. For now that use case is not supported though.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="threading"&gt;
+&lt;/section&gt;
+&lt;section id="threading"&gt;
 &lt;h4&gt;&lt;a class="toc-backref" href="#id7"&gt;Threading&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;I learned a whole lot about threading. Also thanks to the kind people of
 Stackless Python, who explained things to me. I am still amazed at how
@@ -128,9 +128,9 @@ like them either, so my experience was non-existing.&lt;/p&gt;
 &lt;p&gt;But in the mean time, I managed to come up with ideas that appear to
 work, and if I implement the full design, it will even be more efficient
 than anything.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="c-to-python-gaps"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="c-to-python-gaps"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id8"&gt;C++ to Python gaps&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;I consider all of these more or less solved.&lt;/p&gt;
 &lt;p&gt;Well maybe except recently arose issues with MSVC for “function calls”.
@@ -140,8 +140,8 @@ around, which is kind of transparent.&lt;/p&gt;
 &lt;p&gt;But MSVC actively takes liberty to calculate function arguments as it
 sees fit. The fix for it, is now totally different and should be highly
 portable and even compliant to C++.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="performance"&gt;
+&lt;/section&gt;
+&lt;section id="performance"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id9"&gt;Performance&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;There are still slow exceptions. I would like to avoid raising C++
 exceptions in the future, because they are so slow (Python exceptions
@@ -158,8 +158,8 @@ then, my goal is to have a comparison with Shedskin. No matter how
 unfair it is (Shedskin does only a small subset of Python), it’s the
 most useful comparison in my eyes, as where Shedskin makes static type
 analysis, Nuitka also should do it, only hampered by guards at maximum.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="demos"&gt;
+&lt;/section&gt;
+&lt;section id="demos"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id10"&gt;Demos&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The talk with start out with demonstration of Nuitka, something simple
 first, and then Mercurial as a more complex example, and then its test
@@ -169,12 +169,12 @@ Generally I expect to start out with demos, and explain from there,
 instead of having a demo only at the end.&lt;/p&gt;
 &lt;p&gt;If it all works out, this time, they will be prepared with
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;recordmydesktop&lt;/span&gt;&lt;/code&gt; so I can publish them separately too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="future-work"&gt;
+&lt;/section&gt;
+&lt;section id="future-work"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id11"&gt;Future Work&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Generally the talk will be more directed at the future, although this is
 kind of a dark area now. That’s its nature I guess.&lt;/p&gt;
-&lt;div class="section" id="ssa"&gt;
+&lt;section id="ssa"&gt;
 &lt;h4&gt;&lt;a class="toc-backref" href="#id12"&gt;SSA&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;The talk will also be largely built SSA (static single assignment) and
 how it applies to Python. What everybody means, when they say “Python is
@@ -185,8 +185,8 @@ guards, much like PyPy does it too. Escaped values and strange code are
 only one option of things to occur. Having code for both cases, sounds
 possible. I will talk about how to decide, which branches we shall have
 and which not.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="compiled-modules"&gt;
+&lt;/section&gt;
+&lt;section id="compiled-modules"&gt;
 &lt;h4&gt;&lt;a class="toc-backref" href="#id13"&gt;Compiled Modules&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;And I believe with “compiled modules” potentially already in place, we
 can achieve very cheap guards in most cases. I can at least explain, why
@@ -196,8 +196,8 @@ milestone, but now an idea has surfaced, that I previously didn’t have,
 and that I am very curious to learn the benefit of. Very quick &lt;em&gt;and&lt;/em&gt;
 safe module variabls, are very tempting to have, and definitely make a
 difference for the Nuitka design.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="compiled-locals"&gt;
+&lt;/section&gt;
+&lt;section id="compiled-locals"&gt;
 &lt;h4&gt;&lt;a class="toc-backref" href="#id14"&gt;Compiled Locals&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Who knows, we might even have a “compiled locals” as well, which as a
 side effect, also allows total interactivity with the most absurd codes.
@@ -206,26 +206,26 @@ and very fast.&lt;/p&gt;
 &lt;p&gt;But the frame locals is not in sync with it. Were it a special object,
 it could try and interact with these when control escapes to code that
 we don’t know if it might use it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="whole-program-analysis"&gt;
+&lt;/section&gt;
+&lt;section id="whole-program-analysis"&gt;
 &lt;h4&gt;&lt;a class="toc-backref" href="#id15"&gt;Whole Program Analysis&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Big words. Can Nuitka avoid module objects entirely. Can it inline
 functions, specialize them according to the only types used (think
 including &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;os.path.dirname&lt;/span&gt;&lt;/code&gt; in the binary, but with the constraint
 that it only need to work on string objects as input, because the
 program is known to use it any different.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="perspective"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="perspective"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id16"&gt;Perspective&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Last time, I spent a lot of time on justification, “why a new project?”,
 “why not work with the others?”, what goals do I have that others do
 not. Giving examples of how code generation works. Generally to give
 people an idea of the project.&lt;/p&gt;
 &lt;p&gt;With this out of the way, I can now focus on inclusion, and success.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="funding"&gt;
+&lt;/section&gt;
+&lt;section id="funding"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id17"&gt;Funding&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;And, well yes, this time I may not have to pay for it all by myself.
 Last time I spent close to 1000 Euros for the trip (ticket to enter,
@@ -236,8 +236,8 @@ fair to allow people to &lt;a class="reference external" href="/pages/donations.
 they feel they want to further the project, but don’t know how. Or if
 they just consider it too important for me to loose interest. That kind
 of feels unlikely though. Too much fun.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="final-picture"&gt;
+&lt;/section&gt;
+&lt;section id="final-picture"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id18"&gt;Final Picture&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;And lets have an image I made during Europython 2012 in the city of
 Florence. It shows what a vibrant place this town is.&lt;/p&gt;
@@ -245,16 +245,16 @@ Florence. It shows what a vibrant place this town is.&lt;/p&gt;
 &lt;p&gt;Florence is a place full of kind people. The mood not only of the
 conference, but the whole city is very open minded and helpful. It was
 very easy to get adopted by strangers to their party.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="final-words"&gt;
+&lt;/section&gt;
+&lt;section id="final-words"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id19"&gt;Final Words&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I am looking forward to meeting the friends I made there last time, and
 new friends. I kind of a great time there last time, one of these “times
 of my life”. Even if the reception was not always as warm as I had
 deserved. I remember laughing a lot, learning a lot. And making unique
 experiences.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/going-to-europython-2013.html" rel="alternate"/>
     <summary>I am going to the wonderful city of Florence, and Europython 2013 and make a presentation there. This
@@ -274,7 +274,7 @@ message why I believe it is possible.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="my-europython-2013-report"&gt;
+    <content type="html">&lt;section id="my-europython-2013-report"&gt;
 
 &lt;p&gt;Back from Europython 2013 in Florence for a while now. I had a
 presentation about my &lt;a class="reference external" href="/pages/overview.html"&gt;Python compiler Nuitka&lt;/a&gt;.
@@ -300,7 +300,7 @@ not easy:&lt;/p&gt;
 &lt;iframe allowfullscreen="true" src="https://www.youtube.com/embed/ZDHkla5rllg" style="border: 0; height: 345px; width: 560px"&gt;
 &lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;There are also the &lt;a class="reference external" href="/pr/Nuitka-Presentation-PyCON-EU-2012.pdf"&gt;slides&lt;/a&gt; of that talk which may
 also be interesting, but of course are outdated somewhat now.&lt;/p&gt;
-&lt;div class="section" id="years-make-differences"&gt;
+&lt;section id="years-make-differences"&gt;
 &lt;h2&gt;Years make differences&lt;/h2&gt;
 &lt;p&gt;So yeah, the progress happened since 2012 made a difference. Nuitka has
 proven things. Let’s see what this year does to it. I would hope for
@@ -313,8 +313,8 @@ since my return, I have mostly worked on the feedback I got in that
 domain.&lt;/p&gt;
 &lt;p&gt;But for the relatively small amount of time I can invest (outside of
 holidays), it’s make very fast progress.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="out-of-the-box-thinking"&gt;
+&lt;/section&gt;
+&lt;section id="out-of-the-box-thinking"&gt;
 &lt;h2&gt;Out of the box thinking&lt;/h2&gt;
 &lt;p&gt;The feedback during the conference was great. While Nuitka is not yet
 seeing a lot of users, and not as many contributions or donations as I
@@ -329,8 +329,8 @@ two hotfix releases. Currently 0.4.4.2 is released, and contains a huge
 amount of fixes, mostly stuff found by the surge new users.&lt;/p&gt;
 &lt;p&gt;But I deserved that, having said that I didn’t have to do hotfixes for a
 while now.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="florence"&gt;
+&lt;/section&gt;
+&lt;section id="florence"&gt;
 &lt;h2&gt;Florence&lt;/h2&gt;
 &lt;p&gt;Such a lovely place, and so lovely people. It’s a tourist place, true,
 but it’s very open minded. The food is extremely good. And going from
@@ -339,8 +339,8 @@ few beers was very comfortable for after-conference stuff.&lt;/p&gt;
 &lt;p&gt;Now that I have been there 2 times, and the conference even 3 times,
 it’s moving on, to Berlin, which I sort of regret. Knowing the place
 somewhat definitely is an advantage by itself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python-revolution"&gt;
+&lt;/section&gt;
+&lt;section id="python-revolution"&gt;
 &lt;h2&gt;Python Revolution&lt;/h2&gt;
 &lt;p&gt;One thing that came to my mind during the conference, witnessing the
 large amount of non-satisfaction, was that the community is fed up with
@@ -358,8 +358,8 @@ CPython top versions, to add things, that would allow Nuitka to work
 better with it, that could be a staging ground, where such changes are
 nurtured. On the other hand, Nuitka is too irrelevant yet to drive this,
 and it would detract me away from it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gains"&gt;
+&lt;/section&gt;
+&lt;section id="gains"&gt;
 &lt;h2&gt;Gains&lt;/h2&gt;
 &lt;p&gt;So Nuitka got a lot more exposure. And one guy watching the talk even
 created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.png"&gt;nice logo&lt;/a&gt; for
@@ -368,20 +368,20 @@ is going to use it.&lt;/p&gt;
 &lt;p&gt;And in the aftermath, there were much bug useful reports. And new ideas.
 And reinforcement that what I am doing is actually useful to some people
 already.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="donations"&gt;
+&lt;/section&gt;
+&lt;section id="donations"&gt;
 &lt;h2&gt;Donations&lt;/h2&gt;
 &lt;p&gt;My travel to Florence was in part funded by donations. Thanks a lot to
 all of you who have given, and who would like to also &lt;a class="reference external" href="/pages/donations.html"&gt;make a donation&lt;/a&gt;. Should I receive sufficient donations, I
 intend to go to FOSDEM 2014 as well.&lt;/p&gt;
 &lt;p&gt;Going to Berlin will be a bit cheaper this time around, as I can travel
 there via train.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conclusion"&gt;
+&lt;/section&gt;
+&lt;section id="conclusion"&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;The Europython 2012 and 2013 both are among the times of my life.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/my-europython-2013-report.html" rel="alternate"/>
     <summary>Back from Europython 2013 in Florence for a while now. I had a
@@ -405,7 +405,7 @@ times, and answering questions:</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="not-going-to-fosdem-2014"&gt;
+    <content type="html">&lt;section id="not-going-to-fosdem-2014"&gt;
 
 &lt;p&gt;So I submitted a talk for FOSDEM “Python has a compiler now”. And it
 didn’t get accepted. Quite a surprise to me, but likely mostly logical.
@@ -416,7 +416,7 @@ larger community. Not going to happen now, but maybe next year.&lt;/p&gt;
 &lt;p&gt;Clearly triggered by the rejection, I am questioning Europython 2014 in
 Berlin as a useful destination too. To me it seems, that code writing is
 the best way to create the community at this time anyway.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/not-going-to-fosdem-2014.html" rel="alternate"/>
     <summary>So I submitted a talk for FOSDEM “Python has a compiler now”. And it
@@ -436,7 +436,7 @@ it surely didn’t fit in, right.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-progress-in-2015"&gt;
+    <content type="html">&lt;section id="nuitka-progress-in-2015"&gt;
 
 &lt;p&gt;For quite a bit, there have been no status posts, not for lack of news,
 but a lot has happened indeed. I just seem to post a &lt;em&gt;lot&lt;/em&gt; more to the
@@ -485,7 +485,7 @@ think are worth talking about.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="ssa-single-state-assignment-form"&gt;
+&lt;section id="ssa-single-state-assignment-form"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;SSA (Single State Assignment Form)&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The SSA using release has been made last summer. Recent releases have
 lifted more and more restrictions on where and now it is applied and
@@ -498,8 +498,8 @@ lifting that kind of restriction, and for quality of result, that will
 mean making a huge jump ahead once that works, so module variables used
 locally a lot will become even faster to use then and subject to static
 optimization too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="function-inlining"&gt;
+&lt;/section&gt;
+&lt;section id="function-inlining"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Function Inlining&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;When doing my talk to EuroPython 2015, I was demoing it that, and
 indeed, what a break through. The circumstances under which it is done
@@ -514,10 +514,10 @@ again, once the SSA use as indicated above expands to module variables,
 as then inlining other things than local functions will be possible too.&lt;/p&gt;
 &lt;p&gt;So there is a lot of things to do for this to really make a difference
 to your programs. But it’s still great to have that part solved so far.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="scalability"&gt;
+&lt;/section&gt;
+&lt;section id="scalability"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Scalability&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="section" id="parameter-parsing"&gt;
+&lt;section id="parameter-parsing"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id5"&gt;Parameter Parsing&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Recent releases have replaced some of the oldest code of Nuitka, the one
 that generated special argument parsing for each function individually,
@@ -526,15 +526,15 @@ although quick entry points were tough to beat.&lt;/p&gt;
 &lt;p&gt;That gives the C backend compiler a much easier time. Previously 3 C
 functions were created per Python level function, two of which could get
 really big with many arguments, and these are no more.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="variable-error-messages"&gt;
+&lt;/section&gt;
+&lt;section id="variable-error-messages"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id6"&gt;Variable Error Messages&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Something similar was going on with variable error messages. Each had
 their exception value pre-computed and created at module load time. Most
 of these are of course unused. This has been replaced with code that
 generates it on the fly, resulting in a lot less constants code.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="code-objects"&gt;
+&lt;/section&gt;
+&lt;section id="code-objects"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id7"&gt;Code Objects&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;And another thing was to look after code objects, of which there often
 were two for each Python level function. The one used or the frame
@@ -545,8 +545,8 @@ created cached objects with hopefully the same options, but that not
 being true.&lt;/p&gt;
 &lt;p&gt;Resolving that, and sharing the code object used for creation and then
 the frame is gives less complex C code too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id8"&gt;Optimization&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The scalability of Nuitka also depends much on generated code size. With
 the optimization become more clever, less code is generated, and that
@@ -555,9 +555,9 @@ trend will continue as more structural optimization are applied.&lt;/p&gt;
 the corresponding error exits from the C code, which then makes it
 easier for the C compiler. Also more specialized code as we now have or
 dictionaries, is often less complex to it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="compatibility"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="compatibility"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;Compatibility&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Important things have happened here. Full compatibility mode is planned
 to not be the default anymore in upcoming releases, but that will only
@@ -580,26 +580,26 @@ tracing and type inference of dictionary, and value tracing. To fully
 support Python3 classes, we need to work on something that is a
 dictionary a-like, and that will only ever be efficient if we have that.
 Good news is that the next release is making progress there too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="performance"&gt;
+&lt;/section&gt;
+&lt;section id="performance"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;Performance&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="section" id="graphs-and-benchmarks"&gt;
+&lt;section id="graphs-and-benchmarks"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id11"&gt;Graphs and Benchmarks&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;I also presented this weak point to EuroPython 2015 and my plan on how
 to resolve it. Unfortunately, nothing really happened here. My plan is
 still to use what the PyPy people have developed as vmprof.&lt;/p&gt;
 &lt;p&gt;So that is not progressing, and I could need help with that definitely.
 Get in contact if you think you can.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="standalone"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="standalone"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;Standalone&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The standalone mode of Nuitka was pretty good, and continued to improve
 further, but I don’t care much.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="other-stuff"&gt;
+&lt;/section&gt;
+&lt;section id="other-stuff"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;Other Stuff&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="section" id="europython-2015"&gt;
+&lt;section id="europython-2015"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id14"&gt;EuroPython 2015&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This was a blast. Meeting people who knew Nuitka but not me was a
 regular occurrence. And many people well appreciate my work. It felt
@@ -610,8 +610,8 @@ high goal that I set myself, quite impressed people.&lt;/p&gt;
 hope to find work with data scientists in the coming years. More amd
 more it looks like my day job should be closer to Nuitka and my
 expertise in Python.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="funding"&gt;
+&lt;/section&gt;
+&lt;section id="funding"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id15"&gt;Funding&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Nuitka receives the occasional &lt;a class="reference external" href="/pages/donations.html"&gt;donation&lt;/a&gt; and those make me very happy.
 As there is no support from organization like the PSF, I am all on my
@@ -619,8 +619,8 @@ own there.&lt;/p&gt;
 &lt;p&gt;This year I want to travel to Europython 2016. It would be sweet if
 aside of my free time it wouldn’t also cost me money. So please consider
 donating some more, as these kind of events are really helpul to Nuitka.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="collaborators"&gt;
+&lt;/section&gt;
+&lt;section id="collaborators"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id16"&gt;Collaborators&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Nuitka is making more and more break through progress. And you can be a
 part of it. Now.&lt;/p&gt;
@@ -628,21 +628,21 @@ part of it. Now.&lt;/p&gt;
 the mailing list (since closed) and help me there with request I make,
 e.g. review posts of mine, test out things, pick up small jobs, answer
 questions of newcomers, you know the drill probably.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="videos"&gt;
+&lt;/section&gt;
+&lt;section id="videos"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id17"&gt;Videos&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;There is a Youtube channel of mine with &lt;a class="reference external" href="https://www.youtube.com/playlist?list=PLKO58t9ADuF6o_Dcmve1DXpUkUEEVvDux"&gt;all the videos of Nuitka so far&lt;/a&gt;
 and I have been preparing myself with proper equipment to make Videos of
 Nuitka, but so far nothing has come out of that.&lt;/p&gt;
 &lt;p&gt;I do however really want to change that. Let’s see if it happens.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="twitter"&gt;
+&lt;/section&gt;
+&lt;section id="twitter"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id18"&gt;Twitter&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;I have started to use &lt;a class="reference external" href="https://twitter.com/kayhayen"&gt;my Twitter account&lt;/a&gt; on occasions. You are welcome to follow
 me there. I will highlight interesting stuff there.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="future"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="future"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id19"&gt;Future&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;So, there is multiple things going on:&lt;/p&gt;
 &lt;ul&gt;
@@ -689,8 +689,8 @@ function to be able to reference different sets of these.&lt;/p&gt;
 &lt;p&gt;Let me know, if you are willing to help. I really need that help to make
 things happen faster. Nuitka will become more and more important only.
 And with your help, things will be there sooner.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="release-focus"&gt;
+&lt;/section&gt;
+&lt;section id="release-focus"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id20"&gt;Release Focus&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;One thing I have started recently, is to make changes to Nuitka focused
 to just one goal, and to only deal with the rare bug in other fields,
@@ -721,8 +721,8 @@ and the structural changes needed to integrate them properly with not
 too much special casing, but rather removing existing special cases
 (generator functions) was just too much work to ever happen while also
 doing other stuff.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id21"&gt;Summary&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;So I am very excited about Nuitka. It feels like the puzzle is coming
 together finally, with type inference becoming a real thing. And should
@@ -735,8 +735,8 @@ finally expect Nuitka to be generally fast and deserve to be called a
 compiler.&lt;/p&gt;
 &lt;p&gt;That will take a while, but it’s likely to happen in 2016. Let’s see if
 I will get the funding to go to EuroPython 2016, that would be great.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-progress-winter-2015.html" rel="alternate"/>
     <summary>For quite a bit, there have been no status posts, not for lack of news,

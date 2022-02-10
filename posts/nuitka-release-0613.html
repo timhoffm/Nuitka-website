@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-13">
+              <section id="nuitka-release-0-6-13">
 <h1>Nuitka Release 0.6.13<a class="headerlink" href="#nuitka-release-0-6-13" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release follows up with yet again massive improvement in many ways
 with lots of bug fixes and new features.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Windows: Icon group entries were not still not working properly in
@@ -193,8 +195,8 @@ directory that requires them.</p></li>
 <li><p>Python3: Fixed a few Python debug mode warnings about unclosed files
 that have sneaked into the codebase.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added new options <code class="docutils literal notranslate"><span class="pre">--windows-force-stdout-spec</span></code> and
@@ -216,8 +218,8 @@ issues with <code class="docutils literal notranslate"><span class="pre">PySide2
 now. Upstream patches will have to be created to remove the need for
 workarounds and full support.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Use binary operation code for their in-place variants too, giving
@@ -268,8 +270,8 @@ as bytecode rather than as source code, scanning them with
 <code class="docutils literal notranslate"><span class="pre">pkgutil</span></code> rather than filesystem, with much cleaner code in the
 plugin.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Removed support for <code class="docutils literal notranslate"><span class="pre">pefile</span></code> dependency walker choice and inline
@@ -316,8 +318,8 @@ it’s an inline copy, this makes no sense anymore and that was
 obsolete.</p></li>
 <li><p>Updated PyLint to latest versions, and our requirements in general.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Started removal of PyLint annotations used for old Python2 only. This
@@ -361,8 +363,8 @@ therefore labels that are not used are not present.</p></li>
 module no longer emits a dependency on the module itself. Also from
 plugins, these are now filtered away.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Detect if onefile mode has required downloads and if there is user
@@ -377,8 +379,8 @@ for the first time, and then a couple more times, allowing for real
 in-place usage, so we are sure we measure correctly if that’s
 happening.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>Where the big change of the last release were optimization changes to
 reduce the global passes, this release addresses remaining causes for
@@ -409,8 +411,8 @@ cases now.</p>
 about loop variables, to apply specific code helpers more often, so we
 can achieve the near C speed we are looking for in the field of <code class="docutils literal notranslate"><span class="pre">int</span></code>
 performance.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

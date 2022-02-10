@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-9">
+              <section id="nuitka-release-0-3-9">
 <h1>Nuitka Release 0.3.9<a class="headerlink" href="#nuitka-release-0-3-9" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -139,7 +141,7 @@ a good speed improvement.</p>
 areas of Nuitka. The main focus was on faster function calls, faster
 class attributes (not instance), faster unpacking, and more built-ins
 detected and more thoroughly optimizing them.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Exceptions raised inside with statements had references to the
@@ -154,12 +156,12 @@ makes Nuitka not emit “trigraphs” at all.</p></li>
 lead to assuming a tuple with only mutable elements to be not
 mutable, which is of course wrong.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <p>This time there are so many new optimization, it makes sense to group
 them by the subject.</p>
-<div class="section" id="exceptions">
+<section id="exceptions">
 <h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline"></a></h3>
 <ul>
 <li><p>The code to add a traceback is now our own, which made it possible to
@@ -178,8 +180,8 @@ without exporting and re-importing the exception to Python, but
 directly on the exception objects traceback, this avoids a useless
 round trip.</p></li>
 </ul>
-</div>
-<div class="section" id="function-calls">
+</section>
+<section id="function-calls">
 <h3>Function Calls<a class="headerlink" href="#function-calls" title="Permalink to this headline"></a></h3>
 <ul>
 <li><p>Uses of PyObject_Call provide <code class="docutils literal notranslate"><span class="pre">NULL</span></code> as the dictionary, instead of
@@ -194,8 +196,8 @@ completely short-cut for the case of a dictionary that has never had
 a string added. There is now code that detects this case and skips
 the check, eliminating it as a performance concern.</p></li>
 </ul>
-</div>
-<div class="section" id="parameter-parsing">
+</section>
+<section id="parameter-parsing">
 <h3>Parameter Parsing<a class="headerlink" href="#parameter-parsing" title="Permalink to this headline"></a></h3>
 <ul>
 <li><p>Reversed the order in which parameters are checked.</p>
@@ -214,8 +216,8 @@ equality comparison, which doesn’t raise an exception.</p></li>
 <li><p>Unpacking of tuples is now using dedicated variants of the normal
 unpacking code instead of rolling out everything themselves.</p></li>
 </ul>
-</div>
-<div class="section" id="attribute-access">
+</section>
+<section id="attribute-access">
 <h3>Attribute Access<a class="headerlink" href="#attribute-access" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>The class type (in executables, not yet for extension modules) is
@@ -229,8 +231,8 @@ intern the string used for attribute access is not necessary with
 Nuitka at all anymore. This made access to attributes about 50%
 faster which is big of course.</p></li>
 </ul>
-</div>
-<div class="section" id="constants">
+</section>
+<section id="constants">
 <h3>Constants<a class="headerlink" href="#constants" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>The bug for mutable tuples also caused non-mutable tuples to be
@@ -258,8 +260,8 @@ a C++ <code class="docutils literal notranslate"><span class="pre">Py_ssize_t</s
 converting the integer constant at run time, which was of course
 wasteful even if not (very) slow.</p></li>
 </ul>
-</div>
-<div class="section" id="iteration">
+</section>
+<section id="iteration">
 <h3>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>The creation of iterators got our own code. This avoids a function
@@ -271,8 +273,8 @@ flow, because it avoids the double check in case of NULL returned.</p></li>
 <li><p>The unpack check got similar code to the next iterator, it also has
 simpler code flow now and avoids double checks.</p></li>
 </ul>
-</div>
-<div class="section" id="built-ins">
+</section>
+<section id="built-ins">
 <h3>Built-ins<a class="headerlink" href="#built-ins" title="Permalink to this headline"></a></h3>
 <ul>
 <li><p>Added support for the <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>,
@@ -291,8 +293,8 @@ a work in progress as is the whole built-ins business as not all the
 built-ins are covered yet.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h3>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>In 0.3.8 per module global classes were introduced, but the
@@ -323,9 +325,9 @@ for function calls, an <code class="docutils literal notranslate"><span class="p
 <li><p>Moved the manifest generation to the scons file, which now produces
 ready to use executables.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="new-tests">
+</section>
+</section>
+<section id="new-tests">
 <h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added a improved version of “pybench” that can cope with the “0 ms”
@@ -341,8 +343,8 @@ Output is required to make the error detectable.</p></li>
 <li><p>Enhanced <code class="docutils literal notranslate"><span class="pre">Constants</span></code> test to cover repeated mutation of mutable
 tuple constants, this covers the bug mentioned.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Added a credits section to the “README.txt” where I give credit to
@@ -366,8 +368,8 @@ Nuitka to not have the distortions that <code class="docutils literal notranslat
 optimization level, assertions, etc.) and instead a clear view.</p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

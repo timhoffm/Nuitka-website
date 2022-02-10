@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-progress-in-summer-2015">
+              <section id="nuitka-progress-in-summer-2015">
 <h1><a class="toc-backref" href="#id1">Nuitka Progress in Summer 2015</a><a class="headerlink" href="#nuitka-progress-in-summer-2015" title="Permalink to this headline"></a></h1>
 <p>A long time has passed again without me speaking about what’s going on
 with Nuitka, and that although definitely a lot has happened. I would
@@ -170,7 +172,7 @@ of great achievement.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="ssa-single-state-assignment-form">
+<section id="ssa-single-state-assignment-form">
 <h2><a class="toc-backref" href="#id2">SSA (Single State Assignment Form)</a><a class="headerlink" href="#ssa-single-state-assignment-form" title="Permalink to this headline"></a></h2>
 <p>For a long, long time already, each release of Nuitka has worked towards
 increasing <a class="reference external" href="http://en.wikipedia.org/wiki/Static_single_assignment_form">“SSA”</a> usage in
@@ -191,8 +193,8 @@ code as well as possible:</p>
 <p>But starting with the next release, the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> is forward
 propagated (also in way more complex situations), and that’s a serious
 milestone for the project.</p>
-</div>
-<div class="section" id="function-inlining">
+</section>
+<section id="function-inlining">
 <h2><a class="toc-backref" href="#id3">Function Inlining</a><a class="headerlink" href="#function-inlining" title="Permalink to this headline"></a></h2>
 <p>When submitting my talk to EuroPython 2015, I was putting a lot of
 pressure on me by promising to demo that. And I did. It was based on the
@@ -226,8 +228,8 @@ many changes at once.</p>
 yet either. This will generally become relevant once we have this
 working across modules and their globally defined functions or methods.
 This will be a while until Nuitka gets there.</p>
-</div>
-<div class="section" id="scalability">
+</section>
+<section id="scalability">
 <h2><a class="toc-backref" href="#id4">Scalability</a><a class="headerlink" href="#scalability" title="Permalink to this headline"></a></h2>
 <p>Having got Nuitka’s memory usage under control, it turned out that there
 are files that can trigger Python recursion <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> exception
@@ -240,8 +242,8 @@ so far, and rather very annoying too.</p>
 <p>The scalability of Nuitka also depends much on generated code size. With
 the optimization become more clever, less code is generated, and that
 trend will continue as more structural optimization are applied.</p>
-</div>
-<div class="section" id="compatibility">
+</section>
+<section id="compatibility">
 <h2><a class="toc-backref" href="#id5">Compatibility</a><a class="headerlink" href="#compatibility" title="Permalink to this headline"></a></h2>
 <p>Very few things are possible here anymore. For the tests, in full
 compatibility mode, even more often the less good line number is used.</p>
@@ -249,7 +251,7 @@ compatibility mode, even more often the less good line number is used.</p>
 plugins of PySide and PyQt. Or another example is the
 <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> module that on Windows is now supposed to fork
 compiled code too.</p>
-<div class="section" id="python-3-5">
+<section id="python-3-5">
 <h3><a class="toc-backref" href="#id6">Python 3.5</a><a class="headerlink" href="#python-3-5" title="Permalink to this headline"></a></h3>
 <p>The next release has experimental support for Python 3.5, with the
 notable exception that <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code>, these do not yet work.
@@ -268,8 +270,8 @@ these to internal cleanups so it becomes simpler.</p>
 used for generators, class bodies, and function, is bound to be replaced
 with a base class and detailing instances, instead of one thing for them
 all, then with coroutines added.</p>
-</div>
-<div class="section" id="importing-enhancements">
+</section>
+<section id="importing-enhancements">
 <h3><a class="toc-backref" href="#id7">Importing Enhancements</a><a class="headerlink" href="#importing-enhancements" title="Permalink to this headline"></a></h3>
 <p>A while ago, the import logic was basically re-written with
 compatibility much increased. Then quite some issues were fixed. I am
@@ -284,11 +286,11 @@ analysis too. So once we do cross module optimization, this must be rock
 solid.</p>
 <p>I think we have gotten a long way there, but we still need to tackle
 some more fine details.</p>
-</div>
-</div>
-<div class="section" id="performance">
+</section>
+</section>
+<section id="performance">
 <h2><a class="toc-backref" href="#id8">Performance</a><a class="headerlink" href="#performance" title="Permalink to this headline"></a></h2>
-<div class="section" id="graphs-and-benchmarks">
+<section id="graphs-and-benchmarks">
 <h3><a class="toc-backref" href="#id9">Graphs and Benchmarks</a><a class="headerlink" href="#graphs-and-benchmarks" title="Permalink to this headline"></a></h3>
 <p>I also presented this weak point to EuroPython 2015 and my plan on how
 to resolve it. And low and behold, turns out the PyPy people had already
@@ -318,19 +320,19 @@ harder for me than necessary.</p>
 need your help. Let me know if you want to. It takes work on taking the
 data, and merging them into one view, linking it with the source code
 ideally. That will be the tool you can just use on your own code.</p>
-</div>
-</div>
-<div class="section" id="standalone">
+</section>
+</section>
+<section id="standalone">
 <h2><a class="toc-backref" href="#id10">Standalone</a><a class="headerlink" href="#standalone" title="Permalink to this headline"></a></h2>
 <p>The standalone mode of Nuitka was pretty good, and continued to improve
 further, now largely with the help of plug-ins.</p>
 <p>I now know that PyGTK is an issue and will need a plug-in to work. Once
 the plug-in interface is public, I hope for more outside contributions
 here.</p>
-</div>
-<div class="section" id="other-stuff">
+</section>
+<section id="other-stuff">
 <h2><a class="toc-backref" href="#id11">Other Stuff</a><a class="headerlink" href="#other-stuff" title="Permalink to this headline"></a></h2>
-<div class="section" id="funding">
+<section id="funding">
 <h3><a class="toc-backref" href="#id12">Funding</a><a class="headerlink" href="#funding" title="Permalink to this headline"></a></h3>
 <p>Nuitka receives the occasional <a class="reference external" href="/pages/donations.html">donation</a> and those make me very happy.
 As there is no support from organization like the PSF, I am all on my
@@ -339,8 +341,8 @@ own there.</p>
 after burning the old one through with CI tests, the website has running
 costs, and so on. That is pretty hefty money. It would be sweet if aside
 of my free time it wouldn’t also cost me money.</p>
-</div>
-<div class="section" id="europython-2015">
+</section>
+<section id="europython-2015">
 <h3><a class="toc-backref" href="#id13">EuroPython 2015</a><a class="headerlink" href="#europython-2015" title="Permalink to this headline"></a></h3>
 <p>This was a blast. Meeting people who knew Nuitka but not me was a
 regular occurrence. And many people well appreciate my work. It felt
@@ -352,8 +354,8 @@ well, I am going to post a link separately in another post.</p>
 hope to find work with data scientists in the coming years. More amd
 more it looks like my day job should be closer to Nuitka and my
 expertise in Python.</p>
-</div>
-<div class="section" id="collaborators">
+</section>
+<section id="collaborators">
 <h3><a class="toc-backref" href="#id14">Collaborators</a><a class="headerlink" href="#collaborators" title="Permalink to this headline"></a></h3>
 <p>Nuitka is making break through progress. And you can be a part of it.
 Now.</p>
@@ -361,9 +363,9 @@ Now.</p>
 the mailing list (since closed) and help me there with request I make,
 e.g. review posts of mine, test out things, pick up small jobs, answer
 questions of newcomers, you know the drill probably.</p>
-</div>
-</div>
-<div class="section" id="future">
+</section>
+</section>
+<section id="future">
 <h2><a class="toc-backref" href="#id15">Future</a><a class="headerlink" href="#future" title="Permalink to this headline"></a></h2>
 <p>So, there is multiple things going on:</p>
 <ul>
@@ -411,8 +413,8 @@ expand Nuitka’s reach and appeal to get more contributors.</p>
 </ul>
 <p>Let me know, if you are willing to help. I really need that help to make
 things happen faster. Nuitka will become more and more important only.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

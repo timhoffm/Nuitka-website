@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-10">
+              <section id="nuitka-release-0-6-10">
 <h1>Nuitka Release 0.6.10<a class="headerlink" href="#nuitka-release-0-6-10" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release comes with many new features, e.g. onefile support, as well
 as many new optimization and bug fixes.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fix, was memory leaking arguments of all complex call helper
@@ -173,8 +175,8 @@ finally clauses anymore. Fixed in 0.6.9.1 already.</p></li>
 mode, they need a <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code> or else e.g. <code class="docutils literal notranslate"><span class="pre">input</span></code> will not be
 compatible and raise <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added experimental support for Python 3.9, in such a way that the
@@ -213,8 +215,8 @@ allow more optimization.</p></li>
 <li><p>Plugins: The numpy plugin now handles matplotlib3 config files
 correctly.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Use less C variables in dictionary created, not one per key/value
@@ -329,8 +331,8 @@ contractions code.</p></li>
 that task, slightly reducing file size and avoiding to use the
 <code class="docutils literal notranslate"><span class="pre">Shlapi</span></code> link library.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Made reflected test use common cleanup of test folder, which is more
@@ -347,8 +349,8 @@ both taken by varying the <code class="docutils literal notranslate"><span class
 is faster, because it avoids creating exceptions in the first place,
 instead of removing them afterwards.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Make sure that code generation always go through the C type objects
@@ -386,8 +388,8 @@ modules with dedicated interfaces.</p></li>
 appropriate, e.g. when counting source code lines, rather than adding
 <code class="docutils literal notranslate"><span class="pre">count+1</span></code> on every usage, making code more readable.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Do not recommend Anaconda on Windows anymore, it seems barely
@@ -408,8 +410,8 @@ suite, to allow others to take this task in the future.</p></li>
 <li><p>Make it more clear in the documentation that Microsoft Appstore
 Python is not supported.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This is the big release in terms of scalability. The optimization in
 this release mostly focused on getting things that cause increased
@@ -433,8 +435,8 @@ to come in this field with future releases, e.g. making a minimum
 version requirement for gcc on Windows that excludes unfit C compilers.</p>
 <p>All in all, this release should be taken as a major cleanup, resolving
 many technical debts of Nuitka and preparing more optimization to come.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

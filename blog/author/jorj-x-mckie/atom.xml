@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts by Jorj X. McKie</title>
-  <updated>2022-02-10T04:46:45.281893+00:00</updated>
+  <updated>2022-02-10T17:09:26.437960+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/author/jorj-x-mckie/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -14,7 +14,7 @@
       <name>Jorj X. McKie</name>
     </author>
     <content type="html">&lt;p&gt;Self-Introduction Jorj McKie&lt;/p&gt;
-&lt;div class="section" id="jorj-x-mckie"&gt;
+&lt;section id="jorj-x-mckie"&gt;
 
 &lt;p&gt;Hello everyone,&lt;/p&gt;
 &lt;p&gt;I am Jorj X. McKie (this is &lt;strong&gt;not&lt;/strong&gt; my real name!) and I am an
@@ -32,7 +32,7 @@ contains many things I am working on.&lt;/p&gt;
 &lt;dd&gt;&lt;img alt="../../_images/jorjmckie-harald-lieder.jpg" src="../../_images/jorjmckie-harald-lieder.jpg" /&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;div class="section" id="short-biography"&gt;
+&lt;section id="short-biography"&gt;
 &lt;h2&gt;Short Biography&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Born 1951 as Harald Lieder near the city of Leipzig&lt;/p&gt;&lt;/li&gt;
@@ -60,27 +60,27 @@ Frank Herbert) and of course programming (maintainer of
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="images-from-isla-margarita"&gt;
+&lt;/section&gt;
+&lt;section id="images-from-isla-margarita"&gt;
 &lt;h2&gt;Images from Isla Margarita&lt;/h2&gt;
-&lt;div class="section" id="house-frontview-with-guardians"&gt;
+&lt;section id="house-frontview-with-guardians"&gt;
 &lt;h3&gt;House Frontview with Guardians&lt;/h3&gt;
 &lt;img alt="../../_images/JMK-house-frontview-with-guardians.jpg" src="../../_images/JMK-house-frontview-with-guardians.jpg" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="in-favorite-pizzeria-with-my-wife"&gt;
+&lt;/section&gt;
+&lt;section id="in-favorite-pizzeria-with-my-wife"&gt;
 &lt;h3&gt;In favorite Pizzeria with my Wife&lt;/h3&gt;
 &lt;img alt="../../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" src="../../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="seaview-from-my-terrace"&gt;
+&lt;/section&gt;
+&lt;section id="seaview-from-my-terrace"&gt;
 &lt;h3&gt;Seaview from my Terrace&lt;/h3&gt;
 &lt;img alt="../../_images/JMK-seaview-from-my-terrace.JPG" src="../../_images/JMK-seaview-from-my-terrace.JPG" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sunrise-view-from-house"&gt;
+&lt;/section&gt;
+&lt;section id="sunrise-view-from-house"&gt;
 &lt;h3&gt;Sunrise view from House&lt;/h3&gt;
 &lt;img alt="../../_images/JMK-sunrise-view-from-house.jpg" src="../../_images/JMK-sunrise-view-from-house.jpg" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/jorj-x-mckie.html" rel="alternate"/>
     <summary>Self-Introduction Jorj McKie</summary>

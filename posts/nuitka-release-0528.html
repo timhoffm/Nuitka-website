@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-28">
+              <section id="nuitka-release-0-5-28">
 <h1>Nuitka Release 0.5.28<a class="headerlink" href="#nuitka-release-0-5-28" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -138,7 +140,7 @@ and work to enhance the usability of Nuitka by integrating with
 distutils. The major improvement is that contractions no longer use
 pseudo functions to achieve their own local scope, but that there is now
 a dedicated structure for that representing an in-lined function.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Python3.6: Fix, <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code> was not yet implemented for async
@@ -197,8 +199,8 @@ library extensions for freezing, which would leave out these.</p></li>
 <li><p>Compatibility: For <code class="docutils literal notranslate"><span class="pre">__future__</span></code> imports the <code class="docutils literal notranslate"><span class="pre">__import__</span></code> function
 was called more than once.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Contractions are now all properly inlined and allow for optimization
@@ -209,8 +211,8 @@ using scope, allowing for more compact code.</p></li>
 <li><p>The dictionary API was not used in module template code, although it
 helps to generate more compact code.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Experimental support for building platform dependent wheel
@@ -239,8 +241,8 @@ but still missing so far.</p></li>
 status and can be used to test compatibility with regards to import
 behavior.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Rename tree and codegen <code class="docutils literal notranslate"><span class="pre">Helper</span></code> modules to unique names, making
@@ -259,8 +261,8 @@ the real inline of classes and contraction bodies, instead of
 <li><p>Proper base classes for functions that are entry points, and
 functions that are merely a local expression using return statements.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The search mode with pattern, was not working anymore.</p></li>
@@ -268,8 +270,8 @@ functions that are merely a local expression using return statements.</p></li>
 <li><p>Added test that covers using test runners like <code class="docutils literal notranslate"><span class="pre">nose</span></code> and
 <code class="docutils literal notranslate"><span class="pre">py.test</span></code> with Nuitka compiled extension modules.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added support for Scons 3.0 and running Scons with Python3.5 or
@@ -288,8 +290,8 @@ recommended.</p></li>
 extension module.</p></li>
 <li><p>Removed Ubuntu Wily package download, no longer supported by Ubuntu.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release was done to get the fixes and new features out for testing.
 There is work started that should make generators use an explicit extra
@@ -315,8 +317,8 @@ integrating Nuitka dead simple, or that is the hope.</p>
 <p>And last but not least, now that Scons works with Python3, chances are
 that Nuitka will more often work out the of the box. The older Python3
 versions that still retain the issue are not very widespread.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2019</title>
-  <updated>2022-02-10T04:46:47.724076+00:00</updated>
+  <updated>2022-02-10T17:09:27.998231+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2019/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,13 +13,13 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-6-1"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-6-1"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release comes after a relatively long time, and contains important
 new optimization work, and even more bug fixes.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug Fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Fix, the options &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--[no]follow-import-to=package_name&lt;/span&gt;&lt;/code&gt; was supposed
@@ -91,8 +91,8 @@ automatically.&lt;/p&gt;&lt;/li&gt;
 interpreter, aka &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--python-flag=utf8_mode&lt;/span&gt;&lt;/code&gt; was not preserved in the
 compiled binary in all cases.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Enabled C target type &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;void&lt;/span&gt;&lt;/code&gt; which will catch creating unused stuff
@@ -111,8 +111,8 @@ in-place extension where possible.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Loop variables no longer loose type information, but instead collect
 the set of possible type shapes allowing optimization for them.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Corrected download link for Arch AUR link of develop package.&lt;/p&gt;&lt;/li&gt;
@@ -122,8 +122,8 @@ the set of possible type shapes allowing optimization for them.&lt;/p&gt;&lt;/li
 Manual.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added description how to use CondaCC on Windows to the User Manual.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The operations used for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;async&lt;/span&gt; &lt;span class="pre"&gt;for&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;async&lt;/span&gt; &lt;span class="pre"&gt;with&lt;/span&gt;&lt;/code&gt;, and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;await&lt;/span&gt;&lt;/code&gt;
@@ -138,16 +138,16 @@ fully annotating everything that can happen.&lt;/p&gt;&lt;/li&gt;
 because there are no local C variables declared, and properly indent
 them.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tests"&gt;
+&lt;/section&gt;
+&lt;section id="tests"&gt;
 &lt;h2&gt;Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Fixups for the manual Valgrind runner and the UI changes.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Test runner detects lock issue of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;clcache&lt;/span&gt;&lt;/code&gt; on Windows and
 considers it a permission problem that causes a retry.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;This addresses even more corner cases not working correctly, the out of
 the box experience should be even better now.&lt;/p&gt;
@@ -168,8 +168,8 @@ will be needed in this domain to make improvements more demonstrable. It
 may well end up being the focus for the next release to improve Nuitka
 speedcenter to give more fine grained insights across minor changes of
 Nuitka and graphs with more history.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-061.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -186,7 +186,7 @@ Nuitka and graphs with more history.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-this-week-12"&gt;
+    <content type="html">&lt;section id="nuitka-this-week-12"&gt;
 
 &lt;div class="contents topic" id="contents"&gt;
 &lt;p class="topic-title"&gt;Contents&lt;/p&gt;
@@ -210,37 +210,37 @@ Nuitka and graphs with more history.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="communication-vs-coding"&gt;
+&lt;section id="communication-vs-coding"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Communication vs. Coding&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Over the holiday season I sort of neglected these postings, but there
 are other fields, where I have put my focus, but I think these postings
 are now going to resume.&lt;/p&gt;
 &lt;p&gt;A quick update in a while in an eternally fluent situation, and not too
 polished.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization-work"&gt;
+&lt;/section&gt;
+&lt;section id="optimization-work"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Optimization Work&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;So, the 0.6.2 optimization work has been not a lot yet. I started some
 work on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt;/&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt; C type and it looked good.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="week-of-bugfixing"&gt;
+&lt;/section&gt;
+&lt;section id="week-of-bugfixing"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Week of Bugfixing&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;So I did this, and it turned out rather long. I continued fixing things
 and finishing up open things to the point that it now is clean. I hate
 to be falling behind. I am touching on a few more interesting topics.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python-flag-o-and-oo"&gt;
+&lt;/section&gt;
+&lt;section id="python-flag-o-and-oo"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;Python flag -O and -OO&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Nuitka was supporting &lt;cite&gt;-O&lt;/cite&gt; but doing what should only the done for &lt;cite&gt;-OO&lt;/cite&gt;
 which I only learned of now. So this is going to be supported both now.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="virtualenv-vs-venv"&gt;
+&lt;/section&gt;
+&lt;section id="virtualenv-vs-venv"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;Virtualenv vs. venv&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Accelerated binaries were not running with full &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sys.path&lt;/span&gt;&lt;/code&gt; in the
 virtualenv, because &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;site&lt;/span&gt;&lt;/code&gt; module uses &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sys.prefix&lt;/span&gt;&lt;/code&gt; and that was not
 propagated,but it now is.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="google-summer-of-code-for-nuitka"&gt;
+&lt;/section&gt;
+&lt;section id="google-summer-of-code-for-nuitka"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;Google Summer of Code for Nuitka&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;So the GSoC 2019 page is shaping up, the pull request to list Nuitka on
 the PSF project pages has been merged. More tweaking will be needed to
@@ -251,8 +251,8 @@ we need to see if students are willing to pick us.&lt;/p&gt;
 &lt;p&gt;And because I publish this too late. Already a bunch of stundents are
 showing interest and are hacking on Nuitka, which keeps me even more
 busy, and makes me extremely happy.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="nuitka-organisation"&gt;
+&lt;/section&gt;
+&lt;section id="nuitka-organisation"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;Nuitka Organisation&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The Nuitka organisation on Github was introduced for my a while ago, and
 I had transferred the ownership of the Nuitka repository to there.
@@ -263,39 +263,39 @@ contribution, but people looking to actually improve Nuitka together
 with me.&lt;/p&gt;
 &lt;p&gt;Therefore I welcome Orsiris and Jorj on board and am really happy about
 it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="windows-dependencies-from-pefile"&gt;
+&lt;/section&gt;
+&lt;section id="windows-dependencies-from-pefile"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;Windows Dependencies from pefile&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;So Orsiris de Jong implemented a replacement for the dependency walker
 based code to scan DLLs for Windows standalone using the &lt;cite&gt;pefile&lt;/cite&gt;
 module, which is likely way better at this. For starters it’s
 experimental in the next release, but I expect it to soon become the
 default.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tkinter-plugin"&gt;
+&lt;/section&gt;
+&lt;section id="tkinter-plugin"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id11"&gt;Tkinter Plugin&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;And Jorj X. McKie implemented a Windows Tkinter plug-in that deals with
 copying of the TCL installation and integrating it with Nuitka
 standalone for distribution.&lt;/p&gt;
 &lt;p&gt;That is very nice and seems to affect a lot of people using that GUI
 style it seems.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="numpy-plugin"&gt;
+&lt;/section&gt;
+&lt;section id="numpy-plugin"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;Numpy Plugin&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;And Jorj X. McKie also implemented a NumPy plug-in that deals with the
 various acceleration methods there are, e.g. MKL, Blas, I have no idea.
 It copies the needed DLLs along and makes sure that &lt;cite&gt;numpy&lt;/cite&gt; stays fast
 in standalone mode.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="twitter"&gt;
+&lt;/section&gt;
+&lt;section id="twitter"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;Twitter&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I continue to be very active there.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw"&gt;Follow &amp;#64;kayhayen&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;And lets not forget, having followers make me happy. So do re-tweets.&lt;/p&gt;
 &lt;p&gt;Adding Twitter more prominently to the web site is something that is
 also going to happen.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="help-wanted"&gt;
+&lt;/section&gt;
+&lt;section id="help-wanted"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;Help Wanted&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="system-message"&gt;
 &lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/Nuitka-website/Nuitka-website/doc/posts/nuitka-this-week-12.rst&lt;/span&gt;, line 7); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
@@ -304,14 +304,14 @@ also going to happen.&lt;/p&gt;
 &lt;p&gt;If you are interested, I am tagging issues &lt;a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22"&gt;help wanted&lt;/a&gt;
 and there is a bunch, and very likely at least one &lt;em&gt;you&lt;/em&gt; can help with.&lt;/p&gt;
 &lt;p&gt;Nuitka definitely needs more people to work on it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="donations"&gt;
+&lt;/section&gt;
+&lt;section id="donations"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id15"&gt;Donations&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;If you want to help, but cannot spend the time, please consider to
 donate to Nuitka, and go here:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="/pages/donations.html"&gt;Donate to Nuitka&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-12.html" rel="alternate"/>
     <summary>Nuitka this week #12</summary>
@@ -328,13 +328,13 @@ donate to Nuitka, and go here:&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-6-2"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-6-2"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release has a huge focus on organisational things. Nuitka is
 growing in terms of contributors and supported platforms.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug Fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Fix, the Python flag &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--python-flag=-O&lt;/span&gt;&lt;/code&gt; was removing doc strings,
@@ -349,8 +349,8 @@ import without error.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Standalone: Added missing implicit dependency needed for newer NumPy
 versions.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Added support for Alpine Linux.&lt;/p&gt;&lt;/li&gt;
@@ -370,8 +370,8 @@ gives as a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Experimental code for variant types for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt; values,
@@ -380,8 +380,8 @@ yet completed though.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Minor refinements of specialized code variants reducing them more
 often the actual needed code.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The Nuitka Github Organisation that was created a while ago and owns
@@ -405,8 +405,8 @@ typos, sometimes broken links, etc.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Updated inline copy of Scons used for Python3 to 3.0.4, which
 hopefully means more bugs are fixed.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;This release is a sign of increasing adoption of Nuitka. The GSoC 2019
 is showing early effects, as is more developers joining the effort.
@@ -417,8 +417,8 @@ once it will be finished.&lt;/p&gt;
 &lt;p&gt;The focus on this and coming releases is definitely to open up the
 Nuitka development now that people are coming in as permanent or
 temporary contributors in (relatively) high numbers.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-062.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -435,7 +435,7 @@ temporary contributors in (relatively) high numbers.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-6-3"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-6-3"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -445,7 +445,7 @@ students, the main focus was to open up the development tools and
 processes, and to improve documentation.&lt;/p&gt;
 &lt;p&gt;That said, an impressive amount of bug fixes was contributed, but
 optimization was on hold.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug Fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Windows: Added support for running compiled binaries in unicode path
@@ -466,14 +466,14 @@ sensible plugins to include.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Fix detection of standard library paths that include &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;..&lt;/span&gt;&lt;/code&gt; path
 elements.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Avoid static C++ runtime library when using MinGW64.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Plugins: A plugin may now also generate data files on the fly for a
@@ -481,8 +481,8 @@ given module.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added support for FreeBSD/PowerPC arch which still uses &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gcc&lt;/span&gt;&lt;/code&gt; and
 not &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;clang&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Nuitka is participating in the GSoC 2019.&lt;/p&gt;&lt;/li&gt;
@@ -509,8 +509,8 @@ Nuitka Organisation&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Many typo and spelling corrections on all the documentation.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added short installation guide for Nuitka on Windows.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Moved commandline parsing helper functions from common code helpers
@@ -528,8 +528,8 @@ handling files.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The runners in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bin&lt;/span&gt;&lt;/code&gt; directory are now formatted with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;black&lt;/span&gt;&lt;/code&gt;
 too.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tests"&gt;
+&lt;/section&gt;
+&lt;section id="tests"&gt;
 &lt;h2&gt;Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Detect Windows permission errors for two step execution of Nuitka as
@@ -539,8 +539,8 @@ things into account.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Tests: Added more trick assignments and generally added more tests
 that were so far missing.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;With the many organisational changes in place, my normal work is
 expected to resume for after and yield quicker improvements now.&lt;/p&gt;
@@ -550,8 +550,8 @@ improvements on this otherwise neglected areas.&lt;/p&gt;
 &lt;p&gt;And generally, it’s great to see that a community of people is now
 looking at this release in excitement and pride. Thanks to everybody who
 contributed!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-063.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -568,7 +568,7 @@ contributed!&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-this-week-13"&gt;
+    <content type="html">&lt;section id="nuitka-this-week-13"&gt;
 
 &lt;div class="contents topic" id="contents"&gt;
 &lt;p class="topic-title"&gt;Contents&lt;/p&gt;
@@ -598,7 +598,7 @@ contributed!&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="communication-vs-coding"&gt;
+&lt;section id="communication-vs-coding"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Communication vs. Coding&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Communication was a lot more, just not these postings. Nuitka has
 ventured into important realms.&lt;/p&gt;
@@ -609,10 +609,10 @@ powerful offering of 4 mentors.&lt;/p&gt;
 dealt with, and there was no time to make this kind of posting. This is
 probably good news on all fronts, except that I feel they are missing,
 and am glad to be able to resume them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="google-summer-of-code-2019"&gt;
+&lt;/section&gt;
+&lt;section id="google-summer-of-code-2019"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Google Summer of Code 2019&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="section" id="my-experience"&gt;
+&lt;section id="my-experience"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id5"&gt;My Experience&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This was the most crazy ride and fun. Became the admin of an active
 sub-organisation under the PSF umbrella for GSoC 2019. So shortly after
@@ -627,8 +627,8 @@ project as well, making very important contributions.&lt;/p&gt;
 communication or working off technical debts I knew there were, or for
 preparing things, I want to have with multiple people working on the
 code base. This will be detailed in other sections.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="accepted-students"&gt;
+&lt;/section&gt;
+&lt;section id="accepted-students"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id6"&gt;Accepted Students&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;All of this has paid of in that we now have 2 really good students to
 work on 2 Nuitka projects over the summer. Let’s welcome Batakrishna and
@@ -638,11 +638,11 @@ are going to do shortly, in separate posts.&lt;/p&gt;
 and its a shame, but we knew right away, not everybody who deserved it
 could be picked. But this is going to be a good chance for us to get to
 be open and welcoming to new people.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization-work"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="optimization-work"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;Optimization Work&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="section" id="core-stuff"&gt;
+&lt;section id="core-stuff"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id8"&gt;Core Stuff&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;So, the 0.6.3 release (btw. on Windows, be sure to use the 0.6.3.1
 hotfix), which was made as a consolidation effort to get the good work
@@ -669,8 +669,8 @@ and that is getting there, and code to use in the backend, and that is
 getting there, and a third thing, that is to use optimization knowledge
 to apply the special code as much as possible, and that is not yet fully
 there.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="faster-windows-dependencies"&gt;
+&lt;/section&gt;
+&lt;section id="faster-windows-dependencies"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id9"&gt;Faster Windows Dependencies&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This is going to excite Windows users. After Orsiris de Jong had done a
 replacement for dependency walker that is faster, this had remained in
@@ -696,9 +696,9 @@ overall experience.&lt;/p&gt;
 &lt;p&gt;Currently I need to finish off some remaining problems with it, before
 putting it out in the wild. Getting this into a release will solve many
 newcomer issues.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="nuitka-organisation"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="nuitka-organisation"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;Nuitka Organisation&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Esp. for Google Summer of Code, Nuitka has sought and found mentors,
 some of which are highly experienced for the task. I will let them
@@ -708,8 +708,8 @@ neither could Nuitka participate, nor could it even overachieve as much
 as it does.&lt;/p&gt;
 &lt;p&gt;Therefore I welcomed Kamran and Vaibhav into the organisation and they
 are excited to work the the 2 accepted students, that are also added.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="plugin-work"&gt;
+&lt;/section&gt;
+&lt;section id="plugin-work"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id11"&gt;Plugin Work&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;On the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;jorj&lt;/span&gt;&lt;/code&gt; branch there is a lot of work from Jorj that aims at
 adding support for more of the beasty stuff with hidden dependency and
@@ -720,16 +720,16 @@ once I manage to cherry-pick the release ready parts from it for the
 next release.&lt;/p&gt;
 &lt;p&gt;But this definitely awesome stuff, and going to make Nuitka very easy to
 use for some people, even with stranger software.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="opening-up"&gt;
+&lt;/section&gt;
+&lt;section id="opening-up"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;Opening Up&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;This is also a teaser. But we did so much work for the 0.6.3 release to
 make sure information is there, and things are accessible and changeable
 by everyone, or even the pre-commit hook that I am very proud of.&lt;/p&gt;
 &lt;p&gt;But I shall save this for next week, otherwise it will be too much new
 information.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="twitter"&gt;
+&lt;/section&gt;
+&lt;section id="twitter"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;Twitter&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I continue to be active there, although often I fall prey to of not
 wanting to talk about unfinished things. On Twitter of all things.&lt;/p&gt;
@@ -737,8 +737,8 @@ wanting to talk about unfinished things. On Twitter of all things.&lt;/p&gt;
 &lt;p&gt;And lets not forget, having followers make me happy. So do re-tweets.&lt;/p&gt;
 &lt;p&gt;Adding Twitter more prominently to the web site is something that is
 also going to happen.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="help-wanted"&gt;
+&lt;/section&gt;
+&lt;section id="help-wanted"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;Help Wanted&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="system-message"&gt;
 &lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/Nuitka-website/Nuitka-website/doc/posts/nuitka-this-week-13.rst&lt;/span&gt;, line 7); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
@@ -747,14 +747,14 @@ also going to happen.&lt;/p&gt;
 &lt;p&gt;If you are interested, I am tagging issues &lt;a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22"&gt;help wanted&lt;/a&gt;
 and there is a bunch, and very likely at least one &lt;em&gt;you&lt;/em&gt; can help with.&lt;/p&gt;
 &lt;p&gt;Nuitka definitely needs more people to work on it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="donations"&gt;
+&lt;/section&gt;
+&lt;section id="donations"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id15"&gt;Donations&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;If you want to help, but cannot spend the time, please consider to
 donate to Nuitka, and go here:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="/pages/donations.html"&gt;Donate to Nuitka&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-13.html" rel="alternate"/>
     <summary>Nuitka this week #13</summary>
@@ -771,7 +771,7 @@ donate to Nuitka, and go here:&lt;/p&gt;
     <author>
       <name>Batakrishna Sahu</name>
     </author>
-    <content type="html">&lt;div class="section" id="batakrishna-sahu"&gt;
+    <content type="html">&lt;section id="batakrishna-sahu"&gt;
 
 &lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;My name is Batakrishna Sahu and I am from India. I’m very grateful to be
@@ -789,7 +789,7 @@ this summer.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Batakrishna&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/batakrishna-sahu-intro.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
@@ -805,7 +805,7 @@ this summer.&lt;/p&gt;
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="tommy-s-google-summer-of-code-intro"&gt;
+    <content type="html">&lt;section id="tommy-s-google-summer-of-code-intro"&gt;
 
 &lt;p&gt;Hi all! :)&lt;/p&gt;
 &lt;p&gt;My name is Taofeng Li and I go by the nickname of Tommy, github handle
@@ -824,7 +824,7 @@ project abstract can be seen &lt;a class="reference external" href="https://summ
 the full details of my project can be found &lt;a class="reference external" href="https://docs.google.com/document/d/1tdbXyMy5xjVEeWociI_t2f6tlmge6czT0xmfCLyDXYg/edit?usp=sharing"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I am greatly looking forward to the many things that I’ll learn this
 summer!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-intro.html" rel="alternate"/>
     <summary>Hi all! :)</summary>
@@ -843,7 +843,7 @@ summer!&lt;/p&gt;
       <name>Jorj X. McKie</name>
     </author>
     <content type="html">&lt;p&gt;Self-Introduction Jorj McKie&lt;/p&gt;
-&lt;div class="section" id="jorj-x-mckie"&gt;
+&lt;section id="jorj-x-mckie"&gt;
 
 &lt;p&gt;Hello everyone,&lt;/p&gt;
 &lt;p&gt;I am Jorj X. McKie (this is &lt;strong&gt;not&lt;/strong&gt; my real name!) and I am an
@@ -861,7 +861,7 @@ contains many things I am working on.&lt;/p&gt;
 &lt;dd&gt;&lt;img alt="../_images/jorjmckie-harald-lieder.jpg" src="../_images/jorjmckie-harald-lieder.jpg" /&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;div class="section" id="short-biography"&gt;
+&lt;section id="short-biography"&gt;
 &lt;h2&gt;Short Biography&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Born 1951 as Harald Lieder near the city of Leipzig&lt;/p&gt;&lt;/li&gt;
@@ -889,27 +889,27 @@ Frank Herbert) and of course programming (maintainer of
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="images-from-isla-margarita"&gt;
+&lt;/section&gt;
+&lt;section id="images-from-isla-margarita"&gt;
 &lt;h2&gt;Images from Isla Margarita&lt;/h2&gt;
-&lt;div class="section" id="house-frontview-with-guardians"&gt;
+&lt;section id="house-frontview-with-guardians"&gt;
 &lt;h3&gt;House Frontview with Guardians&lt;/h3&gt;
 &lt;img alt="../_images/JMK-house-frontview-with-guardians.jpg" src="../_images/JMK-house-frontview-with-guardians.jpg" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="in-favorite-pizzeria-with-my-wife"&gt;
+&lt;/section&gt;
+&lt;section id="in-favorite-pizzeria-with-my-wife"&gt;
 &lt;h3&gt;In favorite Pizzeria with my Wife&lt;/h3&gt;
 &lt;img alt="../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" src="../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="seaview-from-my-terrace"&gt;
+&lt;/section&gt;
+&lt;section id="seaview-from-my-terrace"&gt;
 &lt;h3&gt;Seaview from my Terrace&lt;/h3&gt;
 &lt;img alt="../_images/JMK-seaview-from-my-terrace.JPG" src="../_images/JMK-seaview-from-my-terrace.JPG" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sunrise-view-from-house"&gt;
+&lt;/section&gt;
+&lt;section id="sunrise-view-from-house"&gt;
 &lt;h3&gt;Sunrise view from House&lt;/h3&gt;
 &lt;img alt="../_images/JMK-sunrise-view-from-house.jpg" src="../_images/JMK-sunrise-view-from-house.jpg" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/jorj-x-mckie.html" rel="alternate"/>
     <summary>Self-Introduction Jorj McKie</summary>
@@ -925,13 +925,13 @@ Frank Herbert) and of course programming (maintainer of
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-6-4"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-6-4"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release contains many bug fixes all across the board. There is also
 new optimization and many organisational improvements.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug Fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;When linking very large programs or packages, with gcc compiler,
@@ -971,8 +971,8 @@ otherwise.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Python3: Proper C identifiers for names that fit into &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;latin-1&lt;/span&gt;&lt;/code&gt;,
 but are not &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ascii&lt;/span&gt;&lt;/code&gt; encodings.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Windows: Catch most common user error of using compiler from one
@@ -986,8 +986,8 @@ only pure distutils.&lt;/p&gt;&lt;/li&gt;
 distutils.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Python3.8: Initial compatibility changes to get basic tests to work.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Nuitka is participating in the GSoC 2019 with 2 students, Batakrishna
@@ -1006,8 +1006,8 @@ the Github organisation features.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added support for Ubuntu Disco, removed support for Ubuntu Artful
 packages.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Windows: Attach data blobs as Windows resource files directly for
@@ -1027,8 +1027,8 @@ exception control flow.&lt;/p&gt;&lt;/li&gt;
 when possible.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Better static analysis for even more type operations.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Fixed many kinds of typos in the code base with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;codespell&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
@@ -1038,8 +1038,8 @@ previously not done.&lt;/p&gt;&lt;/li&gt;
 already exists, instead provide
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.util.FileOperations.copyTree&lt;/span&gt;&lt;/code&gt; and use that exclusively.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tests"&gt;
+&lt;/section&gt;
+&lt;section id="tests"&gt;
 &lt;h2&gt;Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Added new mode of operation to test runners, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;only&lt;/span&gt;&lt;/code&gt; that executes
@@ -1056,8 +1056,8 @@ more robust against variable behavior of distutils and setuptools.&lt;/p&gt;&lt;
 &lt;li&gt;&lt;p&gt;Added standalone test for Pmw.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added standalone test for passlib.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Again this release is a sign of increasing adoption of Nuitka. The GSoC
 2019 is also showing effects, definitely will in the next release.&lt;/p&gt;
@@ -1072,8 +1072,8 @@ cases working is astounding.&lt;/p&gt;
 &lt;p&gt;In upcoming releases, new built-ins will be optimized, and
 specialization of operations will hit more and more code now that the
 infrastructure for it is in place.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-064.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -1090,7 +1090,7 @@ infrastructure for it is in place.&lt;/p&gt;
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="intro"&gt;
+    <content type="html">&lt;section id="intro"&gt;
 
 &lt;p&gt;This post compares the pytest results of urllib3 to its nuitka-built
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.whl&lt;/span&gt;&lt;/code&gt; counterpart.&lt;/p&gt;
@@ -1115,8 +1115,8 @@ similar:&lt;/p&gt;
 &lt;p&gt;The extra passes are suspicious and require more investigation into why
 they happen. To make that easy, we are going to fully automate the
 process and compare outputs with verbose pytest modes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="steps-to-reproduce"&gt;
+&lt;/section&gt;
+&lt;section id="steps-to-reproduce"&gt;
 &lt;h1&gt;Steps to Reproduce&lt;/h1&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;p&gt;Clone urllib3 and nuitka into a new folder&lt;/p&gt;&lt;/li&gt;
@@ -1133,8 +1133,8 @@ be found in the &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 &lt;li&gt;&lt;p&gt;Issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;python&lt;/span&gt; &lt;span class="pre"&gt;-m&lt;/span&gt; &lt;span class="pre"&gt;pytest&lt;/span&gt; &lt;span class="pre"&gt;--disable-warnings&lt;/span&gt;&lt;/code&gt;, this runs the
 nuitka-built wheel pytest for urllib3.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="section" id="uncompile-python"&gt;
+&lt;/section&gt;
+&lt;section id="uncompile-python"&gt;
 &lt;h1&gt;Uncompile Python&lt;/h1&gt;
 &lt;p&gt;urllib3 regular pytest:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python -m pytest --disable-warnings
@@ -1190,8 +1190,8 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
 ====== 3 failed, 836 passed, 456 skipped, 113 warnings in 47.54 seconds =======
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="compiled-with-nuitka"&gt;
+&lt;/section&gt;
+&lt;section id="compiled-with-nuitka"&gt;
 &lt;h1&gt;Compiled with Nuitka&lt;/h1&gt;
 &lt;p&gt;nuitka wheel pytest:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python -m pytest --disable-warnings
@@ -1246,7 +1246,7 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
 ====== 1 failed, 838 passed, 456 skipped, 113 warnings in 47.59 seconds =======
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/urllib3-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of urllib3 to its nuitka-built
@@ -1264,7 +1264,7 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="intro"&gt;
+    <content type="html">&lt;section id="intro"&gt;
 
 &lt;p&gt;This post compares the pytest results of dateutil to its nuitka-built
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.whl&lt;/span&gt;&lt;/code&gt; counterpart.&lt;/p&gt;
@@ -1281,8 +1281,8 @@ pollution.&lt;/p&gt;
 &lt;span class="n"&gt;Nuitka&lt;/span&gt; &lt;span class="n"&gt;wheel&lt;/span&gt; &lt;span class="n"&gt;pytests&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;=============&lt;/span&gt; &lt;span class="mi"&gt;1976&lt;/span&gt; &lt;span class="n"&gt;passed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;76&lt;/span&gt; &lt;span class="n"&gt;skipped&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt; &lt;span class="n"&gt;xfailed&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;7.89&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt; &lt;span class="o"&gt;=============&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="steps-to-reproduce"&gt;
+&lt;/section&gt;
+&lt;section id="steps-to-reproduce"&gt;
 &lt;h1&gt;Steps to Reproduce&lt;/h1&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;p&gt;Clone dateutil and nuitka into a new folder&lt;/p&gt;&lt;/li&gt;
@@ -1299,8 +1299,8 @@ should be found in the &lt;code class="docutils literal notranslate"&gt;&lt;span
 &lt;li&gt;&lt;p&gt;Issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;python&lt;/span&gt; &lt;span class="pre"&gt;-m&lt;/span&gt; &lt;span class="pre"&gt;pytest&lt;/span&gt; &lt;span class="pre"&gt;--disable-warnings&lt;/span&gt;&lt;/code&gt;, this runs the
 nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="section" id="uncompile-python"&gt;
+&lt;/section&gt;
+&lt;section id="uncompile-python"&gt;
 &lt;h1&gt;Uncompile Python&lt;/h1&gt;
 &lt;p&gt;dateutil regular pytest:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;=============================&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt; &lt;span class="n"&gt;starts&lt;/span&gt; &lt;span class="o"&gt;=============================&lt;/span&gt;
@@ -1354,8 +1354,8 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
 &lt;span class="o"&gt;=============&lt;/span&gt; &lt;span class="mi"&gt;1977&lt;/span&gt; &lt;span class="n"&gt;passed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;76&lt;/span&gt; &lt;span class="n"&gt;skipped&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt; &lt;span class="n"&gt;xfailed&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;7.99&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt; &lt;span class="o"&gt;=============&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="compiled-with-nuitka"&gt;
+&lt;/section&gt;
+&lt;section id="compiled-with-nuitka"&gt;
 &lt;h1&gt;Compiled with Nuitka&lt;/h1&gt;
 &lt;p&gt;nuitka wheel pytest:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;=============================&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt; &lt;span class="n"&gt;starts&lt;/span&gt; &lt;span class="o"&gt;=============================&lt;/span&gt;
@@ -1408,7 +1408,7 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
 &lt;span class="o"&gt;=============&lt;/span&gt; &lt;span class="mi"&gt;1976&lt;/span&gt; &lt;span class="n"&gt;passed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;76&lt;/span&gt; &lt;span class="n"&gt;skipped&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt; &lt;span class="n"&gt;xfailed&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;7.89&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt; &lt;span class="o"&gt;=============&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/dateutil-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of dateutil to its nuitka-built
@@ -1426,13 +1426,13 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-6-5"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-6-5"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release contains many bug fixes all across the board. There is also
 new optimization and many organisational improvements.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug Fixes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Python3.4+: Fixed issues with modules that exited with an exception,
@@ -1485,8 +1485,8 @@ to solve this TODO.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Fix, left over bytecode from plugins could crash the plugin loader.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Fix, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pkgutil.iter_packages&lt;/span&gt;&lt;/code&gt; is now working for loaded packages.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Python3.8: Followed some of the changes and works with beta2 as a
@@ -1497,8 +1497,8 @@ Nuitka plugin.&lt;/p&gt;&lt;/li&gt;
 determined through a test run.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added support for including TCL on Linux too.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Added support for the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;any&lt;/span&gt;&lt;/code&gt; built-in. This handles a wide range of
@@ -1512,8 +1512,8 @@ become unnecessary is the mean time.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Packages: Do not export entry points for all included packages, only
 for the main package name it is importable as.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Added support for Visual Studio 2019 as a C compiler backend.&lt;/p&gt;&lt;/li&gt;
@@ -1535,8 +1535,8 @@ our patches.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Changed wordings for optimization to use “lowering” as the only term
 to describe an optimization that simplifies.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Plugins: Major refactoring of Nuitka plugin API.&lt;/p&gt;&lt;/li&gt;
@@ -1549,8 +1549,8 @@ PyLint.&lt;/p&gt;&lt;/li&gt;
 only used in the main program part. This makes C linter hate us much
 less for using a non-existent file.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tests"&gt;
+&lt;/section&gt;
+&lt;section id="tests"&gt;
 &lt;h2&gt;Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Run the tests using Travis on macOS for Python2 too.&lt;/p&gt;&lt;/li&gt;
@@ -1562,8 +1562,8 @@ openSSL usage from local system.&lt;/p&gt;&lt;/li&gt;
 reflected tests as it only exposes &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;marshal&lt;/span&gt;&lt;/code&gt; not being
 deterministic.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;This release is huge again. Main points are compatibility fixes, esp. on
 the coroutine side. These have become apparently very compatible now and
@@ -1576,8 +1576,8 @@ configured IDE out of the box too.&lt;/p&gt;
 &lt;p&gt;In upcoming releases, more built-ins will be optimized, and hopefully
 the specialization of operations will hit more and more code with more
 of the infrastructure getting there.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-065.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -1594,13 +1594,13 @@ of the infrastructure getting there.&lt;/p&gt;
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="intro"&gt;
+    <content type="html">&lt;section id="intro"&gt;
 
 &lt;p&gt;As Google Summer of Code (GSoC) is coming to an end, I am writing this
 blog post as a final summary describing all the work I have done as well
 as my experiences in this program.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary-of-my-work"&gt;
+&lt;/section&gt;
+&lt;section id="summary-of-my-work"&gt;
 &lt;h1&gt;Summary of My Work&lt;/h1&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/314"&gt;#314 run_all.py new special-comment mechanism &amp;amp; Urllib3Using.py&lt;/a&gt;&lt;/p&gt;
@@ -1739,8 +1739,8 @@ improvements, readability improvements, and added documentation.&lt;/p&gt;&lt;/l
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="things-i-learned"&gt;
+&lt;/section&gt;
+&lt;section id="things-i-learned"&gt;
 &lt;h1&gt;Things I Learned&lt;/h1&gt;
 &lt;p&gt;Before GSoC, I was very uncomfortable with working inside a terminal. I
 was unfamiliar with many basic bash commands because I simply did not
@@ -1760,7 +1760,7 @@ believe will help me go very far in my career as a software developer.&lt;/p&gt;
 thankful to my mentor Kay Hayen as well as Google for making this
 amazing program possible.&lt;/p&gt;
 &lt;p&gt;Yours, &lt;a class="reference external" href="https://github.com/tommyli3318"&gt;Tommy&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-summary.html" rel="alternate"/>
     <summary>As Google Summer of Code (GSoC) is coming to an end, I am writing this
@@ -1782,7 +1782,7 @@ as my experiences in this program.</summary>
     <author>
       <name>Batakrishna Sahu</name>
     </author>
-    <content type="html">&lt;div class="section" id="bksahu-s-gsoc-warp-up"&gt;
+    <content type="html">&lt;section id="bksahu-s-gsoc-warp-up"&gt;
 
 &lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;GSoC 2019 has almost come to an end! It’s the time to wrap up this mega
@@ -1791,7 +1791,7 @@ learning experience has undergone a roller-coaster ride and it has not
 only boosted my growth as a developer but also as an individual. Over
 the last 3 months the following are my major contributions to this
 project:&lt;/p&gt;
-&lt;div class="section" id="built-ins-optimizations"&gt;
+&lt;section id="built-ins-optimizations"&gt;
 &lt;h2&gt;Built-ins Optimizations&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;dl&gt;
@@ -1933,8 +1933,8 @@ because unlike &lt;cite&gt;zip&lt;/cite&gt; in Python 2, &lt;cite&gt;zip&lt;/cit
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="test-suite"&gt;
+&lt;/section&gt;
+&lt;section id="test-suite"&gt;
 &lt;h2&gt;Test suite&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;dl&gt;
@@ -1984,15 +1984,15 @@ bytes instead of string.&lt;/p&gt;&lt;/li&gt;
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="documentation"&gt;
+&lt;/section&gt;
+&lt;section id="documentation"&gt;
 &lt;h2&gt;Documentation&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Nuitka git work flow: &lt;a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/485"&gt;PR #485&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And other minor doc fixes are added with their respective pull requests.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-i-learned"&gt;
+&lt;/section&gt;
+&lt;section id="what-i-learned"&gt;
 &lt;h2&gt;What I learned&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Learned the software engineering principles and how to keep my work
@@ -2011,8 +2011,8 @@ professional career in Software engineering.&lt;/p&gt;&lt;/li&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Batakrishna&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/bksahus-gsoc-wrap-up.html" rel="alternate"/>
     <summary>Hello everyone!</summary>

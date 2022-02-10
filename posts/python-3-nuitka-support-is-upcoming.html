@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="python3-support-by-nuitka-is-upcoming">
+              <section id="python3-support-by-nuitka-is-upcoming">
 <h1>Python3 support by Nuitka is upcoming<a class="headerlink" href="#python3-support-by-nuitka-is-upcoming" title="Permalink to this headline"></a></h1>
 <p>This is kind of semi-interesting news for you Python3 lovers. My
 <a class="reference external" href="/pages/overview.html">“Python compiler Nuitka”</a> has been supporting
@@ -146,7 +148,7 @@ on PyPI”</a> too. At the time of
 this writing, there is pre-releases there, but after next release, there
 will only stable releases published.</p>
 <p>My quick take on the Python3 that I saw:</p>
-<div class="section" id="keyword-only-arguments">
+<section id="keyword-only-arguments">
 <h2>Keyword Only Arguments<a class="headerlink" href="#keyword-only-arguments" title="Permalink to this headline"></a></h2>
 <p>Now seriously. I didn’t miss that. And I am going to hate the extra
 effort it causes to implement argument parsing. And when I looked into
@@ -157,8 +159,8 @@ default handling, I was just shocked:</p>
 <p>What would you expect the evaluation order to be for defaults? I raised
 a CPython <a class="reference external" href="http://bugs.python.org/issue16967">“bug report”</a> about it.
 And I am kind of shocked this could be wrong.</p>
-</div>
-<div class="section" id="annotations">
+</section>
+<section id="annotations">
 <h2>Annotations<a class="headerlink" href="#annotations" title="Permalink to this headline"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span> <span class="n">arg1</span> <span class="p">:</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_int</span><span class="p">,</span> <span class="n">arg2</span> <span class="p">:</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_int</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_long</span>
    <span class="k">return</span> <span class="n">arg1</span><span class="o">+</span><span class="n">arg2</span>
@@ -170,41 +172,41 @@ allow this notation. Unfortunately, evaluation order of annotations is
 not that great either. I would expected them to come first, but they
 come last. Coming last, they kind of come too late to accept do anything
 with defaults.</p>
-</div>
-<div class="section" id="unicode-variables">
+</section>
+<section id="unicode-variables">
 <h2>Unicode Variables<a class="headerlink" href="#unicode-variables" title="Permalink to this headline"></a></h2>
 <p>Now great. While it’s one step closer to “you can’t re-enter any
 identifier without copy&amp;paste”, it is also a whole lot more consistent,
 if you come e.g. from German or French and need only a few extra
 letters. And there has to be at least one advantage to making everything
 unicode, right?</p>
-</div>
-<div class="section" id="exception-chaining">
+</section>
+<section id="exception-chaining">
 <h2>Exception Chaining<a class="headerlink" href="#exception-chaining" title="Permalink to this headline"></a></h2>
 <p>Gotta love that. Exception handlers are often subject to bit rot. They
 will themselves contain errors, when they are actually used, hiding the
 important thing that happened. No more. That’s great.</p>
 <p>The exception causes on the other hand, might be useful, but I didn’t
 see them a lot yet. That’s probably because they are too new.</p>
-</div>
-<div class="section" id="starred-assigns">
+</section>
+<section id="starred-assigns">
 <h2>Starred Assigns<a class="headerlink" href="#starred-assigns" title="Permalink to this headline"></a></h2>
 <p>I was wondering already, why that didn’t work before.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">something</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="metaclass-prepare">
+</section>
+<section id="metaclass-prepare">
 <h2>Metaclass __prepare__<a class="headerlink" href="#metaclass-prepare" title="Permalink to this headline"></a></h2>
 <p>That’s great stuff. Wish somebody had thought about meta classes that
 way from the outset.</p>
-</div>
-<div class="section" id="nonlocal">
+</section>
+<section id="nonlocal">
 <h2>nonlocal<a class="headerlink" href="#nonlocal" title="Permalink to this headline"></a></h2>
 <p>Yeah, big stuff. I love it. Also being able to write closure variables
 is great for consistency.</p>
-</div>
-<div class="section" id="conclusion">
+</section>
+<section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline"></a></h2>
 <p>Nothing ground breaking. Nothing that makes me give up on Python2.7 yet,
 but a bunch of surprises. And for Nuitka, this also found bugs and
@@ -221,8 +223,8 @@ a feature for as long as I develop in Python2.6/2.7 language.</p>
 <p>Now if one of you would help out with Python3.3, that would be great. It
 would be about the new dictionary implementation mostly. And maybe
 finding a proper re-formulation for “yield from” too.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

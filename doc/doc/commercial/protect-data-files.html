@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../../../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../../../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../../../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../../../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../../../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../../../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protect Program Constants Data</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/doc/doc/commercial/protect-data-files.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../../../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="protect-program-constants-data">
+<h1>Protect Program Constants Data<a class="headerlink" href="#protect-program-constants-data" title="Permalink to this headline"></a></h1>
+<p>Your program might be using Qt and QML, or data files loaded. With Nuitka Commercial,
+you can product (even before onefile) an executable that contains them and then also
+covers it under the regular <a class="reference external" href="protect-constants-data.html">constants data protection</a>
+automatically.</p>
+<p>Your program uses standard Python mechanisms from <code class="docutils literal notranslate"><span class="pre">pkgutil</span></code>, <code class="docutils literal notranslate"><span class="pre">pkg_resources</span></code>,
+<code class="docutils literal notranslate"><span class="pre">importlib.resources</span></code> or <code class="docutils literal notranslate"><span class="pre">importlib_resources</span></code> and generally similar packages,
+and these load the data as a file or a stream from within the binary without ever
+hitting the disk.</p>
+<p>All of this is happening with the same code base, i.e. you are not making any
+modification (if at all), that is incompatible with Python. Your code will still
+run directly. One thing you do have to change though is to not use <code class="docutils literal notranslate"><span class="pre">open</span></code> with
+paths created from <code class="docutils literal notranslate"><span class="pre">__file__</span></code>, but the above code is more elegant anyway, as
+it does this for you in the normal case, but can easily be hooked by Nuitka.</p>
+<p>This means, e.g. rather than this program</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PySideQmlPolarchartTest</span><span class="o">.</span><span class="n">py</span>
+<span class="n">qmlpolarchart</span><span class="o">/</span>
+    <span class="n">Example</span><span class="o">-</span><span class="n">Icon</span><span class="o">.</span><span class="n">png</span>
+    <span class="n">Example</span><span class="o">-</span><span class="n">Icon</span><span class="o">.</span><span class="n">svg</span>
+    <span class="n">main</span><span class="o">.</span><span class="n">qml</span>
+    <span class="n">View1</span><span class="o">.</span><span class="n">qml</span>
+    <span class="n">View2</span><span class="o">.</span><span class="n">qml</span>
+    <span class="n">View3</span><span class="o">.</span><span class="n">qml</span>
+</pre></div>
+</div>
+<p>you get a file layout just simply like this</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PySideQmlPolarchartTest</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<p>Due to constant data protection, the contents of the files will be inaccessible to
+anything but the program, and this is very much what people want.</p>
+<p>In standard Nuitka, you end up with something like this. And note, that onefile mode
+is merely a self extracting archive, i.e. these files will be on the customer
+disk for inspection:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PySideQmlPolarchartTest</span><span class="o">.</span><span class="n">exe</span>
+<span class="n">qmlpolarchart</span><span class="o">/</span>
+    <span class="n">Example</span><span class="o">-</span><span class="n">Icon</span><span class="o">.</span><span class="n">png</span>
+    <span class="n">Example</span><span class="o">-</span><span class="n">Icon</span><span class="o">.</span><span class="n">svg</span>
+    <span class="n">main</span><span class="o">.</span><span class="n">qml</span>
+    <span class="n">View1</span><span class="o">.</span><span class="n">qml</span>
+    <span class="n">View2</span><span class="o">.</span><span class="n">qml</span>
+    <span class="n">View3</span><span class="o">.</span><span class="n">qml</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For extension modules and DLLs used, this doesn’t affect things. This is about
+merely about data files. This is where onefile comes in and hides these from
+the view and need for deployment, but it cannot replace Nuitka commercial and
+its inclusion of data files inside the main binary.</p>
+</div>
+<p>Go <a class="reference external" href="/doc/commercial.html#protection-vs-reverse-engineering">back to Nuitka commercial</a> overview to
+learn about more features or to subscribe to <a class="reference external" href="/doc/commercial.html#pricing">Nuitka commercial</a>.</p>
+</section>
+
+<div class="section">
+   
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/doc/doc/commercial/protect-data-files.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/doc/doc/commercial/protect-data-files.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/doc/doc/commercial/protect-data-files.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

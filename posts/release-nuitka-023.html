@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,14 +131,14 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-2-3">
+              <section id="nuitka-release-0-2-3">
 <h1>Nuitka Release 0.2.3<a class="headerlink" href="#nuitka-release-0-2-3" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This new release is marking a closing in on feature parity to CPython
 2.6 which is an important mile stone. Once this is reached, a “Nuitka
 0.3.x” series will strive for performance.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Generator functions no longer leak references when started, but not
@@ -144,8 +146,8 @@ finished.</p></li>
 <li><p>Yield can in fact be used as an expression and returns values that
 the generator user <code class="docutils literal notranslate"><span class="pre">send()</span></code> to it.</p></li>
 </ul>
-</div>
-<div class="section" id="reduced-differences-new-features">
+</section>
+<section id="reduced-differences-new-features">
 <h2>Reduced Differences / New Features<a class="headerlink" href="#reduced-differences-new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Generator functions already worked quite fine, but now they have the
@@ -160,8 +162,8 @@ in by <code class="docutils literal notranslate"><span class="pre">send()</span>
 </div>
 </li>
 </ul>
-</div>
-<div class="section" id="tests-work">
+</section>
+<section id="tests-work">
 <h2>Tests Work<a class="headerlink" href="#tests-work" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The “test_contextlib” is now working perfectly due to the generator
@@ -174,8 +176,8 @@ level. This one currently only highlights the failure to support it.</p></li>
 <li><p>Reverted removals of extended slice syntax from some parts of the
 CPython test suite.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The compiled generator types are using the new C++0x type safe enums
@@ -183,8 +185,8 @@ feature.</p></li>
 <li><p>Resolved a circular dependency between <code class="docutils literal notranslate"><span class="pre">TreeBuilding</span></code> and
 <code class="docutils literal notranslate"><span class="pre">TreeTransforming</span></code> modules.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

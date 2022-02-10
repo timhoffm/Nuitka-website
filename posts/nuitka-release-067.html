@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,14 +131,14 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-7">
+              <section id="nuitka-release-0-6-7">
 <h1>Nuitka Release 0.6.7<a class="headerlink" href="#nuitka-release-0-6-7" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release contains bug fixes and improvements to the packaging, for
 the RPM side as well as for Debian, to cover Python3 only systems as
 they are now becoming more common.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Compatibility: The value of <code class="docutils literal notranslate"><span class="pre">__module__</span></code> for extension modules was
@@ -157,8 +159,8 @@ well.</p></li>
 <li><p>Fix, our version number handling could overflow with minor versions
 past 10, so we limited it for now.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added support for Python 3.8, the experimental was already there and
@@ -170,8 +172,8 @@ wheels, e.g. RPM packaging that compiles with Nuitka.</p></li>
 <li><p>Added support for <code class="docutils literal notranslate"><span class="pre">lldb</span></code> the Clang debugger with the <code class="docutils literal notranslate"><span class="pre">--debugger</span></code>
 mode.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Make the file prefix map actually work for gcc and clang, and compile
@@ -185,8 +187,8 @@ will only be slower. Use the fallback to external scons only from the
 Debian packages, since there we consider it forbidden to include
 software as a duplicate.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added recommended plugins for Visual Code, replacing the list in the
@@ -202,15 +204,15 @@ for built-in GUI that was removed.</p></li>
 <li><p>Debian: Bumped the standards version and modernized the packaging,
 solving a few warnings during the build.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Scons: Avoid to add Unix only include paths on Windows.</p></li>
 <li><p>Scons: Have the static source code in a dedicated folder for clarity.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added tests to Github Actions, for the supported Python versions for
@@ -222,8 +224,8 @@ actually need it in case of problems.</p></li>
 <li><p>Comparing module outputs now handles segfaults by running in the
 debugger too.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release adds full support for Python 3.8 finally, which took us a
 while, and it cleans up a lot on the packaging side. There aren’t that
@@ -231,8 +233,8 @@ many important bug fixes, but it’s still nice to this cleaned up.</p>
 <p>We have important actual optimization in the pipeline that will apply
 specialization to target types and for comparison operations. We expect
 to see actual performance improvements in the next release again.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

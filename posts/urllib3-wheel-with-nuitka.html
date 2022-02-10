@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="intro">
+              <section id="intro">
 <h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline"></a></h1>
 <p>This post compares the pytest results of urllib3 to its nuitka-built
 <code class="docutils literal notranslate"><span class="pre">.whl</span></code> counterpart.</p>
@@ -154,8 +156,8 @@ similar:</p>
 <p>The extra passes are suspicious and require more investigation into why
 they happen. To make that easy, we are going to fully automate the
 process and compare outputs with verbose pytest modes.</p>
-</div>
-<div class="section" id="steps-to-reproduce">
+</section>
+<section id="steps-to-reproduce">
 <h1>Steps to Reproduce<a class="headerlink" href="#steps-to-reproduce" title="Permalink to this headline"></a></h1>
 <ol class="arabic simple">
 <li><p>Clone urllib3 and nuitka into a new folder</p></li>
@@ -172,8 +174,8 @@ be found in the <code class="docutils literal notranslate"><span class="pre">dis
 <li><p>Issue <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pytest</span> <span class="pre">--disable-warnings</span></code>, this runs the
 nuitka-built wheel pytest for urllib3.</p></li>
 </ol>
-</div>
-<div class="section" id="uncompile-python">
+</section>
+<section id="uncompile-python">
 <h1>Uncompile Python<a class="headerlink" href="#uncompile-python" title="Permalink to this headline"></a></h1>
 <p>urllib3 regular pytest:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m pytest --disable-warnings
@@ -229,8 +231,8 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
 ====== 3 failed, 836 passed, 456 skipped, 113 warnings in 47.54 seconds =======
 </pre></div>
 </div>
-</div>
-<div class="section" id="compiled-with-nuitka">
+</section>
+<section id="compiled-with-nuitka">
 <h1>Compiled with Nuitka<a class="headerlink" href="#compiled-with-nuitka" title="Permalink to this headline"></a></h1>
 <p>nuitka wheel pytest:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m pytest --disable-warnings
@@ -285,7 +287,7 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
 ====== 1 failed, 838 passed, 456 skipped, 113 warnings in 47.59 seconds =======
 </pre></div>
 </div>
-</div>
+</section>
 
 <div class="section">
     

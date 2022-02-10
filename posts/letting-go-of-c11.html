@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -130,11 +132,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <p>How Nuitka came to use C++11 and then stop it.</p>
-<div class="section" id="letting-go-of-c-11">
+<section id="letting-go-of-c-11">
 <h1>Letting go of C++11<a class="headerlink" href="#letting-go-of-c-11" title="Permalink to this headline"></a></h1>
 <p>This post is about Nuitka the Python compiler started out using C++0x
 which is now C++11, and then chose to stop it.</p>
-<div class="section" id="in-the-beginning">
+<section id="in-the-beginning">
 <h2>In the Beginning<a class="headerlink" href="#in-the-beginning" title="Permalink to this headline"></a></h2>
 <p>Very early on, when I considered how to generate code from the node
 tree, in a way, that mistakes should practically be impossible to make,
@@ -155,8 +157,8 @@ built-in with variable number of parameters e.g. could be implemented
 that way easily.</p>
 <p>Other nice things were <code class="docutils literal notranslate"><span class="pre">enum</span></code> classes, and generally good stuff. It
 was really quick to get Nuitka code generation off the ground this way.</p>
-</div>
-<div class="section" id="reality-strikes">
+</section>
+<section id="reality-strikes">
 <h2>Reality Strikes<a class="headerlink" href="#reality-strikes" title="Permalink to this headline"></a></h2>
 <p>But then, as time went on, I found that the order of evaluation was
 becoming an issue. It became apparent that for more and more things, I
@@ -171,22 +173,22 @@ sites, and then it is already correct.</p>
 came a point, where I had to realize, that each of its uses was more or
 less causing evaluation order bugs. So that most of their uses were
 already removed. And so I basically knew they couldn’t stay that way.</p>
-</div>
-<div class="section" id="other-features">
+</section>
+<section id="other-features">
 <h2>Other Features<a class="headerlink" href="#other-features" title="Permalink to this headline"></a></h2>
 <p>Also, things I initially assumed, e.g. that lambda functions of C++11
 may prove useful, or even “auto”, didn’t turn out to be true. There
 seemingly is a wealth of new features, besides variadic templates that I
 didn’t see how Nuitka would benefit from it at all.</p>
-</div>
-<div class="section" id="new-wishes">
+</section>
+<section id="new-wishes">
 <h2>New Wishes<a class="headerlink" href="#new-wishes" title="Permalink to this headline"></a></h2>
 <p>Then, at Europython, I realized, that Android is still stuck with
 g++-4.4 and as such, that an important target platform will be
 unavailable to me. This platform will become even more important, as I
 intend to buy an device now.</p>
-</div>
-<div class="section" id="biting-it">
+</section>
+<section id="biting-it">
 <h2>Biting it<a class="headerlink" href="#biting-it" title="Permalink to this headline"></a></h2>
 <p>So what I did, was to remove all variadic functions and instead generate
 code for them as necessary. I just need to trace the used argument
@@ -195,8 +197,8 @@ counts, and then provide those, simple enough.</p>
 give up on these a bit.</p>
 <p>This change was probably suited to remove subtle evaluation order
 problems, although I don’t recall seeing them.</p>
-</div>
-<div class="section" id="the-present">
+</section>
+<section id="the-present">
 <h2>The Present<a class="headerlink" href="#the-present" title="Permalink to this headline"></a></h2>
 <p>The current stable release still requires C++11, but the next release
 will work on g++-4.4 and compiles fine with MSVC from Visual Studio
@@ -206,14 +208,14 @@ working yet, but I believe that ought to be solvable.</p>
 that supporting Android will become feasible. I know there is interest
 from App developers, because there, even the relatively unimportant 2x
 speedup, that Nuitka might give for some code, may matter.</p>
-</div>
-<div class="section" id="conclusion">
+</section>
+<section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline"></a></h2>
 <p>So that is a detour, I have taken, expanding the base of Nuitka even
 further. I felt, this was important enough to write down the history
 part of it.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

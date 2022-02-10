@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-4-6">
+              <section id="nuitka-release-0-4-6">
 <h1>Nuitka Release 0.4.6<a class="headerlink" href="#nuitka-release-0-4-6" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -147,7 +149,7 @@ fastest so far. This came mainly from examining the need for comparison
 slots for compiled types.</p>
 <p>And last, but not least, this also expands the base of supported
 platforms, adding Gentoo, and self compiled Python to the mix.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Support Nuitka being installed to a path that contains spaces and
@@ -177,8 +179,8 @@ ones was not executing correctly.</p></li>
 </div>
 </li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Compiled types when used in Python comparison now work. Code like
@@ -198,8 +200,8 @@ works even if the checking code is not compiled with Nuitka.</p>
 already present in PATH.</p></li>
 <li><p>Windows: New options <code class="docutils literal notranslate"><span class="pre">--mingw64</span></code> to force compilation with MinGW.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Rich comparisons (<code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, and the like) are now faster than
@@ -212,8 +214,8 @@ CPython, which gives 1.3% speed boost to CPython.</p></li>
 <li><p>The SSA based analysis is now used to provide variable scopes for
 temporary variables as well as reference count needs.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Replaced “value friend” based optimization code with SSA based
@@ -232,8 +234,8 @@ as it is not really portable at all, use <code class="docutils literal notransla
 <span class="pre">=</span> <span class="pre">False)</span></code> instead.</p></li>
 <li><p>As usual lots of cleanups related to line length issues and PyLint.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added support for Gentoo Linux.</p></li>
@@ -244,8 +246,8 @@ debug enabled.</p></li>
 not going to be used, that is mostly non-Windows, and Linux where it
 is not already present. This makes for cleaner RPM packages.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>While the SSA stuff is not yet bearing performance fruits, it starts to
 carry weight. Taking over the temporary variable handling now also means
@@ -255,8 +257,8 @@ is more traditional code acceleration for rich comparisons, making it
 significant, and the bug fixes make Nuitka more compatible than ever.</p>
 <p>So give this a roll, it’s worth it. And feel free to join the mailing
 list (since closed) or <a class="reference external" href="https://nuitka.net/pages/donations.html">make a donation</a> to support Nuitka.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

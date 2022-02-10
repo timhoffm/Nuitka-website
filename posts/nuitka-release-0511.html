@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-11">
+              <section id="nuitka-release-0-5-11">
 <h1>Nuitka Release 0.5.11<a class="headerlink" href="#nuitka-release-0-5-11" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -137,7 +139,7 @@
 regressions, which got addressed with hot fix releases. But it also had
 a focus on cleaning up open optimization issues that were postponed in
 the last release.</p>
-<div class="section" id="new-features">
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>The filenames of source files as found in the <code class="docutils literal notranslate"><span class="pre">__file__</span></code> attribute
@@ -146,8 +148,8 @@ are now made relative for all modes, not just standalone mode.</p>
 in a deployment.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="bug-fixes">
+</section>
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Local functions that reference themselves were not released. They now
@@ -196,8 +198,8 @@ solved by removing the option.</p></li>
 be a string object, and gave a misleading error message. This check
 must not be done though, <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> can be any type in Python.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Variables that need not be shared, because the uses in closure taking
@@ -263,8 +265,8 @@ lookups to find <code class="docutils literal notranslate"><span class="pre">os.
 cached, speeding up the use of many modules as well.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Nuitka used to have “variable usage profiles” and still used them to
@@ -281,8 +283,8 @@ optimized.</p>
 framework, which will become an interface to Nuitka internals in the
 future.</p></li>
 </ul>
-</div>
-<div class="section" id="testing">
+</section>
+<section id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The use of deep hashing of constants allows us to check if constants
@@ -294,15 +296,15 @@ only on Linux, enhancing reference leak coverage.</p></li>
 cycles involving compiled functions, or usage of <code class="docutils literal notranslate"><span class="pre">__closure__</span></code>
 attribute, were reactivated.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Since Google Code has shutdown, it has been removed from the Nuitka
 git mirrors.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release brings exciting new optimization with the focus on the
 <code class="docutils literal notranslate"><span class="pre">try</span></code> constructs, now being done more optimal. It is also a
@@ -317,8 +319,8 @@ before making more invasive changes.</p>
 variable and shared variable values as well. Already the built-in detect
 is now based on global SSA information, which was an important step
 ahead.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

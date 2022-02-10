@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-4-7">
+              <section id="nuitka-release-0-4-7">
 <h1>Nuitka Release 0.4.7<a class="headerlink" href="#nuitka-release-0-4-7" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release includes important new features, lots of polishing
 cleanups, and some important performance improvements as well.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The RPM packages didn’t build due to missing in-line copy of Scons.
@@ -156,8 +158,8 @@ the one of their parents.</p></li>
 <li><p>For modules that recursed to other modules, an infinite loop could be
 triggered when comparing types with rich comparisons.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>The “standalone” mode allows to compile standalone binaries for
@@ -177,8 +179,8 @@ often imports many useless things that often don’t apply to target
 systems.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Faster frame stack handling for functions without <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code>
@@ -210,8 +212,8 @@ first statement.</p></li>
 <li><p>Module variables are now accessed even faster, the gain for “PyStone”
 is only 0.1% and mostly the result of leaner code.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The “standalone mode” code (formerly known as “portable mode” has
@@ -233,8 +235,8 @@ created binaries) for a more stable output, because dictionary
 constants will not change around. This makes the build results
 possible to cache for <code class="docutils literal notranslate"><span class="pre">ccache</span></code> and Scons as well.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">programs</span></code> tests cases now fail if module or directory
@@ -248,8 +250,8 @@ ineffective flags.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">--execute</span></code> on Windows as well, the issue that prevented it has
 been solved after all.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The generated code uses <code class="docutils literal notranslate"><span class="pre">const_</span></code>, <code class="docutils literal notranslate"><span class="pre">var_</span></code>, <code class="docutils literal notranslate"><span class="pre">par_</span></code> prefixes in
@@ -274,8 +276,8 @@ can be used to distinguish them.</p></li>
 <li><p>Moved main program, function object, set related code generation to
 dedicated modules.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release marks major technological progress with the introduction of
 the much sought standalone mode and performance improvements from
@@ -286,8 +288,8 @@ variables of different kinds was an important step ahead.</p>
 <p>Also very nice is the packaging progress, Nuitka was accepted into Arch
 after being in Debian Testing for a while already. Hope is to see more
 of this kind of integration in the future.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

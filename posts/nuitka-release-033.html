@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-3">
+              <section id="nuitka-release-0-3-3">
 <h1>Nuitka Release 0.3.3<a class="headerlink" href="#nuitka-release-0-3-3" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -141,9 +143,9 @@ ahead though, to extract all of the “doctests” and to do that for both
 versions of the tests.</p>
 <p>This means an even higher level of compatibility has been achieved, then
 there is performance improvements, and ever cleaner structure.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
-<div class="section" id="generators">
+<section id="generators">
 <h3>Generators<a class="headerlink" href="#generators" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>Generator functions tracked references to the common and the instance
@@ -156,8 +158,8 @@ occurred while closing unfinished ones in “del”.</p></li>
 <li><p>Generator functions used the slightly different wordings for some
 error messages.</p></li>
 </ul>
-</div>
-<div class="section" id="function-calls">
+</section>
+<section id="function-calls">
 <h3>Function Calls<a class="headerlink" href="#function-calls" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>Extended call syntax with <code class="docutils literal notranslate"><span class="pre">**</span></code> allows that to use a mapping, and it
@@ -172,8 +174,8 @@ CPython does.</p></li>
 parameter counts. This is slower in the error case, but more
 compatible with CPython.</p></li>
 </ul>
-</div>
-<div class="section" id="classes">
+</section>
+<section id="classes">
 <h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>The “locals()” built-in when used in the class scope (not in a
@@ -182,17 +184,17 @@ resulting class.</p></li>
 <li><p>Name mangling for private identifiers was not always done entirely
 correct.</p></li>
 </ul>
-</div>
-<div class="section" id="others">
+</section>
+<section id="others">
 <h3>Others<a class="headerlink" href="#others" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>Exceptions didn’t always have the correct stack reported.</p></li>
 <li><p>The pickling of some tuples showed that “cPickle” can have
 non-reproducible results, using “pickle” to stream constants now</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="optimization">
+</section>
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Access to instance attributes has become faster by writing specific
@@ -204,8 +206,8 @@ release it.</p></li>
 <li><p>The function call code built argument tuples and dictionaries as
 constants, now that is true for every tuple usage.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The static helper classes, and the prelude code needed have been
@@ -213,15 +215,15 @@ moved to separate C++ files and are now accessed “#include”. This
 makes the code inside C++ files as opposed to a Python string and
 therefore easier to read and or change.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The generator functions and generator expressions have the attribute
 “gi_running” now. These indicate if they are currently running.</p></li>
 </ul>
-</div>
-<div class="section" id="new-tests">
+</section>
+<section id="new-tests">
 <h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The script to extract the “doctests” from the CPython test suite has
@@ -229,8 +231,8 @@ been rewritten entirely and works with more doctests now. Running
 these tests created increased the test coverage a lot.</p></li>
 <li><p>The Python 2.7 test suite has been added.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>One can now run multiple “compare_with_cpython” instances in
@@ -239,8 +241,8 @@ parallel, which enables background test runs.</p></li>
 to point to the directory Nuitka’s C++ includes live in. Of course
 the “create-environment.sh” script generates that for you easily.</p></li>
 </ul>
-</div>
-<div class="section" id="numbers">
+</section>
+<section id="numbers">
 <h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
@@ -253,8 +255,8 @@ the “create-environment.sh” script generates that for you easily.</p></li>
 </pre></div>
 </div>
 <p>This is 80% for 0.3.3, up from 66% before.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

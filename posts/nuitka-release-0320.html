@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -105,6 +106,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
@@ -129,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-20">
+              <section id="nuitka-release-0-3-20">
 <h1>Nuitka Release 0.3.20<a class="headerlink" href="#nuitka-release-0-3-20" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -137,7 +139,7 @@
 of new optimization and preparations for more. And then there is a new
 compiler clang and a new platform supported. macOS X appears to work
 mostly, thanks for the patches from Pete Hunt.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The use of a local variable name as an expression was not covered and
@@ -156,8 +158,8 @@ Python3. Fixed in release 0.3.19.2 already.</p></li>
 <li><p>Parameter values of generator function could cause compilation errors
 when used in the closure of list contractions. Fixed.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added support for disabling the console for Windows binaries. Thanks
@@ -169,8 +171,8 @@ compatible.</p></li>
 via <code class="docutils literal notranslate"><span class="pre">--clang</span></code> option. Currently this option is mainly intended to
 allow testing the “macOS X” support as good as possible under Linux.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Enhanced all optimization that previously worked on “constants” to
@@ -216,8 +218,8 @@ for <code class="docutils literal notranslate"><span class="pre">__name__</span>
 constant” values. These will play a more important role, once value
 propagation makes them more frequent.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Created a “change log” from the previous release announcements. It’s
@@ -229,8 +231,8 @@ converts the ReStructured Text to HTML and adds it to Wordpress as a
 draft posting or updates it, until it’s release time. Simple, sweet
 and elegant.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Split out the <code class="docutils literal notranslate"><span class="pre">nuitka.nodes.Nodes</span></code> module into many topic nodes, so
@@ -321,8 +323,8 @@ the constant value if it’s only read.</p></li>
 giving a place for some defaults.</p></li>
 <li><p>Made the built-in code more reusable.</p></li>
 </ul>
-</div>
-<div class="section" id="new-tests">
+</section>
+<section id="new-tests">
 <h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added some more diagnostic tests about complex assignment and <code class="docutils literal notranslate"><span class="pre">del</span></code>
@@ -332,8 +334,8 @@ on Python3.</p></li>
 <li><p>Added syntax test for duplicate argument name.</p></li>
 <li><p>Added syntax test for global on a function argument name.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>The decorator and building changes, the assignment changes, and the node
 cleanups are all very important progress for the type inference work,
@@ -353,8 +355,8 @@ to touch now.</p>
 <p>There are still remaining steps, but we can foresee that a release may
 be done that finally actually does type inference and becomes the
 effective Python compiler this project is all about.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     
