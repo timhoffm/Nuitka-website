@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged conference</title>
-  <updated>2022-02-10T17:09:33.960894+00:00</updated>
+  <updated>2022-02-11T13:13:42.902770+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/conference/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <entry>
-    <id>https://nuitka.net/posts/pycon-de-2011---my-report.html</id>
+    <id>https://nuitka.net/posts/pycon-de-2011-my-report.html</id>
     <title>PyCON DE 2011 - My Report</title>
     <updated>2011-10-08T21:24:00+00:00</updated>
     <author>
@@ -192,7 +192,7 @@ early booked holiday again.&lt;/p&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://nuitka.net/posts/pycon-de-2011---my-report.html" rel="alternate"/>
+    <link href="https://nuitka.net/posts/pycon-de-2011-my-report.html" rel="alternate"/>
     <summary>The PyCON DE 2011 is just over, sprints are still happening over the
 weekend, but my wife wouldn’t allow me to stay away for that long, so
 it’s not for me this time. Maybe next time.</summary>
@@ -297,7 +297,7 @@ and it would detract me away from it.&lt;/p&gt;
 &lt;section id="gains"&gt;
 &lt;h2&gt;Gains&lt;/h2&gt;
 &lt;p&gt;So Nuitka got a lot more exposure. And one guy watching the talk even
-created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.png"&gt;nice logo&lt;/a&gt; for
+created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.svg"&gt;nice logo&lt;/a&gt; for
 it. I will make it a separate announcement though, and the next release
 is going to use it.&lt;/p&gt;
 &lt;p&gt;And in the aftermath, there were much bug useful reports. And new ideas.

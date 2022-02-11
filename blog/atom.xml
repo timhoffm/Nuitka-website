@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog</title>
-  <updated>2022-02-10T17:09:24.680055+00:00</updated>
+  <updated>2022-02-11T13:13:33.522542+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -3547,7 +3547,7 @@ may not be all that perfect yet.&lt;/p&gt;
     <published>2011-10-01T08:37:00+00:00</published>
   </entry>
   <entry>
-    <id>https://nuitka.net/posts/pycon-de-2011---my-report.html</id>
+    <id>https://nuitka.net/posts/pycon-de-2011-my-report.html</id>
     <title>PyCON DE 2011 - My Report</title>
     <updated>2011-10-08T21:24:00+00:00</updated>
     <author>
@@ -3732,7 +3732,7 @@ early booked holiday again.&lt;/p&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://nuitka.net/posts/pycon-de-2011---my-report.html" rel="alternate"/>
+    <link href="https://nuitka.net/posts/pycon-de-2011-my-report.html" rel="alternate"/>
     <summary>The PyCON DE 2011 is just over, sprints are still happening over the
 weekend, but my wife wouldn’t allow me to stay away for that long, so
 it’s not for me this time. Maybe next time.</summary>
@@ -9278,7 +9278,7 @@ and it would detract me away from it.&lt;/p&gt;
 &lt;section id="gains"&gt;
 &lt;h2&gt;Gains&lt;/h2&gt;
 &lt;p&gt;So Nuitka got a lot more exposure. And one guy watching the talk even
-created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.png"&gt;nice logo&lt;/a&gt; for
+created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.svg"&gt;nice logo&lt;/a&gt; for
 it. I will make it a separate announcement though, and the next release
 is going to use it.&lt;/p&gt;
 &lt;p&gt;And in the aftermath, there were much bug useful reports. And new ideas.
@@ -9403,7 +9403,7 @@ It still remains a mess.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;LICENSE.txt&lt;/span&gt;&lt;/code&gt; file with Apache License 2.0 text to make it
 more immediately obvious which license Nuitka is under.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added section about Nuitka license to the &lt;a class="reference external" href="https://nuitka.net/doc/user-manual.html#license"&gt;User Manual&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Added &lt;a class="reference external" href="https://github.com/Nuitka/Nuitka/blob/develop/doc/images/Nuitka-Logo-Symbol.png"&gt;Nuitka Logo&lt;/a&gt;
+&lt;li&gt;&lt;p&gt;Added &lt;a class="reference external" href="https://github.com/Nuitka/Nuitka/blob/develop/doc/Logo/Nuitka-Logo-Symbol.svg"&gt;Nuitka Logo&lt;/a&gt;
 to the distribution.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Use Nuitka Logo as the bitmap in the Windows installer.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Use Nuitka Logo in the documentation (&lt;a class="reference external" href="https://nuitka.net/doc/user-manual.html"&gt;User Manual&lt;/a&gt; and &lt;a class="reference external" href="https://nuitka.net/doc/developer-manual.html"&gt;Developer Manual&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt;

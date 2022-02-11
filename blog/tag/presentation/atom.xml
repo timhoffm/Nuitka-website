@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged presentation</title>
-  <updated>2022-02-10T17:09:34.149208+00:00</updated>
+  <updated>2022-02-11T13:13:43.095518+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/presentation/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -138,7 +138,7 @@ and it would detract me away from it.&lt;/p&gt;
 &lt;section id="gains"&gt;
 &lt;h2&gt;Gains&lt;/h2&gt;
 &lt;p&gt;So Nuitka got a lot more exposure. And one guy watching the talk even
-created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.png"&gt;nice logo&lt;/a&gt; for
+created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.svg"&gt;nice logo&lt;/a&gt; for
 it. I will make it a separate announcement though, and the next release
 is going to use it.&lt;/p&gt;
 &lt;p&gt;And in the aftermath, there were much bug useful reports. And new ideas.
