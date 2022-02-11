@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Summer of Code 2019</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/pages/gsoc2019.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Donations" href="donations.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donations.html">Donations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Google Summer of Code 2019</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about-nuitka">About Nuitka</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-we-do">What we do</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-is-it-interesting">Why is it interesting?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-uses-it">Who uses it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-languages-is-it-written-in">What languages is it written in?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-is-it-going-to-change-the-world">How is it going to change the world?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contacting-nuitka">Contacting Nuitka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mentors">Mentors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ideas">Ideas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nuitka-support-for-pypi-top-50">1. Nuitka support for PyPI top 50</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nuitka-one-file-standalone-option">2. Nuitka one file standalone option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nuitka-benchmarks">3. Nuitka benchmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nuitka-all-built-ins">4. Nuitka all built-ins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nuitka-macos-ci">5. Nuitka macOS CI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#timeline">Timeline</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#google-summer-of-code-2019" id="id1">Google Summer of Code 2019</a></p>
+<ul>
+<li><p><a class="reference internal" href="#about-nuitka" id="id2">About Nuitka</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-we-do" id="id3">What we do</a></p></li>
+<li><p><a class="reference internal" href="#why-is-it-interesting" id="id4">Why is it interesting?</a></p></li>
+<li><p><a class="reference internal" href="#who-uses-it" id="id5">Who uses it?</a></p></li>
+<li><p><a class="reference internal" href="#what-languages-is-it-written-in" id="id6">What languages is it written in?</a></p></li>
+<li><p><a class="reference internal" href="#how-is-it-going-to-change-the-world" id="id7">How is it going to change the world?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#contacting-nuitka" id="id8">Contacting Nuitka</a></p></li>
+<li><p><a class="reference internal" href="#getting-started" id="id9">Getting Started</a></p></li>
+<li><p><a class="reference internal" href="#mentors" id="id10">Mentors</a></p></li>
+<li><p><a class="reference internal" href="#ideas" id="id11">Ideas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#nuitka-support-for-pypi-top-50" id="id12">1. Nuitka support for PyPI top 50</a></p></li>
+<li><p><a class="reference internal" href="#nuitka-one-file-standalone-option" id="id13">2. Nuitka one file standalone option</a></p></li>
+<li><p><a class="reference internal" href="#nuitka-benchmarks" id="id14">3. Nuitka benchmarks</a></p></li>
+<li><p><a class="reference internal" href="#nuitka-all-built-ins" id="id15">4. Nuitka all built-ins</a></p></li>
+<li><p><a class="reference internal" href="#nuitka-macos-ci" id="id16">5. Nuitka macOS CI</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#timeline" id="id17">Timeline</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="google-summer-of-code-2019">
+<h1><a class="toc-backref" href="#id1">Google Summer of Code 2019</a><a class="headerlink" href="#google-summer-of-code-2019" title="Permalink to this headline"></a></h1>
+<p>Nuitka team is happy to see your interest in helping out by applying for
+<a class="reference external" href="https://summerofcode.withgoogle.com/">Google Summer of Code 2019</a>
+and helping develop it.</p>
+<p>This is the first time Nuitka project participates, and we are excited
+to be joined by the students in this. We are experienced coders and have
+mentored during day jobs. And definitely we look forward to having fun
+with this.</p>
+<div class="section" id="about-nuitka">
+<h2><a class="toc-backref" href="#id2">About Nuitka</a><a class="headerlink" href="#about-nuitka" title="Permalink to this headline"></a></h2>
+<p>Nuitka is a project to write a Python compiler in Python. Unlike PyPy,
+it is about static compilation, and aims to be less complex, but fully
+compatible with gradual degradation of performance, up to C level.</p>
+<p>See our <a class="reference external" href="/pages/overview.html">introduction</a> for a full summary and
+consider reading the <a class="reference external" href="/doc/user-manual.html">User Manual</a> and the
+<a class="reference external" href="/doc/developer-manual.html">Developer Manual</a> for further
+clarification.</p>
+<div class="section" id="what-we-do">
+<h3><a class="toc-backref" href="#id3">What we do</a><a class="headerlink" href="#what-we-do" title="Permalink to this headline"></a></h3>
+<p>The software created is a compiler that is a drop-in replacement for
+CPython and derivatives like Anaconda.</p>
+<p>It aims at accelerating Python closer to C level while maintaining the
+full compatibility, while also delivering an option for deployment of
+applications in a standalone fashion.</p>
+</div>
+<div class="section" id="why-is-it-interesting">
+<h3><a class="toc-backref" href="#id4">Why is it interesting?</a><a class="headerlink" href="#why-is-it-interesting" title="Permalink to this headline"></a></h3>
+<p>Python is used in a lot of places, but when it comes to performance,
+other languages are used, have to be used. Nuitka aims at changing it.
+Making Python even more of a choice for high performance computing will
+make us famous, rich, or loved. Maybe even all of that.</p>
+</div>
+<div class="section" id="who-uses-it">
+<h3><a class="toc-backref" href="#id5">Who uses it?</a><a class="headerlink" href="#who-uses-it" title="Permalink to this headline"></a></h3>
+<p>Nuitka already has a lot of users. Many of these are most interested in
+the packaging side, but also some care about even tiny performance
+improvements, like the roughly 2x-3x speed up achieved in most cases.</p>
+</div>
+<div class="section" id="what-languages-is-it-written-in">
+<h3><a class="toc-backref" href="#id6">What languages is it written in?</a><a class="headerlink" href="#what-languages-is-it-written-in" title="Permalink to this headline"></a></h3>
+<p>Nuitka is written in Python. It has a C run time, that for some ideas
+you would have to touch, for some you absolutely do not. There is a lot
+to be done in pure Python, esp. static optimization.</p>
+</div>
+<div class="section" id="how-is-it-going-to-change-the-world">
+<h3><a class="toc-backref" href="#id7">How is it going to change the world?</a><a class="headerlink" href="#how-is-it-going-to-change-the-world" title="Permalink to this headline"></a></h3>
+<p>Being able to write C speed code in a language as simple as Python. What
+else to say. This is taking Python where it currently cannot be.</p>
+</div>
+</div>
+<div class="section" id="contacting-nuitka">
+<h2><a class="toc-backref" href="#id8">Contacting Nuitka</a><a class="headerlink" href="#contacting-nuitka" title="Permalink to this headline"></a></h2>
+<p>For the purpose of GSoC the Nuitka development mailing list (since
+closed) can be used, as well as private email. We will be reachable via
+Hangout/Duo calls on a regular basis.</p>
+<p>We will be able to accommodate all time zones somehow.</p>
+</div>
+<div class="section" id="getting-started">
+<h2><a class="toc-backref" href="#id9">Getting Started</a><a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
+<p>Nuitka setup is trivial and explained in the <a class="reference external" href="/doc/user-manual.html">User Manual</a>. Using Anaconda Python on Windows, or a normal
+Linux system, and you are good to go with a git clone of Nuitka in a
+minute. See <a class="reference external" href="/pages/download.html">Download page</a> how to do that.</p>
+<p>Bug fixes and features are expected to be done via PRs on Github. We can
+guide you through that, it’s easy. We are not very formal, but helpful.</p>
+<p>Remember, Nuitka must be the title of your application or else Google
+will not know what it is about.</p>
+</div>
+<div class="section" id="mentors">
+<h2><a class="toc-backref" href="#id10">Mentors</a><a class="headerlink" href="#mentors" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Kay Hayen &lt;<a class="reference external" href="mailto:kay&#46;hayen&#37;&#52;&#48;gmail&#46;com">kay<span>&#46;</span>hayen<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;, creator of Nuitka</p></li>
+<li><p>Kamran Ghanaat &lt;<a class="reference external" href="mailto:kamran&#46;ghanaat&#37;&#52;&#48;uni-oldenburg&#46;de">kamran<span>&#46;</span>ghanaat<span>&#64;</span>uni-oldenburg<span>&#46;</span>de</a>&gt;, seasoned all around
+user</p></li>
+<li><p>Jorj X. McKie &lt;<a class="reference external" href="mailto:jorj&#46;x&#46;mckie&#37;&#52;&#48;outlook&#46;de">jorj<span>&#46;</span>x<span>&#46;</span>mckie<span>&#64;</span>outlook<span>&#46;</span>de</a>&gt;, contributor and creator of
+Nuitka-Utilities repo.</p></li>
+<li><p>Vaibhav Tulsyan &lt;<a class="reference external" href="mailto:vstulsyan&#37;&#52;&#48;gmail&#46;com">vstulsyan<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;, expert mentor and Pythonista</p></li>
+</ul>
+</div>
+<div class="section" id="ideas">
+<h2><a class="toc-backref" href="#id11">Ideas</a><a class="headerlink" href="#ideas" title="Permalink to this headline"></a></h2>
+<div class="section" id="nuitka-support-for-pypi-top-50">
+<h3><a class="toc-backref" href="#id12">1. Nuitka support for PyPI top 50</a><a class="headerlink" href="#nuitka-support-for-pypi-top-50" title="Permalink to this headline"></a></h3>
+<p>Project description: Nuitka works with most software. The aim of this
+project is to make sure it’s true for the top 50 packages on PyPI, by
+compiling and using their example codes.</p>
+<p>So, first of all, we need to define what we mean by top 50 PyPI
+packages. For Python downloading the packages via pip is very
+widespread. So the first task would be to look at the top 100 and
+identify 50 packages that are even relevant to Nuitka. There is a list
+of <a class="reference external" href="https://hugovk.github.io/top-pypi-packages/">Top 100 PyPI</a>.</p>
+<p>Of course pip itself, leading the list, we will skip that, nobody needs
+that compiled or uses it as a library in their software. But <cite>urllib3</cite>
+is currently top 2, and a very important piece of software that people
+rely on, so breaking it in Nuitka compilation would be bad.</p>
+<p>What the student would be expected to do, is to go and read its
+documentation in search for a tutorial, small examples, that make it
+work. Distill a minimal test out of that and add it to the existing pool
+of tests in <a class="reference external" href="https://github.com/Nuitka/Nuitka/tree/develop/tests/standalone">tests/standalone</a> say
+as <cite>tests/standalone/Urllib3Using.py</cite> and get it to work in standalone
+mode, using the Nuitka argument <code class="docutils literal notranslate"><span class="pre">--standalone</span></code>.</p>
+<p>Then, if possible and easy enough, the tests should be made to work. For
+hard cases, where the tests are difficult to get to work, we can skip
+them. For the widespread <code class="docutils literal notranslate"><span class="pre">py.test</span></code> and <code class="docutils literal notranslate"><span class="pre">nose2</span></code> there is a very good
+chance to get them working against a compiled package. For that you
+would be using the Nuitka argument <code class="docutils literal notranslate"><span class="pre">--package</span></code>, throw in magic
+environment variables if necessary (this secret will be revealed, eh
+documented in the course of our work), if the tests live below the
+package name space, say urllib3.tests and then run the tests.</p>
+<p>Looking at the test results, which hopefully pass and fail equally well
+(pro tip, never assume a released software passes all the tests when not
+compiled in your environment or any), you then try to identify the
+issue, or report it as a Nuitka issue, or sometimes as an issue of the
+software we are testing.</p>
+<p>When those work, we should try and turn this into a re-usable test as
+well, so we can apply them in an automated fashion.</p>
+<p>Then on to next package on the list. The main benefit to the student
+will be to get to know the 50 most important software packages of Python
+on at least a cursory level. Something the mentors won’t even do. And
+that will teach you a lot and the mentors too. And it will prevent
+people using Nuitka from then encountering things that our testing will
+then find before our releases.</p>
+<p>In a first stage, you would identify and report the issues to the bug
+tracker, in a second stage develop tools that help to narrow down
+issues, e.g. what extension module fails to load precisely, even with a
+segfault happening, and put them to use and try to fix a few of the
+simpler issues.</p>
+<p>Setting up these as automated tests would be the ultimate goal, so we
+can follow these top 50 packages with Nuitka over time and make sure
+they continue to work. We can definitely help with that part though, the
+student may or may not have the ability to do that part himself, would
+be OK.</p>
+<p>In the past it has happened e.g. that Jinja2 was breaking for Python
+3.7, and it would be cool to discover this immediately.</p>
+<p>Skills: Python programming, pip installation, virtualenv. Also need a
+Linux and/or Windows installs of Python, one platform is good, both
+would be great. Ideally learn about <code class="docutils literal notranslate"><span class="pre">pipenv</span></code> and apply it for defining
+environments to test in.</p>
+<p>Main platform for this would be the <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/229">Github issue</a> and feel to ask
+questions and clarifications there.</p>
+<p>Difficulty level: <em>Easy</em></p>
+<p>Potential mentors: Vaibhav Tulsyan, Kay Hayen, Kamran Ghanaat, Jorj X.
+McKie</p>
+</div>
+<div class="section" id="nuitka-one-file-standalone-option">
+<h3><a class="toc-backref" href="#id13">2. Nuitka one file standalone option</a><a class="headerlink" href="#nuitka-one-file-standalone-option" title="Permalink to this headline"></a></h3>
+<p>Project description: Nuitka has a mode meant for distribution to another
+system that puts everything needed in a single folder with a <code class="docutils literal notranslate"><span class="pre">.dist</span></code>
+suffix. This folder is then essentially the distribution.</p>
+<p>One complaint often raised about that solution is that it’s a folder
+rather than a single file, for alternative packaging methods, e.g.
+<code class="docutils literal notranslate"><span class="pre">py2exe</span></code> and <code class="docutils literal notranslate"><span class="pre">pyinstaller</span></code>, these do actually exist, and this
+project would be about integrating with that.</p>
+<p>In a first stage, the student would identify the code of these tools
+that is doing it subsequently and try to port it to Nuitka for one or
+more platforms.</p>
+<p>The main job here to analyse the competing projects code and to transfer
+the ability to Nuitka.</p>
+<p>Skills: Python programming, having Linux and/or Windows installs of
+Python, both would be great. Likely some C knowledge may be required,
+but that is uncertain.</p>
+<p>Main platform for this would be the <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/230">Github issue</a> and feel to ask
+questions and clarifications there.</p>
+<p>Difficulty level: <em>Easy</em></p>
+<p>Potential mentors: Jorj X. McKie, Kay Hayen, Kamran Ghanaat</p>
+</div>
+<div class="section" id="nuitka-benchmarks">
+<h3><a class="toc-backref" href="#id14">3. Nuitka benchmarks</a><a class="headerlink" href="#nuitka-benchmarks" title="Permalink to this headline"></a></h3>
+<p>Project description: Nuitka has too little in the way of measuring the
+actual performance gains one has. You would change that.</p>
+<p>In a first stage, you would enhance the existing <a class="reference external" href="https://speedcenter.nuitka.net">speedcenter</a> to provide a more complete set of
+micro-benchmarks, for the different levels of optimization, with more or
+less type knowledge. You would then as a second step add a history of
+commits in some form of graphs that extend over a longer perioud of
+time, and automatically identify changes that e.g. produce equivalent C
+code.</p>
+<p>As Nuitka is both about high level compile time optimization as well as
+low level runtime optimization, your task would be to enhance coverage
+and to make the information used to input decision making for Nuitka
+optimization more readable.</p>
+<p>But also users should get a better grasp of what can be expected to be
+accelerated and what not, and by how much. The student will be
+relatively free in inventing ways to present this information.</p>
+<p>Skills: Python programming, Linux installs of Python, C tooling would be
+nice, but can be mentored.</p>
+<p>Main platform for this would be the <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/231">Github issue</a> and feel to ask
+questions and clarifications there.</p>
+<p>Difficulty level: <em>Intermediate</em></p>
+<p>Potential mentors: Kay Hayen, Vaibhav Tulsyan, Kamran Ghanaat, Jorj X.
+McKie</p>
+</div>
+<div class="section" id="nuitka-all-built-ins">
+<h3><a class="toc-backref" href="#id15">4. Nuitka all built-ins</a><a class="headerlink" href="#nuitka-all-built-ins" title="Permalink to this headline"></a></h3>
+<p>Project description: Nuitka has support for many built-ins, e.g. <code class="docutils literal notranslate"><span class="pre">len</span></code>
+already, which means dedicated C code, compile time evaluation, type
+shapes produced (in this case an <code class="docutils literal notranslate"><span class="pre">int</span></code>), but there are some notable
+exceptions, e.g. <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> where we know types too, that are still
+missing, but definitely can have high performance impact on some loops.
+Not having that means that <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> using loops are losing out on
+many optimization opportunities.</p>
+<p>The students task would be to imitate existing built-in codes to achieve
+a complete support for ultimately all C built-ins. The first step would
+be to identify which ones are missing (by means of a warning added),
+then to find out in test runs of the test suites, which ones are warned
+about, and to resolve as many of those as possible. It is assumed that
+achieving this for all built-ins can be done with your help.</p>
+<p>This would be great getting your feet wet with optimization in Nuitka
+and one that has actual impact, as well as seeing many corner cases of
+built-ins in Python that will the student will become knowledgable of.</p>
+<p>Further reading:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/blob/cb0e0beb72041adeab1065306d5413a6bd868611/nuitka/nodes/BuiltinLenNodes.py#L52">Nuitka len node code</a></p></li>
+<li><p>Runtime C code example:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">BUILTIN_LEN</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">CHECK_OBJECT</span><span class="p">(</span><span class="n">value</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">Py_ssize_t</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyObject_Size</span><span class="p">(</span><span class="n">value</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">unlikely</span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ERROR_OCCURRED</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">PyInt_FromSsize_t</span><span class="p">(</span><span class="n">res</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</li>
+<li><p>Many more links and examples in the Github issue below.</p></li>
+</ul>
+<p>Skills: Python and C programming, platform wouldn’t matter</p>
+<p>Main platform for this would be the <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/232">Github issue</a> and feel to ask
+questions and clarifications there.</p>
+<p>Difficulty level: <em>Intermediate</em></p>
+<p>Potential mentors: Kay Hayen, Vaibhav Tulsyan, Kamran Ghanaat, Jorj X.
+McKie</p>
+</div>
+<div class="section" id="nuitka-macos-ci">
+<h3><a class="toc-backref" href="#id16">5. Nuitka macOS CI</a><a class="headerlink" href="#nuitka-macos-ci" title="Permalink to this headline"></a></h3>
+<p>Project description: Nuitka has currently no CI for macOS, which means
+it can be broken in any release.</p>
+<p>Your task would be to enhance the Travis configuration to introduce that
+the tests are run on macOS too. Ideally you would also manage to get
+Anaconda on that platform used, but that is not expected.</p>
+<p>Your mentors will not be able to help with macOS specifics. Nuitka is
+known to work on the platform, but Travis might expose differences that
+need some addressing.</p>
+<p>Main platform for this would be the <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/233">Github issue</a> and feel to ask
+questions and clarifications there.</p>
+<p>Skills: Travis, have macOS platform, XCode tooling</p>
+<p>Difficulty level: <em>Hard</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This idea has been retracted due to lack of interest from students
+and due to higher than expected interest in ideas that are more
+valuable.</p>
+</div>
+</div>
+</div>
+<div class="section" id="timeline">
+<h2><a class="toc-backref" href="#id17">Timeline</a><a class="headerlink" href="#timeline" title="Permalink to this headline"></a></h2>
+<p>This is time line as relevant for the students:</p>
+<ul class="simple">
+<li><p>February 26 - organizations announced (PSF is going to be part of it)</p></li>
+<li><p>Up to March 20 students discuss applications with mentoring
+organizations</p></li>
+<li><p>March 25 - April 9th Student application period</p></li>
+<li><p>May 6 Accepted student proposals announced</p></li>
+<li><p>May 6 - May 27 community bonding</p></li>
+<li><p>May 27 - Aug 26 coding</p></li>
+<li><p>August September 3 results announced</p></li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+   
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/pages/gsoc2019.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/pages/gsoc2019.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/pages/gsoc2019.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

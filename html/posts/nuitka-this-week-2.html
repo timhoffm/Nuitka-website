@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka this week #2</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-2.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <div class="section" id="nuitka-this-week-2">
+<h1><a class="toc-backref" href="#id1">Nuitka this week #2</a><a class="headerlink" href="#nuitka-this-week-2" title="Permalink to this headline"></a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#nuitka-this-week-2" id="id1">Nuitka this week #2</a></p>
+<ul>
+<li><p><a class="reference internal" href="#new-series-rationale" id="id2">New Series Rationale</a></p></li>
+<li><p><a class="reference internal" href="#python-3-7" id="id3">Python 3.7</a></p></li>
+<li><p><a class="reference internal" href="#msi-3-7-files-for-nuitka" id="id4">MSI 3.7 files for Nuitka</a></p></li>
+<li><p><a class="reference internal" href="#planned-mode" id="id5">Planned Mode</a></p></li>
+<li><p><a class="reference internal" href="#goto-generators" id="id6">Goto Generators</a></p></li>
+<li><p><a class="reference internal" href="#python3-enumerators" id="id7">Python3 Enumerators</a></p></li>
+<li><p><a class="reference internal" href="#hotfixes" id="id8">Hotfixes</a></p></li>
+<li><p><a class="reference internal" href="#plans" id="id9">Plans</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="new-series-rationale">
+<h2><a class="toc-backref" href="#id2">New Series Rationale</a><a class="headerlink" href="#new-series-rationale" title="Permalink to this headline"></a></h2>
+<p>As discussed last week in <a class="reference external" href="./nuitka-this-week-1.html">TWN #1</a> this is
+a new series that I am using to highlight things that are going on,
+newly found issues, hotfixes, all the things Nuitka.</p>
+</div>
+<div class="section" id="python-3-7">
+<h2><a class="toc-backref" href="#id3">Python 3.7</a><a class="headerlink" href="#python-3-7" title="Permalink to this headline"></a></h2>
+<p>I made the first release with official 3.7 support, huge milestone in
+terms of catching up. Generic classes posed a few puzzles, and need more
+refinements for error handling, but good code works now.</p>
+<p>The class creation got a bit more complex, yet again, which will make it
+even hard to know the exact base classes to be used. But eventually we
+will manage to overcome this and statically optimize that.</p>
+</div>
+<div class="section" id="msi-3-7-files-for-nuitka">
+<h2><a class="toc-backref" href="#id4">MSI 3.7 files for Nuitka</a><a class="headerlink" href="#msi-3-7-files-for-nuitka" title="Permalink to this headline"></a></h2>
+<p>Building the MSI files for Nuitka ran into a 3.7.0 regression of CPython
+failing to build them, that I reported and seems to be valid bug of
+theirs.</p>
+<p>So they will be missing for some longer time. Actually I wasn’t so sure
+if they are all that useful, or working as expected for the runners, but
+with the <code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">nuitka</span></code> mode of execution, that ought to be a non-issue.
+so it would be nice to keep them for those who use them for deployment
+internally.</p>
+</div>
+<div class="section" id="planned-mode">
+<h2><a class="toc-backref" href="#id5">Planned Mode</a><a class="headerlink" href="#planned-mode" title="Permalink to this headline"></a></h2>
+<p>I have a change here. This is going to be a draft post until I publish
+it, so I might the link, or mention it on the list, but I do not think I
+will wait for feedback, where there is not going to be all that much.</p>
+<p>So I am shooting this off the web site.</p>
+</div>
+<div class="section" id="goto-generators">
+<h2><a class="toc-backref" href="#id6">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this headline"></a></h2>
+<p>This is an exciting field of work, that I have been busy with this week.
+I will briefly describe the issue at hand.</p>
+<p>So generators in Python are more generally called coroutines in other
+places, and basically that is code shaking hands, executing resuming in
+one, handing back a piece of data back and forth.</p>
+<p>In Python, the way of doing this is <code class="docutils literal notranslate"><span class="pre">yield</span></code> and more recently <code class="docutils literal notranslate"><span class="pre">yield</span>
+<span class="pre">from</span></code> as a convienant way for of doing it in a loop in Python3. I still
+recall the days when that was a statement. Then communication was one
+way only. Actually when I was still privately doing Nuitka based on then
+Python 2.5 and was then puzzled for Python 2.6, when I learned in Nuitka
+about it becoming an expression.</p>
+<p>The way this is implemented in Python, is that execution of a frame is
+simply suspended, and another frame stack bytecode is activated. This
+switching is of course very fast potentially, the state is already fully
+preserved on the stack of the virtual machine, which is owned by the
+frame. For Nuitka, when it still was C++, it wasn’t going to be possible
+to interrupt execution without preserving the stack. So what I did was
+very similar, and I started to use <code class="docutils literal notranslate"><span class="pre">makecontext/setcontext</span></code> to
+implement what I call fibers.</p>
+<p>Basically that is C level stack switching, but with a huge issue. Python
+does not grow stacks, but can need a lot of stack space below. Therefore
+1MB or even 2MB per generator was allocated, to be able to make deep
+function calls if needed.</p>
+<p>So using a lot of generators on 32 bits could easily hit a 2GB limit.
+And now with Python3.5 coroutines people use more and more of them, and
+hit memory issues.</p>
+<p>So, goto generators, now that C is possible, are an entirely new
+solution. With it, Nuitka will use one stack only. Generator code will
+become re-entrant, store values between entries on the heap, and
+continue execution at goto destinations dispatched by a switch according
+to last exit of the generator.</p>
+<p>So I am now making changes to cleanup the way variable declarations and
+accesses for the C variables are being made. More on that next week
+though. For now I am very exited about the many cleanups that stem from
+it. The code generation used to have many special bells and whistles,
+and they were generalized into one thing now, making for cleaner and
+easier to understand Nuitka code.</p>
+</div>
+<div class="section" id="python3-enumerators">
+<h2><a class="toc-backref" href="#id7">Python3 Enumerators</a><a class="headerlink" href="#python3-enumerators" title="Permalink to this headline"></a></h2>
+<p>On interesting thing, is that an incompatibility related to <code class="docutils literal notranslate"><span class="pre">__new__</span></code>
+will go away now.</p>
+<p>The automatic <code class="docutils literal notranslate"><span class="pre">staticmethod</span></code> that we had to hack into it, because the
+Python core will do it for uncompiled functions only, had to be done
+while declaring the class. So it was visible and causing issues with at
+least the Python enum module, which wants to call your <code class="docutils literal notranslate"><span class="pre">__new__</span></code>
+manually. Because why would it not?!</p>
+<p>But turns out, for Python3 the <code class="docutils literal notranslate"><span class="pre">staticmethod</span></code> is not needed anymore.
+So this is now only done for Python2, where it is needed, and things
+work smoothly with this kind of code now too. This is currently in my
+factory testing and will probably become part of a hotfix if it turns
+out good.</p>
+</div>
+<div class="section" id="hotfixes">
+<h2><a class="toc-backref" href="#id8">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this headline"></a></h2>
+<p>Immediately after the release, some rarely run test, where I compiled
+all the code on my machine, found 2 older bugs, obscure ones arguably,
+that I made into a hotfix, also because the test runner was having a
+regression with 3.7, which prevented some package builds. So that was
+0.5.32.1 release.</p>
+<p>And then I received a bug report about <code class="docutils literal notranslate"><span class="pre">await</span></code> where a self test of
+Nuitka fails and reports an optimization error. Very nice, the new
+exceptions that automatically dump involved nodes as XML made it
+immediately clear from the report, what is going on, even without having
+to reproduce anything. I bundled a 3.7 improvement for error cases in
+class creation with it. So that was the 0.5.32.2 release.</p>
+</div>
+<div class="section" id="plans">
+<h2><a class="toc-backref" href="#id9">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline"></a></h2>
+<p>Finishing goto generators is my top priority, but I am also going over
+minor issues with the 3.7 test suite, fixing test cases there, and as
+with e.g. the enum issue, even known issues this now finds.</p>
+<p>Until next week.</p>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="nuitka-release-0532.html">
+       Nuitka Release 0.5.32
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nuitka-this-week-3.html">
+      Nuitka this week #3 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-2.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-2.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-this-week-2.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

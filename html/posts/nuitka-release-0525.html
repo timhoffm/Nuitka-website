@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka Release 0.5.25</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0525.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <div class="section" id="nuitka-release-0-5-25">
+<h1>Nuitka Release 0.5.25<a class="headerlink" href="#nuitka-release-0-5-25" title="Permalink to this headline"></a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<p>This release contains a huge amount of bug fixes, lots of optimization
+gains, and many new features. It also presents many organisational
+improvements, and many cleanups.</p>
+<div class="section" id="bug-fixes">
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>Python3.5: Coroutine methods using <code class="docutils literal notranslate"><span class="pre">super</span></code> were crashing the
+compiler. Fixed in 0.5.24.2 already.</p></li>
+<li><p>Python3.3: Generator return values were not properly transmitted in
+case of <code class="docutils literal notranslate"><span class="pre">tuple</span></code> or <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> values.</p></li>
+<li><p>Python3.5: Better interoperability between compiled coroutines and
+uncompiled generator coroutines.</p></li>
+<li><p>Python3.5: Added support to compile in Python debug mode under
+Windows too.</p></li>
+<li><p>Generators with arguments were using two code objects, one with, and
+one without the <code class="docutils literal notranslate"><span class="pre">CO_NOFREE</span></code> flag, one for the generator object
+creating function, and one for the generator object.</p></li>
+<li><p>Python3.5: The duplicate code objects for generators with arguments
+lead to interoperability issues with between such compiled generator
+coroutines and compiled coroutines. Fixed in 0.5.24.2 already.</p></li>
+<li><p>Standalone: On some Linux variants, e.g. Debian Stretch and Gentoo,
+the linker needs more flags to really compile to a binary with
+<code class="docutils literal notranslate"><span class="pre">RPATH</span></code>.</p></li>
+<li><p>Compatibility: For set literal values, insertion order is wrong on
+some versions of Python, we now detect the bug and emulate it if
+necessary, previous Nuitka was always correct, but incompatible.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">}</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>  <span class="c1"># the only element of the set should be 1</span>
+</pre></div>
+</div>
+</li>
+<li><p>Windows: Make the batch files detect where they live at run time,
+instead of during <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, making it possible to use them for
+all cases.</p></li>
+<li><p>Standalone: Added package paths to DLL scan for <code class="docutils literal notranslate"><span class="pre">depends.exe</span></code>, as
+with wheels there now sometimes live important DLLs too.</p></li>
+<li><p>Fix, the clang mode was regressed and didn’t work anymore, breaking
+the macOS support entirely.</p></li>
+<li><p>Compatibility: For imports, we were passing for <code class="docutils literal notranslate"><span class="pre">locals</span></code> argument a
+real dictionary with actual values. That is not what CPython does, so
+stopped doing it.</p></li>
+<li><p>Fix, for raised exceptions not passing the validity tests, they could
+be used after free, causing crashes.</p></li>
+<li><p>Fix, the environment <code class="docutils literal notranslate"><span class="pre">CC</span></code> wasn’t working unless also specifying
+<code class="docutils literal notranslate"><span class="pre">CXX</span></code>.</p></li>
+<li><p>Windows: The value of <code class="docutils literal notranslate"><span class="pre">__file__</span></code> in module mode was wrong, and
+didn’t point to the compiled module.</p></li>
+<li><p>Windows: Better support for <code class="docutils literal notranslate"><span class="pre">--python-debug</span></code> for installations that
+have both variants, it is now possible to switch to the right
+variant.</p></li>
+</ul>
+</div>
+<div class="section" id="new-features">
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Added parsing for shebang to Nuitka. When compiling an executable,
+now Nuitka will check of the <code class="docutils literal notranslate"><span class="pre">#!</span></code> portion indicates a different
+Python version and ask the user to clarify with <code class="docutils literal notranslate"><span class="pre">--python-version</span></code>
+in case of a mismatch.</p></li>
+<li><p>Added support for Python flag <code class="docutils literal notranslate"><span class="pre">--python-flag=-O</span></code>, which allows to
+disable assertions and remove doc strings.</p></li>
+</ul>
+</div>
+<div class="section" id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Faster method calls, combining attribute lookup and method call into
+one, where order of evaluation with arguments doesn’t matter. This
+gives really huge relative speedups for method calls with no
+arguments.</p></li>
+<li><p>Faster attribute lookup in general for <code class="docutils literal notranslate"><span class="pre">object</span></code> descendants, which
+is all new style classes, and all built-in types.</p></li>
+<li><p>Added dedicated <code class="docutils literal notranslate"><span class="pre">xrange</span></code> built-in implementation for Python2 and
+<code class="docutils literal notranslate"><span class="pre">range</span></code> for Python3. This makes those faster while also solving
+ordering problems when creating constants of these types.</p></li>
+<li><p>Faster <code class="docutils literal notranslate"><span class="pre">sum</span></code> again, using quick iteration interface and specialized
+quick iteration code for typical standard type containers, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>
+and <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p></li>
+<li><p>Compiled generators were making sure <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> was set after
+their iteration, although most users were only going to clear it. Now
+only the <code class="docutils literal notranslate"><span class="pre">send</span></code> method, which really needs that does it. This speed
+up the closing of generators quite a bit.</p></li>
+<li><p>Compiled generators were preparing a <code class="docutils literal notranslate"><span class="pre">throw</span></code> into non-started
+compilers, to be checked for immediately after their start. This is
+now handled in a generic way for all generators, saving code and
+execution time in the normal case.</p></li>
+<li><p>Compiled generators were applying checks only useful for manual
+<code class="docutils literal notranslate"><span class="pre">send</span></code> calls even during iteration, slowing them down.</p></li>
+<li><p>Compiled generators could duplicate code objects due to handling a
+flag for closure variables differently.</p></li>
+<li><p>For compiled frames, the <code class="docutils literal notranslate"><span class="pre">f_trace</span></code> is not writable, but was taking
+and releasing references to what must be <code class="docutils literal notranslate"><span class="pre">None</span></code>, which is not
+useful.</p></li>
+<li><p>Not passing <code class="docutils literal notranslate"><span class="pre">locals</span></code> to import calls make it less code and faster
+too.</p></li>
+</ul>
+</div>
+<div class="section" id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>This release also prepares Python 3.6 support, it includes full
+language support on the level of CPython 3.6.0 with the sole
+exception of the new generator coroutines.</p></li>
+<li><p>The improved mode is now the default, and full compatibility is now
+the option, used by test suites. For syntax errors, improved mode is
+always used, and for test suites, now only the error message is
+compared, but not call stack or caret positioning anymore.</p></li>
+<li><p>Removed long deprecated option “–no-optimization”. Code generation
+too frequently depends on not seeing unoptimized code. This has been
+hidden and broken long enough to finally remove it.</p></li>
+<li><p>Added support for Python3.5 numbers to Speedcenter. There are now
+also tags for speedcenter, indicating how well “develop” branch fares
+in comparison to the stable branch.</p></li>
+<li><p>With a new tool, source code and Developer Manual contents can be
+kept in sync, so that descriptions can be quoted there. Eventually a
+full Sphinx documentation might become available, but for now this
+makes it workable.</p></li>
+<li><p>Added repository for Ubuntu Yakkety (16.10) for download.</p></li>
+<li><p>Added repository for Fedora 25 for download.</p></li>
+</ul>
+</div>
+<div class="section" id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Moved the tools to compare CPython output, to sort import statements
+(isort) to autoformat the source code (Redbaron usage), and to check
+with PyLint to a common new <code class="docutils literal notranslate"><span class="pre">nuitka.tools</span></code> package, runnable with
+<code class="docutils literal notranslate"><span class="pre">__main__</span></code> modules and dedicated runners in <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory.</p></li>
+<li><p>The tools now share code to find source files, or have it for the
+first time, and other things, e.g. finding needed binaries on Windows
+installations.</p></li>
+<li><p>No longer patch traceback objects dealloc function. Should not be
+needed anymore, and most probably was only bug hiding.</p></li>
+<li><p>Moved handling of ast nodes related to import handling to the proper
+reformulation module.</p></li>
+<li><p>Moved statement generation code to helpers module, making it
+accessible without cyclic dependencies that require local imports.</p></li>
+<li><p>Removed deprecated method for getting constant code objects in favor
+of the new way of doing it. Both methods were still used, making it
+harder to analyse.</p></li>
+<li><p>Removed useless temporary variable initializations from complex call
+helper internal functions. They worked around code generation issues
+that have long been solved.</p></li>
+<li><p>The ABI flags are no longer passed to Scons together with the
+version.</p></li>
+</ul>
+</div>
+<div class="section" id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Windows: Added support to detect and to switch debug Python where
+available to also be able to execute reference counting tests.</p></li>
+<li><p>Added the CPython 3.3 test suite, after cleaning up the worst bits of
+it, and added the brandnew 3.6 test suite with a minimal set of
+changes.</p></li>
+<li><p>Use the original 3.4 test suite instead of the one that comes from
+Debian as it has patched quite a few issues that never made it
+upstream, and might cause crashes.</p></li>
+<li><p>More construct tests, making a difference between old style classes,
+which have instances and new style classes, with their objects.</p></li>
+<li><p>It is now possible to run a test program with Python3 and Valgrind.</p></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<p>The quick iteration is a precursor to generally faster iteration over
+unknown object iterables. Expanding this to general code generation, and
+not just the <code class="docutils literal notranslate"><span class="pre">sum</span></code> built-in, might yield significant gains for normal
+code in the future, once we do code generation based on type inference.</p>
+<p>The faster method calls complete work that was already prepared in this
+domain and also will be expanded to more types than compiled functions.
+More work will be needed to round this up.</p>
+<p>Adding support for 3.6.0 in the early stages of its release, made sure
+we pretty much have support for it ready right after release. This is
+always a huge amount of work, and it’s good to catch up.</p>
+<p>This release is again a significant improvement in performance, and is
+very important to clean up open ends. Now the focus of coming releases
+will now be on both structural optimization, e.g. taking advantage of
+the iterator tracing, and specialized code generation, e.g. for those
+iterations really necessary to use quick iteration code.</p>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="nuitka-release-0524.html">
+       Nuitka Release 0.5.24
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nuitka-release-0526.html">
+      Nuitka Release 0.5.26 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0525.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0525.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0525.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
