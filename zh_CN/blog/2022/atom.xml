@@ -2,20 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2022</title>
-  <updated>2022-02-12T17:03:02.138727+00:00</updated>
+  <updated>2022-02-12T17:11:31.483522+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2022/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/first-nuitka-live-stream.html</id>
-    <title>First Nuitka Live Stream</title>
+    <title>首次 Nuitka 直播流</title>
     <updated>2022-01-14T00:00:00+00:00</updated>
     <content type="html">&lt;section id="first-nuitka-live-stream"&gt;
 
-&lt;p&gt;Tomorrow, Saturday 15.01.2022, there will be not one, but two live
-stream of me coding on Nuitka, and talking and chatting with visitors in
-the Discord channel created specifically for this. I will go from 9-12
-CEST and from 17-20 CEST.&lt;/p&gt;
+&lt;p&gt;明天，2022 年 1 月 15 日，周六，将会有不是一个，而是两个我在 Nuitka 编码的直播流，并在为此专门创建的 Discord 频道与游客交谈和聊天。我将从 9-12 CEST 和 17-20 CEST。&lt;/p&gt;
 &lt;p&gt;There is a &lt;a class="reference external" href="/pages/Streaming.html"&gt;dedicated page on the web site&lt;/a&gt;
 which has the details. Spoiler, it’s free and I have no plans for
 anything that involves a subscription of any kind. Of course, talking of
@@ -35,10 +32,7 @@ You know you want to do it. I know I want you to do to it!&lt;/p&gt;
 &lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/first-nuitka-live-stream.html" rel="alternate"/>
-    <summary>Tomorrow, Saturday 15.01.2022, there will be not one, but two live
-stream of me coding on Nuitka, and talking and chatting with visitors in
-the Discord channel created specifically for this. I will go from 9-12
-CEST and from 17-20 CEST.</summary>
+    <summary>明天，2022 年 1 月 15 日，周六，将会有不是一个，而是两个我在 Nuitka 编码的直播流，并在为此专门创建的 Discord 频道与游客交谈和聊天。我将从 9-12 CEST 和 17-20 CEST。</summary>
     <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="compiler" label="compiler"/>
@@ -46,18 +40,14 @@ CEST and from 17-20 CEST.</summary>
   </entry>
   <entry>
     <id>https://nuitka.net/pages/next-nuitka-live-stream-30-01-2022.html</id>
-    <title>Next Nuitka Live Stream</title>
+    <title>下一个 Nuitka 实时流</title>
     <updated>2022-01-30T00:00:00+00:00</updated>
     <content type="html">&lt;section id="next-nuitka-live-stream"&gt;
 
-&lt;p&gt;Today, Sunday 30.01.2022, there will be the third live stream of me
-coding on Nuitka, and talking and chatting with visitors in the Discord
-channel created specifically for this. I will go from 9-12 CEST and from
-18 CEST until probably at least 20 CEST, but it seems I tend to go
-overtime.&lt;/p&gt;
+&lt;p&gt;今天，2022 年 1 月 30 日星期日，将会有第三次我在 Nuitka 上编码的直播流，并在为此专门创建的 Discord 频道与访客交谈和聊天。我会从 9-12 CEST，18 CEST，直到至少 20 CEST，但我似乎倾向于加班。&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="last-time"&gt;
-&lt;h1&gt;Last time&lt;/h1&gt;
+&lt;h1&gt;最后一次&lt;/h1&gt;
 &lt;p&gt;So the last two streams are on my Youtube, these are around 4h videos,
 done on the same day.&lt;/p&gt;
 &lt;p&gt;In the second stream I was working on Onefile compression for all Python
@@ -107,11 +97,7 @@ You know you want to do it. I know I want you to do to it!&lt;/p&gt;
 &lt;/section&gt;
 </content>
     <link href="https://nuitka.net/pages/next-nuitka-live-stream-30-01-2022.html" rel="alternate"/>
-    <summary>Today, Sunday 30.01.2022, there will be the third live stream of me
-coding on Nuitka, and talking and chatting with visitors in the Discord
-channel created specifically for this. I will go from 9-12 CEST and from
-18 CEST until probably at least 20 CEST, but it seems I tend to go
-overtime.</summary>
+    <summary>今天，2022 年 1 月 30 日星期日，将会有第三次我在 Nuitka 上编码的直播流，并在为此专门创建的 Discord 频道与访客交谈和聊天。我会从 9-12 CEST，18 CEST，直到至少 20 CEST，但我似乎倾向于加班。</summary>
     <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="compiler" label="compiler"/>
