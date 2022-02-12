@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-26">
+              <section id="nuitka-release-0-5-26">
 <h1>Nuitka Release 0.5.26<a class="headerlink" href="#nuitka-release-0-5-26" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -138,7 +139,7 @@
 changes in all areas. The driving goal was to prepare generating C
 specific code, which is still not the case, but this is very likely
 going to change soon. However this release improves all aspects.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Compatibility: Fix, for star imports didn’t check the values from the
@@ -187,8 +188,8 @@ standalone support for Travis and Anaconda on Linux.</p></li>
 overcome a potential Python3 virtualenv in which Nuitka is running.</p></li>
 <li><p>Standalone: Ignore more Windows only encodings on non-Windows.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Support for Python 3.6 with only few corner cases not supported yet.</p></li>
@@ -198,8 +199,8 @@ of the <code class="docutils literal notranslate"><span class="pre">--python-ver
 <li><p>Uninstalled Python versions such as Anaconda will work fine in
 accelerated mode, except on Windows.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>The node tree children are no longer stored in a separate dictionary,
@@ -247,8 +248,8 @@ default division of Python2.</p></li>
 <li><p>Removed the need for statement context during code generation making
 it less memory intensive and faster.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Now always uses the <code class="docutils literal notranslate"><span class="pre">__import__</span></code> built-in node for all kinds of
@@ -300,8 +301,8 @@ generated code uses it anymore, and only a few compiled types do. The
 function was once required before “C-ish” lifted the need to do
 everything in one single function call.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>More robust deletion of directories, temporary stages used by CPython
@@ -312,8 +313,8 @@ and therefore often better implementations.</p></li>
 <li><p>Made standalone binaries robust against GTK theme access, checking
 the Python binary (some site.py files do that),</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added repository for Ubuntu Zesty (17.04) for download.</p></li>
@@ -325,8 +326,8 @@ automatically tested before merge.</p></li>
 this one with the 64 bits variant. All other versions are provided
 for both bit sizes still.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release marks huge progress. The node tree is now absolutely clean,
 the variable closure taking is fully represented, and code generation is
@@ -348,8 +349,8 @@ set the stage for more types to follow (<code class="docutils literal notranslat
 this will finally start to give the C type speed we are looking for.</p>
 <p>Until then, this release marks a huge cleanup and progress to what we
 already had, as well as preparing the big jump in speed.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

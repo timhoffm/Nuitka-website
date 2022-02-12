@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-19">
+              <section id="nuitka-release-0-6-19">
 <h1>Nuitka Release 0.6.19<a class="headerlink" href="#nuitka-release-0-6-19" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release adds support for 3.10 while also adding very many new
 optimization, and doing a lot of bug fixes.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Calls to <code class="docutils literal notranslate"><span class="pre">importlib.import_module</span></code> with expressions that need
@@ -239,8 +240,8 @@ file handles still work and are not <code class="docutils literal notranslate"><
 <li><p>Windows: Fix, need to claim all OS versions of Windows as supported,
 otherwise e.g. high DPI features are not available.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Programs that are to be executed with the <code class="docutils literal notranslate"><span class="pre">-m</span></code> flag, can now be
@@ -266,8 +267,8 @@ differences in their Python installation.</p></li>
 <li><p>Added experimental plugin <code class="docutils literal notranslate"><span class="pre">trio</span></code> that works around issues with that
 package.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Also trust hard imports made on the module level in function level
@@ -362,8 +363,8 @@ knows more about the standard library, and its runners which it will
 exclude from compilation if use for it. Currently that is not the
 default, but it should become that.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Migrated the Nuitka blog from Nikola to Sphinx based ABlog and made
@@ -422,8 +423,8 @@ its name is output when CTRL-C is hit.</p></li>
 <li><p>Windows: Splash screen only works with MSVC, added error indicator
 for MinGW64 that states that and asks for porting help.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Generate all existing C code for generic builtin type method calls
@@ -457,8 +458,8 @@ things to the dedicate function, and harmonized it more.</p></li>
 <li><p>Resolved deprecation warnings given by with <code class="docutils literal notranslate"><span class="pre">--python-debug</span></code> for
 Nuitka.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Started test suite for Python PGO, not yet completely working though,
@@ -471,8 +472,8 @@ to a few details not yet being as compatible as needed.</p></li>
 <li><p>Added test suite for CPython 3.10 and enable execution of tests with
 this version on Github actions.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release is another big step forward.</p>
 <p>The amount of optimization added is again very large, some of which yet
@@ -507,8 +508,8 @@ means it will be slower than 3.9 during compilation.</p>
 <p>Overall, Nuitka is closing many open lines of action with this. The
 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> support has yet again improved and at this point should
 be very good.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

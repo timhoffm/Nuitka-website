@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -145,10 +146,10 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-roadmap">
+              <section id="nuitka-roadmap">
 <h1>Nuitka Roadmap<a class="headerlink" href="#nuitka-roadmap" title="Permalink to this headline"></a></h1>
 <p>This is the Nuitka roadmap, broken down by features.</p>
-<div class="section" id="user-extensibility">
+<section id="user-extensibility">
 <h2>User Extensibility<a class="headerlink" href="#user-extensibility" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Data files, implicit imports are in yaml format as of 0.6.18, but
@@ -162,8 +163,8 @@ for compilation with Nuitka through such files.</p>
 there.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="standalone">
+</section>
+<section id="standalone">
 <h2>Standalone<a class="headerlink" href="#standalone" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>“Multidist” support (undecided)</p>
@@ -221,15 +222,15 @@ things coming from a plugin can be suppressed.</p></li>
 expect it to solve the onefile compression issue. However, a post
 processing of binaries, even from CPython extension modules, seems to
 work and reduce the uncompressed sizes of binaries already.</p>
-</div>
-<div class="section" id="nuitka-python-public">
+</section>
+<section id="nuitka-python-public">
 <h2>Nuitka-Python (public)<a class="headerlink" href="#nuitka-python-public" title="Permalink to this headline"></a></h2>
 <p>This is currently under way and not yet described here. The current
 Nuitka release has support for using it. Most work is focused on Linux
 and Python2.7 now with the aim of getting it capable to statically
 compile numpy for speed.</p>
-</div>
-<div class="section" id="performance-public">
+</section>
+<section id="performance-public">
 <h2>Performance (public)<a class="headerlink" href="#performance-public" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Caching of demoted to bytecode modules. Some of these, e.g.
@@ -271,8 +272,8 @@ compile time optimization.</p></li>
 <li><p>Add support for <code class="docutils literal notranslate"><span class="pre">list</span></code> methods, things like <code class="docutils literal notranslate"><span class="pre">append</span></code> really
 should be optimized as well in the mostly existing operation nodes.</p></li>
 </ul>
-</div>
-<div class="section" id="macos-enhancements">
+</section>
+<section id="macos-enhancements">
 <h2>macOS enhancements<a class="headerlink" href="#macos-enhancements" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The macOS bundle mode and onefile are not yet working together, which
@@ -281,8 +282,8 @@ accelerated programs, bundle mode is not usable, so they couldn’t be
 GUI programs yet.</p></li>
 <li><p>Apple Python must be detected and rejected for standalone mode.</p></li>
 </ul>
-</div>
-<div class="section" id="container-builds-commercial">
+</section>
+<section id="container-builds-commercial">
 <h2>Container Builds (commercial)<a class="headerlink" href="#container-builds-commercial" title="Permalink to this headline"></a></h2>
 <p>Providing docker images like <code class="docutils literal notranslate"><span class="pre">manylinux</span></code> does with Nuitka installed into
 all of them and ready to use. Might make this a free feature once it’s
@@ -292,8 +293,8 @@ podman such that building with Nuitka on Fedora latest and Ubuntu latest
 can be done fully automatically and still run on very old Linux. Right
 now this is implemented, but works mostly locally and needs more work
 than it should.</p>
-</div>
-<div class="section" id="support-for-next-python-version-3-10">
+</section>
+<section id="support-for-next-python-version-3-10">
 <h2>Support for Next Python Version (3.10)<a class="headerlink" href="#support-for-next-python-version-3-10" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Get it to work for 3.9 test suite.</p>
@@ -305,15 +306,15 @@ though.</p>
 yet.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="wheels-build">
+</section>
+<section id="wheels-build">
 <h2>Wheels Build<a class="headerlink" href="#wheels-build" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Needs more documentation and addition of (some) command line options
 of Nuitka to the <code class="docutils literal notranslate"><span class="pre">bdist_nuitka</span></code> target.</p></li>
 </ul>
-</div>
-<div class="section" id="traceback-encryption-commercial">
+</section>
+<section id="traceback-encryption-commercial">
 <h2>Traceback Encryption (commercial)<a class="headerlink" href="#traceback-encryption-commercial" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Right now tracebacks are entirely encrypted. But in a future update,
@@ -322,8 +323,8 @@ is part of the encryption, and which part is not, e.g. hostname,
 client name, etc. could be output in plain text, while the variable
 names and values would not be, depending on your choice!</p></li>
 </ul>
-</div>
-<div class="section" id="features-to-be-added-for-0-6-20">
+</section>
+<section id="features-to-be-added-for-0-6-20">
 <h2>Features to be added for 0.6.20<a class="headerlink" href="#features-to-be-added-for-0-6-20" title="Permalink to this headline"></a></h2>
 <p>[ ] Better scalability</p>
 <p>[ ] Caching for bytecode demoted modules so no optimization needs to be
@@ -332,15 +333,15 @@ run.</p>
 there for 3.5 or higher only.</p>
 <p>[x] Make <code class="docutils literal notranslate"><span class="pre">pydantic</span></code> support the default, removing the experimental flag
 <code class="docutils literal notranslate"><span class="pre">function-base</span></code> with it being the default behavior.</p>
-</div>
-<div class="section" id="features-to-be-added-for-0-6-21">
+</section>
+<section id="features-to-be-added-for-0-6-21">
 <h2>Features to be added for 0.6.21<a class="headerlink" href="#features-to-be-added-for-0-6-21" title="Permalink to this headline"></a></h2>
 <dl class="simple">
 <dt>[ ] Add ability to inhibit data files from the command line, so that</dt><dd><p>things coming from a plugin can be suppressed.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
    

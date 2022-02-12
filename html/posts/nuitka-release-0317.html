@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-17">
+              <section id="nuitka-release-0-3-17">
 <h1>Nuitka Release 0.3.17<a class="headerlink" href="#nuitka-release-0-3-17" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -153,7 +154,7 @@ seems that CPython3.2 is going to work one day.</p>
 <p>And there has been a lot of effort, to address the Debian packaging to
 be cleaner and more complete, addressing issues that prevented it from
 entering the Debian repository.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fixed the handling of modules and packages of the same name, but with
@@ -169,8 +170,8 @@ methods before resolving the scopes of variables, this avoids the use
 of that variable before it was assigned a scope. Released as 0.3.16b
 hot fix already.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Enhanced compatibility again, provide enough <code class="docutils literal notranslate"><span class="pre">co_varnames</span></code> in the
@@ -184,8 +185,8 @@ some decorators as well.</p></li>
 <code class="docutils literal notranslate"><span class="pre">--recurse-not-to</span></code> (confirm to not recurse to those modules)</p>
 </li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The optimization of constant conditional expressions was not done
@@ -199,8 +200,8 @@ binary representation, that is generally more efficient to un-stream
 as well. Also use the cPickle protocol, the use of <code class="docutils literal notranslate"><span class="pre">pickle</span></code> was not
 really necessary anymore.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added a <a class="reference external" href="https://nuitka.net/doc/developer-manual.html">Developer Manual</a> to the release.
@@ -245,8 +246,8 @@ Didn’t find anything.</p></li>
 <li><p>Arch Linux packages have been contributed, these are linked for
 download, but the stable package may lag behind a bit.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Changed <code class="docutils literal notranslate"><span class="pre">not</span></code> boolean operation to become a normal operator.
@@ -269,8 +270,8 @@ listed.</p></li>
 <code class="docutils literal notranslate"><span class="pre">Nuitka.py</span></code> on all platforms. The later is scheduled for removal.</p></li>
 <li><p>Some more PyLint cleanups.</p></li>
 </ul>
-</div>
-<div class="section" id="new-tests">
+</section>
+<section id="new-tests">
 <h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Make sure the basic tests pass with CPython or else fail the test.
@@ -300,8 +301,8 @@ a minimal Debian <code class="docutils literal notranslate"><span class="pre">un
 included in the package (<code class="docutils literal notranslate"><span class="pre">basics</span></code>, <code class="docutils literal notranslate"><span class="pre">syntax</span></code>, <code class="docutils literal notranslate"><span class="pre">programs</span></code>,
 <code class="docutils literal notranslate"><span class="pre">reflected</span></code>). Also many other Debian packaging improvements.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>The “git flow” was used again in this release cycle and proved to be
 useful not only for hot fix, but also for creating the branch
@@ -327,8 +328,8 @@ of <code class="docutils literal notranslate"><span class="pre">ctypes</span></c
 support that, I would like to add more tools to make sure we discover
 changes earlier on, checking the XML representations of tests to
 discover improvements and regressions more clearly.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

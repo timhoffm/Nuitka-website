@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-14">
+              <section id="nuitka-release-0-5-14">
 <h1>Nuitka Release 0.5.14<a class="headerlink" href="#nuitka-release-0-5-14" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -140,7 +141,7 @@ elimination of the <code class="docutils literal notranslate"><span class="pre">
 to SSA. The <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">finally</span></code> statement change is delayed.</p>
 <p>There are also a lot of bug fixes, and enhancements to code generation,
 as well as major cleanups of code base.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Python3: Added support assignments trailing star assignment.</p>
@@ -196,8 +197,8 @@ Fixed in 0.5.13.5 already.</p></li>
 <li><p>Compatibility: The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement raised an assertion on unicode
 objects that could not be encoded with <code class="docutils literal notranslate"><span class="pre">ascii</span></code> codec.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added support for Windows 10.</p></li>
@@ -211,8 +212,8 @@ the Python DLL, we copy it along for acceleration mode.</p></li>
 <li><p>Added support for self compiled Python versions running from build
 tree, this is intended to help debug things on Windows.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Function in-lining is now present in the code, but still disabled,
@@ -267,16 +268,16 @@ defaults or annotations do.</p></li>
 <li><p>Built-in references can now be converted to strings at compile time,
 e.g. when printed.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Removed gitorious mirror of the git repository, they shut down.</p></li>
 <li><p>Make it more clear in the documentation that Python2 is needed at
 compile time to create Python3 executables.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Moved more parts of code generation to their own modules, and used
@@ -322,8 +323,8 @@ anymore as we use SSA.</p></li>
 helpful and avoid tracebacks from scons, also remove more unused
 tools like <code class="docutils literal notranslate"><span class="pre">rpm</span></code> from out in-line copy.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Added the CPython3.4 test suite.</p></li>
@@ -345,8 +346,8 @@ syntax error, checking that Nuitka does the same.</p></li>
 <li><p>Refined more tests to be directly executable with Python3, this is an
 ongoing effort.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release is clearly major. It represents a huge step forward for
 Nuitka as it improves nearly every aspect of code generation and
@@ -359,8 +360,8 @@ inlining. This is expected to happen in one of the next releases.</p>
 <p>This release is a consolidation of 8 hotfix releases, and many
 refactorings needed towards the next big step, which might also break
 things, and for that reason is going to get its own release cycle.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

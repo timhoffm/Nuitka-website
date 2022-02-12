@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-0">
+              <section id="nuitka-release-0-6-0">
 <h1>Nuitka Release 0.6.0<a class="headerlink" href="#nuitka-release-0-6-0" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -142,7 +143,7 @@ inference, even if only very limited.</p>
 options to control recursion into modules have all been renamed, some
 now have different defaults, and finally the filenames output have
 changed.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Python3.5: Fix, the awaiting flag was not removed for exceptions
@@ -161,8 +162,8 @@ Scons.</p></li>
 <li><p>Standalone: Include certificate file using by <code class="docutils literal notranslate"><span class="pre">requests</span></code> module in
 some cases as a data file.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Enabled C target type <code class="docutils literal notranslate"><span class="pre">nuitka_bool</span></code> for variables that are stored
@@ -200,8 +201,8 @@ more compatible code.</p></li>
 conditions and added code that allows conditions to adapt themselves
 to the target shape bool during optimization.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added support for using <code class="docutils literal notranslate"><span class="pre">.egg</span></code> files in <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>, one of the
@@ -220,8 +221,8 @@ reports are to become more universal and are aimed at recognizing
 missed optimization chances in Nuitka. This features is still in its
 infancy. Subsequent releases will add more like these.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Disabled comments on the web site, we are going to use Twitter
@@ -253,8 +254,8 @@ numbers updated at run time. This has long been hidden and probably
 would never gain all that much, while causing a lot of
 incompatibilty.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Moved command line arguments to dedicated module, adding checks was
@@ -275,8 +276,8 @@ instead.</p></li>
 not very portable constructs, and is now written in a way that PyPy
 would also like.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Avoid using <code class="docutils literal notranslate"><span class="pre">2to3</span></code> for basic operators test, removing test of some
@@ -285,8 +286,8 @@ Python2 only stuff, that is covered elsewhere.</p></li>
 is to allow CI tests to not execute the same code over and over, just
 to get the same value to compare with. This is not enabled yet.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release marks a point, from which on performance improvements are
 likely in every coming release. The C target types are a major
@@ -298,8 +299,8 @@ advantage of it, progress should be quick from here. There is a lot of
 ground to cover, with more C types to come, and all of them needing
 specialized helpers. But as soon as e.g. <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> are covered,
 many more programs are going to benefiting from this.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

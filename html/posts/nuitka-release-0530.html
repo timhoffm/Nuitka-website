@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-30">
+              <section id="nuitka-release-0-5-30">
 <h1>Nuitka Release 0.5.30<a class="headerlink" href="#nuitka-release-0-5-30" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release has improvements in all areas. Many bug fixes are
 accompanied with optimization changes towards value tracing.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Fix, the new setuptools runners were not used by <code class="docutils literal notranslate"><span class="pre">pip</span></code> breaking the
@@ -175,8 +176,8 @@ using <code class="docutils literal notranslate"><span class="pre">super</span><
 <li><p>Windows: Added back batch files to run Nuitka from the command line.
 Fixed in 0.5.29.5 already.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added option <code class="docutils literal notranslate"><span class="pre">--include-package</span></code> to force inclusion of a whole
@@ -191,8 +192,8 @@ included. This should avoid dependency creep for shared libraries.</p></li>
 <li><p>Plugins can now make the decision about recursing to a module or not.</p></li>
 <li><p>Plugins now can get their own options passed.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The re-raising of exceptions has gotten its own special node type.
@@ -207,8 +208,8 @@ all the places that were using it to find the variable.</p></li>
 variables including module and closure variables. This often avoids
 error exits and leads to smaller and faster generated code.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added burn test with local install of pip distribution to virtualenv
@@ -232,8 +233,8 @@ variables.</p></li>
 <li><p>Generating more code tests out of doctests for increased coverage of
 Nuitka.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Stop using <code class="docutils literal notranslate"><span class="pre">--python-version</span></code> in tests where they still remained.</p></li>
@@ -249,8 +250,8 @@ as much.</p></li>
 <li><p>Have a dedicated node for reraise statements instead of checking for
 all the arguments to be non-present.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>There is now a pull request template for Github when used.</p></li>
@@ -262,8 +263,8 @@ executable on Windows without them changing new lines.</p></li>
 <li><p>The documentation was updated to prefer the call method with <code class="docutils literal notranslate"><span class="pre">-m</span>
 <span class="pre">nuitka</span></code> and manually providing the Python binary to use.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release continued the distutils integration adding first tests, but
 more features and documentation will be needed.</p>
@@ -275,8 +276,8 @@ on C types, where the ultimate performance boost lies. However,
 currently, not the full compatibility has been achieved even with
 currently using dictionaries for classes, and we would like to be able
 to statically optimize those better anyway.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

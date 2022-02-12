@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-11">
+              <section id="nuitka-release-0-6-11">
 <h1>Nuitka Release 0.6.11<a class="headerlink" href="#nuitka-release-0-6-11" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release is a massive improvement in many ways with lots of bug
 fixes and new features.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fix, the <code class="docutils literal notranslate"><span class="pre">.pyi</span></code> file parser didn’t handle relative imports. Fixed
@@ -200,8 +201,8 @@ of optimization, instead make them unraisable error traces.</p></li>
 <li><p>Windows: Fix, only export required symbols when using MinGW64 in
 module mode.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Python3.9: Added official support for this version.</p></li>
@@ -238,8 +239,8 @@ be used. To use it provide <code class="docutils literal notranslate"><span clas
 first one, it will mean <code class="docutils literal notranslate"><span class="pre">clangcl.exe</span></code> which uses the MSVC compiler
 as a host.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Some modules had very slow load times, e.g. if they used many list
@@ -267,8 +268,8 @@ the C compiler. This covers many more platforms than our previous
 linker option hacks, and the fallback to generated C code. In fact
 everything but Windows uses this now.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Windows: For Scons we now require a Python 3.5 or higher to be
@@ -315,8 +316,8 @@ with proper error message.</p></li>
 <li><p>Added onefile and standalone as a use case to the manual and put also
 the DLL and data files problems as typically issues.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Avoid decimal and string comparisons for Python versions checks,
@@ -343,15 +344,15 @@ instead, leading to cleaner and more correct usages.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">pkgutil</span></code> in plugins to scan for modules rather than listing
 directories.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>New option to display executed commands during comparisons.</p></li>
 <li><p>Added test suite for onefile testing.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release has seen Python3.9 and Onefile both being completed. The
 later needs compression added on Windows, but that can be added in a
@@ -373,8 +374,8 @@ ought to be back to working fine.</p>
 <p>Future work will have to aim at enhanced scalability. In some cases,
 Nuitka still takes too much time to compile if projects like Pandas
 include virtually everything installed as an option for it to use.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

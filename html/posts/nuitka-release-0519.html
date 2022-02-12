@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-19">
+              <section id="nuitka-release-0-5-19">
 <h1>Nuitka Release 0.5.19<a class="headerlink" href="#nuitka-release-0-5-19" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -138,7 +139,7 @@
 This is now lowering subscripts to dictionary accesses where possible
 and adds new code generation for known dictionary values. Besides this
 there is the usual range of bug fixes.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fix, attribute assignments or deletions where the assigned value or
@@ -154,8 +155,8 @@ already.</p></li>
 <li><p>Python3.5: The finalize of compiled coroutines could corrupt
 reference counts for shared generator objects.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>When a variable is known to have dictionary shape (assigned from a
@@ -182,8 +183,8 @@ more shared local variable.</p></li>
 <li><p>Global variable traces are now faster to decide definite writes
 without need to check traces for this each time.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>No more using “logical sharing” allowed to remove that function
@@ -195,8 +196,8 @@ the need to check in variable registry for it.</p></li>
 <li><p>Removed old and mostly unused “assume unclear locals” indications, we
 use global variable traces for this now.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release aimed at dictionary tracing. As a first step, the value
 assign is now traced to have a dictionary shape, and this this then used
@@ -206,8 +207,8 @@ mapping, but now can be more specific.</p>
 is not yet inside the scope, but expected to follow. We got the first
 signs of type inference here, but to really take advantage, more
 specific shape tracing will be needed.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

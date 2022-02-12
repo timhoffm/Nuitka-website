@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-progress-2014">
+              <section id="nuitka-progress-2014">
 <h1><a class="toc-backref" href="#id1">Nuitka progress 2014</a><a class="headerlink" href="#nuitka-progress-2014" title="Permalink to this headline"></a></h1>
 <p>Again, not much has happened publicly to Nuitka, except for some
 releases, so it’s time to make a kind of status post, about the really
@@ -169,7 +170,7 @@ it, therefore the 2014 in the title.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="ssa-single-state-assignment-form">
+<section id="ssa-single-state-assignment-form">
 <h2><a class="toc-backref" href="#id2">SSA (Single State Assignment Form)</a><a class="headerlink" href="#ssa-single-state-assignment-form" title="Permalink to this headline"></a></h2>
 <p>For a long, long time already, each release of Nuitka has worked towards
 enabling <a class="reference external" href="http://en.wikipedia.org/wiki/Static_single_assignment_form">“SSA”</a> usage in
@@ -198,8 +199,8 @@ it to return. But not much longer.</p>
 <p>This is going to instantly give gains, and more importantly, will enable
 analysis, that leads to avoiding e.g. the creation of function objects
 for local functions, being able to in-line, etc.</p>
-</div>
-<div class="section" id="improved-code-generation">
+</section>
+<section id="improved-code-generation">
 <h2><a class="toc-backref" href="#id3">Improved Code Generation</a><a class="headerlink" href="#improved-code-generation" title="Permalink to this headline"></a></h2>
 <p>Previously, under the title “C-ish”, Nuitka moved away from C++ based
 code generation to less C++ based code generated, and more C-ish code.
@@ -219,8 +220,8 @@ very importantly then, can avoid to <code class="docutils literal notranslate"><
 And this is about catching up to CPython in this regard. After that, we
 will likely be able to expand it to cases where CPython could never do
 it, e.g. also <code class="docutils literal notranslate"><span class="pre">int</span></code> objects</p>
-</div>
-<div class="section" id="scalability">
+</section>
+<section id="scalability">
 <h2><a class="toc-backref" href="#id4">Scalability</a><a class="headerlink" href="#scalability" title="Permalink to this headline"></a></h2>
 <p>The scalability of Nuitka depends much on generated code size. With it
 being less stupid, the generated code is now not only faster, but
@@ -231,18 +232,18 @@ easier time. But we need to do more, to e.g. have generic parameter
 parsing, instead of specialized per function, and module exclusive
 constants should not be pre-created, but in the module body, when they
 are used.</p>
-</div>
-<div class="section" id="compatibility">
+</section>
+<section id="compatibility">
 <h2><a class="toc-backref" href="#id5">Compatibility</a><a class="headerlink" href="#compatibility" title="Permalink to this headline"></a></h2>
 <p>There is not a whole lot to gain in the compatibility domain anymore.
 Nothing important certainly. But there are these minor things.</p>
-<div class="section" id="cells-for-closure">
+<section id="cells-for-closure">
 <h3><a class="toc-backref" href="#id6">Cells for Closure</a><a class="headerlink" href="#cells-for-closure" title="Permalink to this headline"></a></h3>
 <p>However, since we now use <code class="docutils literal notranslate"><span class="pre">PyCell</span></code> objects for closure, we could start
 and provide a real <code class="docutils literal notranslate"><span class="pre">__closure__</span></code> value, that could even be writable.
 We could start supporting that easily.</p>
-</div>
-<div class="section" id="local-variable-storage">
+</section>
+<section id="local-variable-storage">
 <h3><a class="toc-backref" href="#id7">Local Variable Storage</a><a class="headerlink" href="#local-variable-storage" title="Permalink to this headline"></a></h3>
 <p>Currently, local variables use stack storage. Were we to use function
 object or frame object attached storage, we could provide frame locals
@@ -250,11 +251,11 @@ that actually work. This may be as simple as to put those in an array on
 the stack and use the pointer to it.</p>
 <p>Suddenly locals would become writable. I am not saying this is useful,
 just that it’s possible to do this.</p>
-</div>
-</div>
-<div class="section" id="performance">
+</section>
+</section>
+<section id="performance">
 <h2><a class="toc-backref" href="#id8">Performance</a><a class="headerlink" href="#performance" title="Permalink to this headline"></a></h2>
-<div class="section" id="graphs-and-benchmarks">
+<section id="graphs-and-benchmarks">
 <h3><a class="toc-backref" href="#id9">Graphs and Benchmarks</a><a class="headerlink" href="#graphs-and-benchmarks" title="Permalink to this headline"></a></h3>
 <p>The work on automated performance graphs has made progress, and they are
 supposed to show up on <a class="reference external" href="https://speedcenter.nuitka.net">Nuitka Speedcenter</a> each time, <code class="docutils literal notranslate"><span class="pre">master</span></code>, <code class="docutils literal notranslate"><span class="pre">develop</span></code> or
@@ -266,9 +267,9 @@ me than necessary.</p>
 <p>At least it’s updated to latest Nikola, and uses PyGal for the graphics
 now, so it’s easier to expand. The plan here, is to integrate with
 special pages from a Wiki, making it easy to provide comments.</p>
-</div>
-</div>
-<div class="section" id="standalone">
+</section>
+</section>
+<section id="standalone">
 <h2><a class="toc-backref" href="#id10">Standalone</a><a class="headerlink" href="#standalone" title="Permalink to this headline"></a></h2>
 <p>The standalone mode of Nuitka is pretty good, and as usual it continued
 to improve only.</p>
@@ -280,10 +281,10 @@ on Windows, where filenames are case insensitive.</p>
 scan in a compatible way the file system, and make these determinations,
 whereas library code exposing functionality, doesn’t handling all things
 in really the proper way.</p>
-</div>
-<div class="section" id="other-stuff">
+</section>
+<section id="other-stuff">
 <h2><a class="toc-backref" href="#id11">Other Stuff</a><a class="headerlink" href="#other-stuff" title="Permalink to this headline"></a></h2>
-<div class="section" id="funding">
+<section id="funding">
 <h3><a class="toc-backref" href="#id12">Funding</a><a class="headerlink" href="#funding" title="Permalink to this headline"></a></h3>
 <p>Nuitka receives some, bit not quite enough <a class="reference external" href="/pages/donations.html">donations</a>. There is no support from
 organizations like e.g. the PSF, and it seems I better not hold my
@@ -302,8 +303,8 @@ to speed up hosting the virtual machines, and my work in general.</p>
 machine with real hardware last year, and lots more RAM, so I can spare
 myself of optimizing e.g. MySQL for low memory usage. The monthly fee of
 that is substantial, but supported from your donations. Thanks a lot!</p>
-</div>
-<div class="section" id="collaborators">
+</section>
+<section id="collaborators">
 <h3><a class="toc-backref" href="#id13">Collaborators</a><a class="headerlink" href="#collaborators" title="Permalink to this headline"></a></h3>
 <p>Things are coming along nicely. When I started out, I was fully aware
 that the project is something that I can do on my own if necessary, and
@@ -315,9 +316,9 @@ e.g. review posts of mine, test out things, pick up small jobs, answer
 questions of newcomers, you know the drill probably.</p>
 <p>Nuitka is about to make break through progress. And you can be a part of
 it. Now.</p>
-</div>
-</div>
-<div class="section" id="future">
+</section>
+</section>
+<section id="future">
 <h2><a class="toc-backref" href="#id14">Future</a><a class="headerlink" href="#future" title="Permalink to this headline"></a></h2>
 <p>So, there is multiple things going on:</p>
 <ul>
@@ -366,8 +367,8 @@ still there is going to be plenty of work to optimize more and more
 things conretely.</p>
 <p>Let me know, if you are willing to help. I really need that help to make
 things happen faster.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

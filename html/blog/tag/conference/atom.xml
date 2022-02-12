@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged conference</title>
-  <updated>2022-02-12T10:38:12.991550+00:00</updated>
+  <updated>2022-02-12T12:08:42.624077+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/conference/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="pycon-de-2011-my-report"&gt;
+    <content type="html">&lt;section id="pycon-de-2011-my-report"&gt;
 
 &lt;p&gt;The PyCON DE 2011 is just over, sprints are still happening over the
 weekend, but my wife wouldn’t allow me to stay away for that long, so
@@ -31,35 +31,35 @@ Clearly not a first time.&lt;/p&gt;
 &lt;p&gt;I enjoyed the talks, most often in the technical track, but other tracks
 would have been very interesting too. The parallelism was making me do
 hard decisions.&lt;/p&gt;
-&lt;div class="section" id="food"&gt;
+&lt;section id="food"&gt;
 &lt;h2&gt;Food&lt;/h2&gt;
 &lt;p&gt;The food was great too. I esp. liked the Asian day, but there was also
 Italian and French, and what many liked very much is that there was a
 Vegan food offer too. I do not live vegan style, but I appreciate good
 food and the vegan food often is that.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="social-event"&gt;
+&lt;/section&gt;
+&lt;section id="social-event"&gt;
 &lt;h2&gt;Social Event&lt;/h2&gt;
 &lt;p&gt;The social event was a visit to a “Variete” (music hall, French origin),
 where I am sure, there will be images posted, I currently &lt;a class="reference external" href="https://secure.flickr.com/photos/onyame/6222954609/in/pool-1775853&amp;#64;N21/"&gt;found this
 one&lt;/a&gt;
 , that my wife will find interesting too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="leipzig"&gt;
+&lt;/section&gt;
+&lt;section id="leipzig"&gt;
 &lt;h2&gt;Leipzig&lt;/h2&gt;
 &lt;p&gt;The quality of the organization team, the city “Leipzig”, where we also
 got to have a guided city tour of fantastic enthusiasms, was very high.
 I knew Leipzig from earlier visits and liked it before, but this time it
 seemed everybody was even friendlier.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="site"&gt;
+&lt;/section&gt;
+&lt;section id="site"&gt;
 &lt;h2&gt;Site&lt;/h2&gt;
 &lt;p&gt;The convention place “Kubus” was very well chosen, absolutely ideal.
 It’s got good equipment, and that large room setup, where you can make a
 split with movable walls, and have 3 big screens. The acoustics were
 pretty damn good there.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="my-own-presentation"&gt;
+&lt;/section&gt;
+&lt;section id="my-own-presentation"&gt;
 &lt;h2&gt;My own Presentation&lt;/h2&gt;
 &lt;p&gt;As to my own presentation, it was well received, although I sort of
 regret that I agreed to have only 30m instead of original plan of 60m. I
@@ -75,10 +75,10 @@ it went pretty well.&lt;/p&gt;
 ongoing in PDF is work to use REST and document a lot more). The
 presentation was created with “rst2pdf”, which I find is a fantastic
 tool.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="contacts"&gt;
+&lt;/section&gt;
+&lt;section id="contacts"&gt;
 &lt;h2&gt;Contacts&lt;/h2&gt;
-&lt;div class="section" id="cython-lxml"&gt;
+&lt;section id="cython-lxml"&gt;
 &lt;h3&gt;Cython / lxml&lt;/h3&gt;
 &lt;p&gt;Then contacts!&lt;/p&gt;
 &lt;p&gt;Early on I already made contacts with interesting people, e.g. with
@@ -115,8 +115,8 @@ possible is going to be more worthwhile anyway.&lt;/p&gt;
 as I am not able to declare Nuitka “useful” yet. That statement may come
 within a year though. In my mind, in many fields Nuitka is already
 superior.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="pyhasse"&gt;
+&lt;/section&gt;
+&lt;section id="pyhasse"&gt;
 &lt;h3&gt;PyHasse&lt;/h3&gt;
 &lt;p&gt;Another interesting contact I made, was with the author of PyHasse. It’s
 Rainer Bruggemann, who is a really nice and witty guy. He introduced me
@@ -132,8 +132,8 @@ time, and such conferences, my knowledge of these will only grow.&lt;/p&gt;
 &lt;p&gt;We said that we will try and see how far we can go. In the worst case,
 Nuitka will not yet be useful, but I will have a clearer image what is
 needed.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="debian"&gt;
+&lt;/section&gt;
+&lt;section id="debian"&gt;
 &lt;h3&gt;Debian&lt;/h3&gt;
 &lt;p&gt;I saw the presentation from Jan Dittberner and met him later too, asking
 him questions, and generally discussing Debian packaging of Nuitka. He
@@ -143,8 +143,8 @@ presentation on how to package Python modules for Debian. He gave me
 hints on how to solve that “find files near me” issue that plagues
 Nuitka just as much as other software. Really kind and helpful guy and
 clearly I admire Debian Developers, keep up the good work.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="general"&gt;
+&lt;/section&gt;
+&lt;section id="general"&gt;
 &lt;h3&gt;General&lt;/h3&gt;
 &lt;p&gt;I also made contacts with lots of other people. Python is diverse and it
 was fun to get to know, many people with similar and entirely different
@@ -153,9 +153,9 @@ backgrounds.&lt;/p&gt;
 that’s not why I say it. There is that general sense of respect around
 that German community, you can feel how pretty much everybody is well
 established and doesn’t have to disprove the others.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="keynotes"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="keynotes"&gt;
 &lt;h2&gt;Keynotes&lt;/h2&gt;
 &lt;p&gt;One keynotes speaker had a part about how trolling and hate is bad for a
 community, but that’s not the German Python community.&lt;/p&gt;
@@ -176,8 +176,8 @@ postings and there probably will be), some better approaches.&lt;/p&gt;
 &lt;p&gt;So not integrating me is not necessarily a failure. If it were not for
 Cython, there would not be Nuitka. The original projects will regret the
 fork/remake, but they probably shouldn’t. Competition is good.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="lets-repeat-that"&gt;
+&lt;/section&gt;
+&lt;section id="lets-repeat-that"&gt;
 &lt;h2&gt;Lets repeat that&lt;/h2&gt;
 &lt;p&gt;I believe the PyCON DE 2011 was a huge success. I will most likely go
 again to update people on Nuitka. It’s already clear there will be a
@@ -189,8 +189,8 @@ early booked holiday again.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay Hayen&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/pycon-de-2011-my-report.html" rel="alternate"/>
     <summary>The PyCON DE 2011 is just over, sprints are still happening over the
@@ -209,7 +209,7 @@ it’s not for me this time. Maybe next time.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="my-europython-2013-report"&gt;
+    <content type="html">&lt;section id="my-europython-2013-report"&gt;
 
 &lt;p&gt;Back from Europython 2013 in Florence for a while now. I had a
 presentation about my &lt;a class="reference external" href="/pages/overview.html"&gt;Python compiler Nuitka&lt;/a&gt;.
@@ -235,7 +235,7 @@ not easy:&lt;/p&gt;
 &lt;iframe allowfullscreen="true" src="https://www.youtube.com/embed/ZDHkla5rllg" style="border: 0; height: 345px; width: 560px"&gt;
 &lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;There are also the &lt;a class="reference external" href="/pr/Nuitka-Presentation-PyCON-EU-2012.pdf"&gt;slides&lt;/a&gt; of that talk which may
 also be interesting, but of course are outdated somewhat now.&lt;/p&gt;
-&lt;div class="section" id="years-make-differences"&gt;
+&lt;section id="years-make-differences"&gt;
 &lt;h2&gt;Years make differences&lt;/h2&gt;
 &lt;p&gt;So yeah, the progress happened since 2012 made a difference. Nuitka has
 proven things. Let’s see what this year does to it. I would hope for
@@ -248,8 +248,8 @@ since my return, I have mostly worked on the feedback I got in that
 domain.&lt;/p&gt;
 &lt;p&gt;But for the relatively small amount of time I can invest (outside of
 holidays), it’s make very fast progress.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="out-of-the-box-thinking"&gt;
+&lt;/section&gt;
+&lt;section id="out-of-the-box-thinking"&gt;
 &lt;h2&gt;Out of the box thinking&lt;/h2&gt;
 &lt;p&gt;The feedback during the conference was great. While Nuitka is not yet
 seeing a lot of users, and not as many contributions or donations as I
@@ -264,8 +264,8 @@ two hotfix releases. Currently 0.4.4.2 is released, and contains a huge
 amount of fixes, mostly stuff found by the surge new users.&lt;/p&gt;
 &lt;p&gt;But I deserved that, having said that I didn’t have to do hotfixes for a
 while now.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="florence"&gt;
+&lt;/section&gt;
+&lt;section id="florence"&gt;
 &lt;h2&gt;Florence&lt;/h2&gt;
 &lt;p&gt;Such a lovely place, and so lovely people. It’s a tourist place, true,
 but it’s very open minded. The food is extremely good. And going from
@@ -274,8 +274,8 @@ few beers was very comfortable for after-conference stuff.&lt;/p&gt;
 &lt;p&gt;Now that I have been there 2 times, and the conference even 3 times,
 it’s moving on, to Berlin, which I sort of regret. Knowing the place
 somewhat definitely is an advantage by itself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python-revolution"&gt;
+&lt;/section&gt;
+&lt;section id="python-revolution"&gt;
 &lt;h2&gt;Python Revolution&lt;/h2&gt;
 &lt;p&gt;One thing that came to my mind during the conference, witnessing the
 large amount of non-satisfaction, was that the community is fed up with
@@ -293,8 +293,8 @@ CPython top versions, to add things, that would allow Nuitka to work
 better with it, that could be a staging ground, where such changes are
 nurtured. On the other hand, Nuitka is too irrelevant yet to drive this,
 and it would detract me away from it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gains"&gt;
+&lt;/section&gt;
+&lt;section id="gains"&gt;
 &lt;h2&gt;Gains&lt;/h2&gt;
 &lt;p&gt;So Nuitka got a lot more exposure. And one guy watching the talk even
 created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.svg"&gt;nice logo&lt;/a&gt; for
@@ -303,20 +303,20 @@ is going to use it.&lt;/p&gt;
 &lt;p&gt;And in the aftermath, there were much bug useful reports. And new ideas.
 And reinforcement that what I am doing is actually useful to some people
 already.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="donations"&gt;
+&lt;/section&gt;
+&lt;section id="donations"&gt;
 &lt;h2&gt;Donations&lt;/h2&gt;
 &lt;p&gt;My travel to Florence was in part funded by donations. Thanks a lot to
 all of you who have given, and who would like to also &lt;a class="reference external" href="/pages/donations.html"&gt;make a donation&lt;/a&gt;. Should I receive sufficient donations, I
 intend to go to FOSDEM 2014 as well.&lt;/p&gt;
 &lt;p&gt;Going to Berlin will be a bit cheaper this time around, as I can travel
 there via train.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conclusion"&gt;
+&lt;/section&gt;
+&lt;section id="conclusion"&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;The Europython 2012 and 2013 both are among the times of my life.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/my-europython-2013-report.html" rel="alternate"/>
     <summary>Back from Europython 2013 in Florence for a while now. I had a
@@ -340,7 +340,7 @@ times, and answering questions:</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="not-going-to-fosdem-2014"&gt;
+    <content type="html">&lt;section id="not-going-to-fosdem-2014"&gt;
 
 &lt;p&gt;So I submitted a talk for FOSDEM “Python has a compiler now”. And it
 didn’t get accepted. Quite a surprise to me, but likely mostly logical.
@@ -351,7 +351,7 @@ larger community. Not going to happen now, but maybe next year.&lt;/p&gt;
 &lt;p&gt;Clearly triggered by the rejection, I am questioning Europython 2014 in
 Berlin as a useful destination too. To me it seems, that code writing is
 the best way to create the community at this time anyway.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/not-going-to-fosdem-2014.html" rel="alternate"/>
     <summary>So I submitted a talk for FOSDEM “Python has a compiler now”. And it

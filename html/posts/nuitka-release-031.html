@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-1">
+              <section id="nuitka-release-0-3-1">
 <h1>Nuitka Release 0.3.1<a class="headerlink" href="#nuitka-release-0-3-1" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -138,7 +139,7 @@
 only cleanups and optimization. Most go into the direction of more
 readable code, some aim at making the basic things faster, with good
 results as to performance as you can see below.</p>
-<div class="section" id="optimization">
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Constants in conditions of conditional expressions (<code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">if</span> <span class="pre">cond</span> <span class="pre">else</span>
@@ -174,8 +175,8 @@ be much faster to call functions with keyword arguments.</p></li>
 <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loop code generation. And I started work on
 having a template for assignments.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Do not generate code for the else of <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops if
@@ -208,8 +209,8 @@ tuples and dictionaries all-together.</p></li>
 in the C++ exception handling before exit to CPython to add to the
 traceback object. This was now in-lined, as it won’t be shared ever.</p></li>
 </ul>
-</div>
-<div class="section" id="numbers">
+</section>
+<section id="numbers">
 <h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
@@ -223,8 +224,8 @@ traceback object. This was now in-lined, as it won’t be shared ever.</p></li>
 </div>
 <p>This is 58% for 0.3.1, up from the 25% before. So it’s getting
 somewhere. As always you will find its latest version here.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

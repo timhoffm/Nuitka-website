@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged video</title>
-  <updated>2022-02-12T10:38:13.367377+00:00</updated>
+  <updated>2022-02-12T12:08:42.924811+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/video/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-pycon-de-video"&gt;
+    <content type="html">&lt;section id="nuitka-pycon-de-video"&gt;
 
 &lt;p&gt;Hello everybody,&lt;/p&gt;
 &lt;p&gt;the Video of my presentation is online:
@@ -31,7 +31,7 @@ done.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka---pycon-de-video.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
@@ -50,7 +50,7 @@ done.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="my-europython-2013-report"&gt;
+    <content type="html">&lt;section id="my-europython-2013-report"&gt;
 
 &lt;p&gt;Back from Europython 2013 in Florence for a while now. I had a
 presentation about my &lt;a class="reference external" href="/pages/overview.html"&gt;Python compiler Nuitka&lt;/a&gt;.
@@ -76,7 +76,7 @@ not easy:&lt;/p&gt;
 &lt;iframe allowfullscreen="true" src="https://www.youtube.com/embed/ZDHkla5rllg" style="border: 0; height: 345px; width: 560px"&gt;
 &lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;There are also the &lt;a class="reference external" href="/pr/Nuitka-Presentation-PyCON-EU-2012.pdf"&gt;slides&lt;/a&gt; of that talk which may
 also be interesting, but of course are outdated somewhat now.&lt;/p&gt;
-&lt;div class="section" id="years-make-differences"&gt;
+&lt;section id="years-make-differences"&gt;
 &lt;h2&gt;Years make differences&lt;/h2&gt;
 &lt;p&gt;So yeah, the progress happened since 2012 made a difference. Nuitka has
 proven things. Let’s see what this year does to it. I would hope for
@@ -89,8 +89,8 @@ since my return, I have mostly worked on the feedback I got in that
 domain.&lt;/p&gt;
 &lt;p&gt;But for the relatively small amount of time I can invest (outside of
 holidays), it’s make very fast progress.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="out-of-the-box-thinking"&gt;
+&lt;/section&gt;
+&lt;section id="out-of-the-box-thinking"&gt;
 &lt;h2&gt;Out of the box thinking&lt;/h2&gt;
 &lt;p&gt;The feedback during the conference was great. While Nuitka is not yet
 seeing a lot of users, and not as many contributions or donations as I
@@ -105,8 +105,8 @@ two hotfix releases. Currently 0.4.4.2 is released, and contains a huge
 amount of fixes, mostly stuff found by the surge new users.&lt;/p&gt;
 &lt;p&gt;But I deserved that, having said that I didn’t have to do hotfixes for a
 while now.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="florence"&gt;
+&lt;/section&gt;
+&lt;section id="florence"&gt;
 &lt;h2&gt;Florence&lt;/h2&gt;
 &lt;p&gt;Such a lovely place, and so lovely people. It’s a tourist place, true,
 but it’s very open minded. The food is extremely good. And going from
@@ -115,8 +115,8 @@ few beers was very comfortable for after-conference stuff.&lt;/p&gt;
 &lt;p&gt;Now that I have been there 2 times, and the conference even 3 times,
 it’s moving on, to Berlin, which I sort of regret. Knowing the place
 somewhat definitely is an advantage by itself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python-revolution"&gt;
+&lt;/section&gt;
+&lt;section id="python-revolution"&gt;
 &lt;h2&gt;Python Revolution&lt;/h2&gt;
 &lt;p&gt;One thing that came to my mind during the conference, witnessing the
 large amount of non-satisfaction, was that the community is fed up with
@@ -134,8 +134,8 @@ CPython top versions, to add things, that would allow Nuitka to work
 better with it, that could be a staging ground, where such changes are
 nurtured. On the other hand, Nuitka is too irrelevant yet to drive this,
 and it would detract me away from it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gains"&gt;
+&lt;/section&gt;
+&lt;section id="gains"&gt;
 &lt;h2&gt;Gains&lt;/h2&gt;
 &lt;p&gt;So Nuitka got a lot more exposure. And one guy watching the talk even
 created a really &lt;a class="reference external" href="/_static/Nuitka-Logo-Symbol.svg"&gt;nice logo&lt;/a&gt; for
@@ -144,20 +144,20 @@ is going to use it.&lt;/p&gt;
 &lt;p&gt;And in the aftermath, there were much bug useful reports. And new ideas.
 And reinforcement that what I am doing is actually useful to some people
 already.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="donations"&gt;
+&lt;/section&gt;
+&lt;section id="donations"&gt;
 &lt;h2&gt;Donations&lt;/h2&gt;
 &lt;p&gt;My travel to Florence was in part funded by donations. Thanks a lot to
 all of you who have given, and who would like to also &lt;a class="reference external" href="/pages/donations.html"&gt;make a donation&lt;/a&gt;. Should I receive sufficient donations, I
 intend to go to FOSDEM 2014 as well.&lt;/p&gt;
 &lt;p&gt;Going to Berlin will be a bit cheaper this time around, as I can travel
 there via train.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conclusion"&gt;
+&lt;/section&gt;
+&lt;section id="conclusion"&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;The Europython 2012 and 2013 both are among the times of my life.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/my-europython-2013-report.html" rel="alternate"/>
     <summary>Back from Europython 2013 in Florence for a while now. I had a

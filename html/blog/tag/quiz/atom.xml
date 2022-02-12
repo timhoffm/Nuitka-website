@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged quiz</title>
-  <updated>2022-02-12T10:38:13.285751+00:00</updated>
+  <updated>2022-02-12T12:08:42.858199+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/quiz/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="quiz-question"&gt;
+    <content type="html">&lt;section id="quiz-question"&gt;
 
 &lt;p&gt;Say you have the following module code:&lt;/p&gt;
 &lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
@@ -33,8 +33,8 @@
 &lt;/div&gt;
 &lt;p&gt;What is going to happen? Well, think about it, the solution is in the
 next paragraph.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="solution"&gt;
+&lt;/section&gt;
+&lt;section id="solution"&gt;
 &lt;h1&gt;Solution&lt;/h1&gt;
 &lt;p&gt;The correct answer is that the call “some_function()” is going to give
 you a “UnboundLocalError” exception.&lt;/p&gt;
@@ -47,7 +47,7 @@ the variable name, which forbids you to make it local.&lt;/p&gt;
 Nuitka&lt;/a&gt; and I made it a separate posting,
 because it really surprised me how different function body and class
 body work.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/python-scope-quiz.html" rel="alternate"/>
     <summary>Say you have the following module code:</summary>
@@ -63,7 +63,7 @@ body work.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="quiz-question"&gt;
+    <content type="html">&lt;section id="quiz-question"&gt;
 
 &lt;p&gt;Say you have the following code:&lt;/p&gt;
 &lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
@@ -76,8 +76,8 @@ body work.&lt;/p&gt;
 the really bad side of it?&lt;/p&gt;
 &lt;p&gt;The answer is in the next paragraph, so stop reading if you want to find
 out yourself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="solution"&gt;
+&lt;/section&gt;
+&lt;section id="solution"&gt;
 &lt;h1&gt;Solution&lt;/h1&gt;
 &lt;p&gt;The correct answer is that there is one float that is not equal to
 itself and that is float(“nan”). Which I find terrible. It is so bad, it
@@ -87,7 +87,7 @@ inside is no longer equal to itself.&lt;/p&gt;
 Nuitka&lt;/a&gt; and I made it a separate posting,
 because it really surprised me how this could possibly happen. A builtin
 type that breaks fundamental assumptions like “x == x”.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/python-float-quiz.html" rel="alternate"/>
     <summary>Say you have the following code:</summary>
@@ -103,7 +103,7 @@ type that breaks fundamental assumptions like “x == x”.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="python-assert-quiz"&gt;
+    <content type="html">&lt;section id="python-assert-quiz"&gt;
 
 &lt;p&gt;At Europython conference, in my presentation, I talked about
 re-formulations of Python into simpler Python. It is my intention to
@@ -117,7 +117,7 @@ test suite to work, I noticed, how the re-formulation for Quiz
 Question 2 needed a version dependent solution.&lt;/p&gt;
 &lt;p&gt;And I thought this one was easy. :-)&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="quiz-question-1"&gt;
+&lt;section id="quiz-question-1"&gt;
 &lt;h2&gt;Quiz Question 1&lt;/h2&gt;
 &lt;p&gt;Say you have the following code:&lt;/p&gt;
 &lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
@@ -127,8 +127,8 @@ Question 2 needed a version dependent solution.&lt;/p&gt;
 statement at all. The behavior is required to be absolutely the same.&lt;/p&gt;
 &lt;p&gt;The answer is in the next paragraph, so stop reading if you want to find
 out yourself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="solution-1"&gt;
+&lt;/section&gt;
+&lt;section id="solution-1"&gt;
 &lt;h2&gt;Solution 1&lt;/h2&gt;
 &lt;p&gt;The correct answer is that assertions are the same as a raise exception
 in a conditional statement.&lt;/p&gt;
@@ -143,8 +143,8 @@ that, it should be:&lt;/p&gt;
     &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;AssertionError&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="quiz-question-2"&gt;
+&lt;/section&gt;
+&lt;section id="quiz-question-2"&gt;
 &lt;h2&gt;Quiz Question 2&lt;/h2&gt;
 &lt;p&gt;But wait, there is slightly more to it. Say you have the following code:&lt;/p&gt;
 &lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt;
@@ -154,8 +154,8 @@ that, it should be:&lt;/p&gt;
 statement at all. The behavior is required to be absolutely the same.&lt;/p&gt;
 &lt;p&gt;The answer is in the next paragraph, so stop reading if you want to find
 out yourself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="solution-2"&gt;
+&lt;/section&gt;
+&lt;section id="solution-2"&gt;
 &lt;h2&gt;Solution 2&lt;/h2&gt;
 &lt;p&gt;This is actually version dependent, due to recent optimizations of
 CPython.&lt;/p&gt;
@@ -194,8 +194,8 @@ I am using this for my &lt;a class="reference external" href="/pages/overview.ht
 which benefits from having not to deal with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;assert&lt;/span&gt;&lt;/code&gt; as anything
 special at all. See also the &lt;a class="reference external" href="/doc/developer-manual.html#the-assert-statement"&gt;respective section in the Developer Manual&lt;/a&gt; which explains this
 and other things.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/python-assert-quiz.html" rel="alternate"/>
     <summary>At Europython conference, in my presentation, I talked about
@@ -214,7 +214,7 @@ enjoy.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="try-finally-python-quiz"&gt;
+    <content type="html">&lt;section id="try-finally-python-quiz"&gt;
 
 &lt;p&gt;When working on my Python compiler Nuitka, I often come across
 ridiculous language details of the Python language, and turn these into
@@ -255,7 +255,7 @@ quizzes, for which I finally added a &lt;a class="reference external" href="/blo
 &lt;/div&gt;
 &lt;p&gt;What about that? This one holds an inconsistency.&lt;/p&gt;
 &lt;p&gt;No solutions yet this time.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/try-finally-python-quiz.html" rel="alternate"/>
     <summary>When working on my Python compiler Nuitka, I often come across
@@ -272,7 +272,7 @@ quizzes, for which I finally added a dedicated quiz tag.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="yup-another-python-quiz"&gt;
+    <content type="html">&lt;section id="yup-another-python-quiz"&gt;
 
 &lt;p&gt;Using the following source code as a test happily in my &lt;a class="reference external" href="/pages/overview.html"&gt;Python compiler
 Nuitka&lt;/a&gt; for some years now.&lt;/p&gt;
@@ -283,7 +283,7 @@ Nuitka&lt;/a&gt; for some years now.&lt;/p&gt;
 &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="quiz-question"&gt;
+&lt;section id="quiz-question"&gt;
 &lt;h2&gt;Quiz Question&lt;/h2&gt;
 &lt;p&gt;Lately, when adding Python 3.4 support, this and other code changed. So
 lets do this manually:&lt;/p&gt;
@@ -348,8 +348,8 @@ and it changes.&lt;/p&gt;
 &lt;p&gt;So the quizz this time is, why does this happen. What change in
 CPython3.4 makes this occur. Obviously it has to do with dictionary
 sizes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="solution"&gt;
+&lt;/section&gt;
+&lt;section id="solution"&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
 &lt;p&gt;I had a theory, but I couldn’t confirm it looking at all of CPython
 sources “ceval.c” and “dictobject.c” differences between the two
@@ -359,8 +359,8 @@ dictionaries, or that change to dictionary grow. When &lt;code class="docutils l
 called, the amount of keys is know though, as well as when building the
 constant. So this ought to not play any role.&lt;/p&gt;
 &lt;p&gt;Hm, actually. I don’t know the solution yet. :-)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/yup-another-python-riddle.html" rel="alternate"/>
     <summary>Using the following source code as a test happily in my Python compiler

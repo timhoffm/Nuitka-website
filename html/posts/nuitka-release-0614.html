@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-14">
+              <section id="nuitka-release-0-6-14">
 <h1>Nuitka Release 0.6.14<a class="headerlink" href="#nuitka-release-0-6-14" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -140,7 +141,7 @@ with plugins added that workaround <code class="docutils literal notranslate"><s
 information.</p>
 <p>Also an important new features was added, e.g. the project configuration
 in the main file should prove to be very useful.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Compatibility: Fix, modules that failed to import, should be retried
@@ -172,8 +173,8 @@ package. Fixed in 0.6.13.1 already.</p></li>
 <li><p>Standalone: Matching for package names to not suggest recompile for
 was broken and didn’t match. Fixed in 0.6.13.1 already.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Added support for project options.</p>
@@ -231,8 +232,8 @@ for pip metadata to be present or used.</p>
 it possible to handle them as well.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Faster binary operations.</p>
@@ -273,8 +274,8 @@ which is much faster and improves Nuitka compile times.</p></li>
 <li><p>Make <code class="docutils literal notranslate"><span class="pre">pkgutil</span></code> a hard import too, this is in preparation of more
 optimization for its functions.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Upstream patches for <code class="docutils literal notranslate"><span class="pre">PySide6</span></code> have been contributed and merged
@@ -296,8 +297,8 @@ named.</p></li>
 about “following imports”, which is the new one.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Remove dead code related to constants marshal, the data composer has
@@ -305,16 +306,16 @@ replaced this.</p></li>
 <li><p>Avoid internal API usage for loading extension modules on Linux,
 there is a function in <code class="docutils literal notranslate"><span class="pre">sys</span></code> module to get the ld flags.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fix, the <code class="docutils literal notranslate"><span class="pre">only</span></code> mode wasn’t working properly.</p></li>
 <li><p>Use new project options feature for specific options in basic tests
 allowing to remove them from the test runner.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>For PySide2 things became more perfect, but it takes upstream patches
 unfortunately such that only PySide6.1 will be working out of the box
@@ -335,8 +336,8 @@ more about loop variables, etc. so we can achieve the near C speed we
 are looking for, at least in the field of <code class="docutils literal notranslate"><span class="pre">int</span></code> performance.</p>
 <p>This release has largely been driven by the <a class="reference external" href="/doc/commercial.html">Nuitka Commercial</a> offering and needs for compatibility with more
 code, which is of course always a good thing.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged benchmark</title>
-  <updated>2022-02-12T10:38:11.095701+00:00</updated>
+  <updated>2022-02-12T12:08:41.329411+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/benchmark/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="looking-where-nuitka-stands"&gt;
+    <content type="html">&lt;section id="looking-where-nuitka-stands"&gt;
 
 &lt;p&gt;In case you wonder, [what Nuitka is](/pages/overview.html), look here.
 Over the 0.3.x release cycle, I have mostly looked at its performance
@@ -25,7 +25,7 @@ micro benchmarks, which is quite obviously aimed for looking CPython
 implementations only. In that it’s quite good to check where Nuitka is
 good at, and where it can still take improvements for the milestone 2
 stuff.&lt;/p&gt;
-&lt;div class="section" id="enhancements-to-pybench"&gt;
+&lt;section id="enhancements-to-pybench"&gt;
 &lt;h2&gt;Enhancements to PyBench&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The pybench refused to accept that Nuitka could use so little time on
@@ -37,8 +37,8 @@ gives interesting factors.&lt;/p&gt;&lt;/li&gt;
 only, so there is an option now to output only tests with negative
 values.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-interesting-parts"&gt;
+&lt;/section&gt;
+&lt;section id="the-interesting-parts"&gt;
 &lt;h2&gt;The Interesting Parts&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Nuitka currently has some fields where optimizations are already so
@@ -74,8 +74,8 @@ creating, they are based on codespeed, which I will blog upon
 separately.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Look at this table of results as produced by pybench:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="benchmark-results"&gt;
+&lt;/section&gt;
+&lt;section id="benchmark-results"&gt;
 &lt;h2&gt;Benchmark Results&lt;/h2&gt;
 &lt;table summary="Comparing CPython and Nuitka with PyBench"&gt;
 &lt;tbody&gt;
@@ -434,8 +434,8 @@ separately.&lt;/p&gt;&lt;/li&gt;
 &lt;td&gt;&lt;span style="color: #ff0000;"&gt;-94.3%&lt;/span&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;/table&gt;&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html" rel="alternate"/>
     <summary>In case you wonder, [what Nuitka is](/pages/overview.html), look here.
@@ -455,12 +455,12 @@ the progress we have made there.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-speedcenter-is-back"&gt;
+    <content type="html">&lt;section id="nuitka-speedcenter-is-back"&gt;
 
 &lt;p&gt;Once a long time ago, I was benchmarking Nuitka more often. Check &lt;a class="reference external" href="/pages/overview.html"&gt;“What
 is Nuitka?”&lt;/a&gt; in case you don’t know what it
 is.&lt;/p&gt;
-&lt;div class="section" id="problem"&gt;
+&lt;section id="problem"&gt;
 &lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;And I was considering the use of codespeed, and had some data online.
 But ultimately, it got discontinued. This has 3 reasons:&lt;/p&gt;
@@ -494,8 +494,8 @@ wouldn’t have been too motivating.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="solution"&gt;
+&lt;/section&gt;
+&lt;section id="solution"&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
 &lt;p&gt;I have simply created a small wrapper:&lt;/p&gt;
 &lt;ol class="arabic"&gt;
@@ -527,8 +527,8 @@ want) to there.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/speedcenter-is-back.html" rel="alternate"/>
     <summary>Once a long time ago, I was benchmarking Nuitka more often. Check “What

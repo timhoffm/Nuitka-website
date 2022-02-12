@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-1">
+              <section id="nuitka-release-0-6-1">
 <h1>Nuitka Release 0.6.1<a class="headerlink" href="#nuitka-release-0-6-1" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release comes after a relatively long time, and contains important
 new optimization work, and even more bug fixes.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fix, the options <code class="docutils literal notranslate"><span class="pre">--[no]follow-import-to=package_name</span></code> was supposed
@@ -208,8 +209,8 @@ automatically.</p></li>
 interpreter, aka <code class="docutils literal notranslate"><span class="pre">--python-flag=utf8_mode</span></code> was not preserved in the
 compiled binary in all cases.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Enabled C target type <code class="docutils literal notranslate"><span class="pre">void</span></code> which will catch creating unused stuff
@@ -228,8 +229,8 @@ in-place extension where possible.</p></li>
 <li><p>Loop variables no longer loose type information, but instead collect
 the set of possible type shapes allowing optimization for them.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Corrected download link for Arch AUR link of develop package.</p></li>
@@ -239,8 +240,8 @@ the set of possible type shapes allowing optimization for them.</p></li>
 Manual.</p></li>
 <li><p>Added description how to use CondaCC on Windows to the User Manual.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The operations used for <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code>, and <code class="docutils literal notranslate"><span class="pre">await</span></code>
@@ -255,16 +256,16 @@ fully annotating everything that can happen.</p></li>
 because there are no local C variables declared, and properly indent
 them.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fixups for the manual Valgrind runner and the UI changes.</p></li>
 <li><p>Test runner detects lock issue of <code class="docutils literal notranslate"><span class="pre">clcache</span></code> on Windows and
 considers it a permission problem that causes a retry.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This addresses even more corner cases not working correctly, the out of
 the box experience should be even better now.</p>
@@ -285,8 +286,8 @@ will be needed in this domain to make improvements more demonstrable. It
 may well end up being the focus for the next release to improve Nuitka
 speedcenter to give more fine grained insights across minor changes of
 Nuitka and graphs with more history.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

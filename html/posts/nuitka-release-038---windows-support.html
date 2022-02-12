@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-8">
+              <section id="nuitka-release-0-3-8">
 <h1>Nuitka Release 0.3.8<a class="headerlink" href="#nuitka-release-0-3-8" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -153,7 +154,7 @@ MinGW 4.5 or higher only.</p>
 <p>Otherwise there have been the usual round of performance improvements
 and more cleanups. This release is otherwise milestone 2 work only,
 which will have to continue for some time more.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Lambda generators were not fully compatible, their simple form could
@@ -166,8 +167,8 @@ error message.</p></li>
 <li><p>There was an <code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">False</span></code> right after warning about not found
 modules in the <code class="docutils literal notranslate"><span class="pre">--deep</span></code> mode, which was of course unnecessary.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>When unpacking variables in assignments, the temporary variables are
@@ -211,8 +212,8 @@ cannot be raised. This avoids temporary references completely for the
 common case.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, and <code class="docutils literal notranslate"><span class="pre">while</span></code> statements had always empty
@@ -220,8 +221,8 @@ common case.</p>
 empty branches. No harm to performance, but this got cleaned up.</p></li>
 <li><p>Some more generated code white space fixes.</p></li>
 </ul>
-</div>
-<div class="section" id="new-tests">
+</section>
+<section id="new-tests">
 <h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>The CPython 2.7 test suite now also has the <code class="docutils literal notranslate"><span class="pre">doctests</span></code> extracted to
@@ -242,8 +243,8 @@ things much faster, but there are still fields to work on. This
 version needed changes to stand the speed of Nuitka. These will be
 subject of a later posting.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>There is now a “tests/benchmarks/micro” directory to contain tiny
@@ -263,8 +264,8 @@ adaptations were necessary. Windows new lines are now ignored in
 difference check, and addresses under Windows are upper case, small
 things.</p></li>
 </ul>
-</div>
-<div class="section" id="numbers">
+</section>
+<section id="numbers">
 <h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
@@ -278,8 +279,8 @@ things.</p></li>
 </div>
 <p>This is a 140% speed increase of 0.3.8 compared to CPython, up from 132%
 compared to the previous release.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

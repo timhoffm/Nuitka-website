@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-progress-in-spring-2015">
+              <section id="nuitka-progress-in-spring-2015">
 <h1><a class="toc-backref" href="#id1">Nuitka Progress in Spring 2015</a><a class="headerlink" href="#nuitka-progress-in-spring-2015" title="Permalink to this headline"></a></h1>
 <p>It’s absolutely time to speak about what’s going on with Nuitka, there
 have been a few releases, and big things are going to happen now. The
@@ -172,7 +173,7 @@ different.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="ssa-single-state-assignment-form">
+<section id="ssa-single-state-assignment-form">
 <h2><a class="toc-backref" href="#id2">SSA (Single State Assignment Form)</a><a class="headerlink" href="#ssa-single-state-assignment-form" title="Permalink to this headline"></a></h2>
 <p>For a long, long time already, each release of Nuitka has worked towards
 increasing <a class="reference external" href="http://en.wikipedia.org/wiki/Static_single_assignment_form">“SSA”</a> usage in
@@ -202,8 +203,8 @@ will enable analysis, that leads to avoiding e.g. the creation of
 function objects for local functions, becoming able to in-line, etc.</p>
 <p>This is major excitement to me. And I cannot wait to have the releases
 that do this.</p>
-</div>
-<div class="section" id="scalability">
+</section>
+<section id="scalability">
 <h2><a class="toc-backref" href="#id3">Scalability</a><a class="headerlink" href="#scalability" title="Permalink to this headline"></a></h2>
 <p>The focus has also been lately, to reduce Nuitka’s own memory usage. It
 has gone down by a large factor, often by avoiding cyclic dependencies
@@ -214,12 +215,12 @@ the optimization become more clever, less code needs to be generated,
 and that will help a lot. On some platforms, MSVC most notably, it can
 be really slow, but it’s noteworthy that Nuitka works not just with 2008
 edition, but with the latest MSVC, which appears to be better.</p>
-</div>
-<div class="section" id="compatibility">
+</section>
+<section id="compatibility">
 <h2><a class="toc-backref" href="#id4">Compatibility</a><a class="headerlink" href="#compatibility" title="Permalink to this headline"></a></h2>
 <p>There was not a whole lot to gain in the compatibility domain anymore.
 Nothing important certainly. But there are import changes.</p>
-<div class="section" id="python-3-5">
+<section id="python-3-5">
 <h3><a class="toc-backref" href="#id5">Python 3.5</a><a class="headerlink" href="#python-3-5" title="Permalink to this headline"></a></h3>
 <p>The next release has changes to compile and run the Python3.4 test suite
 successfully. Passing here means, to pass/fail in the same way as does
@@ -231,14 +232,14 @@ things to stabilize. It’s currently only an alpha release.</p>
 Python version at release time. And since 3.4 was such a heavy drain,
 and still not perfectly handled (<code class="docutils literal notranslate"><span class="pre">super</span></code> still works like it’s 3.3
 e.g.), I wanted to know what is coming a bit sooner.</p>
-</div>
-<div class="section" id="cells-for-closure">
+</section>
+<section id="cells-for-closure">
 <h3><a class="toc-backref" href="#id6">Cells for Closure</a><a class="headerlink" href="#cells-for-closure" title="Permalink to this headline"></a></h3>
 <p>We now provide a <code class="docutils literal notranslate"><span class="pre">__closure__</span></code> value for compiled functions too. These
 are not writable in Python, so it’s only a view. Having moved storage
 into the compiled function object, that was easy.</p>
-</div>
-<div class="section" id="importing-enhancements">
+</section>
+<section id="importing-enhancements">
 <h3><a class="toc-backref" href="#id7">Importing Enhancements</a><a class="headerlink" href="#importing-enhancements" title="Permalink to this headline"></a></h3>
 <p>The the past couple of releases, the import logic was basically
 re-written with compatibility much increased. The handling of file case
@@ -250,11 +251,11 @@ wrong one will of course have seriously bad impacts on compile time
 analysis too. So once we do cross module optimization, this must be rock
 solid.</p>
 <p>I think we have gotten there, tackling these finer details now too.</p>
-</div>
-</div>
-<div class="section" id="performance">
+</section>
+</section>
+<section id="performance">
 <h2><a class="toc-backref" href="#id8">Performance</a><a class="headerlink" href="#performance" title="Permalink to this headline"></a></h2>
-<div class="section" id="graphs-and-benchmarks">
+<section id="graphs-and-benchmarks">
 <h3><a class="toc-backref" href="#id9">Graphs and Benchmarks</a><a class="headerlink" href="#graphs-and-benchmarks" title="Permalink to this headline"></a></h3>
 <p>Nuitka, users don’t know what to expect regarding the speed of their
 code after compilation through Nuitka, neither now nor after type
@@ -288,9 +289,9 @@ that with actually in-line, this will of course be even better.</p>
 creations, it will apply there too. The puzzle completes.</p>
 <p>But we also need to put real programs and use cases to test. This may
 need your help. Let me know if you want to.</p>
-</div>
-</div>
-<div class="section" id="standalone">
+</section>
+</section>
+<section id="standalone">
 <h2><a class="toc-backref" href="#id10">Standalone</a><a class="headerlink" href="#standalone" title="Permalink to this headline"></a></h2>
 <p>The standalone mode of Nuitka is pretty good, and as usual it continued
 to improve only.</p>
@@ -299,25 +300,25 @@ framework, which is under development, and being used to handle e.g.
 PyQt plug-ins, or known issues with certain packages.</p>
 <p>The importing improvements already mentioned, have now allowed to cover
 many more libraries successfully than before.</p>
-</div>
-<div class="section" id="other-stuff">
+</section>
+<section id="other-stuff">
 <h2><a class="toc-backref" href="#id11">Other Stuff</a><a class="headerlink" href="#other-stuff" title="Permalink to this headline"></a></h2>
-<div class="section" id="debian-stable">
+<section id="debian-stable">
 <h3><a class="toc-backref" href="#id12">Debian Stable</a><a class="headerlink" href="#debian-stable" title="Permalink to this headline"></a></h3>
 <p>Nuitka is now part of Debian stable, aka Jessie. Debian and Python are
 the two things closest to my heart in the tech field. You can imagine
 that being an upstream worthy of inclusion into Debian stable is an
 import milestone to Nuitka for me.</p>
-</div>
-<div class="section" id="funding">
+</section>
+<section id="funding">
 <h3><a class="toc-backref" href="#id13">Funding</a><a class="headerlink" href="#funding" title="Permalink to this headline"></a></h3>
 <p>Nuitka receives the occasional <a class="reference external" href="/pages/donations.html">donation</a> and those make me very happy.
 As there is no support from organization like the PSF, I am all on my
 own there.</p>
 <p>This year I likely will travel to Europython 2015, and would ask you to
 support me with that, it’s going to be expensive.</p>
-</div>
-<div class="section" id="europython-2015">
+</section>
+<section id="europython-2015">
 <h3><a class="toc-backref" href="#id14">EuroPython 2015</a><a class="headerlink" href="#europython-2015" title="Permalink to this headline"></a></h3>
 <p>I have plans to present Nuitka’s function in-lining there, real stuff,
 on a fully and functional compiler that works as a drop-in replacement.</p>
@@ -325,8 +326,8 @@ on a fully and functional compiler that works as a drop-in replacement.</p>
 Actually so far I felt ahead of the plan, but as you know, this can
 easily change at any point. But Nuitka stands on very stable grounds
 code wise.</p>
-</div>
-<div class="section" id="collaborators">
+</section>
+<section id="collaborators">
 <h3><a class="toc-backref" href="#id15">Collaborators</a><a class="headerlink" href="#collaborators" title="Permalink to this headline"></a></h3>
 <p>Things are coming along nicely. When I started out, I was fully aware
 that the project is something that I can do on my own if necessary, and
@@ -338,9 +339,9 @@ e.g. review posts of mine, test out things, pick up small jobs, answer
 questions of newcomers, you know the drill probably.</p>
 <p>Nuitka is about to make break through progress. And you can be a part of
 it. Now.</p>
-</div>
-</div>
-<div class="section" id="future">
+</section>
+</section>
+<section id="future">
 <h2><a class="toc-backref" href="#id16">Future</a><a class="headerlink" href="#future" title="Permalink to this headline"></a></h2>
 <p>So, there is multiple things going on:</p>
 <ul>
@@ -369,8 +370,8 @@ things conretely, and to e.g. do type inference, and generate different
 codes for booleans, ints or float values.</p>
 <p>Let me know, if you are willing to help. I really need that help to make
 things happen faster. Nuitka will become more and more important only.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

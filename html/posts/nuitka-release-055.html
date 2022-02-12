@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-5">
+              <section id="nuitka-release-0-5-5">
 <h1>Nuitka Release 0.5.5<a class="headerlink" href="#nuitka-release-0-5-5" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -143,7 +144,7 @@ code.</p>
 <p>And then there is much improved support for using standalone mode
 together with virtualenv. This combination was not previously supported,
 but should work now.</p>
-<div class="section" id="new-features">
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Added support for Python3.4</p>
@@ -153,8 +154,8 @@ statements, tuples as <code class="docutils literal notranslate"><span class="pr
 messages, additional checks, and many more detail changes.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Using SSA knowledge, local variable assignments now no longer need to
@@ -181,8 +182,8 @@ eliminate frame usages for many cases. Including the above example.</p></li>
 <li><p>Using less memory for keeping variable information.</p></li>
 <li><p>Also using less memory for constant nodes.</p></li>
 </ul>
-</div>
-<div class="section" id="bug-fixes">
+</section>
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>The standalone freezing code was reading Python source as UTF-8 and
@@ -229,8 +230,8 @@ hash randomization as it would affect code generation.</p>
 <li><p>Raising tuples exception as exceptions was not compatible (Python2)
 or reference leaking (Python3).</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Running <code class="docutils literal notranslate"><span class="pre">2to3</span></code> is now avoided for tests that are already running on
@@ -248,8 +249,8 @@ clear interface for disabling test cases.</p></li>
 can be executed with Python3 directly, making debugging them less
 tedious.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Really important removal of “variable references”. They didn’t solve
@@ -268,8 +269,8 @@ so they are executed on all platforms in debug mode.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">locals</span></code> built-in code now uses code generation for accessing
 local variable values instead having its own stuff.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The Python version 3.4 is now officially supported. There are a few
@@ -286,15 +287,15 @@ choices and options.</p></li>
 <li><p>Also pickup <code class="docutils literal notranslate"><span class="pre">g++44</span></code> automatically, which makes using Nuitka on
 CentOS5 more automatic.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release represents a very important step ahead. Using SSA for real
 stuff will allow us to build the trust necessary to take the next steps.
 Using the SSA information, we could start implementing more
 optimizations.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

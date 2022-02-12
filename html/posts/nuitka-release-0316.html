@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,7 +131,7 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-3-16">
+              <section id="nuitka-release-0-3-16">
 <h1>Nuitka Release 0.3.16<a class="headerlink" href="#nuitka-release-0-3-16" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
@@ -144,7 +145,7 @@ I don’t know when, but it seems that it’s going to work one day.</p>
 <p>Also there has an effort to make the Debian packaging cleaner,
 addressing all kinds of small issues that prevented it from entering the
 Debian repository. It’s still not there, but it’s making progress.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fixed a packaging problem for Linux and x64 platform, the new
@@ -191,8 +192,8 @@ changed by the operation, but e.g. the length did.</p></li>
 <li><p>Fix, the future spec was not properly preserving the future division
 flag.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The optimization scales now much better, because per-module
@@ -201,8 +202,8 @@ modules all the time. With many modules recursed into, this makes a
 huge difference in compilation time.</p></li>
 <li><p>The creation of dictionaries from constants is now also optimized.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>As a new feature functions now have the <code class="docutils literal notranslate"><span class="pre">func_defaults</span></code> and
@@ -216,8 +217,8 @@ a compiled binary unless <code class="docutils literal notranslate"><span class=
 which case it is preserved. This allows to make sure that a binary is
 in fact containing everything required.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The help output of Nuitka was polished a lot more. It is now more
@@ -229,8 +230,8 @@ failed module inclusions become immediately obvious.</p></li>
 <li><p>The basic tests can now be run with <code class="docutils literal notranslate"><span class="pre">PYTHON=python3.2</span></code> and use
 <code class="docutils literal notranslate"><span class="pre">2to3</span></code> conversion in that case.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Moved <code class="docutils literal notranslate"><span class="pre">tags</span></code> to a separate module, make optimization emit only
@@ -243,8 +244,8 @@ gitweb are referenced, etc.</p></li>
 portability for them.</p></li>
 <li><p>Some more PyLint cleanups.</p></li>
 </ul>
-</div>
-<div class="section" id="new-tests">
+</section>
+<section id="new-tests">
 <h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>There is now a <code class="docutils literal notranslate"><span class="pre">Crasher</span></code> test, for tests that crashed Nuitka
@@ -267,8 +268,8 @@ too.</p></li>
 <li><p>Added test function with two <code class="docutils literal notranslate"><span class="pre">raise</span></code> in an exception handler, so
 that one becomes dead code and removed without the crash.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>The “git flow” was really great in this release cycle. There were many
 hot fix releases being made, so that the bugs could be addressed
@@ -293,8 +294,8 @@ Python3 is supported, the more benefit from increased test covered.</p>
 <p>What’s missing is more “hg” completeness. I think only the <code class="docutils literal notranslate"><span class="pre">raise</span></code>
 without exception set and the <code class="docutils literal notranslate"><span class="pre">func_defaults</span></code> issue were going into
 its direction, but it won’t be enough yet.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

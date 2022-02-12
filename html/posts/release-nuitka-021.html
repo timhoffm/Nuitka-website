@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-2-1">
+              <section id="nuitka-release-0-2-1">
 <h1>Nuitka Release 0.2.1<a class="headerlink" href="#nuitka-release-0-2-1" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>The march goes on, this is another minor release with a bunch of
 substantial improvements:</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Packages now also can be embedded with the <code class="docutils literal notranslate"><span class="pre">--deep</span></code> option too,
@@ -144,14 +145,14 @@ before they could not be imported from the executable.</p></li>
 <li><p>In-lined exec with their own future statements leaked these to the
 surrounding code.</p></li>
 </ul>
-</div>
-<div class="section" id="reduced-differences">
+</section>
+<section id="reduced-differences">
 <h2>Reduced Differences<a class="headerlink" href="#reduced-differences" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The future print function import is now supported too.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Independence of the compiled function type. When I started it was
@@ -163,15 +164,15 @@ code, no more <code class="docutils literal notranslate"><span class="pre">metho
 <li><p>PyLint was used to find the more important style issues and potential
 bugs, also helping to identify some dead code.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>The major difference now is the lack of a throw method for generator
 functions. I will try to address that in a 0.2.2 release if possible.
 The plan is that the 0.2.x series will complete these tasks, and 0.3
 could aim at some basic optimization finally.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,13 +131,13 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-6-4">
+              <section id="nuitka-release-0-6-4">
 <h1>Nuitka Release 0.6.4<a class="headerlink" href="#nuitka-release-0-6-4" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release contains many bug fixes all across the board. There is also
 new optimization and many organisational improvements.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>When linking very large programs or packages, with gcc compiler,
@@ -176,8 +177,8 @@ otherwise.</p></li>
 <li><p>Python3: Proper C identifiers for names that fit into <code class="docutils literal notranslate"><span class="pre">latin-1</span></code>,
 but are not <code class="docutils literal notranslate"><span class="pre">ascii</span></code> encodings.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Windows: Catch most common user error of using compiler from one
@@ -191,8 +192,8 @@ only pure distutils.</p></li>
 distutils.</p></li>
 <li><p>Python3.8: Initial compatibility changes to get basic tests to work.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Nuitka is participating in the GSoC 2019 with 2 students, Batakrishna
@@ -211,8 +212,8 @@ the Github organisation features.</p></li>
 <li><p>Added support for Ubuntu Disco, removed support for Ubuntu Artful
 packages.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Windows: Attach data blobs as Windows resource files directly for
@@ -232,8 +233,8 @@ exception control flow.</p></li>
 when possible.</p></li>
 <li><p>Better static analysis for even more type operations.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fixed many kinds of typos in the code base with <code class="docutils literal notranslate"><span class="pre">codespell</span></code>.</p></li>
@@ -243,8 +244,8 @@ previously not done.</p></li>
 already exists, instead provide
 <code class="docutils literal notranslate"><span class="pre">nuitka.util.FileOperations.copyTree</span></code> and use that exclusively.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added new mode of operation to test runners, <code class="docutils literal notranslate"><span class="pre">only</span></code> that executes
@@ -261,8 +262,8 @@ more robust against variable behavior of distutils and setuptools.</p></li>
 <li><p>Added standalone test for Pmw.</p></li>
 <li><p>Added standalone test for passlib.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>Again this release is a sign of increasing adoption of Nuitka. The GSoC
 2019 is also showing effects, definitely will in the next release.</p>
@@ -277,8 +278,8 @@ cases working is astounding.</p>
 <p>In upcoming releases, new built-ins will be optimized, and
 specialization of operations will hit more and more code now that the
 infrastructure for it is in place.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

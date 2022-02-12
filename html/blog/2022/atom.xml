@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2022</title>
-  <updated>2022-02-12T10:38:05.315805+00:00</updated>
+  <updated>2022-02-12T12:08:36.239793+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2022/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,13 +13,13 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-6-19"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-6-19"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release adds support for 3.10 while also adding very many new
 optimization, and doing a lot of bug fixes.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug Fixes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Calls to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;importlib.import_module&lt;/span&gt;&lt;/code&gt; with expressions that need
@@ -122,8 +122,8 @@ file handles still work and are not &lt;code class="docutils literal notranslate
 &lt;li&gt;&lt;p&gt;Windows: Fix, need to claim all OS versions of Windows as supported,
 otherwise e.g. high DPI features are not available.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Programs that are to be executed with the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-m&lt;/span&gt;&lt;/code&gt; flag, can now be
@@ -149,8 +149,8 @@ differences in their Python installation.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added experimental plugin &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;trio&lt;/span&gt;&lt;/code&gt; that works around issues with that
 package.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Also trust hard imports made on the module level in function level
@@ -245,8 +245,8 @@ knows more about the standard library, and its runners which it will
 exclude from compilation if use for it. Currently that is not the
 default, but it should become that.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Migrated the Nuitka blog from Nikola to Sphinx based ABlog and made
@@ -305,8 +305,8 @@ its name is output when CTRL-C is hit.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Windows: Splash screen only works with MSVC, added error indicator
 for MinGW64 that states that and asks for porting help.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Generate all existing C code for generic builtin type method calls
@@ -340,8 +340,8 @@ things to the dedicate function, and harmonized it more.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Resolved deprecation warnings given by with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--python-debug&lt;/span&gt;&lt;/code&gt; for
 Nuitka.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tests"&gt;
+&lt;/section&gt;
+&lt;section id="tests"&gt;
 &lt;h2&gt;Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Started test suite for Python PGO, not yet completely working though,
@@ -354,8 +354,8 @@ to a few details not yet being as compatible as needed.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added test suite for CPython 3.10 and enable execution of tests with
 this version on Github actions.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;This release is another big step forward.&lt;/p&gt;
 &lt;p&gt;The amount of optimization added is again very large, some of which yet
@@ -390,8 +390,8 @@ means it will be slower than 3.9 during compilation.&lt;/p&gt;
 &lt;p&gt;Overall, Nuitka is closing many open lines of action with this. The
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;setuptools&lt;/span&gt;&lt;/code&gt; support has yet again improved and at this point should
 be very good.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-0619.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -405,7 +405,7 @@ be very good.&lt;/p&gt;
     <id>https://nuitka.net/posts/first-nuitka-live-stream.html</id>
     <title>First Nuitka Live Stream</title>
     <updated>2022-01-14T00:00:00+00:00</updated>
-    <content type="html">&lt;div class="section" id="first-nuitka-live-stream"&gt;
+    <content type="html">&lt;section id="first-nuitka-live-stream"&gt;
 
 &lt;p&gt;Tomorrow, Saturday 15.01.2022, there will be not one, but two live
 stream of me coding on Nuitka, and talking and chatting with visitors in
@@ -427,7 +427,7 @@ You know you want to do it. I know I want you to do to it!&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/first-nuitka-live-stream.html" rel="alternate"/>
     <summary>Tomorrow, Saturday 15.01.2022, there will be not one, but two live
@@ -443,15 +443,15 @@ CEST and from 17-20 CEST.</summary>
     <id>https://nuitka.net/posts/next-nuitka-live-stream-30-01-2022.html</id>
     <title>Next Nuitka Live Stream</title>
     <updated>2022-01-30T00:00:00+00:00</updated>
-    <content type="html">&lt;div class="section" id="next-nuitka-live-stream"&gt;
+    <content type="html">&lt;section id="next-nuitka-live-stream"&gt;
 
 &lt;p&gt;Today, Sunday 30.01.2022, there will be the third live stream of me
 coding on Nuitka, and talking and chatting with visitors in the Discord
 channel created specifically for this. I will go from 9-12 CEST and from
 18 CEST until probably at least 20 CEST, but it seems I tend to go
 overtime.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="last-time"&gt;
+&lt;/section&gt;
+&lt;section id="last-time"&gt;
 &lt;h1&gt;Last time&lt;/h1&gt;
 &lt;p&gt;So the last two streams are on my Youtube, these are around 4h videos,
 done on the same day.&lt;/p&gt;
@@ -470,8 +470,8 @@ interface changes and research. This one works mostly, but will need
 more live. Also I think I looked at reducing what is included with the
 follow standard library option, getting very minimal distributions out
 of it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="this-time"&gt;
+&lt;/section&gt;
+&lt;section id="this-time"&gt;
 &lt;h1&gt;This time&lt;/h1&gt;
 &lt;p&gt;All around, this last stream, was a huge success. I was a bit under the
 weather last weekend, but we go on now.&lt;/p&gt;
@@ -482,16 +482,16 @@ looking at the caching of bytecode demoted modules, that is kind of
 ready to be used, but is not currently, which is a pity. And of course,
 the Python PGO may get a closer look, such that e.g. it works for
 standalone mode.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how-to-join"&gt;
+&lt;/section&gt;
+&lt;section id="how-to-join"&gt;
 &lt;h1&gt;How to Join&lt;/h1&gt;
 &lt;p&gt;There is a &lt;a class="reference external" href="/pages/Streaming.html"&gt;dedicated page on the web site&lt;/a&gt;
 which has the details. Spoiler, it’s free and I have no plans for
 anything that involves a subscription of any kind. Of course, talking of
 subscription, do also checkout the &lt;a class="reference external" href="/doc/commercial.html"&gt;Nuitka commercial&lt;/a&gt; offering. That is a subscription with adds that
 protect your IP even more than regular Nuitka.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="join-me"&gt;
+&lt;/section&gt;
+&lt;section id="join-me"&gt;
 &lt;h1&gt;Join me&lt;/h1&gt;
 &lt;p&gt;Come and join me there. &lt;a class="reference external" href="/pages/Streaming.html"&gt;Instructions&lt;/a&gt; here.
 You know you want to do it. I know I want you to do to it!&lt;/p&gt;
@@ -499,7 +499,7 @@ You know you want to do it. I know I want you to do to it!&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/next-nuitka-live-stream-30-01-2022.html" rel="alternate"/>
     <summary>Today, Sunday 30.01.2022, there will be the third live stream of me

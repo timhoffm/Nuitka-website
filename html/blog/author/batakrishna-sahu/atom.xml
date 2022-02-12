@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts by Batakrishna Sahu</title>
-  <updated>2022-02-12T10:38:03.191688+00:00</updated>
+  <updated>2022-02-12T12:08:34.455576+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/author/batakrishna-sahu/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Batakrishna Sahu</name>
     </author>
-    <content type="html">&lt;div class="section" id="batakrishna-sahu"&gt;
+    <content type="html">&lt;section id="batakrishna-sahu"&gt;
 
 &lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;My name is Batakrishna Sahu and I am from India. I’m very grateful to be
@@ -31,7 +31,7 @@ this summer.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Batakrishna&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/batakrishna-sahu-intro.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
@@ -47,7 +47,7 @@ this summer.&lt;/p&gt;
     <author>
       <name>Batakrishna Sahu</name>
     </author>
-    <content type="html">&lt;div class="section" id="bksahu-s-gsoc-warp-up"&gt;
+    <content type="html">&lt;section id="bksahu-s-gsoc-warp-up"&gt;
 
 &lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;GSoC 2019 has almost come to an end! It’s the time to wrap up this mega
@@ -56,7 +56,7 @@ learning experience has undergone a roller-coaster ride and it has not
 only boosted my growth as a developer but also as an individual. Over
 the last 3 months the following are my major contributions to this
 project:&lt;/p&gt;
-&lt;div class="section" id="built-ins-optimizations"&gt;
+&lt;section id="built-ins-optimizations"&gt;
 &lt;h2&gt;Built-ins Optimizations&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;dl&gt;
@@ -198,8 +198,8 @@ because unlike &lt;cite&gt;zip&lt;/cite&gt; in Python 2, &lt;cite&gt;zip&lt;/cit
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="test-suite"&gt;
+&lt;/section&gt;
+&lt;section id="test-suite"&gt;
 &lt;h2&gt;Test suite&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;dl&gt;
@@ -249,15 +249,15 @@ bytes instead of string.&lt;/p&gt;&lt;/li&gt;
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="documentation"&gt;
+&lt;/section&gt;
+&lt;section id="documentation"&gt;
 &lt;h2&gt;Documentation&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Nuitka git work flow: &lt;a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/485"&gt;PR #485&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And other minor doc fixes are added with their respective pull requests.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-i-learned"&gt;
+&lt;/section&gt;
+&lt;section id="what-i-learned"&gt;
 &lt;h2&gt;What I learned&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Learned the software engineering principles and how to keep my work
@@ -276,8 +276,8 @@ professional career in Software engineering.&lt;/p&gt;&lt;/li&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Batakrishna&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/bksahus-gsoc-wrap-up.html" rel="alternate"/>
     <summary>Hello everyone!</summary>

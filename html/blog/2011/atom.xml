@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2011</title>
-  <updated>2022-02-12T10:38:06.793089+00:00</updated>
+  <updated>2022-02-12T12:08:37.453331+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2011/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="quiz-question"&gt;
+    <content type="html">&lt;section id="quiz-question"&gt;
 
 &lt;p&gt;Say you have the following code:&lt;/p&gt;
 &lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
@@ -26,8 +26,8 @@
 the really bad side of it?&lt;/p&gt;
 &lt;p&gt;The answer is in the next paragraph, so stop reading if you want to find
 out yourself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="solution"&gt;
+&lt;/section&gt;
+&lt;section id="solution"&gt;
 &lt;h1&gt;Solution&lt;/h1&gt;
 &lt;p&gt;The correct answer is that there is one float that is not equal to
 itself and that is float(“nan”). Which I find terrible. It is so bad, it
@@ -37,7 +37,7 @@ inside is no longer equal to itself.&lt;/p&gt;
 Nuitka&lt;/a&gt; and I made it a separate posting,
 because it really surprised me how this could possibly happen. A builtin
 type that breaks fundamental assumptions like “x == x”.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/python-float-quiz.html" rel="alternate"/>
     <summary>Say you have the following code:</summary>
@@ -53,7 +53,7 @@ type that breaks fundamental assumptions like “x == x”.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-5"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-5"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -68,7 +68,7 @@ changes were performed or at least triggered by Nicolas Dumazet, who
 contributed a lot of high quality commits as you can see from the gitweb
 history. He appears to try and compile Mercurial and Nuitka, and this
 resulted in important contributions.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Nicolas found a reference counting bug with nested parameter calls.
@@ -98,8 +98,8 @@ many weaknesses.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;A local re-raise of an exception didn’t have the original line
 attached but the re-raise statement line.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Modules and packages have been unified. Packages can now also have
@@ -127,8 +127,8 @@ we can really use a “python-qt” expert it seems.&lt;/p&gt;&lt;/li&gt;
 Previously I just didn’t care, but we sort of approach end user
 usability with this.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Added optimization for the built-in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;range()&lt;/span&gt;&lt;/code&gt; which otherwise
@@ -149,8 +149,8 @@ propagation, even if only a weak one.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Conditional statement and/or their branches are eliminated where
 constant conditions allow it.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Nicolas moved the Nuitka source code to its own &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka&lt;/span&gt;&lt;/code&gt; package.
@@ -199,8 +199,8 @@ directory as they should.&lt;/p&gt;&lt;/li&gt;
 trailing/leading new line is more consistent now, and there were some
 assertions added that it doesn’t happen.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The CPython 2.6 tests are now also run by CPython 2.7 and the other
@@ -213,8 +213,8 @@ found a couple of issues.&lt;/p&gt;&lt;/li&gt;
 disabled though, because it requires entirely different rules to be
 done right, it has been pushed back to the next release.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;g++-nuitka&lt;/span&gt;&lt;/code&gt; script is no more. With the help of the Scons
@@ -245,8 +245,8 @@ release.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Pylint got more happy with the current Nuitka source. In some places,
 I added comments where rules should be granted exceptions.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="numbers"&gt;
+&lt;/section&gt;
+&lt;section id="numbers"&gt;
 &lt;h2&gt;Numbers&lt;/h2&gt;
 &lt;p&gt;python 2.6:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Pystone&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="mi"&gt;50000&lt;/span&gt; &lt;span class="n"&gt;passes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.65&lt;/span&gt;
@@ -269,8 +269,8 @@ that even more cleanups of &lt;code class="docutils literal notranslate"&gt;&lt;
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CodeGeneration&lt;/span&gt;&lt;/code&gt; will be required, before everything is in place for
 the big jump in performance numbers. But still, passing 100% feels good.
 Time to rejoice.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-035.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -287,7 +287,7 @@ Time to rejoice.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-6"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-6"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -297,7 +297,7 @@ open ends of Nuitka, closing quite a bunch of consistency &lt;code class="docuti
 items, and then aims at cleaner structures internally, so optimization
 analysis shall become “easy”. It is a correctness and framework release,
 not a performance improvement at all.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Imports were not respecting the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;level&lt;/span&gt;&lt;/code&gt; yet. Code like this was not
@@ -321,8 +321,8 @@ these kind of corner cases.&lt;/p&gt;&lt;/li&gt;
 successfully using nested packages (e.g.
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.transform.optimizations&lt;/span&gt;&lt;/code&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--lto&lt;/span&gt;&lt;/code&gt; option becomes usable. It’s not measurably faster
@@ -330,15 +330,15 @@ immediately, and it requires g++ 4.6 to be available, but then it at
 least creates smaller binaries and may provide more optimization in
 the future.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Exceptions raised by pre-computed built-ins, unpacking, etc. are now
 transformed to raising the exception statically.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;There is now a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;getVariableForClosure&lt;/span&gt;&lt;/code&gt; that a variable provider can
@@ -362,8 +362,8 @@ a “provider”, “node”, and “source_ref”; things that need “node” 
 &lt;li&gt;&lt;p&gt;Variables now avoid building duplicated instances, but instead share
 one. Better for analysis of them.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The Python 2.7 test suite is no longer run with Python 2.6 as it will
@@ -373,14 +373,14 @@ test_support.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Nested packages are now covered with tests too.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Imports of upper level packages are covered now too.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Updated the “README.txt” with the current plan on optimization.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="numbers"&gt;
+&lt;/section&gt;
+&lt;section id="numbers"&gt;
 &lt;h2&gt;Numbers&lt;/h2&gt;
 &lt;p&gt;python 2.6:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Pystone&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="mi"&gt;50000&lt;/span&gt; &lt;span class="n"&gt;passes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.65&lt;/span&gt;
@@ -395,8 +395,8 @@ test_support.&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;This is 109% for 0.3.6, but no change from the previous release. No
 surprise, because no new effective new optimization means have been
 implemented. Stay tuned for future release for actual progress.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-036.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -413,7 +413,7 @@ implemented. Stay tuned for future release for actual progress.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-7"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-7"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -425,7 +425,7 @@ compiled objects, but in the context of classes, functions were wrapped
 in CPython &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;instancemethod&lt;/span&gt;&lt;/code&gt; objects. The new &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;compiled_method&lt;/span&gt;&lt;/code&gt; is
 specifically designed for wrapping &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;compiled_function&lt;/span&gt;&lt;/code&gt; and therefore
 more efficient at it.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;When using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Python&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Nuitka.py&lt;/span&gt;&lt;/code&gt; to execute some script, the
@@ -437,8 +437,8 @@ CPython does it.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Exception tracebacks created inside &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;with&lt;/span&gt;&lt;/code&gt; statements could contain
 duplicate lines, this was corrected.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Global variable assignments now also use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;assign0&lt;/span&gt;&lt;/code&gt; where no
@@ -469,8 +469,8 @@ dedicated C++ variable classes gave a big speedup, around 3% of
 avoid function calls e.g. in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ITERATOR_NEXT&lt;/span&gt;&lt;/code&gt; case, this gave a
 few percent on “PyStone” as well.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;New package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.codegen&lt;/span&gt;&lt;/code&gt; to contain all code generation related
@@ -496,8 +496,8 @@ entry point is generated by one of the function in the new
 &lt;li&gt;&lt;p&gt;Split variable, exception, built-in helper classes into separate
 header files.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The exit codes of CPython execution and Nuitka compiled programs are
@@ -505,8 +505,8 @@ now compared as well.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Errors messages of methods are now covered by the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ParameterErrors&lt;/span&gt;&lt;/code&gt;
 test as well.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;A new script “benchmark.sh” (now called “run-valgrind.py”) script now
@@ -518,8 +518,8 @@ improvements, test them, then refine some more.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;The “check-release.sh” script needs to unset &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;NUITKA_EXTRA_OPTIONS&lt;/span&gt;&lt;/code&gt;
 or else the reflection test will trip over the changed output paths.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="numbers"&gt;
+&lt;/section&gt;
+&lt;section id="numbers"&gt;
 &lt;h2&gt;Numbers&lt;/h2&gt;
 &lt;p&gt;python 2.6:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Pystone&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="mi"&gt;50000&lt;/span&gt; &lt;span class="n"&gt;passes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.65&lt;/span&gt;
@@ -541,8 +541,8 @@ prove it.&lt;/p&gt;
 &lt;p&gt;No milestone 3 work in this release. I believe it’s best to finish with
 milestone 2 first, because these are quite universal gains that we
 should have covered.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-037.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -559,7 +559,7 @@ should have covered.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-8"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-8"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -582,7 +582,7 @@ MinGW 4.5 or higher only.&lt;/p&gt;
 &lt;p&gt;Otherwise there have been the usual round of performance improvements
 and more cleanups. This release is otherwise milestone 2 work only,
 which will have to continue for some time more.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Lambda generators were not fully compatible, their simple form could
@@ -595,8 +595,8 @@ error message.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;There was an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;assert&lt;/span&gt; &lt;span class="pre"&gt;False&lt;/span&gt;&lt;/code&gt; right after warning about not found
 modules in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--deep&lt;/span&gt;&lt;/code&gt; mode, which was of course unnecessary.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;When unpacking variables in assignments, the temporary variables are
@@ -640,8 +640,8 @@ cannot be raised. This avoids temporary references completely for the
 common case.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;if&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;for&lt;/span&gt;&lt;/code&gt;, and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;while&lt;/span&gt;&lt;/code&gt; statements had always empty
@@ -649,8 +649,8 @@ common case.&lt;/p&gt;
 empty branches. No harm to performance, but this got cleaned up.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Some more generated code white space fixes.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The CPython 2.7 test suite now also has the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;doctests&lt;/span&gt;&lt;/code&gt; extracted to
@@ -671,8 +671,8 @@ things much faster, but there are still fields to work on. This
 version needed changes to stand the speed of Nuitka. These will be
 subject of a later posting.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;There is now a “tests/benchmarks/micro” directory to contain tiny
@@ -692,8 +692,8 @@ adaptations were necessary. Windows new lines are now ignored in
 difference check, and addresses under Windows are upper case, small
 things.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="numbers"&gt;
+&lt;/section&gt;
+&lt;section id="numbers"&gt;
 &lt;h2&gt;Numbers&lt;/h2&gt;
 &lt;p&gt;python 2.6:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Pystone&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="mi"&gt;50000&lt;/span&gt; &lt;span class="n"&gt;passes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.65&lt;/span&gt;
@@ -707,8 +707,8 @@ things.&lt;/p&gt;&lt;/li&gt;
 &lt;/div&gt;
 &lt;p&gt;This is a 140% speed increase of 0.3.8 compared to CPython, up from 132%
 compared to the previous release.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-038---windows-support.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -725,7 +725,7 @@ compared to the previous release.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="she-s-a-doctor-now"&gt;
+    <content type="html">&lt;section id="she-s-a-doctor-now"&gt;
 
 &lt;p&gt;My wife has passed the final exams here in Germany finally. I am very
 proud of her for managing that. It’s with 2 kids born, a new house
@@ -733,11 +733,13 @@ built, and lots of difficulties, like not living in a city with a
 university that offers medicin as a study course.&lt;/p&gt;
 &lt;p&gt;To celebrate, here is a picture of her from happy days (no photoshop
 unlike the &lt;a class="reference external" href="/posts/family-photo.html"&gt;last time&lt;/a&gt;):&lt;/p&gt;
-&lt;div class="figure align-default" id="id1"&gt;
+&lt;figure class="align-default" id="id1"&gt;
 &lt;a class="reference external image-reference" href="/_images/Anna_Dithmarsia.jpg"&gt;&lt;img alt="Image of my wife" src="../_images/Anna_Dithmarsia.jpg" style="width: 80%;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Anna in front of a bush in Dithmarsia (my home state).&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Anna in front of a bush in Dithmarsia (my home state).&lt;/span&gt;&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/shes-a-doctor-now.html" rel="alternate"/>
     <summary>My wife has passed the final exams here in Germany finally. I am very
@@ -754,7 +756,7 @@ university that offers medicin as a study course.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="looking-where-nuitka-stands"&gt;
+    <content type="html">&lt;section id="looking-where-nuitka-stands"&gt;
 
 &lt;p&gt;In case you wonder, [what Nuitka is](/pages/overview.html), look here.
 Over the 0.3.x release cycle, I have mostly looked at its performance
@@ -766,7 +768,7 @@ micro benchmarks, which is quite obviously aimed for looking CPython
 implementations only. In that it’s quite good to check where Nuitka is
 good at, and where it can still take improvements for the milestone 2
 stuff.&lt;/p&gt;
-&lt;div class="section" id="enhancements-to-pybench"&gt;
+&lt;section id="enhancements-to-pybench"&gt;
 &lt;h2&gt;Enhancements to PyBench&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The pybench refused to accept that Nuitka could use so little time on
@@ -778,8 +780,8 @@ gives interesting factors.&lt;/p&gt;&lt;/li&gt;
 only, so there is an option now to output only tests with negative
 values.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-interesting-parts"&gt;
+&lt;/section&gt;
+&lt;section id="the-interesting-parts"&gt;
 &lt;h2&gt;The Interesting Parts&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Nuitka currently has some fields where optimizations are already so
@@ -815,8 +817,8 @@ creating, they are based on codespeed, which I will blog upon
 separately.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Look at this table of results as produced by pybench:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="benchmark-results"&gt;
+&lt;/section&gt;
+&lt;section id="benchmark-results"&gt;
 &lt;h2&gt;Benchmark Results&lt;/h2&gt;
 &lt;table summary="Comparing CPython and Nuitka with PyBench"&gt;
 &lt;tbody&gt;
@@ -1175,8 +1177,8 @@ separately.&lt;/p&gt;&lt;/li&gt;
 &lt;td&gt;&lt;span style="color: #ff0000;"&gt;-94.3%&lt;/span&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;/table&gt;&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html" rel="alternate"/>
     <summary>In case you wonder, [what Nuitka is](/pages/overview.html), look here.
@@ -1196,7 +1198,7 @@ the progress we have made there.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-9"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-9"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -1206,7 +1208,7 @@ a good speed improvement.&lt;/p&gt;
 areas of Nuitka. The main focus was on faster function calls, faster
 class attributes (not instance), faster unpacking, and more built-ins
 detected and more thoroughly optimizing them.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Exceptions raised inside with statements had references to the
@@ -1221,12 +1223,12 @@ makes Nuitka not emit “trigraphs” at all.&lt;/p&gt;&lt;/li&gt;
 lead to assuming a tuple with only mutable elements to be not
 mutable, which is of course wrong.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;p&gt;This time there are so many new optimization, it makes sense to group
 them by the subject.&lt;/p&gt;
-&lt;div class="section" id="exceptions"&gt;
+&lt;section id="exceptions"&gt;
 &lt;h3&gt;Exceptions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The code to add a traceback is now our own, which made it possible to
@@ -1245,8 +1247,8 @@ without exporting and re-importing the exception to Python, but
 directly on the exception objects traceback, this avoids a useless
 round trip.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="function-calls"&gt;
+&lt;/section&gt;
+&lt;section id="function-calls"&gt;
 &lt;h3&gt;Function Calls&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Uses of PyObject_Call provide &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;NULL&lt;/span&gt;&lt;/code&gt; as the dictionary, instead of
@@ -1261,8 +1263,8 @@ completely short-cut for the case of a dictionary that has never had
 a string added. There is now code that detects this case and skips
 the check, eliminating it as a performance concern.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="parameter-parsing"&gt;
+&lt;/section&gt;
+&lt;section id="parameter-parsing"&gt;
 &lt;h3&gt;Parameter Parsing&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Reversed the order in which parameters are checked.&lt;/p&gt;
@@ -1281,8 +1283,8 @@ equality comparison, which doesn’t raise an exception.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Unpacking of tuples is now using dedicated variants of the normal
 unpacking code instead of rolling out everything themselves.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="attribute-access"&gt;
+&lt;/section&gt;
+&lt;section id="attribute-access"&gt;
 &lt;h3&gt;Attribute Access&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The class type (in executables, not yet for extension modules) is
@@ -1296,8 +1298,8 @@ intern the string used for attribute access is not necessary with
 Nuitka at all anymore. This made access to attributes about 50%
 faster which is big of course.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="constants"&gt;
+&lt;/section&gt;
+&lt;section id="constants"&gt;
 &lt;h3&gt;Constants&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The bug for mutable tuples also caused non-mutable tuples to be
@@ -1325,8 +1327,8 @@ a C++ &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;P
 converting the integer constant at run time, which was of course
 wasteful even if not (very) slow.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="iteration"&gt;
+&lt;/section&gt;
+&lt;section id="iteration"&gt;
 &lt;h3&gt;Iteration&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The creation of iterators got our own code. This avoids a function
@@ -1338,8 +1340,8 @@ flow, because it avoids the double check in case of NULL returned.&lt;/p&gt;&lt;
 &lt;li&gt;&lt;p&gt;The unpack check got similar code to the next iterator, it also has
 simpler code flow now and avoids double checks.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="built-ins"&gt;
+&lt;/section&gt;
+&lt;section id="built-ins"&gt;
 &lt;h3&gt;Built-ins&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Added support for the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;list&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tuple&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt;,
@@ -1358,8 +1360,8 @@ a work in progress as is the whole built-ins business as not all the
 built-ins are covered yet.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h3&gt;Cleanups&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;In 0.3.8 per module global classes were introduced, but the
@@ -1390,9 +1392,9 @@ for function calls, an &lt;code class="docutils literal notranslate"&gt;&lt;span
 &lt;li&gt;&lt;p&gt;Moved the manifest generation to the scons file, which now produces
 ready to use executables.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Added a improved version of “pybench” that can cope with the “0 ms”
@@ -1408,8 +1410,8 @@ Output is required to make the error detectable.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Enhanced &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Constants&lt;/span&gt;&lt;/code&gt; test to cover repeated mutation of mutable
 tuple constants, this covers the bug mentioned.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Added a credits section to the “README.txt” where I give credit to
@@ -1433,8 +1435,8 @@ Nuitka to not have the distortions that &lt;code class="docutils literal notrans
 optimization level, assertions, etc.) and instead a clear view.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-039.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -1451,17 +1453,19 @@ optimization level, assertions, etc.) and instead a clear view.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="the-new-cat"&gt;
+    <content type="html">&lt;section id="the-new-cat"&gt;
 
 &lt;p&gt;This is the latest addition to the family, our beautiful, young and
 lovely cat:&lt;/p&gt;
-&lt;div class="figure align-default" id="id1"&gt;
+&lt;figure class="align-default" id="id1"&gt;
 &lt;a class="reference external image-reference" href="/_images/IMG_3530-1.jpg"&gt;&lt;img alt="Image of Muska on her first day with us." src="../_images/IMG_3530-1.jpg" style="width: 80%;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Muska on her first day with us.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Muska on her first day with us.&lt;/span&gt;&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;Her name is Muska, and she is with us for a week now. This is an image
 from her first day in our house.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/the-new-cat.html" rel="alternate"/>
     <summary>This is the latest addition to the family, our beautiful, young and
@@ -1476,14 +1480,14 @@ lovely cat:</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-10"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-10"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This new release is major milestone 2 work, enhancing practically all
 areas of Nuitka. The focus was roundup and breaking new grounds with
 structural optimization enhancements.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Exceptions now correctly stack.&lt;/p&gt;
@@ -1509,8 +1513,8 @@ closure issue.&lt;/p&gt;&lt;/li&gt;
 side effect on lookup, it was evident that the lookup was made twice.
 Correcting this also improves the performance for the normal case.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Statically raised as well as predicted exceptions are propagated
@@ -1536,8 +1540,8 @@ branches are removed.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Empty branches are now removed from most constructs, leading to
 sometimes cleaner code generated.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Removed the lambda body node and replaced it with function body. This
@@ -1553,8 +1557,8 @@ failures for when I quickly added a print statement, not noting it
 must have the braces.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;PyLint is happier than ever.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Enhanced &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;OverflowFunctions&lt;/span&gt;&lt;/code&gt; test to cover even deeper nesting of
@@ -1598,8 +1602,8 @@ to print 2 lines:&lt;/p&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Changed “README.txt” to no longer say that “Scons” is a requirement.
@@ -1613,8 +1617,8 @@ feasible to be sure that Nuitka is only becoming better.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Executable with Python3 again, although it won’t do anything, the
 necessary code changes were done.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;It’s nice to see, that I some long standing issues were resolved, and
 that structural optimization has become almost a reality.&lt;/p&gt;
@@ -1622,8 +1626,8 @@ that structural optimization has become almost a reality.&lt;/p&gt;
 only details. With that we can eliminate and predict even more of the
 stupid code of “pybench” at compile time, achieving more infinite
 speedups.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-0310.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -1640,7 +1644,7 @@ speedups.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-has-a-new-home-nuitka-net"&gt;
+    <content type="html">&lt;section id="nuitka-has-a-new-home-nuitka-net"&gt;
 
 &lt;p&gt;Hello everybody,&lt;/p&gt;
 &lt;p&gt;my new vServer is now online, the old site blog redirects to it now, and
@@ -1708,7 +1712,7 @@ whatever.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-has-a-new-home---nuitkanet.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
@@ -1724,7 +1728,7 @@ whatever.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="going-to-pycon-de"&gt;
+    <content type="html">&lt;section id="going-to-pycon-de"&gt;
 
 &lt;p&gt;Hello everybody,&lt;/p&gt;
 &lt;p&gt;I am going to the German Python conference in Leipzip and I am going to
@@ -1752,7 +1756,7 @@ Lets hope it’s good. :-)&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/going-to-pycon-de.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
@@ -1768,7 +1772,7 @@ Lets hope it’s good. :-)&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-11"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-11"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -1779,7 +1783,7 @@ to ARM Linux. I used to host the Nuitka homepage on that machine, but
 now that it’s no longer so, I can run heavy compile jobs on it. To my
 surprise, it found many portability problems. So I chose to fix that
 first, the result being that Nuitka now works on ARM Linux too.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The order of slice expressions was not correct on x86 as well, and I
@@ -1795,16 +1799,16 @@ first evaluated all printed expressions, and did the output only
 then. That is incompatible in case of exceptions, where partial
 outputs need to be done, and so that got fixed.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Function calls now each have a dedicated helper function, avoiding in
 some cases unnecessary work. We will may build further on this and
 in-line &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PyObject_Call&lt;/span&gt;&lt;/code&gt; differently for the special cases.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Moved many C++ helper declarations and in-line implementations to
@@ -1825,8 +1829,8 @@ more consistent, has more helpers available, and creates more
 readable code.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;PyLint is again happier than ever.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;There is a new basic test &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;OrderChecks&lt;/span&gt;&lt;/code&gt; that covers the order of
@@ -1836,8 +1840,8 @@ detect, and in some cases not previously covered at all.&lt;/p&gt;&lt;/li&gt;
 code) is now part of the release tests, so non-portable code of
 Nuitka gets caught.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Support for ARM Linux. I will make a separate posting on the
@@ -1855,8 +1859,8 @@ graphs of Nuitka. I detected a couple of strange things through this.&lt;/p&gt;&
 &lt;li&gt;&lt;p&gt;The Python3 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__pycache__&lt;/span&gt;&lt;/code&gt; directories get removed too by the
 cleanup script.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="numbers"&gt;
+&lt;/section&gt;
+&lt;section id="numbers"&gt;
 &lt;h2&gt;Numbers&lt;/h2&gt;
 &lt;p&gt;We only have “PyStone” now, and on a new machine, so the numbers cannot
 be compared to previous releases:&lt;/p&gt;
@@ -1875,15 +1879,15 @@ be compared to previous releases:&lt;/p&gt;
 efficient than bytecode, but Nuitka doesn’t yet do the relevant
 optimization. Only once it does, the factor will be significantly
 higher.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Overall, there is quite some progress. Nuitka is a lot cleaner now,
 which will help us later only. I wanted to get this out, mostly because
 of the bug fixes, and of course just in case somebody attempts to use it
 on ARM.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-0311.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -1900,18 +1904,20 @@ on ARM.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-git-flow"&gt;
+    <content type="html">&lt;section id="nuitka-git-flow"&gt;
 
 &lt;p&gt;Hello there,&lt;/p&gt;
 &lt;p&gt;this is to let you know that I have switched &lt;a class="reference external" href="/pages/overview.html"&gt;Nuitka&lt;/a&gt; to the &lt;a class="reference external" href="https://github.com/nvie/gitflow"&gt;“git flow”&lt;/a&gt; development model. That means, now
 there is a supported stable version, and a develop branch, together with
 feature branches.&lt;/p&gt;
-&lt;div class="section" id="example"&gt;
+&lt;section id="example"&gt;
 &lt;h2&gt;Example&lt;/h2&gt;
-&lt;div class="figure align-default" id="id1"&gt;
+&lt;figure class="align-default" id="id1"&gt;
 &lt;a class="reference external image-reference" href="/_images/Nuitka-git-flow.png"&gt;&lt;img alt="Git flow example for Nuitka release 0.3.12" src="../_images/Nuitka-git-flow.png" style="width: 60%;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Git flow example for Nuitka release 0.3.12&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Git flow example for Nuitka release 0.3.12&lt;/span&gt;&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;div class="admonition note"&gt;
 &lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;In case, you want and can improve the source (link since removed)
@@ -1932,8 +1938,8 @@ same as my programmer skills. :-)&lt;/p&gt;
 &lt;p&gt;These will only have certain life, until they are completed, then they
 are merge into “develop” and become part of the next release. This may
 or may not happen, depending on how things go.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="benefits-of-the-new-model"&gt;
+&lt;/section&gt;
+&lt;section id="benefits-of-the-new-model"&gt;
 &lt;h2&gt;Benefits of the new model&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Hotfixes, typically bug fixes, can be made simultaneously on stable
@@ -1946,16 +1952,16 @@ feature branches should basically work, but the bar will be lower.
 People can have a look at them, or start their own and make me
 integrate them.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="uses-of-feature-branch"&gt;
+&lt;/section&gt;
+&lt;section id="uses-of-feature-branch"&gt;
 &lt;h2&gt;Uses of Feature Branch&lt;/h2&gt;
 &lt;p&gt;For example, in the new feature branch, a couple of boring things are
 happening. Support for frame stack will reduce the diff, as will some
 work to match CPython’s choices for exception line numbers. Completing
 will take a while, but should not block a release. So this is best done
 in the feature branch, esp. as nothing is going to really depend on it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="general-picture"&gt;
+&lt;/section&gt;
+&lt;section id="general-picture"&gt;
 &lt;h2&gt;General Picture&lt;/h2&gt;
 &lt;p&gt;As you can see from this diagram, I am working mostly on documentation
 things. The new and improved README on develop, which is closer to a
@@ -1974,8 +1980,8 @@ may not be all that perfect yet.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay Hayen&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-git-flow.html" rel="alternate"/>
     <summary>Hello there,</summary>
@@ -1991,7 +1997,7 @@ may not be all that perfect yet.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="pycon-de-2011-my-report"&gt;
+    <content type="html">&lt;section id="pycon-de-2011-my-report"&gt;
 
 &lt;p&gt;The PyCON DE 2011 is just over, sprints are still happening over the
 weekend, but my wife wouldn’t allow me to stay away for that long, so
@@ -2009,35 +2015,35 @@ Clearly not a first time.&lt;/p&gt;
 &lt;p&gt;I enjoyed the talks, most often in the technical track, but other tracks
 would have been very interesting too. The parallelism was making me do
 hard decisions.&lt;/p&gt;
-&lt;div class="section" id="food"&gt;
+&lt;section id="food"&gt;
 &lt;h2&gt;Food&lt;/h2&gt;
 &lt;p&gt;The food was great too. I esp. liked the Asian day, but there was also
 Italian and French, and what many liked very much is that there was a
 Vegan food offer too. I do not live vegan style, but I appreciate good
 food and the vegan food often is that.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="social-event"&gt;
+&lt;/section&gt;
+&lt;section id="social-event"&gt;
 &lt;h2&gt;Social Event&lt;/h2&gt;
 &lt;p&gt;The social event was a visit to a “Variete” (music hall, French origin),
 where I am sure, there will be images posted, I currently &lt;a class="reference external" href="https://secure.flickr.com/photos/onyame/6222954609/in/pool-1775853&amp;#64;N21/"&gt;found this
 one&lt;/a&gt;
 , that my wife will find interesting too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="leipzig"&gt;
+&lt;/section&gt;
+&lt;section id="leipzig"&gt;
 &lt;h2&gt;Leipzig&lt;/h2&gt;
 &lt;p&gt;The quality of the organization team, the city “Leipzig”, where we also
 got to have a guided city tour of fantastic enthusiasms, was very high.
 I knew Leipzig from earlier visits and liked it before, but this time it
 seemed everybody was even friendlier.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="site"&gt;
+&lt;/section&gt;
+&lt;section id="site"&gt;
 &lt;h2&gt;Site&lt;/h2&gt;
 &lt;p&gt;The convention place “Kubus” was very well chosen, absolutely ideal.
 It’s got good equipment, and that large room setup, where you can make a
 split with movable walls, and have 3 big screens. The acoustics were
 pretty damn good there.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="my-own-presentation"&gt;
+&lt;/section&gt;
+&lt;section id="my-own-presentation"&gt;
 &lt;h2&gt;My own Presentation&lt;/h2&gt;
 &lt;p&gt;As to my own presentation, it was well received, although I sort of
 regret that I agreed to have only 30m instead of original plan of 60m. I
@@ -2053,10 +2059,10 @@ it went pretty well.&lt;/p&gt;
 ongoing in PDF is work to use REST and document a lot more). The
 presentation was created with “rst2pdf”, which I find is a fantastic
 tool.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="contacts"&gt;
+&lt;/section&gt;
+&lt;section id="contacts"&gt;
 &lt;h2&gt;Contacts&lt;/h2&gt;
-&lt;div class="section" id="cython-lxml"&gt;
+&lt;section id="cython-lxml"&gt;
 &lt;h3&gt;Cython / lxml&lt;/h3&gt;
 &lt;p&gt;Then contacts!&lt;/p&gt;
 &lt;p&gt;Early on I already made contacts with interesting people, e.g. with
@@ -2093,8 +2099,8 @@ possible is going to be more worthwhile anyway.&lt;/p&gt;
 as I am not able to declare Nuitka “useful” yet. That statement may come
 within a year though. In my mind, in many fields Nuitka is already
 superior.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="pyhasse"&gt;
+&lt;/section&gt;
+&lt;section id="pyhasse"&gt;
 &lt;h3&gt;PyHasse&lt;/h3&gt;
 &lt;p&gt;Another interesting contact I made, was with the author of PyHasse. It’s
 Rainer Bruggemann, who is a really nice and witty guy. He introduced me
@@ -2110,8 +2116,8 @@ time, and such conferences, my knowledge of these will only grow.&lt;/p&gt;
 &lt;p&gt;We said that we will try and see how far we can go. In the worst case,
 Nuitka will not yet be useful, but I will have a clearer image what is
 needed.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="debian"&gt;
+&lt;/section&gt;
+&lt;section id="debian"&gt;
 &lt;h3&gt;Debian&lt;/h3&gt;
 &lt;p&gt;I saw the presentation from Jan Dittberner and met him later too, asking
 him questions, and generally discussing Debian packaging of Nuitka. He
@@ -2121,8 +2127,8 @@ presentation on how to package Python modules for Debian. He gave me
 hints on how to solve that “find files near me” issue that plagues
 Nuitka just as much as other software. Really kind and helpful guy and
 clearly I admire Debian Developers, keep up the good work.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="general"&gt;
+&lt;/section&gt;
+&lt;section id="general"&gt;
 &lt;h3&gt;General&lt;/h3&gt;
 &lt;p&gt;I also made contacts with lots of other people. Python is diverse and it
 was fun to get to know, many people with similar and entirely different
@@ -2131,9 +2137,9 @@ backgrounds.&lt;/p&gt;
 that’s not why I say it. There is that general sense of respect around
 that German community, you can feel how pretty much everybody is well
 established and doesn’t have to disprove the others.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="keynotes"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="keynotes"&gt;
 &lt;h2&gt;Keynotes&lt;/h2&gt;
 &lt;p&gt;One keynotes speaker had a part about how trolling and hate is bad for a
 community, but that’s not the German Python community.&lt;/p&gt;
@@ -2154,8 +2160,8 @@ postings and there probably will be), some better approaches.&lt;/p&gt;
 &lt;p&gt;So not integrating me is not necessarily a failure. If it were not for
 Cython, there would not be Nuitka. The original projects will regret the
 fork/remake, but they probably shouldn’t. Competition is good.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="lets-repeat-that"&gt;
+&lt;/section&gt;
+&lt;section id="lets-repeat-that"&gt;
 &lt;h2&gt;Lets repeat that&lt;/h2&gt;
 &lt;p&gt;I believe the PyCON DE 2011 was a huge success. I will most likely go
 again to update people on Nuitka. It’s already clear there will be a
@@ -2167,8 +2173,8 @@ early booked holiday again.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay Hayen&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/pycon-de-2011-my-report.html" rel="alternate"/>
     <summary>The PyCON DE 2011 is just over, sprints are still happening over the
@@ -2187,16 +2193,18 @@ it’s not for me this time. Maybe next time.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="my-7yr-old-fotographer"&gt;
+    <content type="html">&lt;section id="my-7yr-old-fotographer"&gt;
 
 &lt;p&gt;This photo was shot by my 7yr old son. It’s truly artful, if not
 perfect. I have not applied any correction. He has my old camera, and
 knows how to use it, more and more.&lt;/p&gt;
-&lt;div class="figure align-default" id="id1"&gt;
+&lt;figure class="align-default" id="id1"&gt;
 &lt;a class="reference external image-reference" href="/_images/Michael-shot-of-his-mom.jpg"&gt;&lt;img alt="Artful photo of his mom taken by my son Michael" src="../_images/Michael-shot-of-his-mom.jpg" style="width: 80%;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Michael shot of his mom&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Michael shot of his mom&lt;/span&gt;&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/my-7yr-old-fotographer.html" rel="alternate"/>
     <summary>This photo was shot by my 7yr old son. It’s truly artful, if not
@@ -2212,21 +2220,21 @@ knows how to use it, more and more.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="cat-update"&gt;
+    <content type="html">&lt;section id="cat-update"&gt;
 
 &lt;p&gt;The new cat has become indispensable for just about anything. She
 follows throughout the hous, and is just too lovely, here two photos of
 her in typical spots.&lt;/p&gt;
 &lt;p&gt;When I code for Nuitka, she often lays between keyboard and monitors,
 sleeping, getting caressed by me.&lt;/p&gt;
-&lt;div class="figure align-default"&gt;
+&lt;figure class="align-default"&gt;
 &lt;a class="reference external image-reference" href="/_images/IMG_3837-768x1024.jpg"&gt;&lt;img alt="Cat Muska laying in her usual place between monitor and keyboard." src="../_images/IMG_3837-768x1024.jpg" style="width: 80%;" /&gt;&lt;/a&gt;
-&lt;/div&gt;
+&lt;/figure&gt;
 &lt;p&gt;And here is another one, hiding in her cat tree.&lt;/p&gt;
-&lt;div class="figure align-default"&gt;
+&lt;figure class="align-default"&gt;
 &lt;a class="reference external image-reference" href="/_images/IMG_3767.jpg"&gt;&lt;img alt="Cat muska in her cat tree box." src="../_images/IMG_3767.jpg" style="width: 80%;" /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/figure&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/cat-update.html" rel="alternate"/>
     <summary>The new cat has become indispensable for just about anything. She
@@ -2243,7 +2251,7 @@ her in typical spots.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-pycon-de-video"&gt;
+    <content type="html">&lt;section id="nuitka-pycon-de-video"&gt;
 
 &lt;p&gt;Hello everybody,&lt;/p&gt;
 &lt;p&gt;the Video of my presentation is online:
@@ -2261,7 +2269,7 @@ done.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka---pycon-de-video.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
@@ -2280,7 +2288,7 @@ done.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-12"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-12"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -2297,7 +2305,7 @@ goal.&lt;/p&gt;
 &lt;p&gt;Due to the use of the “git flow”, most of the bugs listed here were
 already fixed in on the stable release before this release. And there
 were many of these.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The order of evaluation for base classes and class dictionaries was
@@ -2353,8 +2361,8 @@ backslashes in the path. Using a raw string to prevent such problems.&lt;/p&gt;&
 &lt;li&gt;&lt;p&gt;The standard library path was hard coded. Changed to run time
 detection.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Version checks on Python runtime now use a new define
@@ -2369,8 +2377,8 @@ detect dead code really.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Moved &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.Nodes&lt;/span&gt;&lt;/code&gt; to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.nodes.Nodes&lt;/span&gt;&lt;/code&gt;, that is what the
 package is intended for, the split will come later.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;New tests for import variants that previously didn’t work: Mixed
@@ -2382,8 +2390,8 @@ CPython tests, etc. used it.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added test to cover the partial success of import statements.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added test to cover evaluation order of class definitions.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Migrated the “README.txt” from org-mode to ReStructured Text, which
@@ -2423,15 +2431,15 @@ challenge, but it reduces the dependency on MSYS tools on Windows.&lt;/p&gt;&lt;
 standard library, there is a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--really-deep&lt;/span&gt;&lt;/code&gt; option that has to be
 given in addition to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--deep&lt;/span&gt;&lt;/code&gt;, which forces this.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Again, huge progress. The improved import mechanism is very beautiful.
 It appears that little is missing to compile real world programs like
 “hg” with Nuitka. The next release cycle will focus on that and continue
 to improve the Windows support which appears to have some issues.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-0312.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -2448,17 +2456,19 @@ to improve the Windows support which appears to have some issues.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="putting-a-conference-t-shirt-to-good-use"&gt;
+    <content type="html">&lt;section id="putting-a-conference-t-shirt-to-good-use"&gt;
 
 &lt;p&gt;This is my 7rd old son in his “Halloween” outfit. It is the first time,
 he was allowed to do it and so he was very excited.&lt;/p&gt;
 &lt;p&gt;The link to Python is the T-shirt “Don’t Panic - Use Python”. I got that
 from PyCON DE, and the family loves it.&lt;/p&gt;
-&lt;div class="figure align-default" id="id1"&gt;
+&lt;figure class="align-default" id="id1"&gt;
 &lt;a class="reference external image-reference" href="/_images/IMG_0072-765x1024.jpg"&gt;&lt;img alt="Michael wears Python T-shirt for Halloween." src="../_images/IMG_0072-765x1024.jpg" style="width: 80%;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Michael in his Halloween outfit.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Michael in his Halloween outfit.&lt;/span&gt;&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/puting-a-conference-t-shirt-to-good-use.html" rel="alternate"/>
     <summary>This is my 7rd old son in his “Halloween” outfit. It is the first time,
@@ -2474,7 +2484,7 @@ he was allowed to do it and so he was very excited.</summary>
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-13"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-13"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -2490,7 +2500,7 @@ supported.&lt;/p&gt;
 here were already fixed in on the stable release before this release.
 This time there were 5 such hot fix releases, sometimes fixing multiple
 bugs.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;In case of syntax errors in the main program, an exception stack was
@@ -2533,15 +2543,15 @@ difference. Fixed in 0.3.12e already.&lt;/p&gt;
 enforced in a portable way. Now it is correct on “ARM” too. Fixed in
 0.3.12e already.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The built-ins &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GeneratorExit&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;StopIteration&lt;/span&gt;&lt;/code&gt; are optimized
 to their Python C/API names where possible as well.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__file__&lt;/span&gt;&lt;/code&gt; attribute of modules was the relative filename, but
@@ -2557,8 +2567,8 @@ analyzing import problems.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Some PyLint cleanups removing dead code, unused variables, useless
 pass statement, etc.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;New tests to cover &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SyntaxError&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;IndentationError&lt;/span&gt;&lt;/code&gt; from
@@ -2568,8 +2578,8 @@ comparisons.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;New test to cover package local imports made by the “__init__.py” of
 the package.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Drop “compile_itself.sh” in favor of the new “compile_itself.py”,
@@ -2577,8 +2587,8 @@ because the later is more portable.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The logging output is now nicer, and for failed recursions, outputs
 the line that is having the problem.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;The frame stack work and the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;func_code&lt;/span&gt;&lt;/code&gt; are big for compatibility.&lt;/p&gt;
 &lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;func_code&lt;/span&gt;&lt;/code&gt; was also needed for “hg” to work. For Mercurial to
@@ -2587,8 +2597,8 @@ pass all of its test suite, more work will be needed, esp. the
 functions and generators too.&lt;/p&gt;
 &lt;p&gt;Once real world programs like Mercurial work, we can use these as more
 meaningful benchmarks and resume work on optimization.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-0313.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -2605,7 +2615,7 @@ meaningful benchmarks and resume work on optimization.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-14"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-14"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -2615,7 +2625,7 @@ compatibility and cleanups.&lt;/p&gt;
 &lt;p&gt;It is again the result of working towards compilation of a real program
 (Mercurial). This time, I have added support for proper handling of
 compiled types by the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;inspect&lt;/span&gt;&lt;/code&gt; module.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Fix for “Missing checks in parameter parsing with star list, star
@@ -2631,8 +2641,8 @@ lower or upper index. Fixed in 0.3.11a already.&lt;/p&gt;&lt;/li&gt;
 expressions twice, which could cause problems if they had side
 effects. Fixed in 0.3.11a already.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Run time patching the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;inspect&lt;/span&gt;&lt;/code&gt; module so it accepts compiled
@@ -2644,16 +2654,16 @@ code object, setting it made compatible with CPython in this regard
 too. The inspect module will therefore return correct value for
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;inspect.isgeneratorfunction()&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Slice indexes that are &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;None&lt;/span&gt;&lt;/code&gt; are now constant propagated as well.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Slightly more efficient code generation for dual star arg functions,
 removing useless checks.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Moved the Scons, static C++ files, and assembler files to new package
@@ -2662,8 +2672,8 @@ removing useless checks.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Moved the “unfreezer” code to its own static C++ file.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Some PyLint cleanups.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;New test &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Recursion&lt;/span&gt;&lt;/code&gt; to cover recursive functions.&lt;/p&gt;&lt;/li&gt;
@@ -2671,8 +2681,8 @@ removing useless checks.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Cover &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;execfile&lt;/span&gt;&lt;/code&gt; on the class level as well in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ExecEval&lt;/span&gt;&lt;/code&gt; test.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Cover evaluation order of simple slices in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;OrderCheck&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;There is a new issue tracker available (since migrated and removed)&lt;/p&gt;
@@ -2686,8 +2696,8 @@ for download are made it with, and it appears the binary
 distributions work too. We may now build a windows installer. It’s
 currently in testing, we will make it available when finished.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;The new source organisation makes packaging Nuitka really easy now. From
 here, we can likely provide “binary” package of Nuitka soon. A windows
@@ -2700,8 +2710,8 @@ suite.&lt;/p&gt;
 this is the overall goal I am currently striving for. Once real world
 programs like Mercurial work, we can use these as more meaningful
 benchmarks and resume work on optimization.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-0314.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -2718,7 +2728,7 @@ benchmarks and resume work on optimization.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-debian-package-and-windows-installer"&gt;
+    <content type="html">&lt;section id="nuitka-debian-package-and-windows-installer"&gt;
 
 &lt;p&gt;There is now a Windows installer and a Debian package of &lt;a class="reference external" href="/pages/overview.html"&gt;Nuitka&lt;/a&gt; available on the &lt;a class="reference external" href="/pages/download.html"&gt;Download&lt;/a&gt; page. Please try it out and give me feedback.&lt;/p&gt;
 &lt;p&gt;Specifically I do know that the Debian package won’t work on Debian
@@ -2743,7 +2753,7 @@ can still set your own PATH environment and make the pick yourself.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Kay Hayen&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-debian-package-and-windows-installer.html" rel="alternate"/>
     <summary>There is now a Windows installer and a Debian package of Nuitka available on the Download page. Please try it out and give me feedback.</summary>
@@ -2758,7 +2768,7 @@ can still set your own PATH environment and make the pick yourself.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-15"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-15"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -2776,7 +2786,7 @@ generated C++ for at least one large example is compiling with this new
 release. It won’t link, but there will be later releases.&lt;/p&gt;
 &lt;p&gt;And there is a lot of cleanup going on, geared towards compatibility
 with line numbers in the frame object.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The main module was using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__main__&lt;/span&gt;&lt;/code&gt; in tracebacks, but it must be
@@ -2800,8 +2810,8 @@ correctly. This one was giving a Nuitka backtrace, now it gives a
 &lt;li&gt;&lt;p&gt;Using the frame objects &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;f_lineno&lt;/span&gt;&lt;/code&gt; may fix endless amounts bugs
 related to traceback line numbers.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Guesses the location of the MinGW compiler under Windows to default
@@ -2812,8 +2822,8 @@ Nuitka to find it.&lt;/p&gt;&lt;/li&gt;
 is. Lets just say, it was the last absurd language feature out there,
 plus that didn’t work. It now works perfect.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;You can now download a Windows installer and a Debian package that
@@ -2838,8 +2848,8 @@ in the Debian package.&lt;/p&gt;&lt;/li&gt;
 with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;valgrind&lt;/span&gt;&lt;/code&gt;. It will give better information that way, without
 changing the code.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Implemented &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;swapcontext&lt;/span&gt;&lt;/code&gt; alike (&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;swapFiber&lt;/span&gt;&lt;/code&gt;) for x64 to achieve
@@ -2847,8 +2857,8 @@ changing the code.&lt;/p&gt;&lt;/li&gt;
 preserve signal masks. Now Nuitka is faster at frame switching than
 CPython on x64, which is already good by design.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Using the frame objects to store current line of execution avoids the
@@ -2872,8 +2882,8 @@ portable in more places, but not yet fully. This will need more work.&lt;/p&gt;
 in one place.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Some more PyLint cleanups.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The tests are now executed by Python scripts and cover &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;stderr&lt;/span&gt;&lt;/code&gt;
@@ -2884,8 +2894,8 @@ the frame line number improvements.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The scripts to run the tests now are all in pure Python. This means,
 no more MinGW shell is needed to execute the tests.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;The Debian package, Windows installer, etc. are now automatically
 updated and uploaded. From here on, there can be such packages for the
@@ -2908,8 +2918,8 @@ Halchenko.&lt;/p&gt;
 it, but &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;inspect.getargs()&lt;/span&gt;&lt;/code&gt; doesn’t work yet, and is a topic for a
 future release. Won’t be easy, as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;func_defaults&lt;/span&gt;&lt;/code&gt; will be an invasive
 change too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-0315.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
@@ -2926,7 +2936,7 @@ change too.&lt;/p&gt;
     <author>
       <name>Kay Hayen</name>
     </author>
-    <content type="html">&lt;div class="section" id="nuitka-release-0-3-16"&gt;
+    <content type="html">&lt;section id="nuitka-release-0-3-16"&gt;
 
 &lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
 &lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
@@ -2940,7 +2950,7 @@ I don’t know when, but it seems that it’s going to work one day.&lt;/p&gt;
 &lt;p&gt;Also there has an effort to make the Debian packaging cleaner,
 addressing all kinds of small issues that prevented it from entering the
 Debian repository. It’s still not there, but it’s making progress.&lt;/p&gt;
-&lt;div class="section" id="bug-fixes"&gt;
+&lt;section id="bug-fixes"&gt;
 &lt;h2&gt;Bug fixes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Fixed a packaging problem for Linux and x64 platform, the new
@@ -2987,8 +2997,8 @@ changed by the operation, but e.g. the length did.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Fix, the future spec was not properly preserving the future division
 flag.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="optimization"&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
 &lt;h2&gt;Optimization&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The optimization scales now much better, because per-module
@@ -2997,8 +3007,8 @@ modules all the time. With many modules recursed into, this makes a
 huge difference in compilation time.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The creation of dictionaries from constants is now also optimized.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
 &lt;h2&gt;New Features&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;As a new feature functions now have the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;func_defaults&lt;/span&gt;&lt;/code&gt; and
@@ -3012,8 +3022,8 @@ a compiled binary unless &lt;code class="docutils literal notranslate"&gt;&lt;sp
 which case it is preserved. This allows to make sure that a binary is
 in fact containing everything required.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="organisational"&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;The help output of Nuitka was polished a lot more. It is now more
@@ -3025,8 +3035,8 @@ failed module inclusions become immediately obvious.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The basic tests can now be run with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PYTHON=python3.2&lt;/span&gt;&lt;/code&gt; and use
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;2to3&lt;/span&gt;&lt;/code&gt; conversion in that case.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cleanups"&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
 &lt;h2&gt;Cleanups&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Moved &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tags&lt;/span&gt;&lt;/code&gt; to a separate module, make optimization emit only
@@ -3039,8 +3049,8 @@ gitweb are referenced, etc.&lt;/p&gt;&lt;/li&gt;
 portability for them.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Some more PyLint cleanups.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="new-tests"&gt;
+&lt;/section&gt;
+&lt;section id="new-tests"&gt;
 &lt;h2&gt;New Tests&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;There is now a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Crasher&lt;/span&gt;&lt;/code&gt; test, for tests that crashed Nuitka
@@ -3063,8 +3073,8 @@ too.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Added test function with two &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;raise&lt;/span&gt;&lt;/code&gt; in an exception handler, so
 that one becomes dead code and removed without the crash.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary"&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;The “git flow” was really great in this release cycle. There were many
 hot fix releases being made, so that the bugs could be addressed
@@ -3089,8 +3099,8 @@ Python3 is supported, the more benefit from increased test covered.&lt;/p&gt;
 &lt;p&gt;What’s missing is more “hg” completeness. I think only the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;raise&lt;/span&gt;&lt;/code&gt;
 without exception set and the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;func_defaults&lt;/span&gt;&lt;/code&gt; issue were going into
 its direction, but it won’t be enough yet.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-release-0316.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,

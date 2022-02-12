@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged pytest</title>
-  <updated>2022-02-12T10:38:13.269753+00:00</updated>
+  <updated>2022-02-12T12:08:42.845543+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/pytest/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,13 +13,13 @@
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="intro"&gt;
+    <content type="html">&lt;section id="intro"&gt;
 
 &lt;p&gt;As Google Summer of Code (GSoC) is coming to an end, I am writing this
 blog post as a final summary describing all the work I have done as well
 as my experiences in this program.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="summary-of-my-work"&gt;
+&lt;/section&gt;
+&lt;section id="summary-of-my-work"&gt;
 &lt;h1&gt;Summary of My Work&lt;/h1&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/314"&gt;#314 run_all.py new special-comment mechanism &amp;amp; Urllib3Using.py&lt;/a&gt;&lt;/p&gt;
@@ -158,8 +158,8 @@ improvements, readability improvements, and added documentation.&lt;/p&gt;&lt;/l
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="things-i-learned"&gt;
+&lt;/section&gt;
+&lt;section id="things-i-learned"&gt;
 &lt;h1&gt;Things I Learned&lt;/h1&gt;
 &lt;p&gt;Before GSoC, I was very uncomfortable with working inside a terminal. I
 was unfamiliar with many basic bash commands because I simply did not
@@ -179,7 +179,7 @@ believe will help me go very far in my career as a software developer.&lt;/p&gt;
 thankful to my mentor Kay Hayen as well as Google for making this
 amazing program possible.&lt;/p&gt;
 &lt;p&gt;Yours, &lt;a class="reference external" href="https://github.com/tommyli3318"&gt;Tommy&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-summary.html" rel="alternate"/>
     <summary>As Google Summer of Code (GSoC) is coming to an end, I am writing this

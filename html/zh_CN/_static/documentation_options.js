@@ -8,5 +8,5 @@ var DOCUMENTATION_OPTIONS = {
     LINK_SUFFIX: '.html',
     HAS_SOURCE: false,
     SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: true
+    NAVIGATION_WITH_KEYS: false
 };

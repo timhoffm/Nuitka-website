@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,14 +131,14 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-32">
+              <section id="nuitka-release-0-5-32">
 <h1>Nuitka Release 0.5.32<a class="headerlink" href="#nuitka-release-0-5-32" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release contains substantial new optimization, bug fixes, and
 already the full support for Python 3.7. Among the fixes, the enhanced
 coroutine work for compatibility with uncompiled ones is most important.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fix, was optimizing write backs of attribute in-place assignments
@@ -164,14 +165,14 @@ exception detected inside of them, lead to an infinite loop in
 optimization. They are now optimized in-place, avoiding an extra step
 later on.</p></li>
 </ul>
-</div>
-<div class="section" id="new-features">
+</section>
+<section id="new-features">
 <h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Support for Python 3.7 with only some corner cases not supported yet.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Delay creation of <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> exception in generator code for
@@ -189,15 +190,15 @@ classes.</p></li>
 unused, has been added, allowing for breaking of cyclic dependencies
 that prevented memory release.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Adapted 3.5 tests to work with 3.7 coroutine changes.</p></li>
 <li><p>Added CPython 3.7 test suite.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanups">
+</section>
+<section id="cleanups">
 <h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Removed remaining code that was there for 3.2 support. All uses of
@@ -222,16 +223,16 @@ register their locals type, and then it is created from that.</p></li>
 <li><p>Have a dedicated helper function for single argument calls in static
 code that does not require an array of objects as an argument.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>There are now <code class="docutils literal notranslate"><span class="pre">requirements-devel.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>
 files aimed at usage with scons and by users, but they are not used
 in installation.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This releases has this important step to add conversion of locals
 dictionary usages to temporary variables. It is not yet done everywhere
@@ -248,8 +249,8 @@ but past that, it was really easy.</p>
 the ability to predict Python3 metaclasses <code class="docutils literal notranslate"><span class="pre">__prepare__</span></code> results, and
 at more optimization applied to variables after they became temporary
 variables.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     

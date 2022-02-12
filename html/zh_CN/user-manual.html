@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
-
-<html lang="zh_CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="_static/favicon.svg" type="image/svg+xml">
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -13,56 +11,31 @@
     <link rel="icon" href="_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-    <title>Nuitka 用户手册</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    
-      
-
-    
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="_static/asciinema-player_2.6.1.css" />
-    <link rel="stylesheet" type="text/css" href="_static/asciinema-custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/my_theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
-
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/tabs.js"></script>
-    <script src="_static/asciinema-player_2.6.1.js"></script>
-    <script src="_static/translations.js"></script>
-    <script src="_static/design-tabs.js"></script>
-    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka 用户手册</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
     <link rel="canonical" href="https://nuitka.net/zh_CN/user-manual.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="_static/design-tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="支持" href="support.html" />
-    <link rel="prev" title="下载 Nuitka" href="download.html" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="zh_CN">
-    
-
-    <!-- Google Analytics -->
-     
+    <link rel="prev" title="下载 Nuitka" href="download.html" />   
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -95,1065 +68,150 @@
   }
 </style>
 
-  </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+</head>
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="_static/Nuitka-Logo-Symbol.png" class="logo" alt="logo">
-      
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="start.html">
-   快速入门
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="download.html">
-     下载
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     用户手册
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="support.html">
-     支持
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="roadmap.html">
-     路线图
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="commercial.html">
-   Nuitka Commercial
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="more.html">
-   更多内容
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="developer-manual.html">
-     开发者手册
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="api-doc.html">
-     API 文档
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="factory.html">
-     工厂说明书
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="use.html">
-     国际化
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="blog.html">
-   Nuitka 博客
-  </a>
- </li>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="start.html">快速入门</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="download.html">下载</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">用户手册</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">概览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">语法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#requirements">需求</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-line">命令行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation">安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#license">许可证</a></li>
 </ul>
-
-    </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  <div>
-<button><a href="/nuitka-doc/">en</a></button>
-<button><a href="/nuitka-doc/zh_CN">zh_CN</a></button>
-</div>
-
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/"><button type="button"
-                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial-setup-and-build-on-windows">教程设置和在 Windows 上构建</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setup">设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#write-some-code-and-test">编写一些代码并进行测试</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#use-cases">用例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#use-case-1-program-compilation-with-all-modules-embedded">用例 1 - 嵌入所有模块的程序编译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-case-2-extension-module-compilation">用例2 – 扩展模块的编译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-case-3-package-compilation">用例3–软件包的编译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-case-4-program-distribution">用例4–程序分发</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-case-5-setuptools-wheels">用例5 - Setuptools 轮子</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tweaks">调整</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#icons">图标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splash-screen">闪屏</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#typical-problems">典型问题</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#memory-issues-and-compiler-bugs">内存问题和编译器错误</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-sys-path">动态 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#missing-data-files-in-standalone">单机版中缺少的数据文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#missing-dlls-in-standalone">单机中缺少 DLLs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dependency-creep-in-standalone">单机中的依赖性爬升</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onefile-finding-files">一体化文件：寻找文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-programs-without-console-give-no-errors">没有控制台的 Windows 程序不会出现错误</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tips">小贴士</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nuitka-options-in-the-code">代码中的 Nuitka 选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-command-line-flags">Python 命令行旗标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#caching-compilation-results">缓存编译结果</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control-where-caches-live">控制缓存的位置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runners">运行器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fastest-c-compilers">最快的 C 语言编译器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unexpected-slowdowns">意外的速度减慢</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#standalone-executables-and-dependencies">独立的可执行文件和依赖性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-errors-with-resources">资源方面的 Windows 错误</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-standalone-program-redistribuation">Windows 独立程序的重新分配</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detecting-nuitka-at-run-time">在运行时检测 Nuitka</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#performance">性能</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pystone-results">pystone 结果</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#where-to-go-next">下一步该去哪里</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#follow-me-on-twitter">在 Twitter 上关注我</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#report-issues-or-bugs">报告问题或 bug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#word-of-warning">警示语</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#join-nuitka">加入 Nuitka</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#donations">奉献</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unsupported-functionality">不支持的功能</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-co-code-attribute-of-code-objects">代码对象的 <code class="docutils literal notranslate"><span class="pre">co_code</span></code> 属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdb">PDB</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#optimization">优化</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constant-folding">常量叠算</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constant-propagation">常量传播</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#built-in-name-lookups">内置名称查询</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#built-in-call-prediction">内置回调预测</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conditional-statement-prediction">条件性声明的预测</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exception-propagation">异常传播</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exception-scope-reduction">Exception Scope Reduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exception-block-inlining">Exception Block Inlining</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#empty-branch-removal">Empty Branch Removal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unpacking-prediction">Unpacking Prediction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#built-in-type-inference">Built-in Type Inference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quicker-function-calls">Quicker Function Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lowering-of-iterated-container-types">Lowering of iterated Container Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#updates-for-this-manual">更新手册</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html">路线图</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more.html">更多内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blog.html">Nuitka 博客</a></li>
+</ul>
 
         </div>
+      </div>
+    </nav>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   概览
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage">
-   语法
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#requirements">
-     需求
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#command-line">
-     命令行
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation">
-     安装
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#license">
-     许可证
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutorial-setup-and-build-on-windows">
-   教程设置和在 Windows 上构建
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup">
-     设置
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#install-python">
-       安装 Python
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#install-nuitka">
-       安装 Nuitka
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-some-code-and-test">
-     编写一些代码并进行测试
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-a-folder-for-the-python-code">
-       为 Python 代码创建一个文件夹
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-your-program">
-       测试你的程序
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#build-it-using">
-       采用以下方式构建
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-it">
-       运行它
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#distribute">
-       分发
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-cases">
-   用例
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-1-program-compilation-with-all-modules-embedded">
-     用例 1 - 嵌入所有模块的程序编译
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-2-extension-module-compilation">
-     用例2 – 扩展模块的编译
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-3-package-compilation">
-     用例3–软件包的编译
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-4-program-distribution">
-     用例4–程序分发
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-5-setuptools-wheels">
-     用例5 - Setuptools 轮子
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tweaks">
-   调整
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#icons">
-     图标
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#splash-screen">
-     闪屏
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#typical-problems">
-   典型问题
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#memory-issues-and-compiler-bugs">
-     内存问题和编译器错误
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ask-nuitka-to-use-less-memory">
-       要求 Nuitka 使用更少的内存
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#avoid-32-bit-c-compiler-assembler-memory-limits">
-       避免 32 位 C 语言编译器/汇编器的内存限制
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#use-lto-compilation-or-not">
-       是否使用 LTO 编译
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#switch-the-c-compiler-to-clang">
-       将 C 语言编译器切换为 clang
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-a-larger-swap-file-to-your-embedded-linux">
-       在你的嵌入式 Linux 中添加一个更大的交换文件
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#limit-the-amount-of-compilation-jobs">
-       限制编译工作的数量
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dynamic-sys-path">
-     动态
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sys.path
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#missing-data-files-in-standalone">
-     单机版中缺少的数据文件
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#missing-dlls-in-standalone">
-     单机中缺少 DLLs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dependency-creep-in-standalone">
-     单机中的依赖性爬升
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#onefile-finding-files">
-     一体化文件：寻找文件
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#windows-programs-without-console-give-no-errors">
-     没有控制台的 Windows 程序不会出现错误
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips">
-   小贴士
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nuitka-options-in-the-code">
-     代码中的 Nuitka 选项
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python-command-line-flags">
-     Python 命令行旗标
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#caching-compilation-results">
-     缓存编译结果
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#control-where-caches-live">
-     控制缓存的位置
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#runners">
-     运行器
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fastest-c-compilers">
-     最快的 C 语言编译器
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unexpected-slowdowns">
-     意外的速度减慢
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#standalone-executables-and-dependencies">
-     独立的可执行文件和依赖性
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#windows-errors-with-resources">
-     资源方面的 Windows 错误
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#windows-standalone-program-redistribuation">
-     Windows 独立程序的重新分配
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#detecting-nuitka-at-run-time">
-     在运行时检测 Nuitka
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#performance">
-   性能
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pystone-results">
-     pystone 结果
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-to-go-next">
-   下一步该去哪里
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#follow-me-on-twitter">
-     在 Twitter 上关注我
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#report-issues-or-bugs">
-     报告问题或 bug
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#word-of-warning">
-     警示语
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#join-nuitka">
-   加入 Nuitka
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#donations">
-   奉献
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#unsupported-functionality">
-   不支持的功能
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-co-code-attribute-of-code-objects">
-     代码对象的
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       co_code
-      </span>
-     </code>
-     属性
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pdb">
-     PDB
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optimization">
-   优化
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#constant-folding">
-     常量叠算
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#constant-propagation">
-     常量传播
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-name-lookups">
-     内置名称查询
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-call-prediction">
-     内置回调预测
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conditional-statement-prediction">
-     条件性声明的预测
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exception-propagation">
-     异常传播
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exception-scope-reduction">
-     Exception Scope Reduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exception-block-inlining">
-     Exception Block Inlining
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#empty-branch-removal">
-     Empty Branch Removal
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unpacking-prediction">
-     Unpacking Prediction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-type-inference">
-     Built-in Type Inference
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quicker-function-calls">
-     Quicker Function Calls
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lowering-of-iterated-container-types">
-     Lowering of iterated Container Types
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#updates-for-this-manual">
-   更新手册
-  </a>
- </li>
-</ul>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Nuitka the Python Compiler</a>
+      </nav>
 
-            </nav>
-        </div>
-    </div>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="start.html">快速入门</a> &raquo;</li>
+      <li>Nuitka 用户手册</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Nuitka 用户手册</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> 内容 </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   概览
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage">
-   语法
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#requirements">
-     需求
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#command-line">
-     命令行
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation">
-     安装
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#license">
-     许可证
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutorial-setup-and-build-on-windows">
-   教程设置和在 Windows 上构建
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup">
-     设置
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#install-python">
-       安装 Python
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#install-nuitka">
-       安装 Nuitka
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-some-code-and-test">
-     编写一些代码并进行测试
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-a-folder-for-the-python-code">
-       为 Python 代码创建一个文件夹
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-your-program">
-       测试你的程序
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#build-it-using">
-       采用以下方式构建
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-it">
-       运行它
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#distribute">
-       分发
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-cases">
-   用例
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-1-program-compilation-with-all-modules-embedded">
-     用例 1 - 嵌入所有模块的程序编译
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-2-extension-module-compilation">
-     用例2 – 扩展模块的编译
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-3-package-compilation">
-     用例3–软件包的编译
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-4-program-distribution">
-     用例4–程序分发
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-case-5-setuptools-wheels">
-     用例5 - Setuptools 轮子
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tweaks">
-   调整
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#icons">
-     图标
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#splash-screen">
-     闪屏
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#typical-problems">
-   典型问题
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#memory-issues-and-compiler-bugs">
-     内存问题和编译器错误
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ask-nuitka-to-use-less-memory">
-       要求 Nuitka 使用更少的内存
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#avoid-32-bit-c-compiler-assembler-memory-limits">
-       避免 32 位 C 语言编译器/汇编器的内存限制
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#use-lto-compilation-or-not">
-       是否使用 LTO 编译
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#switch-the-c-compiler-to-clang">
-       将 C 语言编译器切换为 clang
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-a-larger-swap-file-to-your-embedded-linux">
-       在你的嵌入式 Linux 中添加一个更大的交换文件
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#limit-the-amount-of-compilation-jobs">
-       限制编译工作的数量
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dynamic-sys-path">
-     动态
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sys.path
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#missing-data-files-in-standalone">
-     单机版中缺少的数据文件
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#missing-dlls-in-standalone">
-     单机中缺少 DLLs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dependency-creep-in-standalone">
-     单机中的依赖性爬升
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#onefile-finding-files">
-     一体化文件：寻找文件
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#windows-programs-without-console-give-no-errors">
-     没有控制台的 Windows 程序不会出现错误
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips">
-   小贴士
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nuitka-options-in-the-code">
-     代码中的 Nuitka 选项
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python-command-line-flags">
-     Python 命令行旗标
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#caching-compilation-results">
-     缓存编译结果
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#control-where-caches-live">
-     控制缓存的位置
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#runners">
-     运行器
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fastest-c-compilers">
-     最快的 C 语言编译器
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unexpected-slowdowns">
-     意外的速度减慢
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#standalone-executables-and-dependencies">
-     独立的可执行文件和依赖性
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#windows-errors-with-resources">
-     资源方面的 Windows 错误
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#windows-standalone-program-redistribuation">
-     Windows 独立程序的重新分配
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#detecting-nuitka-at-run-time">
-     在运行时检测 Nuitka
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#performance">
-   性能
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pystone-results">
-     pystone 结果
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-to-go-next">
-   下一步该去哪里
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#follow-me-on-twitter">
-     在 Twitter 上关注我
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#report-issues-or-bugs">
-     报告问题或 bug
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#word-of-warning">
-     警示语
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#join-nuitka">
-   加入 Nuitka
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#donations">
-   奉献
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#unsupported-functionality">
-   不支持的功能
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-co-code-attribute-of-code-objects">
-     代码对象的
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       co_code
-      </span>
-     </code>
-     属性
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pdb">
-     PDB
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optimization">
-   优化
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#constant-folding">
-     常量叠算
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#constant-propagation">
-     常量传播
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-name-lookups">
-     内置名称查询
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-call-prediction">
-     内置回调预测
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conditional-statement-prediction">
-     条件性声明的预测
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exception-propagation">
-     异常传播
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exception-scope-reduction">
-     Exception Scope Reduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exception-block-inlining">
-     Exception Block Inlining
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#empty-branch-removal">
-     Empty Branch Removal
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unpacking-prediction">
-     Unpacking Prediction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-type-inference">
-     Built-in Type Inference
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quicker-function-calls">
-     Quicker Function Calls
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lowering-of-iterated-container-types">
-     Lowering of iterated Container Types
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#updates-for-this-manual">
-   更新手册
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
-                 <div class="section" id="nuitka-user-manual">
-<h1>Nuitka 用户手册<a class="headerlink" href="#nuitka-user-manual" title="永久链接至标题">¶</a></h1>
-<div class="section" id="overview">
-<h2>概览<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-user-manual">
+<h1>Nuitka 用户手册<a class="headerlink" href="#nuitka-user-manual" title="永久链接至标题"></a></h1>
+<section id="overview">
+<h2>概览<a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
 <p>如果你对使用 Nuitka 感兴趣，建议首先阅读这份文档，了解它的使用情况，检查你可以期待什么，许可证，要求，信用等等。</p>
 <p>Nuitka is <strong>the</strong> Python compiler. It is written in Python. It is a
 seamless replacement or extension to the Python interpreter and compiles
@@ -1163,11 +221,11 @@ seamless replacement or extension to the Python interpreter and compiles
 <p>你可以自由使用所有 Python 库模块和所有扩展模块。</p>
 <p>Nuitka 将 Python 模块翻译成 C 级程序，然后使用 <code class="docutils literal notranslate"><span class="pre">libpython</span></code> 和自己的静态 C 文件，以 CPython 的方式执行。</p>
 <p>所有的优化都是为了避免开销，在没有必要的地方。没有任何优化是为了消除兼容性，虽然偶尔会做一些轻微的改进，但并不是标准 Python 的每一个错误都被模拟，例如给出更完整的错误信息，但有一个完全的兼容模式来禁用这些错误。</p>
-</div>
-<div class="section" id="usage">
-<h2>语法<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h2>
-<div class="section" id="requirements">
-<h3>需求<a class="headerlink" href="#requirements" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="usage">
+<h2>语法<a class="headerlink" href="#usage" title="永久链接至标题"></a></h2>
+<section id="requirements">
+<h3>需求<a class="headerlink" href="#requirements" title="永久链接至标题"></a></h3>
 <ul>
 <li><p>C 编译器。你需要一个支持 C11 或 C++03 的编译器 <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
 <p>目前这意味着，你需要使用下面这些编译器：</p>
@@ -1222,9 +280,9 @@ seamless replacement or extension to the Python interpreter and compiles
 <p>建议使用最新版本，但不是必须的。另一方面，不需要除 Windows 10 之前的支持，它们可能对你有用，但对这些配置的支持只提供给商业用户。</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="command-line">
-<h3>命令行<a class="headerlink" href="#command-line" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="command-line">
+<h3>命令行<a class="headerlink" href="#command-line" title="永久链接至标题"></a></h3>
 <p>推荐执行 Nuitka 的方式是 <code class="docutils literal notranslate"><span class="pre">&lt;the_right_python&gt;</span> <span class="pre">-m</span> <span class="pre">nuitka</span></code>，以绝对确定你使用的是哪种 Python 解释器，这样更容易与 Nuitka 的内容相匹配。</p>
 <p>其次是执行裸 Nuitka 的最佳方式，即从源码签出或存档，不需要改变环境变量，最值得注意的是，你完全不必为 Nuitka 弄乱 <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>。你只需直接执行 <code class="docutils literal notranslate"><span class="pre">nuitka</span></code> 和 <code class="docutils literal notranslate"><span class="pre">nuitka-run</span></code> 脚本，不需要对环境做任何改变。你可能想把 <code class="docutils literal notranslate"><span class="pre">bin</span></code> 目录添加到你的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 中，以方便你使用，但这一步是可选的。</p>
 <p>此外，如果你想用正确的解释器执行，在这种情况下，一定要执行 <code class="docutils literal notranslate"><span class="pre">&lt;the_right_python&gt;</span> <span class="pre">bin/nuitka</span></code>，就可以了。</p>
@@ -1241,16 +299,16 @@ seamless replacement or extension to the Python interpreter and compiles
 </pre></div>
 </div>
 <p>这个不同的选项是 <code class="docutils literal notranslate"><span class="pre">--run</span></code>，并在第一个非选项之后向创建的二进制文件传递参数，所以它与普通的 <code class="docutils literal notranslate"><span class="pre">python</span></code> 会做的事情有些类似。</p>
-</div>
-<div class="section" id="installation">
-<h3>安装<a class="headerlink" href="#installation" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="installation">
+<h3>安装<a class="headerlink" href="#installation" title="永久链接至标题"></a></h3>
 <p>For most systems, there will be packages on the <a class="reference external" href="https://nuitka.net/doc/download.html">download page</a> of Nuitka. But you can also
 install it from source code as described above, but also like any other
 Python program it can be installed via the normal <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span>
 <span class="pre">install</span></code> routine.</p>
-</div>
-<div class="section" id="license">
-<h3>许可证<a class="headerlink" href="#license" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="license">
+<h3>许可证<a class="headerlink" href="#license" title="永久链接至标题"></a></h3>
 <p>Nuitka is licensed under the Apache License, Version 2.0; you may not
 use it except in compliance with the License.</p>
 <p>You may obtain a copy of the License at
@@ -1260,34 +318,34 @@ distributed under the License is distributed on an “AS IS” BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.</p>
-</div>
-</div>
-<div class="section" id="tutorial-setup-and-build-on-windows">
-<h2>教程设置和在 Windows 上构建<a class="headerlink" href="#tutorial-setup-and-build-on-windows" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="tutorial-setup-and-build-on-windows">
+<h2>教程设置和在 Windows 上构建<a class="headerlink" href="#tutorial-setup-and-build-on-windows" title="永久链接至标题"></a></h2>
 <p>这是基本步骤，如果你什么都没有安装，当然如果你有任何一个零件，就跳过它。</p>
-<div class="section" id="setup">
-<h3>设置<a class="headerlink" href="#setup" title="永久链接至标题">¶</a></h3>
-<div class="section" id="install-python">
-<h4>安装 Python<a class="headerlink" href="#install-python" title="永久链接至标题">¶</a></h4>
+<section id="setup">
+<h3>设置<a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
+<section id="install-python">
+<h4>安装 Python<a class="headerlink" href="#install-python" title="永久链接至标题"></a></h4>
 <ul class="simple">
 <li><p>Download and install from <a class="reference external" href="https://www.python.org/downloads/windows">https://www.python.org/downloads/windows</a></p></li>
 <li><p>Select one of <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">x86-64</span> <span class="pre">web-based</span> <span class="pre">installer</span></code> (64 bits Python,
 recommended) or <code class="docutils literal notranslate"><span class="pre">x86</span> <span class="pre">executable</span></code> (32 bits Python) installer.</p></li>
 <li><p>Verify using command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>.</p></li>
 </ul>
-</div>
-<div class="section" id="install-nuitka">
-<h4>安装 Nuitka<a class="headerlink" href="#install-nuitka" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="install-nuitka">
+<h4>安装 Nuitka<a class="headerlink" href="#install-nuitka" title="永久链接至标题"></a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">nuitka</span></code></p></li>
 <li><p>使用命令 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">nuitka</span> <span class="pre">--version</span></code> 进行验证。</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="write-some-code-and-test">
-<h3>编写一些代码并进行测试<a class="headerlink" href="#write-some-code-and-test" title="永久链接至标题">¶</a></h3>
-<div class="section" id="create-a-folder-for-the-python-code">
-<h4>为 Python 代码创建一个文件夹<a class="headerlink" href="#create-a-folder-for-the-python-code" title="永久链接至标题">¶</a></h4>
+</section>
+</section>
+<section id="write-some-code-and-test">
+<h3>编写一些代码并进行测试<a class="headerlink" href="#write-some-code-and-test" title="永久链接至标题"></a></h3>
+<section id="create-a-folder-for-the-python-code">
+<h4>为 Python 代码创建一个文件夹<a class="headerlink" href="#create-a-folder-for-the-python-code" title="永久链接至标题"></a></h4>
 <ul class="simple">
 <li><p>mkdir HelloWorld</p></li>
 <li><p>创建名为 <strong>hello.py</strong> 的 Python 文件</p></li>
@@ -1304,17 +362,17 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="test-your-program">
-<h4>测试你的程序<a class="headerlink" href="#test-your-program" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="test-your-program">
+<h4>测试你的程序<a class="headerlink" href="#test-your-program" title="永久链接至标题"></a></h4>
 <p>像平常那样做。在工作不正确的代码上运行 Nuitka，并不容易调试。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python hello.py
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="build-it-using">
-<h4>采用以下方式构建<a class="headerlink" href="#build-it-using" title="永久链接至标题">¶</a></h4>
+<section id="build-it-using">
+<h4>采用以下方式构建<a class="headerlink" href="#build-it-using" title="永久链接至标题"></a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka hello.py
 </pre></div>
 </div>
@@ -1322,22 +380,22 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 <p class="admonition-title">备注</p>
 <p>这将提示你下载一个 C 语言缓存工具（以加速重复编译生成的 C 代码）和一个基于 MinGW64 的 C 语言编译器，除非你已经安装了合适的 MSVC。对这两个问题都说 <code class="docutils literal notranslate"><span class="pre">yes</span></code>。</p>
 </div>
-</div>
-<div class="section" id="run-it">
-<h4>运行它<a class="headerlink" href="#run-it" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="run-it">
+<h4>运行它<a class="headerlink" href="#run-it" title="永久链接至标题"></a></h4>
 <p>执行在 <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> 附近创建的 <code class="docutils literal notranslate"><span class="pre">hello.exe</span></code>。</p>
-</div>
-<div class="section" id="distribute">
-<h4>分发<a class="headerlink" href="#distribute" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="distribute">
+<h4>分发<a class="headerlink" href="#distribute" title="永久链接至标题"></a></h4>
 <p>要分发，用 <code class="docutils literal notranslate"><span class="pre">--standalone</span></code> 选项构建，这不会输出一个单一的可执行文件，而是整个文件夹。将生成的 <code class="docutils literal notranslate"><span class="pre">hello.dist</span></code> 文件夹复制到另一台机器上并运行它。</p>
 <p>你也可以尝试 <code class="docutils literal notranslate"><span class="pre">--onefile</span></code>，它确实创建了一个单一的文件，但在转向它之前，要确保单纯的独立运行，因为它将使调试更加困难，例如在数据文件丢失的情况下。</p>
-</div>
-</div>
-</div>
-<div class="section" id="use-cases">
-<h2>用例<a class="headerlink" href="#use-cases" title="永久链接至标题">¶</a></h2>
-<div class="section" id="use-case-1-program-compilation-with-all-modules-embedded">
-<h3>用例 1 - 嵌入所有模块的程序编译<a class="headerlink" href="#use-case-1-program-compilation-with-all-modules-embedded" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="use-cases">
+<h2>用例<a class="headerlink" href="#use-cases" title="永久链接至标题"></a></h2>
+<section id="use-case-1-program-compilation-with-all-modules-embedded">
+<h3>用例 1 - 嵌入所有模块的程序编译<a class="headerlink" href="#use-case-1-program-compilation-with-all-modules-embedded" title="永久链接至标题"></a></h3>
 <p>如果你想递归地编译整个程序，而不是只编译作为主程序的单个文件，可以这样做：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --follow-imports program.py
 </pre></div>
@@ -1364,9 +422,9 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 <p>产生的二进制文件仍然依赖于 CPython 和使用的 C 扩展模块被安装。</p>
 <p>如果你想能够把它复制到另一台机器上，使用 <code class="docutils literal notranslate"><span class="pre">--standalone</span></code> 并复制创建的 <code class="docutils literal notranslate"><span class="pre">program.dist</span></code> 目录并执行放在里面的 <code class="docutils literal notranslate"><span class="pre">program.exe</span></code> （Windows）或 <code class="docutils literal notranslate"><span class="pre">program</span></code> （其他平台）”</p>
 </div>
-</div>
-<div class="section" id="use-case-2-extension-module-compilation">
-<h3>用例2 – 扩展模块的编译<a class="headerlink" href="#use-case-2-extension-module-compilation" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="use-case-2-extension-module-compilation">
+<h3>用例2 – 扩展模块的编译<a class="headerlink" href="#use-case-2-extension-module-compilation" title="永久链接至标题"></a></h3>
 <p>如果你想编译一个单一的扩展模块，你所要做的就是这样：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --module some_module.py
 </pre></div>
@@ -1384,9 +442,9 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 <p class="admonition-title">备注</p>
 <p>产生的扩展模块只能加载到同一版本的 CPython 中，并且不包括其他扩展模块。</p>
 </div>
-</div>
-<div class="section" id="use-case-3-package-compilation">
-<h3>用例3–软件包的编译<a class="headerlink" href="#use-case-3-package-compilation" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="use-case-3-package-compilation">
+<h3>用例3–软件包的编译<a class="headerlink" href="#use-case-3-package-compilation" title="永久链接至标题"></a></h3>
 <p>如果你需要编译整个软件包并嵌入所有模块，那也是可行的，像这样使用 Nuitka：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --module some_package --include-package<span class="o">=</span>some_package
 </pre></div>
@@ -1395,9 +453,9 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 <p class="admonition-title">备注</p>
 <p>包内容的包含需要手动提供，否则，包是空的。如果你愿意，你可以更具体一些，只包括一部分。位于包内的数据文件不会被这个过程嵌入，你需要用这种方法自己复制它们。</p>
 </div>
-</div>
-<div class="section" id="use-case-4-program-distribution">
-<h3>用例4–程序分发<a class="headerlink" href="#use-case-4-program-distribution" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="use-case-4-program-distribution">
+<h3>用例4–程序分发<a class="headerlink" href="#use-case-4-program-distribution" title="永久链接至标题"></a></h3>
 <p>对于分发到其他系统，有一种独立模式，它产生一个文件夹，你可以指定 <code class="docutils literal notranslate"><span class="pre">--standalone</span></code>。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --standalone program.py
 </pre></div>
@@ -1423,7 +481,7 @@ python -m nuitka --onefile program.py
 </div>
 <p>同样，在 Windows 上，对于临时文件目录，默认使用用户的目录，然而这可以用 <code class="docutils literal notranslate"><span class="pre">--windows-onefile-tempdir-spec=%TEMP%\\onefile_%PID%_%TIME%</span></code> 中给出的路径规范来覆盖，这是默认的，断言创建的临时目录不能发生冲突。</p>
 <p>目前，这些扩大的 token 可以使用。</p>
-<table class="table">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 13%" />
 <col style="width: 45%" />
@@ -1459,9 +517,9 @@ python -m nuitka --onefile program.py
 <p>你有责任使提供的路径是唯一的，在 Windows 上，一个正在运行的程序将被锁定，虽然使用一个固定的文件夹名称是可能的，但在这种情况下，它可能导致锁定问题，即程序被重新启动。</p>
 <p>通常你需要使用 <code class="docutils literal notranslate"><span class="pre">%TIME%</span></code> 或者至少使用 <code class="docutils literal notranslate"><span class="pre">%PID%</span></code> 来使路径唯一，这主要是针对使用情况的，例如你希望事物驻留在你选择的地方或者遵守你的命名惯例。</p>
 </div>
-</div>
-<div class="section" id="use-case-5-setuptools-wheels">
-<h3>用例5 - Setuptools 轮子<a class="headerlink" href="#use-case-5-setuptools-wheels" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="use-case-5-setuptools-wheels">
+<h3>用例5 - Setuptools 轮子<a class="headerlink" href="#use-case-5-setuptools-wheels" title="永久链接至标题"></a></h3>
 <p>如果你有一个 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>、<code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> 或 <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> 驱动的为你的软件创建轮子的地方，把 Nuitka 用起来是非常容易的。</p>
 <p>让我们从最常见的 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> 方法开始，你可以–当然是安装了 Nuitka，简单地执行目标 <code class="docutils literal notranslate"><span class="pre">bdist_nuitka</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">bdist_wheel</span></code>。它接受所有的选项，并允许你指定一些特定于 Nuitka 的内容。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For setup.py if not you&#39;t use other build systems:</span>
@@ -1526,12 +584,12 @@ python -m nuitka --onefile program.py
 <span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;nuitka.distutils.Build&quot;</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="tweaks">
-<h2>调整<a class="headerlink" href="#tweaks" title="永久链接至标题">¶</a></h2>
-<div class="section" id="icons">
-<h3>图标<a class="headerlink" href="#icons" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="tweaks">
+<h2>调整<a class="headerlink" href="#tweaks" title="永久链接至标题"></a></h2>
+<section id="icons">
+<h3>图标<a class="headerlink" href="#icons" title="永久链接至标题"></a></h3>
 <p>为了好看，你可以指定图标。在 Windows 上，你可以提供一个图标文件、一个可执行模板或一个 PNG 文件。所有这些都可以使用，甚至可以组合使用：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># These create binaries with icons:</span>
 python -m nuitka --onefile --windows-icon-from-ico<span class="o">=</span>your-icon.png program.py
@@ -1539,9 +597,9 @@ python -m nuitka --onefile --windows-icon-from-ico<span class="o">=</span>your-i
 python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>your-icon.ico program.py
 </pre></div>
 </div>
-</div>
-<div class="section" id="splash-screen">
-<h3>闪屏<a class="headerlink" href="#splash-screen" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="splash-screen">
+<h3>闪屏<a class="headerlink" href="#splash-screen" title="永久链接至标题"></a></h3>
 <p>当程序启动缓慢时，飞溅的屏幕很有用。Onefile 启动本身并不慢，但你的程序可能很慢，而且你无法真正知道所用的电脑会有多快，所以拥有它们也许是个好主意。幸运的是，有了 Nuitka，它们很容易为 Windows 添加。</p>
 <p>对于闪屏，你需要将其指定为 PNG 文件，然后确保在你的程序准备好后禁用闪屏，例如已经完成导入，准备好窗口，连接到数据库，并希望闪屏消失。这里我们使用项目语法将代码与创建结合起来，编译时要注意：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># nuitka-project: --onefile</span>
@@ -1568,60 +626,60 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <span class="c1"># Rest of your program goes here.</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="typical-problems">
-<h2>典型问题<a class="headerlink" href="#typical-problems" title="永久链接至标题">¶</a></h2>
-<div class="section" id="memory-issues-and-compiler-bugs">
-<h3>内存问题和编译器错误<a class="headerlink" href="#memory-issues-and-compiler-bugs" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="typical-problems">
+<h2>典型问题<a class="headerlink" href="#typical-problems" title="永久链接至标题"></a></h2>
+<section id="memory-issues-and-compiler-bugs">
+<h3>内存问题和编译器错误<a class="headerlink" href="#memory-issues-and-compiler-bugs" title="永久链接至标题"></a></h3>
 <p>有时 C 语言编译器会崩溃，说他们不能分配内存，或者一些输入被截断了，或者类似的错误信息，显然是来自于此。这里有几个选择，你可以探索一下：</p>
-<div class="section" id="ask-nuitka-to-use-less-memory">
-<h4>要求 Nuitka 使用更少的内存<a class="headerlink" href="#ask-nuitka-to-use-less-memory" title="永久链接至标题">¶</a></h4>
+<section id="ask-nuitka-to-use-less-memory">
+<h4>要求 Nuitka 使用更少的内存<a class="headerlink" href="#ask-nuitka-to-use-less-memory" title="永久链接至标题"></a></h4>
 <p>有一个专门的选项 <code class="docutils literal notranslate"><span class="pre">--low-memory</span></code>，它影响了 Nuitka 的决策，使其在编译过程中避免大量使用内存，代价是增加编译时间。</p>
-</div>
-<div class="section" id="avoid-32-bit-c-compiler-assembler-memory-limits">
-<h4>避免 32 位 C 语言编译器/汇编器的内存限制<a class="headerlink" href="#avoid-32-bit-c-compiler-assembler-memory-limits" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="avoid-32-bit-c-compiler-assembler-memory-limits">
+<h4>避免 32 位 C 语言编译器/汇编器的内存限制<a class="headerlink" href="#avoid-32-bit-c-compiler-assembler-memory-limits" title="永久链接至标题"></a></h4>
 <p>不要使用 32 位的编译器，而要使用 64 位的。如果你在 Windows 上使用 32 位的 Python，你最应该使用 MSVC 作为 C 编译器，而不是 MinGW64。MSVC 是一个交叉编译器，在该平台上可以比 gcc 使用更多的内存。如果你不在 Windows 上，当然就没有这个选择了。另外，使用 64 位的 Python 也能工作。</p>
-</div>
-<div class="section" id="use-lto-compilation-or-not">
-<h4>是否使用 LTO 编译<a class="headerlink" href="#use-lto-compilation-or-not" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="use-lto-compilation-or-not">
+<h4>是否使用 LTO 编译<a class="headerlink" href="#use-lto-compilation-or-not" title="永久链接至标题"></a></h4>
 <p>用 <code class="docutils literal notranslate"><span class="pre">--lto=yes</span></code> 或 <code class="docutils literal notranslate"><span class="pre">--lto=no</span></code>，你可以将 C 语言的编译切换到只产生字节码，而不是直接产生汇编码和机器码，但在最后做整个程序的优化。这将大大改变内存的使用，如果你的错误来自汇编器，使用 LTO 将最能避免这种情况。</p>
-</div>
-<div class="section" id="switch-the-c-compiler-to-clang">
-<h4>将 C 语言编译器切换为 clang<a class="headerlink" href="#switch-the-c-compiler-to-clang" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="switch-the-c-compiler-to-clang">
+<h4>将 C 语言编译器切换为 clang<a class="headerlink" href="#switch-the-c-compiler-to-clang" title="永久链接至标题"></a></h4>
 <p>人们报告说，由于 gcc 的缺陷或内存占用，用 gcc 编译失败的程序在 Linux 上用 clang 可以正常工作。在 Windows 上，这可能仍然是一个选项，但需要先实现自动下载的 gcc，这将包含它。由于 MSVC 无论如何都是已知的更有效的内存，你应该去那里，如果你想使用 Clang，有支持 MSVC 中包含的那个。</p>
-</div>
-<div class="section" id="add-a-larger-swap-file-to-your-embedded-linux">
-<h4>在你的嵌入式 Linux 中添加一个更大的交换文件<a class="headerlink" href="#add-a-larger-swap-file-to-your-embedded-linux" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="add-a-larger-swap-file-to-your-embedded-linux">
+<h4>在你的嵌入式 Linux 中添加一个更大的交换文件<a class="headerlink" href="#add-a-larger-swap-file-to-your-embedded-linux" title="永久链接至标题"></a></h4>
 <p>在内存不足的系统上，你需要使用交换空间。用完了可能是一个原因，增加更多的交换空间，或者根本就没有，可能会解决这个问题，但是要注意，当编译器来回交换时，会使事情变得非常慢，所以要先考虑下一个提示，或者在它的基础上考虑。</p>
-</div>
-<div class="section" id="limit-the-amount-of-compilation-jobs">
-<h4>限制编译工作的数量<a class="headerlink" href="#limit-the-amount-of-compilation-jobs" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="limit-the-amount-of-compilation-jobs">
+<h4>限制编译工作的数量<a class="headerlink" href="#limit-the-amount-of-compilation-jobs" title="永久链接至标题"></a></h4>
 <p>使用 Nuitka 的 <code class="docutils literal notranslate"><span class="pre">--jobs</span></code> 选项，它不会同时启动许多 C 编译器实例，每个实例都在争夺稀缺的 RAM 资源。通过选择一个值，只有一个 C 编译器实例将被运行，在一个 8 核系统上，这将减少 8 倍的内存量，所以这是一个自然的选择。</p>
-</div>
-</div>
-<div class="section" id="dynamic-sys-path">
-<h3>动态 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code><a class="headerlink" href="#dynamic-sys-path" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="dynamic-sys-path">
+<h3>动态 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code><a class="headerlink" href="#dynamic-sys-path" title="永久链接至标题"></a></h3>
 <p>如果你的脚本修改了 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>，例如插入与源代码相对的目录，Nuitka 目前将无法看到这些。然而，如果你将 <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> 设置为结果值，你就可以编译它了。</p>
-</div>
-<div class="section" id="missing-data-files-in-standalone">
-<h3>单机版中缺少的数据文件<a class="headerlink" href="#missing-data-files-in-standalone" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="missing-data-files-in-standalone">
+<h3>单机版中缺少的数据文件<a class="headerlink" href="#missing-data-files-in-standalone" title="永久链接至标题"></a></h3>
 <p>如果你的程序不能将数据归档，会导致各种不同的行为，例如，一个软件包可能会抱怨它的版本不对，因为 <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> 文件检查默认为未知。没有图标文件或帮助文本，可能会引起奇怪的错误。</p>
 <p>通常情况下，文件不存在的错误路径甚至是错误的，会暴露出编程错误，如未绑定局部变量。请仔细查看这些异常情况，牢记这可能是原因。如果你的程序没有独立运行，有可能是数据文件的原因。</p>
-</div>
-<div class="section" id="missing-dlls-in-standalone">
-<h3>单机中缺少 DLLs<a class="headerlink" href="#missing-dlls-in-standalone" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="missing-dlls-in-standalone">
+<h3>单机中缺少 DLLs<a class="headerlink" href="#missing-dlls-in-standalone" title="永久链接至标题"></a></h3>
 <p>Nuitka 有处理复制 DLLs 的插件。对于 NumPy、SciPy、Tkinter 等。</p>
 <p>这些需要特殊处理，以便能够在其他系统上运行。手动复制它们是不够的，而且会产生奇怪的错误。有时较新版本的软件包，特别是 NumPy 可能不被支持。在这种情况下，你将不得不提出一个问题，并使用较旧的版本。</p>
-</div>
-<div class="section" id="dependency-creep-in-standalone">
-<h3>单机中的依赖性爬升<a class="headerlink" href="#dependency-creep-in-standalone" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="dependency-creep-in-standalone">
+<h3>单机中的依赖性爬升<a class="headerlink" href="#dependency-creep-in-standalone" title="永久链接至标题"></a></h3>
 <p>有些包是单一的 import，但对 Nuitka  来说，意味着要包括一千多个包（字面意思）。最典型的例子是 Pandas，它确实想插入和使用你能想象到的一切。多个框架用于语法高亮显示一切可以想象的东西，需要时间。</p>
 <p>Nuitka 将来必须学习有效的缓存来处理这个问题。现在，你将不得不为这些处理巨大的编译时间。</p>
 <p>现在，应该使用对抗依赖性蠕变的主要武器，即 <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> 插件，它提供了有趣的能力，可以用来阻止不需要的导入，并在它们出现的地方给出一个错误。使用它，例如像这样 <code class="docutils literal notranslate"><span class="pre">--enable-plugin=anti-bloat</span> <span class="pre">--noinclude-pytest-mode=nofollow</span> <span class="pre">--noinclude-setuptools-mode=nofollow</span></code> 并查看其帮助输出。它可以为你选择的每一个模块，例如，也可以强迫 PyQt5 被视为独立模式的卸载。</p>
-</div>
-<div class="section" id="onefile-finding-files">
-<h3>一体化文件：寻找文件<a class="headerlink" href="#onefile-finding-files" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="onefile-finding-files">
+<h3>一体化文件：寻找文件<a class="headerlink" href="#onefile-finding-files" title="永久链接至标题"></a></h3>
 <p>对于 onefile ，主模块的 <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">__file__</span></code> 之间有差异，那是由于使用引导到临时位置造成的。第一个将是原始的可执行路径，而第二个将是 bootstrap 可执行文件解包到的临时或永久路径。数据文件将在后一个位置，你的原始环境文件将在前一个位置。</p>
 <p>给定两个文件，一个是你希望在你的可执行文件附近的，一个是你希望在 onefile 二进制文件内的，像这样访问它们。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will find a file near your onefile.exe</span>
@@ -1630,16 +688,16 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;user-provided-file.txt&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="windows-programs-without-console-give-no-errors">
-<h3>没有控制台的 Windows 程序不会出现错误<a class="headerlink" href="#windows-programs-without-console-give-no-errors" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="windows-programs-without-console-give-no-errors">
+<h3>没有控制台的 Windows 程序不会出现错误<a class="headerlink" href="#windows-programs-without-console-give-no-errors" title="永久链接至标题"></a></h3>
 <p>为了调试的目的，移除 <code class="docutils literal notranslate"><span class="pre">--windows-disable-console</span></code> 或使用选项 <code class="docutils literal notranslate"><span class="pre">--windows-force-stdout-spec</span></code> 和 <code class="docutils literal notranslate"><span class="pre">--windows-force-stderr-spec</span></code>，其路径与上述 <code class="docutils literal notranslate"><span class="pre">--windows-onefile-tempdir-spec</span></code> 所记载的相同。</p>
-</div>
-</div>
-<div class="section" id="tips">
-<h2>小贴士<a class="headerlink" href="#tips" title="永久链接至标题">¶</a></h2>
-<div class="section" id="nuitka-options-in-the-code">
-<h3>代码中的 Nuitka 选项<a class="headerlink" href="#nuitka-options-in-the-code" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="tips">
+<h2>小贴士<a class="headerlink" href="#tips" title="永久链接至标题"></a></h2>
+<section id="nuitka-options-in-the-code">
+<h3>代码中的 Nuitka 选项<a class="headerlink" href="#nuitka-options-in-the-code" title="永久链接至标题"></a></h3>
 <p>支持条件性选项，以及使用预定义变量的选项，这是一个例子：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compilation mode, support OS specific.</span>
 <span class="c1"># nuitka-project-if: {OS} in (&quot;Windows&quot;, &quot;Linux&quot;, &quot;Darwin&quot;, &quot;FreeBSD&quot;):</span>
@@ -1655,7 +713,7 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <p>注释必须是一个行的开始，并且要使用缩进，以结束一个条件块，就像在 Python 中一样。目前除了上面演示的使用的关键字外，没有其他关键字。</p>
 <p>你可以把任意的 Python 表达式放在那里，如果你想访问一个软件包的版本信息，你可以简单地使用 <code class="docutils literal notranslate"><span class="pre">__import__(&quot;module_name&quot;).__version__</span></code>，如果这将是需要的，例如启用或禁用某些 Nuitka 设置。Nuitka 所做的唯一一件事使得这不是 Python 表达式，就是为一组预先定义的变量扩展 <code class="docutils literal notranslate"><span class="pre">{variable}</span></code>：</p>
 <p>带有支持的变量的表格：</p>
-<table class="table">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 35%" />
@@ -1694,58 +752,58 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="python-command-line-flags">
-<h3>Python 命令行旗标<a class="headerlink" href="#python-command-line-flags" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="python-command-line-flags">
+<h3>Python 命令行旗标<a class="headerlink" href="#python-command-line-flags" title="永久链接至标题"></a></h3>
 <p>对于向 Python 传递 <code class="docutils literal notranslate"><span class="pre">-O</span></code> 或 <code class="docutils literal notranslate"><span class="pre">-S</span></code> 这样的东西，对于你的编译程序，有一个命令行选项名为 <code class="docutils literal notranslate"><span class="pre">--python-flag=</span></code> ，它使 Nuitka 模拟这些选项。</p>
 <p>支持最重要的那些，当然还可以增加更多。</p>
-</div>
-<div class="section" id="caching-compilation-results">
-<h3>缓存编译结果<a class="headerlink" href="#caching-compilation-results" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="caching-compilation-results">
+<h3>缓存编译结果<a class="headerlink" href="#caching-compilation-results" title="永久链接至标题"></a></h3>
 <p>C 语言编译器，当用相同的输入文件调用时，将需要很长的时间和很多 CPU 来反复编译。确保你在使用 gcc 时安装和配置了 <code class="docutils literal notranslate"><span class="pre">ccache</span></code> （即使在 Windows 上）。它将使重复编译快得多，即使事情还不是很完美，即程序的改变会导致许多 C 文件的改变，需要重新编译而不是使用缓存的结果”</p>
 <p>在 Windows 上，Nuitka 支持使用 <code class="docutils literal notranslate"><span class="pre">ccache.exe</span></code>，它将提供从官方来源下载，并自动进行。这是在 Windows 上使用它的推荐方式，因为其他版本可能会挂起。</p>
 <p>如果在系统的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 中找到 <code class="docutils literal notranslate"><span class="pre">ccache</span></code> ，Nuitka 就会接收它，也可以通过设置 <code class="docutils literal notranslate"><span class="pre">NUITKA_CCACHE_BINARY</span></code> 为二进制的完整路径来提供，这是为了在 CI 系统中使用。</p>
 <p>对于 MSVC 编译器和 ClangCL 设置，使用 <code class="docutils literal notranslate"><span class="pre">clcache</span></code> 是自动的，包含在 Nuitka 中。</p>
-</div>
-<div class="section" id="control-where-caches-live">
-<h3>控制缓存的位置<a class="headerlink" href="#control-where-caches-live" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="control-where-caches-live">
+<h3>控制缓存的位置<a class="headerlink" href="#control-where-caches-live" title="永久链接至标题"></a></h3>
 <p>各种缓存结果、下载、C 和 Nuitka 的缓存编译结果的存储，都是在一个与平台相关的目录中进行的，由 <code class="docutils literal notranslate"><span class="pre">appdirs</span></code> 包决定。然而，你可以通过设置环境变量 <code class="docutils literal notranslate"><span class="pre">NUITKA_CACHE_DIR</span></code> 来覆盖它的基本目录。这是为了在主目录不被持久化，但其他路径被持久化的环境中使用。</p>
-</div>
-<div class="section" id="runners">
-<h3>运行器<a class="headerlink" href="#runners" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="runners">
+<h3>运行器<a class="headerlink" href="#runners" title="永久链接至标题"></a></h3>
 <p>避免运行 <code class="docutils literal notranslate"><span class="pre">nuitka</span></code> 二进制文件，而使用 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">nuitka</span></code> 会 100% 确定你在使用你认为的东西。使用错误的 Python 会使它对好的代码出现 <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>，对已安装的模块出现 <code class="docutils literal notranslate"><span class="pre">ImportError</span></code>。当你用 Python2 在 Python3 代码上运行 Nuitka 时，这种情况就会发生，反之亦然。通过明确地调用相同的 Python 解释器二进制文件，你可以完全避免这个问题。</p>
-</div>
-<div class="section" id="fastest-c-compilers">
-<h3>最快的 C 语言编译器<a class="headerlink" href="#fastest-c-compilers" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="fastest-c-compilers">
+<h3>最快的 C 语言编译器<a class="headerlink" href="#fastest-c-compilers" title="永久链接至标题"></a></h3>
 <p>事实证明，在 Windows 上使用 64 位 Python 的 <code class="docutils literal notranslate"><span class="pre">pystone.exe</span></code> 的最快二进制文件，比使用 MinGW64 明显更快，大概有 20% 的提升。所以推荐使用它，而不是 MSVC。使用 Clang7 的 <code class="docutils literal notranslate"><span class="pre">clang-cl.exe</span></code> 比 MSVC 快，但仍然明显比 MinGW64 慢，而且会更难使用，所以不推荐使用。</p>
 <p>在 Linux 上，对于 <code class="docutils literal notranslate"><span class="pre">pystone.bin</span></code>，由 <code class="docutils literal notranslate"><span class="pre">clang6</span></code> 产生的二进制文件比 <code class="docutils literal notranslate"><span class="pre">gcc-6.3</span></code> 快，但差距不大。由于 gcc 更多的时候已经安装了，所以现在建议使用它。</p>
 <p>C 语言编译时间的差异还没有被研究。</p>
-</div>
-<div class="section" id="unexpected-slowdowns">
-<h3>意外的速度减慢<a class="headerlink" href="#unexpected-slowdowns" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="unexpected-slowdowns">
+<h3>意外的速度减慢<a class="headerlink" href="#unexpected-slowdowns" title="永久链接至标题"></a></h3>
 <p>使用Python DLL，就像标准的CPython那样，可能会导致意外的减速，例如在处理 Unicode 字符串的未编译的代码中。这是因为调用 DLL 而不是驻留在 DLL 中会导致开销，这甚至发生在 DLL 与本身，比一个 Python 全部包含在一个二进制文件中更慢。</p>
 <p>所以如果可行的话，以静态链接为目标，目前只有 Anaconda Python 在非 Windows、Debian Python2、自编译的 Python（不要激活 <code class="docutils literal notranslate"><span class="pre">--enable-shared</span></code>，不需要），以及用 <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> 创建的安装程序可以做到。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>在 Anaconda 上，你可能需要执行 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">libpython-static</span></code></p>
 </div>
-</div>
-<div class="section" id="standalone-executables-and-dependencies">
-<h3>独立的可执行文件和依赖性<a class="headerlink" href="#standalone-executables-and-dependencies" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="standalone-executables-and-dependencies">
+<h3>独立的可执行文件和依赖性<a class="headerlink" href="#standalone-executables-and-dependencies" title="永久链接至标题"></a></h3>
 <p>传统上，为 Windows 制作独立可执行文件的过程涉及使用外部依赖性运行器，以便将必要的库与编译的可执行文件一起复制到分发文件夹。</p>
 <p>有很多方法可以发现缺少什么。不要手动复制东西到文件夹中，特别是不要复制 DLL，因为那是行不通的。相反，要做错误报告，让 Nuitka 正确处理这些问题。</p>
-</div>
-<div class="section" id="windows-errors-with-resources">
-<h3>资源方面的 Windows 错误<a class="headerlink" href="#windows-errors-with-resources" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="windows-errors-with-resources">
+<h3>资源方面的 Windows 错误<a class="headerlink" href="#windows-errors-with-resources" title="永久链接至标题"></a></h3>
 <p>在 Windows 上，Windows Defender 工具和 Windows 索引服务都会扫描刚创建的二进制文件，而 Nuitka 则想与之合作，例如添加更多资源，然后由于持有锁而随机阻止操作。请确保将你的编译阶段排除在这些服务之外。</p>
-</div>
-<div class="section" id="windows-standalone-program-redistribuation">
-<h3>Windows 独立程序的重新分配<a class="headerlink" href="#windows-standalone-program-redistribuation" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="windows-standalone-program-redistribuation">
+<h3>Windows 独立程序的重新分配<a class="headerlink" href="#windows-standalone-program-redistribuation" title="永久链接至标题"></a></h3>
 <p>无论是用 MingW 还是 MSVC 编译，独立程序都对 Visual C Runtime 库有外部依赖性。Nuitka 试图通过从你的系统中复制这些依赖的 DLL 来运送它们。</p>
 <p>从微软 Windows 10 开始，微软提供的 <code class="docutils literal notranslate"><span class="pre">ucrt.dll</span></code> （通用 C 语言运行库）重新钩住了对 <code class="docutils literal notranslate"><span class="pre">api-ms-crt-*.dll</span></code> 的调用。</p>
 <p>对于早期的 Windows 平台（和 wine/ReactOS），你应该考虑在执行 Nuitka 独立编译程序之前安装 Visual C Runtime 库。</p>
 <p>根据所使用的C语言编译器，你需要以下的 redist 版本：</p>
-<table class="table">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 21%" />
@@ -1781,7 +839,7 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 </tbody>
 </table>
 <p>在使用 MingGW64 时，你需要以下的 redist 版本：</p>
-<table class="table">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 21%" />
@@ -1801,17 +859,17 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 </tbody>
 </table>
 <p>一旦在目标系统上安装了相应的运行库，你可以从 Nuitka 编译的 dist 文件夹中删除所有 <code class="docutils literal notranslate"><span class="pre">api-ms-crt-*.dll</span></code> 文件。</p>
-</div>
-<div class="section" id="detecting-nuitka-at-run-time">
-<h3>在运行时检测 Nuitka<a class="headerlink" href="#detecting-nuitka-at-run-time" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="detecting-nuitka-at-run-time">
+<h3>在运行时检测 Nuitka<a class="headerlink" href="#detecting-nuitka-at-run-time" title="永久链接至标题"></a></h3>
 <p>它不像其他工具那样设置 <code class="docutils literal notranslate"><span class="pre">sys.frozen</span></code>。对于 Nuitka，我们有模块属性 <code class="docutils literal notranslate"><span class="pre">__compiled__</span></code> 来测试特定模块是否被编译。</p>
-</div>
-</div>
-<div class="section" id="performance">
-<h2>性能<a class="headerlink" href="#performance" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="performance">
+<h2>性能<a class="headerlink" href="#performance" title="永久链接至标题"></a></h2>
 <p>本章概述了目前对 Nuitka 性能的期望。这是一项正在进行中的工作，会随着我们的进展而更新。目前性能测量的重点是 Python 2.7，但 3.x 将在以后跟进。</p>
-<div class="section" id="pystone-results">
-<h3>pystone 结果<a class="headerlink" href="#pystone-results" title="永久链接至标题">¶</a></h3>
+<section id="pystone-results">
+<h3>pystone 结果<a class="headerlink" href="#pystone-results" title="永久链接至标题"></a></h3>
 <p>结果是这种输出的最高值，运行 pystone 1000 次，取最小值。这个想法是，最快的运行是最有意义的，并消除了使用高峰。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Uncompiled Python2&quot;</span>
 <span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..100<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="nv">BENCH</span><span class="o">=</span><span class="m">1</span> python2 tests/benchmarks/pystone.py <span class="p">;</span> <span class="k">done</span> <span class="p">|</span> sort -n -r <span class="p">|</span> head -n <span class="m">1</span>
@@ -1826,7 +884,7 @@ python3 -m nuitka --lto<span class="o">=</span>yes --pgo<span class="o">=</span>
 <span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..100<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="nv">BENCH</span><span class="o">=</span><span class="m">1</span> ./pystone3.bin <span class="p">;</span> <span class="k">done</span> <span class="p">|</span> sort -n -r <span class="p">|</span> head -n <span class="m">1</span>
 </pre></div>
 </div>
-<table class="table">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 23%" />
@@ -1853,18 +911,18 @@ python3 -m nuitka --lto<span class="o">=</span>yes --pgo<span class="o">=</span>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="where-to-go-next">
-<h2>下一步该去哪里<a class="headerlink" href="#where-to-go-next" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="where-to-go-next">
+<h2>下一步该去哪里<a class="headerlink" href="#where-to-go-next" title="永久链接至标题"></a></h2>
 <p>记住，这个项目还没有完成。尽管 CPython 测试套件的工作近乎完美，但仍然需要更多的工作，特别是使它做更多的优化。试试吧。</p>
-<div class="section" id="follow-me-on-twitter">
-<h3>在 Twitter 上关注我<a class="headerlink" href="#follow-me-on-twitter" title="永久链接至标题">¶</a></h3>
+<section id="follow-me-on-twitter">
+<h3>在 Twitter 上关注我<a class="headerlink" href="#follow-me-on-twitter" title="永久链接至标题"></a></h3>
 <p>Nuitka announcements and interesting stuff is pointed to on the Twitter
 account, but obviously with not too many details. <a class="reference external" href="https://twitter.com/KayHayen">&#64;KayHayen</a>.</p>
-</div>
-<div class="section" id="report-issues-or-bugs">
-<h3>报告问题或 bug<a class="headerlink" href="#report-issues-or-bugs" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="report-issues-or-bugs">
+<h3>报告问题或 bug<a class="headerlink" href="#report-issues-or-bugs" title="永久链接至标题"></a></h3>
 <p>如果你遇到任何问题、错误或想法，请访问 <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues">Nuitka 错误跟踪器</a> 并报告它们。</p>
 <p>报告 bug 的最佳做法：</p>
 <ul>
@@ -1878,14 +936,14 @@ account, but obviously with not too many details. <a class="reference external" 
 <li><p>不要在你的报告中包括创建的代码。考虑到适当的输入，它是多余的，如果没有改变 Python 或 Nuitka 源并重新运行的能力，我不太可能看它。</p></li>
 <li><p>不要发送文本的截图，那是不好的和懒惰的。相反，从控制台捕捉文本输出。</p></li>
 </ul>
-</div>
-<div class="section" id="word-of-warning">
-<h3>警示语<a class="headerlink" href="#word-of-warning" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="word-of-warning">
+<h3>警示语<a class="headerlink" href="#word-of-warning" title="永久链接至标题"></a></h3>
 <p>考虑慎重使用这个软件。尽管在发布前进行了许多测试，但事情还是有可能发生变化。我们非常欢迎你对 Nuitka 的反馈和补丁。</p>
-</div>
-</div>
-<div class="section" id="join-nuitka">
-<h2>加入 Nuitka<a class="headerlink" href="#join-nuitka" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="join-nuitka">
+<h2>加入 Nuitka<a class="headerlink" href="#join-nuitka" title="永久链接至标题"></a></h2>
 <p>我们非常欢迎你加入 Nuitka 的发展，并在所有的小事和大事上帮助完成这个项目。</p>
 <p>Nuitka 的开发发生在 git 中。我们目前有以下 3 个分支：</p>
 <ul>
@@ -1903,27 +961,27 @@ account, but obviously with not too many details. <a class="reference external" 
 <p class="admonition-title">备注</p>
 <p><a class="reference external" href="https://nuitka.net/doc/developer-manual.html">开发者手册</a> 解释了编码规则，使用的分支模型，与功能分支和热修复版本，Nuitka 设计等等。考虑阅读它以成为一个贡献者。这份文档是为 Nuitka 用户准备的。</p>
 </div>
-</div>
-<div class="section" id="donations">
-<h2>奉献<a class="headerlink" href="#donations" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="donations">
+<h2>奉献<a class="headerlink" href="#donations" title="永久链接至标题"></a></h2>
 <p>Should you feel that you cannot help Nuitka directly, but still want to
 support, please consider <a class="reference external" href="https://nuitka.net/pages/donations.html">making a donation</a> and help this way.</p>
-</div>
-<div class="section" id="unsupported-functionality">
-<h2>不支持的功能<a class="headerlink" href="#unsupported-functionality" title="永久链接至标题">¶</a></h2>
-<div class="section" id="the-co-code-attribute-of-code-objects">
-<h3>代码对象的 <code class="docutils literal notranslate"><span class="pre">co_code</span></code> 属性<a class="headerlink" href="#the-co-code-attribute-of-code-objects" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="unsupported-functionality">
+<h2>不支持的功能<a class="headerlink" href="#unsupported-functionality" title="永久链接至标题"></a></h2>
+<section id="the-co-code-attribute-of-code-objects">
+<h3>代码对象的 <code class="docutils literal notranslate"><span class="pre">co_code</span></code> 属性<a class="headerlink" href="#the-co-code-attribute-of-code-objects" title="永久链接至标题"></a></h3>
 <p>对于本地编译的函数，代码对象是空的。Nuitka 的编译函数对象没有字节码，所以没有办法提供。</p>
-</div>
-<div class="section" id="pdb">
-<h3>PDB<a class="headerlink" href="#pdb" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="pdb">
+<h3>PDB<a class="headerlink" href="#pdb" title="永久链接至标题"></a></h3>
 <p>没有对编译后的函数进行跟踪，也没有对调试器进行跟踪。</p>
-</div>
-</div>
-<div class="section" id="optimization">
-<h2>优化<a class="headerlink" href="#optimization" title="永久链接至标题">¶</a></h2>
-<div class="section" id="constant-folding">
-<h3>常量叠算<a class="headerlink" href="#constant-folding" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="optimization">
+<h2>优化<a class="headerlink" href="#optimization" title="永久链接至标题"></a></h2>
+<section id="constant-folding">
+<h3>常量叠算<a class="headerlink" href="#constant-folding" title="永久链接至标题"></a></h3>
 <p>最重要的优化形式是常量叠算（Constant Folding）。这时，一个操作可以在编译时被完全预测。目前，Nuitka 为一些内建程序做了这些工作（但还不是全部，非常欢迎有人更仔细地研究这个问题！），它为二元/一元运算和比较等做了这些工作。</p>
 <p>目前承认的常数：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span>  <span class="c1"># binary operations</span>
@@ -1937,9 +995,9 @@ support, please consider <a class="reference external" href="https://nuitka.net/
 <p class="admonition-title">状态</p>
 <p>常量的折叠被认为已经实现，但它可能是不完整的，因为不是所有可能的情况都被抓住。当你在 Nuitka 中发现一个只有常量输入且没有折叠的操作时，请将其作为一个错误报告。</p>
 </div>
-</div>
-<div class="section" id="constant-propagation">
-<h3>常量传播<a class="headerlink" href="#constant-propagation" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="constant-propagation">
+<h3>常量传播<a class="headerlink" href="#constant-propagation" title="永久链接至标题"></a></h3>
 <p>在优化的核心，是试图在运行时确定变量的值和预测赋值的情况。它决定了它们的输入是否是常数或类似的值。一个表达式，例如一个模块变量访问，一个昂贵的操作，可能在整个函数范围的模块中是恒定的，那么就不需要或者不需要重复的模块变量查找。</p>
 <p>考虑到例如模块属性 <code class="docutils literal notranslate"><span class="pre">__name__</span></code>，它很可能只被读取，所以它的值可以在编译时被预测为一个已知的常量字符串。然后，这可以作为常量折叠的输入。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -1951,9 +1009,9 @@ support, please consider <a class="reference external" href="https://nuitka.net/
 <p class="admonition-title">状态</p>
 <p>在模块属性中，目前只有 <code class="docutils literal notranslate"><span class="pre">__name__</span></code> 被实际优化。同样可能的是，至少有 <code class="docutils literal notranslate"><span class="pre">__doc__</span></code>。在未来，随着 SSA 扩展到模块变量，这一点可能会得到改善。</p>
 </div>
-</div>
-<div class="section" id="built-in-name-lookups">
-<h3>内置名称查询<a class="headerlink" href="#built-in-name-lookups" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="built-in-name-lookups">
+<h3>内置名称查询<a class="headerlink" href="#built-in-name-lookups" title="永久链接至标题"></a></h3>
 <p>另外，如果内置的异常名称引用被用作模块级的只读变量，则会被优化：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">something</span><span class="p">()</span>
@@ -1965,9 +1023,9 @@ support, please consider <a class="reference external" href="https://nuitka.net/
 <p class="admonition-title">状态</p>
 <p>这适用于所有的内置名称。当对这样的名字进行赋值时，或者它甚至是本地的，那么，当然就不做了。</p>
 </div>
-</div>
-<div class="section" id="built-in-call-prediction">
-<h3>内置回调预测<a class="headerlink" href="#built-in-call-prediction" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="built-in-call-prediction">
+<h3>内置回调预测<a class="headerlink" href="#built-in-call-prediction" title="永久链接至标题"></a></h3>
 <p>对于像 <code class="docutils literal notranslate"><span class="pre">type</span></code>、<code class="docutils literal notranslate"><span class="pre">len</span></code> 或 <code class="docutils literal notranslate"><span class="pre">range</span></code> 这样的内置调用，通常可以在编译时预测结果，特别是对于常数输入，结果值往往可以由 Nuitka 预先计算出来。它可以简单地确定结果或引发的异常，并用该值替换内置调用，允许更多的常量折叠或减少代码路径。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>  <span class="c1"># predictable result, builtin type str.</span>
 <span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>  <span class="c1"># predictable result</span>
@@ -1987,9 +1045,9 @@ support, please consider <a class="reference external" href="https://nuitka.net/
 <p class="admonition-title">状态</p>
 <p>这被认为是基本实现了。请为那些预先计算，但不应该由 Nuitka 在编译时用特定值计算的内置程序提出错误。</p>
 </div>
-</div>
-<div class="section" id="conditional-statement-prediction">
-<h3>条件性声明的预测<a class="headerlink" href="#conditional-statement-prediction" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="conditional-statement-prediction">
+<h3>条件性声明的预测<a class="headerlink" href="#conditional-statement-prediction" title="永久链接至标题"></a></h3>
 <p>对于条件性语句，有些分支可能永远不会被采纳，因为条件是可以预测的。在这些情况下，不采取的分支和条件检查被删除。</p>
 <p>这通常可以预测这样的代码：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -2009,9 +1067,9 @@ support, please consider <a class="reference external" href="https://nuitka.net/
 <p class="admonition-title">状态</p>
 <p>这被认为已经实现了，但为了获得最大的利益，需要在编译时确定更多的常数。</p>
 </div>
-</div>
-<div class="section" id="exception-propagation">
-<h3>异常传播<a class="headerlink" href="#exception-propagation" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="exception-propagation">
+<h3>异常传播<a class="headerlink" href="#exception-propagation" title="永久链接至标题"></a></h3>
 <p>对于在编译时确定的异常，有一个表达式会简单地引发异常。这些可以向上传播，收集潜在的 “副作用”，即在它发生之前已经执行的表达式的一部分，并且仍然要执行。</p>
 <p>请考虑以下代码：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">side_effect_having</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span><span class="p">))</span>
@@ -2037,9 +1095,9 @@ already. As work progresses or examples arise, the coverage will be
 extended. Feel free to generate bug reports with non-working
 examples.</p>
 </div>
-</div>
-<div class="section" id="exception-scope-reduction">
-<h3>Exception Scope Reduction<a class="headerlink" href="#exception-scope-reduction" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="exception-scope-reduction">
+<h3>Exception Scope Reduction<a class="headerlink" href="#exception-scope-reduction" title="永久链接至标题"></a></h3>
 <p>请考虑以下代码：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">b</span> <span class="o">=</span> <span class="mi">8</span>
@@ -2066,9 +1124,9 @@ outside the try without any risk.</p>
 may raise an exception. We do however <em>not</em> track properly yet, what
 can do a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> and what cannot.</p>
 </div>
-</div>
-<div class="section" id="exception-block-inlining">
-<h3>Exception Block Inlining<a class="headerlink" href="#exception-block-inlining" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="exception-block-inlining">
+<h3>Exception Block Inlining<a class="headerlink" href="#exception-block-inlining" title="永久链接至标题"></a></h3>
 <p>With the exception propagation, it then becomes possible to transform
 this code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -2095,9 +1153,9 @@ of the exception, making it:</p>
 <p class="admonition-title">状态</p>
 <p>This is not implemented yet.</p>
 </div>
-</div>
-<div class="section" id="empty-branch-removal">
-<h3>Empty Branch Removal<a class="headerlink" href="#empty-branch-removal" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="empty-branch-removal">
+<h3>Empty Branch Removal<a class="headerlink" href="#empty-branch-removal" title="永久链接至标题"></a></h3>
 <p>For loops and conditional statements that contain only code without
 effect, it should be possible to remove the whole construct:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
@@ -2126,9 +1184,9 @@ no side effects, but many times this might be possible.</p>
 removed if both branches are empty, only the condition is evaluated
 and checked for truth (in cases that could raise an exception).</p>
 </div>
-</div>
-<div class="section" id="unpacking-prediction">
-<h3>Unpacking Prediction<a class="headerlink" href="#unpacking-prediction" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="unpacking-prediction">
+<h3>Unpacking Prediction<a class="headerlink" href="#unpacking-prediction" title="永久链接至标题"></a></h3>
 <p>When the length of the right-hand side of an assignment to a sequence
 can be predicted, the unpacking can be replaced with multiple
 assignments.</p>
@@ -2150,9 +1208,9 @@ ability to predict if an expression can raise an exception or not.</p>
 what is an iteration over a tuple, we created ourselves. We are not
 there yet, but we will get there.</p>
 </div>
-</div>
-<div class="section" id="built-in-type-inference">
-<h3>Built-in Type Inference<a class="headerlink" href="#built-in-type-inference" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="built-in-type-inference">
+<h3>Built-in Type Inference<a class="headerlink" href="#built-in-type-inference" title="永久链接至标题"></a></h3>
 <p>When a construct like <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">xrange()</span></code> or <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">range()</span></code> is used, it is
 possible to know what the iteration does and represent that so that
 iterator users can use that instead.</p>
@@ -2168,9 +1226,9 @@ assigned from there, this could be a nice case for a dedicated class.</p>
 <p class="admonition-title">状态</p>
 <p>Future work, not even started.</p>
 </div>
-</div>
-<div class="section" id="quicker-function-calls">
-<h3>Quicker Function Calls<a class="headerlink" href="#quicker-function-calls" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="quicker-function-calls">
+<h3>Quicker Function Calls<a class="headerlink" href="#quicker-function-calls" title="永久链接至标题"></a></h3>
 <p>Functions are structured so that their parameter parsing and <code class="docutils literal notranslate"><span class="pre">tp_call</span></code>
 interface is separate from the actual function code. This way the call
 can be optimized away. One problem is that the evaluation order can
@@ -2194,9 +1252,9 @@ the function, and instead uses temporary variables appears to be
 relatively straight forward once we do that kind of parameter
 analysis.</p>
 </div>
-</div>
-<div class="section" id="lowering-of-iterated-container-types">
-<h3>Lowering of iterated Container Types<a class="headerlink" href="#lowering-of-iterated-container-types" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="lowering-of-iterated-container-types">
+<h3>Lowering of iterated Container Types<a class="headerlink" href="#lowering-of-iterated-container-types" title="永久链接至标题"></a></h3>
 <p>In some cases, accesses to <code class="docutils literal notranslate"><span class="pre">list</span></code> constants can become <code class="docutils literal notranslate"><span class="pre">tuple</span></code>
 constants instead.</p>
 <p>Consider that:</p>
@@ -2223,58 +1281,42 @@ tuples, and not care about sets.</p>
 later, it will be non-trivial though to maintain the order of execution
 without temporary values introduced. The same thing is done for pure
 constants of these types, they change to <code class="docutils literal notranslate"><span class="pre">tuple</span></code> values when iterated.</p>
-</div>
-</div>
-<div class="section" id="updates-for-this-manual">
-<h2>更新手册<a class="headerlink" href="#updates-for-this-manual" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="updates-for-this-manual">
+<h2>更新手册<a class="headerlink" href="#updates-for-this-manual" title="永久链接至标题"></a></h2>
 <p>这份文件是用 REST 写的。这是一种 ASCII 格式，人类可以阅读，但很容易用于生成 PDF 或 HTML 文档。</p>
 <p>你可以在以下网站找到当前版本：<a class="reference external" href="https://nuitka.net/doc/user-manual.html">https://nuitka.net/doc/user-manual.html</a></p>
 <p>当前 PDF 版本：<a class="reference external" href="https://nuitka.net/doc/README.pdf">https://nuitka.net/doc/README.pdf</a></p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
    
 </div>
 
-              </div>
-              
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="download.html" title="上一页 页">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">下载 Nuitka</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="support.html" title="下一页 页">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">支持</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      通过 Kay Hayen<br/>
-    
-        &copy; 版权 2022, Kay Hayen and Nuitka Contributors.<br/>
-  </p>
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+   
+
 </footer>
-</main>
-
-
+        </div>
       </div>
-    </div>
-  
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
 
-  </body>
+</body>
 </html>

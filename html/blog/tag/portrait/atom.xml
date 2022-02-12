@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged portrait</title>
-  <updated>2022-02-12T10:38:13.228794+00:00</updated>
+  <updated>2022-02-12T12:08:42.814318+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/portrait/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Batakrishna Sahu</name>
     </author>
-    <content type="html">&lt;div class="section" id="batakrishna-sahu"&gt;
+    <content type="html">&lt;section id="batakrishna-sahu"&gt;
 
 &lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;My name is Batakrishna Sahu and I am from India. I’m very grateful to be
@@ -31,7 +31,7 @@ this summer.&lt;/p&gt;
 &lt;div class="line"&gt;Yours,&lt;/div&gt;
 &lt;div class="line"&gt;Batakrishna&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/batakrishna-sahu-intro.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
@@ -47,7 +47,7 @@ this summer.&lt;/p&gt;
     <author>
       <name>Taofeng(Tommy) Li</name>
     </author>
-    <content type="html">&lt;div class="section" id="tommy-s-google-summer-of-code-intro"&gt;
+    <content type="html">&lt;section id="tommy-s-google-summer-of-code-intro"&gt;
 
 &lt;p&gt;Hi all! :)&lt;/p&gt;
 &lt;p&gt;My name is Taofeng Li and I go by the nickname of Tommy, github handle
@@ -66,7 +66,7 @@ project abstract can be seen &lt;a class="reference external" href="https://summ
 the full details of my project can be found &lt;a class="reference external" href="https://docs.google.com/document/d/1tdbXyMy5xjVEeWociI_t2f6tlmge6czT0xmfCLyDXYg/edit?usp=sharing"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I am greatly looking forward to the many things that I’ll learn this
 summer!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-intro.html" rel="alternate"/>
     <summary>Hi all! :)</summary>
@@ -85,7 +85,7 @@ summer!&lt;/p&gt;
       <name>Jorj X. McKie</name>
     </author>
     <content type="html">&lt;p&gt;Self-Introduction Jorj McKie&lt;/p&gt;
-&lt;div class="section" id="jorj-x-mckie"&gt;
+&lt;section id="jorj-x-mckie"&gt;
 
 &lt;p&gt;Hello everyone,&lt;/p&gt;
 &lt;p&gt;I am Jorj X. McKie (this is &lt;strong&gt;not&lt;/strong&gt; my real name!) and I am an
@@ -103,7 +103,7 @@ contains many things I am working on.&lt;/p&gt;
 &lt;dd&gt;&lt;img alt="../../_images/jorjmckie-harald-lieder.jpg" src="../../_images/jorjmckie-harald-lieder.jpg" /&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;div class="section" id="short-biography"&gt;
+&lt;section id="short-biography"&gt;
 &lt;h2&gt;Short Biography&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Born 1951 as Harald Lieder near the city of Leipzig&lt;/p&gt;&lt;/li&gt;
@@ -131,27 +131,27 @@ Frank Herbert) and of course programming (maintainer of
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="images-from-isla-margarita"&gt;
+&lt;/section&gt;
+&lt;section id="images-from-isla-margarita"&gt;
 &lt;h2&gt;Images from Isla Margarita&lt;/h2&gt;
-&lt;div class="section" id="house-frontview-with-guardians"&gt;
+&lt;section id="house-frontview-with-guardians"&gt;
 &lt;h3&gt;House Frontview with Guardians&lt;/h3&gt;
 &lt;img alt="../../_images/JMK-house-frontview-with-guardians.jpg" src="../../_images/JMK-house-frontview-with-guardians.jpg" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="in-favorite-pizzeria-with-my-wife"&gt;
+&lt;/section&gt;
+&lt;section id="in-favorite-pizzeria-with-my-wife"&gt;
 &lt;h3&gt;In favorite Pizzeria with my Wife&lt;/h3&gt;
 &lt;img alt="../../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" src="../../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="seaview-from-my-terrace"&gt;
+&lt;/section&gt;
+&lt;section id="seaview-from-my-terrace"&gt;
 &lt;h3&gt;Seaview from my Terrace&lt;/h3&gt;
 &lt;img alt="../../_images/JMK-seaview-from-my-terrace.JPG" src="../../_images/JMK-seaview-from-my-terrace.JPG" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sunrise-view-from-house"&gt;
+&lt;/section&gt;
+&lt;section id="sunrise-view-from-house"&gt;
 &lt;h3&gt;Sunrise view from House&lt;/h3&gt;
 &lt;img alt="../../_images/JMK-sunrise-view-from-house.jpg" src="../../_images/JMK-sunrise-view-from-house.jpg" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://nuitka.net/posts/jorj-x-mckie.html" rel="alternate"/>
     <summary>Self-Introduction Jorj McKie</summary>

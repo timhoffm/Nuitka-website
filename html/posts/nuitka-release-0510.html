@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -130,14 +131,14 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <div class="section" id="nuitka-release-0-5-10">
+              <section id="nuitka-release-0-5-10">
 <h1>Nuitka Release 0.5.10<a class="headerlink" href="#nuitka-release-0-5-10" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release has a focus on code generation optimization. Doing major
 changes away from “C++-ish” code to “C-ish” code, many constructs are
 now faster or got looked at and optimized.</p>
-<div class="section" id="bug-fixes">
+<section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Compatibility: The variable name in locals for the iterator provided
@@ -145,8 +146,8 @@ to the generator expression should be <code class="docutils literal notranslate"
 <li><p>Generators could leak frames until program exit, these are now
 properly freed immediately.</p></li>
 </ul>
-</div>
-<div class="section" id="optimization">
+</section>
+<section id="optimization">
 <h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Faster exception save and restore functions that might be in-lined by
@@ -175,8 +176,8 @@ expense of closure variables.</p></li>
 <li><p>Removing unused temporary and local variables as a result of
 optimization, these previously still allocated storage.</p></li>
 </ul>
-</div>
-<div class="section" id="cleanup">
+</section>
+<section id="cleanup">
 <h2>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The use of C++ classes for variable objects was removed. Closure
@@ -209,8 +210,8 @@ cover also mutable values, and attempt to depend on actual content.
 These are checked at program exit for corruption. This may help
 uncover bugs.</p></li>
 </ul>
-</div>
-<div class="section" id="organisational">
+</section>
+<section id="organisational">
 <h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Speedcenter has been enhanced with better graphing and has more
@@ -218,8 +219,8 @@ benchmarks now. More work will be needed to make it useful.</p></li>
 <li><p>Updates to the Developer Manual, reflecting the current near finished
 state of “C-ish” code generation.</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>New reference count tests to cover generator expressions and their
@@ -228,8 +229,8 @@ usage got added.</p></li>
 performance graphing, and serve as micro benchmarks now.</p></li>
 <li><p>Again, more basic tests are directly executable with Python3.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This is the next evolution of “C-ish” coming to pass. The use of C++ has
 for all practical purposes vanished. It will remain an ongoing activity
@@ -250,8 +251,8 @@ all in-place operations to be accelerated.</p>
 <p>More work will be needed to complete this, but it’s good that this is
 coming to an end, so we can focus on SSA based optimization for the
 major gains to be had.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     
