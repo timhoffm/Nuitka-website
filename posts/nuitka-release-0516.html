@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka Release 0.5.16</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0516.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0516.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +119,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,19 +130,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-5-16">
-<h1>Nuitka Release 0.5.16<a class="headerlink" href="#nuitka-release-0-5-16" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.5.16<a class="headerlink" href="#nuitka-release-0-5-16" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This is a maintenance release, largely intended to put out improved
 support for new platforms and minor corrections. It should improve the
 speed for standalone mode, and compilation in general for some use
 cases, but this is mostly to clean up open ends.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Fix, the <code class="docutils literal notranslate"><span class="pre">len</span></code> built-in could give false values for dictionary and
 set creations with the same element.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This was falsely optimized to 2 even if &quot;a is b and a == b&quot; was true.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This was falsely optimized to 2 even if "a is b and a == b" was true.</span>
 <span class="nb">len</span><span class="p">({</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -158,7 +156,7 @@ illegal bytes given as value.</p></li>
 reading manually and decoding from <code class="docutils literal notranslate"><span class="pre">tokenize.detect_encoding</span></code>, this
 handles corner cases more compatible.</p></li>
 <li><p>Fix, the PyLint warnings plug-in could crash in some cases, make sure
-it’s more robust.</p></li>
+it&#8217;s more robust.</p></li>
 <li><p>Windows: Fix, the combination of Anaconda Python, MinGW 64 bits and
 mere acceleration was not working.</p></li>
 <li><p>Standalone: Preserve not only namespace packages created by <code class="docutils literal notranslate"><span class="pre">.pth</span></code>
@@ -167,7 +165,7 @@ compatible with uses of it in Fedora 22.</p></li>
 <li><p>Standalone: The extension modules could be duplicated, turned this
 into an error and cache finding them during compile time and during
 early import resolution to avoid duplication.</p></li>
-<li><p>Standalone: Handle “not found” from <code class="docutils literal notranslate"><span class="pre">ldd</span></code> output, on some systems
+<li><p>Standalone: Handle &#8220;not found&#8221; from <code class="docutils literal notranslate"><span class="pre">ldd</span></code> output, on some systems
 not all the libraries wanted are accessible for every library.</p></li>
 <li><p>Python3.5: Fixed support for namespace packages, these were not yet
 working for that version yet.</p></li>
@@ -180,7 +178,7 @@ working for that version yet.</p></li>
 Python2 was good already.</p>
 </li>
 <li><p>Python3.5: Fix, need to reduce compiled functions to <code class="docutils literal notranslate"><span class="pre">__qualname__</span></code>
-value, rather than just <code class="docutils literal notranslate"><span class="pre">__name__</span></code> or else pickling methods doesn’t
+value, rather than just <code class="docutils literal notranslate"><span class="pre">__name__</span></code> or else pickling methods doesn&#8217;t
 work.</p></li>
 <li><p>Python3.5: Fix, added <code class="docutils literal notranslate"><span class="pre">gi_yieldfrom</span></code> attribute to generator
 objects.</p></li>
@@ -189,7 +187,7 @@ objects.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Re-formulate <code class="docutils literal notranslate"><span class="pre">exec</span></code> and <code class="docutils literal notranslate"><span class="pre">eval</span></code> to default to <code class="docutils literal notranslate"><span class="pre">globals()</span></code> as the
 default for the locals dictionary in modules.</p></li>
@@ -202,7 +200,7 @@ other of it, avoiding to compile both.</p></li>
 </ul>
 </section>
 <section id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>When <code class="docutils literal notranslate"><span class="pre">strace</span></code> or <code class="docutils literal notranslate"><span class="pre">dtruss</span></code> are not found, given proper error
 message, so people know what to do.</p></li>
@@ -226,21 +224,21 @@ due to its results.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Prepare plug-in interface to allow suppression of import warnings to
 access the node doing it, making the import node is accessible.</p></li>
 <li><p>Have dedicated class function body object, which is a specialization
 of the function body node base class. This allowed removing class
 specific code from that class.</p></li>
-<li><p>The use of “win_target” as a scons parameter was useless. Make more
+<li><p>The use of &#8220;win_target&#8221; as a scons parameter was useless. Make more
 consistent use of it as a flag indicator in the scons file.</p></li>
 <li><p>Compiled types were mixing uses of <code class="docutils literal notranslate"><span class="pre">compiled_</span></code> prefixes, something
 with a space, sometimes with an underscore.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Improved support for Python3.5 missing compatibility with new
 language features.</p></li>
@@ -252,7 +250,7 @@ Utopic package download, no longer supported by Ubuntu.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
 <p>So this release is mostly to lower the technical debt incurred that
 holds it back from supporting making more interesting changes. Upcoming
 releases may have continue that trend for some time.</p>
@@ -279,7 +277,7 @@ type specific code generation a reality.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-release-0517.html">
@@ -295,29 +293,29 @@ type specific code generation a reality.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0516.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0516.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0516.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0516.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -327,7 +325,7 @@ type specific code generation a reality.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0516.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -343,11 +341,5 @@ type specific code generation a reality.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka this week #3</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-3.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-3.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +119,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-3">
-<h1><a class="toc-backref" href="#id1">Nuitka this week #3</a><a class="headerlink" href="#nuitka-this-week-3" title="Permalink to this headline"></a></h1>
+<h1><a class="toc-backref" href="#id1">Nuitka this week #3</a><a class="headerlink" href="#nuitka-this-week-3" title="Permalink to this headline">&#61633;</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -148,23 +146,23 @@
 </ul>
 </div>
 <section id="new-series-rationale">
-<h2><a class="toc-backref" href="#id2">New Series Rationale</a><a class="headerlink" href="#new-series-rationale" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">New Series Rationale</a><a class="headerlink" href="#new-series-rationale" title="Permalink to this headline">&#61633;</a></h2>
 <p>This is working out well so far. I think driving more attention at the
 things that are going on can only be good. Also to explain will always
 help. It also kind of motivates me a bit.</p>
 </section>
 <section id="twitter">
-<h2><a class="toc-backref" href="#id3">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline">&#61633;</a></h2>
 <p>Also as part of my communications offensive, I am using my Twitter
 account more regularly. I used to highlight important fixes, or
 occasionally releases of some importance there. I will continue to do
 only important stuff there, but with more regularity.</p>
 <p>And I noticed in the past, even when I do not post, followers makes me
 happy. So here you go:</p>
-<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw">Follow &#64;kayhayen</a></p>
+<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw" target="_blank">Follow @kayhayen</a></p>
 </section>
 <section id="goto-generators">
-<h2><a class="toc-backref" href="#id4">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id4">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this headline">&#61633;</a></h2>
 <p>This continues <a class="reference external" href="./nuitka-this-week-2.html#goto-generators">TWN #2</a>
 where I promised to speak more of it, and this is the main focus of my
 work on Nuitka right now.</p>
@@ -233,14 +231,14 @@ function return with an updated resume point.</p>
 was the result that remained in Nuitka. The problem left to solve was to
 store the variables that would normally live on the stack, in a heap
 storage. That is what I am currently working on.</p>
-<p>This leads me to “heap storage”, which is what I am currently working on
+<p>This leads me to &#8220;heap storage&#8221;, which is what I am currently working on
 and will report on next week. Once that is there, goto generators can
 work, and will become the norm. Until then, I am refactoring a lot to
 get accesses to variable go through proper objects that know their
 storage locations and types.</p>
 </section>
 <section id="hotfixes">
-<h2><a class="toc-backref" href="#id5">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id5">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this headline">&#61633;</a></h2>
 <p>So there have been 2 more hotfixes. One was to make the <code class="docutils literal notranslate"><span class="pre">enum</span></code> and
 <code class="docutils literal notranslate"><span class="pre">__new__</span></code> compatibility available that I talked about last week in
 <cite>TWN #2 &lt;./nuitka-this-week-2.html#python3-enumerators&gt;</cite> coupled with a
@@ -250,14 +248,14 @@ new minor things.</p>
 be modified, corrupting the Nuitka internally used one severely.</p>
 <p>Right now I have on factory another fix for nested namespace packages in
 Python3 and that might become another hotfix soon.</p>
-<p>As you know, I am following the git flow model, where it’s easy to push
+<p>As you know, I am following the git flow model, where it&#8217;s easy to push
 out small fixes, and just those, on top of the last release. I tend to
 decide based on importance. However, I feel that with the important
-fixes in the hotfixes now, it’s probably time to make a full release, to
+fixes in the hotfixes now, it&#8217;s probably time to make a full release, to
 be sure everybody gets those.</p>
 </section>
 <section id="plans">
-<h2><a class="toc-backref" href="#id6">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id6">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline">&#61633;</a></h2>
 <p>Finishing heap storage is my top priority right now and I hope to
 complete the refactorings necessary in the coming week. I will also talk
 about how it also enables C types work next week.</p>
@@ -277,7 +275,7 @@ about how it also enables C types work next week.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-this-week-4.html">
@@ -293,29 +291,29 @@ about how it also enables C types work next week.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-3.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-3.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-3.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-3.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -325,7 +323,7 @@ about how it also enables C types work next week.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-this-week-3.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -341,11 +339,5 @@ about how it also enables C types work next week.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

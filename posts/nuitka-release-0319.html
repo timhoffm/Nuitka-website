@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,30 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka Release 0.3.19</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0319.html" />
+      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0319.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +67,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +117,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,14 +128,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-19">
-<h1>Nuitka Release 0.3.19<a class="headerlink" href="#nuitka-release-0-3-19" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.3.19<a class="headerlink" href="#nuitka-release-0-3-19" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This time there are a few bug fixes, major cleanups, more Python3
 support, and even new features. A lot things in this are justifying a
 new release.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The man pages of <code class="docutils literal notranslate"><span class="pre">nuitka</span></code> and <code class="docutils literal notranslate"><span class="pre">nuitka-python</span></code> had no special
 layout for the option groups and broken whitespace for
@@ -155,12 +151,12 @@ compiler, see Released as 0.3.18.4 already.</p></li>
 <li><p>Compatibility Fix: When rich comparison operators returned false
 value other <code class="docutils literal notranslate"><span class="pre">False</span></code>, for comparison chains, these would not be
 used, but <code class="docutils literal notranslate"><span class="pre">False</span></code> instead, see .</p></li>
-<li><p>The support for <code class="docutils literal notranslate"><span class="pre">__import__</span></code> didn’t cover keyword arguments, these
+<li><p>The support for <code class="docutils literal notranslate"><span class="pre">__import__</span></code> didn&#8217;t cover keyword arguments, these
 were simply ignored. Fixed, but no warning is given yet.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>A new option has been added, one can now specify
 <code class="docutils literal notranslate"><span class="pre">--recurse-directory</span></code> and Nuitka will attempt to embed these
@@ -172,7 +168,7 @@ test <code class="docutils literal notranslate"><span class="pre">ExecEval.py</s
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The no arguments <code class="docutils literal notranslate"><span class="pre">range()</span></code> call now optimized into the static
 CPython exception it raises.</p></li>
@@ -181,11 +177,11 @@ away.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Simplified the <code class="docutils literal notranslate"><span class="pre">CPythonExpressionComparison</span></code> node, it now always
 has only 2 operands.</p>
-<p>If there are more, the so called “comparison chain”, it’s done via
+<p>If there are more, the so called &#8220;comparison chain&#8221;, it&#8217;s done via
 <code class="docutils literal notranslate"><span class="pre">and</span></code> with assignments to temporary variables, which are expressed
 by a new node type <code class="docutils literal notranslate"><span class="pre">CPythonExpressionTempVariableRef</span></code>. This allowed
 to remove <code class="docutils literal notranslate"><span class="pre">expression_temps</span></code> from C++ code templates and
@@ -205,14 +201,14 @@ itself. That way it can respect the <code class="docutils literal notranslate"><
 Python3.</p></li>
 <li><p>The replacing of <code class="docutils literal notranslate"><span class="pre">.py</span></code> in filenames was made more robust. No longer
 is <code class="docutils literal notranslate"><span class="pre">str.replace</span></code> used, but instead proper means to assure that
-having <code class="docutils literal notranslate"><span class="pre">.py</span></code> as other parts of the filenames won’t be a trouble.</p></li>
+having <code class="docutils literal notranslate"><span class="pre">.py</span></code> as other parts of the filenames won&#8217;t be a trouble.</p></li>
 <li><p>Module recursion was changed into its own module, instead of being
 hidden in the optimization that considers import statements.</p></li>
 <li><p>As always, some PyLint work, and some minor <code class="docutils literal notranslate"><span class="pre">TODO</span></code> were solved.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added more information to the <a class="reference external" href="https://nuitka.net/doc/developer-manual.html">Developer Manual</a>, e.g. documenting
 the tree changes for <code class="docutils literal notranslate"><span class="pre">assert</span></code> to become a conditional statement
@@ -231,7 +227,7 @@ installed to execute the binary.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">programs</span></code>, <code class="docutils literal notranslate"><span class="pre">syntax</span></code>, and <code class="docutils literal notranslate"><span class="pre">reflected</span></code> were made
 executable under Windows. Occasionally this meant to make the test
@@ -246,19 +242,19 @@ run time (yet).</p></li>
 <li><p>The created source package is now tested on pbuilder chroots to be
 pass installation and the basic tests, in addition to the full tests
 during package build time on these chroots. This will make sure, that
-Nuitka works fine on Ubuntu Natty and doesn’t break without notice.</p></li>
+Nuitka works fine on Ubuntu Natty and doesn&#8217;t break without notice.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
-<p>This releases contains many changes. The “temporary variable ref” and
-“assignment expression” work is ground breaking. I foresee that it will
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<p>This releases contains many changes. The &#8220;temporary variable ref&#8221; and
+&#8220;assignment expression&#8221; work is ground breaking. I foresee that it will
 lead to even more simplifications of code generation in the future, when
 e.g. in-place assignments can be reduced to assignments to temporary
 variables and conditional statements.</p>
 <p>While there were many improvements related to Windows support and fixing
 portability bugs, or the Debian package, the real focus is the
-optimization work, which will ultimately end with “value propagation”
+optimization work, which will ultimately end with &#8220;value propagation&#8221;
 working.</p>
 <p>These are the real focus. The old comparison chain handling was a big
 wart. Working, but no way understood by any form of analysis in Nuitka.
@@ -266,8 +262,8 @@ Now they have a structure which makes their code generation based on
 semantics and allows for future optimization to see through them.</p>
 <p>Going down this route is an important preparatory step. And there will
 be more work like this needed. Consider e.g. handling of in-place
-assignments. With an “assignment expression” to a “temporary variable
-ref”, these become the same as user code using such a variable. There
+assignments. With an &#8220;assignment expression&#8221; to a &#8220;temporary variable
+ref&#8221;, these become the same as user code using such a variable. There
 will be more of these to find.</p>
 <p>So, that is where the focus is. The release now was mostly aiming at
 getting involved fixes out. The bug fixed by comparison chain reworking,
@@ -291,7 +287,7 @@ worth to get out.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="ubuntu-packages-for-nuitka.html">
@@ -307,29 +303,29 @@ worth to get out.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0319.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0319.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0319.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0319.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -339,7 +335,7 @@ worth to get out.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0319.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -355,11 +351,5 @@ worth to get out.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

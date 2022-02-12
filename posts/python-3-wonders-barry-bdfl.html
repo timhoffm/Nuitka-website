@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Python 3 wonders - Barry BDFL</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/python-3-wonders-barry-bdfl.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/python-3-wonders-barry-bdfl.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +119,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,9 +130,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="python-3-wonders-barry-bdfl">
-<h1>Python 3 wonders - Barry BDFL<a class="headerlink" href="#python-3-wonders-barry-bdfl" title="Permalink to this headline"></a></h1>
+<h1>Python 3 wonders - Barry BDFL<a class="headerlink" href="#python-3-wonders-barry-bdfl" title="Permalink to this headline">&#61633;</a></h1>
 <p>While writing <a class="reference external" href="/pages/overview.html">Nuitka</a> I get to see an absurd
-amount of CPython code. For a while now, it’s also CPython3.2 that I
+amount of CPython code. For a while now, it&#8217;s also CPython3.2 that I
 look at. Checking out <code class="docutils literal notranslate"><span class="pre">__future__</span></code> handling, I was surprised the other
 day though, this really works:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python 3.2.3 (default, Jun 25 2012, 23:10:56)</span>
@@ -143,26 +141,26 @@ day though, this really works:</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">&lt;&gt;</span> <span class="mi">2</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">2</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+  <span class="n">File</span> <span class="s2">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="mi">1</span> <span class="o">!=</span> <span class="mi">2</span>
        <span class="o">^</span>
 <span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
 </pre></div>
 </div>
-<p>It’s new in CPython3, and this the code that makes it possible, from the
+<p>It&#8217;s new in CPython3, and this the code that makes it possible, from the
 Python parser:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NOTEQUAL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">ps</span><span class="o">-&gt;</span><span class="n">p_flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">CO_FUTURE_BARRY_AS_BDFL</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"></span>
-<span class="w">                    </span><span class="n">strcmp</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;!=&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">strcmp</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">"!="</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="n">PyObject_FREE</span><span class="p">(</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="n">err_ret</span><span class="o">-&gt;</span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">E_SYNTAX</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">ps</span><span class="o">-&gt;</span><span class="n">p_flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">CO_FUTURE_BARRY_AS_BDFL</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"></span>
-<span class="w">                    </span><span class="n">strcmp</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;&gt;&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">strcmp</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">"&lt;&gt;"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="n">PyObject_FREE</span><span class="p">(</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">err_ret</span><span class="o">-&gt;</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;with Barry as BDFL, use &#39;&lt;&gt;&#39; &quot;</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&quot;instead of &#39;!=&#39;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">err_ret</span><span class="o">-&gt;</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"with Barry as BDFL, use '&lt;&gt;' "</span><span class="w"></span>
+<span class="w">                        </span><span class="s">"instead of '!='"</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="n">err_ret</span><span class="o">-&gt;</span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">E_SYNTAX</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
@@ -175,10 +173,10 @@ out of the box, I only needed to add the flag value.</p>
 <p>For fun, I tried to add a test that confirms - and then notice:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>It doesn’t really work for CPython3.2 already.</p></li>
+<li><p>It doesn&#8217;t really work for CPython3.2 already.</p></li>
 <li><p>The flag is only used for <code class="docutils literal notranslate"><span class="pre">eval</span></code> and <code class="docutils literal notranslate"><span class="pre">exec</span></code> and not on the
-same level, so it’s only inherited.</p></li>
-<li><p>And “2to3” kindly removes that flag silently. It probably should
+same level, so it&#8217;s only inherited.</p></li>
+<li><p>And &#8220;2to3&#8221; kindly removes that flag silently. It probably should
 raise an error.</p></li>
 </ul>
 </div></blockquote>
@@ -197,7 +195,7 @@ raise an error.</p></li>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="python-3-wonders-breaking-str.html">
@@ -213,29 +211,29 @@ raise an error.</p></li>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/python-3-wonders-barry-bdfl.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/python-3-wonders-barry-bdfl.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/python-3-wonders-barry-bdfl.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/python-3-wonders-barry-bdfl.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -245,7 +243,7 @@ raise an error.</p></li>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/python-3-wonders-barry-bdfl.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -261,11 +259,5 @@ raise an error.</p></li>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

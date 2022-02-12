@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka Release 0.4.6</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-046.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-046.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +119,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,9 +130,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-4-6">
-<h1>Nuitka Release 0.4.6<a class="headerlink" href="#nuitka-release-0-4-6" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.4.6<a class="headerlink" href="#nuitka-release-0-4-6" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release includes progress on all fronts. The primary focus was to
 advance SSA optimization over older optimization code that was already
 in place. In this domain, there are mostly cleanups.</p>
@@ -150,21 +148,21 @@ slots for compiled types.</p>
 <p>And last, but not least, this also expands the base of supported
 platforms, adding Gentoo, and self compiled Python to the mix.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Support Nuitka being installed to a path that contains spaces and
 handle main programs with spaces in their paths. Fixed in 0.4.5.1
 already.</p></li>
 <li><p>Support Python being installed to a path that contains spaces. Fixed
 in 0.4.5.2 already.</p></li>
-<li><p>Windows: User provided constants larger than 65k didn’t work with
+<li><p>Windows: User provided constants larger than 65k didn&#8217;t work with
 MSVC. Fixed in 0.4.5.3 already.</p></li>
 <li><p>Windows: The option <code class="docutils literal notranslate"><span class="pre">--windows-disable-console</span></code> was not effective
 with MSVC. Fixed in 0.4.5.3 already.</p></li>
 <li><p>Windows: For some users, Scons was detecting their MSVC installation
-properly already from registry, but it didn’t honor the target
+properly already from registry, but it didn&#8217;t honor the target
 architecture. Fixed in 0.4.5.3 already.</p></li>
-<li><p>When creating Python modules, these were marked as executable (“x”
+<li><p>When creating Python modules, these were marked as executable (&#8220;x&#8221;
 bit), which they are of course not. Fixed in 0.4.5.3 already.</p></li>
 <li><p>Python3.3: On architectures where <code class="docutils literal notranslate"><span class="pre">Py_ssize_t</span></code> is not the same as
 <code class="docutils literal notranslate"><span class="pre">long</span></code> this could lead to errors. Fixed in 0.4.5.3 already.</p></li>
@@ -181,7 +179,7 @@ ones was not executing correctly.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Compiled types when used in Python comparison now work. Code like
 this will work:</p>
@@ -202,7 +200,7 @@ already present in PATH.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Rich comparisons (<code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, and the like) are now faster than
 ever before due to a full implementation of its own in Nuitka that
@@ -216,15 +214,15 @@ temporary variables as well as reference count needs.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
-<li><p>Replaced “value friend” based optimization code with SSA based
+<li><p>Replaced &#8220;value friend&#8221; based optimization code with SSA based
 optimization, which allowed to remove complicated and old code that
 was still used mainly in optimization of <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">and</span></code>
 expressions.</p></li>
 <li><p>Delayed declaration of temp variables and their reference type is now
 performed based on information from SSA, which may given more
-accurate results. Not using “variable usage” profiles for this
+accurate results. Not using &#8220;variable usage&#8221; profiles for this
 anymore.</p></li>
 <li><p>The Scons interface and related code got a massive overhaul, making
 it more consistent and better documented. Also updated the internal
@@ -236,7 +234,7 @@ as it is not really portable at all, use <code class="docutils literal notransla
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added support for Gentoo Linux.</p></li>
 <li><p>Added support for self compiled Python versions with and without
@@ -248,14 +246,14 @@ is not already present. This makes for cleaner RPM packages.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
 <p>While the SSA stuff is not yet bearing performance fruits, it starts to
 carry weight. Taking over the temporary variable handling now also means
 we can apply the same stuff to local variables later.</p>
 <p>To make up for the delay in SSA driven performance improvements, there
 is more traditional code acceleration for rich comparisons, making it
 significant, and the bug fixes make Nuitka more compatible than ever.</p>
-<p>So give this a roll, it’s worth it. And feel free to join the mailing
+<p>So give this a roll, it&#8217;s worth it. And feel free to join the mailing
 list (since closed) or <a class="reference external" href="https://nuitka.net/pages/donations.html">make a donation</a> to support Nuitka.</p>
 </section>
 </section>
@@ -272,7 +270,7 @@ list (since closed) or <a class="reference external" href="https://nuitka.net/pa
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-and-guis.html">
@@ -288,29 +286,29 @@ list (since closed) or <a class="reference external" href="https://nuitka.net/pa
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-046.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-046.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-046.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-046.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -320,7 +318,7 @@ list (since closed) or <a class="reference external" href="https://nuitka.net/pa
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-046.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -336,11 +334,5 @@ list (since closed) or <a class="reference external" href="https://nuitka.net/pa
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

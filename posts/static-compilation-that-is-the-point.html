@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Static Compilation - That is the point</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/static-compilation-that-is-the-point.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/static-compilation-that-is-the-point.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +119,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,17 +130,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="static-compilation-that-is-the-point">
-<h1>Static Compilation - That is the point<a class="headerlink" href="#static-compilation-that-is-the-point" title="Permalink to this headline"></a></h1>
+<h1>Static Compilation - That is the point<a class="headerlink" href="#static-compilation-that-is-the-point" title="Permalink to this headline">&#61633;</a></h1>
 <p>In a recent post, Stefan Behnel questioned the point of static
 compilation and suggests that in order to be useful, a static compiler
 <strong>needs</strong> to add something on top.</p>
 <p>This is going to be a rebuttal.</p>
 <section id="compatibility-i-mean-it">
-<h2>Compatibility, I mean it<a class="headerlink" href="#compatibility-i-mean-it" title="Permalink to this headline"></a></h2>
+<h2>Compatibility, I mean it<a class="headerlink" href="#compatibility-i-mean-it" title="Permalink to this headline">&#61633;</a></h2>
 <p>First of all, let me start out, by saying that Nuitka is intended to be
 the fully optimizing compiler of Python. The optimizing part is not yet
-true. Right now, it’s probably a correct compiler of Python. Correct in
-the sense that it’s compatible to CPython as far as possible.</p>
+true. Right now, it&#8217;s probably a correct compiler of Python. Correct in
+the sense that it&#8217;s compatible to CPython as far as possible.</p>
 <p>As examples of what I mean with compatibility:</p>
 <ul class="simple">
 <li><p>Nuitka will hold references to local variables of frames, when an
@@ -155,9 +153,9 @@ unused they are.</p></li>
 </ul>
 </section>
 <section id="compatibility-slower">
-<h2>Compatibility != Slower<a class="headerlink" href="#compatibility-slower" title="Permalink to this headline"></a></h2>
+<h2>Compatibility != Slower<a class="headerlink" href="#compatibility-slower" title="Permalink to this headline">&#61633;</a></h2>
 <p>While generally Nuitka will have a hard time to be faster <em>and</em>
-compatible to CPython, I don’t have much concern about that. Using
+compatible to CPython, I don&#8217;t have much concern about that. Using
 guards between optimistic, and less optimistic variants of code, there
 is no doubt in my head, that for programs, lots of code will only need
 very minimal type annotation and still receive respectable speedups.</p>
@@ -166,15 +164,15 @@ that the sentiment is that incompatible and fast <em>need</em> to go along. I
 totally dispute that.</p>
 </section>
 <section id="language-extensions">
-<h2>Language Extensions<a class="headerlink" href="#language-extensions" title="Permalink to this headline"></a></h2>
-<p>Now, the “in addition” stuff, that Stefan is talking about. I don’t see
+<h2>Language Extensions<a class="headerlink" href="#language-extensions" title="Permalink to this headline">&#61633;</a></h2>
+<p>Now, the &#8220;in addition&#8221; stuff, that Stefan is talking about. I don&#8217;t see
 the point at all. It is quite obvious that everything you can say with
 <code class="docutils literal notranslate"><span class="pre">cdef</span></code> syntax, could also be said with a more Pythonic syntax. And if
-it were missing, it could be added. And where it’s a semantic change, it
+it were missing, it could be added. And where it&#8217;s a semantic change, it
 should be frowned upon.</p>
 <p>For the Nuitka project, I never considered an own parser of Python. No
 matter how easy it would be, to roll your own, and I understand that
-Cython did that, it’s always going to be wrong and it’s work. Work that
+Cython did that, it&#8217;s always going to be wrong and it&#8217;s work. Work that
 has no point. The CPython implementation exhibits and maintains the
 module <code class="docutils literal notranslate"><span class="pre">ast</span></code> that works just fine.</p>
 <p>For Python, if this were so really useful, such language extensions
@@ -184,11 +182,11 @@ Note how <code class="docutils literal notranslate"><span class="pre">ctypes</sp
 bindings for Ada code (C exports) to Python, it was so easy to do that
 in pure Python with ctypes. I so much enjoyed that.</p>
 <p>So, slow bindings are in my view really easy to create with plain Python
-now. Somebody ought to make a “.h” to <code class="docutils literal notranslate"><span class="pre">ctypes</span></code>/<code class="docutils literal notranslate"><span class="pre">cffi</span></code> declarations
+now. Somebody ought to make a &#8220;.h&#8221; to <code class="docutils literal notranslate"><span class="pre">ctypes</span></code>/<code class="docutils literal notranslate"><span class="pre">cffi</span></code> declarations
 converter, once they are really faster to use (possibly due to Nuitka).
 For Nuitka it should be possible to accelerate these into direct calls
 and accesses. At which point, mixing generated C code and C include
-statements, will just be what it is, a source of bugs that Nuitka won’t
+statements, will just be what it is, a source of bugs that Nuitka won&#8217;t
 have.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -197,9 +195,9 @@ inferior to plain Python, even from a practical point of view.</p>
 </div>
 </section>
 <section id="lack-of-interpreter-is-bad">
-<h2>Lack of Interpreter is bad<a class="headerlink" href="#lack-of-interpreter-is-bad" title="Permalink to this headline"></a></h2>
+<h2>Lack of Interpreter is bad<a class="headerlink" href="#lack-of-interpreter-is-bad" title="Permalink to this headline">&#61633;</a></h2>
 <p>Static compilation vs. interpretation as a discussion has little merits
-to me. I find it totally obvious that you don’t need static compilation,
+to me. I find it totally obvious that you don&#8217;t need static compilation,
 but 2 other things:</p>
 <ol class="arabic simple">
 <li><p>You may need interpretation.</p></li>
@@ -217,15 +215,15 @@ all. Well, of course legacy users.</p>
 Nuitka should repeat.</p>
 </section>
 <section id="no-lock-in">
-<h2>No Lock-in<a class="headerlink" href="#no-lock-in" title="Permalink to this headline"></a></h2>
+<h2>No Lock-in<a class="headerlink" href="#no-lock-in" title="Permalink to this headline">&#61633;</a></h2>
 <p>The Cython language is so underspecified, I doubt anybody could make a
 compatible implementation. Should you choose to use it, you will become
-locked in. That means, if Cython breaks or won’t work to begin with, you
+locked in. That means, if Cython breaks or won&#8217;t work to begin with, you
 are stuck.</p>
 <p>That situation I totally despise. It seems an unnecessary risk to take.
-Not only, if your program does not work, you can’t just try another
-compiler. You also will never really know, if it’s either your fault or
-Cython’s fault until you do know, whose fault it is. Find yourself
+Not only, if your program does not work, you can&#8217;t just try another
+compiler. You also will never really know, if it&#8217;s either your fault or
+Cython&#8217;s fault until you do know, whose fault it is. Find yourself
 playing with removing, adding, or re-phrasing <code class="docutils literal notranslate"><span class="pre">cdef</span></code> statements, until
 things work.</p>
 <p>Common. I would rather use PyPy or anything else, that can be checked
@@ -240,15 +238,15 @@ of view, Cython has no point long term if a viable replacement that is
 Pythonic exists.</p>
 </section>
 <section id="python-alone-is-a-point">
-<h2>Python alone is a point<a class="headerlink" href="#python-alone-is-a-point" title="Permalink to this headline"></a></h2>
+<h2>Python alone is a point<a class="headerlink" href="#python-alone-is-a-point" title="Permalink to this headline">&#61633;</a></h2>
 <p>So, if you leave out static compilation vs. interpretation and JIT
 compilation, what would be the difference between PyPy and Nuitka? Well,
 obviously PyPy people are a lot cooler and cleverer. Their design is
 really inspiring and impressive. My design and whole approach to Nuitka
 is totally boring in comparison.</p>
 <p>But from a practical standpoint, is there any difference? What is the
-difference between Jython and PyPy? The target VM it is. PyPy’s or
-Java’s. And performance it is, of course.</p>
+difference between Jython and PyPy? The target VM it is. PyPy&#8217;s or
+Java&#8217;s. And performance it is, of course.</p>
 <p>So, with Python implementations all being similar, and just differing in
 targets, and performances, do they all have no point? I believe taken to
 the logical conclusion, that is what Stefan suggests. I of course think
@@ -256,7 +254,7 @@ that PyPy, Nuitka, and Jython have have as much of a point, as CPython
 does.</p>
 </section>
 <section id="type-annotations-done-right">
-<h2>Type Annotations done right<a class="headerlink" href="#type-annotations-done-right" title="Permalink to this headline"></a></h2>
+<h2>Type Annotations done right<a class="headerlink" href="#type-annotations-done-right" title="Permalink to this headline">&#61633;</a></h2>
 <p>And just for fun. This is making up a use cases of type annotations:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plong</span> <span class="o">=</span> <span class="n">long</span> <span class="k">if</span> <span class="n">python_version</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="k">else</span> <span class="nb">int</span>
 
@@ -276,21 +274,21 @@ called.</p>
 
     <span class="n">emit</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">append</span>
     <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getargnames</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">arg</span> <span class="o">==</span> <span class="s2">&quot;l&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">arg</span> <span class="o">==</span> <span class="s2">"l"</span><span class="p">:</span>
             <span class="n">emit</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">arg</span> <span class="o">==</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">arg</span> <span class="o">==</span> <span class="s2">"f"</span><span class="p">:</span>
             <span class="n">emit</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">arg</span> <span class="o">==</span> <span class="s2">&quot;i&quot;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">arg</span> <span class="o">==</span> <span class="s2">"i"</span><span class="p">:</span>
             <span class="n">emit</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">hints</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Unknown type </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">arg</span><span class="p">)</span>
+            <span class="n">hints</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">"Unknown type </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">arg</span><span class="p">)</span>
             <span class="n">emit</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">hints</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="o">*</span><span class="n">types</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">many_hints</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="c1"># Won&#39;t raise exception.</span>
+    <span class="c1"># Won't raise exception.</span>
     <span class="n">hints</span><span class="o">.</span><span class="n">doesnot_raise</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
 
     <span class="c1"># Signature to be inferred by conventions</span>
@@ -324,11 +322,11 @@ that appears quite possible.</p>
 <p>The signatures can therefore be done fully automatic. One could use
 prefix notation to indicate types.</p>
 <p>Another way would put fixed types for certain variable names. In Nuitka
-code, “node”, “code”, “context”, etc. have always the same types. I
+code, &#8220;node&#8221;, &#8220;code&#8221;, &#8220;context&#8221;, etc. have always the same types. I
 suspect many programs are the same, and it would be sweet, if you could
 plug something in and check such types throughout all of the package.</p>
 <p>And then, what do you do then? Well, you can inspect these hints at run
-time as well, they work with CPython as well (though they won’t make
+time as well, they work with CPython as well (though they won&#8217;t make
 things faster, only will that find errors in your program), they will
 even work with PyPy, or at least not harm it. It will nicely JIT them
 away I suppose.</p>
@@ -339,13 +337,13 @@ there. And Nuitka will compile it and benefit from the hints.</p>
 not portable. It should die. It totally is anti-Pythonic to me.</p>
 </section>
 <section id="elsewhere">
-<h2>Elsewhere<a class="headerlink" href="#elsewhere" title="Permalink to this headline"></a></h2>
+<h2>Elsewhere<a class="headerlink" href="#elsewhere" title="Permalink to this headline">&#61633;</a></h2>
 <p>In Java land, people compile to machine code as well. They probably also
-- like stupid me - didn’t understand that static compilation would have
+- like stupid me - didn&#8217;t understand that static compilation would have
 no point. Why do they do it? Why am I using compiled binaries done with
 their compiler then?</p>
-<p>And why didn’t they take the chance to introduce ubercool <code class="docutils literal notranslate"><span class="pre">cdef</span></code>
-a-likes while doing it? They probably just didn’t know better, did they?</p>
+<p>And why didn&#8217;t they take the chance to introduce ubercool <code class="docutils literal notranslate"><span class="pre">cdef</span></code>
+a-likes while doing it? They probably just didn&#8217;t know better, did they?</p>
 <p>No seriously. A compiler is just a compiler. It takes a source code in a
 language and turns it into a package to execute. That may be a required
 or an optional step. I prefer optional for development turn around. It
@@ -356,11 +354,11 @@ that extends the interpreted language compiled, just so there is a point
 in having it.</p>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline"></a></h2>
-<p>Nuitka has a point. On top of that I enjoy doing it. It’s great to have
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">&#61633;</a></h2>
+<p>Nuitka has a point. On top of that I enjoy doing it. It&#8217;s great to have
 the time to do this thing in the correct way.</p>
 <p>So far, things worked out pretty well. My earlier experimentations with
-type inference had shown some promise. The “value friends” thing, and
+type inference had shown some promise. The &#8220;value friends&#8221; thing, and
 the whole plan, appears relatively sound, but likely is in need of an
 update. I will work on it in december. Up to now, and even right now I
 worked on re-formulations, that should have made it possible to get more
@@ -368,24 +366,24 @@ release ready effects from this.</p>
 <p>When I say correct way, I mean this. When I noticed that type inference
 was harder than it should be, I could take the time and re-architecture
 things so that it will be simpler. To me that is fun. This being my
-spare time allows me to do things this efficiently. That’s not an
-excuse, it’s a fact that explains my approach. It doesn’t mean it makes
+spare time allows me to do things this efficiently. That&#8217;s not an
+excuse, it&#8217;s a fact that explains my approach. It doesn&#8217;t mean it makes
 less sense, not at all.</p>
 <p>As for language compatibility, there is more progress with Python3. I am
 currently changing the <code class="docutils literal notranslate"><span class="pre">class</span></code> re-formulations for Python2 and Python3
 (they need totally different ones due to <code class="docutils literal notranslate"><span class="pre">metaclass</span></code> changes) and then
-“test_desc.py” should pass with it too, which will be a huge achievement
+&#8220;test_desc.py&#8221; should pass with it too, which will be a huge achievement
 in that domain. I will do a post on that later.</p>
 <p>Then infrastructure, should complete the valgrind based benchmark
 automatism. Numbers will become more important from now on. It starts to
 make sense to observe them. This is not entirely as fun. But with
 improving numbers, it will be good to show off.</p>
 <p>And of course, I am going to document some more. The testing strategy of
-Nuitka is worth a look, because it’s totally different from everything
+Nuitka is worth a look, because it&#8217;s totally different from everything
 else people normally do.</p>
 <p>Anyway. I am not a big fan of controversy. I respect Cython for all it
 achieved. I do want to go where it fails to achieve. I should not have
-to justify that, it’s actually quite obvious, isn’t it?</p>
+to justify that, it&#8217;s actually quite obvious, isn&#8217;t it?</p>
 <div class="line-block">
 <div class="line">Yours,</div>
 <div class="line">Kay</div>
@@ -405,7 +403,7 @@ to justify that, it’s actually quite obvious, isn’t it?</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="python-3-nuitka-support-is-upcoming.html">
@@ -421,29 +419,29 @@ to justify that, it’s actually quite obvious, isn’t it?</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/static-compilation-that-is-the-point.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/static-compilation-that-is-the-point.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/static-compilation-that-is-the-point.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/static-compilation-that-is-the-point.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -453,7 +451,7 @@ to justify that, it’s actually quite obvious, isn’t it?</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/static-compilation-that-is-the-point.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -469,11 +467,5 @@ to justify that, it’s actually quite obvious, isn’t it?</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

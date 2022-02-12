@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,30 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka, Python research and Physics</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-python-research-and-physics.html" />
+      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-python-research-and-physics.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +67,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +117,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,12 +128,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-python-research-and-physics">
-<h1>Nuitka, Python research and Physics<a class="headerlink" href="#nuitka-python-research-and-physics" title="Permalink to this headline"></a></h1>
+<h1>Nuitka, Python research and Physics<a class="headerlink" href="#nuitka-python-research-and-physics" title="Permalink to this headline">&#61633;</a></h1>
 <p>Once upon a time ago physics had multiple forces. Each with very
 distinct traits. These were the early days. Then as time went on people
 started to realize that weak nuclear force and electromagnetic force
 were the same sort. That was after discovering that electricity and
-magnetism were the same, and that is the pattern. It’s called symmetry,
+magnetism were the same, and that is the pattern. It&#8217;s called symmetry,
 equivalence, and so on.</p>
 <p>The <a class="reference external" href="/pages/overview.html">Nuitka</a> project is effectively a Python
 research that goes through the same steps. There are e.g. currently
@@ -146,18 +142,18 @@ module variables, temp holder, temp keeper, and temp variables.</p>
 <p>Often when I added one more this was driven by code generation needs or
 deficiencies at the time. These are of course way too many, and all are
 good at one thing only.</p>
-<p>So the main task Nuitka is faced with now to e.g. generalize that “temp
-keeper” variables are temporary variables local to one statement only,
+<p>So the main task Nuitka is faced with now to e.g. generalize that &#8220;temp
+keeper&#8221; variables are temporary variables local to one statement only,
 surely to be released afterwards, and make that particular feature e.g.
 work for all variables across the board. Right now, code generation uses
-“cheats” where it puts a C++ block and local declarations for “temp
-keeper” variables.</p>
+&#8220;cheats&#8221; where it puts a C++ block and local declarations for &#8220;temp
+keeper&#8221; variables.</p>
 <p>It would be good, if it could be a <code class="docutils literal notranslate"><span class="pre">try</span></code> with <code class="docutils literal notranslate"><span class="pre">del</span></code> statement on the
-“temp keeper variable” in its <code class="docutils literal notranslate"><span class="pre">finally</span></code> part and yet, get the same
+&#8220;temp keeper variable&#8221; in its <code class="docutils literal notranslate"><span class="pre">finally</span></code> part and yet, get the same
 code generated. Difficult, yes, but not impossible, and definitely what
 I am aiming at.</p>
 <p>So that is what Nuitka will be dealing with in the next releases. Once
-done, maybe there will be a “gravity”, i.e. the one thing not yet
+done, maybe there will be a &#8220;gravity&#8221;, i.e. the one thing not yet
 harmonized, but for good reasons. Potentially limited due to lack of
 understanding, potentially because there is a good reason. And so not
 all we be unified or maybe e.g. module variables will be a bit more
@@ -181,7 +177,7 @@ one single weakness of it - that would be it.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-release-046.html">
@@ -197,29 +193,29 @@ one single weakness of it - that would be it.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-python-research-and-physics.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-python-research-and-physics.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-python-research-and-physics.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-python-research-and-physics.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -229,7 +225,7 @@ one single weakness of it - that would be it.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-python-research-and-physics.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -245,11 +241,5 @@ one single weakness of it - that would be it.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

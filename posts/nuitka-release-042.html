@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka Release 0.4.2</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-042.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-042.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +119,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,19 +130,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-4-2">
-<h1>Nuitka Release 0.4.2<a class="headerlink" href="#nuitka-release-0-4-2" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.4.2<a class="headerlink" href="#nuitka-release-0-4-2" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release comes with many bug fixes, some of which are severe. It
 also contains new features, like basic Python 3.3 support. And the
 <a class="reference external" href="https://nuitka.net/pages/performance.html">performance diagrams</a> got
 expanded.</p>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Support for FreeBSD.</p>
 <p>Nuitka works for at least FreeBSD 9.1, older versions may or may not
-work. This required only fixing some “Linuxisms” in the build
+work. This required only fixing some &#8220;Linuxisms&#8221; in the build
 process.</p>
 </li>
 <li><p>New option for warning about compile time detected exception raises.</p>
@@ -158,11 +156,11 @@ argument parsing error messages are not implemented yet.</p>
 </ul>
 </section>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
-<li><p>Nuitka already supported compilation of “main directories”, i.e.
-directories with a “__main__.py” file inside. The resulting binary
-name was “__main__.exe” though, but now it is “directory.exe”</p>
+<li><p>Nuitka already supported compilation of &#8220;main directories&#8221;, i.e.
+directories with a &#8220;__main__.py&#8221; file inside. The resulting binary
+name was &#8220;__main__.exe&#8221; though, but now it is &#8220;directory.exe&#8221;</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ls directory</span>
 __main__.py
 
@@ -200,11 +198,11 @@ would reject. It now properly raises a syntax error.</p>
 CPython3.3), and was also leaking references to its arguments.</p>
 </li>
 <li><p>Importing the module that became <code class="docutils literal notranslate"><span class="pre">__main__</span></code> through the module
-name, didn’t recurse to it.</p>
+name, didn&#8217;t recurse to it.</p>
 <p>This also gives a warning. PyBench does it, and then stumbles over
-the non-found “pybench” module. Of course, programmers should use
-<code class="docutils literal notranslate"><span class="pre">sys.modules[</span> <span class="pre">&quot;__main__&quot;</span> <span class="pre">]</span></code> to access main module code. Not only
-because the duplicated modules don’t share data.</p>
+the non-found &#8220;pybench&#8221; module. Of course, programmers should use
+<code class="docutils literal notranslate"><span class="pre">sys.modules[</span> <span class="pre">"__main__"</span> <span class="pre">]</span></code> to access main module code. Not only
+because the duplicated modules don&#8217;t share data.</p>
 </li>
 <li><p>Compiled method <code class="docutils literal notranslate"><span class="pre">repr</span></code> leaked references when printed.</p>
 <p>When printing them, they would not be freed, and subsequently hold
@@ -217,14 +215,14 @@ to <code class="docutils literal notranslate"><span class="pre">super</span></co
 do it. And now it turns out that the object lost a reference, causing
 similar issues as above, preventing <code class="docutils literal notranslate"><span class="pre">__del__</span></code> to run.</p>
 </li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">raise</span></code> statement didn’t enforce type of third argument.</p>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">raise</span></code> statement didn&#8217;t enforce type of third argument.</p>
 <p>This Python2-only form of exception raising now checks the type of
-the third argument before using it. Plus, when it’s None (which is
+the third argument before using it. Plus, when it&#8217;s None (which is
 also legal), no reference to None is leaked.</p>
 </li>
 <li><p>Python3 built-in exceptions were strings instead of exceptions.</p>
 <p>A gross mistake that went uncaught by test suites. I wonder how. Them
-being strings doesn’t help their usage of course, fixed.</p>
+being strings doesn&#8217;t help their usage of course, fixed.</p>
 </li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">-nan</span></code> and <code class="docutils literal notranslate"><span class="pre">nan</span></code> both exist and make a difference.</p>
 <p>A older story continued. There is a sign to <code class="docutils literal notranslate"><span class="pre">nan</span></code>, which can be
@@ -233,7 +231,7 @@ Nuitka.</p>
 </li>
 <li><p>Wrong optimization of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">!=</span> <span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">a</span></code> on C++
 level.</p>
-<p>While it’s not done during Nuitka optimization, the rich comparison
+<p>While it&#8217;s not done during Nuitka optimization, the rich comparison
 helpers still contained short cuts for <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>.</p>
 </li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">sys.executable</span></code> for <code class="docutils literal notranslate"><span class="pre">nuitka-python</span> <span class="pre">--python-version</span> <span class="pre">3.2</span></code> was
@@ -255,19 +253,19 @@ defaults.</p>
 </div>
 <p>This is now corrected. Of course, a Python3 only issue.</p>
 </li>
-<li><p>Pressing CTRL-C didn’t generate <code class="docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code> in compiled
+<li><p>Pressing CTRL-C didn&#8217;t generate <code class="docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code> in compiled
 code.</p>
-<p>Nuitka never executes “pending calls”. It now does, with the upside,
+<p>Nuitka never executes &#8220;pending calls&#8221;. It now does, with the upside,
 that the solution used, appears to be suitable for threading in
 Nuitka too. Expect more to come out of this.</p>
 </li>
 <li><p>For <code class="docutils literal notranslate"><span class="pre">with</span></code> statements with <code class="docutils literal notranslate"><span class="pre">return</span></code>, <code class="docutils literal notranslate"><span class="pre">break</span></code>, or <code class="docutils literal notranslate"><span class="pre">continue</span></code>
 to leave their body, the <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> was not called.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">a</span><span class="p">:</span>  <span class="c1"># This called a.__enter__().</span>
-    <span class="k">return</span> <span class="mi">2</span>  <span class="c1"># This didn&#39;t call a.__exit__(None, None, None).</span>
+    <span class="k">return</span> <span class="mi">2</span>  <span class="c1"># This didn't call a.__exit__(None, None, None).</span>
 </pre></div>
 </div>
-<p>This is of course quite huge, and unfortunately wasn’t covered by any
+<p>This is of course quite huge, and unfortunately wasn&#8217;t covered by any
 test suite so far. Turns out, the re-formulation of <code class="docutils literal notranslate"><span class="pre">with</span></code>
 statements, was wrongly using <code class="docutils literal notranslate"><span class="pre">try/except/else</span></code>, but these ignore
 the problematic statements. Only <code class="docutils literal notranslate"><span class="pre">try/finally</span></code> does. The enhanced
@@ -280,21 +278,21 @@ Python3 does it.</p>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Constants are now much less often created with <code class="docutils literal notranslate"><span class="pre">pickle</span></code> module, but
 created directly.</p>
 <p>This esp. applies for nested constants, now more values become <code class="docutils literal notranslate"><span class="pre">is</span></code>
 identical instead of only <code class="docutils literal notranslate"><span class="pre">==</span></code> identical, which indicates a reduced
 memory usage.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;something_special&quot;</span><span class="p">,)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;something_special&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"something_special"</span><span class="p">,)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">"something_special"</span>
 
 <span class="k">assert</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="n">b</span>  <span class="c1"># Now true</span>
 </pre></div>
 </div>
 <p>This is not only about memory efficiency, but also about performance.
-Less memory usage is more cache friendly, and the “==” operator will
+Less memory usage is more cache friendly, and the &#8220;==&#8221; operator will
 be able to shortcut dramatically in cases of identical objects.</p>
 <p>Constants now created without <code class="docutils literal notranslate"><span class="pre">pickle</span></code> usage, cover <code class="docutils literal notranslate"><span class="pre">float</span></code>,
 <code class="docutils literal notranslate"><span class="pre">list</span></code>, and <code class="docutils literal notranslate"><span class="pre">dict</span></code>, which is enough for PyStone to not use it at
@@ -319,39 +317,39 @@ all, which has been added support for as well.</p>
 </pre></div>
 </div>
 <p>A loop immediately broken has of course no effect. Loop conditions
-are re-formulated to immediate “if … : break” checks. Effectively
+are re-formulated to immediate &#8220;if &#8230; : break&#8221; checks. Effectively
 this means that loops with conditions detected to be always false to
 see the loop entirely removed.</p>
 </li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added tests for the found issues.</p></li>
 <li><p>Running the programs test suite (i.e. recursion) for Python3.2 and
 Python3.2 as well, after making adaptation so that the absolute
 import changes are now covered.</p></li>
-<li><p>Running the “CPython3.2” test suite with Python3.3 based Nuitka works
+<li><p>Running the &#8220;CPython3.2&#8221; test suite with Python3.3 based Nuitka works
 and found a few minor issues.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>The <a class="reference external" href="https://nuitka.net/doc/download.html">Downloads</a> page now
 offers RPMs for RHEL6, CentOS6, F17, F18, and openSUSE 12.1, 12.2,
 12.3. This large coverage is thanks to openSUSE build service and
-“ownssh” for contributing an RPM spec file.</p>
+&#8220;ownssh&#8221; for contributing an RPM spec file.</p>
 <p>The page got improved with logos for the distributions.</p>
 </li>
-<li><p>Added “ownssh” as contributor.</p></li>
+<li><p>Added &#8220;ownssh&#8221; as contributor.</p></li>
 <li><p>Revamped the <a class="reference external" href="https://nuitka.net/doc/user-manual.html">User Manual</a> in terms of layout,
 structure, and content.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
 <p>This release is the result of much validation work. The amount of fixes
 the largest of any release so far. New platforms, basic Python3.3
 support, consolidation all around.</p>
@@ -370,7 +368,7 @@ support, consolidation all around.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="netbsd-support-upcoming.html">
@@ -386,29 +384,29 @@ support, consolidation all around.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-042.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-042.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-042.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-042.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -418,7 +416,7 @@ support, consolidation all around.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-042.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -434,11 +432,5 @@ support, consolidation all around.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

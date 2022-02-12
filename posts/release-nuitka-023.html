@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka Release 0.2.3</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/release-nuitka-023.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/release-nuitka-023.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +119,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,14 +130,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-2-3">
-<h1>Nuitka Release 0.2.3<a class="headerlink" href="#nuitka-release-0-2-3" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.2.3<a class="headerlink" href="#nuitka-release-0-2-3" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This new release is marking a closing in on feature parity to CPython
-2.6 which is an important mile stone. Once this is reached, a “Nuitka
-0.3.x” series will strive for performance.</p>
+2.6 which is an important mile stone. Once this is reached, a &#8220;Nuitka
+0.3.x&#8221; series will strive for performance.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Generator functions no longer leak references when started, but not
 finished.</p></li>
@@ -148,7 +146,7 @@ the generator user <code class="docutils literal notranslate"><span class="pre">
 </ul>
 </section>
 <section id="reduced-differences-new-features">
-<h2>Reduced Differences / New Features<a class="headerlink" href="#reduced-differences-new-features" title="Permalink to this headline"></a></h2>
+<h2>Reduced Differences / New Features<a class="headerlink" href="#reduced-differences-new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Generator functions already worked quite fine, but now they have the
 <code class="docutils literal notranslate"><span class="pre">throw()</span></code>, <code class="docutils literal notranslate"><span class="pre">send()</span></code> and <code class="docutils literal notranslate"><span class="pre">close()</span></code> methods.</p></li>
@@ -156,7 +154,7 @@ the generator user <code class="docutils literal notranslate"><span class="pre">
 in by <code class="docutils literal notranslate"><span class="pre">send()</span></code> on the generator user.</p></li>
 <li><p>Support for extended slices:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">d</span><span class="p">[:</span><span class="mi">42</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="mi">24</span><span class="p">:,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
-<span class="n">d</span><span class="p">[:</span><span class="mi">42</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="mi">24</span><span class="p">:,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Strange&quot;</span>
+<span class="n">d</span><span class="p">[:</span><span class="mi">42</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="mi">24</span><span class="p">:,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Strange"</span>
 <span class="k">del</span> <span class="n">d</span><span class="p">[:</span><span class="mi">42</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="mi">24</span><span class="p">:,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -164,12 +162,12 @@ in by <code class="docutils literal notranslate"><span class="pre">send()</span>
 </ul>
 </section>
 <section id="tests-work">
-<h2>Tests Work<a class="headerlink" href="#tests-work" title="Permalink to this headline"></a></h2>
+<h2>Tests Work<a class="headerlink" href="#tests-work" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
-<li><p>The “test_contextlib” is now working perfectly due to the generator
+<li><p>The &#8220;test_contextlib&#8221; is now working perfectly due to the generator
 functions having a correct <code class="docutils literal notranslate"><span class="pre">throw()</span></code>. Added that test back, so
 context managers are now fully covered.</p></li>
-<li><p>Added a basic test for “overflow functions” has been added, these are
+<li><p>Added a basic test for &#8220;overflow functions&#8221; has been added, these are
 the ones which have an unknown number of locals due to the use of
 language constructs <code class="docutils literal notranslate"><span class="pre">exec</span></code> or <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">bla</span> <span class="pre">import</span> <span class="pre">*</span></code> on the function
 level. This one currently only highlights the failure to support it.</p></li>
@@ -178,7 +176,7 @@ CPython test suite.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The compiled generator types are using the new C++0x type safe enums
 feature.</p></li>
@@ -200,7 +198,7 @@ feature.</p></li>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="python-exec-in-nested-functions-quiz.html">
@@ -216,29 +214,29 @@ feature.</p></li>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/release-nuitka-023.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/release-nuitka-023.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/release-nuitka-023.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/release-nuitka-023.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -248,7 +246,7 @@ feature.</p></li>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/release-nuitka-023.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -264,11 +262,5 @@ feature.</p></li>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

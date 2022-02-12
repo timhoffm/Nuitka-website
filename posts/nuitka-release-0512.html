@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka Release 0.5.12</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0512.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0512.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +119,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,18 +130,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-5-12">
-<h1>Nuitka Release 0.5.12<a class="headerlink" href="#nuitka-release-0-5-12" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.5.12<a class="headerlink" href="#nuitka-release-0-5-12" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release contains massive amounts of corrections for long standing
 issues in the import recursion mechanism, as well as for standalone
 issues now visible after the <code class="docutils literal notranslate"><span class="pre">__file__</span></code> and <code class="docutils literal notranslate"><span class="pre">__path__</span></code> values have
 changed to become runtime dependent values.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Fix, the <code class="docutils literal notranslate"><span class="pre">__path__</span></code> attribute for packages was still the original
-filename’s directory, even in file reference mode was <code class="docutils literal notranslate"><span class="pre">runtime</span></code>.</p></li>
+filename&#8217;s directory, even in file reference mode was <code class="docutils literal notranslate"><span class="pre">runtime</span></code>.</p></li>
 <li><p>The use of <code class="docutils literal notranslate"><span class="pre">runtime</span></code> as default file reference mode for
 executables, even if not in standalone mode, was making acceleration
 harder than necessary. Changed to <code class="docutils literal notranslate"><span class="pre">original</span></code> for that case. Fixed
@@ -157,16 +155,16 @@ PyWin32, where modules from <code class="docutils literal notranslate"><span cla
 recursed to. Fixed in 0.5.11.2 already.</p></li>
 <li><p>The importing of modules with the same name as a built-in module
 inside a package falsely assumed these were the built-ins which need
-not exist, and then didn’t recurse into them. This affected
+not exist, and then didn&#8217;t recurse into them. This affected
 standalone mode the most, as the module was then missing entirely.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inside &quot;x.y&quot; module:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inside "x.y" module:</span>
 <span class="kn">import</span> <span class="nn">x.y.exceptions</span>
 </pre></div>
 </div>
 </li>
 <li><p>Similarly, the importing of modules with the same name as standard
 library modules could go wrong.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inside &quot;x.y&quot; module:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inside "x.y" module:</span>
 <span class="kn">import</span> <span class="nn">x.y.types</span>
 </pre></div>
 </div>
@@ -189,7 +187,7 @@ caused the compiler to crash.</p>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Focusing on compile time memory usage, cyclic dependencies of trace
 merges that prevented them from being released, even when replaced
@@ -203,7 +201,7 @@ flows need not be merged.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Standalone: On systems, where <code class="docutils literal notranslate"><span class="pre">.pth</span></code> files inject Python packages
 at launch, these are now detected, and taking into account.
@@ -213,7 +211,7 @@ Previously Nuitka did not recognize them, due to lack of
 <li><p>Added option <code class="docutils literal notranslate"><span class="pre">--explain-imports</span></code> to debug the import resolution
 code of Nuitka.</p></li>
 <li><p>Added options <code class="docutils literal notranslate"><span class="pre">--show-memory</span></code> to display the amount of memory used
-in total and how it’s spread across the different node types during
+in total and how it&#8217;s spread across the different node types during
 compilation.</p></li>
 <li><p>The option <code class="docutils literal notranslate"><span class="pre">--trace-execution</span></code> now also covers early program
 initialisation before any Python code runs, to ease finding bugs in
@@ -221,7 +219,7 @@ this domain as well.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Changed default for file reference mode to <code class="docutils literal notranslate"><span class="pre">original</span></code> unless
 standalone or module mode are used. For mere acceleration, breaking
@@ -235,7 +233,7 @@ installations.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Moved <code class="docutils literal notranslate"><span class="pre">oset</span></code> and <code class="docutils literal notranslate"><span class="pre">odict</span></code> modules which provide ordered sets and
 dictionaries into a new package <code class="docutils literal notranslate"><span class="pre">nuitka.container</span></code> to clean up the
@@ -248,7 +246,7 @@ purpose.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
 <p>This release is a major maintenance release. Support for namespace
 modules injected by <code class="docutils literal notranslate"><span class="pre">*.pth</span></code> is a major step for new compatibility. The
 import logic improvements expand the ability of standalone mode widely.
@@ -273,7 +271,7 @@ optimization changes have been postponed to be next release.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-progress-spring-2015.html">
@@ -289,29 +287,29 @@ optimization changes have been postponed to be next release.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0512.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0512.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0512.html&hashtag=%23nuitka"  target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0512.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -321,7 +319,7 @@ optimization changes have been postponed to be next release.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0512.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -337,11 +335,5 @@ optimization changes have been postponed to be next release.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>
