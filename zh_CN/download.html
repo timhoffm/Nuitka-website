@@ -39,7 +39,7 @@
         <script src="_static/translations.js" async=""></script>
         <link rel="index" title="&#32034;&#24341;" href="genindex.html">
     <link rel="search" title="&#25628;&#32034;" href="search.html">
-    <link rel="next" title="&lt;no title&gt;" href="user-manual.html">
+    <link rel="next" title="Nuitka &#29992;&#25143;&#25163;&#20876;" href="user-manual.html">
     <link rel="prev" title="&#24555;&#36895;&#20837;&#38376;" href="start.html">   
 <link rel="alternate" type="application/atom+xml" href="posts/atom.xml" title="Nuitka Blog">
  
@@ -100,6 +100,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#github">Github</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html">&#29992;&#25143;&#25163;&#20876;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="support.html">&#25903;&#25345;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="roadmap.html">&#36335;&#32447;&#22270;</a></li>
 </ul>
@@ -220,7 +221,7 @@ Manual, such that you don&#8217;t go on a wrong track.</p>
 <section id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <ul>
-<li><p><img alt="WINDOWS_LOGO" src="images/windows.jpg"> Stable MSI Installer:</p>
+<li><p><img alt="WINDOWS_LOGO" src="_images/windows.jpg"> Stable MSI Installer:</p>
 <div class="admonition note">
 <p class="admonition-title">&#22791;&#27880;</p>
 <p>The versions of the MSI have a different numbering scheme in their
@@ -286,7 +287,7 @@ Version</p></th>
 </tbody>
 </table>
 </li>
-<li><p><img alt="WINDOWS_LOGO" src="images/windows.jpg"> Develop MSI Installer:</p>
+<li><p><img alt="WINDOWS_LOGO" src="_images/windows.jpg"> Develop MSI Installer:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 19%">
@@ -349,7 +350,7 @@ Version</p></th>
 <section id="debian-ubuntu-mint">
 <h3>Debian/Ubuntu/Mint<a class="headerlink" href="#debian-ubuntu-mint" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <ul>
-<li><p><img alt="DEBIAN_LOGO" src="images/debian.png"> <img alt="UBUNTU_LOGO" src="images/ubuntu.png"> <img alt="MINT_LOGO" src="images/mint.png"> Stable: Debian/Ubuntu/Mint
+<li><p><img alt="DEBIAN_LOGO" src="_images/debian.png"> <img alt="UBUNTU_LOGO" src="_images/ubuntu.png"> <img alt="MINT_LOGO" src="_images/mint.png"> Stable: Debian/Ubuntu/Mint
 repositories</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CODENAME</span><span class="o">=</span><span class="sb">`</span>egrep <span class="s1">'UBUNTU_CODENAME|VERSION_CODENAME'</span> /etc/os-release <span class="p">|</span> sort <span class="p">|</span> head -1 <span class="p">|</span> cut -d<span class="o">=</span> -f2<span class="sb">`</span>
 <span class="k">if</span> <span class="o">[</span> -z <span class="s2">"</span><span class="nv">$CODENAME</span><span class="s2">"</span> <span class="o">]</span>
@@ -364,7 +365,7 @@ sudo apt-get install nuitka
 </pre></div>
 </div>
 </li>
-<li><p><img alt="DEBIAN_LOGO" src="images/debian.png"> <img alt="UBUNTU_LOGO" src="images/ubuntu.png"> <img alt="MINT_LOGO" src="images/mint.png"> Develop: Debian/Ubuntu/Mint
+<li><p><img alt="DEBIAN_LOGO" src="_images/debian.png"> <img alt="UBUNTU_LOGO" src="_images/ubuntu.png"> <img alt="MINT_LOGO" src="_images/mint.png"> Develop: Debian/Ubuntu/Mint
 repositories</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CODENAME</span><span class="o">=</span><span class="sb">`</span>egrep <span class="s1">'UBUNTU_CODENAME|VERSION_CODENAME'</span> /etc/os-release <span class="p">|</span> cut -d<span class="o">=</span> -f2<span class="sb">`</span>
 <span class="k">if</span> <span class="o">[</span> -z <span class="s2">"</span><span class="nv">$CODENAME</span><span class="s2">"</span> <span class="o">]</span>
@@ -389,7 +390,7 @@ way to access the develop version of Nuitka though.</p>
 </section>
 <section id="rhel">
 <h3>RHEL<a class="headerlink" href="#rhel" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
-<p><img alt="RHEL_LOGO" src="images/rhel.png"> repositories</p>
+<p><img alt="RHEL_LOGO" src="_images/rhel.png"> repositories</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Detect the RHEL version</span>
 <span class="nb">eval</span> <span class="sb">`</span>grep <span class="nv">VERSION_ID</span><span class="o">=</span> /etc/os-release<span class="sb">`</span>
 
@@ -435,7 +436,7 @@ yum install nuitka-unstable
 </section>
 <section id="centos">
 <h3>CentOS<a class="headerlink" href="#centos" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
-<p><img alt="CENTOS_LOGO" src="images/centos.png"> repositories</p>
+<p><img alt="CENTOS_LOGO" src="_images/centos.png"> repositories</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># CentOS 6:</span>
 yum-config-manager --add-repo http://download.opensuse.org/repositories/home:/kayhayen/CentOS_CentOS-6/home:kayhayen.repo
 <span class="c1"># CentOS 7</span>
@@ -483,7 +484,7 @@ yum install nuitka-unstable
 </section>
 <section id="fedora">
 <h3>Fedora<a class="headerlink" href="#fedora" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
-<p><img alt="FEDORA_LOGO" src="images/fedora.png"> repositories</p>
+<p><img alt="FEDORA_LOGO" src="_images/fedora.png"> repositories</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Detect the Fedora version</span>
 <span class="nb">eval</span> <span class="sb">`</span>grep <span class="nv">VERSION_ID</span><span class="o">=</span> /etc/os-release<span class="sb">`</span>
 
@@ -555,7 +556,7 @@ dnf install nuitka-unstable
 </section>
 <section id="suse">
 <h3>Suse<a class="headerlink" href="#suse" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
-<p><img alt="SUSE_LOGO" src="images/opensuse.png"> repositories</p>
+<p><img alt="SUSE_LOGO" src="_images/opensuse.png"> repositories</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Detect the OpenSUSE leap version</span>
 <span class="nb">eval</span> <span class="sb">`</span>grep <span class="nv">VERSION_ID</span><span class="o">=</span> /etc/os-release<span class="sb">`</span>
 
@@ -618,14 +619,14 @@ zypper install nuitka-unstable
 <section id="arch">
 <h3>Arch<a class="headerlink" href="#arch" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <ul class="simple">
-<li><p><img alt="ARCH_LOGO" src="images/arch.jpg"> Stable: Arch Linux, execute <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">nuitka</span></code></p></li>
-<li><p><img alt="ARCH_LOGO" src="images/arch.jpg"> Develop: Arch Linux <a class="reference external" href="https://aur.archlinux.org/packages/nuitka-git/" target="_blank">Nuitka from git develop</a></p></li>
+<li><p><img alt="ARCH_LOGO" src="_images/arch.jpg"> Stable: Arch Linux, execute <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">nuitka</span></code></p></li>
+<li><p><img alt="ARCH_LOGO" src="_images/arch.jpg"> Develop: Arch Linux <a class="reference external" href="https://aur.archlinux.org/packages/nuitka-git/" target="_blank">Nuitka from git develop</a></p></li>
 </ul>
 </section>
 <section id="gentoo">
 <h3>Gentoo<a class="headerlink" href="#gentoo" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <ul class="simple">
-<li><p><img alt="GENTOO_LOGO" src="images/gentoo-signet.png"> Gentoo Linux, execute <code class="docutils literal notranslate"><span class="pre">emerge</span> <span class="pre">-a</span> <span class="pre">dev-python/nuitka</span></code></p></li>
+<li><p><img alt="GENTOO_LOGO" src="_images/gentoo-signet.png"> Gentoo Linux, execute <code class="docutils literal notranslate"><span class="pre">emerge</span> <span class="pre">-a</span> <span class="pre">dev-python/nuitka</span></code></p></li>
 </ul>
 </section>
 <section id="macos">
@@ -637,8 +638,8 @@ git, or use PyPI.</p>
 <section id="github">
 <h2>Github<a class="headerlink" href="#github" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h2>
 <ul class="simple">
-<li><p><img alt="GIT_LOGO" src="images/git.jpg"> Stable: <strong>git clone https://github.com/Nuitka/Nuitka</strong></p></li>
-<li><p><img alt="GIT_LOGO" src="images/git.jpg"> Develop: <strong>git clone &#8211;branch develop
+<li><p><img alt="GIT_LOGO" src="_images/git.jpg"> Stable: <strong>git clone https://github.com/Nuitka/Nuitka</strong></p></li>
+<li><p><img alt="GIT_LOGO" src="_images/git.jpg"> Develop: <strong>git clone &#8211;branch develop
 https://github.com/Nuitka/Nuitka</strong></p></li>
 </ul>
 <p>Visit <a class="reference external" href="https://github.com/Nuitka/Nuitka" target="_blank">https://github.com/Nuitka/Nuitka</a> for the Nuitka repository on
