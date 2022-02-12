@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="API documentation" href="api-doc.html" />
-    <link rel="prev" title="更多文档" href="../more.html" />   
+    <link rel="prev" title="Nuitka 路线图" href="roadmap.html" />   
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -85,12 +85,198 @@
 <li class="toctree-l1"><a class="reference internal" href="download.html">下载</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user-manual.html">用户手册</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="roadmap.html">路线图</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intl.html">多语言支持</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">商业用户</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">发行信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">路线图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多文档</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">开发者手册</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#milestones">里程碑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-numbers">版本数字</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#current-state">当前状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-development-environment-for-nuitka">为 Nuitka 设置开发环境</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visual-studio-code">Visual Studio Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eclipse-pycharm">Eclipse / PyCharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#commit-and-code-hygiene">承诺和守则的卫士</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-rules-python">Python 编码规则</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tool-to-format">Tool to format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#identifiers">Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-package-names">Module/Package Names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#names-for-context-manages-start-with-with">Names for context manages start with <code class="docutils literal notranslate"><span class="pre">with</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prefer-list-contractions-over-built-ins">Prefer list contractions over built-ins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-rules-c">Coding Rules C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-git-flow-model">The “git flow” model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nuitka-git-github-workflow">Nuitka “git/github” Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-documentation-and-guidelines">API Documentation and Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#use-of-standard-python-doc-strings">Use of Standard Python <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#special-doxygen-anatomy-of-doc">Special <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> Anatomy of <code class="docutils literal notranslate"><span class="pre">__doc__</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-the-source">Checking the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-tests">Running the Tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-all-tests">Running all Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-tests">Basic Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#syntax-tests">Syntax Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#program-tests">Program Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generated-tests">Generated Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile-nuitka-with-nuitka">Compile Nuitka with Nuitka</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#internal-plugin-api">Internal/Plugin API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-the-cpython-suites">Working with the CPython suites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#design-descriptions">Design Descriptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nuitka-logo">Nuitka Logo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#choice-of-the-target-language">Choice of the Target Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-of-scons-internally">Use of Scons internally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#locating-modules-and-packages">Locating Modules and Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hooking-for-module-import-process">Hooking for module <code class="docutils literal notranslate"><span class="pre">import</span></code> process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supporting-class-of-python3">Supporting <code class="docutils literal notranslate"><span class="pre">__class__</span></code> of Python3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frame-stack">Frame Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-parsing">Parameter Parsing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#input">Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keyword-dictionary">Keyword dictionary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#argument-tuple">Argument tuple</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ssa-form-for-nuitka">SSA form for Nuitka</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loop-ssa">Loop SSA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-slots-in-optimization">Python Slots in Optimization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-slot-idea">Basic Slot Idea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#representation-in-nuitka">Representation in Nuitka</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-c-side">The C side</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#built-in-call-optimization">Built-in call optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-generation-towards-c">Code Generation towards C</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statement-temporary-variables">Statement Temporary Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-variables-storage">Local Variables Storage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exit-targets">Exit Targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frames">Frames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#abortive-statements">Abortive Statements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#constant-preparation">Constant Preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language-conversions-to-make-things-simpler">Language Conversions to make things simpler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-assert-statement">The <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-comparison-chain-expressions">The “comparison chain” expressions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-execfile-built-in">The <code class="docutils literal notranslate"><span class="pre">execfile</span></code> built-in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generator-expressions-with-yield">Generator expressions with <code class="docutils literal notranslate"><span class="pre">yield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-decorators">Function Decorators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions-nested-arguments">Functions nested arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-place-assignments">In-place Assignments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complex-assignments">Complex Assignments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unpacking-assignments">Unpacking Assignments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#with-statements">With Statements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#for-loops">For Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#while-loops">While Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exception-handlers">Exception Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statement-try-except-with-else">Statement <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> with <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-creation-python2">Class Creation (Python2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-creation-python3">Class Creation (Python3)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generator-expressions">Generator Expressions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list-contractions">List Contractions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-contractions">Set Contractions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dictionary-contractions">Dictionary Contractions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#boolean-expressions-and-and-or">Boolean expressions <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-calls">Simple Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complex-calls">Complex Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#match-statements">Match Statements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#print-statements">Print Statements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reformulations-during-optimization">Reformulations during Optimization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#builtin-zip-for-python2">Builtin <code class="docutils literal notranslate"><span class="pre">zip</span></code> for Python2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#builtin-map-for-python2">Builtin <code class="docutils literal notranslate"><span class="pre">map</span></code> for Python2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#builtin-min">Builtin <code class="docutils literal notranslate"><span class="pre">min</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#builtin-max">Builtin <code class="docutils literal notranslate"><span class="pre">max</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#call-to-dir-without-arguments">Call to <code class="docutils literal notranslate"><span class="pre">dir</span></code> without arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calls-to-functions-with-known-signatures">Calls to functions with known signatures</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nodes-that-serve-special-purposes">Nodes that serve special purposes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#try-statements">Try statements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#releases">Releases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#side-effects">Side Effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#caught-exception-type-value-references">Caught Exception Type/Value References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hard-module-imports">Hard Module Imports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#locals-dict-update-statement">Locals Dict Update Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#optimizing-attribute-lookups-into-method-calls-for-built-ins-types">Optimizing Attribute Lookups into Method Calls for Built-ins types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plan-to-add-ctypes-support">Plan to add “ctypes” support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#goals-allowances-to-the-task">Goals/Allowances to the task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#type-inference-the-discussion">Type Inference - The Discussion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applying-this-to-ctypes">Applying this to “ctypes”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#excursion-to-functions">Excursion to Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#excursion-to-loops">Excursion to Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#excursion-to-conditions">Excursion to Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#excursion-to-return-statements">Excursion to <code class="docutils literal notranslate"><span class="pre">return</span></code> statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#excursion-to-yield-expressions">Excursion to <code class="docutils literal notranslate"><span class="pre">yield</span></code> expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mixed-types">Mixed Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#back-to-ctypes">Back to “ctypes”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#now-to-the-interface">Now to the interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discussing-with-examples">Discussing with examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-generation-impact">Code Generation Impact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initial-implementation">Initial Implementation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#goal-1-reached">Goal 1 (Reached)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#goal-2-reached">Goal 2 (Reached)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#goal-3">Goal 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#goal-4">Goal 4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#limitations-for-now">Limitations for now</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-make-features-experimental">How to make Features Experimental</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#command-line">Command Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#in-c-code">In C code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#in-python">In Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-to-use-it">When to use it</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-to-remove-it">When to remove it</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-dependencies-to-nuitka">Adding dependencies to Nuitka</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-runtime-dependency">Adding a Runtime Dependency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-development-dependency">Adding a Development Dependency</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#idea-bin">Idea Bin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prongs-of-action">Prongs of Action</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#builtin-optimization">Builtin optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-creation-overhead-reduction">Class Creation Overhead Reduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#memory-usage-at-compile-time">Memory Usage at Compile Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coverage-testing">Coverage Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python3-performance">Python3 Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caching-of-python-level-compilation">Caching of Python level compilation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#updates-for-this-manual">Updates for this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-doc.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="factory.html">工厂说明书</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">影音</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">演讲稿</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">流媒体</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">其他</span></p>
 <ul>
@@ -98,117 +284,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">建设中</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../more.html">更多文档</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">开发者手册</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#milestones">里程碑</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#version-numbers">版本数字</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#current-state">当前状态</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setting-up-the-development-environment-for-nuitka">为 Nuitka 设置开发环境</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#visual-studio-code">Visual Studio Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#eclipse-pycharm">Eclipse / PyCharm</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#commit-and-code-hygiene">承诺和守则的卫士</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#coding-rules-python">Python 编码规则</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tool-to-format">Tool to format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#identifiers">Identifiers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-package-names">Module/Package Names</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#names-for-context-manages-start-with-with">Names for context manages start with <code class="docutils literal notranslate"><span class="pre">with</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#prefer-list-contractions-over-built-ins">Prefer list contractions over built-ins</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#coding-rules-c">Coding Rules C</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-git-flow-model">The “git flow” model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#nuitka-git-github-workflow">Nuitka “git/github” Workflow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#api-documentation-and-guidelines">API Documentation and Guidelines</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#use-of-standard-python-doc-strings">Use of Standard Python <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> Strings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#special-doxygen-anatomy-of-doc">Special <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> Anatomy of <code class="docutils literal notranslate"><span class="pre">__doc__</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#checking-the-source">Checking the Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#running-the-tests">Running the Tests</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#running-all-tests">Running all Tests</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#basic-tests">Basic Tests</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#syntax-tests">Syntax Tests</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#program-tests">Program Tests</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#generated-tests">Generated Tests</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#compile-nuitka-with-nuitka">Compile Nuitka with Nuitka</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#internal-plugin-api">Internal/Plugin API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#working-with-the-cpython-suites">Working with the CPython suites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#design-descriptions">Design Descriptions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#nuitka-logo">Nuitka Logo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#choice-of-the-target-language">Choice of the Target Language</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#use-of-scons-internally">Use of Scons internally</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#locating-modules-and-packages">Locating Modules and Packages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#hooking-for-module-import-process">Hooking for module <code class="docutils literal notranslate"><span class="pre">import</span></code> process</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#supporting-class-of-python3">Supporting <code class="docutils literal notranslate"><span class="pre">__class__</span></code> of Python3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#frame-stack">Frame Stack</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parameter-parsing">Parameter Parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ssa-form-for-nuitka">SSA form for Nuitka</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#loop-ssa">Loop SSA</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#python-slots-in-optimization">Python Slots in Optimization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#the-c-side">The C side</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#built-in-call-optimization">Built-in call optimization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#code-generation-towards-c">Code Generation towards C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#constant-preparation">Constant Preparation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#language-conversions-to-make-things-simpler">Language Conversions to make things simpler</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reformulations-during-optimization">Reformulations during Optimization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nodes-that-serve-special-purposes">Nodes that serve special purposes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#optimizing-attribute-lookups-into-method-calls-for-built-ins-types">Optimizing Attribute Lookups into Method Calls for Built-ins types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#plan-to-add-ctypes-support">Plan to add “ctypes” support</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#goals-allowances-to-the-task">Goals/Allowances to the task</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#type-inference-the-discussion">Type Inference - The Discussion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#applying-this-to-ctypes">Applying this to “ctypes”</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#excursion-to-functions">Excursion to Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#excursion-to-loops">Excursion to Loops</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#excursion-to-conditions">Excursion to Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#excursion-to-return-statements">Excursion to <code class="docutils literal notranslate"><span class="pre">return</span></code> statements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#excursion-to-yield-expressions">Excursion to <code class="docutils literal notranslate"><span class="pre">yield</span></code> expressions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mixed-types">Mixed Types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#back-to-ctypes">Back to “ctypes”</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#now-to-the-interface">Now to the interface</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#discussing-with-examples">Discussing with examples</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#code-generation-impact">Code Generation Impact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#initial-implementation">Initial Implementation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#limitations-for-now">Limitations for now</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#how-to-make-features-experimental">How to make Features Experimental</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#command-line">Command Line</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#in-c-code">In C code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#in-python">In Python</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#when-to-use-it">When to use it</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#when-to-remove-it">When to remove it</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#adding-dependencies-to-nuitka">Adding dependencies to Nuitka</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#adding-a-runtime-dependency">Adding a Runtime Dependency</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-a-development-dependency">Adding a Development Dependency</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#idea-bin">Idea Bin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#prongs-of-action">Prongs of Action</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#builtin-optimization">Builtin optimization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#class-creation-overhead-reduction">Class Creation Overhead Reduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#memory-usage-at-compile-time">Memory Usage at Compile Time</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#coverage-testing">Coverage Testing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#python3-performance">Python3 Performance</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#caching-of-python-level-compilation">Caching of Python level compilation</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#updates-for-this-manual">Updates for this Manual</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="api-doc.html">API 文档</a></li>
-<li class="toctree-l2"><a class="reference internal" href="factory.html">工厂说明书</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../extra.html">Expand the content</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
 </ul>
 
         </div>
@@ -227,7 +307,6 @@
            <div itemprop="articleBody">
               <section id="nuitka-developer-manual">
 <h1>Nuitka 开发者手册<a class="headerlink" href="#nuitka-developer-manual" title="永久链接至标题"></a></h1>
-<img alt="doc/doc/images/Nuitka-Logo-Symbol.png" src="doc/doc/images/Nuitka-Logo-Symbol.png" />
 <p>本开发者手册的目的是介绍 Nuitka 的当前设计、项目规则以及所做选择的动机。它旨在成为源代码的指南，并以注释的形式给出不适合源代码的解释。</p>
 <p>它应该被用作规划和记录我们所做决定过程的参考。因此，我们在这里，例如，在实施类型推理计划之前，提出了这些计划。而且我们在进行过程中更新它们。</p>
 <p>它是从会议上的讨论和演讲以及私人谈话或问题跟踪器中成长起来的。</p>

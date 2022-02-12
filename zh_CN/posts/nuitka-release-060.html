@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka Release 0.6.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-060.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">用户手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">商业用户</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">发行信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">路线图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">开发者手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">工厂说明书</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">影音</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">演讲稿</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">流媒体</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">建设中</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-release-0-6-0">
+<h1>Nuitka Release 0.6.0<a class="headerlink" href="#nuitka-release-0-6-0" title="永久链接至标题"></a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<p>This release adds massive improvements for optimization and a couple of
+bug fixes.</p>
+<p>It also indicates reaching the mile stone of doing actual type
+inference, even if only very limited.</p>
+<p>And with the new version numbers, lots of UI changes go along. The
+options to control recursion into modules have all been renamed, some
+now have different defaults, and finally the filenames output have
+changed.</p>
+<section id="bug-fixes">
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Python3.5: Fix, the awaiting flag was not removed for exceptions
+thrown into a coroutine, so next time it appeared to be awaiting
+instead of finished.</p></li>
+<li><p>Python3: Classes in generators that were using built-in functions
+crashed the compilation with C errors.</p></li>
+<li><p>Some regressions for XML outputs from previous changes were fixed.</p></li>
+<li><p>Fix, <code class="docutils literal notranslate"><span class="pre">hasattr</span></code> was not raising an exception if used with non-string
+attributes.</p></li>
+<li><p>For really large compilations, MSVC linker could choke on the input
+file, line length limits, which is now fixed for the inline copy of
+Scons.</p></li>
+<li><p>Standalone: Follow changed hidden dependency of <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code> to
+<code class="docutils literal notranslate"><span class="pre">PyQt5.sip</span></code> for newer versions</p></li>
+<li><p>Standalone: Include certificate file using by <code class="docutils literal notranslate"><span class="pre">requests</span></code> module in
+some cases as a data file.</p></li>
+</ul>
+</section>
+<section id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Enabled C target type <code class="docutils literal notranslate"><span class="pre">nuitka_bool</span></code> for variables that are stored
+with boolean shape only, and generate C code for those</p></li>
+<li><p>Using C target type <code class="docutils literal notranslate"><span class="pre">nuitka_bool</span></code> many more expressions are now
+handled better in conditions.</p></li>
+<li><p>Enhanced <code class="docutils literal notranslate"><span class="pre">is</span></code> and <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> to be C source type aware, so they can
+be much faster for them.</p></li>
+<li><p>Use C target type for <code class="docutils literal notranslate"><span class="pre">bool</span></code> built-in giving more efficient code
+for some source values.</p></li>
+<li><p>Annotate the <code class="docutils literal notranslate"><span class="pre">not</span></code> result to have boolean type shape, allowing for
+more compile time optimization with it.</p></li>
+<li><p>Restored previously lost optimization of loop break handling
+<code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> which makes loops much faster again.</p></li>
+<li><p>Restore lost optimization of subscripts with constant integer values
+making them faster again.</p></li>
+<li><p>Optimize in-place operations for cases where left, right, or both
+sides have known type shapes for some values. Initially only a few
+variants were added, but there is more to come.</p></li>
+<li><p>When adjacent parts of an f-string become known string constants,
+join them at compile time.</p></li>
+<li><p>When there is only one remaining part in an f-string, use that
+directly as the result.</p></li>
+<li><p>Optimize empty f-strings directly into empty strings constant during
+the tree building phase.</p></li>
+<li><p>Added specialized attribute check for use in re-formulations that
+doesn’t expose exceptions.</p></li>
+<li><p>Remove locals sync operation in scopes without local variables, e.g.
+classes or modules, making <code class="docutils literal notranslate"><span class="pre">exec</span></code> and the like slightly leaner
+there.</p></li>
+<li><p>Remove <code class="docutils literal notranslate"><span class="pre">try</span></code> nodes that did only re-raise exceptions.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">del</span></code> of variables is now driven fully by C types and generates
+more compatible code.</p></li>
+<li><p>Removed useless double exception exits annotated for expressions of
+conditions and added code that allows conditions to adapt themselves
+to the target shape bool during optimization.</p></li>
+</ul>
+</section>
+<section id="new-features">
+<h2>New Features<a class="headerlink" href="#new-features" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Added support for using <code class="docutils literal notranslate"><span class="pre">.egg</span></code> files in <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>, one of the
+more rare uses, where Nuitka wasn’t yet compatible.</p></li>
+<li><p>Output binaries in standalone mode with platform suffix, on
+non-Windows that means no suffix. In accelerated mode on non-Windows,
+use <code class="docutils literal notranslate"><span class="pre">.bin</span></code> as a suffix to avoid collision with files that have no
+suffix.</p></li>
+<li><p>Windows: It’s now possible to use <code class="docutils literal notranslate"><span class="pre">clang-cl.exe</span></code> for <code class="docutils literal notranslate"><span class="pre">CC</span></code> with
+Nuitka as a third compiler on Windows, but it requires an existing
+MSVC install to be used for resource compilation and linking.</p></li>
+<li><p>Windows: Added support for using <code class="docutils literal notranslate"><span class="pre">ccache.exe</span></code> and <code class="docutils literal notranslate"><span class="pre">clcache.exe</span></code>,
+so that object files can now be cached for re-compilation.</p></li>
+<li><p>For debug mode, report missing in-place helpers. These kinds of
+reports are to become more universal and are aimed at recognizing
+missed optimization chances in Nuitka. This features is still in its
+infancy. Subsequent releases will add more like these.</p></li>
+</ul>
+</section>
+<section id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Disabled comments on the web site, we are going to use Twitter
+instead, once the site is migrated to an updated Nikola.</p></li>
+<li><p>The static C code is now formatted with <code class="docutils literal notranslate"><span class="pre">clang-format</span></code> to make it
+easier for contributors to understand.</p></li>
+<li><p>Moved the construct runner to top level binary and use it from there,
+with future changes coming that should make it generally useful
+outside of Nuitka.</p></li>
+<li><p>Enhanced the issue template to tell people how to get the <code class="docutils literal notranslate"><span class="pre">develop</span></code>
+version of Nuitka to try it out.</p></li>
+<li><p>Added documentation for how use the object caching on Windows to the
+User Manual.</p></li>
+<li><p>Removed the included GUI, originally intended for debugging, but XML
+outputs are more powerful anyway, and it had been in disrepair for a
+long time.</p></li>
+<li><p>Removed long deprecated options, e.g. <code class="docutils literal notranslate"><span class="pre">--exe</span></code> which has long been
+the default and is no more accepted.</p></li>
+<li><p>Renamed options to include plugin files to
+<code class="docutils literal notranslate"><span class="pre">--include-plugin-directory</span></code> and <code class="docutils literal notranslate"><span class="pre">--include-plugin-files</span></code> for
+more clarity.</p></li>
+<li><p>Renamed options for recursion control to e.g. <code class="docutils literal notranslate"><span class="pre">--follow-imports</span></code> to
+better express what they actually do.</p></li>
+<li><p>Removed <code class="docutils literal notranslate"><span class="pre">--python-version</span></code> support for switching the version during
+compilation. This has only worked for very specific circumstances and
+has been deprecated for a while.</p></li>
+<li><p>Removed <code class="docutils literal notranslate"><span class="pre">--code-gen-no-statement-lines</span></code> support for not having line
+numbers updated at run time. This has long been hidden and probably
+would never gain all that much, while causing a lot of
+incompatibilty.</p></li>
+</ul>
+</section>
+<section id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Moved command line arguments to dedicated module, adding checks was
+becoming too difficult.</p></li>
+<li><p>Moved rich comparison helpers to a dedicated C file.</p></li>
+<li><p>Dedicated binary and unary node bases for clearer distinction and
+more efficient memory usage of unuary nodes. Unary operations also no
+longer have in-place operation as an issue.</p></li>
+<li><p>Major cleanup of variable accesses, split up into multiple phases and
+all including module variables being performed through C types, with
+no special cases anymore.</p></li>
+<li><p>Partial cleanups of C type classes with code duplications, there is
+much more to resolve though.</p></li>
+<li><p>Windows: The way <code class="docutils literal notranslate"><span class="pre">exec</span></code> was performed is discouraged in the
+<code class="docutils literal notranslate"><span class="pre">subprocess</span></code> documentation, so use a variant that cannot block
+instead.</p></li>
+<li><p>Code proving information about built-in names and values was using
+not very portable constructs, and is now written in a way that PyPy
+would also like.</p></li>
+</ul>
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Avoid using <code class="docutils literal notranslate"><span class="pre">2to3</span></code> for basic operators test, removing test of some
+Python2 only stuff, that is covered elsewhere.</p></li>
+<li><p>Added ability to cache output of CPython when comparing to it. This
+is to allow CI tests to not execute the same code over and over, just
+to get the same value to compare with. This is not enabled yet.</p></li>
+</ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>This release marks a point, from which on performance improvements are
+likely in every coming release. The C target types are a major
+milestone. More C target types are in the work, e.g. <code class="docutils literal notranslate"><span class="pre">void</span></code> is coming
+for expressions that are done, but not used, that is scheduled for the
+next release.</p>
+<p>Although there will be a need to also adapt optimization to take full
+advantage of it, progress should be quick from here. There is a lot of
+ground to cover, with more C types to come, and all of them needing
+specialized helpers. But as soon as e.g. <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> are covered,
+many more programs are going to benefiting from this.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="nuitka-this-week-7.html">
+       Nuitka this week #7
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-this-week-8.html">
+      Nuitka this week #8 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-060.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-060.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-060.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka Release 0.3.22</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0322.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-release-0-3-22">
+<h1>Nuitka Release 0.3.22<a class="headerlink" href="#nuitka-release-0-3-22" title="Permalink to this headline"></a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<p>This release is a continuation of the trend of previous releases, and
+added more re-formulations of Python that lower the burden on code
+generation and optimization.</p>
+<p>It also improves Python3 support substantially. In fact this is the
+first release to not only run itself under Python3, but for Nuitka to
+<em>compile itself</em> with Nuitka under Python3, which previously only worked
+for Python2. For the common language subset, it’s quite fine now.</p>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>List contractions produced extra entries on the call stack, after
+they became functions, these are no more existent. That was made
+possible my making frame stack entries an optional element in the
+node tree, left out for list contractions.</p></li>
+<li><p>Calling a compiled function in an exception handler cleared the
+exception on return, it no longer does that.</p></li>
+<li><p>Reference counter handling with generator <code class="docutils literal notranslate"><span class="pre">throw</span></code> method is now
+correct.</p></li>
+<li><p>A module “builtins” conflicted with the handling of the Python
+<code class="docutils literal notranslate"><span class="pre">builtins</span></code> module. Those now use different identifiers.</p></li>
+</ul>
+</section>
+<section id="new-features">
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">metaclass</span></code> syntax for the <code class="docutils literal notranslate"><span class="pre">class</span></code> statement works, and the
+old <code class="docutils literal notranslate"><span class="pre">__metaclass__</span></code> attribute is properly ignored.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Metaclass syntax in Python3, illegal in Python2</span>
+<span class="k">class</span> <span class="nc">X</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">Y</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Metaclass syntax in Python2, no effect in Python3</span>
+<span class="k">class</span> <span class="nc">X</span><span class="p">:</span>
+    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">Y</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The way to make a use of a metaclass in a portable way, is to
+create a based class that has it and then inherit from it. Sad,
+isn’ it. Surely, the support for <code class="docutils literal notranslate"><span class="pre">__metaclass__</span></code> could still
+live.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For Python2/3 compatible source, we create a base class that has the</span>
+<span class="c1"># metaclass used and doesn&#39;t require making a choice.</span>
+
+<span class="n">CPythonNodeMetaClassBase</span> <span class="o">=</span> <span class="n">NodeCheckMetaClass</span><span class="p">(</span><span class="s2">&quot;CPythonNodeMetaClassBase&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">object</span><span class="p">,),</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">--dump-xml</span></code> option works with Nuitka running under Python3.
+This was not previously supported.</p></li>
+<li><p>Python3 now also has compatible parameter errors and compatible
+exception error messages.</p></li>
+<li><p>Python3 has changed scope rules for list contractions (assignments
+don’t affect outside values) and this is now respected as well.</p></li>
+<li><p>Python3 has gained support for recursive programs and stand alone
+extension modules, these are now both possible as well.</p></li>
+</ul>
+</section>
+<section id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>Avoid frame stack entries for functions that cannot raise exceptions,
+i.e. where they would not be used.</p>
+<p>This avoids overhead for the very simple functions. And example of
+this can be seen here:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simple</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</li>
+<li><p>Optimize <code class="docutils literal notranslate"><span class="pre">len</span></code> built-in for non-constant, but known length values.</p>
+<p>An example can be seen here:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The range isn&#39;t constructed at compile time, but we still know its</span>
+<span class="c1"># length.</span>
+<span class="nb">len</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10000000</span><span class="p">))</span>
+
+<span class="c1"># The string isn&#39;t constructed at compile time, but we still know its</span>
+<span class="c1"># length.</span>
+<span class="nb">len</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># The tuple isn&#39;t constructed, instead it&#39;s known length is used, and</span>
+<span class="c1"># side effects are maintained.</span>
+<span class="nb">len</span><span class="p">((</span><span class="n">a</span><span class="p">(),</span> <span class="n">b</span><span class="p">()))</span>
+</pre></div>
+</div>
+<p>This new optimization applies to all kinds of container creations and
+the <code class="docutils literal notranslate"><span class="pre">range</span></code> built-in initially.</p>
+</li>
+<li><p>Optimize conditions for non-constant, but known truth values.</p>
+<p>At this time, known truth values of non-constants means <code class="docutils literal notranslate"><span class="pre">range</span></code>
+built-in calls with know size and container creations.</p>
+<p>An example can be seen here:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">,):</span>
+    <span class="nb">print</span> <span class="s2">&quot;In Branch&quot;</span>
+</pre></div>
+</div>
+<p>It’s clear, that the tuple will be true, we just need to maintain the
+side effect, which we do.</p>
+</li>
+<li><p>Optimize <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">and</span></code> operators for known truth values.</p>
+<p>See above for what has known truth values currently. This will be
+most useful to predict conditions that need not be evaluated at all
+due to short circuit nature, and to avoid checking against constant
+values. Previously this could not be optimized, but now it can:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The access and call to &quot;something()&quot; cannot possibly happen</span>
+<span class="mi">0</span> <span class="ow">and</span> <span class="n">something</span><span class="p">()</span>
+
+<span class="c1"># Can be replaced with &quot;something()&quot;, as &quot;1&quot; is true. If it had a side</span>
+<span class="c1"># effect, it would be maintained.</span>
+<span class="mi">1</span> <span class="ow">and</span> <span class="n">something</span><span class="p">()</span>
+
+<span class="c1"># The access and call to &quot;something()&quot; cannot possibly happen, the value</span>
+<span class="c1"># is already decided, it&#39;s &quot;1&quot;.</span>
+<span class="mi">1</span> <span class="ow">or</span> <span class="n">something</span><span class="p">()</span>
+
+<span class="c1"># Can be replaced with &quot;something()&quot;, as &quot;0&quot; is false. If it had a side</span>
+<span class="c1"># effect, it would be maintained.</span>
+<span class="mi">0</span> <span class="ow">or</span> <span class="n">something</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Optimize print arguments to become strings.</p>
+<p>The arguments to <code class="docutils literal notranslate"><span class="pre">print</span></code> statements are now converted to strings at
+compile time if possible.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>becomes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;1&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Combine print arguments to single ones.</p>
+<p>When multiple strings are printed, these are now combined.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;1+1=&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>becomes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;1+1= 2&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Enhanced Python3 support, enabling support for most basic tests.</p></li>
+<li><p>Check files with PyLint in deterministic (alphabetical) order.</p></li>
+</ul>
+</section>
+<section id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Frame stack entries are now part of the node tree instead of part of
+the template for every function, generator, class or module.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> has been re-formulated to use an
+indicator variable visible in the node tree, that tells if a handler
+has been executed or not.</p></li>
+<li><p>Side effects are now a dedicated node, used in several optimization
+to maintain the effect of an expression with known value.</p></li>
+</ul>
+</section>
+<section id="new-tests">
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Expanded and adapted basic tests to work for Python3 as well.</p></li>
+<li><p>Added reference count tests for generator functions <code class="docutils literal notranslate"><span class="pre">throw</span></code>,
+<code class="docutils literal notranslate"><span class="pre">send</span></code>, and <code class="docutils literal notranslate"><span class="pre">close</span></code> methods.</p></li>
+<li><p>Cover calling a function with <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> in an exception
+handler twice. No test was previously doing that.</p></li>
+</ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<p>This release offers enhanced compatibility with Python3, as well as the
+solution to many structural problems. Calculating lengths of large
+non-constant values at compile time, is technically a break through, as
+is avoiding lengthy calculations. The frame guards as nodes is a huge
+improvement, making that costly operational possible to be optimized
+away.</p>
+<p>There still is more work ahead, before value propagation will be safe
+enough to enable, but we are seeing the glimpse of it already. Not for
+long, and looking at numbers will make sense.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="nuitka-release-0321.html">
+       Nuitka Release 0.3.21
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nikola-for-nuitka.html">
+      Nikola for nuitka.net 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0322.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0322.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0322.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

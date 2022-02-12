@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
+  <id>https://nuitka.net</id>
+  <title>Nuitka Blog - Posts tagged portrait</title>
+  <updated>2022-02-12T18:01:21.279143+00:00</updated>
+  <link href="https://nuitka.net"/>
+  <link href="https://nuitka.net/blog/tag/portrait/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <entry>
+    <id>https://nuitka.net/posts/batakrishna-sahu-intro.html</id>
+    <title>Batakrishna Sahu</title>
+    <updated>2019-05-14T08:31:00+00:00</updated>
+    <author>
+      <name>Batakrishna Sahu</name>
+    </author>
+    <content type="html">&lt;section id="batakrishna-sahu"&gt;
+
+&lt;p&gt;Hello everyone!&lt;/p&gt;
+&lt;p&gt;My name is Batakrishna Sahu and I am from India. I’m very grateful to be
+one of the 2 selected students who will work with Nuitka during Google
+Summer of Code 2019. My project is on &lt;a class="reference external" href="https://summerofcode.withgoogle.com/projects/#6183147857772544"&gt;“Optimizing Python 2 and Python 3
+built-ins for Nuitka”&lt;/a&gt;
+mentored by Vaibhav Tulsyan, Kamran Ghanaat, Kay Hayen.&lt;/p&gt;
+&lt;p&gt;So far, ​there are a total of 69 built-ins in Python 3 and ​76 built-in
+in Python 2 out of which 27 built-ins are yet to be optimized in
+Nuitka​. My aim is to optimize those missing built-ins in Nuitka. This
+will make Nuitka a lot faster while working with built-ins.&lt;/p&gt;
+&lt;p&gt;I’m really excited to gain new experience while working on this project
+this summer.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Yours,&lt;/div&gt;
+&lt;div class="line"&gt;Batakrishna&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://nuitka.net/posts/batakrishna-sahu-intro.html" rel="alternate"/>
+    <summary>Hello everyone!</summary>
+    <category term="gsoc2019" label="gsoc2019"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <category term="portrait" label="portrait"/>
+    <published>2019-05-14T08:31:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/tommy-gsoc-intro.html</id>
+    <title>Tommy’s Google Summer of Code Intro</title>
+    <updated>2019-05-15T10:00:00+00:00</updated>
+    <author>
+      <name>Taofeng(Tommy) Li</name>
+    </author>
+    <content type="html">&lt;section id="tommy-s-google-summer-of-code-intro"&gt;
+
+&lt;p&gt;Hi all! :)&lt;/p&gt;
+&lt;p&gt;My name is Taofeng Li and I go by the nickname of Tommy, github handle
+&lt;a class="reference external" href="https://github.com/tommyli3318"&gt;tommyli3318&lt;/a&gt;. I’m a Computer Science
+major at the University of California, Irvine in the United States. I am
+very excited to announce that I’ll be contributing to Nuitka this summer
+under the Google Summer of Code program!&lt;/p&gt;
+&lt;p&gt;My project is “Nuitka support for PyPI top 50”, it ensures Nuitka’s
+compatibility with the 50 most popular PyPI packages by setting up
+automated testing for each package. These automated tests will serve to
+be very important tools for the development of Nuitka, as they will be
+used to assure Nuitka’s compatibility with the most used Python packages
+every time Nuitka receives a new update.&lt;/p&gt;
+&lt;p&gt;My mentors will be Vaibhav Tulsyan, Kamran Ghanaat, and Kay Hayen. My
+project abstract can be seen &lt;a class="reference external" href="https://summerofcode.withgoogle.com/projects/#4874692681269248"&gt;here&lt;/a&gt; and
+the full details of my project can be found &lt;a class="reference external" href="https://docs.google.com/document/d/1tdbXyMy5xjVEeWociI_t2f6tlmge6czT0xmfCLyDXYg/edit?usp=sharing"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am greatly looking forward to the many things that I’ll learn this
+summer!&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://nuitka.net/posts/tommy-gsoc-intro.html" rel="alternate"/>
+    <summary>Hi all! :)</summary>
+    <category term="gsoc2019" label="gsoc2019"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <category term="tests" label="tests"/>
+    <category term="standalone" label="standalone"/>
+    <category term="portrait" label="portrait"/>
+    <published>2019-05-15T10:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/jorj-x-mckie.html</id>
+    <title>Jorj X. McKie</title>
+    <updated>2019-05-18T11:00:00+00:00</updated>
+    <author>
+      <name>Jorj X. McKie</name>
+    </author>
+    <content type="html">&lt;p&gt;Self-Introduction Jorj McKie&lt;/p&gt;
+&lt;section id="jorj-x-mckie"&gt;
+
+&lt;p&gt;Hello everyone,&lt;/p&gt;
+&lt;p&gt;I am Jorj X. McKie (this is &lt;strong&gt;not&lt;/strong&gt; my real name!) and I am an
+enthusiastic supporter of Nuitka. For the time being, my focus area
+within this package is standalone compilation and maintenance of the
+plugin feature.&lt;/p&gt;
+&lt;p&gt;Apart from extending Nuitka’s support to virtually all Python packages
+living out there, my driving motivation in this respect is keeping up
+and improving the usability of Nuitka.&lt;/p&gt;
+&lt;p&gt;You may want to look into the &lt;a class="reference external" href="https://github.com/Nuitka/NUITKA-Utilities"&gt;Nuitka Utilities&lt;/a&gt; repository, which
+contains many things I am working on.&lt;/p&gt;
+&lt;dl class="py class"&gt;
+&lt;dt class="sig sig-object py"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;alert&lt;/span&gt; &lt;span class="pre"&gt;alert-primary&lt;/span&gt; &lt;span class="pre"&gt;float-md-right&lt;/span&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;img alt="../../_images/jorjmckie-harald-lieder.jpg" src="../../_images/jorjmckie-harald-lieder.jpg" /&gt;
+&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;section id="short-biography"&gt;
+&lt;h2&gt;Short Biography&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Born 1951 as Harald Lieder near the city of Leipzig&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Studied Mathematics and Physics at the Frankfurt/M
+Johann-Wolfgang-Goethe University from 10/1970 through 06/1976
+(Diploma in Mathematics)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;dl class="simple"&gt;
+&lt;dt&gt;Professional career overview&lt;/dt&gt;&lt;dd&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;insurance company (4 years): application and systems
+programming (IBM mainframe, Cobol, Assembler), data center lead&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;book wholesaler (5 years): systems programming and data center
+lead (IBM mainframe)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;consulting company (until 2009): leading of or participating in
+numerous large and &lt;strong&gt;very&lt;/strong&gt; large projects mostly around
+banking applications, banking mergers, data center optimization
+and quality assurance.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;since 2009: retirement, living on Isla Margarita, Venezuela.
+Enjoying my beautiful house, pursuing my hobbies: mathematics,
+science theory, biological evolution theory, science fiction
+(my pseudonym comes from novels by one of my favorite authors
+Frank Herbert) and of course programming (maintainer of
+&lt;a class="reference external" href="https://github.com/pymupdf/PyMuPDF"&gt;PyMuPDF&lt;/a&gt;, and Nuitka).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="images-from-isla-margarita"&gt;
+&lt;h2&gt;Images from Isla Margarita&lt;/h2&gt;
+&lt;section id="house-frontview-with-guardians"&gt;
+&lt;h3&gt;House Frontview with Guardians&lt;/h3&gt;
+&lt;img alt="../../_images/JMK-house-frontview-with-guardians.jpg" src="../../_images/JMK-house-frontview-with-guardians.jpg" /&gt;
+&lt;/section&gt;
+&lt;section id="in-favorite-pizzeria-with-my-wife"&gt;
+&lt;h3&gt;In favorite Pizzeria with my Wife&lt;/h3&gt;
+&lt;img alt="../../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" src="../../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" /&gt;
+&lt;/section&gt;
+&lt;section id="seaview-from-my-terrace"&gt;
+&lt;h3&gt;Seaview from my Terrace&lt;/h3&gt;
+&lt;img alt="../../_images/JMK-seaview-from-my-terrace.JPG" src="../../_images/JMK-seaview-from-my-terrace.JPG" /&gt;
+&lt;/section&gt;
+&lt;section id="sunrise-view-from-house"&gt;
+&lt;h3&gt;Sunrise view from House&lt;/h3&gt;
+&lt;img alt="../../_images/JMK-sunrise-view-from-house.jpg" src="../../_images/JMK-sunrise-view-from-house.jpg" /&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://nuitka.net/posts/jorj-x-mckie.html" rel="alternate"/>
+    <summary>Self-Introduction Jorj McKie</summary>
+    <category term="Nuitka" label="Nuitka"/>
+    <category term="gsoc2019" label="gsoc2019"/>
+    <category term="portrait" label="portrait"/>
+    <published>2019-05-18T11:00:00+00:00</published>
+  </entry>
+</feed>

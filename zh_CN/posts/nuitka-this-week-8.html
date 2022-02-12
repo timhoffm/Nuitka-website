@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka this week #8</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-8.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">用户手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">商业用户</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">发行信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">路线图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">开发者手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">工厂说明书</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">影音</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">演讲稿</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">流媒体</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">建设中</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-this-week-8">
+<h1><a class="toc-backref" href="#id3">Nuitka this week #8</a><a class="headerlink" href="#nuitka-this-week-8" title="永久链接至标题"></a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#nuitka-this-week-8" id="id3">Nuitka this week #8</a></p>
+<ul>
+<li><p><a class="reference internal" href="#public-private-ci-workflow" id="id4">Public / Private CI / Workflow</a></p>
+<ul>
+<li><p><a class="reference internal" href="#workflow" id="id5">Workflow</a></p></li>
+<li><p><a class="reference internal" href="#hunting-bugs-with-bisect" id="id6">Hunting bugs with bisect</a></p></li>
+<li><p><a class="reference internal" href="#experimental-changes" id="id7">Experimental Changes</a></p></li>
+<li><p><a class="reference internal" href="#hardware" id="id8">Hardware</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#milestone-release" id="id9">Milestone Release</a></p></li>
+<li><p><a class="reference internal" href="#ui-rework" id="id10">UI rework</a></p></li>
+<li><p><a class="reference internal" href="#benchmarks" id="id11">Benchmarks</a></p></li>
+<li><p><a class="reference internal" href="#inplace-operations" id="id12">Inplace Operations</a></p></li>
+<li><p><a class="reference internal" href="#new-use-cases" id="id13">New use cases</a></p></li>
+<li><p><a class="reference internal" href="#tcl-tk-standalone" id="id14">Tcl/Tk Standalone</a></p></li>
+<li><p><a class="reference internal" href="#caching-examined" id="id15">Caching Examined</a></p></li>
+<li><p><a class="reference internal" href="#twitter" id="id16">Twitter</a></p></li>
+<li><p><a class="reference internal" href="#help-wanted" id="id17">Help Wanted</a></p></li>
+<li><p><a class="reference internal" href="#plans" id="id18">Plans</a></p></li>
+<li><p><a class="reference internal" href="#donations" id="id19">Donations</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="public-private-ci-workflow">
+<h2><a class="toc-backref" href="#id4">Public / Private CI / Workflow</a><a class="headerlink" href="#public-private-ci-workflow" title="永久链接至标题"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>I wrote this as part of a discussion recently, and I think it makes
+sense to share it here. This is a lot text though, feel free to skip
+forward.</p>
+</div>
+<p>Indeed I have a private repo, where I push and only private CI picks up.
+Based on Buildbot, I run many more compilations, basically around the
+clock on all of my computers, to find regressions from new optimization
+or codegen changes, and well UI changes too.</p>
+<p>Public CI offerings like Travis are not aimed at allowing this many
+compilations. It will be a while before public cloud infrastructure will
+be donated to Nuitka, although I see it happening some time in the
+future. This leaves developers with the burden to run tests on their own
+hardware, and never enough. Casual contributors will never be able to do
+it themselves.</p>
+<p>My scope is running the CPython test suites on Windows and Linux. These
+are the adapted 26, 27, 32, 33, 34, 35, 36, 37 suites, and also to get
+even more errors covered, they are ran with mismatching Python versions,
+so a lot of exceptions are raised. Often running the 36 tests with 37
+and vice versa will extend the coverage, because of the exceptions being
+raise.</p>
+<p>On Windows I compile with and without debug mode, x86 and x64, and it’s
+kind of getting too much. For Linux I have 2 laptops in use, and an ARM
+CuBox bought from your donations, there it’s working better, esp. due to
+<code class="docutils literal notranslate"><span class="pre">ccache</span></code> being used everywhere, although recent investigations show
+room for improvement there as well.</p>
+<p>For memory usage I still compile mercurial and observe the memory it
+used in addition to comparing the mercurial tests to expected outputs
+its test suite gives. It’s a sad day when Mercurial tests find changes
+in behavior, and luckily that has been rare. Running the Mercurial test
+suite gives some confidence in the thing not corrupting data it works
+with without knowing.</p>
+<p>Caching the CPython outputs of tests to compare against is something I
+am going to make operational these days, trying to make things ever
+faster. There is no point to re-run tests with Python, just to get at
+its output, which will typically not change at all.</p>
+<p>But for the time being, <code class="docutils literal notranslate"><span class="pre">ccache.exe</span></code> and <code class="docutils literal notranslate"><span class="pre">clcache.exe</span></code> seem to have
+done wonders for Windows too, but I will want to investigate some more
+to avoid unnecessary cache misses.</p>
+<section id="workflow">
+<h3><a class="toc-backref" href="#id5">Workflow</a><a class="headerlink" href="#workflow" title="永久链接至标题"></a></h3>
+<p>As for my workflow with Nuitka, I often tend to let some commits settle
+in my private repo only until they become trusted. Other times I will
+make bigger changes and put them out to factory immediately, because it
+will be hard to split up the changes later, so putting them out makes it
+easier.</p>
+<p>I am more conservative with factory right after telling people to try
+something there. But also I break it on purpose, just trying out
+something. I really consider it a private branch for interacting with me
+or public CI. I do not recommend to use it, and it’s like a permanent
+pull request of mine that is not ever going to be finished.</p>
+<p>Then on occasions I am making a sorting of all commits on factory and
+split it into some things that become hotfixes, some things that become
+current pre-release, and other things that will remain in that proving
+ground. That is why I typically make hotfix and pre-release at the same
+times. The git flow suggests doing that and it’s easy, so why not. As a
+bonus, develop is then practically stable at nearly all times too, with
+hardly any regressions.</p>
+<p>I do however normally not take things as hotfixes that are on develop
+already, I hate the duplication of commits. Hotfixes must be small and
+risk free, and easy to put out, when there is any risk, it definitely
+will be on develop. Nuitka stable typically covers nearly all grounds
+already. No panic needed to add missing stuff and break others.</p>
+</section>
+<section id="hunting-bugs-with-bisect">
+<h3><a class="toc-backref" href="#id6">Hunting bugs with bisect</a><a class="headerlink" href="#hunting-bugs-with-bisect" title="永久链接至标题"></a></h3>
+<p>For me the git bisect is very important. My private commit history is
+basically a total mess and worthless, but on factory I am making very
+nice organized commits that I will frequently amend, even for the random
+PyLint cleanup. This allows me when e.g. one test suddenly says
+“segfault” on Windows to easily find the change that triggers it, look
+at C code difference, and spot the bug introduced, then amend the commit
+and be done with it.</p>
+<p>It’s amazing how much time this can save. My goal is to always have a
+workable state which is supposed to pass all tests. Obviously I cannot
+prove it for every commit, but when I know it to not be the case, I tend
+to make rebases. At times I have been tempted and followed up on
+backward amending develop and even stable.</p>
+<p>I am doing that to be sure to have that bisect ability, but fortunately
+it’s rare that kind of bug occurs, and I try not to do it.</p>
+</section>
+<section id="experimental-changes">
+<h3><a class="toc-backref" href="#id7">Experimental Changes</a><a class="headerlink" href="#experimental-changes" title="永久链接至标题"></a></h3>
+<p>As with recent changes, I sometimes make changes with the
+<code class="docutils literal notranslate"><span class="pre">isExperimental()</span></code> marker, activating breaking changes only gradually.
+The C <code class="docutils literal notranslate"><span class="pre">bool</span></code> type code generation has been there for months in a
+barely useful form, until it became more polished, and always guarded
+with a switch, until one day for 0.6 finally I changed it, and made the
+necessary fixes retroactively before that switch, to make it work while
+that was still in factory.</p>
+<p>Then I will remove the experimental code. I feel it’s very important and
+even ideal to be able to always compare outputs to a fully working
+solution. I am willing to postpone some cleanups until later date as a
+price, but when then something in my mind tells me again “This cannot
+possibly have ever worked”… a command line flag away, I have the
+answer to compare, plus, that includes extra changes happened in the
+meantime, they don’t add noise to diff outputs of generated C code for
+example.</p>
+<p>Then looking at that diff, I can tell where the unwanted effect is, and
+fix all the things, and that way find bugs much faster.</p>
+<p>Even better, if I decide to make a cleanup action as part of making a
+change more viable to execute, then I get to execute it on stable
+grounds, covered by the full test suite. I can complete that cleanup,
+e.g. using variable identifier objects instead of mere strings was
+needed to make “heap generators” more workable. But I was able to put
+that one to active before “heap generators” was ever fully workable, and
+complete it, and actually reap some of its benefits already.</p>
+</section>
+<section id="hardware">
+<h3><a class="toc-backref" href="#id8">Hardware</a><a class="headerlink" href="#hardware" title="永久链接至标题"></a></h3>
+<p>Obviously this takes a lot of hardware and CPU to be able to compile
+this much Python code on a regular basis. And I really wish I could add
+one of the new AMD Threadripper 2 to the mix. Anybody donating one to
+me? Yes I know, I am only dreaming. But it would really help the cause.</p>
+</section>
+</section>
+<section id="milestone-release">
+<h2><a class="toc-backref" href="#id9">Milestone Release</a><a class="headerlink" href="#milestone-release" title="永久链接至标题"></a></h2>
+<p>So the 0.6 is out, and already a hotfix that addresses mostly use cases
+of people that didn’t work. More people seemed to have tried out 0.6.0
+and as a result 0.6.0.1 is going to cover a few corner cases. So far I
+have not encountered a single regression of 0.6.0, but instead it
+contained ones for 0.5.33 which did have one that was not easy to fix.</p>
+<p>So that went really smooth.</p>
+</section>
+<section id="ui-rework">
+<h2><a class="toc-backref" href="#id10">UI rework</a><a class="headerlink" href="#ui-rework" title="永久链接至标题"></a></h2>
+<p>The UI needs more work still. Specifically that packages do not
+automatically include all stuff below them and have to be specified by
+file path instead of by name, is really annoying to me.</p>
+<p>But I had delayed 0.6 for some UI work, and the quirks are to remain
+some. I will work on these things eventually.</p>
+</section>
+<section id="benchmarks">
+<h2><a class="toc-backref" href="#id11">Benchmarks</a><a class="headerlink" href="#benchmarks" title="永久链接至标题"></a></h2>
+<p>So I updated the website to state that PyStone is now 312% faster, from
+a number that was very old. I since then ran it with an updated version
+for Python3, and it’s much less there. That is pretty sad.</p>
+<p>I will be looking into that for 0.6.1 release, or I will have to update
+the wording to provide 2 numbers there, because it seems for Python3
+performance with Nuitka it might be misleading.</p>
+<p>Something with unicode strings and in-place operations is driving me
+crazy. Nuitka is apparently slower for that, and I can’t point where
+that is happening exactly. It seems internally unicode objects are maybe
+put into a different state from some operations, which then making
+in-place extending in realloc fail more often, but I cannot know yet.</p>
+</section>
+<section id="inplace-operations">
+<h2><a class="toc-backref" href="#id12">Inplace Operations</a><a class="headerlink" href="#inplace-operations" title="永久链接至标题"></a></h2>
+<p>So more work has been put into those, adding more specialization, and
+esp. also applying them for module variables as well. CPython can do
+that, and actually is giving itself a hard time about it, and Nuitka
+should be doing this much clever with its more static knowledge.</p>
+<p>But I cannot tell you how much scratching my head was wasted debugging
+that. I was totally stupid about how I approached that, looking from the
+final solution, it was always easy. Just not for me apparently.</p>
+</section>
+<section id="new-use-cases">
+<h2><a class="toc-backref" href="#id13">New use cases</a><a class="headerlink" href="#new-use-cases" title="永久链接至标题"></a></h2>
+<p>Talked about those above. So the top level <code class="docutils literal notranslate"><span class="pre">logging</span></code> module of your
+own was working fine in accelerated mode, but for standalone it failed
+and used the one from standard library instead. That kind of shadowing
+happened because Nuitka was going from module objects to their names and
+back to objects, which are bad in case of duplicates. That is fixed for
+develop, and one of those risk cases, where it cannot be a hotfix
+because it touched too much.</p>
+<p>Then pure Python3 packages need not have <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> and so far that
+was best working for sub-packages, but after 0.6.0.1 hotfix, now it will
+also work for the main module you compile to be that empty.</p>
+</section>
+<section id="tcl-tk-standalone">
+<h2><a class="toc-backref" href="#id14">Tcl/Tk Standalone</a><a class="headerlink" href="#tcl-tk-standalone" title="永久链接至标题"></a></h2>
+<p>So instructions have been provided how to properly make that work for
+Python standalone on Windows. I have yet to live up to my promise and
+make Nuitka automatically include the necessary files. I hope to do it
+for 0.6.1 though.</p>
+</section>
+<section id="caching-examined">
+<h2><a class="toc-backref" href="#id15">Caching Examined</a><a class="headerlink" href="#caching-examined" title="永久链接至标题"></a></h2>
+<p>So I am looking at ccache on Linux right now, and found e.g. that it was
+reporting that <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">--version</span></code> was called a lot at startup of Scons
+and then <code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">--version</span></code> once. The later is particularly stupid,
+because we are not going to use g++ normally, except if gcc is really
+old and does not support C11. So in case a good one was found, lets
+disable that version query and not do it.</p>
+<p>And for the gcc version output, monkey patching scons to a version of
+getting that output that caches the result, removes those unnecessary
+forks.</p>
+<p>So <code class="docutils literal notranslate"><span class="pre">ccache</span></code> is being called less frequently, and actually these
+<code class="docutils literal notranslate"><span class="pre">--version</span></code> outputs appears to actually take measurable time. It’s not
+dramatic, but <code class="docutils literal notranslate"><span class="pre">ccache</span></code> was apparently getting locks, and that’s worth
+avoiding by itself.</p>
+<p>That said, the goal is for <code class="docutils literal notranslate"><span class="pre">ccache</span></code> and <code class="docutils literal notranslate"><span class="pre">clcache</span></code> to make them both
+report their effectiveness of cache usage after the end of a test suite
+run. That way I am hoping to notice and be able to know, if caching is
+used to its full effect.</p>
+</section>
+<section id="twitter">
+<h2><a class="toc-backref" href="#id16">Twitter</a><a class="headerlink" href="#twitter" title="永久链接至标题"></a></h2>
+<p>I continue to be very active there. I put out a poll about the comment
+system, and disabling Disqus comments as a result, I will focus on
+Twitter for web site comments too now.</p>
+<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw">Follow &#64;kayhayen</a></p>
+<p>And lets not forget, having followers make me happy. So do re-tweets.</p>
+<p>Adding Twitter more prominently to the web site is something that is
+also going to happen.</p>
+</section>
+<section id="help-wanted">
+<h2><a class="toc-backref" href="#id17">Help Wanted</a><a class="headerlink" href="#help-wanted" title="永久链接至标题"></a></h2>
+<p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a>
+and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
+<p>Nuitka definitely needs more people to work on it.</p>
+</section>
+<section id="plans">
+<h2><a class="toc-backref" href="#id18">Plans</a><a class="headerlink" href="#plans" title="永久链接至标题"></a></h2>
+<p>Working on the 0.6.1 release, attacking more in-place add operations as
+a first goal, and now turning to binary operations, I am trying to shape
+how using different helper functions to different object types looks
+like. And to gain performance without C types. But ultimately the same
+issue will arise there, what to do with mixed input types.</p>
+<p>My desire is for in-place operations to fully catch up with CPython, as
+these can easily loose a lot of performance. Closure variables and their
+cells are another target to pick on, and I feel they ought to be next
+after module ones are now working, because also their solution ought to
+be very similar. Then showing that depending on target storage, local,
+closure, or module, is then faster in all cases would be a goal for the
+0.6.1 release.</p>
+<p>This feels not too far away, but we will see. I am considering next
+weekend for release.</p>
+</section>
+<section id="donations">
+<h2><a class="toc-backref" href="#id19">Donations</a><a class="headerlink" href="#donations" title="永久链接至标题"></a></h2>
+<p>If you want to help, but cannot spend the time, please consider to
+donate to Nuitka, and go here:</p>
+<p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="nuitka-release-060.html">
+       Nuitka Release 0.6.0
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-this-week-9.html">
+      Nuitka this week #9 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-8.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-8.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-this-week-8.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Streaming</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/pages/Streaming.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Credits" href="../doc/Credits.html" />
+    <link rel="prev" title="Presentations" href="Presentations.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">用户手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">商业用户</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">发行信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">路线图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">开发者手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">工厂说明书</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">影音</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Presentations.html">演讲稿</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">流媒体</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why">Why</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#when">When</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what">What</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#anouncements">Anouncements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">建设中</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="streaming">
+<h1>Streaming<a class="headerlink" href="#streaming" title="永久链接至标题"></a></h1>
+<section id="why">
+<h2>Why<a class="headerlink" href="#why" title="永久链接至标题"></a></h2>
+<p>The Nuitka development will hopefully become richer by me developing
+online one day per week. Maybe more or less often, but I believe on a
+regular basis will be best.</p>
+</section>
+<section id="how">
+<h2>How<a class="headerlink" href="#how" title="永久链接至标题"></a></h2>
+<p>On Discord, we will have a Streaming room. There is a react bot, that
+you can use to be automatically notified by Discord, when a Stream is
+started, this one is in: <a class="reference external" href="https://discord.gg/nZ9hr9tUck">https://discord.gg/nZ9hr9tUck</a> the welcome
+channel of the Discord.</p>
+<p>The main chat on Gitter will be linked a chat room on Discord, so for
+people not on Discord, they still have that available.</p>
+<p>The stream will be recorded in Youtube and later put online, maybe only
+a few excerpts, not sure how good it’s going to be. There will be
+quality issues in the beginning. And I don’t want to spend a lot of time
+editing material that might not get watched at all.</p>
+<p>Discord will be used for a call-in part. I will unmute people and
+discuss one on one with viewers, live on air, answering questions.</p>
+<p>And then, I have setup OBS with a camera view and my desktop shared, and
+I expect to be streaming to Youtube on my existing channel that I
+cleaned up a bit: <a class="reference external" href="https://www.youtube.com/c/KayHayen">https://www.youtube.com/c/KayHayen</a></p>
+</section>
+<section id="when">
+<h2>When<a class="headerlink" href="#when" title="永久链接至标题"></a></h2>
+<p>I believe the weekend should be used. Not sure yet when exactly I can
+start, I am aiming for mid January right now, with a test stream before
+that.</p>
+<p>I plan to stream with one lunch/sports break, on my CEST morning and an
+afternoon or evening time, and maybe if I get carried away, more often.</p>
+</section>
+<section id="what">
+<h2>What<a class="headerlink" href="#what" title="永久链接至标题"></a></h2>
+<p>My idea is to take on challenging topics, e.g. making code
+specialization of <code class="docutils literal notranslate"><span class="pre">INT</span></code> <code class="docutils literal notranslate"><span class="pre">LONG</span></code> and <code class="docutils literal notranslate"><span class="pre">CLONG</span></code> work for code like
+<code class="docutils literal notranslate"><span class="pre">some_int</span> <span class="pre">+=</span> <span class="pre">2</span></code>, where the <code class="docutils literal notranslate"><span class="pre">2</span></code> is currently used as a prepared
+<code class="docutils literal notranslate"><span class="pre">INT</span></code> or <code class="docutils literal notranslate"><span class="pre">LONG</span></code> object (depending on Python version).</p>
+<p>In a test stream, it worked really well to commonly improve the web
+site. Documentation and generally clarification would be good, but I
+think there also needs to be some plan, like making a certain piece of
+code quicker. I will be asking for submissions on Twitter and/or in a
+blog post.</p>
+</section>
+<section id="anouncements">
+<h2>Anouncements<a class="headerlink" href="#anouncements" title="永久链接至标题"></a></h2>
+<p>I think I could e.g. go with streaming on Sunday and announcing the
+topic on Friday in a blog post, and/or a Twitter post. Then when going
+live, a Discord ping is done. Gitter chat will also get a text message.
+Youtube has the bell, that I might ask people to use, but I don’t like
+asking these things.</p>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/pages/Streaming.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/pages/Streaming.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/pages/Streaming.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

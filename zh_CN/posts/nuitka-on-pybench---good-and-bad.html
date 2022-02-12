@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Looking where Nuitka stands</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">用户手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">商业用户</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">发行信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">路线图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">开发者手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">工厂说明书</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">影音</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">演讲稿</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">流媒体</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">建设中</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="looking-where-nuitka-stands">
+<h1>Looking where Nuitka stands<a class="headerlink" href="#looking-where-nuitka-stands" title="永久链接至标题"></a></h1>
+<p>In case you wonder, [what Nuitka is](/pages/overview.html), look here.
+Over the 0.3.x release cycle, I have mostly looked at its performance
+with “pystone”. I merely wanted to have a target to look at and <a class="reference external" href="/pages/performance.html">enjoy
+the progress</a> we have made there.</p>
+<p>In the context of the Windows port then, Khalid Abu Bakr used the
+pybench on Windows and that got me interested. It’s a nice collection of
+micro benchmarks, which is quite obviously aimed for looking CPython
+implementations only. In that it’s quite good to check where Nuitka is
+good at, and where it can still take improvements for the milestone 2
+stuff.</p>
+<section id="enhancements-to-pybench">
+<h2>Enhancements to PyBench<a class="headerlink" href="#enhancements-to-pybench" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>The pybench refused to accept that Nuitka could use so little time on
+some tests, I needed to hack it to allow it.</p></li>
+<li><p>Then it had “ZeroDivisionError” exceptions, because Nuitka can run
+fully predictable code not at all, thus with a time of 0ms, which
+gives interesting factors.</p></li>
+<li><p>Also these are many results, we are going to care for regressions
+only, so there is an option now to output only tests with negative
+values.</p></li>
+</ul>
+</section>
+<section id="the-interesting-parts">
+<h2>The Interesting Parts<a class="headerlink" href="#the-interesting-parts" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Nuitka currently has some fields where optimizations are already so
+effective as to render the whole benchmark pointless. Longterm, most
+of PyBench will not be looked at anymore, where the factor becomes
+“infinity”, there is little point in looking at it. We will likely
+just use it as a test that optimizations didn’t suddenly regress.
+Publishing the numbers will not be as interesting.</p></li>
+<li><p>Then there are slow downs. These I take seriously, because of course
+I expect that Nuitka shall only be faster than CPython. Sometimes the
+implementation of Nuitka for some rarely used features is sub par
+though. I color coded these in red in the table below.</p></li>
+<li><p>ComplexPythonFunctionCalls: These are twice as slow, which is an
+tribute to the fact, that the code in this domain is only as good as
+it needs to be. Of course function calls are very important, and this
+needs to be addressed.</p></li>
+<li><p>TryRaiseExcept: This is much slower because of the cost of the raise
+statement, which is extremely high currently. For every raise, a
+frame object with a specific code object is created, so the traceback
+will point to the correct location. This is very inefficient, and
+wasteful. We need to be able to create code objects that can be used
+for all lines needed, and then we can re-use it and only have one
+frame object per function, which then can be re-used itself. There is
+already some work for that in [current git](/pages/download.html)
+(0.3.9 pre 2), but it’s not yet complete at all.</p></li>
+<li><p>WithRaiseExcept: Same problem as TryRaiseExcept, the exception
+raising is too expensive.</p></li>
+<li><p>Note also that -90% is in fact much worse that +90%, the “diff”
+numbers from pybench make improvements look much better than
+regressions do. You can also checkout the comparison on the new
+[benchmark pages](<a class="reference external" href="https://speedcenter.nuitka.net">https://speedcenter.nuitka.net</a>) that I am just
+creating, they are based on codespeed, which I will blog upon
+separately.</p></li>
+</ul>
+<p>Look at this table of results as produced by pybench:</p>
+</section>
+<section id="benchmark-results">
+<h2>Benchmark Results<a class="headerlink" href="#benchmark-results" title="永久链接至标题"></a></h2>
+<table summary="Comparing CPython and Nuitka with PyBench">
+<tbody>
+<tr>
+<td>**<span style="color: #000000;">Test Name</span>**</td>
+<td>**<span style="color: #000000;">min CPython</span>**</td>
+<td>**<span style="color: #000000;">min Nuitka</span>**</td>
+<td>**<span style="color: #000000;">di</span><span style="color: #000000;">ff</span>**</td>
+</tr>
+<tr>
+<td>BuiltinFunctionCalls</td>
+<td>76ms</td>
+<td>54ms</td>
+<td>+41.0%</td>
+</tr>
+<tr>
+<td>BuiltinMethodLookup</td>
+<td>57ms</td>
+<td>47ms</td>
+<td>+22.1%</td>
+</tr>
+<tr>
+<td>CompareFloats</td>
+<td>79ms</td>
+<td>0ms</td>
+<td><span style="color: #339966;">+inf%</span></td>
+</tr>
+<tr>
+<td>CompareFloatsIntegers</td>
+<td>75ms</td>
+<td>0ms</td>
+<td><span style="color: #339966;">+inf%</span></td>
+</tr>
+<tr>
+<td>CompareIntegers</td>
+<td>76ms</td>
+<td>0ms</td>
+<td><span style="color: #339966;">+inf%</span></td>
+</tr>
+<tr>
+<td>CompareInternedStrings</td>
+<td>68ms</td>
+<td>32ms</td>
+<td>+113.0%</td>
+</tr>
+<tr>
+<td>CompareLongs</td>
+<td>60ms</td>
+<td>0ms</td>
+<td><span style="color: #339966;">+inf%</span></td>
+</tr>
+<tr>
+<td>CompareStrings</td>
+<td>86ms</td>
+<td>62ms</td>
+<td>+38.2%</td>
+</tr>
+<tr>
+<td>CompareUnicode</td>
+<td>61ms</td>
+<td>50ms</td>
+<td>+21.9%</td>
+</tr>
+<tr>
+<td>ComplexPythonFunctionCalls</td>
+<td>86ms</td>
+<td>179ms</td>
+<td><span style="color: #ff0000;">-52.3%</span></td>
+</tr>
+<tr>
+<td>ConcatStrings</td>
+<td>98ms</td>
+<td>99ms</td>
+<td>-0.6%</td>
+</tr>
+<tr>
+<td>ConcatUnicode</td>
+<td>127ms</td>
+<td>124ms</td>
+<td>+2.3%</td>
+</tr>
+<tr>
+<td>CreateInstances</td>
+<td>76ms</td>
+<td>52ms</td>
+<td>+46.8%</td>
+</tr>
+<tr>
+<td>CreateNewInstances</td>
+<td>58ms</td>
+<td>47ms</td>
+<td>+22.1%</td>
+</tr>
+<tr>
+<td>CreateStringsWithConcat</td>
+<td>85ms</td>
+<td>90ms</td>
+<td>-6.5%</td>
+</tr>
+<tr>
+<td>CreateUnicodeWithConcat</td>
+<td>74ms</td>
+<td>68ms</td>
+<td>+9.5%</td>
+</tr>
+<tr>
+<td>DictCreation</td>
+<td>58ms</td>
+<td>36ms</td>
+<td>+60.9%</td>
+</tr>
+<tr>
+<td>DictWithFloatKeys</td>
+<td>67ms</td>
+<td>44ms</td>
+<td>+51.7%</td>
+</tr>
+<tr>
+<td>DictWithIntegerKeys</td>
+<td>64ms</td>
+<td>30ms</td>
+<td>+113.8%</td>
+</tr>
+<tr>
+<td>DictWithStringKeys</td>
+<td>60ms</td>
+<td>26ms</td>
+<td>+130.6%</td>
+</tr>
+<tr>
+<td>ForLoops</td>
+<td>47ms</td>
+<td>15ms</td>
+<td><span style="color: #339966;">+216.2%</span></td>
+</tr>
+<tr>
+<td>IfThenElse</td>
+<td>67ms</td>
+<td>16ms</td>
+<td><span style="color: #339966;">+322.5%</span></td>
+</tr>
+<tr>
+<td>ListSlicing</td>
+<td>69ms</td>
+<td>70ms</td>
+<td>-0.9%</td>
+</tr>
+<tr>
+<td>NestedForLoops</td>
+<td>72ms</td>
+<td>25ms</td>
+<td>+187.4%</td>
+</tr>
+<tr>
+<td>NestedListComprehensions</td>
+<td>87ms</td>
+<td>42ms</td>
+<td>+105.9%</td>
+</tr>
+<tr>
+<td>NormalClassAttribute</td>
+<td>62ms</td>
+<td>77ms</td>
+<td>-18.9%</td>
+</tr>
+<tr>
+<td>NormalInstanceAttribute</td>
+<td>56ms</td>
+<td>24ms</td>
+<td>+129.7%</td>
+</tr>
+<tr>
+<td>PythonFunctionCalls</td>
+<td>72ms</td>
+<td>34ms</td>
+<td>+116.1%</td>
+</tr>
+<tr>
+<td>PythonMethodCalls</td>
+<td>84ms</td>
+<td>38ms</td>
+<td>+120.0%</td>
+</tr>
+<tr>
+<td>Recursion</td>
+<td>97ms</td>
+<td>56ms</td>
+<td>+73.1%</td>
+</tr>
+<tr>
+<td>SecondImport</td>
+<td>61ms</td>
+<td>47ms</td>
+<td>+31.6%</td>
+</tr>
+<tr>
+<td>SecondPackageImport</td>
+<td>66ms</td>
+<td>29ms</td>
+<td>+125.4%</td>
+</tr>
+<tr>
+<td>SecondSubmoduleImport</td>
+<td>86ms</td>
+<td>32ms</td>
+<td>+172.0%</td>
+</tr>
+<tr>
+<td>SimpleComplexArithmetic</td>
+<td>74ms</td>
+<td>62ms</td>
+<td>+18.3%</td>
+</tr>
+<tr>
+<td>SimpleDictManipulation</td>
+<td>65ms</td>
+<td>35ms</td>
+<td>+89.7%</td>
+</tr>
+<tr>
+<td>SimpleFloatArithmetic</td>
+<td>77ms</td>
+<td>56ms</td>
+<td>+39.3%</td>
+</tr>
+<tr>
+<td>SimpleIntFloatArithmetic</td>
+<td>58ms</td>
+<td>39ms</td>
+<td>+48.3%</td>
+</tr>
+<tr>
+<td>SimpleIntegerArithmetic</td>
+<td>59ms</td>
+<td>37ms</td>
+<td>+57.7%</td>
+</tr>
+<tr>
+<td>SimpleListComprehensions</td>
+<td>75ms</td>
+<td>33ms</td>
+<td>+128.7%</td>
+</tr>
+<tr>
+<td>SimpleListManipulation</td>
+<td>57ms</td>
+<td>27ms</td>
+<td>+109.4%</td>
+</tr>
+<tr>
+<td>SimpleLongArithmetic</td>
+<td>68ms</td>
+<td>57ms</td>
+<td>+19.9%</td>
+</tr>
+<tr>
+<td>SmallLists</td>
+<td>69ms</td>
+<td>41ms</td>
+<td>+66.6%</td>
+</tr>
+<tr>
+<td>SmallTuples</td>
+<td>66ms</td>
+<td>98ms</td>
+<td>-32.2%</td>
+</tr>
+<tr>
+<td>SpecialClassAttribute</td>
+<td>63ms</td>
+<td>49ms</td>
+<td>+29.1%</td>
+</tr>
+<tr>
+<td>SpecialInstanceAttribute</td>
+<td>130ms</td>
+<td>24ms</td>
+<td><span style="color: #339966;">+434.5%</span></td>
+</tr>
+<tr>
+<td>StringMappings</td>
+<td>67ms</td>
+<td>62ms</td>
+<td>+8.5%</td>
+</tr>
+<tr>
+<td>StringPredicates</td>
+<td>69ms</td>
+<td>59ms</td>
+<td>+16.6%</td>
+</tr>
+<tr>
+<td>StringSlicing</td>
+<td>73ms</td>
+<td>47ms</td>
+<td>+54.8%</td>
+</tr>
+<tr>
+<td>TryExcept</td>
+<td>57ms</td>
+<td>0ms</td>
+<td><span style="color: #339966;">+3821207.1%</span></td>
+</tr>
+<tr>
+<td>TryFinally</td>
+<td>65ms</td>
+<td>26ms</td>
+<td>+153.4%</td>
+</tr>
+<tr>
+<td>TryRaiseExcept</td>
+<td>64ms</td>
+<td>610ms</td>
+<td><span style="color: #ff0000;">-89.5%</span></td>
+</tr>
+<tr>
+<td>TupleSlicing</td>
+<td>76ms</td>
+<td>67ms</td>
+<td>+12.7%</td>
+</tr>
+<tr>
+<td>UnicodeMappings</td>
+<td>88ms</td>
+<td>91ms</td>
+<td>-2.9%</td>
+</tr>
+<tr>
+<td>UnicodePredicates</td>
+<td>64ms</td>
+<td>59ms</td>
+<td>+8.8%</td>
+</tr>
+<tr>
+<td>UnicodeProperties</td>
+<td>69ms</td>
+<td>63ms</td>
+<td>+8.8%</td>
+</tr>
+<tr>
+<td>UnicodeSlicing</td>
+<td>80ms</td>
+<td>68ms</td>
+<td>+17.6%</td>
+</tr>
+<tr>
+<td>WithFinally</td>
+<td>84ms</td>
+<td>26ms</td>
+<td><span style="color: #339966;">+221.2%</span></td>
+</tr>
+<tr>
+<td>WithRaiseExcept</td>
+<td>67ms</td>
+<td>1178ms</td>
+<td><span style="color: #ff0000;">-94.3%</span></td>
+</tr>
+</tbody>
+</table></section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="shes-a-doctor-now.html">
+       She’s a doctor now
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-release-039.html">
+      Nuitka Release 0.3.9 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

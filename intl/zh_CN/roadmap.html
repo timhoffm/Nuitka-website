@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka 路线图</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/zh_CN/roadmap.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="_static/design-tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Nuitka Commercial" href="commercial.html" />
+    <link rel="prev" title="支持" href="support.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="posts/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="start.html">快速入门</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="download.html">下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html">用户手册</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">支持</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">路线图</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-extensibility">用户可扩展性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#standalone">单机版</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nuitka-python-public">Nuitka-Python (public)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-public">Performance (public)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macos-enhancements">macOS enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#container-builds-commercial">Container Builds (commercial)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#support-for-next-python-version-3-10">Support for Next Python Version (3.10)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wheels-build">Wheels Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#traceback-encryption-commercial">Traceback Encryption (commercial)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features-to-be-added-for-0-6-20">Features to be added for 0.6.20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features-to-be-added-for-0-6-21">Features to be added for 0.6.21</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more.html">更多内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blog.html">Nuitka Blog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="start.html">快速入门</a> &raquo;</li>
+      <li>Nuitka 路线图</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-roadmap">
+<h1>Nuitka 路线图<a class="headerlink" href="#nuitka-roadmap" title="永久链接至标题"></a></h1>
+<p>这是Nuitka的路线图，按功能细分。</p>
+<section id="user-extensibility">
+<h2>用户可扩展性<a class="headerlink" href="#user-extensibility" title="永久链接至标题"></a></h2>
+<ul>
+<li><p>从 0.6.18 开始，数据文件、隐式导入都是 yaml 格式，但即使是 DLL 的包含，以及插件的位置也应该以 yaml 格式指定。</p>
+<p>这样一来，由第三方扩展就变得更容易了。我们甚至可以想象，通过这样的文件，支持那些提供自己的配置与 Nuitka 进行编译的软件包。</p>
+<p>这是从 <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code>、<code class="docutils literal notranslate"><span class="pre">data-files</span></code> 和 <code class="docutils literal notranslate"><span class="pre">implicit-imports</span></code> 插件的 yaml 配置开始的，并将从那里扩展。</p>
+</li>
+</ul>
+</section>
+<section id="standalone">
+<h2>单机版<a class="headerlink" href="#standalone" title="永久链接至标题"></a></h2>
+<ul>
+<li><p>“多分布” 支持（未定）</p>
+<p>Allow combining multiple main programs into one, called
+“multidist”. These will work with a dispatcher that decides from the
+binary name what it is. There will be one big binary with the ability
+to run each program.</p>
+<p>加速模式的 CMD 文件，展示了从另一个目录加载 CPython DLL 的可能性。我们可以利用这种方法，产生 CMD 文件，以正确的方式调用二进制文件。</p>
+<p>我相信我们可以使所有的脚本在执行过程中仍然认为自己是 <code class="docutils literal notranslate"><span class="pre">__main__</span></code> 的 <code class="docutils literal notranslate"><span class="pre">__name__</span></code>，所以不需要修改代码。只是 <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> 与 <code class="docutils literal notranslate"><span class="pre">__file__</span></code> 的位置问题。</p>
+<p>Much like for onefile, you need to distinguish program location and
+package location in this way. Note shared stuff living near the CMD
+file will see that CMD file path in <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> there, and shared
+stuff, e.g. <code class="docutils literal notranslate"><span class="pre">xmlschema</span></code> module will find its data files in a directory
+that is shared.</p>
+<p>最重要的是，”multidist” 的胖二进制可以是独立的或单文件模式，由你选择。其缺点是，单文件的解压速度会比较大的二进制文件要慢。</p>
+</li>
+<li><p>“Sharedist” 支持 （未定）</p>
+<p>在这一点上，程序没有被合并，而是恢复了独立的编译，产生了多个分布的共享和非共享部分。</p>
+<p>Nuitka 中的插件在复制 DLLs 和数据文件时仍然有些野蛮，有时，但不总是，向核心报告，所以它可以扫描依赖性。我们正在努力清理它们。有些，最近的 numpy，已经被改变，使它们产生描述任务的对象，并在核心中执行它们。这样就有机会知道程序是做什么的，并做出这种改变。这种过渡几乎已经完成，但 Qt 插件仍未完成。</p>
+<p>My goal here is to say that e.g. a data file should be what Nuitka
+commercial currently calls “trusted” independent of it being a
+data file, right now that is not the case, but Nuitka is much closer
+to that now. This is of course the same with multiple distributions.</p>
+<p>对于数据文件，这个插件可以用大致相同的方式钩住数据文件的复制过程，并将数据文件放在可执行文件附近或共享区域。</p>
+</li>
+<li><p>Windows：提供 CPython 的构建，允许静态链接，避免 CPython DLL。</p></li>
+<li><p>强制输出和 stderr 到文件应该支持所有操作系统。</p></li>
+<li><p>Dejong Stacks: 更强大的解析器，允许在同一文件中的 stdout 和 stderr 混合输出。</p></li>
+<li><p>Add ability to inhibit data files from the command line, so that
+things coming from a plugin can be suppressed.</p></li>
+<li><p>增加对 upx 的支持（公共功能）。</p></li>
+</ul>
+<p>UPX不能压缩有效载荷，这就是为什么我们不能使用它并期望它能解决单文件压缩问题。然而，对二进制文件的后期处理，甚至是来自 CPython 扩展模块的二进制文件的后期处理，似乎已经能够发挥作用，并减少二进制文件的未压缩尺寸。</p>
+</section>
+<section id="nuitka-python-public">
+<h2>Nuitka-Python (public)<a class="headerlink" href="#nuitka-python-public" title="永久链接至标题"></a></h2>
+<p>这一点目前正在进行中，这里还没有描述。目前的 Nuitka 版本已经支持使用它。大多数工作现在都集中在 Linux 和 Python2.7 上，目的是让它能够静态编译 numpy 以提高速度。</p>
+</section>
+<section id="performance-public">
+<h2>Performance (public)<a class="headerlink" href="#performance-public" title="永久链接至标题"></a></h2>
+<ul>
+<li><p>Caching of demoted to bytecode modules. Some of these, e.g.
+<code class="docutils literal notranslate"><span class="pre">pkg_resources</span></code> take very long to analyse in Nuitka, just to find
+out the imports. There is no point in repeating this, a caching of
+Python compilation is a separate line of action, but it should start
+with this.</p></li>
+<li><p>Faster attribute setting.</p>
+<p>For Python3 we still use <code class="docutils literal notranslate"><span class="pre">_PyObjectDict_SetItem</span></code> which is very hard
+to replace, as it’s forking shared dictionary as necessary. With
+static libpython it can linked though, but we still might want to
+make our own replacement.</p>
+</li>
+<li><p>Better code for <code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">1</span></code> constructs with no lack of type knowledge.
+There is a long standing todo, to add the <code class="docutils literal notranslate"><span class="pre">CLONG</span></code> support for
+binary operations. It requires the code generation of Jinja to be
+abstract, but that should have been close to being reached in last
+releases.</p></li>
+<li><p>Better code for <code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">1</span></code> constructs even with lack of type knowledge.</p>
+<p>It should be possible to introduce prepared constants of
+<code class="docutils literal notranslate"><span class="pre">nuitka_int</span></code> type that have the object ready for use, as well as
+the integer value, and indicate so with the enum setting. This type,
+that is intended for use with local variables later on, could also be
+supported in binary operations and in-place operations, esp. for
+<code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">long</span></code> values.</p>
+</li>
+<li><p>Make module variable traces available to functions. This will be
+needed to optimize import of <code class="docutils literal notranslate"><span class="pre">sys</span></code> on module level and then
+attribute access on function level at compile time.</p></li>
+<li><p>Implement the <code class="docutils literal notranslate"><span class="pre">partial</span></code> built-in and make it work with compiled
+functions. It could prepare calls much better, such that they do not
+come through keyword arguments unnecessarily.</p></li>
+<li><p>Take advantage of <code class="docutils literal notranslate"><span class="pre">list.append</span></code> representing nodes that these are
+in fact compile time constants and generate more efficient code for
+them, which some of the C implementations could use, examples would
+be <code class="docutils literal notranslate"><span class="pre">str.upper</span></code> where we only call that cached attribute value.</p></li>
+<li><p>Complete <code class="docutils literal notranslate"><span class="pre">str</span></code> built-in methods for enhanced results, esp. for
+compile time optimization.</p></li>
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">list</span></code> methods, things like <code class="docutils literal notranslate"><span class="pre">append</span></code> really
+should be optimized as well in the mostly existing operation nodes.</p></li>
+</ul>
+</section>
+<section id="macos-enhancements">
+<h2>macOS enhancements<a class="headerlink" href="#macos-enhancements" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>The macOS bundle mode and onefile are not yet working together, which
+needs mainly just internal changes for where to put files. Also for
+accelerated programs, bundle mode is not usable, so they couldn’t be
+GUI programs yet.</p></li>
+<li><p>Apple Python must be detected and rejected for standalone mode.</p></li>
+</ul>
+</section>
+<section id="container-builds-commercial">
+<h2>Container Builds (commercial)<a class="headerlink" href="#container-builds-commercial" title="永久链接至标题"></a></h2>
+<p>Providing docker images like <code class="docutils literal notranslate"><span class="pre">manylinux</span></code> does with Nuitka installed into
+all of them and ready to use. Might make this a free feature once it’s
+done and supports <code class="docutils literal notranslate"><span class="pre">--commercial</span></code> download of the plugins nicely.</p>
+<p>Providing containers with old Linux, and optimally compiled CPython with
+podman such that building with Nuitka on Fedora latest and Ubuntu latest
+can be done fully automatically and still run on very old Linux. Right
+now this is implemented, but works mostly locally and needs more work
+than it should.</p>
+</section>
+<section id="support-for-next-python-version-3-10">
+<h2>Support for Next Python Version (3.10)<a class="headerlink" href="#support-for-next-python-version-3-10" title="永久链接至标题"></a></h2>
+<ul>
+<li><p>Get it to work for 3.9 test suite.</p>
+<p>The suite still needs a bit of help to run through, should be good
+though.</p>
+</li>
+<li><p>Add support for all of the new case syntax of 3.10</p>
+<p>This is partially done, but assignments in or matches do not work
+yet.</p>
+</li>
+</ul>
+</section>
+<section id="wheels-build">
+<h2>Wheels Build<a class="headerlink" href="#wheels-build" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Needs more documentation and addition of (some) command line options
+of Nuitka to the <code class="docutils literal notranslate"><span class="pre">bdist_nuitka</span></code> target.</p></li>
+</ul>
+</section>
+<section id="traceback-encryption-commercial">
+<h2>Traceback Encryption (commercial)<a class="headerlink" href="#traceback-encryption-commercial" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Right now tracebacks are entirely encrypted. But in a future update,
+you can decide which information is transferred, and what information
+is part of the encryption, and which part is not, e.g. hostname,
+client name, etc. could be output in plain text, while the variable
+names and values would not be, depending on your choice!</p></li>
+</ul>
+</section>
+<section id="features-to-be-added-for-0-6-20">
+<h2>Features to be added for 0.6.20<a class="headerlink" href="#features-to-be-added-for-0-6-20" title="永久链接至标题"></a></h2>
+<p>[ ] Better scalability</p>
+<p>[ ] Caching for bytecode demoted modules so no optimization needs to be
+run.</p>
+<p>[ ] Compression of onefile with bootstrap before Python3.5, so far it’s
+there for 3.5 or higher only.</p>
+<p>[x] Make <code class="docutils literal notranslate"><span class="pre">pydantic</span></code> support the default, removing the experimental flag
+<code class="docutils literal notranslate"><span class="pre">function-base</span></code> with it being the default behavior.</p>
+</section>
+<section id="features-to-be-added-for-0-6-21">
+<h2>Features to be added for 0.6.21<a class="headerlink" href="#features-to-be-added-for-0-6-21" title="永久链接至标题"></a></h2>
+<dl class="simple">
+<dt>[ ] Add ability to inhibit data files from the command line, so that</dt><dd><p>things coming from a plugin can be suppressed.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

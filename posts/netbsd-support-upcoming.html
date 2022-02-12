@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetBSD support upcoming</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/netbsd-support-upcoming.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="netbsd-support-upcoming">
+<h1>NetBSD support upcoming<a class="headerlink" href="#netbsd-support-upcoming" title="Permalink to this headline"></a></h1>
+<p>My first real UNIX ever was a NetBSD. That was now about 22 years ago. I
+am still sentimental about it. I had installed it last about 8 years
+ago. And I still like it. Back in the days, it was the first UNIX to
+encounter for me, running on Amiga hardware, first of a friend, then on
+my own.</p>
+<p>Recently, there had been support for Nuitka on FreeBSD added. A lot of
+people use it on the web, and some want to use Nuitka to improve their
+Python performance, so this is kind of relevant.</p>
+<p>There were issues resolved, but in the end, something was with Clang on
+FreeBSD 8, that I could for the life of it, not resolve remotely. So I
+attempted to install it myself. Using “virt-install”, these things are a
+breeze now. I had already done it with CentOS6 before to test the RPM
+repositories of Nuitka. That “virt-install” is a wonderful thing by
+itself, making virtualisation somewhat useful. It’s only a pity, that I
+can’t just install other qemu support architectures. I would love to
+checkout Nuitka on PowerPC.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you could check out Nuitka on other Linux architectures than
+x86_64, x86, or arm, that would be great.</p>
+</div>
+<p>This is the report of getting NetBSD supported. It was a quite an
+interesting story that I would like to share with you.</p>
+<p>Naivly I was assuming, that it would be just for fun, and that Nuitka
+will work right away. Little did I know.</p>
+<p>On FreeBSD 9 the minimal install medium was chosen, and entered its
+ports collection, installed git, cloned Nuitka, and ran the tests,
+successfully right away. Now that is unfair, in the Nuitka there were
+tons of “Linuxism” already removed. In fact, it had to work, and on the
+newest FreeBSD (version 9.1) and then it did. Great!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you would like to add Nuitka to FreeBSD’s ports, please do so. It
+should be really easy now.</p>
+</div>
+<p>On NetBSD, things were unfortunately a little different. I also chose
+minimal system. After going through “pkg source” boot strap and git
+install, I cloned Nuitka, and then tried to start it. First off, it
+couldn’t locate “python” at all. I am using <code class="docutils literal notranslate"><span class="pre">/usr/bin/env</span> <span class="pre">python</span></code>
+already. But Python2 was on the system. I ended up creating the “python”
+link myself. What I should have done according to “#netbsd” is to
+install the software, and indeed, <code class="docutils literal notranslate"><span class="pre">python2.7</span> <span class="pre">setup.py</span> <span class="pre">install</span></code> gives
+an installation of Nuitka that is executable.</p>
+<p>Next up, you need to know about “Fibers” in Nuitka. These are used for C
+co-routines, used to implement Python generators. They have an
+interface, that is very close to <code class="docutils literal notranslate"><span class="pre">makecontext</span></code>/<code class="docutils literal notranslate"><span class="pre">swapcontext</span></code>
+routines in C.</p>
+<p>For ARM and x86_64 Linux we have optimized code, that switches faster,
+but other platforms, including x86 Linux, use the generic
+implementation, also because it normally is very fast already.</p>
+<p>Now you have to know that since 2001 the interface is deprecated and
+shall not be used. And next up, is that on NetBSD, <code class="docutils literal notranslate"><span class="pre">makecontext</span></code> gave
+a segfault only. So I ran to “#netbsd” and asked.</p>
+<p>Now that was a very friendly experience. Of course, I had to give a
+rationale for using an obsolete interface. It’s not quite obvious, why
+threads wouldn’t be a better choice. And maybe they are, but they
+definitely have more overhead associated, and if they never run at the
+same time, why use them.</p>
+<p>Ultimately it helped to point out, that for a user of 22 years, an
+interface that is only obsolete for 11 years, is not quite as horrifying
+as for others.</p>
+<p>And they helped me through it. And it turns out, funny thing. For the
+context to setup, you are allocating a stack to use for the C routine,
+and you “get” the current context, then you make a new one. All the
+examples have a certain order of doing it. And my code did it the other
+way around. No system but NetBSD noticed.</p>
+<p>On FreeBSD and Linux, it didn’t matter. But it seems, that the needed
+<code class="docutils literal notranslate"><span class="pre">getcontext</span></code> call was overwriting my stack pointer now with the
+current stack. And <code class="docutils literal notranslate"><span class="pre">makecontext</span></code> deeply hated that, a lot. It was
+preparing that stack to be used, while it was in usage. Doesn’t sound
+like a good task to give to it, right? My fault truly, because every
+example on every man page, on all systems, was doing it differently. But
+then they were also all using arrays from the local stack, so quite
+obviously that was not real code.</p>
+<p>So that was fixed, and all good? No! Next thing was it crashed when
+<code class="docutils literal notranslate"><span class="pre">free</span></code> happened in Python on a compiled frame object, in a later part
+of a test that heavily uses generators. Turns out, <code class="docutils literal notranslate"><span class="pre">malloc</span></code>
+information was corrupted. I had to suspect the generic “Fiber” code,
+but that took me a while to figure out.</p>
+<p>And how could my simple <code class="docutils literal notranslate"><span class="pre">malloc</span></code> and <code class="docutils literal notranslate"><span class="pre">free</span></code> do that, and make it
+happen. When I knew that a context would not longer be used (the
+generator has finished, the generator object deleted, etc), I would look
+at the context handle stack pointer and free it.</p>
+<p>But that pointer changed. Something totally unexpected (by me
+obviously), but it also explains the earlier problem. For all systems, I
+had used so far, this pointer was not being changed, and remained the
+same. So I could <code class="docutils literal notranslate"><span class="pre">free</span></code> it from there. It worked fine, but not on
+NetBSD. And it wasn’t correct anywhere.</p>
+<p>It seems NetBSD is doing something clever, since instead of saving the
+stack pointer register in a separate area, it saves it to that place
+originally specified. It’s quite obviously an improvement, in that you
+save the pointer.</p>
+<p>It’s only bad, that now to make up for this savings, I have added the
+pointer in a separate field, which won’t be changed, so I can free it
+again. If one needs it again, and that’s not unlikely, you have to
+remember it elsewhere. So maybe that idea is not that clever. But it
+surely was wrong by me to assume that the provided value would not be
+touched.</p>
+<p>So, these are 2 bugs it found. The wrong order of calls. And the usage
+of a pointer, that may have been changed. This can only help with other
+systems, or possibly architectures under Linux.</p>
+<p>While this is all description of nasty problems, it’s also the report of
+the solution, and it was big fun. I would also like to compliment
+“#netbsd” for being very helpful and friendly with my porting of Nuitka.
+I highly enjoyed doing so. It was a lot of fun. I know that it’s
+probably on a very tiny amount of people that uses both NetBSD and
+Nuitka, but still.</p>
+<p>If this Nuitka project were about market share, it wouldn’t exist. And I
+can work for market share on another day.</p>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="nuitka-release-042.html">
+       Nuitka Release 0.4.2
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="support-for-portable-standalone-programs.html">
+      Support for portable (standalone) programs 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/netbsd-support-upcoming.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/netbsd-support-upcoming.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/netbsd-support-upcoming.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

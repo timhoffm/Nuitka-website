@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka this week #1</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-1.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">用户手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">商业用户</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">发行信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">路线图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">开发者手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">工厂说明书</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">影音</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">演讲稿</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">流媒体</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">建设中</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-this-week-1">
+<h1><a class="toc-backref" href="#id2">Nuitka this week #1</a><a class="headerlink" href="#nuitka-this-week-1" title="永久链接至标题"></a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#nuitka-this-week-1" id="id2">Nuitka this week #1</a></p>
+<ul>
+<li><p><a class="reference internal" href="#new-series-rationale" id="id3">New Series Rationale</a></p></li>
+<li><p><a class="reference internal" href="#planned-mode" id="id4">Planned Mode</a></p></li>
+<li><p><a class="reference internal" href="#locals-dict" id="id5">Locals Dict</a></p></li>
+<li><p><a class="reference internal" href="#nodes-need-finalization" id="id6">Nodes need Finalization</a></p></li>
+<li><p><a class="reference internal" href="#impact-on-memory-usage" id="id7">Impact on Memory Usage</a></p></li>
+<li><p><a class="reference internal" href="#type-hints-question" id="id8">Type Hints Question</a></p></li>
+<li><p><a class="reference internal" href="#python-3-7" id="id9">Python 3.7</a></p></li>
+<li><p><a class="reference internal" href="#coroutine-compatibility" id="id10">Coroutine Compatibility</a></p></li>
+<li><p><a class="reference internal" href="#pylint-troubles" id="id11">PyLint Troubles</a></p></li>
+<li><p><a class="reference internal" href="#todo-solving" id="id12">TODO solving</a></p></li>
+<li><p><a class="reference internal" href="#issues-encountered" id="id13">Issues Encountered</a></p></li>
+<li><p><a class="reference internal" href="#plans" id="id14">Plans</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="new-series-rationale">
+<h2><a class="toc-backref" href="#id3">New Series Rationale</a><a class="headerlink" href="#new-series-rationale" title="永久链接至标题"></a></h2>
+<p>I think I tend to prefer coding over communication too much. I think I
+need to make more transparent what I am doing. Also things, will be
+getting exciting continuously for a while now.</p>
+<p>I used to status report posts, many years ago, every 3 months or so, and
+that was nice for me also to get an idea of what changed, but I stopped.
+What did not happen, was to successfully engage other people to
+contribute.</p>
+<p>This time I am getting more intense. I will aim to do roughly weekly or
+bi-weekly reports, where I highlight things that are going on, newly
+found issues, hotfixes, all the things Nuitka.</p>
+</section>
+<section id="planned-mode">
+<h2><a class="toc-backref" href="#id4">Planned Mode</a><a class="headerlink" href="#planned-mode" title="永久链接至标题"></a></h2>
+<p>I will do it this fashion. I will write a post to the mailing list,
+right about wednesday every week or so. I need to pick a day. I am
+working from home that day, saving me commute time. I will invest that
+time into this.</p>
+<p>The writing will not be too high quality at times. Bare with me there.
+Then I will check feedback from the list, if any. Hope is for it to
+point out the things where I am not correct, missing, or even engage
+right away.</p>
+<p>Topics are going to be random, albeit repeating. I will try and make
+links to previous issues where applicable. Therefore also the TOC, which
+makes for link targets in the pages.</p>
+</section>
+<section id="locals-dict">
+<h2><a class="toc-backref" href="#id5">Locals Dict</a><a class="headerlink" href="#locals-dict" title="永久链接至标题"></a></h2>
+<p>When I am speaking of locals dict, I am talking of class scopes (and
+functions with <code class="docutils literal notranslate"><span class="pre">exec</span></code> statements). These started to use actual
+dictionary a while ago, which was a severe setback to optimization.</p>
+<p>Right now, so for this week, after a first prototype was making the
+replacement of local dict assignment and references for Python2, and
+kind of worked through my buildbots, flawlessly, I immediately noticed
+that it would require some refactoring to not depend on the locals
+scopes to be only in one of the trace collections. Thinking of future
+inlining, maybe part of a locals scope was going to be in multiple
+functions, that ought to not be affected.</p>
+<p>Therefore I made a global registry of locals scopes, and working on
+those, I checked its variables, if they can be forward propagated, and
+do this not per module, but after all the modules have been done. This
+is kind of a setback for the idea of module specific optimization
+(cacheable later on) vs. program optimization, but since that is not yet
+a thing, it can remain this way for now.</p>
+<p>Once I did that, I was interested to see the effect, but to my horror, I
+noticed, that memory was not released for the locals dict nodes. It was
+way too involved with cyclic dependencies, which are bad. So that was
+problematic of course. Compilation to keep nodes in memory for both
+tracing the usage as a locals dict and temporary variables, wasn’t going
+to help scaling at all.</p>
+<p>Solution is finalization</p>
+</section>
+<section id="nodes-need-finalization">
+<h2><a class="toc-backref" href="#id6">Nodes need Finalization</a><a class="headerlink" href="#nodes-need-finalization" title="永久链接至标题"></a></h2>
+<p>So replaced nodes reference a parent, and then the locals scope
+references variables, and trace collections referencing variables, which
+reference locals scopes, and accesses referencing traces, and so on. The
+garbage collector can handle some of this, but seems I was getting past
+that.</p>
+<p>For a solution, I started to add a finalize method, which released the
+links for locals scopes, when they are fully propagated, on the next
+run.</p>
+<p>Adding a finalize to all nodes, ought to make sure, memory is released
+soon, and might even find bugs, as nodes become unusable after they are
+supposedly unused. Obviously, there will currently be cases, where nodes
+becomes unused, but they are not finalized yet. Also, often this is more
+manual, because part of the node is to be released, but one child is
+re-used. That is messy.</p>
+</section>
+<section id="impact-on-memory-usage">
+<h2><a class="toc-backref" href="#id7">Impact on Memory Usage</a><a class="headerlink" href="#impact-on-memory-usage" title="永久链接至标题"></a></h2>
+<p>The result was a bit disappointing. Yes, memory usage of mercurial
+compilation went back again, but mostly to what it had been. Some
+classes are now having their locals dict forward propagated, but the
+effect is not always a single dictionary making yet. Right now, function
+definitions, are not forward at all propagated. This is a task I want to
+take on before next release though, but maybe not, there is other things
+too. But I am assuming that will make most class dictionaries created
+without using any variables at all anymore, which should make it really
+lean.</p>
+</section>
+<section id="type-hints-question">
+<h2><a class="toc-backref" href="#id8">Type Hints Question</a><a class="headerlink" href="#type-hints-question" title="永久链接至标题"></a></h2>
+<p>Then, asking about type hints, I got the usual question about Nuitka
+going to use it. And my stance is unchanged. They are just hints, not
+reliable. Need to behave the same if users do it wrong. Suggested to
+create decorated which make type hints enforced. But I expect nobody
+takes this on though. I need to make it a Github issue of Nuitka,
+although technically it is pure CPython work and ought to be done
+independently. Right now Nuitka is not yet there anyway yet, to take
+full advantage.</p>
+</section>
+<section id="python-3-7">
+<h2><a class="toc-backref" href="#id9">Python 3.7</a><a class="headerlink" href="#python-3-7" title="永久链接至标题"></a></h2>
+<p>Then, for Python 3.7, I have long gotten the 3.6 test suite to pass. I
+raised 2 bugs with CPython, one of which lead to update of a failing
+test. Nuitka had with large delay, caught of with what <code class="docutils literal notranslate"><span class="pre">del</span>
+<span class="pre">__annotations__</span></code> was doing in a class. Only with the recent work for
+proper locals dict code generation, we could enforce a name to be local,
+and have proper code generation, that allows for it to be unset.</p>
+<p>This was of course a bit of work. But the optimization behind was always
+kind of necessary to get right. But now, that I got this, think of my
+amazement when for 3.7 they reverted to the old behavior, where
+annotiatons then corrupt the module annotations</p>
+<p>The other bug is a reference counting bug, where Nuitka tests were
+failing with CPython 3.7, and turns out, there is a bug in the
+dictionary implementation of 3.7, but it only corrupts counts reported,
+not actual objects, so it’s harmless, but means for 3.7.0 the reference
+count tests are disabled.</p>
+<p>Working through the 3.7 suite, I am cherry picking commits, that e.g.
+allow the <code class="docutils literal notranslate"><span class="pre">repr</span></code> of compiled functions to contain <code class="docutils literal notranslate"><span class="pre">&lt;compiled_function</span>
+<span class="pre">...&gt;</span></code> and the like. Nothing huge yet. There is now a subscript of type,
+and foremost the async syntax became way more liberal, so it is more
+complex for Nuitka to make out if it is a coroutine due to something
+happening inside a generator declared inside of it. Also <code class="docutils literal notranslate"><span class="pre">cr_origin</span></code>
+was added to coroutines, but that is mostly it.</p>
+</section>
+<section id="coroutine-compatibility">
+<h2><a class="toc-backref" href="#id10">Coroutine Compatibility</a><a class="headerlink" href="#coroutine-compatibility" title="永久链接至标题"></a></h2>
+<p>A bigger thing was that I debugged coroutines and their interaction with
+uncompiled and compiled coroutines awaiting one another, and turns out,
+there was a lot to improve.</p>
+<p>The next release will be much better compatible with <code class="docutils literal notranslate"><span class="pre">asyncio</span></code> module
+and its futures, esp with exceptions to cancel tasks passed along. That
+required to clone a lot of CPython generator code, due to how ugly they
+mess with bytecode instruction pointers in <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> on an
+uncompiled coroutine, as they don’t work with <code class="docutils literal notranslate"><span class="pre">send</span></code> method unlike
+everything else has to.</p>
+</section>
+<section id="pylint-troubles">
+<h2><a class="toc-backref" href="#id11">PyLint Troubles</a><a class="headerlink" href="#pylint-troubles" title="永久链接至标题"></a></h2>
+<p>For PyLint, the 2.0.0 release found new things, but unfortunately for
+2.0.1 there is a lot of regressions that I had to report. I fixed the
+versions of first PyLint, and now also Astroid, so Travis cannot
+suddenly start to fail due to a PyLint release finding new warnings.</p>
+<p>Currently, if you make a PR on Github, a PyLint update will break it.
+And also the cron job on Travis that checks master.</p>
+<p>As somebody pointed out, I am now using <cite>requires.io
+&lt;https://requires.io/github/kayhayen/Nuitka/requirements/?branch=factory&gt;</cite>
+to check for Nuitka dependencies. But since 1.9.2 is still needed for
+Python2, that kind of is bound to give alarms for now.</p>
+</section>
+<section id="todo-solving">
+<h2><a class="toc-backref" href="#id12">TODO solving</a><a class="headerlink" href="#todo-solving" title="永久链接至标题"></a></h2>
+<p>I have a habit of doing off tasks, when I am with my notebook in some
+place, and don’t know what to work on. So I have some 2 hours recently
+like this, and used it to look at <code class="docutils literal notranslate"><span class="pre">TODO</span></code> and resolve them.</p>
+<p>I did a bunch of cleanups for static code helpers. There was one in my
+mind about calling a function with a single argument. That fast call
+required a local array with one element to put the arg into. That makes
+using code ugly.</p>
+</section>
+<section id="issues-encountered">
+<h2><a class="toc-backref" href="#id13">Issues Encountered</a><a class="headerlink" href="#issues-encountered" title="永久链接至标题"></a></h2>
+<p>So the <code class="docutils literal notranslate"><span class="pre">enum</span></code> module of Python3 hates compiled classes and their
+<code class="docutils literal notranslate"><span class="pre">staticmethod</span></code> around <code class="docutils literal notranslate"><span class="pre">__new__</span></code>. Since it manually unwraps
+<code class="docutils literal notranslate"><span class="pre">__new__</span></code> and then calls it itself, it then finds that a
+<code class="docutils literal notranslate"><span class="pre">staticmethod</span></code> object cannot be called. It’s purpose is to sit in the
+class dictionary to give a descriptor that removes the <code class="docutils literal notranslate"><span class="pre">self</span></code> arg from
+the call.</p>
+<p>I am contemplating submitting an upstream patch for CPython here. The
+hard coded check for <code class="docutils literal notranslate"><span class="pre">PyFunction</span></code> on the <code class="docutils literal notranslate"><span class="pre">__new__</span></code> value is hard to
+emulate.</p>
+<p>So I am putting the <code class="docutils literal notranslate"><span class="pre">staticmethod</span></code> into the dictionary passed already.
+But the undecorated function should be there for full compatibility.</p>
+<p>If I were to make compiled function type that is both a staticmethod
+alike and a function, maybe I can work around it. But it’s ugly and a
+burden. But it would need no change. And maybe there is more core
+wanting to call <code class="docutils literal notranslate"><span class="pre">__new__</span></code> manually</p>
+</section>
+<section id="plans">
+<h2><a class="toc-backref" href="#id14">Plans</a><a class="headerlink" href="#plans" title="永久链接至标题"></a></h2>
+<p>I intend to make a release, probably this weekend. It might not contain
+full 3.7 compatibility yet, although I am aiming at that.</p>
+<p>Then I want to turn to “goto generators”, a scalability improvement of
+generators and coroutines that I will talk about next week then.</p>
+<p>Until next week.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="nuitka-release-0531.html">
+       Nuitka Release 0.5.31
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-release-0532.html">
+      Nuitka Release 0.5.32 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-1.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-1.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-this-week-1.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
