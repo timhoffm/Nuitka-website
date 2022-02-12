@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka this week #11</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-11.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-this-week-11">
+<h1><a class="toc-backref" href="#id2">Nuitka this week #11</a><a class="headerlink" href="#nuitka-this-week-11" title="Permalink to this headline"></a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#nuitka-this-week-11" id="id2">Nuitka this week #11</a></p>
+<ul>
+<li><p><a class="reference internal" href="#communication-vs-coding" id="id3">Communication vs. Coding</a></p></li>
+<li><p><a class="reference internal" href="#optimization-work" id="id4">Optimization Work</a></p>
+<ul>
+<li><p><a class="reference internal" href="#levels-of-optimization" id="id5">Levels of Optimization</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#week-of-bugfixing" id="id6">Week of Bugfixing</a></p></li>
+<li><p><a class="reference internal" href="#exec-on-filehandles" id="id7">Exec on Filehandles</a></p></li>
+<li><p><a class="reference internal" href="#pkgutil-iter-modules" id="id8">pkgutil.iter_modules</a></p>
+<ul>
+<li><p><a class="reference internal" href="#when-to-release" id="id9">When to release</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#google-summer-of-code-for-nuitka" id="id10">Google Summer of Code for Nuitka</a></p></li>
+<li><p><a class="reference internal" href="#twitter" id="id11">Twitter</a></p></li>
+<li><p><a class="reference internal" href="#help-wanted" id="id12">Help Wanted</a></p></li>
+<li><p><a class="reference internal" href="#donations" id="id13">Donations</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="communication-vs-coding">
+<h2><a class="toc-backref" href="#id3">Communication vs. Coding</a><a class="headerlink" href="#communication-vs-coding" title="Permalink to this headline"></a></h2>
+<p>I continue to force myself to report more publicly, and it feels good.
+This time things are in a stablizing period, and I feel I have a
+consistent message.</p>
+<p>Bear in mind, that this is supposed to be a quick, not too polished, and
+straight from top of my head, even if really a lot of content. But I
+feel that esp. the optimization parts are worth reading.</p>
+</section>
+<section id="optimization-work">
+<h2><a class="toc-backref" href="#id4">Optimization Work</a><a class="headerlink" href="#optimization-work" title="Permalink to this headline"></a></h2>
+<p>So, the 0.6.1 optimization work has been a lot. And it’s containing
+improvements on every level. I think I will detail the levels in another
+section.</p>
+<section id="levels-of-optimization">
+<h3><a class="toc-backref" href="#id5">Levels of Optimization</a><a class="headerlink" href="#levels-of-optimization" title="Permalink to this headline"></a></h3>
+<p>First level is of course node level optimization. Here 0.6.1 adds many
+things, from better handling of closure variables not all as unknown
+every time control flow escapes, to some operations <code class="docutils literal notranslate"><span class="pre">+</span></code> and
+comparisons on known built-in type shapes to now be able to statically
+tell that they do not raise. The opposite (does definitely raise) is
+prepared, but not yet used.</p>
+<p>This allows for type shapes to be longer known. Now <code class="docutils literal notranslate"><span class="pre">a+b+c</span></code> can be
+known, but previously only <code class="docutils literal notranslate"><span class="pre">a+b</span></code> was sort of known, and little used
+information.</p>
+<p>The next level is picking the C target type. Here seeing more operations
+and understanding more variables allows to more often pick the <cite>C bool</cite>
+or <cite>C void</cite> types over the <cite>PyObject *</cite> C type. For 0.6.1 I have
+observed that esp. more indicator variables make it to that stage,
+generating way more efficient C code (for that indicator variable) for
+those in many instances, esp. with loops, as these no longer loose type
+shape information as badly as they did.</p>
+<p>The, another level is when it is treated as an object, but known to be
+<cite>int</cite>, there are way more helpers used for <cite>+</cite>/<cite>+=</cite> and a whole new set
+of them for comparisons, that in these cases of full or partial type
+knowledge operate faster.</p>
+<p>And even if e.g. only one type is known, this still allows to not make a
+lot of tests about it, and to avoid attempted shortcuts that cannot
+work. For 0.6.1 the <cite>+</cite> and <cite>+=</cite> are pretty well covered for these, but
+some variants are not yet tuned to take all type knowledge advantage.</p>
+<p>These will be also the building block, once the C type layer picks types
+like “C int or PyObject * known to be int” with indicator flags which
+values are currently valid to use, then these specialized calls still
+make sense.</p>
+<p>The most attrative level, “C int” has not been reached for 0.6.1 but for
+my loop example and Python3, I can say that now would be a nice time to
+start it, as type shape knowledge is all there. This was totally not the
+case for 0.6.0, but it seems that this step will have to be postponed to
+another release, maybe 0.6.2, maybe even later.</p>
+</section>
+</section>
+<section id="week-of-bugfixing">
+<h2><a class="toc-backref" href="#id6">Week of Bugfixing</a><a class="headerlink" href="#week-of-bugfixing" title="Permalink to this headline"></a></h2>
+<p>But something that bothers me is seeing the issue tracker pile up on
+actionable items, where I just have not taken action. So as announced on
+Twitter already, I am having and continue to have bug fixing time. I am
+acting on issues that are relatively old and easy to act on, or where I
+have no hope of this happening by anybody else anymore.</p>
+<p>I have listed some interesting examples below. But basically these are
+small, relatively unimportant, yet somewhat import for some use cases
+things.</p>
+</section>
+<section id="exec-on-filehandles">
+<h2><a class="toc-backref" href="#id7">Exec on Filehandles</a><a class="headerlink" href="#exec-on-filehandles" title="Permalink to this headline"></a></h2>
+<p>So when doing exec on a filehandle, Nuitka was at runtime reading the
+source, then compiling it, but forgetting about the filename. This makes
+things like <cite>inspect.getsource()</cite> fail on functions from there, and ugly
+tracebacks not pointing to the filename. This was one of the things
+which I had understood, but not did the actual work yet.</p>
+</section>
+<section id="pkgutil-iter-modules">
+<h2><a class="toc-backref" href="#id8">pkgutil.iter_modules</a><a class="headerlink" href="#pkgutil-iter-modules" title="Permalink to this headline"></a></h2>
+<p>And another one, which seemed just not done, but turned out to be rather
+complex, this one needs to populate a <code class="docutils literal notranslate"><span class="pre">sys.path_importer_cache</span></code> for
+imported modules, and then to report the child modules. There was no
+object to carry that information, so now instances of the meta path
+based importer are associated for every import.</p>
+<p>Turns out for Python3, my simplistic type building calling <cite>type</cite>
+manually here does not work, as <code class="docutils literal notranslate"><span class="pre">__init__</span></code> and <code class="docutils literal notranslate"><span class="pre">iter_modules</span></code> do not
+become anything but static methods ever. Needs a real type.</p>
+<p>Plus, I had to disable it for now, because mixed packages, like the one
+we do with <code class="docutils literal notranslate"><span class="pre">multiprocessing&quot;</span> <span class="pre">where</span> <span class="pre">only</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">compiled</span> <span class="pre">(the</span> <span class="pre">one</span>
+<span class="pre">required)</span> <span class="pre">and</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">pure</span> <span class="pre">Python</span> <span class="pre">from</span> <span class="pre">disk</span> <span class="pre">still,</span> <span class="pre">stopped</span> <span class="pre">to</span> <span class="pre">work.</span> <span class="pre">The</span>
+<span class="pre">``iter_modules</span></code> it seems will have to cover that case too.</p>
+<p>So no luck, postponing this until next week of bug fixes. Frustrating a
+bit, but such is life.</p>
+<section id="when-to-release">
+<h3><a class="toc-backref" href="#id9">When to release</a><a class="headerlink" href="#when-to-release" title="Permalink to this headline"></a></h3>
+<p>There are still some issues that I want to get to. Specicially the
+OpenGL plugins which has been research ever since, and nobody stepped
+up, but it’s rather trivial. And the Tcl/Tk for Windows. People have
+provided sufficient instructions for a plugin that I am going to write
+this week.</p>
+<p>Once I feel the issue tracker is clean, I will release. As a matter of
+experience, it is then going to grow a lot again.</p>
+</section>
+</section>
+<section id="google-summer-of-code-for-nuitka">
+<h2><a class="toc-backref" href="#id10">Google Summer of Code for Nuitka</a><a class="headerlink" href="#google-summer-of-code-for-nuitka" title="Permalink to this headline"></a></h2>
+<p>Finally somebody has stepped up, which means a lot to me. Now to the
+actual work!</p>
+</section>
+<section id="twitter">
+<h2><a class="toc-backref" href="#id11">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline"></a></h2>
+<p>I continue to be very active there.</p>
+<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw">Follow &#64;kayhayen</a></p>
+<p>And lets not forget, having followers make me happy. So do re-tweets.</p>
+<p>Adding Twitter more prominently to the web site is something that is
+also going to happen.</p>
+</section>
+<section id="help-wanted">
+<h2><a class="toc-backref" href="#id12">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline"></a></h2>
+<p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a>
+and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
+<p>Nuitka definitely needs more people to work on it.</p>
+</section>
+<section id="donations">
+<h2><a class="toc-backref" href="#id13">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline"></a></h2>
+<p>If you want to help, but cannot spend the time, please consider to
+donate to Nuitka, and go here:</p>
+<p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="nuitka-this-week-10.html">
+       Nuitka this week #10
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nuitka-release-061.html">
+      Nuitka Release 0.6.1 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-11.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-11.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-this-week-11.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

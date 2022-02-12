@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka Release 0.3.13</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0313.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-release-0-3-13">
+<h1>Nuitka Release 0.3.13<a class="headerlink" href="#nuitka-release-0-3-13" title="Permalink to this headline"></a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/sites/download.html">“download now”</a>.</p>
+<p>This release is mostly the result of working towards compilation of a
+real programs (Mercurial) and to merge and finalize the frame stack
+work. Now Nuitka has a correct frame stack at all times, and supports
+<code class="docutils literal notranslate"><span class="pre">func_code</span></code> and <code class="docutils literal notranslate"><span class="pre">gi_code</span></code> objects, something previously thought to
+be impossible.</p>
+<p>Actually now it’s only the “bytecode” objects that won’t be there. And
+not attributes of <code class="docutils literal notranslate"><span class="pre">func_code</span></code> are meaningful yet, but in theory can be
+supported.</p>
+<p>Due to the use of the “git flow” for Nuitka, most of the bugs listed
+here were already fixed in on the stable release before this release.
+This time there were 5 such hot fix releases, sometimes fixing multiple
+bugs.</p>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>In case of syntax errors in the main program, an exception stack was
+giving that included Nuitka code. Changed to make the same output as
+CPython does. Fixed in 0.3.12a already.</p></li>
+<li><p>The star import (<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">x</span> <span class="pre">import</span> <span class="pre">*</span></code>) didn’t work for submodules.
+Providing <code class="docutils literal notranslate"><span class="pre">*</span></code> as the import list to the respective code allowed to
+drop the complex lookups we were doing before, and to simply trust
+CPython C/API to do it correctly. Fixed in 0.3.12 already.</p></li>
+<li><p>The absolute import is <em>not</em> the default of CPython 2.7 it seems. A
+local <code class="docutils literal notranslate"><span class="pre">posix</span></code> package shadows the standard library one. Fixed in
+0.3.12 already.</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">--deep</span></code> mode, a module may contain a syntax error. This is e.g.
+true of “PyQt” with <code class="docutils literal notranslate"><span class="pre">port_v3</span></code> included. These files contain Python3
+syntax and fail to be imported in Python2, but that is not to be
+considered an error. These modules are now skipped with a warning.
+Fixed in 0.3.12b already.</p></li>
+<li><p>The code to import modules wasn’t using the <code class="docutils literal notranslate"><span class="pre">__import__</span></code> built-in,
+which prevented <code class="docutils literal notranslate"><span class="pre">__import__</span></code> overriding code to work. Changed
+import to use the built-in. Fixed in 0.3.12c already.</p></li>
+<li><p>The code generated for the <code class="docutils literal notranslate"><span class="pre">__import__</span></code> built-in with constant
+values was doing relative imports only. It needs to attempt relative
+and absolute imports. Fixed in 0.3.12c already.</p></li>
+<li><p>The code of packages in “__init__.py” believed it was outside of the
+package, giving problems for package local imports. Fixed in 0.3.12d
+already.</p></li>
+<li><p>It appears that “Scons”, which Nuitka uses internally and transparent
+to you, to execute the compilation and linking tasks, was sometimes
+not building the binaries or shared libraries, due to a false
+caching. As a workaround, these are now erased before doing the
+build. Fixed in 0.3.12d already.</p></li>
+<li><p>The use of <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> in comparison chains (e.g. <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span> <span class="pre">&lt;</span>
+<span class="pre">c</span></code> is one), wasn’t supported yet. The use of these in comparison
+chains <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">in</span> <span class="pre">b</span> <span class="pre">in</span> <span class="pre">c</span></code> is very strange.</p>
+<p>Only in the <code class="docutils literal notranslate"><span class="pre">test_grammar.py</span></code> it was ever used I believe. Anyway,
+it’s supported now, solving this <code class="docutils literal notranslate"><span class="pre">TODO</span></code> and reducing the
+difference. Fixed in 0.3.12e already.</p>
+</li>
+<li><p>The order of evaluation for <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators wasn’t
+enforced in a portable way. Now it is correct on “ARM” too. Fixed in
+0.3.12e already.</p></li>
+</ul>
+</section>
+<section id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>The built-ins <code class="docutils literal notranslate"><span class="pre">GeneratorExit</span></code> and <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> are optimized
+to their Python C/API names where possible as well.</p></li>
+</ul>
+</section>
+<section id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">__file__</span></code> attribute of modules was the relative filename, but
+for absolute filenames these become a horrible mess at least on
+Linux.</p></li>
+<li><p>Added assertion helpers for sane frame and code objects and use them.</p></li>
+<li><p>Make use of <code class="docutils literal notranslate"><span class="pre">assertObject</span></code> in more places.</p></li>
+<li><p>Instead of using <code class="docutils literal notranslate"><span class="pre">os.path.sep</span></code> all over, added a helper
+<code class="docutils literal notranslate"><span class="pre">Utils.joinpath</span></code> that hides this and using <code class="docutils literal notranslate"><span class="pre">os.path.join</span></code>. This
+gives more readable code.</p></li>
+<li><p>Added traces to the “unfreezer” guarded by a define. Helpful in
+analyzing import problems.</p></li>
+<li><p>Some PyLint cleanups removing dead code, unused variables, useless
+pass statement, etc.</p></li>
+</ul>
+</section>
+<section id="new-tests">
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>New tests to cover <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> and <code class="docutils literal notranslate"><span class="pre">IndentationError</span></code> from
+<code class="docutils literal notranslate"><span class="pre">--deep</span></code> imports and in main program.</p></li>
+<li><p>New test to cover evaluation order of <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>
+comparisons.</p></li>
+<li><p>New test to cover package local imports made by the “__init__.py” of
+the package.</p></li>
+</ul>
+</section>
+<section id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Drop “compile_itself.sh” in favor of the new “compile_itself.py”,
+because the later is more portable.</p></li>
+<li><p>The logging output is now nicer, and for failed recursions, outputs
+the line that is having the problem.</p></li>
+</ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<p>The frame stack work and the <code class="docutils literal notranslate"><span class="pre">func_code</span></code> are big for compatibility.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">func_code</span></code> was also needed for “hg” to work. For Mercurial to
+pass all of its test suite, more work will be needed, esp. the
+<code class="docutils literal notranslate"><span class="pre">inspect</span></code> module needs to be run-time patched to accept compiled
+functions and generators too.</p>
+<p>Once real world programs like Mercurial work, we can use these as more
+meaningful benchmarks and resume work on optimization.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="puting-a-conference-t-shirt-to-good-use.html">
+       Putting a conference T-shirt to good use
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nuitka-release-0314.html">
+      Nuitka Release 0.3.14 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0313.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0313.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0313.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

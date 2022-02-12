@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Releasing Nuitka to the World</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/releasing-nuitka-to-the-world.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="releasing-nuitka-to-the-world">
+<h1>Releasing Nuitka to the World<a class="headerlink" href="#releasing-nuitka-to-the-world" title="Permalink to this headline"></a></h1>
+<p>Obviously this is very exciting step for me. I am releasing Nuitka
+today. Finally. For a long time I knew I would, but actually doing it,
+is a different beast. Reaching my goals for release turned out to be
+less far away than I hope, so instead of end of August, I can already
+release it now.</p>
+<p>Currently it’s not more than 4% faster than CPython. No surprise there,
+if all you did, is removing the bytecode interpretation so far. It’s not
+impressive at all. It’s not even a reason to use it. But it’s also only
+a start. Clearly, once I get into optimizing the code generation of
+Nuitka, it will only get better, and then probably in sometimes dramatic
+steps. But I see this as a long term goal.</p>
+<p>I want to have infrastructure in the code place, before doing lots of
+possible optimizations that just make Nuitka unmaintainable. And I will
+want to have a look at what others did so far in the domain of type
+inference and how to apply that for my project.</p>
+<p>I look forward to the reactions about getting this far. The supported
+language volume is amazing, and I have a set of nice tricks used. For
+example the way generator functions are done is a clever hack.</p>
+<p>Where to go from here? Well, I guess, I am going to judge it by the
+feedback I receive. I personally see “constant propagation” as a
+laudable first low hanging fruit, that could be solved.</p>
+<p>Consider this readable code on the module level:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">meters_per_nautical_mile</span> <span class="o">=</span> <span class="mi">1852</span>
+
+
+<span class="k">def</span> <span class="nf">convertMetersToNauticalMiles</span><span class="p">(</span><span class="n">meters</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">meters</span> <span class="o">/</span> <span class="n">meters_per_nautical_mile</span>
+
+
+<span class="k">def</span> <span class="nf">convertNauticalMilesToMeters</span><span class="p">(</span><span class="n">miles</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">miles</span> <span class="o">*</span> <span class="n">meters_per_nautical_mile</span>
+</pre></div>
+</div>
+<p>Now imagine you are using this very frequently in code. Quickly you
+determine that the following will be much faster:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convertMetersToNauticalMiles</span><span class="p">(</span><span class="n">meters</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">meters</span> <span class="o">/</span> <span class="mi">1852</span>
+
+
+<span class="k">def</span> <span class="nf">convertNauticalMilesToMeters</span><span class="p">(</span><span class="n">miles</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">miles</span> <span class="o">*</span> <span class="mi">1852</span>
+</pre></div>
+</div>
+<p>Still good? Well, probably next step you are going to inline the
+function calls entirely. For optimization, you are making your code less
+readable. I do not all appreciate that. My first goal is there to make
+the more readable code perform as well or better as the less readable
+variant.</p>
+<p>But yes, lets see what happens. Oh, and you will find its <a class="reference external" href="/pages/download.html">latest
+version here</a>.</p>
+<p>Kay Hayen</p>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="starting-to-blog-who-and-why.html">
+       Starting to blog, who and why?
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="minor-release-nuitka-011.html">
+      Nuitka Release 0.1.1 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/releasing-nuitka-to-the-world.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/releasing-nuitka-to-the-world.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/releasing-nuitka-to-the-world.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

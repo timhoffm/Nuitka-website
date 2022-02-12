@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jorj X. McKie</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/jorj-x-mckie.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <p>Self-Introduction Jorj McKie</p>
+<section id="jorj-x-mckie">
+<h1>Jorj X. McKie<a class="headerlink" href="#jorj-x-mckie" title="Permalink to this headline"></a></h1>
+<p>Hello everyone,</p>
+<p>I am Jorj X. McKie (this is <strong>not</strong> my real name!) and I am an
+enthusiastic supporter of Nuitka. For the time being, my focus area
+within this package is standalone compilation and maintenance of the
+plugin feature.</p>
+<p>Apart from extending Nuitka’s support to virtually all Python packages
+living out there, my driving motivation in this respect is keeping up
+and improving the usability of Nuitka.</p>
+<p>You may want to look into the <a class="reference external" href="https://github.com/Nuitka/NUITKA-Utilities">Nuitka Utilities</a> repository, which
+contains many things I am working on.</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">alert</span> <span class="pre">alert-primary</span> <span class="pre">float-md-right</span></span></dt>
+<dd><img alt="../_images/jorjmckie-harald-lieder.jpg" src="../_images/jorjmckie-harald-lieder.jpg" />
+</dd></dl>
+
+<section id="short-biography">
+<h2>Short Biography<a class="headerlink" href="#short-biography" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Born 1951 as Harald Lieder near the city of Leipzig</p></li>
+<li><p>Studied Mathematics and Physics at the Frankfurt/M
+Johann-Wolfgang-Goethe University from 10/1970 through 06/1976
+(Diploma in Mathematics)</p></li>
+<li><dl class="simple">
+<dt>Professional career overview</dt><dd><ul>
+<li><p>insurance company (4 years): application and systems
+programming (IBM mainframe, Cobol, Assembler), data center lead</p></li>
+<li><p>book wholesaler (5 years): systems programming and data center
+lead (IBM mainframe)</p></li>
+<li><p>consulting company (until 2009): leading of or participating in
+numerous large and <strong>very</strong> large projects mostly around
+banking applications, banking mergers, data center optimization
+and quality assurance.</p></li>
+<li><p>since 2009: retirement, living on Isla Margarita, Venezuela.
+Enjoying my beautiful house, pursuing my hobbies: mathematics,
+science theory, biological evolution theory, science fiction
+(my pseudonym comes from novels by one of my favorite authors
+Frank Herbert) and of course programming (maintainer of
+<a class="reference external" href="https://github.com/pymupdf/PyMuPDF">PyMuPDF</a>, and Nuitka).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="images-from-isla-margarita">
+<h2>Images from Isla Margarita<a class="headerlink" href="#images-from-isla-margarita" title="Permalink to this headline"></a></h2>
+<section id="house-frontview-with-guardians">
+<h3>House Frontview with Guardians<a class="headerlink" href="#house-frontview-with-guardians" title="Permalink to this headline"></a></h3>
+<img alt="../_images/JMK-house-frontview-with-guardians.jpg" src="../_images/JMK-house-frontview-with-guardians.jpg" />
+</section>
+<section id="in-favorite-pizzeria-with-my-wife">
+<h3>In favorite Pizzeria with my Wife<a class="headerlink" href="#in-favorite-pizzeria-with-my-wife" title="Permalink to this headline"></a></h3>
+<img alt="../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" src="../_images/JMK-in-favorite-pizzeria-with-my-wife.jpg" />
+</section>
+<section id="seaview-from-my-terrace">
+<h3>Seaview from my Terrace<a class="headerlink" href="#seaview-from-my-terrace" title="Permalink to this headline"></a></h3>
+<img alt="../_images/JMK-seaview-from-my-terrace.JPG" src="../_images/JMK-seaview-from-my-terrace.JPG" />
+</section>
+<section id="sunrise-view-from-house">
+<h3>Sunrise view from House<a class="headerlink" href="#sunrise-view-from-house" title="Permalink to this headline"></a></h3>
+<img alt="../_images/JMK-sunrise-view-from-house.jpg" src="../_images/JMK-sunrise-view-from-house.jpg" />
+</section>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="tommy-gsoc-intro.html">
+       Tommy’s Google Summer of Code Intro
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nuitka-release-064.html">
+      Nuitka Release 0.6.4 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/jorj-x-mckie.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/jorj-x-mckie.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/jorj-x-mckie.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

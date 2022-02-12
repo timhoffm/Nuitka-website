@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://nuitka.net</id>
+  <title>Nuitka Blog - Posts tagged physics</title>
+  <updated>2022-02-12T15:49:26.968555+00:00</updated>
+  <link href="https://nuitka.net"/>
+  <link href="https://nuitka.net/blog/tag/physics/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-python-research-and-physics.html</id>
+    <title>Nuitka, Python research and Physics</title>
+    <updated>2013-10-04T09:54:45+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;section id="nuitka-python-research-and-physics"&gt;
+
+&lt;p&gt;Once upon a time ago physics had multiple forces. Each with very
+distinct traits. These were the early days. Then as time went on people
+started to realize that weak nuclear force and electromagnetic force
+were the same sort. That was after discovering that electricity and
+magnetism were the same, and that is the pattern. It’s called symmetry,
+equivalence, and so on.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="/pages/overview.html"&gt;Nuitka&lt;/a&gt; project is effectively a Python
+research that goes through the same steps. There are e.g. currently
+local variables, closure variables (shared from containing function),
+module variables, temp holder, temp keeper, and temp variables.&lt;/p&gt;
+&lt;p&gt;Often when I added one more this was driven by code generation needs or
+deficiencies at the time. These are of course way too many, and all are
+good at one thing only.&lt;/p&gt;
+&lt;p&gt;So the main task Nuitka is faced with now to e.g. generalize that “temp
+keeper” variables are temporary variables local to one statement only,
+surely to be released afterwards, and make that particular feature e.g.
+work for all variables across the board. Right now, code generation uses
+“cheats” where it puts a C++ block and local declarations for “temp
+keeper” variables.&lt;/p&gt;
+&lt;p&gt;It would be good, if it could be a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;try&lt;/span&gt;&lt;/code&gt; with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;del&lt;/span&gt;&lt;/code&gt; statement on the
+“temp keeper variable” in its &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;finally&lt;/span&gt;&lt;/code&gt; part and yet, get the same
+code generated. Difficult, yes, but not impossible, and definitely what
+I am aiming at.&lt;/p&gt;
+&lt;p&gt;So that is what Nuitka will be dealing with in the next releases. Once
+done, maybe there will be a “gravity”, i.e. the one thing not yet
+harmonized, but for good reasons. Potentially limited due to lack of
+understanding, potentially because there is a good reason. And so not
+all we be unified or maybe e.g. module variables will be a bit more
+special than local variables, although modules are just functions with
+variables writable everywhere.&lt;/p&gt;
+&lt;p&gt;Good stuff is coming, hold on. &lt;a class="reference external" href="/doc/user-manual.html#join-nuitka"&gt;Join the project&lt;/a&gt;, or support it financially if you
+wish.&lt;/p&gt;
+&lt;p&gt;Nuitka still is too much of a one man show. Should I be asked to name
+one single weakness of it - that would be it.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-python-research-and-physics.html" rel="alternate"/>
+    <summary>Once upon a time ago physics had multiple forces. Each with very
+distinct traits. These were the early days. Then as time went on people
+started to realize that weak nuclear force and electromagnetic force
+were the same sort. That was after discovering that electricity and
+magnetism were the same, and that is the pattern. It’s called symmetry,
+equivalence, and so on.</summary>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <category term="physics" label="physics"/>
+    <published>2013-10-04T09:54:45+00:00</published>
+  </entry>
+</feed>

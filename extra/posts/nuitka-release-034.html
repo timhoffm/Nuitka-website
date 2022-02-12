@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka Release 0.3.4</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-034.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-release-0-3-4">
+<h1>Nuitka Release 0.3.4<a class="headerlink" href="#nuitka-release-0-3-4" title="Permalink to this headline"></a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/sites/download.html">“download now”</a>.</p>
+<p>This new release of Nuitka has a focus on re-organizing the Nuitka
+generated source code and a modest improvement on the performance side.</p>
+<p>For a long time now, Nuitka has generated a single C++ file and asked
+the C++ compiler to translate it to an executable or shared library for
+CPython to load. This was done even when embedding many modules into one
+(the “deep” compilation mode, option <code class="docutils literal notranslate"><span class="pre">--deep</span></code>).</p>
+<p>This was simple to do and in theory ought to allow the compiler to do
+the most optimization. But for large programs, the resulting source code
+could have exponential compile time behavior in the C++ compiler. At
+least for the GNU g++ this was the case, others probably as well. This
+is of course at the end a scalability issue of Nuitka, which now has
+been addressed.</p>
+<p>So the major advancement of this release is to make the <code class="docutils literal notranslate"><span class="pre">--deep</span></code>
+option useful. But also there have been a performance improvements,
+which end up giving us another boost for the “PyStone” benchmark.</p>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Imports of modules local to packages now work correctly, closing the
+small compatibility gap that was there.</p></li>
+<li><p>Modules with a “-” in their name are allowed in CPython through
+dynamic imports. This lead to wrong C++ code created. (Thanks to Li
+Xuan Ji for reporting and submitting a patch to fix it.)</p></li>
+<li><p>There were warnings about wrong format used for <code class="docutils literal notranslate"><span class="pre">Ssize_t</span></code> type of
+CPython. (Again, thanks to Li Xuan Ji for reporting and submitting
+the patch to fix it.)</p></li>
+<li><p>When a wrong exception type is raised, the traceback should still be
+the one of the original one.</p></li>
+<li><p>Set and dict contractions (Python 2.7 features) declared local
+variables for global variables used. This went unnoticed, because
+list contractions don’t generate code for local variables at all, as
+they cannot have such.</p></li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">type()</span></code> built-in to create a new class could attribute
+it to the wrong module, this is now corrected.</p></li>
+</ul>
+</section>
+<section id="new-features">
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Uses Scons to execute the actual C++ build, giving some immediate
+improvements.</p></li>
+<li><p>Now caches build results and Scons will only rebuild as needed.</p></li>
+<li><p>The direct use of <code class="docutils literal notranslate"><span class="pre">__import__()</span></code> with a constant module name as
+parameter is also followed in “deep” mode. With time, non-constants
+may still become predictable, right now it must be a real CPython
+constant string.</p></li>
+</ul>
+</section>
+<section id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Added optimization for the built-ins <code class="docutils literal notranslate"><span class="pre">ord()</span></code> and <code class="docutils literal notranslate"><span class="pre">chr()</span></code>, these
+require a module and built-in module lookup, then parameter parsing.
+Now these are really quick with Nuitka.</p></li>
+<li><p>Added optimization for the <code class="docutils literal notranslate"><span class="pre">type()</span></code> built-in with one parameter. As
+above, using from builtin module can be very slow. Now it is
+instantaneous.</p></li>
+<li><p>Added optimization for the <code class="docutils literal notranslate"><span class="pre">type()</span></code> built-in with three parameters.
+It’s rarely used, but providing our own variant, allowed to fix the
+bug mentioned above.</p></li>
+</ul>
+</section>
+<section id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Using scons is a big cleanup for the way how C++ compiler related
+options are applied. It also makes it easier to re-build without
+Nuitka, e.g. if you were using Nuitka in your packages, you can
+easily build in the same way than Nuitka does.</p></li>
+<li><p>Static helpers source code has been moved to “.hpp” and “.cpp” files,
+instead of being in “.py” files. This makes C++ compiler messages
+more readable and allows us to use C++ mode in Emacs etc., making it
+easier to write things.</p></li>
+<li><p>Generated code for each module ends up in a separate file per module
+or package.</p></li>
+<li><p>Constants etc. go to their own file (although not named sensible yet,
+likely going to change too)</p></li>
+<li><p>Module variables are now created by the <code class="docutils literal notranslate"><span class="pre">CPythonModule</span></code> node only
+and are unique, this is to make optimization of these feasible. This
+is a pre-step to module variable optimization.</p></li>
+</ul>
+</section>
+<section id="new-tests">
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Added “ExtremeClosure” from my Python quiz, it was not covered by
+existing tests.</p></li>
+<li><p>Added test case for program that imports a module with a dash in its
+name.</p></li>
+<li><p>Added test case for main program that starts with a dash.</p></li>
+<li><p>Extended the built-in tests to cover <code class="docutils literal notranslate"><span class="pre">type()</span></code> as well.</p></li>
+</ul>
+</section>
+<section id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>There is now a new environment variable <code class="docutils literal notranslate"><span class="pre">NUITKA_SCONS</span></code> which should
+point to the directory with the <code class="docutils literal notranslate"><span class="pre">SingleExe.scons</span></code> file for Nuitka.
+The scons file could be named better, because it is actually one and
+the same who builds extension modules and executables.</p></li>
+<li><p>There is now a new environment variable <code class="docutils literal notranslate"><span class="pre">NUITKA_CPP</span></code> which should
+point to the directory with the C++ helper code of Nuitka.</p></li>
+<li><p>The script “create-environment.sh” can now be sourced (if you are in
+the top level directory of Nuitka) or be used with eval. In either
+case it also reports what it does.</p>
+<div class="admonition-update admonition">
+<p class="admonition-title">Update</p>
+<p>The script has become obsolete now, as the environment variables
+are no longer necessary.</p>
+</div>
+</li>
+<li><p>To cleanup the many “Program.build” directories, there is now a
+“clean-up.sh” script for your use. Can be handy, but if you use git,
+you may prefer its clean command.</p>
+<div class="admonition-update admonition">
+<p class="admonition-title">Update</p>
+<p>The script has become obsolete now, as Nuitka test executions now
+by default delete the build results.</p>
+</div>
+</li>
+</ul>
+</section>
+<section id="numbers">
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
+<p>python 2.6:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
+<span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mf">76923.1</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>
+</pre></div>
+</div>
+<p>Nuitka 0.3.4:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.34</span>
+<span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mi">147059</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>
+</pre></div>
+</div>
+<p>This is 91% for 0.3.4, up from 80% before.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="nuitka-pre-release-034pre1.html">
+       Nuitka Pre-Release 0.3.4pre1
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="python-float-quiz.html">
+      Quiz Question 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-034.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-034.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-034.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

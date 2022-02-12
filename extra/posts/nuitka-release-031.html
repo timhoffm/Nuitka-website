@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka Release 0.3.1</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-031.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-release-0-3-1">
+<h1>Nuitka Release 0.3.1<a class="headerlink" href="#nuitka-release-0-3-1" title="Permalink to this headline"></a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/sites/download.html">“download now”</a>.</p>
+<p>This release of Nuitka continues the focus on performance and contains
+only cleanups and optimization. Most go into the direction of more
+readable code, some aim at making the basic things faster, with good
+results as to performance as you can see below.</p>
+<section id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>Constants in conditions of conditional expressions (<code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">if</span> <span class="pre">cond</span> <span class="pre">else</span>
+<span class="pre">d</span></code>), <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code> are now evaluated to <code class="docutils literal notranslate"><span class="pre">true</span></code> or
+<code class="docutils literal notranslate"><span class="pre">false</span></code> directly. Before there would be temporary python object
+created from it which was then checked if it had a truth value.</p>
+<p>All of that is obviously overhead only. And it hurts the typically
+<code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">1:</span></code> infinite loop case badly.</p>
+</li>
+<li><p>Do not generate code to catch <code class="docutils literal notranslate"><span class="pre">BreakException</span></code> or
+<code class="docutils literal notranslate"><span class="pre">ContinueException</span></code> unless a <code class="docutils literal notranslate"><span class="pre">break</span></code> or <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement
+being in a <code class="docutils literal notranslate"><span class="pre">try:</span> <span class="pre">finally:</span></code> block inside that loop actually require
+this.</p>
+<p>Even while uncaught exceptions are cheap, it is still an improvement
+worthwhile and it clearly improves the readability for the normal
+case.</p>
+</li>
+<li><p>The compiler more aggressively prepares tuples, lists and dicts from
+the source code as constants if their contents is “immutable” instead
+of building at run time. An example of a “mutable” tuple would be
+<code class="docutils literal notranslate"><span class="pre">({},)</span></code> which is not safe to share, and therefore will still be
+built at run time.</p>
+<p>For dictionaries and lists, copies will be made, under the assumption
+that copying a dictionary will always be faster, than making it from
+scratch.</p>
+</li>
+<li><p>The parameter parsing code was dynamically building the tuple of
+argument names to check if an argument name was allowed by checking
+the equivalent of <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">in</span> <span class="pre">argument_names</span></code>. This was of course
+wasteful and now a pre-built constant is used for this, so it should
+be much faster to call functions with keyword arguments.</p></li>
+<li><p>There are new templates files and also actual templates now for the
+<code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loop code generation. And I started work on
+having a template for assignments.</p></li>
+</ul>
+</section>
+<section id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>Do not generate code for the else of <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops if
+there is no such branch. This uncluttered the generated code
+somewhat.</p></li>
+<li><p>The indentation of the generated C++ was not very good and whitespace
+was often trailing, or e.g. a real tab was used instead of “t”. Some
+things didn’t play well together here.</p>
+<p>Now much of the generated C++ code is much more readable and white
+space cleaner. For optimization to be done, the humans need to be
+able to read the generated code too. Mind you, the aim is not to
+produce usable C++, but on the other hand, it must be possible to
+understand it.</p>
+</li>
+<li><p>To the same end of readability, the empty <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">{}</span></code> branches are
+avoided for <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops. While the C++
+compiler can be expected to remove these, they seriously cluttered up
+things.</p></li>
+<li><p>The constant management code in <code class="docutils literal notranslate"><span class="pre">Context</span></code> was largely simplified.
+Now the code is using the <code class="docutils literal notranslate"><span class="pre">Constant</span></code> class to find its way around
+the problem that dicts, sets, etc. are not hashable, or that
+<code class="docutils literal notranslate"><span class="pre">complex</span></code> is not being ordered; this was necessary to allow deeply
+nested constants, but it is also a simpler code now.</p></li>
+<li><p>The C++ code generated for functions now has two entry points, one
+for Python calls (arguments as a list and dictionary for parsing) and
+one where this has happened successfully. In the future this should
+allow for faster function calls avoiding the building of argument
+tuples and dictionaries all-together.</p></li>
+<li><p>For every function there was a “traceback adder” which was only used
+in the C++ exception handling before exit to CPython to add to the
+traceback object. This was now in-lined, as it won’t be shared ever.</p></li>
+</ul>
+</section>
+<section id="numbers">
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
+<p>python 2.6:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
+<span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mf">76923.1</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>
+</pre></div>
+</div>
+<p>Nuitka 0.3.1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.41</span>
+<span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mi">121951</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>
+</pre></div>
+</div>
+<p>This is 58% for 0.3.1, up from the 25% before. So it’s getting
+somewhere. As always you will find its latest version here.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="nuitka-release-030.html">
+       Nuitka Release 0.3.0
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="nuitka-release-032.html">
+      Nuitka Release 0.3.2 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-031.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-031.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-031.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
