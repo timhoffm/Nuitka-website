@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuitka Release 0.5.11</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0511.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">用户手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">商业用户</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">发行信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">路线图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">开发者手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">工厂说明书</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">影音</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">演讲稿</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">流媒体</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">建设中</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-release-0-5-11">
+<h1>Nuitka Release 0.5.11<a class="headerlink" href="#nuitka-release-0-5-11" title="永久链接至标题"></a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<p>The last release represented a significant change and introduced a few
+regressions, which got addressed with hot fix releases. But it also had
+a focus on cleaning up open optimization issues that were postponed in
+the last release.</p>
+<section id="new-features">
+<h2>New Features<a class="headerlink" href="#new-features" title="永久链接至标题"></a></h2>
+<ul>
+<li><p>The filenames of source files as found in the <code class="docutils literal notranslate"><span class="pre">__file__</span></code> attribute
+are now made relative for all modes, not just standalone mode.</p>
+<p>This makes it possible to put data files along side compiled modules
+in a deployment.</p>
+</li>
+</ul>
+</section>
+<section id="bug-fixes">
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="永久链接至标题"></a></h2>
+<ul>
+<li><p>Local functions that reference themselves were not released. They now
+are.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">someFunction</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+        <span class="n">f</span><span class="p">()</span>  <span class="c1"># referencing &#39;f&#39; in &#39;f&#39; caused the garbage collection to fail.</span>
+</pre></div>
+</div>
+<p>Recent changes to code generation attached closure variable values to
+the function object, so now they can be properly visited. Fixed in
+0.5.10.1 already.</p>
+</li>
+<li><p>Python2.6: The complex constants with real or imaginary parts
+<code class="docutils literal notranslate"><span class="pre">-0.0</span></code> were collapsed with constants of value <code class="docutils literal notranslate"><span class="pre">0.0</span></code>. This became
+more evident after we started to optimize the <code class="docutils literal notranslate"><span class="pre">complex</span></code> built-in.
+Fixed in 0.5.10.1 already.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">complex</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="nb">complex</span><span class="p">(</span><span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">)</span>  <span class="c1"># Could be confused with the above.</span>
+</pre></div>
+</div>
+</li>
+<li><p>Complex call helpers could leak references to their arguments. This
+was a regression. Fixed in 0.5.10.1 already.</p></li>
+<li><p>Parameter variables offered as closure variables were not properly
+released, only the cell object was, but not the value. This was a
+regression. Fixed in 0.5.10.1 already.</p></li>
+<li><p>Compatibility: The exception type given when accessing local variable
+values not initialized in a closure taking function, needs to be
+<code class="docutils literal notranslate"><span class="pre">NameError</span></code> and <code class="docutils literal notranslate"><span class="pre">UnboundLocalError</span></code> for accesses in the providing
+function. Fixed in 0.5.10.1 already.</p></li>
+<li><p>Fix support for “venv” on systems, where the system Python uses
+symbolic links too. This is the case on at least on Mageia Linux.
+Fixed in 0.5.10.2 already.</p></li>
+<li><p>Python3.4: On systems where <code class="docutils literal notranslate"><span class="pre">long</span></code> and <code class="docutils literal notranslate"><span class="pre">Py_ssize_t</span></code> are different
+(e.g. Win64) iterators could be corrupted if used by uncompiled
+Python code. Fixed in 0.5.10.2 already.</p></li>
+<li><p>Fix, generator objects didn’t release weak references to them
+properly. Fixed in 0.5.10.2 already.</p></li>
+<li><p>Compatibility: The <code class="docutils literal notranslate"><span class="pre">__closure__</span></code> attributes of functions was so far
+not supported, and rarely missing. Recent changes made it easy to
+expose, so now it was added.</p></li>
+<li><p>macOS: A linker warning about deprecated linker option <code class="docutils literal notranslate"><span class="pre">-s</span></code> was
+solved by removing the option.</p></li>
+<li><p>Compatibility: Nuitka was enforcing that the <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> attribute to
+be a string object, and gave a misleading error message. This check
+must not be done though, <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> can be any type in Python.</p></li>
+</ul>
+</section>
+<section id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="永久链接至标题"></a></h2>
+<ul>
+<li><p>Variables that need not be shared, because the uses in closure taking
+functions were eliminated, no longer use cell objects.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> and <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">finally</span></code> statements now both
+have actual merging for SSA, allowing for better optimization of code
+behind it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">something</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+
+    <span class="c1"># Since the above exception handling cannot continue the code flow,</span>
+    <span class="c1"># we do not have to invalidate the trace of &quot;a&quot;, and e.g. do not have</span>
+    <span class="c1"># to generate code to check if it&#39;s assigned.</span>
+    <span class="k">return</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>Since <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">finally</span></code> is used in almost all re-formulations of
+complex Python constructs this is improving SSA application widely.
+The uses of <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> in user code will no longer degrade
+optimization and code generation efficiency as much as they did.</p>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> statement now reduces the scope of tried block
+if possible. When no statement raised, already the handling was
+removed, but leading and trailing statements that cannot raise, were
+not considered.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">something</span><span class="p">()</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>This is now optimized to.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+
+    <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">something</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>The impact may on execution speed may be marginal, but it is
+definitely going to improve the branch merging to be added later.
+Note that <code class="docutils literal notranslate"><span class="pre">c</span></code> can only be optimized, because the exception handler
+is aborting, otherwise it would change behaviour.</p>
+</li>
+<li><p>The creation of code objects for standalone mode and now all code
+objects was creating a distinct filename object for every function in
+a module, despite them being same content. This was wasteful for
+module loading. Now it’s done only once.</p>
+<p>Also, when having multiple modules, the code to build the run time
+filename used for code objects, was calling import logic, and doing
+lookups to find <code class="docutils literal notranslate"><span class="pre">os.path.join</span></code> again and again. These are now
+cached, speeding up the use of many modules as well.</p>
+</li>
+</ul>
+</section>
+<section id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="永久链接至标题"></a></h2>
+<ul>
+<li><p>Nuitka used to have “variable usage profiles” and still used them to
+decide if a global variable is written to, in which case, it stays
+away from doing optimization of it to built-in lookups, and later
+calls.</p>
+<p>The have been replaced by “global variable traces”, which collect the
+traces to a variable across all modules and functions. While this is
+now only a replacement, and getting rid of old code, and basing on
+SSA, later it will also allow to become more correct and more
+optimized.</p>
+</li>
+<li><p>The standalone now queries its hidden dependencies from a plugin
+framework, which will become an interface to Nuitka internals in the
+future.</p></li>
+</ul>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>The use of deep hashing of constants allows us to check if constants
+become mutated during the run-time of a program. This allows to
+discover corruption should we encounter it.</p></li>
+<li><p>The tests of CPython are now also run with Python in debug mode, but
+only on Linux, enhancing reference leak coverage.</p></li>
+<li><p>The CPython test parts which had been disabled due to reference
+cycles involving compiled functions, or usage of <code class="docutils literal notranslate"><span class="pre">__closure__</span></code>
+attribute, were reactivated.</p></li>
+</ul>
+</section>
+<section id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="永久链接至标题"></a></h2>
+<ul class="simple">
+<li><p>Since Google Code has shutdown, it has been removed from the Nuitka
+git mirrors.</p></li>
+</ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>This release brings exciting new optimization with the focus on the
+<code class="docutils literal notranslate"><span class="pre">try</span></code> constructs, now being done more optimal. It is also a
+maintenance release, bringing out compatibility improvements, and
+important bug fixes, and important usability features for the deployment
+of modules and packages, that further expand the use cases of Nuitka.</p>
+<p>The git flow had to be applied this time to get out fixes for regression
+bug fixes, that the big change of the last release brought, so this is
+also to consolidate these and the other corrections into a full release
+before making more invasive changes.</p>
+<p>The cleanups are leading the way to expanded SSA applied to global
+variable and shared variable values as well. Already the built-in detect
+is now based on global SSA information, which was an important step
+ahead.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="nuitka-release-0510.html">
+       Nuitka Release 0.5.10
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-release-0512.html">
+      Nuitka Release 0.5.12 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0511.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0511.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0511.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

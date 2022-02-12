@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python3 support by Nuitka is upcoming</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/python-3-nuitka-support-is-upcoming.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">用户手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">商业用户</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">发行信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">路线图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">开发者手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">工厂说明书</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">影音</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">演讲稿</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">流媒体</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">建设中</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="python3-support-by-nuitka-is-upcoming">
+<h1>Python3 support by Nuitka is upcoming<a class="headerlink" href="#python3-support-by-nuitka-is-upcoming" title="永久链接至标题"></a></h1>
+<p>This is kind of semi-interesting news for you Python3 lovers. My
+<a class="reference external" href="/pages/overview.html">“Python compiler Nuitka”</a> has been supporting
+the language somewhat, but in the next release it’s going to be
+<em>complete</em>.</p>
+<p>Support for annotations, unicode variable names, keyword only arguments,
+starred assignments, exception chaining plus causes, and full support
+for new meta classes all have been added. So Python3.2 is covered now
+too and passing the test suite on about the same level as with Python2.6
+and Python2.7 already.</p>
+<p>I readied this while working on optimization, which is also seeing some
+progress, that I will report on another day. Plus it’s <a class="reference external" href="http://pypi.python.org/pypi/Nuitka/">“available now
+on PyPI”</a> too. At the time of
+this writing, there is pre-releases there, but after next release, there
+will only stable releases published.</p>
+<p>My quick take on the Python3 that I saw:</p>
+<section id="keyword-only-arguments">
+<h2>Keyword Only Arguments<a class="headerlink" href="#keyword-only-arguments" title="永久链接至标题"></a></h2>
+<p>Now seriously. I didn’t miss that. And I am going to hate the extra
+effort it causes to implement argument parsing. And when I looked into
+default handling, I was just shocked:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span> <span class="n">some_arg</span> <span class="o">=</span> <span class="n">function1</span><span class="p">(),</span> <span class="o">*</span><span class="p">,</span> <span class="n">some_key_arg</span> <span class="o">=</span> <span class="n">function2</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>What would you expect the evaluation order to be for defaults? I raised
+a CPython <a class="reference external" href="http://bugs.python.org/issue16967">“bug report”</a> about it.
+And I am kind of shocked this could be wrong.</p>
+</section>
+<section id="annotations">
+<h2>Annotations<a class="headerlink" href="#annotations" title="永久链接至标题"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span> <span class="n">arg1</span> <span class="p">:</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_int</span><span class="p">,</span> <span class="n">arg2</span> <span class="p">:</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_int</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_long</span>
+   <span class="k">return</span> <span class="n">arg1</span><span class="o">+</span><span class="n">arg2</span>
+</pre></div>
+</div>
+<p>That looks pretty promising. I had known about that already, and I
+guess, whatever “hints” idea, we come up with Nuitka, it should at least
+allow this notation. Unfortunately, evaluation order of annotations is
+not that great either. I would expected them to come first, but they
+come last. Coming last, they kind of come too late to accept do anything
+with defaults.</p>
+</section>
+<section id="unicode-variables">
+<h2>Unicode Variables<a class="headerlink" href="#unicode-variables" title="永久链接至标题"></a></h2>
+<p>Now great. While it’s one step closer to “you can’t re-enter any
+identifier without copy&amp;paste”, it is also a whole lot more consistent,
+if you come e.g. from German or French and need only a few extra
+letters. And there has to be at least one advantage to making everything
+unicode, right?</p>
+</section>
+<section id="exception-chaining">
+<h2>Exception Chaining<a class="headerlink" href="#exception-chaining" title="永久链接至标题"></a></h2>
+<p>Gotta love that. Exception handlers are often subject to bit rot. They
+will themselves contain errors, when they are actually used, hiding the
+important thing that happened. No more. That’s great.</p>
+<p>The exception causes on the other hand, might be useful, but I didn’t
+see them a lot yet. That’s probably because they are too new.</p>
+</section>
+<section id="starred-assigns">
+<h2>Starred Assigns<a class="headerlink" href="#starred-assigns" title="永久链接至标题"></a></h2>
+<p>I was wondering already, why that didn’t work before.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">something</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="metaclass-prepare">
+<h2>Metaclass __prepare__<a class="headerlink" href="#metaclass-prepare" title="永久链接至标题"></a></h2>
+<p>That’s great stuff. Wish somebody had thought about meta classes that
+way from the outset.</p>
+</section>
+<section id="nonlocal">
+<h2>nonlocal<a class="headerlink" href="#nonlocal" title="永久链接至标题"></a></h2>
+<p>Yeah, big stuff. I love it. Also being able to write closure variables
+is great for consistency.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="永久链接至标题"></a></h2>
+<p>Nothing ground breaking. Nothing that makes me give up on Python2.7 yet,
+but a bunch of surprises. And for Nuitka, this also found bugs and
+corner cases, where things were not yet properly tested. The Python3
+test suite, inspired the finding of some obscure compatibility problems
+for sure.</p>
+<p>Overall, it’s possible to think of Python2 and Python3 as still the same
+language with only minor semantic differences. These can then be dealt
+with re-formulations into the simpler Python that Nuitka optimization
+deals with internally.</p>
+<p>I for my part, am still missing the <code class="docutils literal notranslate"><span class="pre">print</span></code> statement. But well, now
+Python3 finds them when I accidentally check them in. So that’s kind of
+a feature for as long as I develop in Python2.6/2.7 language.</p>
+<p>Now if one of you would help out with Python3.3, that would be great. It
+would be about the new dictionary implementation mostly. And maybe
+finding a proper re-formulation for “yield from” too.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     上一页:
+    
+    <a href="static-compilation-that-is-the-point.html">
+       Static Compilation - That is the point
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     下一页: 
+    <a href="nuitka-release-040.html">
+      Nuitka Release 0.4.0 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/python-3-nuitka-support-is-upcoming.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/python-3-nuitka-support-is-upcoming.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/python-3-nuitka-support-is-upcoming.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
