@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,30 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Re: About Python 3</title>
-      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
-      <link rel="canonical" href="https://nuitka.net/posts/re-about-python-3.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/re-about-python-3.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="search" title="Search" href="../search.html">   
-<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -67,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -117,7 +121,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -128,27 +132,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="re-about-python-3">
-<h1>Re: About Python 3<a class="headerlink" href="#re-about-python-3" title="Permalink to this headline">&#61633;</a></h1>
-<p>In <a class="reference external" href="http://alexgaynor.net/2013/dec/30/about-python-3/" target="_blank">Alex Gaynor&#8217;s post</a> there is just
+<h1>Re: About Python 3<a class="headerlink" href="#re-about-python-3" title="Permalink to this headline"></a></h1>
+<p>In <a class="reference external" href="http://alexgaynor.net/2013/dec/30/about-python-3/">Alex Gaynor’s post</a> there is just
 about everything right. I still want to add my take on it.</p>
 <p>Python3 is a fork of the Python community, that has left the user base
 largely behind. After developing features very conservatively for a long
 time (<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">division</span></code> and stuff), where features
-were first available but not active by default, that whole &#8220;Python 3000&#8221;
+were first available but not active by default, that whole “Python 3000”
 thing came up.</p>
 <p>Misguided, after having maintained CPython on a level of excellence for
-such a long time, there was a sense of &#8220;finally we get to make free
-choices&#8221;. I can understand that. And having witnessed Gnome 2.0.0, and
+such a long time, there was a sense of “finally we get to make free
+choices”. I can understand that. And having witnessed Gnome 2.0.0, and
 KDE 4.0.0, I even start to believe that there is some kind of underlying
 law. Something that makes people want to start over.</p>
-<p>That &#8220;5 years plan&#8221; Alex mentioned has failed, and everybody knows that
+<p>That “5 years plan” Alex mentioned has failed, and everybody knows that
 without solving the GIL within the next 5 years, i.e. another
 incompatible Python change, it will likely become obsolete.</p>
 <p>In terms of Python2.8, call it that way. Or have a 3.5 that has
 <code class="docutils literal notranslate"><span class="pre">print</span></code> statement, and then all kinds of incompatible changes to
 Python3 to make it behave sane <code class="docutils literal notranslate"><span class="pre">bytes(7)</span></code> needs to do what <code class="docutils literal notranslate"><span class="pre">str(7)</span></code>
 once it. That would be about <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__past__</span> <span class="pre">import</span> <span class="pre">....</span></code> I suppose.</p>
-<p>I also had another idea, having a &#8220;python2&#8221; built-in module that carries
+<p>I also had another idea, having a “python2” built-in module that carries
 a CPython2 interpreter and proxy objects for instances, where they talk
 to another with incompatible types (new <code class="docutils literal notranslate"><span class="pre">bytes</span></code>/<code class="docutils literal notranslate"><span class="pre">unicode</span></code> to old
 <code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
@@ -159,7 +163,7 @@ kind of CPython2/CPython3 hybrid.</p>
 <ol class="arabic">
 <li><p>CPython is developed by volunteers, and as such, they are neither
 obliged to do what we need, nor will they bend to any amount of
-posting. We need to get our acts together or it&#8217;s not happening, and
+posting. We need to get our acts together or it’s not happening, and
 we are people who care about Python relevancy.</p>
 <p>There may not be nearly enough overlap of people capable and caring.
 And that would be a tremendous amount of work. Highly speculative, in
@@ -167,14 +171,14 @@ the sense, that it may not see fruits.</p>
 </li>
 <li><p>And then, when you got that sorted out, expect a hostile reaction
 from the core developers and/or PSF. Whatever it is, that you
-develop, you won&#8217;t be able to call it Python 2.8, as they are going
+develop, you won’t be able to call it Python 2.8, as they are going
 to hate it.</p></li>
 <li><p>And finally, as a course of action, that may even bring the complete
 downfall of Python as a community. The controversy associated is not
-for everybody, and we don&#8217;t need a libreoffice/openoffice situation
+for everybody, and we don’t need a libreoffice/openoffice situation
 in Python, do we.</p></li>
 </ol>
-<p>It&#8217;s a pity, because clearly, for Nuitka there would be a bunch of
+<p>It’s a pity, because clearly, for Nuitka there would be a bunch of
 patches, that I would like to make, that would make my life far easier,
 and even interpreted Python faster.</p>
 </section>
@@ -191,7 +195,7 @@ and even interpreted Python faster.</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-release-050.html">
@@ -207,29 +211,29 @@ and even interpreted Python faster.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/re-about-python-3.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/re-about-python-3.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png" width="24" height="24">
+                    <img src="/_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/re-about-python-3.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/re-about-python-3.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png" width="24" height="24">
+                    <img src="/_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -239,7 +243,7 @@ and even interpreted Python faster.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/re-about-python-3.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png" width="24" height="24">
+                    <img src="/_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -255,5 +259,11 @@ and even interpreted Python faster.</p>
       </div>
     </section>
   </div>
-  </body>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,30 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intro</title>
-      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
-      <link rel="canonical" href="https://nuitka.net/posts/tommy-gsoc-summary.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/tommy-gsoc-summary.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="search" title="Search" href="../search.html">   
-<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -67,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -117,7 +121,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -128,15 +132,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="intro">
-<h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline"></a></h1>
 <p>As Google Summer of Code (GSoC) is coming to an end, I am writing this
 blog post as a final summary describing all the work I have done as well
 as my experiences in this program.</p>
 </section>
 <section id="summary-of-my-work">
-<h1>Summary of My Work<a class="headerlink" href="#summary-of-my-work" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Summary of My Work<a class="headerlink" href="#summary-of-my-work" title="Permalink to this headline"></a></h1>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/314" target="_blank">#314 run_all.py new special-comment mechanism &amp; Urllib3Using.py</a></p>
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/314">#314 run_all.py new special-comment mechanism &amp; Urllib3Using.py</a></p>
 <ul>
 <li><p>Before GSoC started, I looked around for whatever work I could
 help with.</p></li>
@@ -152,13 +156,13 @@ depending on if its specified requirements are met.</p></li>
 opportunity of GSoC 2019 with Nuitka :)</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/339" target="_blank">#339 Standalone tests for botocore &amp; boto3 + fix to Urllib3Using.py</a></p>
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/339">#339 Standalone tests for botocore &amp; boto3 + fix to Urllib3Using.py</a></p>
 <ul>
 <li><p>This PR was also created before the start of GSoC.</p></li>
 <li><p>Standalone test <code class="docutils literal notranslate"><span class="pre">Boto3Using.py</span></code> was created using <code class="docutils literal notranslate"><span class="pre">moto</span></code> to
 mock AWS calls which did not turn out well.</p></li>
 <li><p>Changed <code class="docutils literal notranslate"><span class="pre">Urllib3Using.py</span></code> with the addition of python version
-checks as a fix to <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/373" target="_blank">Issue #373</a>.</p></li>
+checks as a fix to <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/373">Issue #373</a>.</p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="https://nuitka.net/posts/urllib3-wheel-with-nuitka.html">Urllib3 Wheel with Nuitka Pytest Results</a> and
@@ -180,11 +184,11 @@ pollution.</p></li>
 <li><p>Over the course of performing manual testing, I became familiar
 with the use of <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>, <code class="docutils literal notranslate"><span class="pre">wheel</span></code>, and <code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p></li>
 <li><p>A bug was found with the package <code class="docutils literal notranslate"><span class="pre">urllib3</span></code> bdist and I created
-<a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/413" target="_blank">Issue #413</a> to
+<a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/413">Issue #413</a> to
 document the bug.</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/440" target="_blank">#440 Automating PyPI Wheel Pytest</a></p>
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/440">#440 Automating PyPI Wheel Pytest</a></p>
 <ul>
 <li><p>After familiarizing myself with how <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>, <code class="docutils literal notranslate"><span class="pre">wheel</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">pytest</span></code> work, I started to work on a script which would
@@ -194,7 +198,7 @@ already existing in the local cache, else it will <code class="docutils literal 
 that package into the local cache.</p></li>
 <li><p>The script then uses calls to <code class="docutils literal notranslate"><span class="pre">os.system</span></code> to automate the
 creation of a <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> which is then used to install
-<code class="docutils literal notranslate"><span class="pre">pytest</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> the package&#8217;s requirements (if any)
+<code class="docutils literal notranslate"><span class="pre">pytest</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> the package’s requirements (if any)
 for running pytest.</p></li>
 <li><p>The script then handles each package depending on different needs
 before building a regular wheel with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span>
@@ -222,7 +226,7 @@ tested.</p></li>
 developers of Nuitka regressions.</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/477" target="_blank">Issue #477 Unable to compile modules listed under
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/477">Issue #477 Unable to compile modules listed under
 unworthy_namespaces</a></p>
 <ul>
 <li><p>Raised due to package <code class="docutils literal notranslate"><span class="pre">pycparser</span></code> failing in the automated test
@@ -230,10 +234,10 @@ suite.</p></li>
 <li><p>This issue will be addressed in the future.</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/479" target="_blank">Issue #479 bdist_nuitka fails for packages containing py_modules
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/479">Issue #479 bdist_nuitka fails for packages containing py_modules
 only</a></p>
 <ul>
-<li><p>While I worked on <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/440" target="_blank">#440</a>, I found a bug with
+<li><p>While I worked on <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/440">#440</a>, I found a bug with
 <code class="docutils literal notranslate"><span class="pre">bdist_nuitka</span></code> failing on PyPI packages containing py_modules
 only.</p></li>
 <li><p>This bug occurs due to Nuitka making the assumption that a main
@@ -243,10 +247,10 @@ contain only a main module and not a main package.</p></li>
 <code class="docutils literal notranslate"><span class="pre">pyparsing</span></code>.</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/483" target="_blank">#483 Add support for py_modules_only compilation</a></p>
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/483">#483 Add support for py_modules_only compilation</a></p>
 <ul>
 <li><p>This pull request changes <code class="docutils literal notranslate"><span class="pre">bdist_nuitka.py</span></code> and various other
-files to fix <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/479" target="_blank">Issue #479</a>.</p></li>
+files to fix <a class="reference external" href="https://github.com/Nuitka/Nuitka/issues/479">Issue #479</a>.</p></li>
 <li><p>Checks are added for the <code class="docutils literal notranslate"><span class="pre">bdist_nuitka</span></code> command to see if a main
 package exists. If there is not a main package, it will set its
 compile target to the main module instead.</p></li>
@@ -256,25 +260,25 @@ resulting wheel.</p></li>
 <li><p>In addition, <code class="docutils literal notranslate"><span class="pre">distutils</span></code> examples <code class="docutils literal notranslate"><span class="pre">py_modules_only</span></code> and
 <code class="docutils literal notranslate"><span class="pre">package_and_module</span></code> were created and added for future testing.</p></li>
 <li><p>During this PR, I found an import bug in Nuitka and hotfixed it
-with <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/487" target="_blank">#487 Fixup_import_module</a>.</p></li>
+with <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/487">#487 Fixup_import_module</a>.</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/484" target="_blank">#484 PyPI Standalone Tests</a></p>
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/484">#484 PyPI Standalone Tests</a></p>
 <ul>
 <li><p>This pull request adds more standalone tests for each top PyPI
 package.</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/495" target="_blank">#495 Improve pypi automation</a></p>
+<li><p><a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/495">#495 Improve pypi automation</a></p>
 <ul>
-<li><p>Improves the PyPI test suite created in <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/440" target="_blank">#440</a> with functional
+<li><p>Improves the PyPI test suite created in <a class="reference external" href="https://github.com/Nuitka/Nuitka/pull/440">#440</a> with functional
 improvements, readability improvements, and added documentation.</p></li>
 </ul>
 </li>
 </ul>
 </section>
 <section id="things-i-learned">
-<h1>Things I Learned<a class="headerlink" href="#things-i-learned" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Things I Learned<a class="headerlink" href="#things-i-learned" title="Permalink to this headline"></a></h1>
 <p>Before GSoC, I was very uncomfortable with working inside a terminal. I
 was unfamiliar with many basic bash commands because I simply did not
 have any prior professional industrial experiences. I was also very
@@ -292,7 +296,7 @@ believe will help me go very far in my career as a software developer.</p>
 <p>Overall, the GSoC experience was truly astounding and I am more than
 thankful to my mentor Kay Hayen as well as Google for making this
 amazing program possible.</p>
-<p>Yours, <a class="reference external" href="https://github.com/tommyli3318" target="_blank">Tommy</a></p>
+<p>Yours, <a class="reference external" href="https://github.com/tommyli3318">Tommy</a></p>
 </section>
 
 <div class="section">
@@ -307,11 +311,11 @@ amazing program possible.</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      Next: 
     <a href="bksahus-gsoc-wrap-up.html">
-      bksahu&#8217;s GSoC warp up 
+      bksahu’s GSoC warp up 
     </a>
     
   </span>
@@ -323,29 +327,29 @@ amazing program possible.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/tommy-gsoc-summary.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/tommy-gsoc-summary.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png" width="24" height="24">
+                    <img src="/_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/tommy-gsoc-summary.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/tommy-gsoc-summary.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png" width="24" height="24">
+                    <img src="/_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -355,7 +359,7 @@ amazing program possible.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/tommy-gsoc-summary.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png" width="24" height="24">
+                    <img src="/_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -371,5 +375,11 @@ amazing program possible.</p>
       </div>
     </section>
   </div>
-  </body>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

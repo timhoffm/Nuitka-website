@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,30 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuitka this week #8</title>
-      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
-      <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-8.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-8.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="search" title="Search" href="../search.html">   
-<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -67,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -117,7 +121,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -128,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-8">
-<h1><a class="toc-backref" href="#id2">Nuitka this week #8</a><a class="headerlink" href="#nuitka-this-week-8" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id2">Nuitka this week #8</a><a class="headerlink" href="#nuitka-this-week-8" title="Permalink to this headline"></a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -158,7 +162,7 @@
 </ul>
 </div>
 <section id="public-private-ci-workflow">
-<h2><a class="toc-backref" href="#id3">Public / Private CI / Workflow</a><a class="headerlink" href="#public-private-ci-workflow" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id3">Public / Private CI / Workflow</a><a class="headerlink" href="#public-private-ci-workflow" title="Permalink to this headline"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>I wrote this as part of a discussion recently, and I think it makes
@@ -181,14 +185,14 @@ even more errors covered, they are ran with mismatching Python versions,
 so a lot of exceptions are raised. Often running the 36 tests with 37
 and vice versa will extend the coverage, because of the exceptions being
 raise.</p>
-<p>On Windows I compile with and without debug mode, x86 and x64, and it&#8217;s
+<p>On Windows I compile with and without debug mode, x86 and x64, and it’s
 kind of getting too much. For Linux I have 2 laptops in use, and an ARM
-CuBox bought from your donations, there it&#8217;s working better, esp. due to
+CuBox bought from your donations, there it’s working better, esp. due to
 <code class="docutils literal notranslate"><span class="pre">ccache</span></code> being used everywhere, although recent investigations show
 room for improvement there as well.</p>
 <p>For memory usage I still compile mercurial and observe the memory it
 used in addition to comparing the mercurial tests to expected outputs
-its test suite gives. It&#8217;s a sad day when Mercurial tests find changes
+its test suite gives. It’s a sad day when Mercurial tests find changes
 in behavior, and luckily that has been rare. Running the Mercurial test
 suite gives some confidence in the thing not corrupting data it works
 with without knowing.</p>
@@ -200,7 +204,7 @@ its output, which will typically not change at all.</p>
 done wonders for Windows too, but I will want to investigate some more
 to avoid unnecessary cache misses.</p>
 <section id="workflow">
-<h3><a class="toc-backref" href="#id4">Workflow</a><a class="headerlink" href="#workflow" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id4">Workflow</a><a class="headerlink" href="#workflow" title="Permalink to this headline"></a></h3>
 <p>As for my workflow with Nuitka, I often tend to let some commits settle
 in my private repo only until they become trusted. Other times I will
 make bigger changes and put them out to factory immediately, because it
@@ -209,13 +213,13 @@ easier.</p>
 <p>I am more conservative with factory right after telling people to try
 something there. But also I break it on purpose, just trying out
 something. I really consider it a private branch for interacting with me
-or public CI. I do not recommend to use it, and it&#8217;s like a permanent
+or public CI. I do not recommend to use it, and it’s like a permanent
 pull request of mine that is not ever going to be finished.</p>
 <p>Then on occasions I am making a sorting of all commits on factory and
 split it into some things that become hotfixes, some things that become
 current pre-release, and other things that will remain in that proving
 ground. That is why I typically make hotfix and pre-release at the same
-times. The git flow suggests doing that and it&#8217;s easy, so why not. As a
+times. The git flow suggests doing that and it’s easy, so why not. As a
 bonus, develop is then practically stable at nearly all times too, with
 hardly any regressions.</p>
 <p>I do however normally not take things as hotfixes that are on develop
@@ -225,24 +229,24 @@ will be on develop. Nuitka stable typically covers nearly all grounds
 already. No panic needed to add missing stuff and break others.</p>
 </section>
 <section id="hunting-bugs-with-bisect">
-<h3><a class="toc-backref" href="#id5">Hunting bugs with bisect</a><a class="headerlink" href="#hunting-bugs-with-bisect" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id5">Hunting bugs with bisect</a><a class="headerlink" href="#hunting-bugs-with-bisect" title="Permalink to this headline"></a></h3>
 <p>For me the git bisect is very important. My private commit history is
 basically a total mess and worthless, but on factory I am making very
 nice organized commits that I will frequently amend, even for the random
 PyLint cleanup. This allows me when e.g. one test suddenly says
-&#8220;segfault&#8221; on Windows to easily find the change that triggers it, look
+“segfault” on Windows to easily find the change that triggers it, look
 at C code difference, and spot the bug introduced, then amend the commit
 and be done with it.</p>
-<p>It&#8217;s amazing how much time this can save. My goal is to always have a
+<p>It’s amazing how much time this can save. My goal is to always have a
 workable state which is supposed to pass all tests. Obviously I cannot
 prove it for every commit, but when I know it to not be the case, I tend
 to make rebases. At times I have been tempted and followed up on
 backward amending develop and even stable.</p>
 <p>I am doing that to be sure to have that bisect ability, but fortunately
-it&#8217;s rare that kind of bug occurs, and I try not to do it.</p>
+it’s rare that kind of bug occurs, and I try not to do it.</p>
 </section>
 <section id="experimental-changes">
-<h3><a class="toc-backref" href="#id6">Experimental Changes</a><a class="headerlink" href="#experimental-changes" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id6">Experimental Changes</a><a class="headerlink" href="#experimental-changes" title="Permalink to this headline"></a></h3>
 <p>As with recent changes, I sometimes make changes with the
 <code class="docutils literal notranslate"><span class="pre">isExperimental()</span></code> marker, activating breaking changes only gradually.
 The C <code class="docutils literal notranslate"><span class="pre">bool</span></code> type code generation has been there for months in a
@@ -250,13 +254,13 @@ barely useful form, until it became more polished, and always guarded
 with a switch, until one day for 0.6 finally I changed it, and made the
 necessary fixes retroactively before that switch, to make it work while
 that was still in factory.</p>
-<p>Then I will remove the experimental code. I feel it&#8217;s very important and
+<p>Then I will remove the experimental code. I feel it’s very important and
 even ideal to be able to always compare outputs to a fully working
 solution. I am willing to postpone some cleanups until later date as a
-price, but when then something in my mind tells me again &#8220;This cannot
-possibly have ever worked&#8221;&#8230; a command line flag away, I have the
+price, but when then something in my mind tells me again “This cannot
+possibly have ever worked”… a command line flag away, I have the
 answer to compare, plus, that includes extra changes happened in the
-meantime, they don&#8217;t add noise to diff outputs of generated C code for
+meantime, they don’t add noise to diff outputs of generated C code for
 example.</p>
 <p>Then looking at that diff, I can tell where the unwanted effect is, and
 fix all the things, and that way find bugs much faster.</p>
@@ -264,12 +268,12 @@ fix all the things, and that way find bugs much faster.</p>
 change more viable to execute, then I get to execute it on stable
 grounds, covered by the full test suite. I can complete that cleanup,
 e.g. using variable identifier objects instead of mere strings was
-needed to make &#8220;heap generators&#8221; more workable. But I was able to put
-that one to active before &#8220;heap generators&#8221; was ever fully workable, and
+needed to make “heap generators” more workable. But I was able to put
+that one to active before “heap generators” was ever fully workable, and
 complete it, and actually reap some of its benefits already.</p>
 </section>
 <section id="hardware">
-<h3><a class="toc-backref" href="#id7">Hardware</a><a class="headerlink" href="#hardware" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id7">Hardware</a><a class="headerlink" href="#hardware" title="Permalink to this headline"></a></h3>
 <p>Obviously this takes a lot of hardware and CPU to be able to compile
 this much Python code on a regular basis. And I really wish I could add
 one of the new AMD Threadripper 2 to the mix. Anybody donating one to
@@ -277,16 +281,16 @@ me? Yes I know, I am only dreaming. But it would really help the cause.</p>
 </section>
 </section>
 <section id="milestone-release">
-<h2><a class="toc-backref" href="#id8">Milestone Release</a><a class="headerlink" href="#milestone-release" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id8">Milestone Release</a><a class="headerlink" href="#milestone-release" title="Permalink to this headline"></a></h2>
 <p>So the 0.6 is out, and already a hotfix that addresses mostly use cases
-of people that didn&#8217;t work. More people seemed to have tried out 0.6.0
+of people that didn’t work. More people seemed to have tried out 0.6.0
 and as a result 0.6.0.1 is going to cover a few corner cases. So far I
 have not encountered a single regression of 0.6.0, but instead it
 contained ones for 0.5.33 which did have one that was not easy to fix.</p>
 <p>So that went really smooth.</p>
 </section>
 <section id="ui-rework">
-<h2><a class="toc-backref" href="#id9">UI rework</a><a class="headerlink" href="#ui-rework" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id9">UI rework</a><a class="headerlink" href="#ui-rework" title="Permalink to this headline"></a></h2>
 <p>The UI needs more work still. Specifically that packages do not
 automatically include all stuff below them and have to be specified by
 file path instead of by name, is really annoying to me.</p>
@@ -294,21 +298,21 @@ file path instead of by name, is really annoying to me.</p>
 some. I will work on these things eventually.</p>
 </section>
 <section id="benchmarks">
-<h2><a class="toc-backref" href="#id10">Benchmarks</a><a class="headerlink" href="#benchmarks" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id10">Benchmarks</a><a class="headerlink" href="#benchmarks" title="Permalink to this headline"></a></h2>
 <p>So I updated the website to state that PyStone is now 312% faster, from
 a number that was very old. I since then ran it with an updated version
-for Python3, and it&#8217;s much less there. That is pretty sad.</p>
+for Python3, and it’s much less there. That is pretty sad.</p>
 <p>I will be looking into that for 0.6.1 release, or I will have to update
 the wording to provide 2 numbers there, because it seems for Python3
 performance with Nuitka it might be misleading.</p>
 <p>Something with unicode strings and in-place operations is driving me
-crazy. Nuitka is apparently slower for that, and I can&#8217;t point where
+crazy. Nuitka is apparently slower for that, and I can’t point where
 that is happening exactly. It seems internally unicode objects are maybe
 put into a different state from some operations, which then making
 in-place extending in realloc fail more often, but I cannot know yet.</p>
 </section>
 <section id="inplace-operations">
-<h2><a class="toc-backref" href="#id11">Inplace Operations</a><a class="headerlink" href="#inplace-operations" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id11">Inplace Operations</a><a class="headerlink" href="#inplace-operations" title="Permalink to this headline"></a></h2>
 <p>So more work has been put into those, adding more specialization, and
 esp. also applying them for module variables as well. CPython can do
 that, and actually is giving itself a hard time about it, and Nuitka
@@ -318,7 +322,7 @@ that. I was totally stupid about how I approached that, looking from the
 final solution, it was always easy. Just not for me apparently.</p>
 </section>
 <section id="new-use-cases">
-<h2><a class="toc-backref" href="#id12">New use cases</a><a class="headerlink" href="#new-use-cases" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id12">New use cases</a><a class="headerlink" href="#new-use-cases" title="Permalink to this headline"></a></h2>
 <p>Talked about those above. So the top level <code class="docutils literal notranslate"><span class="pre">logging</span></code> module of your
 own was working fine in accelerated mode, but for standalone it failed
 and used the one from standard library instead. That kind of shadowing
@@ -331,14 +335,14 @@ was best working for sub-packages, but after 0.6.0.1 hotfix, now it will
 also work for the main module you compile to be that empty.</p>
 </section>
 <section id="tcl-tk-standalone">
-<h2><a class="toc-backref" href="#id13">Tcl/Tk Standalone</a><a class="headerlink" href="#tcl-tk-standalone" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id13">Tcl/Tk Standalone</a><a class="headerlink" href="#tcl-tk-standalone" title="Permalink to this headline"></a></h2>
 <p>So instructions have been provided how to properly make that work for
 Python standalone on Windows. I have yet to live up to my promise and
 make Nuitka automatically include the necessary files. I hope to do it
 for 0.6.1 though.</p>
 </section>
 <section id="caching-examined">
-<h2><a class="toc-backref" href="#id14">Caching Examined</a><a class="headerlink" href="#caching-examined" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id14">Caching Examined</a><a class="headerlink" href="#caching-examined" title="Permalink to this headline"></a></h2>
 <p>So I am looking at ccache on Linux right now, and found e.g. that it was
 reporting that <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">--version</span></code> was called a lot at startup of Scons
 and then <code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">--version</span></code> once. The later is particularly stupid,
@@ -349,8 +353,8 @@ disable that version query and not do it.</p>
 getting that output that caches the result, removes those unnecessary
 forks.</p>
 <p>So <code class="docutils literal notranslate"><span class="pre">ccache</span></code> is being called less frequently, and actually these
-<code class="docutils literal notranslate"><span class="pre">--version</span></code> outputs appears to actually take measurable time. It&#8217;s not
-dramatic, but <code class="docutils literal notranslate"><span class="pre">ccache</span></code> was apparently getting locks, and that&#8217;s worth
+<code class="docutils literal notranslate"><span class="pre">--version</span></code> outputs appears to actually take measurable time. It’s not
+dramatic, but <code class="docutils literal notranslate"><span class="pre">ccache</span></code> was apparently getting locks, and that’s worth
 avoiding by itself.</p>
 <p>That said, the goal is for <code class="docutils literal notranslate"><span class="pre">ccache</span></code> and <code class="docutils literal notranslate"><span class="pre">clcache</span></code> to make them both
 report their effectiveness of cache usage after the end of a test suite
@@ -358,23 +362,23 @@ run. That way I am hoping to notice and be able to know, if caching is
 used to its full effect.</p>
 </section>
 <section id="twitter">
-<h2><a class="toc-backref" href="#id15">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id15">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline"></a></h2>
 <p>I continue to be very active there. I put out a poll about the comment
 system, and disabling Disqus comments as a result, I will focus on
 Twitter for web site comments too now.</p>
-<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw" target="_blank">Follow @kayhayen</a></p>
+<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw">Follow &#64;kayhayen</a></p>
 <p>And lets not forget, having followers make me happy. So do re-tweets.</p>
 <p>Adding Twitter more prominently to the web site is something that is
 also going to happen.</p>
 </section>
 <section id="help-wanted">
-<h2><a class="toc-backref" href="#id16">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline">&#61633;</a></h2>
-<p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22" target="_blank">help wanted</a>
+<h2><a class="toc-backref" href="#id16">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline"></a></h2>
+<p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a>
 and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
 <p>Nuitka definitely needs more people to work on it.</p>
 </section>
 <section id="plans">
-<h2><a class="toc-backref" href="#id17">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id17">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline"></a></h2>
 <p>Working on the 0.6.1 release, attacking more in-place add operations as
 a first goal, and now turning to binary operations, I am trying to shape
 how using different helper functions to different object types looks
@@ -391,7 +395,7 @@ closure, or module, is then faster in all cases would be a goal for the
 weekend for release.</p>
 </section>
 <section id="donations">
-<h2><a class="toc-backref" href="#id18">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id18">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline"></a></h2>
 <p>If you want to help, but cannot spend the time, please consider to
 donate to Nuitka, and go here:</p>
 <p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
@@ -410,7 +414,7 @@ donate to Nuitka, and go here:</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-this-week-9.html">
@@ -426,29 +430,29 @@ donate to Nuitka, and go here:</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-8.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-8.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png" width="24" height="24">
+                    <img src="/_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-8.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-8.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png" width="24" height="24">
+                    <img src="/_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -458,7 +462,7 @@ donate to Nuitka, and go here:</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-this-week-8.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png" width="24" height="24">
+                    <img src="/_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -474,5 +478,11 @@ donate to Nuitka, and go here:</p>
       </div>
     </section>
   </div>
-  </body>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

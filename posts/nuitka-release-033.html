@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,32 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuitka Release 0.3.3</title>
-      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
-      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-033.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-033.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <script src="../_static/clipboard.min.js" async=""></script>
-        <script src="../_static/copybutton.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="search" title="Search" href="../search.html">   
-<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -69,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -119,7 +121,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -130,35 +132,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-3">
-<h1>Nuitka Release 0.3.3<a class="headerlink" href="#nuitka-release-0-3-3" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.3<a class="headerlink" href="#nuitka-release-0-3-3" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release of Nuitka continues the focus on performance. It also
-cleans up a few open topics. One is &#8220;doctests&#8221;, these are now extracted
+cleans up a few open topics. One is “doctests”, these are now extracted
 from the CPython 2.6 test suite more completely. The other is that the
 CPython 2.7 test suite is now passed completely. There is some more work
-ahead though, to extract all of the &#8220;doctests&#8221; and to do that for both
+ahead though, to extract all of the “doctests” and to do that for both
 versions of the tests.</p>
 <p>This means an even higher level of compatibility has been achieved, then
 there is performance improvements, and ever cleaner structure.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <section id="generators">
-<h3>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Generators<a class="headerlink" href="#generators" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>Generator functions tracked references to the common and the instance
 context independently, now the common context is not released before
 the instance contexts are.</p></li>
-<li><p>Generator functions didn&#8217;t check the arguments to <code class="docutils literal notranslate"><span class="pre">throw()</span></code> the way
+<li><p>Generator functions didn’t check the arguments to <code class="docutils literal notranslate"><span class="pre">throw()</span></code> the way
 they are in CPython, now they do.</p></li>
-<li><p>Generator functions didn&#8217;t trace exceptions to &#8220;stderr&#8221; if they
-occurred while closing unfinished ones in &#8220;del&#8221;.</p></li>
+<li><p>Generator functions didn’t trace exceptions to “stderr” if they
+occurred while closing unfinished ones in “del”.</p></li>
 <li><p>Generator functions used the slightly different wordings for some
 error messages.</p></li>
 </ul>
 </section>
 <section id="function-calls">
-<h3>Function Calls<a class="headerlink" href="#function-calls" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Function Calls<a class="headerlink" href="#function-calls" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>Extended call syntax with <code class="docutils literal notranslate"><span class="pre">**</span></code> allows that to use a mapping, and it
 is now checked if it really is a mapping and if the contents has
@@ -174,9 +176,9 @@ compatible with CPython.</p></li>
 </ul>
 </section>
 <section id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
 <ul class="simple">
-<li><p>The &#8220;locals()&#8221; built-in when used in the class scope (not in a
+<li><p>The “locals()” built-in when used in the class scope (not in a
 method) now is correctly writable and writes to it change the
 resulting class.</p></li>
 <li><p>Name mangling for private identifiers was not always done entirely
@@ -184,21 +186,21 @@ correct.</p></li>
 </ul>
 </section>
 <section id="others">
-<h3>Others<a class="headerlink" href="#others" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Others<a class="headerlink" href="#others" title="Permalink to this headline"></a></h3>
 <ul class="simple">
-<li><p>Exceptions didn&#8217;t always have the correct stack reported.</p></li>
-<li><p>The pickling of some tuples showed that &#8220;cPickle&#8221; can have
-non-reproducible results, using &#8220;pickle&#8221; to stream constants now</p></li>
+<li><p>Exceptions didn’t always have the correct stack reported.</p></li>
+<li><p>The pickling of some tuples showed that “cPickle” can have
+non-reproducible results, using “pickle” to stream constants now</p></li>
 </ul>
 </section>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Access to instance attributes has become faster by writing specific
 code for the case. This is done in JIT way, attempting at run time to
 optimize attribute access for instances.</p></li>
-<li><p>Assignments now often consider what&#8217;s cheaper for the other side,
+<li><p>Assignments now often consider what’s cheaper for the other side,
 instead of taking a reference to a global variable, just to have to
 release it.</p></li>
 <li><p>The function call code built argument tuples and dictionaries as
@@ -206,42 +208,42 @@ constants, now that is true for every tuple usage.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The static helper classes, and the prelude code needed have been
-moved to separate C++ files and are now accessed &#8220;#include&#8221;. This
+moved to separate C++ files and are now accessed “#include”. This
 makes the code inside C++ files as opposed to a Python string and
 therefore easier to read and or change.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The generator functions and generator expressions have the attribute
-&#8220;gi_running&#8221; now. These indicate if they are currently running.</p></li>
+“gi_running” now. These indicate if they are currently running.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
-<li><p>The script to extract the &#8220;doctests&#8221; from the CPython test suite has
+<li><p>The script to extract the “doctests” from the CPython test suite has
 been rewritten entirely and works with more doctests now. Running
 these tests created increased the test coverage a lot.</p></li>
 <li><p>The Python 2.7 test suite has been added.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
-<li><p>One can now run multiple &#8220;compare_with_cpython&#8221; instances in
+<li><p>One can now run multiple “compare_with_cpython” instances in
 parallel, which enables background test runs.</p></li>
-<li><p>There is now a new environment variable &#8220;NUITKA_INCLUDE&#8221; which needs
-to point to the directory Nuitka&#8217;s C++ includes live in. Of course
-the &#8220;create-environment.sh&#8221; script generates that for you easily.</p></li>
+<li><p>There is now a new environment variable “NUITKA_INCLUDE” which needs
+to point to the directory Nuitka’s C++ includes live in. Of course
+the “create-environment.sh” script generates that for you easily.</p></li>
 </ul>
 </section>
 <section id="numbers">
-<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
 <span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mf">76923.1</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>
@@ -268,7 +270,7 @@ the &#8220;create-environment.sh&#8221; script generates that for you easily.</p
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-needs-you---a-call-for-help.html">
@@ -284,29 +286,29 @@ the &#8220;create-environment.sh&#8221; script generates that for you easily.</p
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-033.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-033.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png" width="24" height="24">
+                    <img src="/_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-033.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-033.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png" width="24" height="24">
+                    <img src="/_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -316,7 +318,7 @@ the &#8220;create-environment.sh&#8221; script generates that for you easily.</p
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-033.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png" width="24" height="24">
+                    <img src="/_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -332,5 +334,11 @@ the &#8220;create-environment.sh&#8221; script generates that for you easily.</p
       </div>
     </section>
   </div>
-  </body>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

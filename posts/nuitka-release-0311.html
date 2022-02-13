@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,32 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuitka Release 0.3.11</title>
-      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
-      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0311.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0311.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <script src="../_static/clipboard.min.js" async=""></script>
-        <script src="../_static/copybutton.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="search" title="Search" href="../search.html">   
-<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -69,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -119,7 +121,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -130,25 +132,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-11">
-<h1>Nuitka Release 0.3.11<a class="headerlink" href="#nuitka-release-0-3-11" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.11<a class="headerlink" href="#nuitka-release-0-3-11" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This is to inform you about the new release of Nuitka with some bug
 fixes and portability work.</p>
 <p>This release is generally cleaning up things, and makes Nuitka portable
 to ARM Linux. I used to host the Nuitka homepage on that machine, but
-now that it&#8217;s no longer so, I can run heavy compile jobs on it. To my
+now that it’s no longer so, I can run heavy compile jobs on it. To my
 surprise, it found many portability problems. So I chose to fix that
 first, the result being that Nuitka now works on ARM Linux too.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The order of slice expressions was not correct on x86 as well, and I
 found that with new tests only. So the porting to ARM revealed a bug
-category, I previously didn&#8217;t consider.</p></li>
+category, I previously didn’t consider.</p></li>
 <li><p>The use of <code class="docutils literal notranslate"><span class="pre">linux2</span></code> in the Scons file is potentially incompatible
 with Linux 3.0, although it seems that at least on Debian the
-<code class="docutils literal notranslate"><span class="pre">sys.platform</span></code> was changed back to <code class="docutils literal notranslate"><span class="pre">linux2</span></code>. Anyway, it&#8217;s
+<code class="docutils literal notranslate"><span class="pre">sys.platform</span></code> was changed back to <code class="docutils literal notranslate"><span class="pre">linux2</span></code>. Anyway, it’s
 probably best to allow just anything that starts with <code class="docutils literal notranslate"><span class="pre">linux</span></code> these
 days.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement worked like a <code class="docutils literal notranslate"><span class="pre">print</span></code> function, i.e. it
@@ -158,7 +160,7 @@ outputs need to be done, and so that got fixed.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Function calls now each have a dedicated helper function, avoiding in
 some cases unnecessary work. We will may build further on this and
@@ -166,7 +168,7 @@ in-line <code class="docutils literal notranslate"><span class="pre">PyObject_Ca
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Moved many C++ helper declarations and in-line implementations to
 dedicated header files for better organisation.</p></li>
@@ -175,7 +177,7 @@ dependency graph sane.</p></li>
 <li><p>Multiple decorators were in reverse order in the node tree. The code
 generation reversed it back, so no bug, yet that was a distorted
 tree.</p>
-<p>Finding this came from the ARM work, because the &#8220;reversal&#8221; was in
+<p>Finding this came from the ARM work, because the “reversal” was in
 fact just the argument evaluation order of C++ under x86/x64, but on
 ARM that broke. Correcting it highlighted this issue.</p>
 </li>
@@ -188,38 +190,38 @@ readable code.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>There is a new basic test <code class="docutils literal notranslate"><span class="pre">OrderChecks</span></code> that covers the order of
 expression evaluation. These problems were otherwise very hard to
 detect, and in some cases not previously covered at all.</p></li>
-<li><p>Executing Nuitka with Python3 (it won&#8217;t produce correct Python3 C/API
+<li><p>Executing Nuitka with Python3 (it won’t produce correct Python3 C/API
 code) is now part of the release tests, so non-portable code of
 Nuitka gets caught.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Support for ARM Linux. I will make a separate posting on the
 challenges of this. Suffice to say now, that C++ leaves way too much
 things unspecified.</p></li>
-<li><p>The Nuitka git repository now uses &#8220;git flow&#8221;. The new git policy
+<li><p>The Nuitka git repository now uses “git flow”. The new git policy
 will be detailed in another <a class="reference external" href="https://nuitka.net/posts/nuitka-git-flow.html">separate posting</a>.</p></li>
 <li><p>There is an unstable <code class="docutils literal notranslate"><span class="pre">develop</span></code> branch in which the development
 occurs. For this release ca. 40 commits were done to this branch,
 before merging it. I am also doing more fine grained commits now.</p></li>
 <li><p>Unlike previously, there is <code class="docutils literal notranslate"><span class="pre">master</span></code> branch for the stable release.</p></li>
-<li><p>There is a script &#8220;make-dependency-graph.sh&#8221; (Update: meanwhile it
-was renamed to &#8220;make-dependency-graph.py&#8221;) to produce a dependency
+<li><p>There is a script “make-dependency-graph.sh” (Update: meanwhile it
+was renamed to “make-dependency-graph.py”) to produce a dependency
 graphs of Nuitka. I detected a couple of strange things through this.</p></li>
 <li><p>The Python3 <code class="docutils literal notranslate"><span class="pre">__pycache__</span></code> directories get removed too by the
 cleanup script.</p></li>
 </ul>
 </section>
 <section id="numbers">
-<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">&#61633;</a></h2>
-<p>We only have &#8220;PyStone&#8221; now, and on a new machine, so the numbers cannot
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
+<p>We only have “PyStone” now, and on a new machine, so the numbers cannot
 be compared to previous releases:</p>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.48</span>
@@ -233,12 +235,12 @@ be compared to previous releases:</p>
 </div>
 <p>So this a speedup factor of 258%, last time on another machine it was
 240%. Yet it only proves that the generated and compiled are more
-efficient than bytecode, but Nuitka doesn&#8217;t yet do the relevant
+efficient than bytecode, but Nuitka doesn’t yet do the relevant
 optimization. Only once it does, the factor will be significantly
 higher.</p>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>Overall, there is quite some progress. Nuitka is a lot cleaner now,
 which will help us later only. I wanted to get this out, mostly because
 of the bug fixes, and of course just in case somebody attempts to use it
@@ -258,7 +260,7 @@ on ARM.</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      Next: 
     <a href="nuitka-git-flow.html">
@@ -274,29 +276,29 @@ on ARM.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0311.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0311.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png" width="24" height="24">
+                    <img src="/_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0311.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0311.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png" width="24" height="24">
+                    <img src="/_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -306,7 +308,7 @@ on ARM.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0311.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png" width="24" height="24">
+                    <img src="/_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -322,5 +324,11 @@ on ARM.</p>
       </div>
     </section>
   </div>
-  </body>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
