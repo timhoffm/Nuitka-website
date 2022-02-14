@@ -357,33 +357,9 @@ compiler can use to learn about types from the programmer.</p>
 </section>
 <section id="version-numbers">
 <h2>Version Numbers<a class="headerlink" href="#version-numbers" title="Permalink to this headline"></a></h2>
-<p>For Nuitka we use a defensive version numbering system to indicate that
-it is not yet ready for everything. We have defined milestones and the
-version numbers should express which of these, we consider done.</p>
-<ul>
-<li><p>So far:</p>
-<p>Before milestone 1, we used <code class="docutils literal notranslate"><span class="pre">0.1.x</span></code> version numbers. After reaching
-it, we used <code class="docutils literal notranslate"><span class="pre">0.2.x</span></code> version numbers.</p>
-<p>Before milestone 2 and 3, we used <code class="docutils literal notranslate"><span class="pre">0.3.x</span></code> version numbers. After
-almost reaching 3, and beginning with 4, we use “0.4.x” version
-numbers. Due to an interface change, <code class="docutils literal notranslate"><span class="pre">0.5.x</span></code> version numbers are
-being used.</p>
-<p>Due to reaching type inference in code generation, even if only
-starting, the <code class="docutils literal notranslate"><span class="pre">0.6.x</span></code> version numbers were started to be used. This
-stage should allow quick progress in performance for individual
-releases.</p>
-</li>
-<li><p>Future:</p>
-<p>With <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> bindings in a usable state it will be <code class="docutils literal notranslate"><span class="pre">0.7.x</span></code>.</p>
-</li>
-<li><p>Final:</p>
-<p>We will then round it up and call it Nuitka <code class="docutils literal notranslate"><span class="pre">1.0</span></code> when this works
-as expected for a bunch of people. The plan is to reach this goal
-during 2021. This is based on positive assumptions that may not hold
-up though.</p>
-</li>
-</ul>
-<p>Of course, all of this may be subject to change.</p>
+<p>For Nuitka we use semantic versioning, initially with a leading zero
+still, once we pass release <code class="docutils literal notranslate"><span class="pre">0.9</span></code>, the scheme will indicate the <code class="docutils literal notranslate"><span class="pre">10</span></code>
+through using <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
 </section>
 <section id="current-state">
 <h2>Current State<a class="headerlink" href="#current-state" title="Permalink to this headline"></a></h2>
