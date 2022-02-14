@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2013</title>
-  <updated>2022-02-14T03:40:09.466026+00:00</updated>
+  <updated>2022-02-14T04:17:06.246535+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2013/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
