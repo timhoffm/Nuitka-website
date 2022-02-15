@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,30 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Static Site Generator</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://translation.nuitka.net/posts/static-site-generator.html" />
+      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
+      <link rel="canonical" href="https://translation.nuitka.net/posts/static-site-generator.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +67,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
@@ -122,7 +118,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -133,7 +129,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="static-site-generator">
-<h1>Static Site Generator<a class="headerlink" href="#static-site-generator" title="Permalink to this headline"></a></h1>
+<h1>Static Site Generator<a class="headerlink" href="#static-site-generator" title="Permalink to this headline">&#61633;</a></h1>
 <p>Hello,</p>
 <p>somehow triggered by reading about Mynth, and the re-post of the last
 release announcement on my feed, just because I added a missing category
@@ -152,10 +148,10 @@ of updates makes it into the feed.</p></li>
 <p>I am currently very annoyed, because:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>I would normally generate code examples now with “rst2html” and
+<li><p>I would normally generate code examples now with &#8220;rst2html&#8221; and
 replace the existing Wordpress plugin that renders in JavaScript.
 Except I cannot without re-posting all these articles, or removing
-the “python” tag from them.</p></li>
+the &#8220;python&#8221; tag from them.</p></li>
 <li><p>The documentation of Nuitka is in ReST and I even intend to expand
 it with UML diagrams generated from text. Making the cross to HTML
 content is difficult.</p></li>
@@ -167,13 +163,13 @@ I want to master.</p></li>
 </ul>
 </div></blockquote>
 <p>Other stuff in favor of it, is that Wordpress or any CMS needs more
-memory and more time to process than static pages of course. I can’t
+memory and more time to process than static pages of course. I can&#8217;t
 right now let anyone fork and edit the pages in a practical manner. So
 while for User Manual and Developer Manual of Nuitka I will get
-corrections, for the website it’s not happening.</p>
+corrections, for the website it&#8217;s not happening.</p>
 <p>Is Mynth an appropriate intermediate step? Do I really want to learn one
 of these strange templating languages or even consider software that has
-no Debian package. I never considered “virtualenv” and “pip” much of
+no Debian package. I never considered &#8220;virtualenv&#8221; and &#8220;pip&#8221; much of
 options to run software on a website. I guess I am more tied to Debian
 than to Python still.</p>
 <p>Over the last months I have occasionally looked at Pyramids, but it
@@ -181,7 +177,7 @@ seems overly complex, if all you want is to simplify the authoring. I
 have seen that e.g. Trac supports ReST as an exception, but that feels
 too little for a hefty software like that.</p>
 <p>I may end up with using ReST to generate HTML which is then uploaded via
-XMLRPC to Wordpress. Won’t give me the “static” benefits. Won’t solve
+XMLRPC to Wordpress. Won&#8217;t give me the &#8220;static&#8221; benefits. Won&#8217;t solve
 the post update problem. But at least will let me edit more easily.</p>
 <div class="line-block">
 <div class="line">Yours,</div>
@@ -200,14 +196,11 @@ the post update problem. But at least will let me edit more easily.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      
     <a href="nuitka-release-0319.html">
-      Nuitka Release 0.3.19 <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      Nuitka Release 0.3.19 <i class="fa fa-arrow-circle-right"></i>
     </a>
     
   </span>
@@ -219,7 +212,7 @@ the post update problem. But at least will let me edit more easily.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
@@ -227,22 +220,22 @@ the post update problem. But at least will let me edit more easily.</p>
 
   
 
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/static-site-generator.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/static-site-generator.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="../_static/icon-twitter.png">
+                    <img src="../_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/static-site-generator.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/static-site-generator.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="../_static/icon-facebook.png">
+                    <img src="../_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -252,7 +245,7 @@ the post update problem. But at least will let me edit more easily.</p>
         <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/posts/static-site-generator.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="../_static/icon-reddit.png">
+                    <img src="../_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -268,12 +261,7 @@ the post update problem. But at least will let me edit more easily.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Read the Docs</span>
         v: latest

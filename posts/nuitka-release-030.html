@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuitka Release 0.3.0</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
-    <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-030.html" />
+      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
+      <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-030.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +69,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
@@ -122,7 +120,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -133,9 +131,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-0">
-<h1>Nuitka Release 0.3.0<a class="headerlink" href="#nuitka-release-0-3-0" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.3.0<a class="headerlink" href="#nuitka-release-0-3-0" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release 0.3.0 is the first release to focus on performance. In the
 0.2.x series Nuitka achieved feature parity with CPython 2.6 and that
 was very important, but now it is time to make it really useful.</p>
@@ -144,11 +142,11 @@ forward looking to Python 2.7 language constructs. This release is the
 first where I really started to measure things and removed the most
 important bottlenecks.</p>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Added option to control <code class="docutils literal notranslate"><span class="pre">--debug</span></code>. With this option the C++ debug
 information is present in the file, otherwise it is not. This will
-give much smaller “.so” and “.exe” files than before.</p></li>
+give much smaller &#8220;.so&#8221; and &#8220;.exe&#8221; files than before.</p></li>
 <li><p>Added option <code class="docutils literal notranslate"><span class="pre">--no-optimization</span></code> to disable all optimization.</p>
 <p>It enables C++ asserts and compiles with less aggressive C++ compiler
 optimization, so it can be used for debugging purposes.</p>
@@ -157,7 +155,7 @@ optimization, so it can be used for debugging purposes.</p>
 </ul>
 </section>
 <section id="performance-enhancements">
-<h2>Performance Enhancements<a class="headerlink" href="#performance-enhancements" title="Permalink to this headline"></a></h2>
+<h2>Performance Enhancements<a class="headerlink" href="#performance-enhancements" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Fast global variables: Reads of global variables were fast already.
 This was due to a trick that is now also used to check them and to do
@@ -167,7 +165,7 @@ execute the finally handlers if inside a try, these used C++
 exceptions that were caught by <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">finally</span></code> in <code class="docutils literal notranslate"><span class="pre">while</span></code> or
 <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p>
 <p>This was very slow and had very bad performance. Now it is checked if
-this is at all necessary and then it’s only done for the rare case
+this is at all necessary and then it&#8217;s only done for the rare case
 where a <code class="docutils literal notranslate"><span class="pre">break</span></code>/<code class="docutils literal notranslate"><span class="pre">continue</span></code> really is inside the tried block.
 Otherwise it is now translated to a C++ <code class="docutils literal notranslate"><span class="pre">break</span></code>/<code class="docutils literal notranslate"><span class="pre">continue</span></code> which
 the C++ compiler handles more efficiently.</p>
@@ -182,19 +180,19 @@ them at run time even when contents was constant.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Merged some bits from the CPython 2.7 test suite that do not harm
-2.6, but generally it’s a lot due to some <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module
+2.6, but generally it&#8217;s a lot due to some <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module
 interface changes.</p></li>
 <li><p>Added CPython 2.7 tests <code class="docutils literal notranslate"><span class="pre">test_dictcomps.py</span></code> and
 <code class="docutils literal notranslate"><span class="pre">test_dictviews.py</span></code> which both pass when using Python 2.7.</p></li>
-<li><p>Added another benchmark extract from “PyStone” which uses a while
+<li><p>Added another benchmark extract from &#8220;PyStone&#8221; which uses a while
 loop with break.</p></li>
 </ul>
 </section>
 <section id="numbers">
-<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">&#61633;</a></h2>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
 <span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mf">76923.1</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>
@@ -205,7 +203,7 @@ loop with break.</p></li>
 <span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mf">96153.8</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>
 </pre></div>
 </div>
-<p>That’s a 25% speedup now and a good start clearly. It’s not yet in the
+<p>That&#8217;s a 25% speedup now and a good start clearly. It&#8217;s not yet in the
 range of where i want it to be, but there is always room for more. And
 the <code class="docutils literal notranslate"><span class="pre">break</span></code>/<code class="docutils literal notranslate"><span class="pre">continue</span></code> exception was an important performance
 regression fix.</p>
@@ -223,14 +221,11 @@ regression fix.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      
     <a href="nuitka-release-031.html">
-      Nuitka Release 0.3.1 <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      Nuitka Release 0.3.1 <i class="fa fa-arrow-circle-right"></i>
     </a>
     
   </span>
@@ -242,7 +237,7 @@ regression fix.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
@@ -250,22 +245,22 @@ regression fix.</p>
 
   
 
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-030.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-030.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="../_static/icon-twitter.png">
+                    <img src="../_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-030.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-030.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook" data-share-url="https://nuitka.net">
                 <p class="icon">
-                    <img src="../_static/icon-facebook.png">
+                    <img src="../_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -275,7 +270,7 @@ regression fix.</p>
         <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/posts/nuitka-release-030.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="../_static/icon-reddit.png">
+                    <img src="../_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -291,12 +286,7 @@ regression fix.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Read the Docs</span>
         v: latest
