@@ -121,8 +121,14 @@ python3 -m invoke virtualenv
 <span class="c1"># Now lets build the site, to see if it's all correct.</span>
 python3 -m invoke doc
 
+<span class="c1"># Optionally build the localized sites.</span>
+python3 -m invoke intl -l zh_CN
+python3 -m invoke intl -l de_DE
+...
+
 <span class="c1"># Start local web server with the site, and do automatic</span>
-<span class="c1"># rebuilds</span>
+<span class="c1"># rebuilds. Localization are rebuilt if they were previously</span>
+<span class="c1"># built.</span>
 python3 -m invoke run -t serve-site
 
 <span class="c1"># Browse it (Linux)</span>
