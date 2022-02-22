@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka Release 0.7</title>
+      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
+      <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-07.html">
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false
+};</script>
+        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.8 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-7">Nuitka Release 0.7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-release-0-7">
+<h1>Nuitka Release 0.7<a class="headerlink" href="#nuitka-release-0-7" title="Permalink to this headline">&#61633;</a></h1>
+<p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
+<p>This release is massively improving macOS support, esp. for M1 and the
+latest OS releases, but it also has massive improvements for usability
+and bug fixes in all areas.</p>
+<section id="bug-fixes">
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<ul class="simple">
+<li><p>Fix, <code class="docutils literal notranslate"><span class="pre">set</span></code> creation wasn&#8217;t annotating its possible exception exit
+from hashing values and is not as free of side effects as <code class="docutils literal notranslate"><span class="pre">list</span></code>
+and <code class="docutils literal notranslate"><span class="pre">tuple</span></code> creations are. Fixed in 0.6.19.1 already.</p></li>
+<li><p>Windows: Fix, experimental options got lost for the C compilation
+when switching from MSVC to MinGW64, making them have no effect.
+Fixed in 0.6.19.1 already.</p></li>
+<li><p>Windows: Fix, Clang from MinGW64 doesn&#8217;t support LTO at this time,
+therefore default to <code class="docutils literal notranslate"><span class="pre">no</span></code> for it. Fixed in 0.6.19.1 already.</p></li>
+<li><p>Debian: Fix, failed to detect Debian unstable as suitable for
+linking, it doesn&#8217;t have the release number. Fixed in 0.6.19.1
+already.</p></li>
+<li><p>Standalone: Added data files for <code class="docutils literal notranslate"><span class="pre">pygsheets</span></code> package. Fixed in
+0.6.19.2 already.</p></li>
+<li><p>Fix, paths from plugin related file paths need to be made absolute
+before used internally, otherwise the cache can fail to deduplicate
+them. Fixed in 0.6.19.2 already.</p></li>
+<li><p>Python3: With gcc before version 5, e.g. on CentOS 7, where we switch
+to using <code class="docutils literal notranslate"><span class="pre">g++</span></code> instead, the gcc version checks could crash. Fixed
+in 0.6.19.2 already.</p></li>
+<li><p>Windows: Disable MinGW64 wildcard expansion for command line
+arguments. This was breaking command lines with arguments like
+<code class="docutils literal notranslate"><span class="pre">--filename</span> <span class="pre">*.txt</span></code>, which under <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> are left alone by the
+shell, and are to be expanded by the program. Fixed in 0.6.19.2
+already.</p></li>
+<li><p>Standalone: Added missing implicit dependency needed for
+<code class="docutils literal notranslate"><span class="pre">--follow-stdlib</span></code> with Python for some uses of the <code class="docutils literal notranslate"><span class="pre">locale</span></code>
+module. Fixed in 0.6.19.2 already.</p></li>
+<li><p>Standalone: Added workarounds for newest <code class="docutils literal notranslate"><span class="pre">numpy</span></code> that wants to set
+<code class="docutils literal notranslate"><span class="pre">__code__</span></code> objects and required improvements for macOS library
+handling. Fixed in 0.6.19.3 already.</p></li>
+<li><p>Windows: Caching of DLL dependencies for the main programs was not
+really working, requiring to detect them anew for every standalone
+compilation for no good reason. Fixed in 0.6.19.3 already.</p></li>
+<li><p>Windows: Fix, CTRL-C from a terminal was not propagated to child
+processes on Windows. Fixed in 0.6.19.4 already.</p></li>
+<li><p>Standalone: With <code class="docutils literal notranslate"><span class="pre">certifi</span></code> and Python3.10 the
+<code class="docutils literal notranslate"><span class="pre">importlib.resource</span></code> could trigger Virus scanner inflicted file
+access errors. Fixed in 0.6.19.4 already.</p></li>
+<li><p>Python3.10: Reverted error back iteration past end of generator
+change for Python 3.10.2 or higher to become compatible with that
+too. Fixed in 0.6.19.5 already.</p></li>
+<li><p>Standalone: Added support for <code class="docutils literal notranslate"><span class="pre">anyio</span></code> and by proxy for Solana.
+Fixed in 0.6.19.5 already.</p></li>
+<li><p>Fix, compilation with resource mode <code class="docutils literal notranslate"><span class="pre">incbin</span></code> and <code class="docutils literal notranslate"><span class="pre">--debugger</span></code> was
+not working together. Fixed in 0.6.19.5 already.</p></li>
+<li><p>Fix, format optimization of known <code class="docutils literal notranslate"><span class="pre">str</span></code> objects was not properly
+annotating an exception exit when being optimized away, causing
+consistency checks to complain. Fixed in 0.6.19.5 already.</p></li>
+<li><p>Windows: Fix, <code class="docutils literal notranslate"><span class="pre">clcache</span></code> didn&#8217;t work for non-standard encoding
+source paths due to using th direct mode, where wrong filenames are
+output by MSVC. Fixed in 0.6.19.5 already.</p></li>
+<li><p>Windows: Fix, <code class="docutils literal notranslate"><span class="pre">ccache</span></code> cannot handle source code paths for
+non-standard encoding source paths. Fixed in 0.6.19.5 already.</p></li>
+<li><p>Python2.6: Fix, calls to <code class="docutils literal notranslate"><span class="pre">iteritems</span></code> and <code class="docutils literal notranslate"><span class="pre">iterkeys</span></code> on known
+dictionary values could give wrong values. Fixed in 0.6.19.5 already.</p></li>
+<li><p>Fix, the value of <code class="docutils literal notranslate"><span class="pre">__module__</span></code> if set by the metaclass was
+overwritten when creating types. Fixed in 0.6.19.6 already.</p></li>
+<li><p>Plugins: Add support for the latest version of <code class="docutils literal notranslate"><span class="pre">pkg_resources</span></code> that
+has &#8220;vendored&#8221; even more packages. Fixed in 0.6.19.6 already.</p></li>
+<li><p>Onefile: The onefile binary was locked during run time and could not
+be renamed, preventing in-place updates. This has been resolved and
+now on Windows, the standard trick for updating a running binary of
+renaming it, then placing the new file works.</p></li>
+<li><p>Fix, wasn&#8217;t checking the <code class="docutils literal notranslate"><span class="pre">zstandard</span></code> version and as a result could
+crash if too old versions of it. This is now checked.</p></li>
+<li><p>macOS: Large amounts of bug fixes for the dependency scanner. It got
+cleaned up and now handles many more cases correctly.</p></li>
+<li><p>Windows: Fix, was not properly detecting wrong ClangCL architecture
+mismatch with the Python architecture. This could result in strange
+errors during C compilation in this setup.</p></li>
+<li><p>Standalone: Added implicit dependencies for the <code class="docutils literal notranslate"><span class="pre">asyncpg</span></code> module.</p></li>
+<li><p>Linux: Detect Debian or Ubuntu base and distribution name more
+reliably. This helps esp. with static libpython optimization being
+recognized automatically.</p></li>
+</ul>
+</section>
+<section id="new-features">
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<ul>
+<li><p>We now disallow options that take arguments to be provided without
+using <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p></li>
+<li><p>Previously <code class="docutils literal notranslate"><span class="pre">--lto</span> <span class="pre">no</span></code> worked just as well as <code class="docutils literal notranslate"><span class="pre">--lto=no</span></code> did. And
+that was the cause of problems when <code class="docutils literal notranslate"><span class="pre">--lto</span></code> first became a choice.</p>
+<p>Recently similar, but worse problems were observed, where e.g.
+<code class="docutils literal notranslate"><span class="pre">--include-module</span></code> could swallow trailing other arguments when
+users forgot to specify the name by accident. Therefore this style of
+giving options is now explicitly rejected.</p>
+</li>
+<li><p>Compiled types of Nuitka now inherit from uncompiled types. This
+should allow easier and more complete compatibility, making even code
+in extension modules that uses <code class="docutils literal notranslate"><span class="pre">PyObject_IsInstance</span></code> work, e.g.
+<code class="docutils literal notranslate"><span class="pre">pydanctic</span></code>.</p></li>
+<li><p>macOS: Added signing of application bundles and standalone binaries
+for deployment to newer macOS platforms and esp. M1 where these are
+mandatory for execution.</p></li>
+<li><p>macOS: Added support for selecting the single macOS target arch to
+create a binary for. The <code class="docutils literal notranslate"><span class="pre">universal</span></code> architecture is not yet
+supported though, but will be added in a future release.</p></li>
+<li><p>Added support for compression in onefile mode through the use of an
+other Python installation, that has the <code class="docutils literal notranslate"><span class="pre">zstandard</span></code> module
+installed. With this it will work with 2.6 or higher, but require a
+3.5 or higher Python with it installed in either <code class="docutils literal notranslate"><span class="pre">PATH</span></code> or on
+Windows in the registry alternatively.</p></li>
+<li><p>Added UPX plugin to compress created extension modules and binaries
+and for standalone mode, the included DLLs. For onefile, the
+compression is not useful since it has the payload already
+compressed.</p></li>
+<li><p>Added a more explicit way to list usable MSVC versions with
+<code class="docutils literal notranslate"><span class="pre">--msvc=list</span></code> rather than requiring an invalid value. Check values
+given in the same way that Scons will do.</p></li>
+<li><p>Added support for <code class="docutils literal notranslate"><span class="pre">--python-flag=-u</span></code> which disabled outputs
+buffers, so that these outputs are written immediately.</p></li>
+<li><p>Plugins: Always on plugins now can have command line options. We want
+this for the <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> plugin that is enabled by default in this
+release.</p></li>
+<li><p>Plugins: Added ability for plugin to provide fake dependencies for a
+module. We want the this for the <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> plugin, that is
+now enabled by default in this release too.</p></li>
+<li><p>Plugins: Added ability for plugins to modify DLLs after copy for
+standalone. We will be using this in the new <code class="docutils literal notranslate"><span class="pre">upx</span></code> plugin.</p></li>
+<li><p>Added retry for file copies that fail due to still running program.
+This can happen on Windows with DLLs in standalone mode. For
+interactive compilation, this allows a retry to happen after
+prompting the user.</p></li>
+<li><p>UI: Added ability to list MSVC versions with <code class="docutils literal notranslate"><span class="pre">--msvc=list</span></code>, and
+detect illegal values given to <code class="docutils literal notranslate"><span class="pre">--msvc=</span></code> before Scons sees them, it
+also crashes with a relative unhelpful error message.</p></li>
+<li><p>UI: When linking, close the C compilation progress bar and state that
+that linking is going on. For some very large LTO compilations, it
+was otherwise at 100% and still taking a long time, confusing users.</p></li>
+<li><p>Plugins: Added new plugin that is designed to handle DLL dependencies
+through a configuration file that can both handle filename patterns
+as well as code provided DLL locations.</p></li>
+<li><p>Optimization: Exclude parts of the standard library by default. This
+allows for much smaller standalone distributions on modules, that can
+be expected to never be an implicit dependency of anything, e.g.
+<code class="docutils literal notranslate"><span class="pre">argparse</span></code> or <code class="docutils literal notranslate"><span class="pre">pydoc</span></code>.</p></li>
+</ul>
+</section>
+<section id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<ul class="simple">
+<li><p>Standalone: Do not include <code class="docutils literal notranslate"><span class="pre">encodings.bz2_codec</span></code> and
+<code class="docutils literal notranslate"><span class="pre">encodings.idna</span></code> anymore, these are not file system encodings, but
+require extension modules.</p></li>
+<li><p>Make sure we use proper <code class="docutils literal notranslate"><span class="pre">(void)</span></code> arguments for C functions without
+arguments, as for C functions, that makes a real difference, they are
+variable args functions and more expensive to call otherwise.</p></li>
+<li><p>For standalone, default to using <code class="docutils literal notranslate"><span class="pre">--python-flag=no_site</span></code> to avoid
+the overhead that the typically unused <code class="docutils literal notranslate"><span class="pre">site</span></code> module incurs. It
+often includes large parts of the standard library, which we now want
+to be more selective about. There is new Python flag added called
+<code class="docutils literal notranslate"><span class="pre">--python-flag=site</span></code> that restores the inclusion of <code class="docutils literal notranslate"><span class="pre">site</span></code>
+module.</p></li>
+<li><p>Standalone: Exclude non-critical codec modules from being technical,
+i.e. have to be available at program startup. This removes the need
+for e.g. <code class="docutils literal notranslate"><span class="pre">bz2</span></code> related extension modules previously included.</p></li>
+<li><p>In reformulations, use dictionary methods directly, we have since
+introduced dictionary specific methods, and avoid the unnecessary
+churn during optimization.</p></li>
+<li><p>The complex call helper could trigger unnecessary passes in some
+cases. The pure functions were immediately optimized, but usages in
+other modules inside loops sometimes left them in incomplete states.</p></li>
+<li><p>Windows: Avoid repeated hashing of the same files over and over for
+<code class="docutils literal notranslate"><span class="pre">clcache</span></code>.</p></li>
+<li><p>Cache dependencies of bytecode demoted modules in first compile and
+reuse that information in subsequent compilations.</p></li>
+<li><p>Linux: Added option for switching compression method for onefile
+created with <code class="docutils literal notranslate"><span class="pre">AppImage</span></code>. The default is also now <code class="docutils literal notranslate"><span class="pre">gzip</span></code> and not
+<code class="docutils literal notranslate"><span class="pre">xz</span></code> which has been observed to cause much slower startup for
+little size gains.</p></li>
+<li><p>Standalone: For failed relative imports, during compiled time
+absolute imports were attempted still and included if successful, the
+imports would not be use them at run time, but lead to more modules
+being included than necessary.</p></li>
+</ul>
+</section>
+<section id="organisational">
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<ul>
+<li><p>There is now a <a class="reference external" href="https://discord.gg/nZ9hr9tUck" target="_blank">Discord server for Nuitka community</a> where you can hang out with the
+developers and ask questions. It is mirrored with the Gitter
+community chat, but offers more features.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> is now on by default. It helps scalability by
+changing popular packages to not provide test frameworks,
+installation tools etc. in the resulting binary. This oftentimes
+reduces the compilation by thousands of modules.</p></li>
+<li><p>Also the <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> plugin is now on by default. Detecting
+its need automatically removes a source of problems for first time
+users, that didn&#8217;t know to enable it, but had all kinds of strange
+crashes from multiprocessing malfunctioning. This should enhance the
+out of the box experience by a lot.</p></li>
+<li><p>With this release, the version numbering scheme will be changed. For
+a long time we have used 4 digits, where one is a leading zero. That
+was initially done to indicate that it&#8217;s not yet ready. However, that
+is just untrue these days. Therefore, we switch to 3 digits, and a
+first hotfix with now be 0.7.1 rather than 0.6.19.1, which is too
+long.</p>
+<p>It has been observed that people disregard differences in the third
+digit, but actually for Nuitka these have oftentimes been very
+important updates. This change is to rectify it, and a new release
+will be <code class="docutils literal notranslate"><span class="pre">0.8</span></code>, and there will be a <code class="docutils literal notranslate"><span class="pre">1.0</span></code> release after <code class="docutils literal notranslate"><span class="pre">0.9</span></code>.</p>
+</li>
+<li><p>Added a new section to User Manual that explains how to manually load
+files, such that it is cleaner and compatible code. Using paths
+relative to current directory is not the right way, but there are
+nice helpers that make it very simple and correct with all kinds of
+contexts.</p></li>
+<li><p>Report the MSVC version in Scons output during compilation. The 2022
+version is required, but we support everything back to 2008, to work
+on very old systems as well. This will help identifying differences
+that arise from there.</p></li>
+<li><p>Quality: Find Clang format from MSVC 2022 too. We use in auto format
+of Nuitka source code, but need to also search that as a new path.</p></li>
+<li><p>Added a spellchecker extension for Visual Code, resulting in many
+spelling fixes in all kinds of documentation and code. This finds
+more things than <code class="docutils literal notranslate"><span class="pre">codespell</span></code>, but also has a lot of false alarms.</p></li>
+<li><p>Check value of <code class="docutils literal notranslate"><span class="pre">--onefile-tempdir-spec</span></code> for typical user errors. It
+cannot be <code class="docutils literal notranslate"><span class="pre">.</span></code> as that would require to overwrite the onefile binary
+on Windows, and will generally behave very confusing. Warn about
+absolute or relative paths going outside of where the binary lives.
+Can be useful in controlled setups, but not generally. Also warn
+about using no variables, making non-unique paths.</p></li>
+<li><p>macOS: Flavor detection was largely expanded. The <code class="docutils literal notranslate"><span class="pre">Apple</span></code> flavor is
+recognized on more systems. <code class="docutils literal notranslate"><span class="pre">Homebrew</span></code> was newly added, and we
+actually can detect <code class="docutils literal notranslate"><span class="pre">CPython</span></code> reliably as a first.</p></li>
+<li><p>Added a tool from leo project to create better <code class="docutils literal notranslate"><span class="pre">.pyi</span></code> files for
+modules. We will make use of it in the future to enhance the files
+created by Nuitka to not only contain hidden dependencies, but
+optionally also module signatures.</p></li>
+<li><p>Plugins: Clearer information from <code class="docutils literal notranslate"><span class="pre">pyside2</span></code> that patched wheels
+might be mandatory and workarounds only patches cannot be done for
+older Python.</p></li>
+<li><p>Added progress bars for DLL dependency detection and DLL copying for
+standalone. These both can end up using take a fair bit of time
+depending on project size, and it&#8217;s nice to know what&#8217;s going on.</p></li>
+<li><p>macOS: Added support for using both <code class="docutils literal notranslate"><span class="pre">--onefile</span></code> and
+<code class="docutils literal notranslate"><span class="pre">--macos-create-app-bundle</span></code> as it is needed for PySide2 due to
+issues with signing code now.</p></li>
+<li><p>Added warning when attempting to include extension modules in an
+accelerated compilation.</p></li>
+<li><p>Modules: Catch the user error of following all imports when creating
+a module. This is very unlikely to produce usable results.</p></li>
+<li><p>Start integrating <a class="reference external" href="https://sourcery.ai" target="_blank">Sourcery</a> for improved
+Nuitka code. It will comment on PRs and automatically improve Nuitka
+code as we develop it.</p></li>
+<li><p>Debugging: Added command line tool <code class="docutils literal notranslate"><span class="pre">find-module</span></code> that outputs how
+Nuitka locates a module in the Python environment it&#8217;s ran with. That
+removes the need to use Python prompt to dump <code class="docutils literal notranslate"><span class="pre">__file__</span></code> of
+imported modules. Some modules even hide parts of their namespace
+actively during run-time, the tool will not be affected by that.</p></li>
+</ul>
+</section>
+<section id="cleanups">
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<ul class="simple">
+<li><p>Refactored Python scan previously used for Scons usage on versions
+that need to run in with another Python to be more generally usable.</p></li>
+<li><p>Use explicit <code class="docutils literal notranslate"><span class="pre">nuitka.utils.Hashing</span></code> module that allows the core to
+perform these operations with simpler code.</p></li>
+<li><p>macOS: Use <code class="docutils literal notranslate"><span class="pre">isPathBelow</span></code> for checking if something is a system
+library for enhanced robustness and code clarity.</p></li>
+<li><p>macOS: Make sure to use our proper error checking wrappers for
+command execution when using tools like <code class="docutils literal notranslate"><span class="pre">otool</span></code> or <code class="docutils literal notranslate"><span class="pre">codesign</span></code>.</p></li>
+<li><p>Standalone: Avoid a temporary file with a script during technical
+import detection. These have been observed to potentially become
+corrupted, and this avoids any chance of that happening, while also
+being simpler code.</p></li>
+<li><p>Avoid naming things <code class="docutils literal notranslate"><span class="pre">shlib</span></code> and call them <code class="docutils literal notranslate"><span class="pre">extension</span></code> instead.
+Inspired by the spell checker disliking the former term, which is
+also less precise.</p></li>
+<li><p>Removed the dead architecture selection option for Windows, it was
+unused for a long time.</p></li>
+<li><p>Moved Windows <code class="docutils literal notranslate"><span class="pre">SxS</span></code> handling of DLLs to a more general place where
+also macOS specific tasks are applied, to host standard modification
+of DLLs during their copying.</p></li>
+</ul>
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">&#61633;</a></h2>
+<ul class="simple">
+<li><p>Better matching of relative filenames for search modes of the
+individual test suite runners.</p></li>
+<li><p>Debugger outputs on segfaults were no longer visible and have been
+restored.</p></li>
+</ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<p>This release is tremendous progress for macOS. Finally biting the bullet
+and paying obscene amounts of money to rent an M1 machine, it was
+possible to enhance the support for this platform. Currently typical
+packages for macOS are being made compatible as well, so it can now be
+expected to perform equally well.</p>
+<p>On the quality side, the spell checker has had some positive effects,
+finding typos and generally misspelled code, that <code class="docutils literal notranslate"><span class="pre">codespell</span></code> does
+not, due to it being very conservative.</p>
+<p>The trend to enhance plugins has continued. The copying of DLLs is very
+nearly finalized. Making more plugins enabled by default is seeing a lot
+of progress, with 2 important ones addressed.</p>
+<p>Work on the size of distributions has seen a lot of positive results, in
+that now standalone distributions are often very minimal, with many
+extension modules from standard library no longer being present.</p>
+</section>
+</section>
+
+<div class="section">
+    
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class="share-button-container">
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-07.html&amp;hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter">
+                <p class="icon">
+                    <img src="../_static/icon-twitter.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-07.html&amp;hashtag=%23nuitka" target="_blank">
+            <div class="socialbutton facebook">
+                <p class="icon">
+                    <img src="../_static/icon-facebook.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/posts/nuitka-release-07.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="../_static/icon-reddit.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  </body>
+</html>

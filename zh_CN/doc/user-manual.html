@@ -129,7 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#unexpected-slowdowns">&#24847;&#22806;&#30340;&#36895;&#24230;&#20943;&#24930;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#standalone-executables-and-dependencies">&#29420;&#31435;&#30340;&#21487;&#25191;&#34892;&#25991;&#20214;&#21644;&#20381;&#36182;&#24615;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#windows-errors-with-resources">&#36164;&#28304;&#26041;&#38754;&#30340; Windows &#38169;&#35823;</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windows-standalone-program-redistribuation">Windows &#29420;&#31435;&#31243;&#24207;&#30340;&#37325;&#26032;&#20998;&#37197;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-standalone-program-redistribution">Windows standalone program redistribution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#detecting-nuitka-at-run-time">&#22312;&#36816;&#34892;&#26102;&#26816;&#27979; Nuitka</a></li>
 </ul>
 </li>
@@ -222,12 +222,19 @@ seamless replacement or extension to the Python interpreter and compiles
 </ul>
 </li>
 <li><p>Python: Version 2.6, 2.7 or 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10</p>
-<div class="admonition-for-python-3-3-3-4-and-only-those-we-need-other-python-version-as-a-compile-time-dependency admonition">
-<p class="admonition-title">&#23545;&#20110; Python 3.3/3.4 &#21644;&#21482;&#26377;&#36825;&#20123;&#65292;&#25105;&#20204;&#38656;&#35201;&#20854;&#20182; Python &#29256;&#26412;&#20316;&#20026; <em>&#32534;&#35793;&#26102;</em> &#30340;&#20381;&#36182;&#12290;</p>
+<div class="admonition important">
+<p class="admonition-title">&#37325;&#35201;</p>
+<p>&#23545;&#20110; Python 3.3/3.4 &#21644;&#21482;&#26377;&#36825;&#20123;&#65292;&#25105;&#20204;&#38656;&#35201;&#20854;&#20182; Python &#29256;&#26412;&#20316;&#20026; <em>&#32534;&#35793;&#26102;</em> &#30340;&#20381;&#36182;&#12290;</p>
 <p>Nuitka &#26412;&#36523;&#19982;&#25152;&#26377;&#21015;&#20986;&#30340;&#29256;&#26412;&#23436;&#20840;&#20860;&#23481;&#65292;&#20294; Scons &#20316;&#20026;&#20869;&#37096;&#20351;&#29992;&#30340;&#24037;&#20855;&#21364;&#19981;&#20860;&#23481;&#12290;</p>
 <p>&#23545;&#20110;&#36825;&#20123;&#29256;&#26412;&#65292;&#20320; <em>&#38656;&#35201;</em> &#20063;&#23433;&#35013; Python2 &#25110; Python3.5 &#25110;&#26356;&#39640;&#30340;&#29256;&#26412;&#65292;&#20294;&#21482;&#22312;&#32534;&#35793;&#26102;&#25165;&#38656;&#35201;&#12290;&#36825;&#26159;&#20026;&#20102;&#19982; Scons&#65288;&#21327;&#35843; C &#35821;&#35328;&#32534;&#35793;&#65289;&#19968;&#36215;&#20351;&#29992;&#65292;&#23427;&#19981;&#25903;&#25345;&#19982; Nuitka &#19968;&#26679;&#30340; Python &#29256;&#26412;&#12290;</p>
 <p>&#27492;&#22806;&#65292;&#22312; Windows &#19978;&#65292;&#19981;&#33021;&#20351;&#29992; Python2&#65292;&#22240;&#20026; <code class="docutils literal notranslate"><span class="pre">clcache</span></code> &#19981;&#19982;&#23427;&#19968;&#36215;&#24037;&#20316;&#65292;&#38656;&#35201;&#23433;&#35013; Python 3.5 &#25110;&#26356;&#39640;&#29256;&#26412;&#12290;</p>
-<p>Nuitka &#25214;&#21040;&#36825;&#20123;&#38656;&#35201;&#30340; Python &#29256;&#26412;&#65288;&#22312; Windows &#19978;&#36890;&#36807;&#27880;&#20876;&#34920;&#65289;&#65292;&#21482;&#35201;&#23427;&#20204;&#34987;&#23433;&#35013;&#65292;&#20320;&#23601;&#19981;&#24212;&#35813;&#27880;&#24847;&#21040;&#23427;&#12290;</p>
+<p>Nuitka finds these needed Python versions (e.g. on Windows via
+registry) and you shouldn&#8217;t notice it as long as they are
+installed.</p>
+<p>Increasingly, other functionality is available when another Python
+has a certain package installed. For example, onefile compression
+will work for a Python 2.x when another Python is found that has
+the <code class="docutils literal notranslate"><span class="pre">zstandard</span></code> package installed.</p>
 </div>
 <div class="admonition-moving-binaries-to-other-machines admonition">
 <p class="admonition-title">&#23558;&#20108;&#36827;&#21046;&#25991;&#20214;&#36716;&#31227;&#21040;&#20854;&#20182;&#26426;&#22120;&#19978;</p>
@@ -312,10 +319,11 @@ limitations under the License.</p>
 <section id="install-python">
 <h4>&#23433;&#35013; Python<a class="headerlink" href="#install-python" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h4>
 <ul class="simple">
-<li><p>Download and install from <a class="reference external" href="https://www.python.org/downloads/windows" target="_blank">https://www.python.org/downloads/windows</a></p></li>
+<li><p>Download and install Python from
+<a class="reference external" href="https://www.python.org/downloads/windows" target="_blank">https://www.python.org/downloads/windows</a></p></li>
 <li><p>Select one of <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">x86-64</span> <span class="pre">web-based</span> <span class="pre">installer</span></code> (64 bits Python,
 recommended) or <code class="docutils literal notranslate"><span class="pre">x86</span> <span class="pre">executable</span></code> (32 bits Python) installer.</p></li>
-<li><p>Verify using command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>.</p></li>
+<li><p>Verify it&#8217;s working using command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>.</p></li>
 </ul>
 </section>
 <section id="install-nuitka">
@@ -331,7 +339,7 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 <section id="create-a-folder-for-the-python-code">
 <h4>&#20026; Python &#20195;&#30721;&#21019;&#24314;&#19968;&#20010;&#25991;&#20214;&#22841;<a class="headerlink" href="#create-a-folder-for-the-python-code" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h4>
 <ul class="simple">
-<li><p>mkdir HelloWorld</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> HelloWorld</p></li>
 <li><p>&#21019;&#24314;&#21517;&#20026; <strong>hello.py</strong> &#30340; Python &#25991;&#20214;</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
@@ -463,7 +471,11 @@ python -m nuitka --onefile program.py
 <p class="admonition-title">&#22791;&#27880;</p>
 <p>&#36824;&#26377;&#26356;&#22810;&#30340;&#24179;&#21488;&#29305;&#23450;&#36873;&#39033;&#65292;&#20363;&#22914;&#19982;&#22270;&#26631;&#12289;&#38378;&#23631;&#21644;&#29256;&#26412;&#20449;&#24687;&#26377;&#20851;&#30340;&#36873;&#39033;&#65292;&#35831;&#32771;&#34385; <code class="docutils literal notranslate"><span class="pre">--help</span></code> &#36755;&#20986;&#20197;&#20102;&#35299;&#36825;&#20123;&#32454;&#33410;&#65292;&#24182;&#26597;&#30475; &#8220;Good Looks&#8221; &#37096;&#20998;&#12290;</p>
 </div>
-<p>&#21516;&#26679;&#65292;&#22312; Windows &#19978;&#65292;&#23545;&#20110;&#20020;&#26102;&#25991;&#20214;&#30446;&#24405;&#65292;&#40664;&#35748;&#20351;&#29992;&#29992;&#25143;&#30340;&#30446;&#24405;&#65292;&#28982;&#32780;&#36825;&#21487;&#20197;&#29992; <code class="docutils literal notranslate"><span class="pre">--windows-onefile-tempdir-spec=%TEMP%\\onefile_%PID%_%TIME%</span></code> &#20013;&#32473;&#20986;&#30340;&#36335;&#24452;&#35268;&#33539;&#26469;&#35206;&#30422;&#65292;&#36825;&#26159;&#40664;&#35748;&#30340;&#65292;&#26029;&#35328;&#21019;&#24314;&#30340;&#20020;&#26102;&#30446;&#24405;&#19981;&#33021;&#21457;&#29983;&#20914;&#31361;&#12290;</p>
+<p>Again, on Windows, for the temporary file directory, by default the user
+one is used, however this can be overridden with a path specification
+given in <code class="docutils literal notranslate"><span class="pre">--windows-onefile-tempdir-spec=%TEMP%\\onefile_%PID%_%TIME%</span></code>
+which is the default and asserts that the temporary directories created
+cannot collide.</p>
 <p>&#30446;&#21069;&#65292;&#36825;&#20123;&#25193;&#22823;&#30340; token &#21487;&#20197;&#20351;&#29992;&#12290;</p>
 <table class="docutils align-default">
 <colgroup>
@@ -619,7 +631,9 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <p>&#26377;&#26102; C &#35821;&#35328;&#32534;&#35793;&#22120;&#20250;&#23849;&#28291;&#65292;&#35828;&#20182;&#20204;&#19981;&#33021;&#20998;&#37197;&#20869;&#23384;&#65292;&#25110;&#32773;&#19968;&#20123;&#36755;&#20837;&#34987;&#25130;&#26029;&#20102;&#65292;&#25110;&#32773;&#31867;&#20284;&#30340;&#38169;&#35823;&#20449;&#24687;&#65292;&#26174;&#28982;&#26159;&#26469;&#33258;&#20110;&#27492;&#12290;&#36825;&#37324;&#26377;&#20960;&#20010;&#36873;&#25321;&#65292;&#20320;&#21487;&#20197;&#25506;&#32034;&#19968;&#19979;&#65306;</p>
 <section id="ask-nuitka-to-use-less-memory">
 <h4>&#35201;&#27714; Nuitka &#20351;&#29992;&#26356;&#23569;&#30340;&#20869;&#23384;<a class="headerlink" href="#ask-nuitka-to-use-less-memory" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h4>
-<p>&#26377;&#19968;&#20010;&#19987;&#38376;&#30340;&#36873;&#39033; <code class="docutils literal notranslate"><span class="pre">--low-memory</span></code>&#65292;&#23427;&#24433;&#21709;&#20102; Nuitka &#30340;&#20915;&#31574;&#65292;&#20351;&#20854;&#22312;&#32534;&#35793;&#36807;&#31243;&#20013;&#36991;&#20813;&#22823;&#37327;&#20351;&#29992;&#20869;&#23384;&#65292;&#20195;&#20215;&#26159;&#22686;&#21152;&#32534;&#35793;&#26102;&#38388;&#12290;</p>
+<p>There is a dedicated option <code class="docutils literal notranslate"><span class="pre">--low-memory</span></code> which influences decisions
+of Nuitka, such that it avoids high usage of memory during compilation
+at the cost of increased compile time.</p>
 </section>
 <section id="avoid-32-bit-c-compiler-assembler-memory-limits">
 <h4>&#36991;&#20813; 32 &#20301; C &#35821;&#35328;&#32534;&#35793;&#22120;/&#27719;&#32534;&#22120;&#30340;&#20869;&#23384;&#38480;&#21046;<a class="headerlink" href="#avoid-32-bit-c-compiler-assembler-memory-limits" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h4>
@@ -644,11 +658,58 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 </section>
 <section id="dynamic-sys-path">
 <h3>&#21160;&#24577; <code class="docutils literal notranslate"><span class="pre">sys.path</span></code><a class="headerlink" href="#dynamic-sys-path" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
-<p>&#22914;&#26524;&#20320;&#30340;&#33050;&#26412;&#20462;&#25913;&#20102; <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>&#65292;&#20363;&#22914;&#25554;&#20837;&#19982;&#28304;&#20195;&#30721;&#30456;&#23545;&#30340;&#30446;&#24405;&#65292;Nuitka &#30446;&#21069;&#23558;&#26080;&#27861;&#30475;&#21040;&#36825;&#20123;&#12290;&#28982;&#32780;&#65292;&#22914;&#26524;&#20320;&#23558; <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> &#35774;&#32622;&#20026;&#32467;&#26524;&#20540;&#65292;&#20320;&#23601;&#21487;&#20197;&#32534;&#35793;&#23427;&#20102;&#12290;</p>
+<p>If your script modifies <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> to e.g. insert directories with
+source code relative to it, Nuitka will not be able to see those.
+However, if you set the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> to the resulting value, it will
+be able to compile it and find the used modules from these paths as
+well.</p>
+<section id="manual-python-file-loading">
+<h4>Manual Python File Loading<a class="headerlink" href="#manual-python-file-loading" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h4>
+<p>A very frequent pattern with private code is that it scans plugin
+directories of some kind, and uses <code class="docutils literal notranslate"><span class="pre">os.listdir</span></code>, checks filenames, and
+then opens a file and does <code class="docutils literal notranslate"><span class="pre">exec</span></code> on them. This approach is working
+for Python code, but for compiled code, you should use this much cleaner
+approach, that works for pure Python code and is a lot less vulnerable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using a package name, to locate the plugins, but this can actually</span>
+<span class="c1"># be also a directory.</span>
+<span class="n">scan_path</span> <span class="o">=</span> <span class="n">scan_package</span><span class="o">.</span><span class="n">__path__</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">pkgutil</span><span class="o">.</span><span class="n">iter_modules</span><span class="p">(</span><span class="n">scan_path</span><span class="p">):</span>
+   <span class="c1"># You may want to do it recursively, but we don't do this here in</span>
+   <span class="c1"># this example.</span>
+   <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">ispkg</span><span class="p">:</span>
+      <span class="k">continue</span>
+
+   <span class="c1"># The loader object knows how to do it.</span>
+   <span class="n">module_loader</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">module_finder</span><span class="o">.</span><span class="n">find_module</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+   <span class="c1"># Ignore bytecode only left overs. Deleted files can cause</span>
+   <span class="c1"># these things, so we just ignore it. Not every load has a</span>
+   <span class="c1"># filename, so we need to catch that error.</span>
+   <span class="k">try</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">module_loader</span><span class="o">.</span><span class="n">get_filename</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".pyc"</span><span class="p">):</span>
+         <span class="k">continue</span>
+   <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+      <span class="c1"># Not a bytecode loader, but e.g. extension module, which is OK in case</span>
+      <span class="c1"># it was compiled with Nuitka.</span>
+      <span class="k">pass</span>
+
+   <span class="n">plugin_module</span> <span class="o">=</span> <span class="n">module_loader</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+   <span class="c1"># At least for Python2, this is not set properly, but we use it for package</span>
+   <span class="c1"># data loading, so this manual patching up allows these to use proper methods</span>
+   <span class="c1"># for loading their stuff as well.</span>
+   <span class="n">plugin_module</span><span class="o">.</span><span class="n">__package__</span> <span class="o">=</span> <span class="n">scan_package</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="missing-data-files-in-standalone">
 <h3>&#21333;&#26426;&#29256;&#20013;&#32570;&#23569;&#30340;&#25968;&#25454;&#25991;&#20214;<a class="headerlink" href="#missing-data-files-in-standalone" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
-<p>&#22914;&#26524;&#20320;&#30340;&#31243;&#24207;&#19981;&#33021;&#23558;&#25968;&#25454;&#24402;&#26723;&#65292;&#20250;&#23548;&#33268;&#21508;&#31181;&#19981;&#21516;&#30340;&#34892;&#20026;&#65292;&#20363;&#22914;&#65292;&#19968;&#20010;&#36719;&#20214;&#21253;&#21487;&#33021;&#20250;&#25265;&#24616;&#23427;&#30340;&#29256;&#26412;&#19981;&#23545;&#65292;&#22240;&#20026; <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> &#25991;&#20214;&#26816;&#26597;&#40664;&#35748;&#20026;&#26410;&#30693;&#12290;&#27809;&#26377;&#22270;&#26631;&#25991;&#20214;&#25110;&#24110;&#21161;&#25991;&#26412;&#65292;&#21487;&#33021;&#20250;&#24341;&#36215;&#22855;&#24618;&#30340;&#38169;&#35823;&#12290;</p>
+<p>If your program fails to file data, it can cause all kinds of different
+behaviors, e.g. a package might complain it is not the right version,
+because a <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> file check defaulted to unknown. The absence of
+icon files or help texts, may raise strange errors.</p>
 <p>&#36890;&#24120;&#24773;&#20917;&#19979;&#65292;&#25991;&#20214;&#19981;&#23384;&#22312;&#30340;&#38169;&#35823;&#36335;&#24452;&#29978;&#33267;&#26159;&#38169;&#35823;&#30340;&#65292;&#20250;&#26292;&#38706;&#20986;&#32534;&#31243;&#38169;&#35823;&#65292;&#22914;&#26410;&#32465;&#23450;&#23616;&#37096;&#21464;&#37327;&#12290;&#35831;&#20180;&#32454;&#26597;&#30475;&#36825;&#20123;&#24322;&#24120;&#24773;&#20917;&#65292;&#29282;&#35760;&#36825;&#21487;&#33021;&#26159;&#21407;&#22240;&#12290;&#22914;&#26524;&#20320;&#30340;&#31243;&#24207;&#27809;&#26377;&#29420;&#31435;&#36816;&#34892;&#65292;&#26377;&#21487;&#33021;&#26159;&#25968;&#25454;&#25991;&#20214;&#30340;&#21407;&#22240;&#12290;</p>
 </section>
 <section id="missing-dlls-in-standalone">
@@ -660,7 +721,14 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <h3>&#21333;&#26426;&#20013;&#30340;&#20381;&#36182;&#24615;&#29228;&#21319;<a class="headerlink" href="#dependency-creep-in-standalone" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <p>&#26377;&#20123;&#21253;&#26159;&#21333;&#19968;&#30340; import&#65292;&#20294;&#23545; Nuitka  &#26469;&#35828;&#65292;&#24847;&#21619;&#30528;&#35201;&#21253;&#25324;&#19968;&#21315;&#22810;&#20010;&#21253;&#65288;&#23383;&#38754;&#24847;&#24605;&#65289;&#12290;&#26368;&#20856;&#22411;&#30340;&#20363;&#23376;&#26159; Pandas&#65292;&#23427;&#30830;&#23454;&#24819;&#25554;&#20837;&#21644;&#20351;&#29992;&#20320;&#33021;&#24819;&#35937;&#21040;&#30340;&#19968;&#20999;&#12290;&#22810;&#20010;&#26694;&#26550;&#29992;&#20110;&#35821;&#27861;&#39640;&#20142;&#26174;&#31034;&#19968;&#20999;&#21487;&#20197;&#24819;&#35937;&#30340;&#19996;&#35199;&#65292;&#38656;&#35201;&#26102;&#38388;&#12290;</p>
 <p>Nuitka &#23558;&#26469;&#24517;&#39035;&#23398;&#20064;&#26377;&#25928;&#30340;&#32531;&#23384;&#26469;&#22788;&#29702;&#36825;&#20010;&#38382;&#39064;&#12290;&#29616;&#22312;&#65292;&#20320;&#23558;&#19981;&#24471;&#19981;&#20026;&#36825;&#20123;&#22788;&#29702;&#24040;&#22823;&#30340;&#32534;&#35793;&#26102;&#38388;&#12290;</p>
-<p>&#29616;&#22312;&#65292;&#24212;&#35813;&#20351;&#29992;&#23545;&#25239;&#20381;&#36182;&#24615;&#34837;&#21464;&#30340;&#20027;&#35201;&#27494;&#22120;&#65292;&#21363; <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> &#25554;&#20214;&#65292;&#23427;&#25552;&#20379;&#20102;&#26377;&#36259;&#30340;&#33021;&#21147;&#65292;&#21487;&#20197;&#29992;&#26469;&#38459;&#27490;&#19981;&#38656;&#35201;&#30340;&#23548;&#20837;&#65292;&#24182;&#22312;&#23427;&#20204;&#20986;&#29616;&#30340;&#22320;&#26041;&#32473;&#20986;&#19968;&#20010;&#38169;&#35823;&#12290;&#20351;&#29992;&#23427;&#65292;&#20363;&#22914;&#20687;&#36825;&#26679; <code class="docutils literal notranslate"><span class="pre">--enable-plugin=anti-bloat</span> <span class="pre">--noinclude-pytest-mode=nofollow</span> <span class="pre">--noinclude-setuptools-mode=nofollow</span></code> &#24182;&#26597;&#30475;&#20854;&#24110;&#21161;&#36755;&#20986;&#12290;&#23427;&#21487;&#20197;&#20026;&#20320;&#36873;&#25321;&#30340;&#27599;&#19968;&#20010;&#27169;&#22359;&#65292;&#20363;&#22914;&#65292;&#20063;&#21487;&#20197;&#24378;&#36843; PyQt5 &#34987;&#35270;&#20026;&#29420;&#31435;&#27169;&#24335;&#30340;&#21368;&#36733;&#12290;</p>
+<p>For now, a major weapon in fighting dependency creep should be applied,
+namely the <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> plugin, which offers interesting abilities,
+that can be put to use and block unneeded imports, giving an error for
+where they occur. Use it e.g. like this <code class="docutils literal notranslate"><span class="pre">--enable-plugin=anti-bloat</span>
+<span class="pre">--noinclude-pytest-mode=nofollow</span> <span class="pre">--noinclude-setuptools-mode=nofollow</span></code>
+and check its help output. It can take for each module of your choice,
+e.g. forcing also that PyQt5 is considered uninstalled for standalone
+mode.</p>
 </section>
 <section id="onefile-finding-files">
 <h3>&#19968;&#20307;&#21270;&#25991;&#20214;&#65306;&#23547;&#25214;&#25991;&#20214;<a class="headerlink" href="#onefile-finding-files" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
@@ -695,7 +763,12 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 </pre></div>
 </div>
 <p>&#27880;&#37322;&#24517;&#39035;&#26159;&#19968;&#20010;&#34892;&#30340;&#24320;&#22987;&#65292;&#24182;&#19988;&#35201;&#20351;&#29992;&#32553;&#36827;&#65292;&#20197;&#32467;&#26463;&#19968;&#20010;&#26465;&#20214;&#22359;&#65292;&#23601;&#20687;&#22312; Python &#20013;&#19968;&#26679;&#12290;&#30446;&#21069;&#38500;&#20102;&#19978;&#38754;&#28436;&#31034;&#30340;&#20351;&#29992;&#30340;&#20851;&#38190;&#23383;&#22806;&#65292;&#27809;&#26377;&#20854;&#20182;&#20851;&#38190;&#23383;&#12290;</p>
-<p>&#20320;&#21487;&#20197;&#25226;&#20219;&#24847;&#30340; Python &#34920;&#36798;&#24335;&#25918;&#22312;&#37027;&#37324;&#65292;&#22914;&#26524;&#20320;&#24819;&#35775;&#38382;&#19968;&#20010;&#36719;&#20214;&#21253;&#30340;&#29256;&#26412;&#20449;&#24687;&#65292;&#20320;&#21487;&#20197;&#31616;&#21333;&#22320;&#20351;&#29992; <code class="docutils literal notranslate"><span class="pre">__import__("module_name").__version__</span></code>&#65292;&#22914;&#26524;&#36825;&#23558;&#26159;&#38656;&#35201;&#30340;&#65292;&#20363;&#22914;&#21551;&#29992;&#25110;&#31105;&#29992;&#26576;&#20123; Nuitka &#35774;&#32622;&#12290;Nuitka &#25152;&#20570;&#30340;&#21807;&#19968;&#19968;&#20214;&#20107;&#20351;&#24471;&#36825;&#19981;&#26159; Python &#34920;&#36798;&#24335;&#65292;&#23601;&#26159;&#20026;&#19968;&#32452;&#39044;&#20808;&#23450;&#20041;&#30340;&#21464;&#37327;&#25193;&#23637; <code class="docutils literal notranslate"><span class="pre">{variable}</span></code>&#65306;</p>
+<p>You can put arbitrary Python expressions there, and if you wanted to
+e.g. access a version information of a package, you could simply use
+<code class="docutils literal notranslate"><span class="pre">__import__("module_name").__version__</span></code> if that would be required to
+e.g. enable or disable certain Nuitka settings. The only thing Nuitka
+does that makes this not Python expressions, is expanding <code class="docutils literal notranslate"><span class="pre">{variable}</span></code>
+for a pre-defined set of variables:</p>
 <p>&#24102;&#26377;&#25903;&#25345;&#30340;&#21464;&#37327;&#30340;&#34920;&#26684;&#65306;</p>
 <table class="docutils align-default">
 <colgroup>
@@ -746,7 +819,10 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <h3>&#32531;&#23384;&#32534;&#35793;&#32467;&#26524;<a class="headerlink" href="#caching-compilation-results" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <p>C &#35821;&#35328;&#32534;&#35793;&#22120;&#65292;&#24403;&#29992;&#30456;&#21516;&#30340;&#36755;&#20837;&#25991;&#20214;&#35843;&#29992;&#26102;&#65292;&#23558;&#38656;&#35201;&#24456;&#38271;&#30340;&#26102;&#38388;&#21644;&#24456;&#22810; CPU &#26469;&#21453;&#22797;&#32534;&#35793;&#12290;&#30830;&#20445;&#20320;&#22312;&#20351;&#29992; gcc &#26102;&#23433;&#35013;&#21644;&#37197;&#32622;&#20102; <code class="docutils literal notranslate"><span class="pre">ccache</span></code> &#65288;&#21363;&#20351;&#22312; Windows &#19978;&#65289;&#12290;&#23427;&#23558;&#20351;&#37325;&#22797;&#32534;&#35793;&#24555;&#24471;&#22810;&#65292;&#21363;&#20351;&#20107;&#24773;&#36824;&#19981;&#26159;&#24456;&#23436;&#32654;&#65292;&#21363;&#31243;&#24207;&#30340;&#25913;&#21464;&#20250;&#23548;&#33268;&#35768;&#22810; C &#25991;&#20214;&#30340;&#25913;&#21464;&#65292;&#38656;&#35201;&#37325;&#26032;&#32534;&#35793;&#32780;&#19981;&#26159;&#20351;&#29992;&#32531;&#23384;&#30340;&#32467;&#26524;&#8221;</p>
 <p>&#22312; Windows &#19978;&#65292;Nuitka &#25903;&#25345;&#20351;&#29992; <code class="docutils literal notranslate"><span class="pre">ccache.exe</span></code>&#65292;&#23427;&#23558;&#25552;&#20379;&#20174;&#23448;&#26041;&#26469;&#28304;&#19979;&#36733;&#65292;&#24182;&#33258;&#21160;&#36827;&#34892;&#12290;&#36825;&#26159;&#22312; Windows &#19978;&#20351;&#29992;&#23427;&#30340;&#25512;&#33616;&#26041;&#24335;&#65292;&#22240;&#20026;&#20854;&#20182;&#29256;&#26412;&#21487;&#33021;&#20250;&#25346;&#36215;&#12290;</p>
-<p>&#22914;&#26524;&#22312;&#31995;&#32479;&#30340; <code class="docutils literal notranslate"><span class="pre">PATH</span></code> &#20013;&#25214;&#21040; <code class="docutils literal notranslate"><span class="pre">ccache</span></code> &#65292;Nuitka &#23601;&#20250;&#25509;&#25910;&#23427;&#65292;&#20063;&#21487;&#20197;&#36890;&#36807;&#35774;&#32622; <code class="docutils literal notranslate"><span class="pre">NUITKA_CCACHE_BINARY</span></code> &#20026;&#20108;&#36827;&#21046;&#30340;&#23436;&#25972;&#36335;&#24452;&#26469;&#25552;&#20379;&#65292;&#36825;&#26159;&#20026;&#20102;&#22312; CI &#31995;&#32479;&#20013;&#20351;&#29992;&#12290;</p>
+<p>Nuitka will pick up <code class="docutils literal notranslate"><span class="pre">ccache</span></code> if it&#8217;s in found in system <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, and
+it will also be possible to provide if by setting
+<code class="docutils literal notranslate"><span class="pre">NUITKA_CCACHE_BINARY</span></code> to the full path of the binary, this is for use
+in CI systems where things might be non-standard.</p>
 <p>&#23545;&#20110; MSVC &#32534;&#35793;&#22120;&#21644; ClangCL &#35774;&#32622;&#65292;&#20351;&#29992; <code class="docutils literal notranslate"><span class="pre">clcache</span></code> &#26159;&#33258;&#21160;&#30340;&#65292;&#21253;&#21547;&#22312; Nuitka &#20013;&#12290;</p>
 </section>
 <section id="control-where-caches-live">
@@ -781,10 +857,12 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <h3>&#36164;&#28304;&#26041;&#38754;&#30340; Windows &#38169;&#35823;<a class="headerlink" href="#windows-errors-with-resources" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <p>&#22312; Windows &#19978;&#65292;Windows Defender &#24037;&#20855;&#21644; Windows &#32034;&#24341;&#26381;&#21153;&#37117;&#20250;&#25195;&#25551;&#21018;&#21019;&#24314;&#30340;&#20108;&#36827;&#21046;&#25991;&#20214;&#65292;&#32780; Nuitka &#21017;&#24819;&#19982;&#20043;&#21512;&#20316;&#65292;&#20363;&#22914;&#28155;&#21152;&#26356;&#22810;&#36164;&#28304;&#65292;&#28982;&#21518;&#30001;&#20110;&#25345;&#26377;&#38145;&#32780;&#38543;&#26426;&#38459;&#27490;&#25805;&#20316;&#12290;&#35831;&#30830;&#20445;&#23558;&#20320;&#30340;&#32534;&#35793;&#38454;&#27573;&#25490;&#38500;&#22312;&#36825;&#20123;&#26381;&#21153;&#20043;&#22806;&#12290;</p>
 </section>
-<section id="windows-standalone-program-redistribuation">
-<h3>Windows &#29420;&#31435;&#31243;&#24207;&#30340;&#37325;&#26032;&#20998;&#37197;<a class="headerlink" href="#windows-standalone-program-redistribuation" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
+<section id="windows-standalone-program-redistribution">
+<h3>Windows standalone program redistribution<a class="headerlink" href="#windows-standalone-program-redistribution" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <p>&#26080;&#35770;&#26159;&#29992; MingW &#36824;&#26159; MSVC &#32534;&#35793;&#65292;&#29420;&#31435;&#31243;&#24207;&#37117;&#23545; Visual C Runtime &#24211;&#26377;&#22806;&#37096;&#20381;&#36182;&#24615;&#12290;Nuitka &#35797;&#22270;&#36890;&#36807;&#20174;&#20320;&#30340;&#31995;&#32479;&#20013;&#22797;&#21046;&#36825;&#20123;&#20381;&#36182;&#30340; DLL &#26469;&#36816;&#36865;&#23427;&#20204;&#12290;</p>
-<p>&#20174;&#24494;&#36719; Windows 10 &#24320;&#22987;&#65292;&#24494;&#36719;&#25552;&#20379;&#30340; <code class="docutils literal notranslate"><span class="pre">ucrt.dll</span></code> &#65288;&#36890;&#29992; C &#35821;&#35328;&#36816;&#34892;&#24211;&#65289;&#37325;&#26032;&#38057;&#20303;&#20102;&#23545; <code class="docutils literal notranslate"><span class="pre">api-ms-crt-*.dll</span></code> &#30340;&#35843;&#29992;&#12290;</p>
+<p>Beginning with Microsoft Windows 10, Microsoft ships <code class="docutils literal notranslate"><span class="pre">ucrt.dll</span></code>
+(Universal C Runtime libraries) which handles calls to
+<code class="docutils literal notranslate"><span class="pre">api-ms-crt-*.dll</span></code>.</p>
 <p>&#23545;&#20110;&#26089;&#26399;&#30340; Windows &#24179;&#21488;&#65288;&#21644; wine/ReactOS&#65289;&#65292;&#20320;&#24212;&#35813;&#32771;&#34385;&#22312;&#25191;&#34892; Nuitka &#29420;&#31435;&#32534;&#35793;&#31243;&#24207;&#20043;&#21069;&#23433;&#35013; Visual C Runtime &#24211;&#12290;</p>
 <p>&#26681;&#25454;&#25152;&#20351;&#29992;&#30340;C&#35821;&#35328;&#32534;&#35793;&#22120;&#65292;&#20320;&#38656;&#35201;&#20197;&#19979;&#30340; redist &#29256;&#26412;&#65306;</p>
 <table class="docutils align-default">
@@ -854,7 +932,9 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <p>&#26412;&#31456;&#27010;&#36848;&#20102;&#30446;&#21069;&#23545; Nuitka &#24615;&#33021;&#30340;&#26399;&#26395;&#12290;&#36825;&#26159;&#19968;&#39033;&#27491;&#22312;&#36827;&#34892;&#20013;&#30340;&#24037;&#20316;&#65292;&#20250;&#38543;&#30528;&#25105;&#20204;&#30340;&#36827;&#23637;&#32780;&#26356;&#26032;&#12290;&#30446;&#21069;&#24615;&#33021;&#27979;&#37327;&#30340;&#37325;&#28857;&#26159; Python 2.7&#65292;&#20294; 3.x &#23558;&#22312;&#20197;&#21518;&#36319;&#36827;&#12290;</p>
 <section id="pystone-results">
 <h3>pystone &#32467;&#26524;<a class="headerlink" href="#pystone-results" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
-<p>&#32467;&#26524;&#26159;&#36825;&#31181;&#36755;&#20986;&#30340;&#26368;&#39640;&#20540;&#65292;&#36816;&#34892; pystone 1000 &#27425;&#65292;&#21462;&#26368;&#23567;&#20540;&#12290;&#36825;&#20010;&#24819;&#27861;&#26159;&#65292;&#26368;&#24555;&#30340;&#36816;&#34892;&#26159;&#26368;&#26377;&#24847;&#20041;&#30340;&#65292;&#24182;&#28040;&#38500;&#20102;&#20351;&#29992;&#39640;&#23792;&#12290;</p>
+<p>The results are the top value from this kind of output, running pystone
+1000 times and taking the minimal value. The idea is that the fastest
+run is most meaningful, and eliminates usage spikes.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">"Uncompiled Python2"</span>
 <span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..100<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="nv">BENCH</span><span class="o">=</span><span class="m">1</span> python2 tests/benchmarks/pystone.py <span class="p">;</span> <span class="k">done</span> <span class="p">|</span> sort -n -r <span class="p">|</span> head -n <span class="m">1</span>
 python2 -m nuitka --lto<span class="o">=</span>yes --pgo<span class="o">=</span>yes tests/benchmarks/pystone.py
@@ -1271,7 +1351,6 @@ constants of these types, they change to <code class="docutils literal notransla
 <h2>&#26356;&#26032;&#25163;&#20876;<a class="headerlink" href="#updates-for-this-manual" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h2>
 <p>&#36825;&#20221;&#25991;&#20214;&#26159;&#29992; REST &#20889;&#30340;&#12290;&#36825;&#26159;&#19968;&#31181; ASCII &#26684;&#24335;&#65292;&#20154;&#31867;&#21487;&#20197;&#38405;&#35835;&#65292;&#20294;&#24456;&#23481;&#26131;&#29992;&#20110;&#29983;&#25104; PDF &#25110; HTML &#25991;&#26723;&#12290;</p>
 <p>&#20320;&#21487;&#20197;&#22312;&#20197;&#19979;&#32593;&#31449;&#25214;&#21040;&#24403;&#21069;&#29256;&#26412;&#65306;<a class="reference external" href="https://nuitka.net/doc/user-manual.html">https://nuitka.net/doc/user-manual.html</a></p>
-<p>&#24403;&#21069; PDF &#29256;&#26412;&#65306;<a class="reference external" href="https://nuitka.net/doc/README.pdf">https://nuitka.net/doc/README.pdf</a></p>
 </section>
 </section>
 
@@ -1331,34 +1410,5 @@ constants of these types, they change to <code class="docutils literal notransla
       </div>
     </section>
   </div>
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="&#29256;&#26412;">
-      <span class="rst-current-version" data-toggle="rst-current-version">
-        <span class="fa fa-book"> Read the Docs</span>
-        v: latest
-        <span class="fa fa-caret-down"></span>
-      </span>
-      <div class="rst-other-versions">
-        <dl>
-          <dt>&#29256;&#26412;</dt>
-            <dd><a href="/latest">latest</a></dd>
-            <dd><a href="/translation">translation</a></dd>
-        </dl>
-        <dl>
-          <dt>&#26412;&#22320;&#21270;</dt>
-          <dd><a href="/">en</a></dd>
-            <dd><a href="/zh_CN">zh_CN</a></dd>
-        </dl>
-        <dl>
-          <dt>Read the Docs</dt>
-            <dd>
-              <a href="#">&#39033;&#30446;&#20027;&#39029;</a>
-            </dd>
-            <dd>
-              <a href="#">&#26500;&#24314;</a>
-            </dd>
-        </dl>
-      </div>
-    </div>
-
-</body>
+  </body>
 </html>

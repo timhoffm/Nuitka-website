@@ -128,7 +128,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#limit-the-amount-of-compilation-jobs">Limit the amount of compilation jobs</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#dynamic-sys-path">Dynamic <code class="docutils literal notranslate"><span class="pre">sys.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-sys-path">Dynamic <code class="docutils literal notranslate"><span class="pre">sys.path</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manual-python-file-loading">Manual Python File Loading</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#missing-data-files-in-standalone">Missing data files in standalone</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#missing-dlls-in-standalone">Missing DLLs in standalone</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dependency-creep-in-standalone">Dependency creep in standalone</a></li>
@@ -146,7 +149,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#unexpected-slowdowns">Unexpected Slowdowns</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#standalone-executables-and-dependencies">Standalone executables and dependencies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows-errors-with-resources">Windows errors with resources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#windows-standalone-program-redistribuation">Windows standalone program redistribuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows-standalone-program-redistribution">Windows standalone program redistribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#detecting-nuitka-at-run-time">Detecting Nuitka at run time</a></li>
 </ul>
 </li>
@@ -194,9 +197,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 0.8 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-7">Nuitka Release 0.7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
 </ul>
@@ -288,8 +291,10 @@ provided by the Visual Studio installer.</p></li>
 </ul>
 </li>
 <li><p>Python: Version 2.6, 2.7 or 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10</p>
-<div class="admonition-for-python-3-3-3-4-and-only-those-we-need-other-python-version-as-a-compile-time-dependency admonition">
-<p class="admonition-title">For Python 3.3/3.4 and <em>only</em> those, we need other Python version as a <em>compile time</em> dependency.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For Python 3.3/3.4 and <em>only</em> those, we need other Python version
+as a <em>compile time</em> dependency.</p>
 <p>Nuitka itself is fully compatible with all listed versions, but
 Scons as an internally used tool is not.</p>
 <p>For these versions, you <em>need</em> a Python2 or Python 3.5 or higher
@@ -299,9 +304,13 @@ does not support the same Python versions as Nuitka.</p>
 <p>In addition, on Windows, Python2 cannot be used because
 <code class="docutils literal notranslate"><span class="pre">clcache</span></code> does not work with it, there a Python 3.5 or higher
 needs to be installed.</p>
-<p>Nuitka finds these needed Python versions (on Windows via
+<p>Nuitka finds these needed Python versions (e.g. on Windows via
 registry) and you shouldn&#8217;t notice it as long as they are
 installed.</p>
+<p>Increasingly, other functionality is available when another Python
+has a certain package installed. For example, onefile compression
+will work for a Python 2.x when another Python is found that has
+the <code class="docutils literal notranslate"><span class="pre">zstandard</span></code> package installed.</p>
 </div>
 <div class="admonition-moving-binaries-to-other-machines admonition">
 <p class="admonition-title">Moving binaries to other machines</p>
@@ -430,10 +439,11 @@ any of the parts, just skip it.</p>
 <section id="install-python">
 <h4>Install Python<a class="headerlink" href="#install-python" title="Permalink to this headline">&#61633;</a></h4>
 <ul class="simple">
-<li><p>Download and install from <a class="reference external" href="https://www.python.org/downloads/windows" target="_blank">https://www.python.org/downloads/windows</a></p></li>
+<li><p>Download and install Python from
+<a class="reference external" href="https://www.python.org/downloads/windows" target="_blank">https://www.python.org/downloads/windows</a></p></li>
 <li><p>Select one of <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">x86-64</span> <span class="pre">web-based</span> <span class="pre">installer</span></code> (64 bits Python,
 recommended) or <code class="docutils literal notranslate"><span class="pre">x86</span> <span class="pre">executable</span></code> (32 bits Python) installer.</p></li>
-<li><p>Verify using command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>.</p></li>
+<li><p>Verify it&#8217;s working using command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>.</p></li>
 </ul>
 </section>
 <section id="install-nuitka">
@@ -449,7 +459,7 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 <section id="create-a-folder-for-the-python-code">
 <h4>Create a folder for the Python code<a class="headerlink" href="#create-a-folder-for-the-python-code" title="Permalink to this headline">&#61633;</a></h4>
 <ul class="simple">
-<li><p>mkdir HelloWorld</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> HelloWorld</p></li>
 <li><p>make a python file named <strong>hello.py</strong></p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
@@ -641,10 +651,10 @@ splash screen, and version information, consider the <code class="docutils liter
 output for the details of these and check the section &#8220;Good Looks&#8221;.</p>
 </div>
 <p>Again, on Windows, for the temporary file directory, by default the user
-one is used, however this is overridable with a path specification given
-in <code class="docutils literal notranslate"><span class="pre">--windows-onefile-tempdir-spec=%TEMP%\\onefile_%PID%_%TIME%</span></code> which
-is the default and asserts that the temporary directories created cannot
-collide.</p>
+one is used, however this can be overridden with a path specification
+given in <code class="docutils literal notranslate"><span class="pre">--windows-onefile-tempdir-spec=%TEMP%\\onefile_%PID%_%TIME%</span></code>
+which is the default and asserts that the temporary directories created
+cannot collide.</p>
 <p>Currently these expanded tokens are available:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -829,9 +839,9 @@ or that some input was truncated, or similar error messages, clearly
 from it. There are several options you can explore here:</p>
 <section id="ask-nuitka-to-use-less-memory">
 <h4>Ask Nuitka to use less memory<a class="headerlink" href="#ask-nuitka-to-use-less-memory" title="Permalink to this headline">&#61633;</a></h4>
-<p>There is a dedicated option <code class="docutils literal notranslate"><span class="pre">--low-memory</span></code> which influces decisions of
-Nuitka, such that it avoids high usage of memory during compilation at
-the cost of increased compile time.</p>
+<p>There is a dedicated option <code class="docutils literal notranslate"><span class="pre">--low-memory</span></code> which influences decisions
+of Nuitka, such that it avoids high usage of memory during compilation
+at the cost of increased compile time.</p>
 </section>
 <section id="avoid-32-bit-c-compiler-assembler-memory-limits">
 <h4>Avoid 32 bit C compiler/assembler memory limits<a class="headerlink" href="#avoid-32-bit-c-compiler-assembler-memory-limits" title="Permalink to this headline">&#61633;</a></h4>
@@ -878,14 +888,55 @@ so that&#8217;s a natural choice right there.</p>
 <section id="dynamic-sys-path">
 <h3>Dynamic <code class="docutils literal notranslate"><span class="pre">sys.path</span></code><a class="headerlink" href="#dynamic-sys-path" title="Permalink to this headline">&#61633;</a></h3>
 <p>If your script modifies <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> to e.g. insert directories with
-source code relative to it, Nuitka will currently not be able to see
-those. However, if you set the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> to the resulting value,
-you will be able to compile it.</p>
+source code relative to it, Nuitka will not be able to see those.
+However, if you set the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> to the resulting value, it will
+be able to compile it and find the used modules from these paths as
+well.</p>
+<section id="manual-python-file-loading">
+<h4>Manual Python File Loading<a class="headerlink" href="#manual-python-file-loading" title="Permalink to this headline">&#61633;</a></h4>
+<p>A very frequent pattern with private code is that it scans plugin
+directories of some kind, and uses <code class="docutils literal notranslate"><span class="pre">os.listdir</span></code>, checks filenames, and
+then opens a file and does <code class="docutils literal notranslate"><span class="pre">exec</span></code> on them. This approach is working
+for Python code, but for compiled code, you should use this much cleaner
+approach, that works for pure Python code and is a lot less vulnerable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using a package name, to locate the plugins, but this can actually</span>
+<span class="c1"># be also a directory.</span>
+<span class="n">scan_path</span> <span class="o">=</span> <span class="n">scan_package</span><span class="o">.</span><span class="n">__path__</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">pkgutil</span><span class="o">.</span><span class="n">iter_modules</span><span class="p">(</span><span class="n">scan_path</span><span class="p">):</span>
+   <span class="c1"># You may want to do it recursively, but we don't do this here in</span>
+   <span class="c1"># this example.</span>
+   <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">ispkg</span><span class="p">:</span>
+      <span class="k">continue</span>
+
+   <span class="c1"># The loader object knows how to do it.</span>
+   <span class="n">module_loader</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">module_finder</span><span class="o">.</span><span class="n">find_module</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+   <span class="c1"># Ignore bytecode only left overs. Deleted files can cause</span>
+   <span class="c1"># these things, so we just ignore it. Not every load has a</span>
+   <span class="c1"># filename, so we need to catch that error.</span>
+   <span class="k">try</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">module_loader</span><span class="o">.</span><span class="n">get_filename</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".pyc"</span><span class="p">):</span>
+         <span class="k">continue</span>
+   <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+      <span class="c1"># Not a bytecode loader, but e.g. extension module, which is OK in case</span>
+      <span class="c1"># it was compiled with Nuitka.</span>
+      <span class="k">pass</span>
+
+   <span class="n">plugin_module</span> <span class="o">=</span> <span class="n">module_loader</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+   <span class="c1"># At least for Python2, this is not set properly, but we use it for package</span>
+   <span class="c1"># data loading, so this manual patching up allows these to use proper methods</span>
+   <span class="c1"># for loading their stuff as well.</span>
+   <span class="n">plugin_module</span><span class="o">.</span><span class="n">__package__</span> <span class="o">=</span> <span class="n">scan_package</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="missing-data-files-in-standalone">
 <h3>Missing data files in standalone<a class="headerlink" href="#missing-data-files-in-standalone" title="Permalink to this headline">&#61633;</a></h3>
 <p>If your program fails to file data, it can cause all kinds of different
-behaviours, e.g. a package might complain it is not the right version,
+behaviors, e.g. a package might complain it is not the right version,
 because a <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> file check defaulted to unknown. The absence of
 icon files or help texts, may raise strange errors.</p>
 <p>Often the error paths for files not being present are even buggy and
@@ -913,7 +964,7 @@ imaginable take time.</p>
 <p>Nuitka will have to learn effective caching to deal with this in the
 future. Right now, you will have to deal with huge compilation times for
 these.</p>
-<p>For now, a major weapon in fighting dependency creap should be applied,
+<p>For now, a major weapon in fighting dependency creep should be applied,
 namely the <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> plugin, which offers interesting abilities,
 that can be put to use and block unneeded imports, giving an error for
 where they occur. Use it e.g. like this <code class="docutils literal notranslate"><span class="pre">--enable-plugin=anti-bloat</span>
@@ -968,8 +1019,8 @@ variables, this is an example:</p>
 <p>The comments must be a start of line, and indentation is to be used, to
 end a conditional block, much like in Python. There are currently no
 other keywords than the used ones demonstrated above.</p>
-<p>You can put abitrary Python expressions there, and if you wanted to e.g.
-access a version information of a package, you could simply use
+<p>You can put arbitrary Python expressions there, and if you wanted to
+e.g. access a version information of a package, you could simply use
 <code class="docutils literal notranslate"><span class="pre">__import__("module_name").__version__</span></code> if that would be required to
 e.g. enable or disable certain Nuitka settings. The only thing Nuitka
 does that makes this not Python expressions, is expanding <code class="docutils literal notranslate"><span class="pre">{variable}</span></code>
@@ -1037,7 +1088,7 @@ hang.</p>
 <p>Nuitka will pick up <code class="docutils literal notranslate"><span class="pre">ccache</span></code> if it&#8217;s in found in system <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, and
 it will also be possible to provide if by setting
 <code class="docutils literal notranslate"><span class="pre">NUITKA_CCACHE_BINARY</span></code> to the full path of the binary, this is for use
-in CI systems.</p>
+in CI systems where things might be non-standard.</p>
 <p>For the MSVC compilers and ClangCL setups, using the <code class="docutils literal notranslate"><span class="pre">clcache</span></code> is
 automatic and included in Nuitka.</p>
 </section>
@@ -1108,13 +1159,13 @@ it, e.g. adding more resources, and then preventing operations randomly
 due to holding locks. Make sure to exclude your compilation stage from
 these services.</p>
 </section>
-<section id="windows-standalone-program-redistribuation">
-<h3>Windows standalone program redistribuation<a class="headerlink" href="#windows-standalone-program-redistribuation" title="Permalink to this headline">&#61633;</a></h3>
+<section id="windows-standalone-program-redistribution">
+<h3>Windows standalone program redistribution<a class="headerlink" href="#windows-standalone-program-redistribution" title="Permalink to this headline">&#61633;</a></h3>
 <p>Whether compiling with MingW or MSVC, the standalone programs have
 external dependencies to Visual C Runtime libraries. Nuitka tries to
 ship those dependent DLLs by copying them from your system.</p>
 <p>Beginning with Microsoft Windows 10, Microsoft ships <code class="docutils literal notranslate"><span class="pre">ucrt.dll</span></code>
-(Universal C Runtime libraries) which rehook calls to
+(Universal C Runtime libraries) which handles calls to
 <code class="docutils literal notranslate"><span class="pre">api-ms-crt-*.dll</span></code>.</p>
 <p>With earlier Windows platforms (and wine/ReactOS), you should consider
 installing Visual C Runtime libraries before executing a Nuitka
@@ -1197,7 +1248,7 @@ go. The current focus for performance measurements is Python 2.7, but
 <h3>pystone results<a class="headerlink" href="#pystone-results" title="Permalink to this headline">&#61633;</a></h3>
 <p>The results are the top value from this kind of output, running pystone
 1000 times and taking the minimal value. The idea is that the fastest
-run is most meanigful, and eliminates usage spikes.</p>
+run is most meaningful, and eliminates usage spikes.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">"Uncompiled Python2"</span>
 <span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..100<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="nv">BENCH</span><span class="o">=</span><span class="m">1</span> python2 tests/benchmarks/pystone.py <span class="p">;</span> <span class="k">done</span> <span class="p">|</span> sort -n -r <span class="p">|</span> head -n <span class="m">1</span>
 python2 -m nuitka --lto<span class="o">=</span>yes --pgo<span class="o">=</span>yes tests/benchmarks/pystone.py
@@ -1698,7 +1749,6 @@ constants of these types, they change to <code class="docutils literal notransla
 readable to human, but easily used to generate PDF or HTML documents.</p>
 <p>You will find the current version at:
 <a class="reference external" href="https://nuitka.net/doc/user-manual.html">https://nuitka.net/doc/user-manual.html</a></p>
-<p>And the current PDF under: <a class="reference external" href="https://nuitka.net/doc/README.pdf">https://nuitka.net/doc/README.pdf</a></p>
 </section>
 </section>
 
@@ -1758,34 +1808,5 @@ readable to human, but easily used to generate PDF or HTML documents.</p>
       </div>
     </section>
   </div>
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
-      <span class="rst-current-version" data-toggle="rst-current-version">
-        <span class="fa fa-book"> Read the Docs</span>
-        v: latest
-        <span class="fa fa-caret-down"></span>
-      </span>
-      <div class="rst-other-versions">
-        <dl>
-          <dt>Versions</dt>
-            <dd><a href="/latest">latest</a></dd>
-            <dd><a href="/translation">translation</a></dd>
-        </dl>
-        <dl>
-          <dt>Locale</dt>
-          <dd><a href="/">en</a></dd>
-            <dd><a href="/zh_CN">zh_CN</a></dd>
-        </dl>
-        <dl>
-          <dt>On Read the Docs</dt>
-            <dd>
-              <a href="#">Project Home</a>
-            </dd>
-            <dd>
-              <a href="#">Builds</a>
-            </dd>
-        </dl>
-      </div>
-    </div>
-
-</body>
+  </body>
 </html>
