@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,31 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuitka Release 0.6.17</title>
-      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
-      <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-0617.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-0617.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <script src="../_static/clipboard.min.js" async=""></script>
-        <script src="../_static/copybutton.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -68,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
@@ -119,7 +122,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -130,13 +133,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-6-17">
-<h1>Nuitka Release 0.6.17<a class="headerlink" href="#nuitka-release-0-6-17" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.6.17<a class="headerlink" href="#nuitka-release-0-6-17" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This release has a focus on performance improvements, while also
 polishing plugins and adding many new features.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Fix, plugins were not catching being used on packages not installed.
 Fixed in 0.6.16.2 already.</p></li>
@@ -163,7 +166,7 @@ typically from disk corruption, were not handled properly. Fixed in
 0.6.16.3 already.</p></li>
 <li><p>Fix, failed <code class="docutils literal notranslate"><span class="pre">.throw()</span></code> into generators could cause corruption.
 Fixed in 0.6.16.4 already.</p></li>
-<li><p>Python2: Fix, the bytecode compilation didn&#8217;t respect the
+<li><p>Python2: Fix, the bytecode compilation didn’t respect the
 <code class="docutils literal notranslate"><span class="pre">--python-flag=no_asserts</span></code> mode. Fixed in 0.6.16.4 already.</p></li>
 <li><p>Fix, calls were not annotating their arguments as escaped, causing
 corruption of mutable in static optimization. Fixed in 0.6.16.5
@@ -185,18 +188,18 @@ that the mapping might raise when setting values.</p></li>
 C stage.</p></li>
 <li><p>macOS: Never include files from OS private frameworks in standalone
 mode.</p></li>
-<li><p>Fix, the python flag <code class="docutils literal notranslate"><span class="pre">--python-flag=no_warning</span></code> wasn&#8217;t working on
+<li><p>Fix, the python flag <code class="docutils literal notranslate"><span class="pre">--python-flag=no_warning</span></code> wasn’t working on
 all platforms.</p></li>
-<li><p>Compatibility: Fix, the main code of the <code class="docutils literal notranslate"><span class="pre">site</span></code> module wasn&#8217;t
+<li><p>Compatibility: Fix, the main code of the <code class="docutils literal notranslate"><span class="pre">site</span></code> module wasn’t
 executing, so that its added builtins were not there. Of course, you
 ought to use <code class="docutils literal notranslate"><span class="pre">--python-flag=no_site</span></code> to not have it in the normal
 case.</p></li>
 <li><p>Python2: Added code path to handle edited standard library source
 code which then has no valid bytecode file.</p></li>
-<li><p>Anaconda: In module mode, the CondaCC wasn&#8217;t recognized as form of
+<li><p>Anaconda: In module mode, the CondaCC wasn’t recognized as form of
 gcc.</p></li>
 <li><p>Fix, bytecode modules could shadow compiled modules of the same name.</p></li>
-<li><p>Onefile: Fix, expansion of <code class="docutils literal notranslate"><span class="pre">%PID%</span></code> wasn&#8217;t working properly on
+<li><p>Onefile: Fix, expansion of <code class="docutils literal notranslate"><span class="pre">%PID%</span></code> wasn’t working properly on
 non-Windows, making temp paths less unique. The time stamp is not
 necessarily enough.</p></li>
 <li><p>Fix, <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> error exits from slave processes were not
@@ -216,7 +219,7 @@ name imports.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Added experimental support for C level PGO (Profile Guided
 Optimization), which runs your program and then uses feedback from
@@ -241,10 +244,10 @@ and use this in <code class="docutils literal notranslate"><span class="pre">ant
 unnecessary stuff with variants that often just do nothing. This is
 illustrated here.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">gevent._util</span><span class="p">:</span><span class="w"></span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"remove</span><span class="nv"> </span><span class="s">gevent</span><span class="nv"> </span><span class="s">release</span><span class="nv"> </span><span class="s">framework"</span><span class="w"></span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;remove</span><span class="nv"> </span><span class="s">gevent</span><span class="nv"> </span><span class="s">release</span><span class="nv"> </span><span class="s">framework&quot;</span><span class="w"></span>
 <span class="nt">change_function</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="s">"prereleaser_middle"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"'(lambda</span><span class="nv"> </span><span class="s">data:</span><span class="nv"> </span><span class="s">None)'"</span><span class="w"></span>
-<span class="w">   </span><span class="s">"postreleaser_before"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"'(lambda</span><span class="nv"> </span><span class="s">data:</span><span class="nv"> </span><span class="s">None)'"</span><span class="w"></span>
+<span class="w">   </span><span class="s">&quot;prereleaser_middle&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;&#39;(lambda</span><span class="nv"> </span><span class="s">data:</span><span class="nv"> </span><span class="s">None)&#39;&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="s">&quot;postreleaser_before&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;&#39;(lambda</span><span class="nv"> </span><span class="s">data:</span><span class="nv"> </span><span class="s">None)&#39;&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This example is removing <code class="docutils literal notranslate"><span class="pre">gevent</span></code> code that loads dependencies used
@@ -274,10 +277,10 @@ now yellow for better recognition.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Faster threading code was used for Python3.8 or higher, and this has
-been extended to 3.7 on Windows, but we won&#8217;t be able to have it
+been extended to 3.7 on Windows, but we won’t be able to have it
 other platforms and not on earlier Python3 versions.</p></li>
 <li><p>Faster calls esp. with keyword arguments. Call with keywords no
 longer create dictionaries if the call target supports that, and with
@@ -305,13 +308,13 @@ are naturally very much the same as <code class="docutils literal notranslate"><
 <li><p>Added specialization for <code class="docutils literal notranslate"><span class="pre">list</span></code> comparisons too. We had them for
 <code class="docutils literal notranslate"><span class="pre">tuples</span></code> only so far.</p></li>
 <li><p>Faster method calls when called from Python core, our <code class="docutils literal notranslate"><span class="pre">tp_call</span></code>
-slot wasn&#8217;t as good as it can be.</p></li>
+slot wasn’t as good as it can be.</p></li>
 <li><p>Optimization: Faster deep copies of constants. This can speed up
 constant calls with mutable types. Before it was checking the type
 too often to be fast.</p></li>
 <li><p>Allow using static linking with Debian Python giving much better
 performance with the system Python. This is actually a huge
-improvement as it makes things much faster. So far it&#8217;s only
+improvement as it makes things much faster. So far it’s only
 automatically enabled for Python2, but it seems to work for Python3
 on Debian too. Needs more tweaking in the future.</p></li>
 <li><p>Optimization: Added <code class="docutils literal notranslate"><span class="pre">functools</span></code> module to the list of hard imports
@@ -327,22 +330,22 @@ also allowing more optimization.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Added section in the User Manual on how to deal with memory issues
 and C compiler bugs. This is a frequent topic and should serve as a
 pointer for this kind of issue.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">--lto</span></code> option was changed to require an argument, so that it
 can also be disabled. The default is <code class="docutils literal notranslate"><span class="pre">auto</span></code> which is the old
-behaviour where it&#8217;s enabled if possible.</p></li>
+behaviour where it’s enabled if possible.</p></li>
 <li><p>Changed <code class="docutils literal notranslate"><span class="pre">--no-progress</span></code> to <code class="docutils literal notranslate"><span class="pre">--no-progressbar</span></code> in order to make it
-more clear what it&#8217;s about. Previously it was possible to relate it
+more clear what it’s about. Previously it was possible to relate it
 to <code class="docutils literal notranslate"><span class="pre">--show-progress</span></code>.</p></li>
 <li><p>No longer require specific versions of dependencies in our
 <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> and relegate those to only being in
-<code class="docutils literal notranslate"><span class="pre">requirements-devel.txt</span></code> such that by default Nuitka doesn&#8217;t
+<code class="docutils literal notranslate"><span class="pre">requirements-devel.txt</span></code> such that by default Nuitka doesn’t
 collide with user requirements on those same packages which
-absolutely all the time don&#8217;t really make a difference.</p></li>
+absolutely all the time don’t really make a difference.</p></li>
 <li><p>Added ability to check all unpushed changes with pylint with a new
 <code class="docutils literal notranslate"><span class="pre">./bin/check-nuitka-with-pylint</span> <span class="pre">--unpushed</span></code> option. Before it was
 only possible to make the check (quickly) with <code class="docutils literal notranslate"><span class="pre">--diff</span></code>, but that
@@ -362,7 +365,7 @@ optimization when a plugin is asking to <code class="docutils literal notranslat
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Encoding names for UTF8 in calls to <code class="docutils literal notranslate"><span class="pre">.encode()</span></code> were used
 inconsistent with and without dashes in the source code, added
@@ -387,7 +390,7 @@ reused for other platforms more easily.</p></li>
 </ul>
 </section>
 <section id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Removed <code class="docutils literal notranslate"><span class="pre">reflected</span></code> test, because of Nuitka special needs to
 restart with variable Python flags. This could be reverted though,
@@ -405,7 +408,7 @@ catch corruption of them in tests.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>This release is one of the most important ones in a long time. The PGO
 and LTO, and static libpython work make a big different for performance
 of created binaries.</p>
@@ -444,11 +447,14 @@ any annotations used. Benchmarks will become more fun clearly.</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      
     <a href="nuitka-release-0618.html">
-      Nuitka Release 0.6.18 <i class="fa fa-arrow-circle-right"></i>
+      Nuitka Release 0.6.18 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
     </a>
     
   </span>
@@ -460,29 +466,29 @@ any annotations used. Benchmarks will become more fun clearly.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-0617.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-0617.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="../_static/icon-twitter.png" width="24" height="24">
+                    <img src="../_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-0617.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-0617.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="../_static/icon-facebook.png" width="24" height="24">
+                    <img src="../_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -492,7 +498,7 @@ any annotations used. Benchmarks will become more fun clearly.</p>
         <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/posts/nuitka-release-0617.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="../_static/icon-reddit.png" width="24" height="24">
+                    <img src="../_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -508,7 +514,12 @@ any annotations used. Benchmarks will become more fun clearly.</p>
       </div>
     </section>
   </div>
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Read the Docs</span>
         v: latest

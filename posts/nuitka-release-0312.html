@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,29 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuitka Release 0.3.12</title>
-      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
-      <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-0312.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-0312.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -66,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
@@ -117,7 +122,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -128,9 +133,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-12">
-<h1>Nuitka Release 0.3.12<a class="headerlink" href="#nuitka-release-0-3-12" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.12<a class="headerlink" href="#nuitka-release-0-3-12" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This is to inform you about the new release of Nuitka many bug fixes,
 and substantial improvements especially in the organisational area.
 There is a new <a class="reference external" href="https://nuitka.net/doc/user-manual.html">User Manual</a>
@@ -141,11 +146,11 @@ git flow goodness.</p>
 of a real programs (Mercurial) and to get things work more nicely on
 Windows by default. Thanks go to Liu Zhenhai for helping me with this
 goal.</p>
-<p>Due to the use of the &#8220;git flow&#8221;, most of the bugs listed here were
+<p>Due to the use of the “git flow”, most of the bugs listed here were
 already fixed in on the stable release before this release. And there
 were many of these.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>The order of evaluation for base classes and class dictionaries was
 not enforced.</p>
@@ -154,7 +159,7 @@ during debugging that Nuitka gave a different error than CPython did,
 for a class that had an undefined base class, because both class body
 and base classes were giving an error. Fixed in 0.3.11a already.</p>
 </li>
-<li><p>Method objects didn&#8217;t hold a reference to the used class.</p>
+<li><p>Method objects didn’t hold a reference to the used class.</p>
 <p>The effect was only noticed when <code class="docutils literal notranslate"><span class="pre">--python-debug</span></code> was used, i.e.
 the debug version of Python linked, because then the garbage
 collector makes searches. Fixed in 0.3.11b already.</p>
@@ -179,18 +184,18 @@ Fixed in 0.3.11f already.</p></li>
 <li><p>Modules with a parent package could cause a problem under some
 circumstances. Fixed in 0.3.11h already.</p></li>
 <li><p>One call variant, with both list and dict star arguments and keyword
-arguments, but no positional parameters, didn&#8217;t have the required C++
+arguments, but no positional parameters, didn’t have the required C++
 helper function implemented. Fixed in 0.3.11h already.</p></li>
 <li><p>The detection of the CPU core count was broken on my hexacore at
 least. Gave 36 instead of 6, which is a problem for large programs.
 Fixed in 0.3.11h already.</p></li>
-<li><p>The in-line copy of Scons didn&#8217;t really work on Windows, which was
+<li><p>The in-line copy of Scons didn’t really work on Windows, which was
 sad, because we added it to simplify installation on Windows
 precisely because of this.</p></li>
 <li><p>Cleaning up the build directory from old sources and object files
-wasn&#8217;t portable to Windows and therefore wasn&#8217;t effective there.</p></li>
+wasn’t portable to Windows and therefore wasn’t effective there.</p></li>
 <li><p>From imports where part of the imported were found modules and parts
-were not, didn&#8217;t work. Solved by the feature branch
+were not, didn’t work. Solved by the feature branch
 <code class="docutils literal notranslate"><span class="pre">meta_path_import</span></code> that was merged for this release.</p></li>
 <li><p>Newer MinGW gave warnings about the default visibility not being
 possible to apply to class members. Fixed by not setting this default
@@ -202,14 +207,14 @@ detection.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Version checks on Python runtime now use a new define
-<code class="docutils literal notranslate"><span class="pre">PYTHON_VERSION</span></code> that makes it easier. I don&#8217;t like
+<code class="docutils literal notranslate"><span class="pre">PYTHON_VERSION</span></code> that makes it easier. I don’t like
 <code class="docutils literal notranslate"><span class="pre">PY_VERSION_HEX</span></code>, because it is so unreadable. Makes some of the
 checks a lot more safe.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">sys.meta_path</span></code> based import from the <code class="docutils literal notranslate"><span class="pre">meta_path_import</span></code>
-feature branch allowed the cleanup the way importing is done. It&#8217;s a
+feature branch allowed the cleanup the way importing is done. It’s a
 lot less code now.</p></li>
 <li><p>Removed some unused code. We will aim at making Nuitka the tool to
 detect dead code really.</p></li>
@@ -218,27 +223,27 @@ package is intended for, the split will come later.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
-<li><p>New tests for import variants that previously didn&#8217;t work: Mixed
+<li><p>New tests for import variants that previously didn’t work: Mixed
 imports. Imports from a package one level up. Modules hidden by a
 package variable, etc.</p></li>
 <li><p>Added test of function call variant that had no test previously. Only
-found it when compiling &#8220;hg&#8221;. Amazing how nothing in my tests,
+found it when compiling “hg”. Amazing how nothing in my tests,
 CPython tests, etc. used it.</p></li>
 <li><p>Added test to cover the partial success of import statements.</p></li>
 <li><p>Added test to cover evaluation order of class definitions.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul>
-<li><p>Migrated the &#8220;README.txt&#8221; from org-mode to ReStructured Text, which
+<li><p>Migrated the “README.txt” from org-mode to ReStructured Text, which
 allows for a more readable document, and to generate a nice <a class="reference external" href="https://nuitka.net/doc/user-manual.html">User
 Manual</a> in PDF form.</p></li>
-<li><p>The amount of information in &#8220;README.txt&#8221; was increased, with many
-more subjects are now covered, e.g. &#8220;git flow&#8221; and how to join Nuitka
-development. It&#8217;s also impressive to see what code blocks and syntax
+<li><p>The amount of information in “README.txt” was increased, with many
+more subjects are now covered, e.g. “git flow” and how to join Nuitka
+development. It’s also impressive to see what code blocks and syntax
 highlighting can do for readability.</p></li>
 <li><p>The Nuitka git repository has seen multiple hot fixes.</p>
 <p>These allowed to publish bug fixes immediately after they were made,
@@ -252,16 +257,16 @@ released as part of the main branch. Getting that feature right took
 a while.</p></li>
 <li><p>And there is the feature branch <code class="docutils literal notranslate"><span class="pre">minimize_CPython26_tests_diff</span></code>
 which has some success already in documenting the required changes to
-the &#8220;CPython26&#8221; test suite and in reducing the amount of differences,
+the “CPython26” test suite and in reducing the amount of differences,
 while doing it. We have a frame stack working there, albeit in too
 ugly code form.</p></li>
 <li><p>The release archives are now built using <code class="docutils literal notranslate"><span class="pre">setuptools</span></code>. You can now
 also download a zip file, which is probably more Windows friendly.
 The intention is to work on that to make <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> produce a
-Nuitka install that won&#8217;t rely on any environment variables at all.
-Right now <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> won&#8217;t even allow any other options than
+Nuitka install that won’t rely on any environment variables at all.
+Right now <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> won’t even allow any other options than
 <code class="docutils literal notranslate"><span class="pre">sdist</span></code> to be given.</p></li>
-<li><p>Ported &#8220;compile_itself.sh&#8221; to &#8220;compile_itself.py&#8221;, i.e. ported it to
+<li><p>Ported “compile_itself.sh” to “compile_itself.py”, i.e. ported it to
 Python. This way, we can execute it easily on Windows too, where it
 currently still fails. Replacing <code class="docutils literal notranslate"><span class="pre">diff</span></code>, <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span></code>, etc. is a
 challenge, but it reduces the dependency on MSYS tools on Windows.</p></li>
@@ -272,10 +277,10 @@ given in addition to <code class="docutils literal notranslate"><span class="pre
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
 <p>Again, huge progress. The improved import mechanism is very beautiful.
 It appears that little is missing to compile real world programs like
-&#8220;hg&#8221; with Nuitka. The next release cycle will focus on that and continue
+“hg” with Nuitka. The next release cycle will focus on that and continue
 to improve the Windows support which appears to have some issues.</p>
 </section>
 </section>
@@ -291,11 +296,14 @@ to improve the Windows support which appears to have some issues.</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      
     <a href="puting-a-conference-t-shirt-to-good-use.html">
-      Putting a conference T-shirt to good use <i class="fa fa-arrow-circle-right"></i>
+      Putting a conference T-shirt to good use <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
     </a>
     
   </span>
@@ -307,29 +315,29 @@ to improve the Windows support which appears to have some issues.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-0312.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-0312.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="../_static/icon-twitter.png" width="24" height="24">
+                    <img src="../_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-0312.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-0312.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="../_static/icon-facebook.png" width="24" height="24">
+                    <img src="../_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -339,7 +347,7 @@ to improve the Windows support which appears to have some issues.</p>
         <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/posts/nuitka-release-0312.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="../_static/icon-reddit.png" width="24" height="24">
+                    <img src="../_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -355,7 +363,12 @@ to improve the Windows support which appears to have some issues.</p>
       </div>
     </section>
   </div>
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Read the Docs</span>
         v: latest

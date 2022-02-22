@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,31 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuitka Release 0.3.7</title>
-      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
-      <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-037.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://translation.nuitka.net/posts/nuitka-release-037.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <script src="../_static/clipboard.min.js" async=""></script>
-        <script src="../_static/copybutton.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -68,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
@@ -119,7 +122,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -130,9 +133,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-7">
-<h1>Nuitka Release 0.3.7<a class="headerlink" href="#nuitka-release-0-3-7" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.7<a class="headerlink" href="#nuitka-release-0-3-7" title="Permalink to this headline"></a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
+<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
 <p>This is about the new release with focus on performance and cleanups. It
 indicates significant progress with the milestone this release series
 really is about as it adds a <code class="docutils literal notranslate"><span class="pre">compiled_method</span></code> type.</p>
@@ -142,10 +145,10 @@ in CPython <code class="docutils literal notranslate"><span class="pre">instance
 specifically designed for wrapping <code class="docutils literal notranslate"><span class="pre">compiled_function</span></code> and therefore
 more efficient at it.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>When using <code class="docutils literal notranslate"><span class="pre">Python</span></code> or <code class="docutils literal notranslate"><span class="pre">Nuitka.py</span></code> to execute some script, the
-exit code in case of &#8220;file not found&#8221; was not the same as CPython. It
+exit code in case of “file not found” was not the same as CPython. It
 should be 2, not 1.</p></li>
 <li><p>The exit code of the created programs (<code class="docutils literal notranslate"><span class="pre">--deep</span></code> mode) in case of an
 uncaught exception was 0, now it an error exit with value 1, like
@@ -155,39 +158,39 @@ duplicate lines, this was corrected.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Global variable assignments now also use <code class="docutils literal notranslate"><span class="pre">assign0</span></code> where no
 reference exists.</p>
 <p>The assignment code for module variables is actually faster if it
-needs not drop the reference, but clearly the code shouldn&#8217;t bother
+needs not drop the reference, but clearly the code shouldn’t bother
 to take it on the outside just for that. This variant existed, but
-wasn&#8217;t used as much so far.</p>
+wasn’t used as much so far.</p>
 </li>
-<li><p>The instance method objects are now Nuitka&#8217;s own compiled type too.
+<li><p>The instance method objects are now Nuitka’s own compiled type too.
 This should make things slightly faster by itself.</p></li>
 <li><p>Our new compiled method objects support dedicated method parsing
 code, where <code class="docutils literal notranslate"><span class="pre">self</span></code> is passed directly, allowing to make calls
 taking a fast path in parameter parsing.</p>
 <p>This avoids allocating/freeing a <code class="docutils literal notranslate"><span class="pre">tuple</span></code> object per method call,
-while reduced 3% ticks in &#8220;PyStone&#8221; benchmark, so that&#8217;s significant.</p>
+while reduced 3% ticks in “PyStone” benchmark, so that’s significant.</p>
 </li>
 <li><p>Solved a <code class="docutils literal notranslate"><span class="pre">TODO</span></code> of <code class="docutils literal notranslate"><span class="pre">BUILTIN_RANGE</span></code> to change it to pre-allocating
 the list in the final size as we normally do everywhere else. This
-was a tick reduction of 0.4% in &#8220;PyStone&#8221; benchmark, but the
-measurement method normalizes on loop speed, so it&#8217;s not visible in
+was a tick reduction of 0.4% in “PyStone” benchmark, but the
+measurement method normalizes on loop speed, so it’s not visible in
 the numbers output.</p></li>
 <li><p>Parameter variables cannot possibly be uninitialized at creation and
 most often they are never subject to a <code class="docutils literal notranslate"><span class="pre">del</span></code> statement. Adding
 dedicated C++ variable classes gave a big speedup, around 3% of
-&#8220;PyStone&#8221; benchmark ticks.</p></li>
+“PyStone” benchmark ticks.</p></li>
 <li><p>Some abstract object operations were re-implemented, which allows to
 avoid function calls e.g. in the <code class="docutils literal notranslate"><span class="pre">ITERATOR_NEXT</span></code> case, this gave a
-few percent on &#8220;PyStone&#8221; as well.</p></li>
+few percent on “PyStone” as well.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>New package <code class="docutils literal notranslate"><span class="pre">nuitka.codegen</span></code> to contain all code generation related
 stuff, moved <code class="docutils literal notranslate"><span class="pre">nuitka.templates</span></code> to <code class="docutils literal notranslate"><span class="pre">nuitka.codegen.templates</span></code> as
@@ -200,8 +203,8 @@ instead gets information passed in function calls. This allows for a
 cleanup of the interface towards <code class="docutils literal notranslate"><span class="pre">CodeGeneration</span></code>. Gives a cleaner
 view on the C++ code generation, and generally furthers the goal of
 other than C++ language backends.</p></li>
-<li><p>More &#8220;PyLint&#8221; work, many of the reported warnings have been
-addressed, but it&#8217;s not yet happy.</p></li>
+<li><p>More “PyLint” work, many of the reported warnings have been
+addressed, but it’s not yet happy.</p></li>
 <li><p>Defaults for <code class="docutils literal notranslate"><span class="pre">yield</span></code> and <code class="docutils literal notranslate"><span class="pre">return</span></code> are <code class="docutils literal notranslate"><span class="pre">None</span></code> and these values
 are now already added (as constants) during tree building so that no
 such special cases need to be dealt with in <code class="docutils literal notranslate"><span class="pre">CodeGeneration</span></code> and
@@ -214,7 +217,7 @@ header files.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>The exit codes of CPython execution and Nuitka compiled programs are
 now compared as well.</p></li>
@@ -223,20 +226,20 @@ test as well.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
 <ul>
-<li><p>A new script &#8220;benchmark.sh&#8221; (now called &#8220;run-valgrind.py&#8221;) script now
-starts &#8220;kcachegrind&#8221; to display the valgrind result directly.</p>
+<li><p>A new script “benchmark.sh” (now called “run-valgrind.py”) script now
+starts “kcachegrind” to display the valgrind result directly.</p>
 <p>One can now use it to execute a test and inspect valgrind information
 right away, then improve it. Very useful to discover methods for
 improvements, test them, then refine some more.</p>
 </li>
-<li><p>The &#8220;check-release.sh&#8221; script needs to unset <code class="docutils literal notranslate"><span class="pre">NUITKA_EXTRA_OPTIONS</span></code>
+<li><p>The “check-release.sh” script needs to unset <code class="docutils literal notranslate"><span class="pre">NUITKA_EXTRA_OPTIONS</span></code>
 or else the reflection test will trip over the changed output paths.</p></li>
 </ul>
 </section>
 <section id="numbers">
-<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline"></a></h2>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
 <span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mf">76923.1</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>
@@ -254,7 +257,7 @@ more efficient C++ code generation and the new compiled method type.</p>
 <p>One can now safely assume that it is at least twice as fast, but I will
 try and get the PyPy or Shedskin test suite to run as benchmarks to
 prove it.</p>
-<p>No milestone 3 work in this release. I believe it&#8217;s best to finish with
+<p>No milestone 3 work in this release. I believe it’s best to finish with
 milestone 2 first, because these are quite universal gains that we
 should have covered.</p>
 </section>
@@ -271,11 +274,14 @@ should have covered.</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      
     <a href="nuitka-release-038---windows-support.html">
-      Nuitka Release 0.3.8 <i class="fa fa-arrow-circle-right"></i>
+      Nuitka Release 0.3.8 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
     </a>
     
   </span>
@@ -287,29 +293,29 @@ should have covered.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-037.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/nuitka-release-037.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="../_static/icon-twitter.png" width="24" height="24">
+                    <img src="../_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-037.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/nuitka-release-037.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="../_static/icon-facebook.png" width="24" height="24">
+                    <img src="../_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -319,7 +325,7 @@ should have covered.</p>
         <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/posts/nuitka-release-037.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="../_static/icon-reddit.png" width="24" height="24">
+                    <img src="../_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -335,7 +341,12 @@ should have covered.</p>
       </div>
     </section>
   </div>
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Read the Docs</span>
         v: latest

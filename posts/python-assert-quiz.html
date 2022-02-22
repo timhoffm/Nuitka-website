@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,31 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python Assert Quiz</title>
-      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
-      <link rel="canonical" href="https://translation.nuitka.net/posts/python-assert-quiz.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://translation.nuitka.net/posts/python-assert-quiz.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <script src="../_static/clipboard.min.js" async=""></script>
-        <script src="../_static/copybutton.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -68,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
@@ -119,7 +122,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -130,21 +133,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="python-assert-quiz">
-<h1>Python Assert Quiz<a class="headerlink" href="#python-assert-quiz" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Python Assert Quiz<a class="headerlink" href="#python-assert-quiz" title="Permalink to this headline"></a></h1>
 <p>At Europython conference, in my presentation, I talked about
 re-formulations of Python into simpler Python. It is my intention to
 turn this into a series of Python quiz questions that you will hopefully
 enjoy.</p>
 <div class="admonition-update admonition">
 <p class="admonition-title">Update</p>
-<p>Due to comments feedback, I made it more clear that &#8220;-O&#8221; affects of
+<p>Due to comments feedback, I made it more clear that “-O” affects of
 course both cases, and due to work on getting the recent CPython2.7
 test suite to work, I noticed, how the re-formulation for Quiz
 Question 2 needed a version dependent solution.</p>
 <p>And I thought this one was easy. :-)</p>
 </div>
 <section id="quiz-question-1">
-<h2>Quiz Question 1<a class="headerlink" href="#quiz-question-1" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Quiz Question 1<a class="headerlink" href="#quiz-question-1" title="Permalink to this headline"></a></h2>
 <p>Say you have the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
 </pre></div>
@@ -155,14 +158,14 @@ statement at all. The behavior is required to be absolutely the same.</p>
 out yourself.</p>
 </section>
 <section id="solution-1">
-<h2>Solution 1<a class="headerlink" href="#solution-1" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Solution 1<a class="headerlink" href="#solution-1" title="Permalink to this headline"></a></h2>
 <p>The correct answer is that assertions are the same as a raise exception
 in a conditional statement.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
     <span class="k">raise</span> <span class="ne">AssertionError</span>
 </pre></div>
 </div>
-<p>The thing where this makes a difference, is &#8220;-O&#8221;, which will discard
+<p>The thing where this makes a difference, is “-O”, which will discard
 assertions, but I consider it rarely used. To be really compatible with
 that, it should be:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">__debug__</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
@@ -171,7 +174,7 @@ that, it should be:</p>
 </div>
 </section>
 <section id="quiz-question-2">
-<h2>Quiz Question 2<a class="headerlink" href="#quiz-question-2" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Quiz Question 2<a class="headerlink" href="#quiz-question-2" title="Permalink to this headline"></a></h2>
 <p>But wait, there is slightly more to it. Say you have the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">,</span> <span class="n">arg</span>
 </pre></div>
@@ -182,7 +185,7 @@ statement at all. The behavior is required to be absolutely the same.</p>
 out yourself.</p>
 </section>
 <section id="solution-2">
-<h2>Solution 2<a class="headerlink" href="#solution-2" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Solution 2<a class="headerlink" href="#solution-2" title="Permalink to this headline"></a></h2>
 <p>This is actually version dependent, due to recent optimizations of
 CPython.</p>
 <ul>
@@ -206,7 +209,7 @@ creating the <code class="docutils literal notranslate"><span class="pre">Assert
 </ul>
 <p>So, even in the more complex case, you end up with a conditional
 <code class="docutils literal notranslate"><span class="pre">raise</span></code>.</p>
-<p>The only thing where this makes a difference, is &#8220;-O&#8221;, which will
+<p>The only thing where this makes a difference, is “-O”, which will
 discard assertions, but I consider it rarely used. To be really
 compatible with that, it should be:</p>
 <blockquote>
@@ -234,11 +237,14 @@ and other things.</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      
     <a href="python-3-wonders-barry-bdfl.html">
-      Python 3 wonders - Barry BDFL <i class="fa fa-arrow-circle-right"></i>
+      Python 3 wonders - Barry BDFL <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
     </a>
     
   </span>
@@ -250,29 +256,29 @@ and other things.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/python-assert-quiz.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/python-assert-quiz.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="../_static/icon-twitter.png" width="24" height="24">
+                    <img src="../_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/python-assert-quiz.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/python-assert-quiz.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="../_static/icon-facebook.png" width="24" height="24">
+                    <img src="../_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -282,7 +288,7 @@ and other things.</p>
         <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/posts/python-assert-quiz.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="../_static/icon-reddit.png" width="24" height="24">
+                    <img src="../_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -298,7 +304,12 @@ and other things.</p>
       </div>
     </section>
   </div>
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Read the Docs</span>
         v: latest

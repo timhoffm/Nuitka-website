@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,31 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python 3 wonders - Breaking str</title>
-      <link rel="stylesheet" href="/_static/css/combined_956e41ce3fbc17c38e5b9e7887ac6ae9.css" type="text/css">
-      <link rel="canonical" href="https://translation.nuitka.net/posts/python-3-wonders-breaking-str.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://translation.nuitka.net/posts/python-3-wonders-breaking-str.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <script src="../_static/clipboard.min.js" async=""></script>
-        <script src="../_static/copybutton.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -68,10 +71,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
@@ -119,7 +122,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -130,45 +133,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="python-3-wonders-breaking-str">
-<h1>Python 3 wonders - Breaking str<a class="headerlink" href="#python-3-wonders-breaking-str" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Python 3 wonders - Breaking str<a class="headerlink" href="#python-3-wonders-breaking-str" title="Permalink to this headline"></a></h1>
 <p>That just killed some hope inside of me, breaking code that uses <code class="docutils literal notranslate"><span class="pre">str</span></code>
 ought to be forbidden.</p>
 <div class="admonition-update admonition">
 <p class="admonition-title">Update</p>
 <p>Turns out, this only a bug, and not intentional. And the bug is only
-in the doc string, so it&#8217;s being fixed, and there is no inconsistency
+in the doc string, so it’s being fixed, and there is no inconsistency
 then any more.</p>
 </div>
 <p>Python 3:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">3.2.3</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Jun</span> <span class="mi">25</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">23</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">56</span><span class="p">)</span>
 <span class="p">[</span><span class="n">GCC</span> <span class="mf">4.7.1</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux2</span>
-<span class="n">Type</span> <span class="s2">"help"</span><span class="p">,</span> <span class="s2">"copyright"</span><span class="p">,</span> <span class="s2">"credits"</span> <span class="ow">or</span> <span class="s2">"license"</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="nb">str</span><span class="o">.</span><span class="vm">__doc__</span> <span class="p">)</span>
 <span class="nb">str</span><span class="p">(</span><span class="n">string</span><span class="p">[,</span> <span class="n">encoding</span><span class="p">[,</span> <span class="n">errors</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 
 <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">string</span> <span class="nb">object</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">given</span> <span class="n">encoded</span> <span class="n">string</span><span class="o">.</span>
 <span class="n">encoding</span> <span class="n">defaults</span> <span class="n">to</span> <span class="n">the</span> <span class="n">current</span> <span class="n">default</span> <span class="n">string</span> <span class="n">encoding</span><span class="o">.</span>
-<span class="n">errors</span> <span class="n">can</span> <span class="n">be</span> <span class="s1">'strict'</span><span class="p">,</span> <span class="s1">'replace'</span> <span class="ow">or</span> <span class="s1">'ignore'</span> <span class="ow">and</span> <span class="n">defaults</span> <span class="n">to</span> <span class="s1">'strict'</span><span class="o">.</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">"a"</span> <span class="p">)</span>
+<span class="n">errors</span> <span class="n">can</span> <span class="n">be</span> <span class="s1">&#39;strict&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span> <span class="ow">or</span> <span class="s1">&#39;ignore&#39;</span> <span class="ow">and</span> <span class="n">defaults</span> <span class="n">to</span> <span class="s1">&#39;strict&#39;</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="p">)</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">'string'</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">invalid</span> <span class="n">keyword</span> <span class="n">argument</span> <span class="k">for</span> <span class="n">this</span> <span class="n">function</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">invalid</span> <span class="n">keyword</span> <span class="n">argument</span> <span class="k">for</span> <span class="n">this</span> <span class="n">function</span>
 </pre></div>
 </div>
 <p>Python 2:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">2.7.3</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Jul</span> <span class="mi">13</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">17</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">29</span><span class="p">)</span>
 <span class="p">[</span><span class="n">GCC</span> <span class="mf">4.7.1</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux2</span>
-<span class="n">Type</span> <span class="s2">"help"</span><span class="p">,</span> <span class="s2">"copyright"</span><span class="p">,</span> <span class="s2">"credits"</span> <span class="ow">or</span> <span class="s2">"license"</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="nb">str</span><span class="o">.</span><span class="vm">__doc__</span>
 <span class="nb">str</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">string</span>
 
 <span class="n">Return</span> <span class="n">a</span> <span class="n">nice</span> <span class="n">string</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">object</span><span class="o">.</span>
 <span class="n">If</span> <span class="n">the</span> <span class="n">argument</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">string</span><span class="p">,</span> <span class="n">the</span> <span class="k">return</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">same</span> <span class="nb">object</span><span class="o">.</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">object</span> <span class="o">=</span> <span class="s2">"a"</span> <span class="p">)</span>
-<span class="s1">'a'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">object</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="p">)</span>
+<span class="s1">&#39;a&#39;</span>
 </pre></div>
 </div>
-<p>I do understand that it&#8217;s in fact just the old <code class="docutils literal notranslate"><span class="pre">unicode</span></code> built-in. In
+<p>I do understand that it’s in fact just the old <code class="docutils literal notranslate"><span class="pre">unicode</span></code> built-in. In
 fact, I made it work like that for Nuitka just now. But there is a
 difference, for Python2, it was well behaved.</p>
 <p>Python 2:</p>
@@ -177,9 +180,9 @@ difference, for Python2, it was well behaved.</p>
 
 <span class="go">Create a new Unicode object from the given encoded string.</span>
 <span class="go">encoding defaults to the current default string encoding.</span>
-<span class="go">errors can be 'strict', 'replace' or 'ignore' and defaults to 'strict'.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">unicode</span><span class="p">(</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">"a"</span> <span class="p">)</span>
-<span class="go">u'a'</span>
+<span class="go">errors can be &#39;strict&#39;, &#39;replace&#39; or &#39;ignore&#39; and defaults to &#39;strict&#39;.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unicode</span><span class="p">(</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="p">)</span>
+<span class="go">u&#39;a&#39;</span>
 </pre></div>
 </div>
 <p>Is Python3 supposed to be more clean or what? I think it is not
@@ -201,11 +204,14 @@ happening.</p>
     </a>
     
   </span>
-  <span>&#160;</span>
+  <span>&nbsp;</span>
   <span style="float: right">
      
     <a href="nuitka-release-0324.html">
-      Nuitka Release 0.3.24 <i class="fa fa-arrow-circle-right"></i>
+      Nuitka Release 0.3.24 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
     </a>
     
   </span>
@@ -217,29 +223,29 @@ happening.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/python-3-wonders-breaking-str.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/posts/python-3-wonders-breaking-str.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="../_static/icon-twitter.png" width="24" height="24">
+                    <img src="../_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/python-3-wonders-breaking-str.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/posts/python-3-wonders-breaking-str.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="../_static/icon-facebook.png" width="24" height="24">
+                    <img src="../_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -249,7 +255,7 @@ happening.</p>
         <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/posts/python-3-wonders-breaking-str.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="../_static/icon-reddit.png" width="24" height="24">
+                    <img src="../_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -265,7 +271,12 @@ happening.</p>
       </div>
     </section>
   </div>
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Read the Docs</span>
         v: latest

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,31 +11,36 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>API documentation</title>
-      <link rel="stylesheet" href="/_static/css/combined_f658040ecf3c00480a15608617701594.css" type="text/css">
-      <link rel="canonical" href="https://translation.nuitka.net/doc/api-doc.html">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://translation.nuitka.net/doc/api-doc.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: '../',
-    VERSION: '',
-    LANGUAGE: 'None',
-    COLLAPSE_INDEX: false,
-    BUILDER: 'html',
-    FILE_SUFFIX: '.html',
-    LINK_SUFFIX: '.html',
-    HAS_SOURCE: false,
-    SOURCELINK_SUFFIX: '.txt',
-    NAVIGATION_WITH_KEYS: false
-};</script>
-        <script src="/_static/combined_820841e74593a1d9384b6f5b50b4e5c7.js" async=""></script>
-        <link rel="index" title="Index" href="../genindex.html">
-    <link rel="next" title="Factory Instructions" href="factory.html">
-    <link rel="prev" title="Nuitka Developer Manual" href="developer-manual.html">   
-<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Factory Instructions" href="factory.html" />
+    <link rel="prev" title="Nuitka Developer Manual" href="developer-manual.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
  
 <style type="text/css">
   ul.ablog-archive {
@@ -68,10 +73,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
-          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
@@ -119,7 +124,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -130,13 +135,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="module-nuitka.Options">
-<span id="api-documentation"></span><h1>API documentation<a class="headerlink" href="#module-nuitka.Options" title="Permalink to this headline">&#61633;</a></h1>
+<span id="api-documentation"></span><h1>API documentation<a class="headerlink" href="#module-nuitka.Options" title="Permalink to this headline"></a></h1>
 <p>Options module</p>
 <p>This exposes the choices made by the user. Defaults will be applied here, and
 some handling of defaults.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isVerbose">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isVerbose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isVerbose" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isVerbose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isVerbose" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--verbose</span></code></p>
@@ -146,7 +151,7 @@ some handling of defaults.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallTraceExecution">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallTraceExecution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallTraceExecution" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallTraceExecution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallTraceExecution" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--trace-execution</span></code></p>
@@ -156,7 +161,7 @@ some handling of defaults.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallExecuteImmediately">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallExecuteImmediately</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallExecuteImmediately" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallExecuteImmediately</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallExecuteImmediately" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--run</span></code></p>
@@ -166,7 +171,7 @@ some handling of defaults.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallRunInDebugger">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallRunInDebugger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallRunInDebugger" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallRunInDebugger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallRunInDebugger" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--debug</span></code></p>
@@ -176,7 +181,7 @@ some handling of defaults.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallDumpBuiltTreeXML">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDumpBuiltTreeXML</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDumpBuiltTreeXML" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDumpBuiltTreeXML</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDumpBuiltTreeXML" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--xml</span></code></p>
@@ -186,7 +191,7 @@ some handling of defaults.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallOnlyExecCCompilerCall">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallOnlyExecCCompilerCall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallOnlyExecCCompilerCall" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallOnlyExecCCompilerCall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallOnlyExecCCompilerCall" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--recompile-c-only</span></code></p>
@@ -196,7 +201,7 @@ some handling of defaults.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallNotDoExecCCompilerCall">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotDoExecCCompilerCall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotDoExecCCompilerCall" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotDoExecCCompilerCall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotDoExecCCompilerCall" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--generate-c-only</span></code></p>
@@ -206,8 +211,8 @@ some handling of defaults.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getFileReferenceMode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getFileReferenceMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getFileReferenceMode" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>str</em>, one of &#8220;runtime&#8221;, &#8220;original&#8221;, &#8220;frozen&#8221;, coming from <code class="docutils literal notranslate"><span class="pre">--file-reference-choice</span></code></p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getFileReferenceMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getFileReferenceMode" title="Permalink to this definition"></a></dt>
+<dd><p><em>str</em>, one of “runtime”, “original”, “frozen”, coming from <code class="docutils literal notranslate"><span class="pre">--file-reference-choice</span></code></p>
 <dl class="simple">
 <dt>Notes:</dt><dd><p>Defaults to runtime for modules and packages, as well as standalone binaries,
 otherwise original is kept.</p>
@@ -217,7 +222,7 @@ otherwise original is kept.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallMakeModule">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallMakeModule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallMakeModule" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallMakeModule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallMakeModule" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--module</span></code></p>
@@ -227,19 +232,19 @@ otherwise original is kept.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallCreatePyiFile">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreatePyiFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreatePyiFile" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreatePyiFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreatePyiFile" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> = <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">--no-pyi-file</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isAllowedToReexecute">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isAllowedToReexecute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isAllowedToReexecute" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isAllowedToReexecute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isAllowedToReexecute" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> = <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">--must-not-re-execute</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallFollowStandardLibrary">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowStandardLibrary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowStandardLibrary" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowStandardLibrary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowStandardLibrary" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--follow-stdlib</span></code></p>
@@ -249,7 +254,7 @@ otherwise original is kept.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallFollowNoImports">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowNoImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowNoImports" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowNoImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowNoImports" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--nofollow-imports</span></code></p>
@@ -259,7 +264,7 @@ otherwise original is kept.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallFollowAllImports">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowAllImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowAllImports" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFollowAllImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFollowAllImports" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--follow-imports</span></code></p>
@@ -269,61 +274,61 @@ otherwise original is kept.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getShallFollowInNoCase">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowInNoCase</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowInNoCase" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowInNoCase</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowInNoCase" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--nofollow-import-to=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getShallFollowModules">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowModules" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowModules" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--follow-import-to=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getShallFollowExtra">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowExtra</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowExtra" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowExtra</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowExtra" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-plugin-directory=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getShallFollowExtraFilePatterns">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowExtraFilePatterns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowExtraFilePatterns" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallFollowExtraFilePatterns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallFollowExtraFilePatterns" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-plugin-files=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getMustIncludeModules">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMustIncludeModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMustIncludeModules" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMustIncludeModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMustIncludeModules" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-module=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getMustIncludePackages">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMustIncludePackages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMustIncludePackages" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMustIncludePackages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMustIncludePackages" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-package=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getShallIncludePackageData">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludePackageData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludePackageData" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludePackageData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludePackageData" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-package-data=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getShallIncludeDataFiles">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludeDataFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludeDataFiles" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludeDataFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludeDataFiles" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-data-file=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getShallIncludeDataDirs">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludeDataDirs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludeDataDirs" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallIncludeDataDirs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallIncludeDataDirs" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--include-data-dir=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallWarnImplicitRaises">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallWarnImplicitRaises</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallWarnImplicitRaises" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallWarnImplicitRaises</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallWarnImplicitRaises" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--warn-implicit-exceptions</span></code></p>
@@ -333,7 +338,7 @@ otherwise original is kept.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallWarnUnusualCode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallWarnUnusualCode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallWarnUnusualCode" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallWarnUnusualCode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallWarnUnusualCode" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--warn-unusual-code</span></code></p>
@@ -343,7 +348,7 @@ otherwise original is kept.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.assumeYesForDownloads">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">assumeYesForDownloads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.assumeYesForDownloads" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">assumeYesForDownloads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.assumeYesForDownloads" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--assume-yes-for-downloads</span></code></p>
@@ -353,7 +358,7 @@ otherwise original is kept.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isPythonDebug">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPythonDebug</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPythonDebug" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPythonDebug</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPythonDebug" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--python-debug</span></code> or <code class="docutils literal notranslate"><span class="pre">sys.flags.debug</span></code></p>
@@ -367,7 +372,7 @@ asserts of Python will happen in this mode.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isUnstripped">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isUnstripped</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isUnstripped" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isUnstripped</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isUnstripped" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--unstripped</span></code> or <code class="docutils literal notranslate"><span class="pre">--profile</span></code></p>
@@ -375,14 +380,14 @@ asserts of Python will happen in this mode.</p>
 </dl>
 <p>A binary is called stripped when debug information is not present, an
 unstripped when it is present. For profiling and debugging it will be
-necessary, but it doesn&#8217;t enable debug checks like <code class="docutils literal notranslate"><span class="pre">--debug</span></code> does.</p>
+necessary, but it doesn’t enable debug checks like <code class="docutils literal notranslate"><span class="pre">--debug</span></code> does.</p>
 <p>Passed to Scons as <code class="docutils literal notranslate"><span class="pre">unstripped_mode</span></code> to it can ask the linker to
 include symbol information.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isProfile">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isProfile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isProfile" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isProfile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isProfile" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--profile</span></code></p>
@@ -392,7 +397,7 @@ include symbol information.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallCreateGraph">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateGraph" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateGraph" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--graph</span></code></p>
@@ -402,49 +407,49 @@ include symbol information.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getOutputFilename">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputFilename" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>str</em>, value of &#8220;-o&#8221;</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputFilename" title="Permalink to this definition"></a></dt>
+<dd><p><em>str</em>, value of “-o”</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getOutputPath">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputPath" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputPath" title="Permalink to this definition"></a></dt>
 <dd><p>Return output pathname of a given path (filename).</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getOutputDir">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputDir" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>str</em>, value of <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> or &#8220;.&#8221;</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getOutputDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getOutputDir" title="Permalink to this definition"></a></dt>
+<dd><p><em>str</em>, value of <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> or “.”</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPositionalArgs">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPositionalArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPositionalArgs" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPositionalArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPositionalArgs" title="Permalink to this definition"></a></dt>
 <dd><p><em>tuple</em>, command line positional arguments</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getMainArgs">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMainArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMainArgs" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMainArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMainArgs" title="Permalink to this definition"></a></dt>
 <dd><p><em>tuple</em>, arguments following the optional arguments</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallOptimizeStringExec">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallOptimizeStringExec</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallOptimizeStringExec" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallOptimizeStringExec</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallOptimizeStringExec" title="Permalink to this definition"></a></dt>
 <dd><p>Inactive yet</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallClearPythonPathEnvironment">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallClearPythonPathEnvironment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallClearPythonPathEnvironment" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallClearPythonPathEnvironment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallClearPythonPathEnvironment" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> = <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">--execute-with-pythonpath</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallUseStaticLibPython">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallUseStaticLibPython</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallUseStaticLibPython" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallUseStaticLibPython</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallUseStaticLibPython" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--static-libpython=yes|auto</span></code> and not module mode</p>
@@ -458,7 +463,7 @@ include symbol information.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallTreatUninstalledPython">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallTreatUninstalledPython</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallTreatUninstalledPython" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallTreatUninstalledPython</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallTreatUninstalledPython" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> = derived from Python installation and modes</p>
 <dl>
 <dt>Notes:</dt><dd><p>Not done for standalone mode obviously. The Python DLL will
@@ -473,7 +478,7 @@ from Anaconda.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallCreateCmdFileForExecution">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateCmdFileForExecution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateCmdFileForExecution" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateCmdFileForExecution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateCmdFileForExecution" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> = derived from Python installation and modes</p>
 <p>Notes: Most for accerated mode on Windows with uninstalled python, to
 make sure they find their Python DLL.</p>
@@ -481,7 +486,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isShowScons">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowScons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowScons" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowScons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowScons" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--show-scons</span></code></p>
@@ -491,13 +496,13 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getJobLimit">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getJobLimit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getJobLimit" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>int</em>, value of <code class="docutils literal notranslate"><span class="pre">--jobs</span></code> / &#8220;-j&#8221; or number of CPU kernels</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getJobLimit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getJobLimit" title="Permalink to this definition"></a></dt>
+<dd><p><em>int</em>, value of <code class="docutils literal notranslate"><span class="pre">--jobs</span></code> / “-j” or number of CPU kernels</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getLtoMode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getLtoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getLtoMode" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getLtoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getLtoMode" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--lto</span></code> or <code class="docutils literal notranslate"><span class="pre">--pgo</span></code></p>
@@ -507,7 +512,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isClang">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isClang</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isClang" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isClang</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isClang" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--clang</span></code> or enforced by platform, e.g. macOS or FreeBSD some targets.</p>
@@ -517,7 +522,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isMingw64">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isMingw64</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isMingw64" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isMingw64</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isMingw64" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--mingw64</span></code>, available only on Windows, otherwise false</p>
@@ -527,7 +532,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getMsvcVersion">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMsvcVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMsvcVersion" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMsvcVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMsvcVersion" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>str derived from <code class="docutils literal notranslate"><span class="pre">--msvc</span></code> on Windows, otherwise None</p>
@@ -537,7 +542,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallDisableCCacheUsage">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisableCCacheUsage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisableCCacheUsage" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisableCCacheUsage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisableCCacheUsage" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--disable-ccache</span></code></p>
@@ -547,7 +552,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallDisableBytecodeCacheUsage">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisableBytecodeCacheUsage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisableBytecodeCacheUsage" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisableBytecodeCacheUsage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisableBytecodeCacheUsage" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--disable-bytecode-cache</span></code></p>
@@ -557,7 +562,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallDisableConsoleWindow">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisableConsoleWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisableConsoleWindow" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisableConsoleWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisableConsoleWindow" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--win-disable-console</span> <span class="pre">or</span> <span class="pre">``--macos-disable-console</span></code></p>
@@ -567,7 +572,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isShowProgress">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowProgress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowProgress" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowProgress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowProgress" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--show-progress</span></code></p>
@@ -577,7 +582,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isShowMemory">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowMemory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowMemory" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowMemory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowMemory" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--show-memory</span></code></p>
@@ -587,7 +592,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isShowInclusion">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowInclusion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowInclusion" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isShowInclusion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isShowInclusion" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--show-modules</span></code></p>
@@ -597,7 +602,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isRemoveBuildDir">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isRemoveBuildDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isRemoveBuildDir" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isRemoveBuildDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isRemoveBuildDir" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--remove-output</span></code></p>
@@ -607,7 +612,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isExperimental">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isExperimental</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indication</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isExperimental" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isExperimental</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indication</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isExperimental" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether a given experimental feature is enabled.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><p>indication: (str) feature name</p>
@@ -619,13 +624,13 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getExperimentalIndications">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getExperimentalIndications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getExperimentalIndications" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getExperimentalIndications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getExperimentalIndications" title="Permalink to this definition"></a></dt>
 <dd><p><em>tuple</em>, items of <code class="docutils literal notranslate"><span class="pre">--experimental=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallExplainImports">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallExplainImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallExplainImports" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallExplainImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallExplainImports" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--explain-imports</span></code></p>
@@ -635,7 +640,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isStandaloneMode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isStandaloneMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isStandaloneMode" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isStandaloneMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isStandaloneMode" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--standalone</span></code></p>
@@ -645,7 +650,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isOnefileMode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isOnefileMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isOnefileMode" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isOnefileMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isOnefileMode" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile</span></code></p>
@@ -655,7 +660,7 @@ make sure they find their Python DLL.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isOnefileTempDirMode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isOnefileTempDirMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isOnefileTempDirMode" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isOnefileTempDirMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isOnefileTempDirMode" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile-tempdir</span></code> and OS</p>
@@ -671,7 +676,7 @@ a bootstrap binary there too.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isPgoMode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPgoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPgoMode" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPgoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPgoMode" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--pgo</span></code></p>
@@ -681,7 +686,7 @@ a bootstrap binary there too.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isPythonPgoMode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPythonPgoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPythonPgoMode" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isPythonPgoMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isPythonPgoMode" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--pgo-python</span></code></p>
@@ -691,7 +696,7 @@ a bootstrap binary there too.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPythonPgoInput">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPgoInput</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPgoInput" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPgoInput</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPgoInput" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>str derived from <code class="docutils literal notranslate"><span class="pre">--pgo-python-input</span></code></p>
@@ -701,55 +706,55 @@ a bootstrap binary there too.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPgoArgs">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPgoArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPgoArgs" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPgoArgs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPgoArgs" title="Permalink to this definition"></a></dt>
 <dd><p><em>list</em> = <code class="docutils literal notranslate"><span class="pre">--pgo-args</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPgoExecutable">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPgoExecutable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPgoExecutable" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPgoExecutable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPgoExecutable" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> = <code class="docutils literal notranslate"><span class="pre">--pgo-args</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPythonPgoUnseenModulePolicy">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPgoUnseenModulePolicy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPgoUnseenModulePolicy" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPgoUnseenModulePolicy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPgoUnseenModulePolicy" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> = <code class="docutils literal notranslate"><span class="pre">--python-pgo-unused-module-policy</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getIconPaths">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getIconPaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getIconPaths" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getIconPaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getIconPaths" title="Permalink to this definition"></a></dt>
 <dd><p><em>list of str</em>, values of <code class="docutils literal notranslate"><span class="pre">--windows-icon-from-ico</span></code> and <code class="docutils literal notranslate"><span class="pre">--linux-onefile-icon</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getWindowsIconExecutablePath">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsIconExecutablePath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsIconExecutablePath" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsIconExecutablePath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsIconExecutablePath" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> or <em>None</em> if not given, value of <code class="docutils literal notranslate"><span class="pre">--windows-icon-from-exe</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallAskForWindowsAdminRights">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallAskForWindowsAdminRights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallAskForWindowsAdminRights" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallAskForWindowsAdminRights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallAskForWindowsAdminRights" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em>, value of <code class="docutils literal notranslate"><span class="pre">--windows-uac-admin</span></code> or <code class="docutils literal notranslate"><span class="pre">--windows-uac-uiaccess</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallAskForWindowsUIAccessRights">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallAskForWindowsUIAccessRights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallAskForWindowsUIAccessRights" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallAskForWindowsUIAccessRights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallAskForWindowsUIAccessRights" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em>, value of <code class="docutils literal notranslate"><span class="pre">--windows-uac-uiaccess</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getWindowsVersionInfoStrings">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsVersionInfoStrings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsVersionInfoStrings" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsVersionInfoStrings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsVersionInfoStrings" title="Permalink to this definition"></a></dt>
 <dd><p><em>dict of str</em>, values of .</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getWindowsProductVersion">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsProductVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsProductVersion" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsProductVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsProductVersion" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>tuple of 4 ints or None, derived from <code class="docutils literal notranslate"><span class="pre">--windows-product-version</span></code></p>
@@ -759,13 +764,13 @@ a bootstrap binary there too.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getWindowsFileVersion">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsFileVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsFileVersion" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsFileVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsFileVersion" title="Permalink to this definition"></a></dt>
 <dd><p>:returns tuple of 4 ints or None, derived from <code class="docutils literal notranslate"><span class="pre">--windows-file-version</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getWindowsSplashScreen">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsSplashScreen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsSplashScreen" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsSplashScreen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsSplashScreen" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile-windows-splash-screen-image</span></code></p>
@@ -775,119 +780,119 @@ a bootstrap binary there too.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getWindowsCompanyName">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsCompanyName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsCompanyName" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsCompanyName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsCompanyName" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> name of the company to use</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getWindowsProductName">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsProductName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsProductName" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsProductName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsProductName" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> name of the product to use</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getMacOSTargetArch">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSTargetArch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSTargetArch" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSTargetArch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSTargetArch" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>str enum (&#8220;universal&#8221;, &#8220;arm64&#8221;, &#8220;x86_64&#8221;) derived from <code class="docutils literal notranslate"><span class="pre">--macos-target-arch</span></code> value</p>
+<dd class="field-odd"><p>str enum (“universal”, “arm64”, “x86_64”) derived from <code class="docutils literal notranslate"><span class="pre">--macos-target-arch</span></code> value</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallCreateAppBundle">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateAppBundle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateAppBundle" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateAppBundle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateAppBundle" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> shall create an application bundle</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getMacOSAppName">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSAppName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSAppName" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSAppName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSAppName" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> name of the app to use bundle</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getMacOSSignedAppName">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSSignedAppName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSSignedAppName" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSSignedAppName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSSignedAppName" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> name of the app to use during signing</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getMacOSAppVersion">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSAppVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSAppVersion" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSAppVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSAppVersion" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> version of the app to use for bundle</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoSite">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoSite</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoSite" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;no_site&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoSite</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoSite" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “no_site” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoAnnotations">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoAnnotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoAnnotations" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;no_annotations&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoAnnotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoAnnotations" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “no_annotations” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoAsserts">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoAsserts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoAsserts" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;no_asserts&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoAsserts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoAsserts" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “no_asserts” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoDocstrings">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoDocstrings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoDocstrings" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;no_docstrings&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoDocstrings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoDocstrings" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “no_docstrings” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoWarnings">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoWarnings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoWarnings" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;no_docstrings&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoWarnings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoWarnings" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “no_docstrings” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagTraceImports">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagTraceImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagTraceImports" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;trace_imports&#8221;, &#8220;-v&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagTraceImports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagTraceImports" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “trace_imports”, “-v” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoRandomization">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoRandomization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoRandomization" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;no_randomization&#8221;, &#8220;-R&#8221;, &#8220;static_hashes&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoRandomization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoRandomization" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “no_randomization”, “-R”, “static_hashes” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagUnbuffered">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagUnbuffered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagUnbuffered" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;package_mode&#8221;, &#8220;-m&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagUnbuffered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagUnbuffered" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “package_mode”, “-m” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagPackageMode">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagPackageMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagPackageMode" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>bool</em> = &#8220;package_mode&#8221;, &#8220;-m&#8221; in python flags given</p>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagPackageMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagPackageMode" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “package_mode”, “-m” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallFreezeAllStdlib">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFreezeAllStdlib</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFreezeAllStdlib" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallFreezeAllStdlib</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallFreezeAllStdlib" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> = <strong>not</strong> shallFollowStandardLibrary</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getWindowsDependencyTool">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsDependencyTool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsDependencyTool" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsDependencyTool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsDependencyTool" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em>, value of <code class="docutils literal notranslate"><span class="pre">--windows-dependency-tool=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallNotUseDependsExeCachedResults">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotUseDependsExeCachedResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotUseDependsExeCachedResults" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotUseDependsExeCachedResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotUseDependsExeCachedResults" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--disable-dll-dependency-cache</span></code> or <code class="docutils literal notranslate"><span class="pre">--force-dll-dependency-cache-update</span></code></p>
@@ -897,7 +902,7 @@ a bootstrap binary there too.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallNotStoreDependsExeCachedResults">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotStoreDependsExeCachedResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotStoreDependsExeCachedResults" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotStoreDependsExeCachedResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotStoreDependsExeCachedResults" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--disable-dll-dependency-cache</span></code></p>
@@ -907,13 +912,13 @@ a bootstrap binary there too.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPluginNameConsideringRenames">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginNameConsideringRenames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginNameConsideringRenames" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginNameConsideringRenames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginNameConsideringRenames" title="Permalink to this definition"></a></dt>
 <dd><p>Name of the plugin with renames considered.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPluginsEnabled">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginsEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginsEnabled" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginsEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginsEnabled" title="Permalink to this definition"></a></dt>
 <dd><p><em>tuple</em>, user enabled (standard) plugins (not including user plugins)</p>
 <dl class="simple">
 <dt>Note:</dt><dd><p>Do not use this outside of main binary, as plugins are allowed
@@ -924,7 +929,7 @@ to activate plugins themselves and that will not be visible here.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPluginsDisabled">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginsDisabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginsDisabled" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPluginsDisabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPluginsDisabled" title="Permalink to this definition"></a></dt>
 <dd><p><em>tuple</em>, user disabled (standard) plugins.</p>
 <dl class="simple">
 <dt>Note:</dt><dd><p>Do not use this outside of main binary, as other plugins, e.g.
@@ -936,25 +941,25 @@ will not be visible here.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getUserPlugins">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getUserPlugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getUserPlugins" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getUserPlugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getUserPlugins" title="Permalink to this definition"></a></dt>
 <dd><p><em>tuple</em>, items user provided of <code class="docutils literal notranslate"><span class="pre">--user-plugin=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallDetectMissingPlugins">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDetectMissingPlugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDetectMissingPlugins" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDetectMissingPlugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDetectMissingPlugins" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> = <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">--plugin-no-detection</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getPythonPathForScons">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPathForScons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPathForScons" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getPythonPathForScons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getPythonPathForScons" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em>, value of <code class="docutils literal notranslate"><span class="pre">--python-for-scons</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallCompileWithoutBuildDirectory">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCompileWithoutBuildDirectory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCompileWithoutBuildDirectory" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCompileWithoutBuildDirectory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCompileWithoutBuildDirectory" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> currently hard coded, not when using debugger.</p>
 <p>When this is used, compilation is executed in a fashion that it runs
 inside the build folder, hiding it, attempting to make results more
@@ -965,43 +970,43 @@ options.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallPreferSourcecodeOverExtensionModules">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallPreferSourcecodeOverExtensionModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallPreferSourcecodeOverExtensionModules" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallPreferSourcecodeOverExtensionModules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallPreferSourcecodeOverExtensionModules" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> prefer source code over extension modules if both are there</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallUseProgressBar">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallUseProgressBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallUseProgressBar" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallUseProgressBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallUseProgressBar" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> prefer source code over extension modules if both are there</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getForcedStdoutPath">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getForcedStdoutPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getForcedStdoutPath" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getForcedStdoutPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getForcedStdoutPath" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> force program stdout output into that filename</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getForcedStderrPath">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getForcedStderrPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getForcedStderrPath" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getForcedStderrPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getForcedStderrPath" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> force program stderr output into that filename</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallPersistModifications">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallPersistModifications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallPersistModifications" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallPersistModifications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallPersistModifications" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> write plugin source changes to disk</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isLowMemory">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isLowMemory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isLowMemory" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isLowMemory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isLowMemory" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> low memory usage requested</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.getCompilationReportFilename">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getCompilationReportFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getCompilationReportFilename" title="Permalink to this definition">&#61633;</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getCompilationReportFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getCompilationReportFilename" title="Permalink to this definition"></a></dt>
 <dd><p><em>str</em> filename to write XML report of compilation to</p>
 </dd></dl>
 
@@ -1015,29 +1020,29 @@ options.</p>
           </div>
           <footer>
 
-  <hr>
+  <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class="share-button-container">
+<div class='share-button-container'>
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://translation.nuitka.net/doc/api-doc.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://translation.nuitka.net/doc/api-doc.html&hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="../_static/icon-twitter.png" width="24" height="24">
+                    <img src="../_static/icon-twitter.png">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/doc/api-doc.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://translation.nuitka.net/doc/api-doc.html&hashtag=%23nuitka"  target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="../_static/icon-facebook.png" width="24" height="24">
+                    <img src="../_static/icon-facebook.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -1047,7 +1052,7 @@ options.</p>
         <a href="http://www.reddit.com/submit?url=https://translation.nuitka.net/doc/api-doc.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="../_static/icon-reddit.png" width="24" height="24">
+                    <img src="../_static/icon-reddit.png">
                 </p>
 
                 <p class="shares">share...</p>
@@ -1063,7 +1068,12 @@ options.</p>
       </div>
     </section>
   </div>
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Read the Docs</span>
         v: latest
