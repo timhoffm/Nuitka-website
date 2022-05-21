@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,31 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuitka this week #11 &mdash; Nuitka the Python Compiler  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-11.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka this week #11 &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_48888c5015cd786ba30be2ae5a8ec195.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-this-week-11.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +68,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +118,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,7 +129,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-11">
-<h1><a class="toc-backref" href="#id2">Nuitka this week #11</a><a class="headerlink" href="#nuitka-this-week-11" title="Permalink to this headline"></a></h1>
+<h1><a class="toc-backref" href="#id2">Nuitka this week #11</a><a class="headerlink" href="#nuitka-this-week-11" title="Permalink to this headline">&#61633;</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -160,7 +157,7 @@
 </ul>
 </div>
 <section id="communication-vs-coding">
-<h2><a class="toc-backref" href="#id3">Communication vs. Coding</a><a class="headerlink" href="#communication-vs-coding" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Communication vs. Coding</a><a class="headerlink" href="#communication-vs-coding" title="Permalink to this headline">&#61633;</a></h2>
 <p>I continue to force myself to report more publicly, and it feels good.
 This time things are in a stablizing period, and I feel I have a
 consistent message.</p>
@@ -169,12 +166,12 @@ straight from top of my head, even if really a lot of content. But I
 feel that esp. the optimization parts are worth reading.</p>
 </section>
 <section id="optimization-work">
-<h2><a class="toc-backref" href="#id4">Optimization Work</a><a class="headerlink" href="#optimization-work" title="Permalink to this headline"></a></h2>
-<p>So, the 0.6.1 optimization work has been a lot. And it’s containing
+<h2><a class="toc-backref" href="#id4">Optimization Work</a><a class="headerlink" href="#optimization-work" title="Permalink to this headline">&#61633;</a></h2>
+<p>So, the 0.6.1 optimization work has been a lot. And it&#8217;s containing
 improvements on every level. I think I will detail the levels in another
 section.</p>
 <section id="levels-of-optimization">
-<h3><a class="toc-backref" href="#id5">Levels of Optimization</a><a class="headerlink" href="#levels-of-optimization" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Levels of Optimization</a><a class="headerlink" href="#levels-of-optimization" title="Permalink to this headline">&#61633;</a></h3>
 <p>First level is of course node level optimization. Here 0.6.1 adds many
 things, from better handling of closure variables not all as unknown
 every time control flow escapes, to some operations <code class="docutils literal notranslate"><span class="pre">+</span></code> and
@@ -200,10 +197,10 @@ lot of tests about it, and to avoid attempted shortcuts that cannot
 work. For 0.6.1 the <cite>+</cite> and <cite>+=</cite> are pretty well covered for these, but
 some variants are not yet tuned to take all type knowledge advantage.</p>
 <p>These will be also the building block, once the C type layer picks types
-like “C int or PyObject * known to be int” with indicator flags which
+like &#8220;C int or PyObject * known to be int&#8221; with indicator flags which
 values are currently valid to use, then these specialized calls still
 make sense.</p>
-<p>The most attrative level, “C int” has not been reached for 0.6.1 but for
+<p>The most attrative level, &#8220;C int&#8221; has not been reached for 0.6.1 but for
 my loop example and Python3, I can say that now would be a nice time to
 start it, as type shape knowledge is all there. This was totally not the
 case for 0.6.0, but it seems that this step will have to be postponed to
@@ -211,7 +208,7 @@ another release, maybe 0.6.2, maybe even later.</p>
 </section>
 </section>
 <section id="week-of-bugfixing">
-<h2><a class="toc-backref" href="#id6">Week of Bugfixing</a><a class="headerlink" href="#week-of-bugfixing" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id6">Week of Bugfixing</a><a class="headerlink" href="#week-of-bugfixing" title="Permalink to this headline">&#61633;</a></h2>
 <p>But something that bothers me is seeing the issue tracker pile up on
 actionable items, where I just have not taken action. So as announced on
 Twitter already, I am having and continue to have bug fixing time. I am
@@ -222,7 +219,7 @@ small, relatively unimportant, yet somewhat import for some use cases
 things.</p>
 </section>
 <section id="exec-on-filehandles">
-<h2><a class="toc-backref" href="#id7">Exec on Filehandles</a><a class="headerlink" href="#exec-on-filehandles" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id7">Exec on Filehandles</a><a class="headerlink" href="#exec-on-filehandles" title="Permalink to this headline">&#61633;</a></h2>
 <p>So when doing exec on a filehandle, Nuitka was at runtime reading the
 source, then compiling it, but forgetting about the filename. This makes
 things like <cite>inspect.getsource()</cite> fail on functions from there, and ugly
@@ -230,7 +227,7 @@ tracebacks not pointing to the filename. This was one of the things
 which I had understood, but not did the actual work yet.</p>
 </section>
 <section id="pkgutil-iter-modules">
-<h2><a class="toc-backref" href="#id8">pkgutil.iter_modules</a><a class="headerlink" href="#pkgutil-iter-modules" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">pkgutil.iter_modules</a><a class="headerlink" href="#pkgutil-iter-modules" title="Permalink to this headline">&#61633;</a></h2>
 <p>And another one, which seemed just not done, but turned out to be rather
 complex, this one needs to populate a <code class="docutils literal notranslate"><span class="pre">sys.path_importer_cache</span></code> for
 imported modules, and then to report the child modules. There was no
@@ -240,16 +237,16 @@ based importer are associated for every import.</p>
 manually here does not work, as <code class="docutils literal notranslate"><span class="pre">__init__</span></code> and <code class="docutils literal notranslate"><span class="pre">iter_modules</span></code> do not
 become anything but static methods ever. Needs a real type.</p>
 <p>Plus, I had to disable it for now, because mixed packages, like the one
-we do with <code class="docutils literal notranslate"><span class="pre">multiprocessing&quot;</span> <span class="pre">where</span> <span class="pre">only</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">compiled</span> <span class="pre">(the</span> <span class="pre">one</span>
+we do with <code class="docutils literal notranslate"><span class="pre">multiprocessing"</span> <span class="pre">where</span> <span class="pre">only</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">compiled</span> <span class="pre">(the</span> <span class="pre">one</span>
 <span class="pre">required)</span> <span class="pre">and</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">pure</span> <span class="pre">Python</span> <span class="pre">from</span> <span class="pre">disk</span> <span class="pre">still,</span> <span class="pre">stopped</span> <span class="pre">to</span> <span class="pre">work.</span> <span class="pre">The</span>
 <span class="pre">``iter_modules</span></code> it seems will have to cover that case too.</p>
 <p>So no luck, postponing this until next week of bug fixes. Frustrating a
 bit, but such is life.</p>
 <section id="when-to-release">
-<h3><a class="toc-backref" href="#id9">When to release</a><a class="headerlink" href="#when-to-release" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">When to release</a><a class="headerlink" href="#when-to-release" title="Permalink to this headline">&#61633;</a></h3>
 <p>There are still some issues that I want to get to. Specicially the
 OpenGL plugins which has been research ever since, and nobody stepped
-up, but it’s rather trivial. And the Tcl/Tk for Windows. People have
+up, but it&#8217;s rather trivial. And the Tcl/Tk for Windows. People have
 provided sufficient instructions for a plugin that I am going to write
 this week.</p>
 <p>Once I feel the issue tracker is clean, I will release. As a matter of
@@ -257,26 +254,26 @@ experience, it is then going to grow a lot again.</p>
 </section>
 </section>
 <section id="google-summer-of-code-for-nuitka">
-<h2><a class="toc-backref" href="#id10">Google Summer of Code for Nuitka</a><a class="headerlink" href="#google-summer-of-code-for-nuitka" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id10">Google Summer of Code for Nuitka</a><a class="headerlink" href="#google-summer-of-code-for-nuitka" title="Permalink to this headline">&#61633;</a></h2>
 <p>Finally somebody has stepped up, which means a lot to me. Now to the
 actual work!</p>
 </section>
 <section id="twitter">
-<h2><a class="toc-backref" href="#id11">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id11">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline">&#61633;</a></h2>
 <p>I continue to be very active there.</p>
-<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw">Follow &#64;kayhayen</a></p>
+<p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw" target="_blank">Follow @kayhayen</a></p>
 <p>And lets not forget, having followers make me happy. So do re-tweets.</p>
 <p>Adding Twitter more prominently to the web site is something that is
 also going to happen.</p>
 </section>
 <section id="help-wanted">
-<h2><a class="toc-backref" href="#id12">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline"></a></h2>
-<p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a>
+<h2><a class="toc-backref" href="#id12">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline">&#61633;</a></h2>
+<p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22" target="_blank">help wanted</a>
 and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
 <p>Nuitka definitely needs more people to work on it.</p>
 </section>
 <section id="donations">
-<h2><a class="toc-backref" href="#id13">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id13">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline">&#61633;</a></h2>
 <p>If you want to help, but cannot spend the time, please consider to
 donate to Nuitka, and go here:</p>
 <p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
@@ -294,14 +291,11 @@ donate to Nuitka, and go here:</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      
     <a href="nuitka-this-week-12.html">
-      Nuitka this week #12 <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      Nuitka this week #12 <i class="fa fa-arrow-circle-right"></i>
     </a>
     
   </span>
@@ -313,30 +307,30 @@ donate to Nuitka, and go here:</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-11.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-this-week-11.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-11.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-this-week-11.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -346,7 +340,7 @@ donate to Nuitka, and go here:</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-this-week-11.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -354,20 +348,15 @@ donate to Nuitka, and go here:</p>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -375,11 +364,9 @@ donate to Nuitka, and go here:</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-11.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-11.html">CN</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -393,11 +380,5 @@ donate to Nuitka, and go here:</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

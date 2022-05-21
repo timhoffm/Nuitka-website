@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,33 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Releasing Nuitka to the World &mdash; Nuitka the Python Compiler  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/releasing-nuitka-to-the-world.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Releasing Nuitka to the World &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_e6840a1efaf0bb3afd9a2fd6b30cc2e9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/releasing-nuitka-to-the-world.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +70,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +120,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,15 +131,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="releasing-nuitka-to-the-world">
-<h1>Releasing Nuitka to the World<a class="headerlink" href="#releasing-nuitka-to-the-world" title="Permalink to this headline"></a></h1>
+<h1>Releasing Nuitka to the World<a class="headerlink" href="#releasing-nuitka-to-the-world" title="Permalink to this headline">&#61633;</a></h1>
 <p>Obviously this is very exciting step for me. I am releasing Nuitka
 today. Finally. For a long time I knew I would, but actually doing it,
 is a different beast. Reaching my goals for release turned out to be
 less far away than I hope, so instead of end of August, I can already
 release it now.</p>
-<p>Currently it’s not more than 4% faster than CPython. No surprise there,
-if all you did, is removing the bytecode interpretation so far. It’s not
-impressive at all. It’s not even a reason to use it. But it’s also only
+<p>Currently it&#8217;s not more than 4% faster than CPython. No surprise there,
+if all you did, is removing the bytecode interpretation so far. It&#8217;s not
+impressive at all. It&#8217;s not even a reason to use it. But it&#8217;s also only
 a start. Clearly, once I get into optimizing the code generation of
 Nuitka, it will only get better, and then probably in sometimes dramatic
 steps. But I see this as a long term goal.</p>
@@ -152,7 +151,7 @@ inference and how to apply that for my project.</p>
 language volume is amazing, and I have a set of nice tricks used. For
 example the way generator functions are done is a clever hack.</p>
 <p>Where to go from here? Well, I guess, I am going to judge it by the
-feedback I receive. I personally see “constant propagation” as a
+feedback I receive. I personally see &#8220;constant propagation&#8221; as a
 laudable first low hanging fruit, that could be solved.</p>
 <p>Consider this readable code on the module level:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">meters_per_nautical_mile</span> <span class="o">=</span> <span class="mi">1852</span>
@@ -197,14 +196,11 @@ version here</a>.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      
     <a href="new-git-repository-to-sync-with-nuitka-releases.html">
-      New git repository to sync with Nuitka releases <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      New git repository to sync with Nuitka releases <i class="fa fa-arrow-circle-right"></i>
     </a>
     
   </span>
@@ -216,30 +212,30 @@ version here</a>.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/releasing-nuitka-to-the-world.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/releasing-nuitka-to-the-world.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/releasing-nuitka-to-the-world.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/releasing-nuitka-to-the-world.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -249,7 +245,7 @@ version here</a>.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/releasing-nuitka-to-the-world.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -257,20 +253,15 @@ version here</a>.</p>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -278,11 +269,9 @@ version here</a>.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/releasing-nuitka-to-the-world.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/releasing-nuitka-to-the-world.html">DE</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -296,11 +285,5 @@ version here</a>.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

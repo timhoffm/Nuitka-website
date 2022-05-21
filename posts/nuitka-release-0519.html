@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,33 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuitka Release 0.5.19 &mdash; Nuitka the Python Compiler  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0519.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka Release 0.5.19 &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_e6840a1efaf0bb3afd9a2fd6b30cc2e9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0519.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +70,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +120,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,15 +131,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-5-19">
-<h1>Nuitka Release 0.5.19<a class="headerlink" href="#nuitka-release-0-5-19" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.5.19<a class="headerlink" href="#nuitka-release-0-5-19" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release brings optimization improvements for dictionary using code.
 This is now lowering subscripts to dictionary accesses where possible
 and adds new code generation for known dictionary values. Besides this
 there is the usual range of bug fixes.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Fix, attribute assignments or deletions where the assigned value or
 the attribute source was statically raising crashed the compiler.</p></li>
@@ -157,7 +156,7 @@ reference counts for shared generator objects.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>When a variable is known to have dictionary shape (assigned from a
 constant value, result of <code class="docutils literal notranslate"><span class="pre">dict</span></code> built-in, or a general dictionary
@@ -167,16 +166,16 @@ more efficient code, and some are then known to not raise an
 exception.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">someFunction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="n">value</span> <span class="o">=</span> <span class="p">{</span><span class="n">a</span><span class="p">:</span> <span class="n">b</span><span class="p">}</span>
-    <span class="n">value</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">value</span><span class="p">[</span><span class="s2">"c"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">value</span>
 </pre></div>
 </div>
 <p>The above function is not yet fully optimized (dictionary key/value
 tracing is not yet finished), however it at least knows that no
-exception can raise from assigning <code class="docutils literal notranslate"><span class="pre">value[&quot;c&quot;]</span></code> anymore and creates
+exception can raise from assigning <code class="docutils literal notranslate"><span class="pre">value["c"]</span></code> anymore and creates
 more efficient code for the typical <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">{}</span></code> functions.</p>
 </li>
-<li><p>The use of “logical” sharing during optimization has been replaced
+<li><p>The use of &#8220;logical&#8221; sharing during optimization has been replaced
 with checks for actual sharing. So closure variables that were
 written to in dead code no longer inhibit optimization of the then no
 more shared local variable.</p></li>
@@ -185,20 +184,20 @@ without need to check traces for this each time.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
-<li><p>No more using “logical sharing” allowed to remove that function
+<li><p>No more using &#8220;logical sharing&#8221; allowed to remove that function
 entirely.</p></li>
-<li><p>Using “technical sharing” less often for decisions during
+<li><p>Using &#8220;technical sharing&#8221; less often for decisions during
 optimization and instead rely more often on proper variable registry.</p></li>
 <li><p>Connected variables with their global variable trace statically avoid
 the need to check in variable registry for it.</p></li>
-<li><p>Removed old and mostly unused “assume unclear locals” indications, we
+<li><p>Removed old and mostly unused &#8220;assume unclear locals&#8221; indications, we
 use global variable traces for this now.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
 <p>This release aimed at dictionary tracing. As a first step, the value
 assign is now traced to have a dictionary shape, and this this then used
 to lower the operations which used to be normal subscript operations to
@@ -219,30 +218,30 @@ specific shape tracing will be needed.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0519.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0519.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0519.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0519.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -252,7 +251,7 @@ specific shape tracing will be needed.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0519.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -260,20 +259,15 @@ specific shape tracing will be needed.</p>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -281,11 +275,9 @@ specific shape tracing will be needed.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0519.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0519.html">DE</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -299,11 +291,5 @@ specific shape tracing will be needed.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,33 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuitka Release 0.4.1 &mdash; Nuitka the Python Compiler  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-041.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka Release 0.4.1 &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_e6840a1efaf0bb3afd9a2fd6b30cc2e9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-041.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +70,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +120,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,16 +131,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-4-1">
-<h1>Nuitka Release 0.4.1<a class="headerlink" href="#nuitka-release-0-4-1" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.4.1<a class="headerlink" href="#nuitka-release-0-4-1" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release is the first follow-up with a focus on optimization. The
 major highlight is progress towards SSA form in the node tree.</p>
 <p>Also a lot of cleanups have been performed, for both the tree building,
 which is now considered mostly finished, and will be only reviewed. And
 for the optimization part there have been large amounts of changes.</p>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Python 3.3 experimental support</p>
 <ul class="simple">
@@ -160,17 +159,17 @@ used by Nuitka, replaced it with out own code.</p>
 </ul>
 </section>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
-<li><p>Default values were not “is” identical.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">defaultKeepsIdentity</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="s2">&quot;str_value&quot;</span><span class="p">):</span>
-    <span class="nb">print</span> <span class="n">arg</span> <span class="ow">is</span> <span class="s2">&quot;str_value&quot;</span>
+<li><p>Default values were not &#8220;is&#8221; identical.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">defaultKeepsIdentity</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="s2">"str_value"</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">arg</span> <span class="ow">is</span> <span class="s2">"str_value"</span>
 
 
 <span class="n">defaultKeepsIdentity</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This now prints “True” as it does with CPython. The solution is
+<p>This now prints &#8220;True&#8221; as it does with CPython. The solution is
 actually a general code optimization, see below.</p>
 </li>
 <li><p>Usage of <code class="docutils literal notranslate"><span class="pre">unicode</span></code> built-in with more than one argument could
@@ -183,7 +182,7 @@ fault.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Improved propagation of exception raise statements, eliminating more
 code. They are now also propagated from all kinds of expressions.
@@ -193,12 +192,12 @@ converted into raise statements, but without any normalization.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now optimizing:</span>
 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
 <span class="c1"># into (minus normalization):</span>
-<span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="s2">&quot;integer division or modulo by zero&quot;</span>
+<span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="s2">"integer division or modulo by zero"</span>
 
 <span class="c1"># Now optimizing:</span>
 <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">something</span>
 <span class="c1"># into (minus normalization):</span>
-<span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="s2">&quot;integer division or modulo by zero&quot;</span>
+<span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="s2">"integer division or modulo by zero"</span>
 
 <span class="c1"># Now optimizing:</span>
 <span class="n">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">something</span>
@@ -207,7 +206,7 @@ converted into raise statements, but without any normalization.</p>
 <span class="c1"># they can be demonstrated to have no effect.</span>
 <span class="n">function</span>
 <span class="n">a</span>
-<span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="s2">&quot;integer division or modulo by zero&quot;</span>
+<span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="s2">"integer division or modulo by zero"</span>
 </pre></div>
 </div>
 <p>There is more examples, where the raise propagation is new, but you
@@ -216,8 +215,8 @@ get the idea.</p>
 <li><p>Conditional expression nodes are now optimized according to the truth
 value of the condition, and not only for compile time constants. This
 covers e.g. container creations, and other things.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This was already optimized, as it&#39;s a compile time constant.</span>
-<span class="n">a</span> <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,)</span> <span class="k">else</span> <span class="n">b</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This was already optimized, as it's a compile time constant.</span>
+<span class="n">a</span> <span class="k">if</span> <span class="p">(</span><span class="s2">"a"</span><span class="p">,)</span> <span class="k">else</span> <span class="n">b</span>
 <span class="n">a</span> <span class="k">if</span> <span class="kc">True</span> <span class="k">else</span> <span class="n">b</span>
 
 <span class="c1"># These are now optimized, as their truth value is known.</span>
@@ -226,7 +225,7 @@ covers e.g. container creations, and other things.</p>
 </pre></div>
 </div>
 <p>This is simply taking advantage of infrastructure that now exists.
-Each node kind can overload “getTruthValue” and benefit from it. Help
+Each node kind can overload &#8220;getTruthValue&#8221; and benefit from it. Help
 would be welcome to review which ones can be added.</p>
 </li>
 <li><p>Function creations only have side effects, when their defaults or
@@ -242,7 +241,7 @@ reduce memory usage and speed up program start-up.</p>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Optimization was initially designed around visitors that each did one
 thing, and did it well. It turns out though, that this approach is
@@ -253,34 +252,34 @@ constraint collection.</p></li>
 always be plural. In the beginning, this was used to convey the
 information that only a single node kind would be contained, but that
 has long changed, and is unimportant information.</p></li>
-<li><p>The class names of nodes were stripped from the “CPython” prefix.
+<li><p>The class names of nodes were stripped from the &#8220;CPython&#8221; prefix.
 Originally the intent was to express strict correlation to CPython,
 but with increasing amounts of re-formulations, this was not used at
-all, and it’s also not important enough to dominate the class name.</p></li>
+all, and it&#8217;s also not important enough to dominate the class name.</p></li>
 <li><p>The re-formulations performed in tree building have moved out of the
-“Building” module, into names “ReformulationClasses” e.g., so they
+&#8220;Building&#8221; module, into names &#8220;ReformulationClasses&#8221; e.g., so they
 are easier to locate and review. Helpers for node building are now in
-a separate module, and generally it’s much easier to find the content
+a separate module, and generally it&#8217;s much easier to find the content
 of interest now.</p></li>
 <li><p>Added new re-formulation of <code class="docutils literal notranslate"><span class="pre">print</span></code> statements. The conversion to
 strings is now made explicit in the node tree.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added test to cover default value identity.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
-<li><p>The upload of <a class="reference external" href="http://pypi.python.org/pypi/Nuitka/">Nuitka to PyPI</a> has been repaired and now
+<li><p>The upload of <a class="reference external" href="http://pypi.python.org/pypi/Nuitka/" target="_blank">Nuitka to PyPI</a> has been repaired and now
 properly displays project information again.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
 <p>The quicker release is mostly a consolidation effort, without much
 actual performance progress. The progress towards SSA form matter a lot
 on the outlook front. Once this is finished, standard compiler
@@ -298,30 +297,30 @@ optimization.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-041.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-041.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-041.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-041.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -331,7 +330,7 @@ optimization.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-041.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -339,20 +338,15 @@ optimization.</p>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -360,11 +354,9 @@ optimization.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-041.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-041.html">DE</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -378,11 +370,5 @@ optimization.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

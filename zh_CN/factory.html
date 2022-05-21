@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
+<html class="writer-html5" lang="zh-CN">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,37 +11,36 @@
     <link rel="icon" href="_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>工厂说明书 &mdash; Nuitka the Python Compiler  文档</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/factory.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#24037;&#21378;&#35828;&#26126;&#20070; &#8212; Nuitka the Python Compiler  &#25991;&#26723;</title>
+      <link rel="stylesheet" href="/_static/css/combined_ac220f112c61f4d548c2fb69e24cce15.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/factory.html">
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="_static/design-tabs.js"></script>
-    <script src="_static/js/theme.js"></script>
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Nuitka 博客" href="blog.html" />
-    <link rel="prev" title="Nuitka 开发者手册" href="developer-manual.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: './',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="_static/clipboard.min.js" async=""></script>
+        <script src="_static/copybutton.js" async=""></script>
+        <script src="_static/translations.js" async=""></script>
+        <link rel="index" title="&#32034;&#24341;" href="genindex.html">
+    <link rel="next" title="Nuitka &#21338;&#23458;" href="blog.html">
+    <link rel="prev" title="Nuitka &#24320;&#21457;&#32773;&#25163;&#20876;" href="developer-manual.html">   
+<link rel="alternate" type="application/atom+xml" href="blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -74,20 +73,20 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="doc/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/index.html">&#24555;&#36895;&#20837;&#38376;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/index.html">Pages</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="more.html">更多内容</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="developer-manual.html">开发者手册</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">工厂说明书</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#factory-rationale">工厂的基本原理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-to-get-factory">如何获得 <code class="docutils literal notranslate"><span class="pre">factory</span></code></a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="more.html">&#26356;&#22810;&#20869;&#23481;</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="developer-manual.html">&#24320;&#21457;&#32773;&#25163;&#20876;</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#24037;&#21378;&#35828;&#26126;&#20070;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#factory-rationale">&#24037;&#21378;&#30340;&#22522;&#26412;&#21407;&#29702;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-get-factory">&#22914;&#20309;&#33719;&#24471; <code class="docutils literal notranslate"><span class="pre">factory</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#git">git</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pip">pip</a></li>
 </ul>
@@ -97,14 +96,14 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blog.html">Nuitka 博客</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blog.html">Nuitka &#21338;&#23458;</a></li>
 </ul>
 
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -115,32 +114,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="factory-instructions">
-<h1>工厂说明书<a class="headerlink" href="#factory-instructions" title="永久链接至标题"></a></h1>
+<h1>&#24037;&#21378;&#35828;&#26126;&#20070;<a class="headerlink" href="#factory-instructions" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h1>
 <section id="factory-rationale">
-<h2>工厂的基本原理<a class="headerlink" href="#factory-rationale" title="永久链接至标题"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">master</span></code> 和 <code class="docutils literal notranslate"><span class="pre">develop</span></code> 两个分支都应该在任何时候为人们工作。对于问题背景下的实验和一般来说尚未准备好的功能，我们有工厂分支。</p>
-<p>你可能已经来到这里，因为你被要求检出在 <code class="docutils literal notranslate"><span class="pre">factory</span></code> 上为你做的改变。</p>
+<h2>&#24037;&#21378;&#30340;&#22522;&#26412;&#21407;&#29702;<a class="headerlink" href="#factory-rationale" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">master</span></code> &#21644; <code class="docutils literal notranslate"><span class="pre">develop</span></code> &#20004;&#20010;&#20998;&#25903;&#37117;&#24212;&#35813;&#22312;&#20219;&#20309;&#26102;&#20505;&#20026;&#20154;&#20204;&#24037;&#20316;&#12290;&#23545;&#20110;&#38382;&#39064;&#32972;&#26223;&#19979;&#30340;&#23454;&#39564;&#21644;&#19968;&#33324;&#26469;&#35828;&#23578;&#26410;&#20934;&#22791;&#22909;&#30340;&#21151;&#33021;&#65292;&#25105;&#20204;&#26377;&#24037;&#21378;&#20998;&#25903;&#12290;</p>
+<p>&#20320;&#21487;&#33021;&#24050;&#32463;&#26469;&#21040;&#36825;&#37324;&#65292;&#22240;&#20026;&#20320;&#34987;&#35201;&#27714;&#26816;&#20986;&#22312; <code class="docutils literal notranslate"><span class="pre">factory</span></code> &#19978;&#20026;&#20320;&#20570;&#30340;&#25913;&#21464;&#12290;</p>
 </section>
 <section id="how-to-get-factory">
-<h2>如何获得 <code class="docutils literal notranslate"><span class="pre">factory</span></code><a class="headerlink" href="#how-to-get-factory" title="永久链接至标题"></a></h2>
-<p><a class="reference external" href="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml?query=branch%3Afactory"><img alt="Factory Status" src="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml/badge.svg?branch=factory" /></a></p>
+<h2>&#22914;&#20309;&#33719;&#24471; <code class="docutils literal notranslate"><span class="pre">factory</span></code><a class="headerlink" href="#how-to-get-factory" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h2>
+<p><a class="reference external" href="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml?query=branch%3Afactory" target="_blank"><img alt="Factory Status" src="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml/badge.svg?branch=factory"></a></p>
 <section id="git">
-<h3>git<a class="headerlink" href="#git" title="永久链接至标题"></a></h3>
+<h3>git<a class="headerlink" href="#git" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone --branch factory https://github.com/Nuitka/Nuitka.git
 </pre></div>
 </div>
 </section>
 <section id="pip">
-<h3>pip<a class="headerlink" href="#pip" title="永久链接至标题"></a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U --force-reinstall <span class="s2">&quot;https://github.com/Nuitka/Nuitka/archive/factory.zip&quot;</span>
+<h3>pip<a class="headerlink" href="#pip" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U --force-reinstall <span class="s2">"https://github.com/Nuitka/Nuitka/archive/factory.zip"</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="word-of-warning">
-<h2>Word of Warning<a class="headerlink" href="#word-of-warning" title="永久链接至标题"></a></h2>
-<p>这个个人分支可能包括各种愚蠢的错误，例如不能在所有版本中执行，崩溃，根本无法工作。它们也经常在没有通知的情况下改变。因此，请只在手头的问题上使用它，甚至比通常更多，风险自负。</p>
-<p>一旦确认并发现好的，修复通常会在相对较短的时间内出现在 develop 分支上，从那时起尽量使用这些分支，并等待那里出现的变化。</p>
+<h2>Word of Warning<a class="headerlink" href="#word-of-warning" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h2>
+<p>&#36825;&#20010;&#20010;&#20154;&#20998;&#25903;&#21487;&#33021;&#21253;&#25324;&#21508;&#31181;&#24858;&#34850;&#30340;&#38169;&#35823;&#65292;&#20363;&#22914;&#19981;&#33021;&#22312;&#25152;&#26377;&#29256;&#26412;&#20013;&#25191;&#34892;&#65292;&#23849;&#28291;&#65292;&#26681;&#26412;&#26080;&#27861;&#24037;&#20316;&#12290;&#23427;&#20204;&#20063;&#32463;&#24120;&#22312;&#27809;&#26377;&#36890;&#30693;&#30340;&#24773;&#20917;&#19979;&#25913;&#21464;&#12290;&#22240;&#27492;&#65292;&#35831;&#21482;&#22312;&#25163;&#22836;&#30340;&#38382;&#39064;&#19978;&#20351;&#29992;&#23427;&#65292;&#29978;&#33267;&#27604;&#36890;&#24120;&#26356;&#22810;&#65292;&#39118;&#38505;&#33258;&#36127;&#12290;</p>
+<p>&#19968;&#26086;&#30830;&#35748;&#24182;&#21457;&#29616;&#22909;&#30340;&#65292;&#20462;&#22797;&#36890;&#24120;&#20250;&#22312;&#30456;&#23545;&#36739;&#30701;&#30340;&#26102;&#38388;&#20869;&#20986;&#29616;&#22312; develop &#20998;&#25903;&#19978;&#65292;&#20174;&#37027;&#26102;&#36215;&#23613;&#37327;&#20351;&#29992;&#36825;&#20123;&#20998;&#25903;&#65292;&#24182;&#31561;&#24453;&#37027;&#37324;&#20986;&#29616;&#30340;&#21464;&#21270;&#12290;</p>
 </section>
 </section>
 
@@ -152,30 +151,30 @@
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+    <p>&#169; &#29256;&#26435;&#25152;&#26377; 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/factory.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/factory.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/factory.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/factory.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -185,7 +184,7 @@
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/factory.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -193,20 +192,15 @@
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">CN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -214,11 +208,9 @@
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/factory.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/factory.html">EN</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -232,11 +224,5 @@
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

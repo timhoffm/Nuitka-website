@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,33 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuitka Release 0.3.22 &mdash; Nuitka the Python Compiler  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0322.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka Release 0.3.22 &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_e6840a1efaf0bb3afd9a2fd6b30cc2e9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0322.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +70,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +120,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,18 +131,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-22">
-<h1>Nuitka Release 0.3.22<a class="headerlink" href="#nuitka-release-0-3-22" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.3.22<a class="headerlink" href="#nuitka-release-0-3-22" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release is a continuation of the trend of previous releases, and
 added more re-formulations of Python that lower the burden on code
 generation and optimization.</p>
 <p>It also improves Python3 support substantially. In fact this is the
 first release to not only run itself under Python3, but for Nuitka to
 <em>compile itself</em> with Nuitka under Python3, which previously only worked
-for Python2. For the common language subset, it’s quite fine now.</p>
+for Python2. For the common language subset, it&#8217;s quite fine now.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>List contractions produced extra entries on the call stack, after
 they became functions, these are no more existent. That was made
@@ -153,12 +152,12 @@ node tree, left out for list contractions.</p></li>
 exception on return, it no longer does that.</p></li>
 <li><p>Reference counter handling with generator <code class="docutils literal notranslate"><span class="pre">throw</span></code> method is now
 correct.</p></li>
-<li><p>A module “builtins” conflicted with the handling of the Python
+<li><p>A module &#8220;builtins&#8221; conflicted with the handling of the Python
 <code class="docutils literal notranslate"><span class="pre">builtins</span></code> module. Those now use different identifiers.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>New <code class="docutils literal notranslate"><span class="pre">metaclass</span></code> syntax for the <code class="docutils literal notranslate"><span class="pre">class</span></code> statement works, and the
 old <code class="docutils literal notranslate"><span class="pre">__metaclass__</span></code> attribute is properly ignored.</p>
@@ -176,12 +175,12 @@ old <code class="docutils literal notranslate"><span class="pre">__metaclass__</
 <p class="admonition-title">Note</p>
 <p>The way to make a use of a metaclass in a portable way, is to
 create a based class that has it and then inherit from it. Sad,
-isn’ it. Surely, the support for <code class="docutils literal notranslate"><span class="pre">__metaclass__</span></code> could still
+isn&#8217; it. Surely, the support for <code class="docutils literal notranslate"><span class="pre">__metaclass__</span></code> could still
 live.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For Python2/3 compatible source, we create a base class that has the</span>
-<span class="c1"># metaclass used and doesn&#39;t require making a choice.</span>
+<span class="c1"># metaclass used and doesn't require making a choice.</span>
 
-<span class="n">CPythonNodeMetaClassBase</span> <span class="o">=</span> <span class="n">NodeCheckMetaClass</span><span class="p">(</span><span class="s2">&quot;CPythonNodeMetaClassBase&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">object</span><span class="p">,),</span> <span class="p">{})</span>
+<span class="n">CPythonNodeMetaClassBase</span> <span class="o">=</span> <span class="n">NodeCheckMetaClass</span><span class="p">(</span><span class="s2">"CPythonNodeMetaClassBase"</span><span class="p">,</span> <span class="p">(</span><span class="nb">object</span><span class="p">,),</span> <span class="p">{})</span>
 </pre></div>
 </div>
 </div>
@@ -191,13 +190,13 @@ This was not previously supported.</p></li>
 <li><p>Python3 now also has compatible parameter errors and compatible
 exception error messages.</p></li>
 <li><p>Python3 has changed scope rules for list contractions (assignments
-don’t affect outside values) and this is now respected as well.</p></li>
+don&#8217;t affect outside values) and this is now respected as well.</p></li>
 <li><p>Python3 has gained support for recursive programs and stand alone
 extension modules, these are now both possible as well.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Avoid frame stack entries for functions that cannot raise exceptions,
 i.e. where they would not be used.</p>
@@ -210,15 +209,15 @@ this can be seen here:</p>
 </li>
 <li><p>Optimize <code class="docutils literal notranslate"><span class="pre">len</span></code> built-in for non-constant, but known length values.</p>
 <p>An example can be seen here:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The range isn&#39;t constructed at compile time, but we still know its</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The range isn't constructed at compile time, but we still know its</span>
 <span class="c1"># length.</span>
 <span class="nb">len</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10000000</span><span class="p">))</span>
 
-<span class="c1"># The string isn&#39;t constructed at compile time, but we still know its</span>
+<span class="c1"># The string isn't constructed at compile time, but we still know its</span>
 <span class="c1"># length.</span>
-<span class="nb">len</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="s2">"*"</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
 
-<span class="c1"># The tuple isn&#39;t constructed, instead it&#39;s known length is used, and</span>
+<span class="c1"># The tuple isn't constructed, instead it's known length is used, and</span>
 <span class="c1"># side effects are maintained.</span>
 <span class="nb">len</span><span class="p">((</span><span class="n">a</span><span class="p">(),</span> <span class="n">b</span><span class="p">()))</span>
 </pre></div>
@@ -231,10 +230,10 @@ the <code class="docutils literal notranslate"><span class="pre">range</span></c
 built-in calls with know size and container creations.</p>
 <p>An example can be seen here:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">,):</span>
-    <span class="nb">print</span> <span class="s2">&quot;In Branch&quot;</span>
+    <span class="nb">print</span> <span class="s2">"In Branch"</span>
 </pre></div>
 </div>
-<p>It’s clear, that the tuple will be true, we just need to maintain the
+<p>It&#8217;s clear, that the tuple will be true, we just need to maintain the
 side effect, which we do.</p>
 </li>
 <li><p>Optimize <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">and</span></code> operators for known truth values.</p>
@@ -242,18 +241,18 @@ side effect, which we do.</p>
 most useful to predict conditions that need not be evaluated at all
 due to short circuit nature, and to avoid checking against constant
 values. Previously this could not be optimized, but now it can:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The access and call to &quot;something()&quot; cannot possibly happen</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The access and call to "something()" cannot possibly happen</span>
 <span class="mi">0</span> <span class="ow">and</span> <span class="n">something</span><span class="p">()</span>
 
-<span class="c1"># Can be replaced with &quot;something()&quot;, as &quot;1&quot; is true. If it had a side</span>
+<span class="c1"># Can be replaced with "something()", as "1" is true. If it had a side</span>
 <span class="c1"># effect, it would be maintained.</span>
 <span class="mi">1</span> <span class="ow">and</span> <span class="n">something</span><span class="p">()</span>
 
-<span class="c1"># The access and call to &quot;something()&quot; cannot possibly happen, the value</span>
-<span class="c1"># is already decided, it&#39;s &quot;1&quot;.</span>
+<span class="c1"># The access and call to "something()" cannot possibly happen, the value</span>
+<span class="c1"># is already decided, it's "1".</span>
 <span class="mi">1</span> <span class="ow">or</span> <span class="n">something</span><span class="p">()</span>
 
-<span class="c1"># Can be replaced with &quot;something()&quot;, as &quot;0&quot; is false. If it had a side</span>
+<span class="c1"># Can be replaced with "something()", as "0" is false. If it had a side</span>
 <span class="c1"># effect, it would be maintained.</span>
 <span class="mi">0</span> <span class="ow">or</span> <span class="n">something</span><span class="p">()</span>
 </pre></div>
@@ -266,31 +265,31 @@ compile time if possible.</p>
 </pre></div>
 </div>
 <p>becomes:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;1&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">"1"</span>
 </pre></div>
 </div>
 </li>
 <li><p>Combine print arguments to single ones.</p>
 <p>When multiple strings are printed, these are now combined.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;1+1=&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">"1+1="</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p>becomes:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;1+1= 2&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">"1+1= 2"</span>
 </pre></div>
 </div>
 </li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Enhanced Python3 support, enabling support for most basic tests.</p></li>
 <li><p>Check files with PyLint in deterministic (alphabetical) order.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Frame stack entries are now part of the node tree instead of part of
 the template for every function, generator, class or module.</p></li>
@@ -302,7 +301,7 @@ to maintain the effect of an expression with known value.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline"></a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Expanded and adapted basic tests to work for Python3 as well.</p></li>
 <li><p>Added reference count tests for generator functions <code class="docutils literal notranslate"><span class="pre">throw</span></code>,
@@ -312,7 +311,7 @@ handler twice. No test was previously doing that.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
 <p>This release offers enhanced compatibility with Python3, as well as the
 solution to many structural problems. Calculating lengths of large
 non-constant values at compile time, is technically a break through, as
@@ -334,30 +333,30 @@ long, and looking at numbers will make sense.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0322.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0322.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0322.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0322.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -367,7 +366,7 @@ long, and looking at numbers will make sense.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0322.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -375,20 +374,15 @@ long, and looking at numbers will make sense.</p>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -396,11 +390,9 @@ long, and looking at numbers will make sense.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0322.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0322.html">CN</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -414,11 +406,5 @@ long, and looking at numbers will make sense.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

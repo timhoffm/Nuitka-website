@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
+<html class="writer-html5" lang="zh-CN">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,37 +11,34 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuitka PySide2 support &mdash; Nuitka the Python Compiler  文档</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/pages/pyside2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka PySide2 support &#8212; Nuitka the Python Compiler  &#25991;&#26723;</title>
+      <link rel="stylesheet" href="/_static/css/combined_75c4adeca994d1f39650c46f57029aa4.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/pages/pyside2.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/translations.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="支持" href="support.html" />
-    <link rel="prev" title="Nuitka the Python Compiler" href="overview.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="../_static/translations.js" async=""></script>
+        <link rel="index" title="&#32034;&#24341;" href="../genindex.html">
+    <link rel="next" title="&#25903;&#25345;" href="support.html">
+    <link rel="prev" title="Nuitka the Python Compiler" href="overview.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -74,13 +71,13 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">&#24555;&#36895;&#20837;&#38376;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../commercial.html">Nuitka Commercial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Pages</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Presentations.html">Presentations</a></li>
@@ -93,18 +90,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#alternative">Alternative</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="support.html">支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">&#25903;&#25345;</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../more.html">更多内容</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../blog.html">Nuitka 博客</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more.html">&#26356;&#22810;&#20869;&#23481;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog.html">Nuitka &#21338;&#23458;</a></li>
 </ul>
 
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -115,9 +112,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-pyside2-support">
-<h1>Nuitka PySide2 support<a class="headerlink" href="#nuitka-pyside2-support" title="永久链接至标题"></a></h1>
+<h1>Nuitka PySide2 support<a class="headerlink" href="#nuitka-pyside2-support" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h1>
 <section id="support-with-baseline-pyside2-is-only-partial">
-<h2>Support with baseline PySide2 is only partial<a class="headerlink" href="#support-with-baseline-pyside2-is-only-partial" title="永久链接至标题"></a></h2>
+<h2>Support with baseline PySide2 is only partial<a class="headerlink" href="#support-with-baseline-pyside2-is-only-partial" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h2>
 <p>While the <code class="docutils literal notranslate"><span class="pre">pyside2</span></code> plugin of Nuitka can workaround some issues PySide
 5.15.2.1 has to support compiled methods as callbacks, these are far
 from complete. Some programs work, but many do have problems, esp. in
@@ -134,12 +131,12 @@ patch that will not get released in any other way. This is very
 understandable, now that Qt6 is out.</p>
 </section>
 <section id="solution-in-nuitka-commercial">
-<h2>Solution in Nuitka Commercial<a class="headerlink" href="#solution-in-nuitka-commercial" title="永久链接至标题"></a></h2>
+<h2>Solution in Nuitka Commercial<a class="headerlink" href="#solution-in-nuitka-commercial" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h2>
 <p>The patched PySide2 source code and binary wheels for some platforms are
 available as part of the the <a class="reference external" href="/doc/commercial.html">Nuitka Commercial</a> offering.</p>
 </section>
 <section id="alternative">
-<h2>Alternative<a class="headerlink" href="#alternative" title="永久链接至标题"></a></h2>
+<h2>Alternative<a class="headerlink" href="#alternative" title="&#27704;&#20037;&#38142;&#25509;&#33267;&#26631;&#39064;">&#61633;</a></h2>
 <p>Otherwise your best bet is to migrate to PySide6 and work around the
 bugs that it might have. Hopefully with time, all will be ironed out.</p>
 </section>
@@ -153,30 +150,30 @@ bugs that it might have. Hopefully with time, all will be ironed out.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2022, Kay Hayen and Nuitka Contributors.</p>
+    <p>&#169; &#29256;&#26435;&#25152;&#26377; 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/pages/pyside2.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/pages/pyside2.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/pages/pyside2.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/pages/pyside2.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -186,7 +183,7 @@ bugs that it might have. Hopefully with time, all will be ironed out.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/pages/pyside2.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -194,20 +191,15 @@ bugs that it might have. Hopefully with time, all will be ironed out.</p>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">CN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -215,11 +207,9 @@ bugs that it might have. Hopefully with time, all will be ironed out.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/pages/pyside2.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/pages/pyside2.html">EN</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -233,11 +223,5 @@ bugs that it might have. Hopefully with time, all will be ironed out.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

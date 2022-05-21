@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,33 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuitka Progress in Summer 2015 &mdash; Nuitka the Python Compiler  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-progress-summer-2015.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka Progress in Summer 2015 &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_e6840a1efaf0bb3afd9a2fd6b30cc2e9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-progress-summer-2015.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +70,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +120,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,12 +131,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-progress-in-summer-2015">
-<h1><a class="toc-backref" href="#id1">Nuitka Progress in Summer 2015</a><a class="headerlink" href="#nuitka-progress-in-summer-2015" title="Permalink to this headline"></a></h1>
-<p>A long time has passed again without me speaking about what’s going on
+<h1><a class="toc-backref" href="#id1">Nuitka Progress in Summer 2015</a><a class="headerlink" href="#nuitka-progress-in-summer-2015" title="Permalink to this headline">&#61633;</a></h1>
+<p>A long time has passed again without me speaking about what&#8217;s going on
 with Nuitka, and that although definitely a lot has happened. I would
-contend it’s even <em>because</em> so much is going on.</p>
+contend it&#8217;s even <em>because</em> so much is going on.</p>
 <p>I also am shy to make public postings about unfinished stuff it seems,
-but it’s long overdue, so much important and great stuff has happened.
+but it&#8217;s long overdue, so much important and great stuff has happened.
 We are in the middle of big things with the compiler and there is a lot
 of great achievement.</p>
 <div class="contents topic" id="contents">
@@ -173,17 +172,17 @@ of great achievement.</p>
 </ul>
 </div>
 <section id="ssa-single-state-assignment-form">
-<h2><a class="toc-backref" href="#id2">SSA (Single State Assignment Form)</a><a class="headerlink" href="#ssa-single-state-assignment-form" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">SSA (Single State Assignment Form)</a><a class="headerlink" href="#ssa-single-state-assignment-form" title="Permalink to this headline">&#61633;</a></h2>
 <p>For a long, long time already, each release of Nuitka has worked towards
-increasing <a class="reference external" href="http://en.wikipedia.org/wiki/Static_single_assignment_form">“SSA”</a> usage in
+increasing <a class="reference external" href="http://en.wikipedia.org/wiki/Static_single_assignment_form" target="_blank">&#8220;SSA&#8221;</a> usage in
 Nuitka.</p>
-<p>Now it’s there. The current pre-release just uses it. There were many
+<p>Now it&#8217;s there. The current pre-release just uses it. There were many
 things to consider before enabling it, and always a next thing to be
 found that was needed. Often good changes to Nuitka, it was also
 annoying the hell out of me at times.</p>
 <p>But basically now the forward propagation of variables is in place, with
 some limitations that are going to fall later.</p>
-<p>So the current release, soon to be replaced, still doesn’t optimize this
+<p>So the current release, soon to be replaced, still doesn&#8217;t optimize this
 code as well as possible:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
     <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
@@ -191,11 +190,11 @@ code as well as possible:</p>
 </pre></div>
 </div>
 <p>But starting with the next release, the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> is forward
-propagated (also in way more complex situations), and that’s a serious
+propagated (also in way more complex situations), and that&#8217;s a serious
 milestone for the project.</p>
 </section>
 <section id="function-inlining">
-<h2><a class="toc-backref" href="#id3">Function Inlining</a><a class="headerlink" href="#function-inlining" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Function Inlining</a><a class="headerlink" href="#function-inlining" title="Permalink to this headline">&#61633;</a></h2>
 <p>When submitting my talk to EuroPython 2015, I was putting a lot of
 pressure on me by promising to demo that. And I did. It was based on the
 SSA code that only now became completely reliable, but otherwise very
@@ -224,27 +223,27 @@ making this:</p>
 am waiting for a release cycle to carry the load of SSA in the wild. As
 you probably know I usually tend to be conservative and to not make too
 many changes at once.</p>
-<p>And as this works for local functions only yet, it’s not too important
+<p>And as this works for local functions only yet, it&#8217;s not too important
 yet either. This will generally become relevant once we have this
 working across modules and their globally defined functions or methods.
 This will be a while until Nuitka gets there.</p>
 </section>
 <section id="scalability">
-<h2><a class="toc-backref" href="#id4">Scalability</a><a class="headerlink" href="#scalability" title="Permalink to this headline"></a></h2>
-<p>Having got Nuitka’s memory usage under control, it turned out that there
+<h2><a class="toc-backref" href="#id4">Scalability</a><a class="headerlink" href="#scalability" title="Permalink to this headline">&#61633;</a></h2>
+<p>Having got Nuitka&#8217;s memory usage under control, it turned out that there
 are files that can trigger Python recursion <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> exception
 when using the <code class="docutils literal notranslate"><span class="pre">ast</span></code> module to build the Nuitka internal tree. People
 really have code with many thousands of operations to a <code class="docutils literal notranslate"><span class="pre">+</span></code> operation.</p>
 <p>So, Nuitka here learned to include whole modules as bytecode when it is
 too complex as there is no easy way to expand the stack on Windows at
-least. That is kind of a limitation of CPython itself I didn’t run into
+least. That is kind of a limitation of CPython itself I didn&#8217;t run into
 so far, and rather very annoying too.</p>
 <p>The scalability of Nuitka also depends much on generated code size. With
 the optimization become more clever, less code is generated, and that
 trend will continue as more structural optimization are applied.</p>
 </section>
 <section id="compatibility">
-<h2><a class="toc-backref" href="#id5">Compatibility</a><a class="headerlink" href="#compatibility" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id5">Compatibility</a><a class="headerlink" href="#compatibility" title="Permalink to this headline">&#61633;</a></h2>
 <p>Very few things are possible here anymore. For the tests, in full
 compatibility mode, even more often the less good line number is used.</p>
 <p>Also the plug-in work is leading to improved compatibility with Qt
@@ -252,14 +251,14 @@ plugins of PySide and PyQt. Or another example is the
 <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> module that on Windows is now supposed to fork
 compiled code too.</p>
 <section id="python-3-5">
-<h3><a class="toc-backref" href="#id6">Python 3.5</a><a class="headerlink" href="#python-3-5" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Python 3.5</a><a class="headerlink" href="#python-3-5" title="Permalink to this headline">&#61633;</a></h3>
 <p>The next release has experimental support for Python 3.5, with the
 notable exception that <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code>, these do not yet work.
 It passes the existing test suite for CPython3.4 successfully. Passing
 here means, to pass or fail in the same way as does the uncompiled
 Python. Failures are of course expected, as details change, and a nice
 way of having coverage for exception codes.</p>
-<p>The new <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator is now supported. As the stable release of
+<p>The new <code class="docutils literal notranslate"><span class="pre">@</span></code> operator is now supported. As the stable release of
 Python3.5 was made recently, there is now some pressure on having full
 support of course.</p>
 <p>I am not sure, if you can fully appreciate the catch up game to play
@@ -272,15 +271,15 @@ with a base class and detailing instances, instead of one thing for them
 all, then with coroutines added.</p>
 </section>
 <section id="importing-enhancements">
-<h3><a class="toc-backref" href="#id7">Importing Enhancements</a><a class="headerlink" href="#importing-enhancements" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">Importing Enhancements</a><a class="headerlink" href="#importing-enhancements" title="Permalink to this headline">&#61633;</a></h3>
 <p>A while ago, the import logic was basically re-written with
 compatibility much increased. Then quite some issues were fixed. I am
 not sure, but some of the fixes have apparently also been regressions at
 times, with the need for other fixes now.</p>
 <p>So it may have worked for you in the past, but you might have to report
 new found issues.</p>
-<p>It’s mainly the standalone community that encounters these issues, when
-just one of these imports doesn’t find the correct thing, but picking
+<p>It&#8217;s mainly the standalone community that encounters these issues, when
+just one of these imports doesn&#8217;t find the correct thing, but picking
 the wrong one will of course have seriously bad impacts on compile time
 analysis too. So once we do cross module optimization, this must be rock
 solid.</p>
@@ -289,9 +288,9 @@ some more fine details.</p>
 </section>
 </section>
 <section id="performance">
-<h2><a class="toc-backref" href="#id8">Performance</a><a class="headerlink" href="#performance" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">Performance</a><a class="headerlink" href="#performance" title="Permalink to this headline">&#61633;</a></h2>
 <section id="graphs-and-benchmarks">
-<h3><a class="toc-backref" href="#id9">Graphs and Benchmarks</a><a class="headerlink" href="#graphs-and-benchmarks" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">Graphs and Benchmarks</a><a class="headerlink" href="#graphs-and-benchmarks" title="Permalink to this headline">&#61633;</a></h3>
 <p>I also presented this weak point to EuroPython 2015 and my plan on how
 to resolve it. And low and behold, turns out the PyPy people had already
 developed a tool that will be usable for the task and to present to the
@@ -323,7 +322,7 @@ ideally. That will be the tool you can just use on your own code.</p>
 </section>
 </section>
 <section id="standalone">
-<h2><a class="toc-backref" href="#id10">Standalone</a><a class="headerlink" href="#standalone" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id10">Standalone</a><a class="headerlink" href="#standalone" title="Permalink to this headline">&#61633;</a></h2>
 <p>The standalone mode of Nuitka was pretty good, and continued to improve
 further, now largely with the help of plug-ins.</p>
 <p>I now know that PyGTK is an issue and will need a plug-in to work. Once
@@ -331,23 +330,23 @@ the plug-in interface is public, I hope for more outside contributions
 here.</p>
 </section>
 <section id="other-stuff">
-<h2><a class="toc-backref" href="#id11">Other Stuff</a><a class="headerlink" href="#other-stuff" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id11">Other Stuff</a><a class="headerlink" href="#other-stuff" title="Permalink to this headline">&#61633;</a></h2>
 <section id="funding">
-<h3><a class="toc-backref" href="#id12">Funding</a><a class="headerlink" href="#funding" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id12">Funding</a><a class="headerlink" href="#funding" title="Permalink to this headline">&#61633;</a></h3>
 <p>Nuitka receives the occasional <a class="reference external" href="/pages/donations.html">donation</a> and those make me very happy.
 As there is no support from organization like the PSF, I am all on my
 own there.</p>
 <p>This year I traveled to Europython 2015, I needed a new desktop computer
 after burning the old one through with CI tests, the website has running
 costs, and so on. That is pretty hefty money. It would be sweet if aside
-of my free time it wouldn’t also cost me money.</p>
+of my free time it wouldn&#8217;t also cost me money.</p>
 </section>
 <section id="europython-2015">
-<h3><a class="toc-backref" href="#id13">EuroPython 2015</a><a class="headerlink" href="#europython-2015" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">EuroPython 2015</a><a class="headerlink" href="#europython-2015" title="Permalink to this headline">&#61633;</a></h3>
 <p>This was a blast. Meeting people who knew Nuitka but not me was a
 regular occurrence. And many people well appreciate my work. It felt
 much different than the years before.</p>
-<p>I was able to present Nuitka’s function in-lining indeed there, and this
+<p>I was able to present Nuitka&#8217;s function in-lining indeed there, and this
 high goal that I set myself, quite impressed people. My talk went very
 well, I am going to post a link separately in another post.</p>
 <p>Also I made many new contacts, largely with the scientific community. I
@@ -356,7 +355,7 @@ more it looks like my day job should be closer to Nuitka and my
 expertise in Python.</p>
 </section>
 <section id="collaborators">
-<h3><a class="toc-backref" href="#id14">Collaborators</a><a class="headerlink" href="#collaborators" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id14">Collaborators</a><a class="headerlink" href="#collaborators" title="Permalink to this headline">&#61633;</a></h3>
 <p>Nuitka is making break through progress. And you can be a part of it.
 Now.</p>
 <p>You can join and should do so now, just <a class="reference external" href="/doc/user-manual.html#join-nuitka">follow this link</a> or become part of
@@ -366,7 +365,7 @@ questions of newcomers, you know the drill probably.</p>
 </section>
 </section>
 <section id="future">
-<h2><a class="toc-backref" href="#id15">Future</a><a class="headerlink" href="#future" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id15">Future</a><a class="headerlink" href="#future" title="Permalink to this headline">&#61633;</a></h2>
 <p>So, there is multiple things going on:</p>
 <ul>
 <li><p>Function in-lining</p>
@@ -386,7 +385,7 @@ function to be able to reference different sets of these.</p>
 <p>With SSA in place, we really can start to recognize types, and treat
 things that work something assigned from <code class="docutils literal notranslate"><span class="pre">[]</span></code> different, and with
 code special to these.</p>
-<p>That’s going to be a lot of work. For <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">list</span></code> there
+<p>That&#8217;s going to be a lot of work. For <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">list</span></code> there
 are very important use cases, where the code can be much better.</p>
 </li>
 <li><p>Shape Analyisis</p>
@@ -397,7 +396,7 @@ we will just have a set of operations performed on a variable, and be
 able to guess from there.</p>
 </li>
 <li><p>Python 3.5 new features</p>
-<p>The coroutines are a new type, and currently it’s unclear how deep
+<p>The coroutines are a new type, and currently it&#8217;s unclear how deep
 this is tied into the core of things, i.e. if a compile coroutine can
 be a premier citizen immediately, or if that needs more work. I hope
 it just takes for the code object to have the proper flag. But there
@@ -408,7 +407,7 @@ could be stupid type checks, we shall see.</p>
 Nuitka. It is recently becoming more complete, and some demo plug-ins
 for say Qt plugins, or multiprocessing, are starting to work. The API
 will need work and of course documentation. Hope is for this to
-expand Nuitka’s reach and appeal to get more contributors.</p>
+expand Nuitka&#8217;s reach and appeal to get more contributors.</p>
 </li>
 </ul>
 <p>Let me know, if you are willing to help. I really need that help to make
@@ -427,14 +426,11 @@ things happen faster. Nuitka will become more and more important only.</p>
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      
     <a href="nuitka-podcast-init.html">
-      Nuitka on Podcast __init__ <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      Nuitka on Podcast __init__ <i class="fa fa-arrow-circle-right"></i>
     </a>
     
   </span>
@@ -446,30 +442,30 @@ things happen faster. Nuitka will become more and more important only.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-progress-summer-2015.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-progress-summer-2015.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-progress-summer-2015.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-progress-summer-2015.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -479,7 +475,7 @@ things happen faster. Nuitka will become more and more important only.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-progress-summer-2015.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -487,20 +483,15 @@ things happen faster. Nuitka will become more and more important only.</p>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -508,11 +499,9 @@ things happen faster. Nuitka will become more and more important only.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-progress-summer-2015.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-progress-summer-2015.html">DE</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -526,11 +515,5 @@ things happen faster. Nuitka will become more and more important only.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

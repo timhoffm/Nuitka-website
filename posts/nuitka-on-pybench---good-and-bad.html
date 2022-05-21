@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,31 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Looking where Nuitka stands &mdash; Nuitka the Python Compiler  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looking where Nuitka stands &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_48888c5015cd786ba30be2ae5a8ec195.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +68,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +118,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,23 +129,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="looking-where-nuitka-stands">
-<h1>Looking where Nuitka stands<a class="headerlink" href="#looking-where-nuitka-stands" title="Permalink to this headline"></a></h1>
+<h1>Looking where Nuitka stands<a class="headerlink" href="#looking-where-nuitka-stands" title="Permalink to this headline">&#61633;</a></h1>
 <p>In case you wonder, [what Nuitka is](/pages/overview.html), look here.
 Over the 0.3.x release cycle, I have mostly looked at its performance
-with “pystone”. I merely wanted to have a target to look at and <a class="reference external" href="/pages/performance.html">enjoy
+with &#8220;pystone&#8221;. I merely wanted to have a target to look at and <a class="reference external" href="/pages/performance.html">enjoy
 the progress</a> we have made there.</p>
 <p>In the context of the Windows port then, Khalid Abu Bakr used the
-pybench on Windows and that got me interested. It’s a nice collection of
+pybench on Windows and that got me interested. It&#8217;s a nice collection of
 micro benchmarks, which is quite obviously aimed for looking CPython
-implementations only. In that it’s quite good to check where Nuitka is
+implementations only. In that it&#8217;s quite good to check where Nuitka is
 good at, and where it can still take improvements for the milestone 2
 stuff.</p>
 <section id="enhancements-to-pybench">
-<h2>Enhancements to PyBench<a class="headerlink" href="#enhancements-to-pybench" title="Permalink to this headline"></a></h2>
+<h2>Enhancements to PyBench<a class="headerlink" href="#enhancements-to-pybench" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The pybench refused to accept that Nuitka could use so little time on
 some tests, I needed to hack it to allow it.</p></li>
-<li><p>Then it had “ZeroDivisionError” exceptions, because Nuitka can run
+<li><p>Then it had &#8220;ZeroDivisionError&#8221; exceptions, because Nuitka can run
 fully predictable code not at all, thus with a time of 0ms, which
 gives interesting factors.</p></li>
 <li><p>Also these are many results, we are going to care for regressions
@@ -157,13 +154,13 @@ values.</p></li>
 </ul>
 </section>
 <section id="the-interesting-parts">
-<h2>The Interesting Parts<a class="headerlink" href="#the-interesting-parts" title="Permalink to this headline"></a></h2>
+<h2>The Interesting Parts<a class="headerlink" href="#the-interesting-parts" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Nuitka currently has some fields where optimizations are already so
 effective as to render the whole benchmark pointless. Longterm, most
 of PyBench will not be looked at anymore, where the factor becomes
-“infinity”, there is little point in looking at it. We will likely
-just use it as a test that optimizations didn’t suddenly regress.
+&#8220;infinity&#8221;, there is little point in looking at it. We will likely
+just use it as a test that optimizations didn&#8217;t suddenly regress.
 Publishing the numbers will not be as interesting.</p></li>
 <li><p>Then there are slow downs. These I take seriously, because of course
 I expect that Nuitka shall only be faster than CPython. Sometimes the
@@ -181,10 +178,10 @@ wasteful. We need to be able to create code objects that can be used
 for all lines needed, and then we can re-use it and only have one
 frame object per function, which then can be re-used itself. There is
 already some work for that in [current git](/pages/download.html)
-(0.3.9 pre 2), but it’s not yet complete at all.</p></li>
+(0.3.9 pre 2), but it&#8217;s not yet complete at all.</p></li>
 <li><p>WithRaiseExcept: Same problem as TryRaiseExcept, the exception
 raising is too expensive.</p></li>
-<li><p>Note also that -90% is in fact much worse that +90%, the “diff”
+<li><p>Note also that -90% is in fact much worse that +90%, the &#8220;diff&#8221;
 numbers from pybench make improvements look much better than
 regressions do. You can also checkout the comparison on the new
 [benchmark pages](<a class="reference external" href="https://speedcenter.nuitka.net">https://speedcenter.nuitka.net</a>) that I am just
@@ -194,7 +191,7 @@ separately.</p></li>
 <p>Look at this table of results as produced by pybench:</p>
 </section>
 <section id="benchmark-results">
-<h2>Benchmark Results<a class="headerlink" href="#benchmark-results" title="Permalink to this headline"></a></h2>
+<h2>Benchmark Results<a class="headerlink" href="#benchmark-results" title="Permalink to this headline">&#61633;</a></h2>
 <table summary="Comparing CPython and Nuitka with PyBench">
 <tbody>
 <tr>
@@ -562,18 +559,15 @@ separately.</p></li>
   <span style="float: left">
      
     <a href="shes-a-doctor-now.html">
-      <i class="fa fa-arrow-circle-left"></i> She’s a doctor now
+      <i class="fa fa-arrow-circle-left"></i> She&#8217;s a doctor now
     </a>
     
   </span>
-  <span>&nbsp;</span>
+  <span>&#160;</span>
   <span style="float: right">
      
     <a href="the-new-cat.html">
-      The new cat <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      The new cat <i class="fa fa-arrow-circle-right"></i>
     </a>
     
   </span>
@@ -585,30 +579,30 @@ separately.</p></li>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -618,7 +612,7 @@ separately.</p></li>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-on-pybench---good-and-bad.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -626,20 +620,15 @@ separately.</p></li>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -647,11 +636,9 @@ separately.</p></li>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-on-pybench---good-and-bad.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-on-pybench---good-and-bad.html">DE</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -665,11 +652,5 @@ separately.</p></li>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

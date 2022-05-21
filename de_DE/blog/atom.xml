@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de_DE">
+  <id>https://nuitka.net</id>
+  <title>Nuitka Blog</title>
+  <updated>2022-05-21T09:37:49.033902+00:00</updated>
+  <link href="https://nuitka.net"/>
+  <link href="https://nuitka.net/blog/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+</feed>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
     <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
@@ -11,34 +11,33 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuitka Release 0.5.25 &mdash; Nuitka the Python Compiler  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-    <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0525.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka Release 0.5.25 &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_e6840a1efaf0bb3afd9a2fd6b30cc2e9.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/nuitka-release-0525.html">
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />   
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../blog/atom.xml"
-  title="Nuitka Blog"
-/>
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -71,10 +70,10 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
@@ -121,7 +120,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
@@ -132,14 +131,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-5-25">
-<h1>Nuitka Release 0.5.25<a class="headerlink" href="#nuitka-release-0-5-25" title="Permalink to this headline"></a></h1>
+<h1>Nuitka Release 0.5.25<a class="headerlink" href="#nuitka-release-0-5-25" title="Permalink to this headline">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
-<a class="reference external" href="/doc/download.html">“download now”</a>.</p>
+<a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release contains a huge amount of bug fixes, lots of optimization
 gains, and many new features. It also presents many organisational
 improvements, and many cleanups.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline"></a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
 <li><p>Python3.5: Coroutine methods using <code class="docutils literal notranslate"><span class="pre">super</span></code> were crashing the
 compiler. Fixed in 0.5.24.2 already.</p></li>
@@ -170,24 +169,24 @@ instead of during <code class="docutils literal notranslate"><span class="pre">s
 all cases.</p></li>
 <li><p>Standalone: Added package paths to DLL scan for <code class="docutils literal notranslate"><span class="pre">depends.exe</span></code>, as
 with wheels there now sometimes live important DLLs too.</p></li>
-<li><p>Fix, the clang mode was regressed and didn’t work anymore, breaking
+<li><p>Fix, the clang mode was regressed and didn&#8217;t work anymore, breaking
 the macOS support entirely.</p></li>
 <li><p>Compatibility: For imports, we were passing for <code class="docutils literal notranslate"><span class="pre">locals</span></code> argument a
 real dictionary with actual values. That is not what CPython does, so
 stopped doing it.</p></li>
 <li><p>Fix, for raised exceptions not passing the validity tests, they could
 be used after free, causing crashes.</p></li>
-<li><p>Fix, the environment <code class="docutils literal notranslate"><span class="pre">CC</span></code> wasn’t working unless also specifying
+<li><p>Fix, the environment <code class="docutils literal notranslate"><span class="pre">CC</span></code> wasn&#8217;t working unless also specifying
 <code class="docutils literal notranslate"><span class="pre">CXX</span></code>.</p></li>
 <li><p>Windows: The value of <code class="docutils literal notranslate"><span class="pre">__file__</span></code> in module mode was wrong, and
-didn’t point to the compiled module.</p></li>
+didn&#8217;t point to the compiled module.</p></li>
 <li><p>Windows: Better support for <code class="docutils literal notranslate"><span class="pre">--python-debug</span></code> for installations that
 have both variants, it is now possible to switch to the right
 variant.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline"></a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added parsing for shebang to Nuitka. When compiling an executable,
 now Nuitka will check of the <code class="docutils literal notranslate"><span class="pre">#!</span></code> portion indicates a different
@@ -198,10 +197,10 @@ disable assertions and remove doc strings.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Faster method calls, combining attribute lookup and method call into
-one, where order of evaluation with arguments doesn’t matter. This
+one, where order of evaluation with arguments doesn&#8217;t matter. This
 gives really huge relative speedups for method calls with no
 arguments.</p></li>
 <li><p>Faster attribute lookup in general for <code class="docutils literal notranslate"><span class="pre">object</span></code> descendants, which
@@ -232,7 +231,7 @@ too.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline"></a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>This release also prepares Python 3.6 support, it includes full
 language support on the level of CPython 3.6.0 with the sole
@@ -241,11 +240,11 @@ exception of the new generator coroutines.</p></li>
 the option, used by test suites. For syntax errors, improved mode is
 always used, and for test suites, now only the error message is
 compared, but not call stack or caret positioning anymore.</p></li>
-<li><p>Removed long deprecated option “–no-optimization”. Code generation
+<li><p>Removed long deprecated option &#8220;&#8211;no-optimization&#8221;. Code generation
 too frequently depends on not seeing unoptimized code. This has been
 hidden and broken long enough to finally remove it.</p></li>
 <li><p>Added support for Python3.5 numbers to Speedcenter. There are now
-also tags for speedcenter, indicating how well “develop” branch fares
+also tags for speedcenter, indicating how well &#8220;develop&#8221; branch fares
 in comparison to the stable branch.</p></li>
 <li><p>With a new tool, source code and Developer Manual contents can be
 kept in sync, so that descriptions can be quoted there. Eventually a
@@ -256,7 +255,7 @@ makes it workable.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline"></a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Moved the tools to compare CPython output, to sort import statements
 (isort) to auto-format the source code (Redbaron usage), and to check
@@ -282,7 +281,7 @@ version.</p></li>
 </ul>
 </section>
 <section id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline"></a></h2>
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Windows: Added support to detect and to switch debug Python where
 available to also be able to execute reference counting tests.</p></li>
@@ -298,7 +297,7 @@ which have instances and new style classes, with their objects.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
 <p>The quick iteration is a precursor to generally faster iteration over
 unknown object iterables. Expanding this to general code generation, and
 not just the <code class="docutils literal notranslate"><span class="pre">sum</span></code> built-in, might yield significant gains for normal
@@ -308,7 +307,7 @@ domain and also will be expanded to more types than compiled functions.
 More work will be needed to round this up.</p>
 <p>Adding support for 3.6.0 in the early stages of its release, made sure
 we pretty much have support for it ready right after release. This is
-always a huge amount of work, and it’s good to catch up.</p>
+always a huge amount of work, and it&#8217;s good to catch up.</p>
 <p>This release is again a significant improvement in performance, and is
 very important to clean up open ends. Now the focus of coming releases
 will now be on both structural optimization, e.g. taking advantage of
@@ -326,30 +325,30 @@ iterations really necessary to use quick iteration code.</p>
           </div>
           <footer>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
   </div>
 
   
-<div class='share-button-container'>
+<div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0525.html&hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/nuitka-release-0525.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
-                    <img src="/_static/icon-twitter.png">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0525.html&hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/nuitka-release-0525.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
-                    <img src="/_static/icon-facebook.png">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -359,7 +358,7 @@ iterations really necessary to use quick iteration code.</p>
         <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/nuitka-release-0525.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
-                    <img src="/_static/icon-reddit.png">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
                 </p>
 
                 <p class="shares">share...</p>
@@ -367,20 +366,15 @@ iterations really necessary to use quick iteration code.</p>
         </a>
 
         <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
-            <summary class="sd-summary-title sd-card-header switcher-title">
-                EN<div class="sd-summary-down docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
                         </path>
                     </svg>
                 </div>
                 <div class="sd-summary-up docutils">
-                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
-                        viewbox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
                         </path>
                     </svg>
                 </div>
@@ -388,11 +382,9 @@ iterations really necessary to use quick iteration code.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div class="line-block">
-                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
-                        </div>
-                    </div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0525.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0525.html">CN</a></div>
+                            </div></div>
                 </blockquote>
             </div>
         </details>
@@ -406,11 +398,5 @@ iterations really necessary to use quick iteration code.</p>
       </div>
     </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

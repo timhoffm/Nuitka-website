@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de-DE">
+<head>
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuitka Roadmap &#8212; Nuitka the Python Compiler  Dokumentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_7dc533c7561990aedbce507fc00d5e8e.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/doc/roadmap.html">
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <link rel="index" title="Stichwortverzeichnis" href="../genindex.html">
+    <link rel="next" title="Nuitka Commercial" href="../commercial.html">
+    <link rel="prev" title="Nuitka User Manual" href="user-manual.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Quick Start</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual.html">User Manual</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Roadmap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-extensibility">User Extensibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#standalone">Standalone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nuitka-python-public">Nuitka-Python (public)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-public">Performance (public)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macos-enhancements">macOS enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#container-builds-commercial">Container Builds (commercial)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-updates">Automatic Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#complete-support-for-python-version-3-10">Complete Support for Python Version (3.10)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#traceback-encryption-commercial">Traceback Encryption (commercial)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features-to-be-added-for-0-8">Features to be added for 0.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features-to-be-added-for-0-9">Features to be added for 0.9</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../commercial.html">Nuitka Commercial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/index.html">Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more.html">More documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog.html">Nuitka Blog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="nuitka-roadmap">
+<h1>Nuitka Roadmap<a class="headerlink" href="#nuitka-roadmap" title="Link zu dieser &#220;berschrift">&#61633;</a></h1>
+<p>This is the Nuitka roadmap, broken down by features.</p>
+<section id="user-extensibility">
+<h2>User Extensibility<a class="headerlink" href="#user-extensibility" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<ul>
+<li><p>Data files, implicit imports, and DLL inclusion are specified in Yaml
+files now.</p>
+<p>In this way, it is easy to extend by third parties. We could imagine
+even supporting packages that provide their own configuration for
+compilation with Nuitka through such files.</p>
+<p>The next step is to document these file formats, potentially define a
+schema for them and check it. We might have to change the format to
+make this possible.</p>
+</li>
+</ul>
+</section>
+<section id="standalone">
+<h2>Standalone<a class="headerlink" href="#standalone" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<ul>
+<li><p>&#8222;Multidist&#8220; support (undecided)</p>
+<p>Allow combining multiple main programs into one, called &#8222;multidist&#8220;.
+These will work with a dispatcher that decides from the binary name
+what it is. There will be one big binary with the ability to run each
+program.</p>
+<p>The CMD file for accelerated mode, demonstrates that it&#8217;s possible to
+load the CPython Windows DLL from another directory. We can leverage
+that approach and produce CMD files that will call the binary in the
+right fashion.</p>
+<p>I believe we can make it so that all the scripts will still think of
+themselves as <code class="docutils literal notranslate"><span class="pre">__main__</span></code> for the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> during their
+execution, so no code changes are needed. It&#8217;s only that
+<code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> vs. <code class="docutils literal notranslate"><span class="pre">__file__</span></code> for location.</p>
+<p>Much like for onefile, you need to distinguish program location and
+package location in this way. Note shared stuff living near the CMD
+file will see that CMD file path in <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> there, and shared
+stuff, e.g. <code class="docutils literal notranslate"><span class="pre">xmlschema</span></code> module will find its data files in a
+directory that is shared.</p>
+<p>And to top it off, the fat binary of &#8222;multidist&#8220; may be in standalone
+or onefile mode, at your choice. The disadvantage there being, that
+onefile will be slower to unpack with a larger binary.</p>
+</li>
+<li><p>&#8222;Sharedist&#8220; support (undecided)</p>
+<p>In this the programs are not combined, rather standalone compilations
+are resumed, produced shared and non-shared parts of multiple
+distributions.</p>
+<p>The plugins in Nuitka are still somewhat wild west when it comes to
+copying DLLs and data files as they see fit, sometimes, but not
+always, reporting to the core, so it could scan dependencies. Work is
+being done to clean them up. Some, most recently numpy, have been
+changed to make them yield objects describing tasks and executing
+them in the core. This way there is a chance to know what the program
+does and make this kind of change. This transition is almost
+complete, but the Qt plugins are still missing.</p>
+</li>
+<li><p>Dejong Stacks: More robust parser that allows stdout and stderr in
+same file with mixed outputs.</p></li>
+</ul>
+</section>
+<section id="nuitka-python-public">
+<h2>Nuitka-Python (public)<a class="headerlink" href="#nuitka-python-public" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>This is currently under way and not yet described here. The current
+Nuitka release has support for using it. Most work is focused on Linux
+with Python 2.7 as well as Windows with Python 3.9 now with the aim of
+getting it capable to statically compile, avoiding extension modules and
+DLL usages.</p>
+</section>
+<section id="performance-public">
+<h2>Performance (public)<a class="headerlink" href="#performance-public" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<ul>
+<li><p>Faster attribute setting.</p>
+<p>For Python3 we still use <code class="docutils literal notranslate"><span class="pre">_PyObjectDict_SetItem</span></code> which is very hard
+to replace, as it&#8217;s forking shared dictionary as necessary. With
+static libpython it can linked though, but we still might want to
+make our own replacement.</p>
+</li>
+<li><p>Better code for <code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">1</span></code> constructs with no lack of type knowledge.
+There is a long standing todo, to add the <code class="docutils literal notranslate"><span class="pre">CLONG</span></code> support for
+binary operations. It requires the code generation of Jinja to be
+abstract, but that should have been close to being reached in last
+releases.</p></li>
+<li><p>Better code for <code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">1</span></code> constructs even with lack of type knowledge.</p>
+<p>It should be possible to introduce prepared constants of
+<code class="docutils literal notranslate"><span class="pre">nuitka_int</span></code> type that have the object ready for use, as well as
+the integer value, and indicate so with the enum setting. This type,
+that is intended for use with local variables later on, could also be
+supported in binary operations and in-place operations, esp. for
+<code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">long</span></code> values.</p>
+</li>
+<li><p>Make module variable traces available to functions. This will be
+needed to optimize import of <code class="docutils literal notranslate"><span class="pre">sys</span></code> on module level and then
+attribute access on function level at compile time.</p></li>
+<li><p>Implement the <code class="docutils literal notranslate"><span class="pre">partial</span></code> built-in and make it work with compiled
+functions. It could prepare calls much better, such that they do not
+come through keyword arguments unnecessarily.</p></li>
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">list</span></code> methods, things like <code class="docutils literal notranslate"><span class="pre">append</span></code> really
+should be optimized as well in the mostly existing operation nodes.</p></li>
+</ul>
+</section>
+<section id="macos-enhancements">
+<h2>macOS enhancements<a class="headerlink" href="#macos-enhancements" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<ul>
+<li><p>While <code class="docutils literal notranslate"><span class="pre">arm64</span></code> (M1) only builds and <code class="docutils literal notranslate"><span class="pre">x86_64</span></code> (Intel) only builds
+work, the value <code class="docutils literal notranslate"><span class="pre">universal</span></code> which of course implies twice the size,
+and as such has other disadvantages, is not yet supported.</p>
+<p>It will require two distinct compilations, and on the Python level,
+some values, e.g. architecture, cannot be compile time decided on
+macOS, which currently is even a potential weakness of the current
+code.</p>
+<p>So far we use macOS tools to split binaries that are universal, and
+in this case we need to merge binaries into one with the same tools.</p>
+</li>
+</ul>
+</section>
+<section id="container-builds-commercial">
+<h2>Container Builds (commercial)<a class="headerlink" href="#container-builds-commercial" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>Providing containers with old Linux, and optimally compiled CPython with
+<code class="docutils literal notranslate"><span class="pre">podman</span></code> such that building with Nuitka on Fedora latest and Ubuntu
+latest can be done fully automatically and still run on very old Linux.</p>
+</section>
+<section id="automatic-updates">
+<h2>Automatic Updates<a class="headerlink" href="#automatic-updates" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>The running application needs to check for updates, and update itself
+automatically, optionally after user prompt, on a restart, or after
+successful update.</p>
+<p>These are the steps needed to take.</p>
+<p>[x] Add path spec identifiers that are suitable for caching, like
+<code class="docutils literal notranslate"><span class="pre">%CACHE_DIR%</span></code></p>
+<p>[ ] Detect caching ability for a spec, and add a onefile mode modifier
+that will make it overwrite. Ideally volatile path elements are
+detected.</p>
+<p>[ ] Add download URL spec.</p>
+<p>[ ] Actually download the file in a thread of the onefile bootstrap
+binary and move it over the running binary, e.g. during restart.</p>
+</section>
+<section id="complete-support-for-python-version-3-10">
+<h2>Complete Support for Python Version (3.10)<a class="headerlink" href="#complete-support-for-python-version-3-10" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<ul>
+<li><p>Add support for all of the new case syntax of 3.10</p>
+<p>Right now it is not clear what is missing, need to investigate it by
+attempting to manage the full test suite.</p>
+</li>
+</ul>
+</section>
+<section id="traceback-encryption-commercial">
+<h2>Traceback Encryption (commercial)<a class="headerlink" href="#traceback-encryption-commercial" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<ul class="simple">
+<li><p>Right now tracebacks are entirely encrypted. But in a future update,
+you can decide which information is transferred, and what information
+is part of the encryption, and which part is not, e.g. hostname,
+client name, etc. could be output in plain text, while the variable
+names and values would not be, depending on your choice!</p></li>
+</ul>
+</section>
+<section id="features-to-be-added-for-0-8">
+<h2>Features to be added for 0.8<a class="headerlink" href="#features-to-be-added-for-0-8" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<dl class="simple">
+<dt>[x] Add ability to inhibit data files from the command line, so that</dt><dd><p>things coming from a plugin can be suppressed.</p>
+</dd>
+</dl>
+<p>[x] Forcing output and stderr to files should be supported for all OSes.</p>
+</section>
+<section id="features-to-be-added-for-0-9">
+<h2>Features to be added for 0.9<a class="headerlink" href="#features-to-be-added-for-0-9" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<dl class="simple">
+<dt>[ ] Onefile should support keeping cached binaries and then not requires</dt><dd><p>to overwrite. Then we can drop <code class="docutils literal notranslate"><span class="pre">AppImage</span></code> usage on Linux.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class="share-button-container">
+    <div class="socialbutton-wrapper">
+
+        <a href="https://twitter.com/share?url=https://nuitka.net/doc/roadmap.html&amp;hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/doc/roadmap.html&amp;hashtag=%23nuitka" target="_blank">
+            <div class="socialbutton facebook">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/doc/roadmap.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
+            <summary class="sd-summary-title sd-card-header switcher-title">DE<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="sd-summary-up docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                        </path>
+                    </svg>
+                </div>
+            </summary>
+            <div class="sd-summary-content sd-card-body switcher-body docutils">
+                <blockquote>
+                    <div>
+                        <div><div class="line"><a class="reference external" href="/doc/roadmap.html">EN</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/doc/roadmap.html">CN</a></div>
+                            </div></div>
+                </blockquote>
+            </div>
+        </details>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  </body>
+</html>
