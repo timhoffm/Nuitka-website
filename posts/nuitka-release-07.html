@@ -88,9 +88,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.8 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.9 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-7">Nuitka Release 0.7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -145,9 +145,9 @@ and bug fixes in all areas.</p>
 <li><p>Fix, <code class="docutils literal notranslate"><span class="pre">set</span></code> creation wasn’t annotating its possible exception exit
 from hashing values and is not as free of side effects as <code class="docutils literal notranslate"><span class="pre">list</span></code>
 and <code class="docutils literal notranslate"><span class="pre">tuple</span></code> creations are. Fixed in 0.6.19.1 already.</p></li>
-<li><p>Windows: Fix, experimental options got lost for the C compilation
-when switching from MSVC to MinGW64, making them have no effect.
-Fixed in 0.6.19.1 already.</p></li>
+<li><p>Windows: Fix, <code class="docutils literal notranslate"><span class="pre">--experimental</span></code> option values got lost for the C
+compilation when switching from MSVC to MinGW64, making them have no
+effect. Fixed in 0.6.19.1 already.</p></li>
 <li><p>Windows: Fix, Clang from MinGW64 doesn’t support LTO at this time,
 therefore default to <code class="docutils literal notranslate"><span class="pre">no</span></code> for it. Fixed in 0.6.19.1 already.</p></li>
 <li><p>Debian: Fix, failed to detect Debian unstable as suitable for

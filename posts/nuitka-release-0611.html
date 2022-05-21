@@ -88,9 +88,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.8 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.9 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-7">Nuitka Release 0.7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -147,7 +147,7 @@ in 0.6.10.1 already.</p></li>
 following of imports from the additional entry point. Fixed in
 0.6.10.1 already.</p></li>
 <li><p>Pipenv: Workaround parsing issue with our <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> to allow
-installation from Github. Fixed in 0.6.10.1 already.</p></li>
+installation from GitHub. Fixed in 0.6.10.1 already.</p></li>
 <li><p>Merging of branches in optimization could give indeterministic
 results leading to more iterations than necessary. Fixed in 0.6.10.1
 already.</p></li>
@@ -289,14 +289,14 @@ and require <code class="docutils literal notranslate"><span class="pre">--follo
 <li><p>For pylint checking, the tool now supports a <code class="docutils literal notranslate"><span class="pre">--diff</span></code> mode where
 only the changed files get checked. This is much faster and allows to
 do it more often before commit.</p></li>
-<li><p>Check the versions of isort and black when doing the autoformat to
+<li><p>Check the versions of isort and black when doing the auto-format to
 avoid using outdated versions.</p></li>
 <li><p>Handling missing pylint more gracefully when checking source code
 quality.</p></li>
 <li><p>Make sure to use the codespell tool with Python3 and make sure to
 error exit when spelling problems were found, so we can use this in
-Github actions too.</p></li>
-<li><p>Removed Travis config, we now only use Github actions.</p></li>
+GitHub actions too.</p></li>
+<li><p>Removed Travis config, we now only use GitHub actions.</p></li>
 <li><p>Removed landscape config, it doesn’t really exist anymore.</p></li>
 <li><p>Bumped all PyPI dependnecies to their latest versions.</p></li>
 <li><p>Recommend ccache on Debian, as we now consider the absence of ccache

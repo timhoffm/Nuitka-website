@@ -154,6 +154,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#windows-errors-with-resources">Windows errors with resources</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows-standalone-program-redistribution">Windows standalone program redistribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#detecting-nuitka-at-run-time">Detecting Nuitka at run time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#providing-extra-options-to-nuitka-c-compilation">Providing extra Options to Nuitka C compilation</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#performance">Performance</a><ul>
@@ -200,9 +201,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 0.8 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 0.9 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-7">Nuitka Release 0.7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
 </ul>
@@ -617,12 +618,12 @@ modules by specifically saying <code class="docutils literal notranslate"><span 
 <code class="docutils literal notranslate"><span class="pre">ImportError</span></code> will be raised when import of it is attempted at program
 runtime.</p>
 <p>For data files to be included, use the option
-<code class="docutils literal notranslate"><span class="pre">--include-data-file=&lt;source&gt;=&lt;target&gt;</span></code> where the source is a file
+<code class="docutils literal notranslate"><span class="pre">--include-data-files=&lt;source&gt;=&lt;target&gt;</span></code> where the source is a file
 system path, but target has to be specified relative. For standalone you
 can also copy them manually, but this can do extra checks, and for
 onefile mode, there is no manual copying possible.</p>
 <p>To copy some or all file in a directory, use the option
-<code class="docutils literal notranslate"><span class="pre">--include-data-file=/etc/*.txt=etc/</span></code> where you get to specify shell
+<code class="docutils literal notranslate"><span class="pre">--include-data-files=/etc/*.txt=etc/</span></code> where you get to specify shell
 patterns for the files, and a subdirectory where to put them, indicated
 by the trailing slash.</p>
 <p>To copy a whole folder with all files, you can use
@@ -661,9 +662,9 @@ cannot collide.</p>
 <p>Currently these expanded tokens are available:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 45%" />
-<col style="width: 42%" />
+<col style="width: 11%" />
+<col style="width: 61%" />
+<col style="width: 28%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Token</p></th>
@@ -685,8 +686,28 @@ cannot collide.</p>
 <td><p>1299852985</p></td>
 </tr>
 <tr class="row-odd"><td><p>%PROGRAM%</p></td>
-<td><p>Full program filename of executable.</p></td>
+<td><p>Full program run-time filename of executable.</p></td>
 <td><p>C:SomeWhereYourOnefile.exe</p></td>
+</tr>
+<tr class="row-even"><td><p>%CACHE_DIR%</p></td>
+<td><p>Cache directory for the user.</p></td>
+<td><p>C:UsersSomeBodyAppDataLocal</p></td>
+</tr>
+<tr class="row-odd"><td><p>%COMPANY%</p></td>
+<td><p>Value given as <code class="docutils literal notranslate"><span class="pre">--windows-company-name</span></code></p></td>
+<td><p>YourCompanyName</p></td>
+</tr>
+<tr class="row-even"><td><p>%PRODUCT%</p></td>
+<td><p>Value given as <code class="docutils literal notranslate"><span class="pre">--windows-product-name</span></code></p></td>
+<td><p>YourProductName</p></td>
+</tr>
+<tr class="row-odd"><td><p>%VERSION%</p></td>
+<td><p>Combination of <code class="docutils literal notranslate"><span class="pre">--windows-file-version</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">--windows-product-version</span></code></p></td>
+<td><p>3.0.0.0-1.0.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>%HOME%</p></td>
+<td><p>Home directory for the user.</p></td>
+<td><p>/home/somebody</p></td>
 </tr>
 </tbody>
 </table>
@@ -717,12 +738,12 @@ Nuitka.</p>
    <span class="o">...</span><span class="p">,</span>
    <span class="n">command_options</span><span class="o">=</span><span class="p">{</span>
       <span class="s1">&#39;nuitka&#39;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="c1"># boolean option, e.g. if you cared for C commands</span>
+         <span class="c1"># boolean option, e.g. if you cared for C compilation commands</span>
          <span class="s1">&#39;--show-scons&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
          <span class="c1"># options without value, e.g. enforce using Clang</span>
-         <span class="s1">&#39;--clang&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;setup.py&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+         <span class="s1">&#39;--clang&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
          <span class="c1"># options with single values, e.g. enable a plugin of Nuitka</span>
-         <span class="s1">&#39;--enable-plugin&#39;</span><span class="p">:</span> <span class="s1">&#39;anti-bloat&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;--enable-plugin&#39;</span><span class="p">:</span> <span class="s2">&quot;pyside2&quot;</span><span class="p">,</span>
          <span class="c1"># options with several values, e.g. avoiding including modules</span>
          <span class="s1">&#39;--nofollow-import-to&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*.tests&quot;</span><span class="p">,</span> <span class="s2">&quot;*.distutils&quot;</span><span class="p">],</span>
       <span class="p">}</span>
@@ -738,12 +759,12 @@ Nuitka.</p>
    <span class="o">...</span><span class="p">,</span>
    <span class="n">command_options</span><span class="o">=</span><span class="p">{</span>
       <span class="s1">&#39;nuitka&#39;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="c1"># boolean option, e.g. if you cared for C commands</span>
+         <span class="c1"># boolean option, e.g. if you cared for C compilation commands</span>
          <span class="s1">&#39;--show-scons&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;setup.py&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
          <span class="c1"># options without value, e.g. enforce using Clang</span>
          <span class="s1">&#39;--clang&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;setup.py&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
          <span class="c1"># options with single values, e.g. enable a plugin of Nuitka</span>
-         <span class="s1">&#39;--enable-plugin&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;setup.py&quot;</span><span class="p">,</span> <span class="s1">&#39;anti-bloat&#39;</span><span class="p">),</span>
+         <span class="s1">&#39;--enable-plugin&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;setup.py&quot;</span><span class="p">,</span> <span class="s2">&quot;pyside2&quot;</span><span class="p">),</span>
          <span class="c1"># options with several values, e.g. avoiding including modules</span>
          <span class="s1">&#39;--nofollow-import-to&#39;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;setup.py&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;*.tests&quot;</span><span class="p">,</span> <span class="s2">&quot;*.distutils&quot;</span><span class="p">]),</span>
       <span class="p">}</span>
@@ -776,9 +797,29 @@ environment variable if you so choose, e.g.
 when you have a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> already, simple replace or add this
 value:</p>
 <div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[build-system]</span><span class="w"></span>
-<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;setuptools&gt;=42&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wheel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;nuitka&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;setuptools&gt;=42&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wheel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;nuitka&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;toml&quot;</span><span class="p">]</span><span class="w"></span>
 <span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;nuitka.distutils.Build&quot;</span><span class="w"></span>
+
+<span class="k">[nuitka]</span><span class="w"></span>
+<span class="c1"># These are not recommended, but they make it obvious to have effect.</span><span class="w"></span>
+
+<span class="c1"># boolean option, e.g. if you cared for C compilation commands, leading</span><span class="w"></span>
+<span class="c1"># dashes are omitted</span><span class="w"></span>
+<span class="n">show-scons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+
+<span class="c1"># options with single values, e.g. enable a plugin of Nuitka</span><span class="w"></span>
+<span class="n">enable-plugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pyside2</span><span class="w"></span>
+
+<span class="c1"># options with several values, e.g. avoiding including modules, accepts</span><span class="w"></span>
+<span class="c1"># list argument.</span><span class="w"></span>
+<span class="n">nofollow-import-to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;*.tests&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*.distutils&quot;</span><span class="p">]</span><span class="w"></span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the <code class="docutils literal notranslate"><span class="pre">nuitka</span></code> requirement above absolute paths like
+<code class="docutils literal notranslate"><span class="pre">C:\Users\...\Nuitka</span></code> will also work on Linux, use an absolute path
+with <em>two</em> leading slashes, e.g. <code class="docutils literal notranslate"><span class="pre">//home/.../Nuitka</span></code>.</p>
 </div>
 </section>
 </section>
@@ -967,14 +1008,18 @@ imaginable take time.</p>
 <p>Nuitka will have to learn effective caching to deal with this in the
 future. Right now, you will have to deal with huge compilation times for
 these.</p>
-<p>For now, a major weapon in fighting dependency creep should be applied,
-namely the <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> plugin, which offers interesting abilities,
-that can be put to use and block unneeded imports, giving an error for
-where they occur. Use it e.g. like this <code class="docutils literal notranslate"><span class="pre">--enable-plugin=anti-bloat</span>
-<span class="pre">--noinclude-pytest-mode=nofollow</span> <span class="pre">--noinclude-setuptools-mode=nofollow</span></code>
-and check its help output. It can take for each module of your choice,
-e.g. forcing also that PyQt5 is considered uninstalled for standalone
-mode.</p>
+<p>A major weapon in fighting dependency creep should be applied, namely
+the <code class="docutils literal notranslate"><span class="pre">anti-bloat</span></code> plugin, which offers interesting abilities, that can
+be put to use and block unneeded imports, giving an error for where they
+occur. Use it e.g. like this <code class="docutils literal notranslate"><span class="pre">--noinclude-pytest-mode=nofollow</span>
+<span class="pre">--noinclude-setuptools-mode=nofollow</span></code> and e.g. also
+<code class="docutils literal notranslate"><span class="pre">--noinclude-custom-mode=setuptools:error</span></code> to get the compiler to
+error out for a specific package. Make sure to check its help output. It
+can take for each module of your choice, e.g. forcing also that e.g.
+<code class="docutils literal notranslate"><span class="pre">PyQt5</span></code> is considered uninstalled for standalone mode.</p>
+<p>It’s also driven by a configuration file, <code class="docutils literal notranslate"><span class="pre">anti-bloat.yml</span></code> that you
+can contribute to, removing typical bloat from packages. Feel free to
+enhance it and make PRs towards Nuitka with it.</p>
 </section>
 <section id="onefile-finding-files">
 <h3>Onefile: Finding files<a class="headerlink" href="#onefile-finding-files" title="Permalink to this headline"></a></h3>
@@ -1240,6 +1285,14 @@ compiled dist folder.</p>
 the module attribute <code class="docutils literal notranslate"><span class="pre">__compiled__</span></code> to test if a specific module was
 compiled.</p>
 </section>
+<section id="providing-extra-options-to-nuitka-c-compilation">
+<h3>Providing extra Options to Nuitka C compilation<a class="headerlink" href="#providing-extra-options-to-nuitka-c-compilation" title="Permalink to this headline"></a></h3>
+<p>Nuitka will apply values from the environment variables <code class="docutils literal notranslate"><span class="pre">CCFLAGS</span></code>,
+<code class="docutils literal notranslate"><span class="pre">LDFLAGS</span></code> during the compilation on top of what it determines to be
+necessary. Beware of course, that is this is only useful if you know
+what you are doing, so should this pose an issues, raise them only with
+perfect information.</p>
+</section>
 </section>
 <section id="performance">
 <h2>Performance<a class="headerlink" href="#performance" title="Permalink to this headline"></a></h2>
@@ -1296,9 +1349,11 @@ python3 -m nuitka --lto<span class="o">=</span>yes --pgo<span class="o">=</span>
 </section>
 <section id="where-to-go-next">
 <h2>Where to go next<a class="headerlink" href="#where-to-go-next" title="Permalink to this headline"></a></h2>
-<p>Remember, this project is not completed yet. Although the CPython test
-suite works near perfect, there is still more work needed, esp. to make
-it do more optimization. Try it out.</p>
+<p>Remember, this project needs constant work. Although the Python
+compatibility is insanely high, and test suite works near perfectly,
+there is still more work needed, esp. to make it do more optimization.
+Try it out, and when popular packages do not work, please make reports
+on GitHub.</p>
 <section id="follow-me-on-twitter">
 <h3>Follow me on Twitter<a class="headerlink" href="#follow-me-on-twitter" title="Permalink to this headline"></a></h3>
 <p>Nuitka announcements and interesting stuff is pointed to on the Twitter

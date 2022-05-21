@@ -88,9 +88,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.8 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.9 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-7">Nuitka Release 0.7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -213,7 +213,7 @@ that does not exist, ignore these in module importing.</p></li>
 after it was released.</p></li>
 <li><p>Distutils: When providing arguments, the method suggested in the docs
 is not compatible with all other systems, e.g. not
-<code class="docutils literal notranslate"><span class="pre">setuptools_rust</span></code> for which a two elemented tuple form needs to be
+<code class="docutils literal notranslate"><span class="pre">setuptools_rust</span></code> for which a two elements tuple form needs to be
 used for values. Added support for that and documented its use as
 well in the User Manual.</p></li>
 <li><p>Python3.7+: Do no longer allow deleting cell values, this can lead to
@@ -372,9 +372,9 @@ default, but it should become that.</p></li>
 the whole site render with Sphinx, making it a lot more usable.</p></li>
 <li><p>Added a small presentation about Nuitka on the Download page, to make
 sure people are aware of core features.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">gi</span></code> plugin is now always on. The copying of the typelib when
-<code class="docutils literal notranslate"><span class="pre">gi</span></code> is imported is harmless and people can disable the plugin if
-that’s not needed.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">gi</span></code> plugin is now always on. The copying of the <code class="docutils literal notranslate"><span class="pre">typelib</span></code>
+when <code class="docutils literal notranslate"><span class="pre">gi</span></code> is imported is harmless and people can disable the plugin
+if that’s not needed.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plugin is new and also always on. It previously
 was part of the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> plugin, which is doing too many unrelated
 things. Moving this one out is part of a plan to split it up and have
@@ -403,14 +403,14 @@ accounted for.</p></li>
 <li><p>Twitter: Use embedded Tweet in Credits, and regular follow button in
 User Manual.</p></li>
 <li><p>Warnings about imports not done, are now only given when optimization
-can not remove the usage, and no options relatved to following have
+can not remove the usage, and no options related to following have
 been given.</p></li>
 <li><p>Added Windows version to <code class="docutils literal notranslate"><span class="pre">--version</span></code> output of Nuitka. This is to
 more clearly recognize Windows 10 from Windows 11 report, and also
 the odd Windows 7 report, where tool chain will be different.</p></li>
 <li><p>In Visual Code, the default Python used is now 3.9 in the “Linux” C
 configuration. This matches Debian Bullseye.</p></li>
-<li><p>Nicer outputs from check mode of the autoformat as run for CI
+<li><p>Nicer outputs from check mode of the auto-format as run for CI
 testing, displays problematic files more clearly.</p></li>
 <li><p>Remove broken links to old bug tracker that is no longer online from
 the Changelog.</p></li>
@@ -471,7 +471,7 @@ variations.</p></li>
 Nuitka special needs. This one is not yet passing again though, due
 to a few details not yet being as compatible as needed.</p></li>
 <li><p>Added test suite for CPython 3.10 and enable execution of tests with
-this version on Github actions.</p></li>
+this version on GitHub actions.</p></li>
 </ul>
 </section>
 <section id="summary">
@@ -479,7 +479,7 @@ this version on Github actions.</p></li>
 <p>This release is another big step forward.</p>
 <p>The amount of optimization added is again very large, some of which yet
 again unlocks more static optimization of module imports, that
-previously would have to be considered implicit. Now analysing these on
+previously would have to be considered implicit. Now analyzing these on
 the function level as well, we can start searching for cases, where it
 could be done, but is not done yet.</p>
 <p>After starting with <code class="docutils literal notranslate"><span class="pre">dict</span></code>, method optimization has focused on <code class="docutils literal notranslate"><span class="pre">str</span></code>

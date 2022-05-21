@@ -1019,8 +1019,8 @@ to make major differences.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">disable_console</span></code></p>
 <p>Windows subsystem mode: Disable console for windows builds.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unstripped_mode</span></code></p>
-<p>Unstripped mode: Do not remove debug symbols.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">unstriped_mode</span></code></p>
+<p>Unstriped mode: Do not remove debug symbols.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clang_mode</span></code></p>
 <p>Clang compiler mode, default on macOS X and FreeBSD, optional on
@@ -1181,9 +1181,9 @@ class is built, then it will be the <code class="docutils literal notranslate"><
 </section>
 <section id="frame-stack">
 <h3>Frame Stack<a class="headerlink" href="#frame-stack" title="永久链接至标题"></a></h3>
-<p>In Python, every function, class, and module has a frame. It creates
-created when the scope is entered, and there is a stack of these at run
-time, which becomes visible in tracebacks in case of exceptions.</p>
+<p>In Python, every function, class, and module has a frame. It is created
+when the scope is entered, and there is a stack of these at run time,
+which becomes visible in tracebacks in case of exceptions.</p>
 <p>The choice of Nuitka is to make this an explicit element of the node
 tree, that are as such subject to optimization. In cases, where they are
 not needed, they may be removed.</p>
@@ -2699,7 +2699,7 @@ arguments given, is pretty straight forward in many cases, but there are
 two forms of complications that can happen. One is default values,
 because they need to assigned or not, and the other is keyword
 arguments, because they allow to reorder arguments.</p>
-<p>Lets consider an example with default values first.</p>
+<p>Let’s consider an example with default values first.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="n">some_default</span><span class="p">()):</span>
     <span class="k">return</span> <span class="n">some_op</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
 
@@ -4050,9 +4050,9 @@ dropping non interesting, or rewriting exceptions.</p>
 </section>
 <section id="caching-of-python-level-compilation">
 <h3>Caching of Python level compilation<a class="headerlink" href="#caching-of-python-level-compilation" title="永久链接至标题"></a></h3>
-<p>While the C compilation result is already cached with ccache and friends
-now, we need to also cover our bases and save the resulting node tree of
-potential expensive optimization on the module level.</p>
+<p>While the C compilation result is already cached with <cite>ccache</cite> and
+friends now, we need to also cover our bases and save the resulting node
+tree of potential expensive optimization on the module level.</p>
 </section>
 </section>
 <section id="updates-for-this-manual">
