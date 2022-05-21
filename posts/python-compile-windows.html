@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compile Python on Windows &mdash; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/python-compile-windows.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.9 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-7">Nuitka Release 0.7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="compile-python-on-windows">
+<h1>Compile Python on Windows<a class="headerlink" href="#compile-python-on-windows" title="Permalink to this headline"></a></h1>
+<p>Looking to create an executable from Python script? Let me show you the
+full steps to achieve it on <em>Windows</em>.</p>
+<section id="steps-to-create-a-windows-executable-from-a-python-script-using-nuitka">
+<h2>Steps to create a Windows executable from a Python script using Nuitka<a class="headerlink" href="#steps-to-create-a-windows-executable-from-a-python-script-using-nuitka" title="Permalink to this headline"></a></h2>
+<section id="step-1-add-python-to-windows-path">
+<h3>Step 1: Add Python to Windows Path<a class="headerlink" href="#step-1-add-python-to-windows-path" title="Permalink to this headline"></a></h3>
+<p>The simple way to add Python to the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> do this is to check the box
+during installation of CPython. You just <a class="reference external" href="https://www.python.org/downloads/">download python</a> and install or modify Python by
+checking the box in the installer:</p>
+<img alt="check modify PATH when you install python" src="../_images/Python-Installation-Screen-Windows.png" />
+<p>This box is not enabled by default. You can also manually add the Python
+installation path to <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You do not strictly have to execute this step, you can also replace
+<code class="docutils literal notranslate"><span class="pre">python</span></code> with just the absolute path, e.g.
+<code class="docutils literal notranslate"><span class="pre">C:\Users\YourName\AppData\Local\Programs\Python\Python310\python.exe</span></code>
+but that can become inconvenient.</p>
+</div>
+</section>
+<section id="step-2-open-a-windows-prompt">
+<h3>Step 2: Open a Windows Prompt<a class="headerlink" href="#step-2-open-a-windows-prompt" title="Permalink to this headline"></a></h3>
+<p>This can be <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> or Windows Terminal, or from an IDE like Visual
+Code or PyCharm. And then type <code class="docutils literal notranslate"><span class="pre">python</span></code> to verify the correct
+installation, and <code class="docutils literal notranslate"><span class="pre">exit</span></code> to leave the Python prompt again.</p>
+<img alt="Launch Python in Windows prompt to verify" src="../_images/Python-Installation-CMD.png" />
+</section>
+<section id="step-3-install-the-nuitka-python-compiler-package">
+<h3>Step 3: Install the Nuitka Python Compiler package<a class="headerlink" href="#step-3-install-the-nuitka-python-compiler-package" title="Permalink to this headline"></a></h3>
+<p>Now install Nuitka with the following command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install nuitka
+</pre></div>
+</div>
+<img alt="Install Nuitka in Python" src="../_images/Nuitka-Installation-CMD.png" />
+</section>
+<section id="step-4-run-your-program">
+<h3>Step 4: Run your Program<a class="headerlink" href="#step-4-run-your-program" title="Permalink to this headline"></a></h3>
+<p>Now run your program from the terminal. Convince yourself that
+everything is working.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python fancy-program.py
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If it’s a GUI program, make sure it has a <code class="docutils literal notranslate"><span class="pre">.pyw</span></code> suffix. That is
+going to make Python know it’s one.</p>
+</div>
+</section>
+<section id="step-5-create-the-executable-using-nuitka">
+<h3>Step 5: Create the Executable using Nuitka<a class="headerlink" href="#step-5-create-the-executable-using-nuitka" title="Permalink to this headline"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --onefile fancy-program.py
+</pre></div>
+</div>
+<p>In case of a terminal program, add one of many options that Nuitka has
+to adapt for platform specifics, e.g. program icon, and so on.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --onefile --windows-disable-console fancy-program.py
+</pre></div>
+</div>
+<p>This will create <code class="docutils literal notranslate"><span class="pre">fancy-program.exe</span></code>.</p>
+</section>
+<section id="step-6-run-the-executable">
+<h3>Step 6: Run the Executable<a class="headerlink" href="#step-6-run-the-executable" title="Permalink to this headline"></a></h3>
+<p>Your executable should appear right near <code class="docutils literal notranslate"><span class="pre">fancy-program.py</span></code> and
+opening the explorer or running <code class="docutils literal notranslate"><span class="pre">fancy-program.exe</span></code> from the Terminal
+should be good.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fancy-program.exe
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="nuitka-release-07.html">
+      <i class="fa fa-arrow-circle-left"></i> Nuitka Release 0.7
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/python-compile-windows.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/python-compile-windows.html&hashtag=%23nuitka" target="_blank">
+            <div class="socialbutton facebook">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/python-compile-windows.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
+            <summary class="sd-summary-title sd-card-header switcher-title">
+                EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down"
+                        viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="sd-summary-up docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up"
+                        viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                        </path>
+                    </svg>
+                </div>
+            </summary>
+            <div class="sd-summary-content sd-card-body switcher-body docutils">
+                <blockquote>
+                    <div>
+                        <div class="line-block">
+                            <div class="line"><a class="reference external" href="/de_DE/welcome.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/welcome.html">CN</a></div>
+                        </div>
+                    </div>
+                </blockquote>
+            </div>
+        </details>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

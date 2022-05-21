@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged quiz</title>
-  <updated>2022-05-21T09:29:07.835867+00:00</updated>
+  <updated>2022-05-21T09:34:11.036023+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/quiz/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/python-scope-quiz.html</id>
     <title>Quiz Question</title>
@@ -368,5 +368,93 @@ Nuitka for some years now.</summary>
     <category term="Python" label="Python"/>
     <category term="quiz" label="quiz"/>
     <published>2014-06-18T07:46:50+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/python-compile-windows.html</id>
+    <title>Compile Python on Windows</title>
+    <updated>2022-05-15T07:46:50+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;section id="compile-python-on-windows"&gt;
+
+&lt;p&gt;Looking to create an executable from Python script? Let me show you the
+full steps to achieve it on &lt;em&gt;Windows&lt;/em&gt;.&lt;/p&gt;
+&lt;section id="steps-to-create-a-windows-executable-from-a-python-script-using-nuitka"&gt;
+&lt;h2&gt;Steps to create a Windows executable from a Python script using Nuitka&lt;/h2&gt;
+&lt;section id="step-1-add-python-to-windows-path"&gt;
+&lt;h3&gt;Step 1: Add Python to Windows Path&lt;/h3&gt;
+&lt;p&gt;The simple way to add Python to the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PATH&lt;/span&gt;&lt;/code&gt; do this is to check the box
+during installation of CPython. You just &lt;a class="reference external" href="https://www.python.org/downloads/"&gt;download python&lt;/a&gt; and install or modify Python by
+checking the box in the installer:&lt;/p&gt;
+&lt;img alt="check modify PATH when you install python" src="../../_images/Python-Installation-Screen-Windows.png" /&gt;
+&lt;p&gt;This box is not enabled by default. You can also manually add the Python
+installation path to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PATH&lt;/span&gt;&lt;/code&gt; environment variable.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;You do not strictly have to execute this step, you can also replace
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;python&lt;/span&gt;&lt;/code&gt; with just the absolute path, e.g.
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;C:\Users\YourName\AppData\Local\Programs\Python\Python310\python.exe&lt;/span&gt;&lt;/code&gt;
+but that can become inconvenient.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="step-2-open-a-windows-prompt"&gt;
+&lt;h3&gt;Step 2: Open a Windows Prompt&lt;/h3&gt;
+&lt;p&gt;This can be &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cmd.exe&lt;/span&gt;&lt;/code&gt; or Windows Terminal, or from an IDE like Visual
+Code or PyCharm. And then type &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;python&lt;/span&gt;&lt;/code&gt; to verify the correct
+installation, and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;exit&lt;/span&gt;&lt;/code&gt; to leave the Python prompt again.&lt;/p&gt;
+&lt;img alt="Launch Python in Windows prompt to verify" src="../../_images/Python-Installation-CMD.png" /&gt;
+&lt;/section&gt;
+&lt;section id="step-3-install-the-nuitka-python-compiler-package"&gt;
+&lt;h3&gt;Step 3: Install the Nuitka Python Compiler package&lt;/h3&gt;
+&lt;p&gt;Now install Nuitka with the following command.&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python -m pip install nuitka
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;img alt="Install Nuitka in Python" src="../../_images/Nuitka-Installation-CMD.png" /&gt;
+&lt;/section&gt;
+&lt;section id="step-4-run-your-program"&gt;
+&lt;h3&gt;Step 4: Run your Program&lt;/h3&gt;
+&lt;p&gt;Now run your program from the terminal. Convince yourself that
+everything is working.&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python fancy-program.py
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;If it’s a GUI program, make sure it has a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.pyw&lt;/span&gt;&lt;/code&gt; suffix. That is
+going to make Python know it’s one.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="step-5-create-the-executable-using-nuitka"&gt;
+&lt;h3&gt;Step 5: Create the Executable using Nuitka&lt;/h3&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python -m nuitka --onefile fancy-program.py
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In case of a terminal program, add one of many options that Nuitka has
+to adapt for platform specifics, e.g. program icon, and so on.&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python -m nuitka --onefile --windows-disable-console fancy-program.py
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This will create &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;fancy-program.exe&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="step-6-run-the-executable"&gt;
+&lt;h3&gt;Step 6: Run the Executable&lt;/h3&gt;
+&lt;p&gt;Your executable should appear right near &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;fancy-program.py&lt;/span&gt;&lt;/code&gt; and
+opening the explorer or running &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;fancy-program.exe&lt;/span&gt;&lt;/code&gt; from the Terminal
+should be good.&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fancy-program.exe
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://nuitka.net/posts/python-compile-windows.html" rel="alternate"/>
+    <summary>Looking to create an executable from Python script? Let me show you the
+full steps to achieve it on Windows.</summary>
+    <category term="Python" label="Python"/>
+    <category term="quiz" label="quiz"/>
+    <published>2022-05-15T07:46:50+00:00</published>
   </entry>
 </feed>
