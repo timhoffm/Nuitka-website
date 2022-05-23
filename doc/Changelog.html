@@ -1461,7 +1461,7 @@ giving options is now explicitly rejected.</p>
 <li><p>Compiled types of Nuitka now inherit from uncompiled types. This
 should allow easier and more complete compatibility, making even code
 in extension modules that uses <code class="docutils literal notranslate"><span class="pre">PyObject_IsInstance</span></code> work, e.g.
-<code class="docutils literal notranslate"><span class="pre">pydanctic</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">pydantic</span></code>.</p></li>
 <li><p>macOS: Added signing of application bundles and standalone binaries
 for deployment to newer macOS platforms and esp. M1 where these are
 mandatory for execution.</p></li>
@@ -2229,7 +2229,7 @@ from a standard command prompt.</p>
 uncompiled types. This should allow easier and more complete
 compatibility, making even code in extension modules that uses
 <code class="docutils literal notranslate"><span class="pre">PyObject_IsInstance</span></code> work, providing support for packages like
-<code class="docutils literal notranslate"><span class="pre">pydanctic</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">pydantic</span></code>.</p></li>
 <li><p>Plugins: The Qt binding plugins now resolve <code class="docutils literal notranslate"><span class="pre">pyqtgraph</span></code> selection
 of binding by hard coding <code class="docutils literal notranslate"><span class="pre">QT_LIB</span></code>. This will allow to resolve its
 own dynamic imports depending on that variable at compile time. At
@@ -4452,7 +4452,7 @@ This makes Nuitka work in locations, where normal Python cannot.</p></li>
 <li><p>Standalone: Use frozen module loader only at <code class="docutils literal notranslate"><span class="pre">libpython</span></code>
 initialisation and switch to built-in bytecode loader that is more
 compatible afterwards, increasing compatibility.</p></li>
-<li><p>Standalone: Fix for pydanctic support.</p></li>
+<li><p>Standalone: Fix for <code class="docutils literal notranslate"><span class="pre">pydantic</span></code> support.</p></li>
 <li><p>Standalone: Added missing hidden dependency of uvicorn.</p></li>
 <li><p>Fix, the parser for <code class="docutils literal notranslate"><span class="pre">.pyi</span></code> files couldn&#8217;t handle multiline imports.</p></li>
 <li><p>Windows: Derive linker arch of Python from running binary, since it

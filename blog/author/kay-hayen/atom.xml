@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts by Kay Hayen</title>
-  <updated>2022-05-21T09:46:41.872601+00:00</updated>
+  <updated>2022-05-23T08:13:40.243246+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/author/kay-hayen/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -21064,7 +21064,7 @@ This makes Nuitka work in locations, where normal Python cannot.&lt;/p&gt;&lt;/l
 &lt;li&gt;&lt;p&gt;Standalone: Use frozen module loader only at &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;libpython&lt;/span&gt;&lt;/code&gt;
 initialisation and switch to built-in bytecode loader that is more
 compatible afterwards, increasing compatibility.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Standalone: Fix for pydanctic support.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Fix for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pydantic&lt;/span&gt;&lt;/code&gt; support.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Standalone: Added missing hidden dependency of uvicorn.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Fix, the parser for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.pyi&lt;/span&gt;&lt;/code&gt; files couldn’t handle multiline imports.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Windows: Derive linker arch of Python from running binary, since it
@@ -23511,7 +23511,7 @@ from a standard command prompt.&lt;/p&gt;
 uncompiled types. This should allow easier and more complete
 compatibility, making even code in extension modules that uses
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PyObject_IsInstance&lt;/span&gt;&lt;/code&gt; work, providing support for packages like
-&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pydanctic&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pydantic&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Plugins: The Qt binding plugins now resolve &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pyqtgraph&lt;/span&gt;&lt;/code&gt; selection
 of binding by hard coding &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;QT_LIB&lt;/span&gt;&lt;/code&gt;. This will allow to resolve its
 own dynamic imports depending on that variable at compile time. At
@@ -24289,7 +24289,7 @@ giving options is now explicitly rejected.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Compiled types of Nuitka now inherit from uncompiled types. This
 should allow easier and more complete compatibility, making even code
 in extension modules that uses &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PyObject_IsInstance&lt;/span&gt;&lt;/code&gt; work, e.g.
-&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pydanctic&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pydantic&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;macOS: Added signing of application bundles and standalone binaries
 for deployment to newer macOS platforms and esp. M1 where these are
 mandatory for execution.&lt;/p&gt;&lt;/li&gt;
