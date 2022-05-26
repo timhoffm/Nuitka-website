@@ -504,8 +504,13 @@ check out (DON&#8217;T FORGET TO SAVE YOUR CHANGES FIRST IF ANY):
 git rebase upstream/develop
 </pre></div>
 </div>
-<p>Fix the merge conflicts if any, stash them and continue:</p>
+<p>Fix the merge conflicts if any and continue or skip commit if it is
+not your. Sometimes for important bug fixes, develop history gets
+rewritten. In that case, old and new commits will conflict during
+your rebase, and skipping is the best way to go.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git rebase --continue
+<span class="c1"># not your commit:</span>
+git rebase --skip
 </pre></div>
 </div>
 <p>If anything goes wrong while rebasing:</p>
@@ -4128,8 +4133,8 @@ readable to human, but easily used to generate PDF or HTML documents.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/developer-manual.html">EN</a></div>
-                            <div class="line"><a class="reference external" href="/de_DE/developer-manual.html">DE</a></div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/developer-manual.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/developer-manual.html">EN</a></div>
                             </div></div>
                 </blockquote>
             </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2017</title>
-  <updated>2022-05-23T08:23:55.885613+00:00</updated>
+  <updated>2022-05-26T09:04:11.760101+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2017/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -507,7 +507,7 @@ that task.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;References to known unassigned variables are now statically optimized
 to exception raises and warned about if the according option is
 enabled.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Unhashable keys in dictionaries are now statically optimized to
+&lt;li&gt;&lt;p&gt;Non-hashable keys in dictionaries are now statically optimized to
 exception raises and warned about if the according option is enabled.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Enable forward propagation for classes too, resulting in some classes
 to create only static dictionaries. Currently this never happens for

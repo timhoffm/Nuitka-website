@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2021</title>
-  <updated>2022-05-23T08:23:55.380330+00:00</updated>
+  <updated>2022-05-26T09:04:10.961702+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2021/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -29,7 +29,7 @@ following of imports from the additional entry point. Fixed in
 0.6.10.1 already.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Pipenv: Workaround parsing issue with our &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;setup.py&lt;/span&gt;&lt;/code&gt; to allow
 installation from GitHub. Fixed in 0.6.10.1 already.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Merging of branches in optimization could give indeterministic
+&lt;li&gt;&lt;p&gt;Merging of branches in optimization could give nondeterministic
 results leading to more iterations than necessary. Fixed in 0.6.10.1
 already.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Windows: Avoid profile powershell when attempting to resolve

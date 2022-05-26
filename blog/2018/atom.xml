@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2018</title>
-  <updated>2022-05-23T08:23:55.722999+00:00</updated>
+  <updated>2022-05-26T09:04:11.302834+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2018/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -145,8 +145,8 @@ old for modern packaging used).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Windows: Standalone tests were referencing an old path to
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;depends.exe&lt;/span&gt;&lt;/code&gt; that wasn’t populated on new installs.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Refinements for CPython test suites to become more stable in results.
-Some tests occasionally fail to clean up, or might do indeterministic
-outputs, or are not relevant at all.&lt;/p&gt;&lt;/li&gt;
+Some tests occasionally fail to clean up, or might do
+nondeterministic outputs, or are not relevant at all.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The tests don’t use the runners, but more often do &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-m&lt;/span&gt; &lt;span class="pre"&gt;nuitka&lt;/span&gt;&lt;/code&gt; to
 become executable without having to find the proper runner. This
 improves usage during the RPM builds and generally.&lt;/p&gt;&lt;/li&gt;
