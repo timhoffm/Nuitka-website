@@ -97,8 +97,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#coding-rules-python">Coding Rules Python</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#tool-to-format">Tool to format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#identifiers">Identifiers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-package-names">Module/Package Names</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#names-for-context-manages-start-with-with">Names for context manages start with <code class="docutils literal notranslate"><span class="pre">with</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#prefer-list-contractions-over-built-ins">Prefer list contractions over built-ins</a></li>
 </ul>
 </li>
@@ -368,6 +366,8 @@ disable statements.</p>
 </section>
 <section id="identifiers">
 <h3>Identifiers<a class="headerlink" href="#identifiers" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<section id="classes">
+<h4>Classes<a class="headerlink" href="#classes" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
 <p>Classes are camel case with leading upper case. Functions and methods
 are with leading verb in lower case, but also camel case. Variables and
 arguments are lower case with <code class="docutils literal notranslate"><span class="pre">_</span></code> as a separator.</p>
@@ -379,6 +379,9 @@ arguments are lower case with <code class="docutils literal notranslate"><span c
 <p>Base classes that are abstract have their name end with <code class="docutils literal notranslate"><span class="pre">Base</span></code>, so
 that a meta class can use that convention, and readers immediately know,
 that it will not be instantiated like that.</p>
+</section>
+<section id="functions">
+<h4>Functions<a class="headerlink" href="#functions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
 <p>Function calls use keyword argument preferably. These are slower in
 CPython, but more readable:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getSequenceCreationCode</span><span class="p">(</span>
@@ -396,7 +399,7 @@ still better to add them. But in this instance, the variable name
 already indicates that it is.</p>
 </section>
 <section id="module-package-names">
-<h3>Module/Package Names<a class="headerlink" href="#module-package-names" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h4>Module/Package Names<a class="headerlink" href="#module-package-names" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
 <p>Normal modules are named in camel case with leading upper case, because
 of their role as singleton classes. The difference between a module and
 a class is small enough and in the source code they are also used
@@ -413,8 +416,9 @@ as local imports.</p>
 <p>Names of modules should be plurals if they contain classes. Example is
 that a <code class="docutils literal notranslate"><span class="pre">Nodes</span></code> module that contains a <code class="docutils literal notranslate"><span class="pre">Node</span></code> class.</p>
 </section>
-<section id="names-for-context-manages-start-with-with">
-<h3>Names for context manages start with <code class="docutils literal notranslate"><span class="pre">with</span></code><a class="headerlink" href="#names-for-context-manages-start-with-with" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<section id="context-managers">
+<h4>Context Managers<a class="headerlink" href="#context-managers" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<p>Names for context manages start with <code class="docutils literal notranslate"><span class="pre">with</span></code></p>
 <p>In order to easily recognize that something is to be used as a context
 manager, we follow a pattern of naming them <code class="docutils literal notranslate"><span class="pre">withSomething</span></code>, to make
 that easily recognized.</p>
@@ -424,6 +428,7 @@ that easily recognized.</p>
 </pre></div>
 </div>
 <p>This makes these easy to recognize even in their definition.</p>
+</section>
 </section>
 <section id="prefer-list-contractions-over-built-ins">
 <h3>Prefer list contractions over built-ins<a class="headerlink" href="#prefer-list-contractions-over-built-ins" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
@@ -2493,8 +2498,35 @@ tasked to do the difficult stuff. Our example becomes this:</p>
 parameter parsing overhead. And the call in its end, is a special call
 operation, which relates to the <code class="docutils literal notranslate"><span class="pre">PyObject_Call</span></code> C-API.</p>
 </section>
+<section id="assignment-expressions">
+<h4>Assignment Expressions<a class="headerlink" href="#assignment-expressions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<p>In Python 3.8 or higher, you assign inside expressions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">:=</span> <span class="n">cond</span><span class="p">()):</span>
+   <span class="n">do_something</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>this is the same as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Doesn't exist with that name, and it is not really taking closure variables,</span>
+<span class="c1"># it just shares the execution context.</span>
+<span class="k">def</span> <span class="nf">_outline_func</span><span class="p">():</span>
+   <span class="k">nonlocal</span> <span class="n">x</span>
+   <span class="n">x</span> <span class="o">=</span> <span class="n">cond</span><span class="p">()</span>
+
+   <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">_outline_func</span><span class="p">()):</span>
+   <span class="n">do_something</span>
+</pre></div>
+</div>
+<p>When we use this outline function, we are allowed statements, even
+assignments, in expressions. For optimization, they of course pose a
+challenge to be removed ever, only happens when it becomes only a return
+statement, but they do not cause much difficulties for code generation,
+since they are transparent.</p>
+</section>
 <section id="match-statements">
 <h4>Match Statements<a class="headerlink" href="#match-statements" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<p>In Python 3.10 or higher, you can write things like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">match</span> <span class="n">something</span><span class="p">():</span>
     <span class="k">case</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="p">:</span>
         <span class="n">z</span> <span class="o">=</span> <span class="mi">2</span>
