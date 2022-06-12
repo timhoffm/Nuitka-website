@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged Android</title>
-  <updated>2022-06-12T08:20:41.210998+00:00</updated>
+  <updated>2022-06-12T08:22:20.140744+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/android/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
