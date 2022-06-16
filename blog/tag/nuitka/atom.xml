@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged Nuitka</title>
-  <updated>2022-06-14T19:29:21.036371+00:00</updated>
+  <updated>2022-06-16T16:15:35.457457+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/nuitka/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -25284,5 +25284,66 @@ more lean, but scalability is still an issue.&lt;/p&gt;
     <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
     <published>2022-05-26T10:54:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/next-nuitka-live-stream-04-06-2022.html</id>
+    <title>Next Nuitka Live Stream</title>
+    <updated>2022-05-27T00:00:00+00:00</updated>
+    <content type="html">&lt;section id="next-nuitka-live-stream"&gt;
+
+&lt;p&gt;In the coming weekend, Saturday 04.06.2022, there will be the next live
+streams of me coding on Nuitka, and talking and chatting with visitors
+in the Discord channel created specifically for this. I will go from
+10-14 CEST and potentially also one in the evening.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="last-time"&gt;
+&lt;h1&gt;Last time&lt;/h1&gt;
+&lt;p&gt;It’s actually been too long for me to remember what I did, but I do know
+that it took some time to get it right. It probably was about caching,
+but there are usually several topics.&lt;/p&gt;
+&lt;p&gt;I do however think that I need to use my CI machine with more processing
+power rather than my normal desktop, or maybe even both, because the
+screen capture, compiling, VS Code, and all, may make the Video
+otherwise stutter a bit too much.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="this-time"&gt;
+&lt;h1&gt;This time&lt;/h1&gt;
+&lt;p&gt;So, streaming is a huge success or Nuitka, however time is also scarce,
+and me starting new things, risks the release being bogged down by
+stabilization phases that are extended.&lt;/p&gt;
+&lt;p&gt;Not sure yet, what to do. I think, I want to look at adding the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt;
+as a C type and/or specializing code for mix of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CLONG&lt;/span&gt;&lt;/code&gt; (C long value)
+and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;LONG&lt;/span&gt;&lt;/code&gt; (Python3 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt; object``) and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;INT&lt;/span&gt;&lt;/code&gt; (Python2 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt;
+object). Right now adding &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;1&lt;/span&gt;&lt;/code&gt; goes through a constant object, one that
+is prepared, and not time consuming to reference, but still overhead to
+use.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="how-to-join-nuitka-live"&gt;
+&lt;h1&gt;How to Join Nuitka Live&lt;/h1&gt;
+&lt;p&gt;There is a &lt;a class="reference external" href="/pages/Streaming.html"&gt;dedicated page on the web site&lt;/a&gt;
+which has the details. Spoiler, it’s free and I have no plans for
+anything that involves a subscription of any kind. Of course, talking of
+subscription, do also checkout the &lt;a class="reference external" href="/doc/commercial.html"&gt;Nuitka commercial&lt;/a&gt; offering. That is a subscription with adds that
+protect your IP even more than regular Nuitka.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="join-me"&gt;
+&lt;h1&gt;Join me&lt;/h1&gt;
+&lt;p&gt;Come and join me there. &lt;a class="reference external" href="/pages/Streaming.html"&gt;Instructions&lt;/a&gt; here.
+You know you want to do it. I know I want you to do to it!&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Yours,&lt;/div&gt;
+&lt;div class="line"&gt;Kay&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://nuitka.net/posts/next-nuitka-live-stream-04-06-2022.html" rel="alternate"/>
+    <summary>In the coming weekend, Saturday 04.06.2022, there will be the next live
+streams of me coding on Nuitka, and talking and chatting with visitors
+in the Discord channel created specifically for this. I will go from
+10-14 CEST and potentially also one in the evening.</summary>
+    <category term="Python" label="Python"/>
+    <category term="Nuitka" label="Nuitka"/>
+    <category term="compiler" label="compiler"/>
+    <published>2022-05-27T00:00:00+00:00</published>
   </entry>
 </feed>

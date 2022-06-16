@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabrikanweisungen &#8212; Nuitka the Python Compiler  Dokumentation</title>
+  <title>Factory Instructions &#8212; Nuitka the Python Compiler  Dokumentation</title>
       <link rel="stylesheet" href="/_static/css/combined_2bd3294a7fc38a7b928624963c1d901b.css" type="text/css">
       <link rel="canonical" href="https://nuitka.net/factory.html">
   <!--[if lt IE 9]>
@@ -83,14 +83,14 @@
 <li class="toctree-l1"><a class="reference internal" href="pages/index.html">Pages</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="more.html">More documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="developer-manual.html">Developer Manual</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Fabrikanweisungen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#factory-rationale">F&#252;r was ist die Fabrik</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-to-get-factory">Wie bekommt man <code class="docutils literal notranslate"><span class="pre">factory</span></code></a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Factory Instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#factory-rationale">Factory Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-get-factory">How to get <code class="docutils literal notranslate"><span class="pre">factory</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#git">git</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pip">pip</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#word-of-warning">Wort der Warnung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#word-of-warning">Word of Warning</a></li>
 </ul>
 </li>
 </ul>
@@ -113,14 +113,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="factory-instructions">
-<h1>Fabrikanweisungen<a class="headerlink" href="#factory-instructions" title="Link zu dieser &#220;berschrift">&#61633;</a></h1>
+<h1>Factory Instructions<a class="headerlink" href="#factory-instructions" title="Link zu dieser &#220;berschrift">&#61633;</a></h1>
 <section id="factory-rationale">
-<h2>F&#252;r was ist die Fabrik<a class="headerlink" href="#factory-rationale" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
-<p>Die <code class="docutils literal notranslate"><span class="pre">master</span></code> und <code class="docutils literal notranslate"><span class="pre">develop</span></code> Zweige sollte jederzeit funktionieren. F&#252;r Experimente die Probleme hervorrufen k&#246;nnten, wie zum Beispiel neue Features ist der <code class="docutils literal notranslate"><span class="pre">factory</span></code> Zweig geeignet.</p>
-<p>Du bist warscheinlich hier, weil eine &#196;nderung f&#252;r sie vorgenommen wurde.</p>
+<h2>Factory Rationale<a class="headerlink" href="#factory-rationale" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>Both the <code class="docutils literal notranslate"><span class="pre">master</span></code> and <code class="docutils literal notranslate"><span class="pre">develop</span></code> branch are supposed to be working
+for people at all times. For experiments in the context of issues and
+generally features not yet ready for prime time, there we have the
+factory branch.</p>
+<p>You have probably come here, because you were asked to checkout a change
+made for you on <code class="docutils literal notranslate"><span class="pre">factory</span></code>.</p>
 </section>
 <section id="how-to-get-factory">
-<h2>Wie bekommt man <code class="docutils literal notranslate"><span class="pre">factory</span></code><a class="headerlink" href="#how-to-get-factory" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>How to get <code class="docutils literal notranslate"><span class="pre">factory</span></code><a class="headerlink" href="#how-to-get-factory" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
 <p><a class="reference external" href="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml?query=branch%3Afactory" target="_blank"><img alt="Factory Status" src="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml/badge.svg?branch=factory"></a></p>
 <section id="git">
 <h3>git<a class="headerlink" href="#git" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
@@ -136,9 +140,14 @@
 </section>
 </section>
 <section id="word-of-warning">
-<h2>Wort der Warnung<a class="headerlink" href="#word-of-warning" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
-<p>Dieser Zweig kann alle Arten von dummen Fehlern enthalten. Zum Beispiel ist es m&#246;glich, dass Nuitka nicht mit allen Python Versionen funktioniert, crasht, oder &#252;berhaupt nicht funktioniert. Hier werden auch &#196;nderungen ohne Hinweise vorgenommen. Sie sollten ihn nur benutzen wenn sie ihn wirklich ben&#246;tigen.</p>
-<p>Wenn die &#196;nderungen f&#252;r gut befunden werden, werden sie relativ schnell in den <code class="docutils literal notranslate"><span class="pre">develop</span></code> Zweig &#252;bernommen. Bei einem Fix sollten sie warten bis er dort verf&#252;gbar ist.</p>
+<h2>Word of Warning<a class="headerlink" href="#word-of-warning" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>This personal branch may include all kinds of stupid mistakes, e.g. not
+being executable with all versions, crashing, not working at all. They
+also frequently change without notice. So please use it only for the
+issue at hand or even more than usually on your own risk.</p>
+<p>Once confirmed and found good, fixes will normally appear on develop
+branch relatively shortly, try to use those instead from then on, and
+wait for the change to appear there.</p>
 </section>
 </section>
 

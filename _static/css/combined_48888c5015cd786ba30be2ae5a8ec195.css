@@ -256,16 +256,16 @@ html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}article,aside,det
 details.sd-dropdown {
     display: inline;
     vertical-align: top;
-    background: white;
 }
 details.sd-dropdown .sd-summary-title {
     width: fit-content !important;
-    padding: 15px !important;
+    padding: 0px !important;
     padding-right: 0px !important;
     height: 45px;
 }
 details.sd-dropdown .switcher-body {
     width: fit-content !important;
+    padding: 0px !important;
 }
 details.sd-dropdown {
     width: fit-content !important;

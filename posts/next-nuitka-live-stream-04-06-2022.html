@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Nuitka Live Stream &#8212; Nuitka the Python Compiler  documentation</title>
+      <link rel="stylesheet" href="/_static/css/combined_48888c5015cd786ba30be2ae5a8ec195.css" type="text/css">
+      <link rel="canonical" href="https://nuitka.net/posts/next-nuitka-live-stream-04-06-2022.html">
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script>var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../',
+    VERSION: '',
+    LANGUAGE: 'None',
+    COLLAPSE_INDEX: false,
+    BUILDER: 'html',
+    FILE_SUFFIX: '.html',
+    LINK_SUFFIX: '.html',
+    HAS_SOURCE: false,
+    SOURCELINK_SUFFIX: '.txt',
+    NAVIGATION_WITH_KEYS: false,
+    SHOW_SEARCH_SUMMARY: true,
+    ENABLE_SEARCH_SHORTCUTS: true,
+};</script>
+        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <link rel="index" title="Index" href="../genindex.html">
+    <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+          </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/user-manual.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.9 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-7">Nuitka Release 0.7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/developer-manual.html">Developer Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="next-nuitka-live-stream">
+<h1>Next Nuitka Live Stream<a class="headerlink" href="#next-nuitka-live-stream" title="Permalink to this headline">&#61633;</a></h1>
+<p>In the coming weekend, Saturday 04.06.2022, there will be the next live
+streams of me coding on Nuitka, and talking and chatting with visitors
+in the Discord channel created specifically for this. I will go from
+10-14 CEST and potentially also one in the evening.</p>
+</section>
+<section id="last-time">
+<h1>Last time<a class="headerlink" href="#last-time" title="Permalink to this headline">&#61633;</a></h1>
+<p>It&#8217;s actually been too long for me to remember what I did, but I do know
+that it took some time to get it right. It probably was about caching,
+but there are usually several topics.</p>
+<p>I do however think that I need to use my CI machine with more processing
+power rather than my normal desktop, or maybe even both, because the
+screen capture, compiling, VS Code, and all, may make the Video
+otherwise stutter a bit too much.</p>
+</section>
+<section id="this-time">
+<h1>This time<a class="headerlink" href="#this-time" title="Permalink to this headline">&#61633;</a></h1>
+<p>So, streaming is a huge success or Nuitka, however time is also scarce,
+and me starting new things, risks the release being bogged down by
+stabilization phases that are extended.</p>
+<p>Not sure yet, what to do. I think, I want to look at adding the <code class="docutils literal notranslate"><span class="pre">int</span></code>
+as a C type and/or specializing code for mix of <code class="docutils literal notranslate"><span class="pre">CLONG</span></code> (C long value)
+and <code class="docutils literal notranslate"><span class="pre">LONG</span></code> (Python3 <code class="docutils literal notranslate"><span class="pre">int</span></code> object``) and <code class="docutils literal notranslate"><span class="pre">INT</span></code> (Python2 <code class="docutils literal notranslate"><span class="pre">int</span></code>
+object). Right now adding <code class="docutils literal notranslate"><span class="pre">1</span></code> goes through a constant object, one that
+is prepared, and not time consuming to reference, but still overhead to
+use.</p>
+</section>
+<section id="how-to-join-nuitka-live">
+<h1>How to Join Nuitka Live<a class="headerlink" href="#how-to-join-nuitka-live" title="Permalink to this headline">&#61633;</a></h1>
+<p>There is a <a class="reference external" href="/pages/Streaming.html">dedicated page on the web site</a>
+which has the details. Spoiler, it&#8217;s free and I have no plans for
+anything that involves a subscription of any kind. Of course, talking of
+subscription, do also checkout the <a class="reference external" href="/doc/commercial.html">Nuitka commercial</a> offering. That is a subscription with adds that
+protect your IP even more than regular Nuitka.</p>
+</section>
+<section id="join-me">
+<h1>Join me<a class="headerlink" href="#join-me" title="Permalink to this headline">&#61633;</a></h1>
+<p>Come and join me there. <a class="reference external" href="/pages/Streaming.html">Instructions</a> here.
+You know you want to do it. I know I want you to do to it!</p>
+<div class="line-block">
+<div class="line">Yours,</div>
+<div class="line">Kay</div>
+</div>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="nuitka-release-08.html">
+      <i class="fa fa-arrow-circle-left"></i> Nuitka Release 0.8
+    </a>
+    
+  </span>
+  <span>&#160;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
+  
+<div class="share-button-container">
+    <div class="socialbutton-wrapper">
+
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/next-nuitka-live-stream-04-06-2022.html&amp;hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/next-nuitka-live-stream-04-06-2022.html&amp;hashtag=%23nuitka" target="_blank">
+            <div class="socialbutton facebook">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/next-nuitka-live-stream-04-06-2022.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png" width="24" height="24">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 switcher-container">
+            <summary class="sd-summary-title sd-card-header switcher-title">EN<div class="sd-summary-down docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="sd-summary-up docutils">
+                    <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewbox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z">
+                        </path>
+                    </svg>
+                </div>
+            </summary>
+            <div class="sd-summary-content sd-card-body switcher-body docutils">
+                <blockquote>
+                    <div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/next-nuitka-live-stream-04-06-2022.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/next-nuitka-live-stream-04-06-2022.html">CN</a></div>
+                            </div></div>
+                </blockquote>
+            </div>
+        </details>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  </body>
+</html>

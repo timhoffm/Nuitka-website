@@ -190,11 +190,11 @@ we could use.</p>
 </section>
 <section id="page-pages-overview-rst">
 <h3>Page <code class="docutils literal notranslate"><span class="pre">pages/overview.rst</span></code><a class="headerlink" href="#page-pages-overview-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Please hold off from this one. It currently is a duplicate of content
-that is just the same in <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and not linked, so please ignore
-it for now. There is a plan to have a feel good more like a cross road
-entry page, that will lead to the kind of page, that the home page is
-right now.</p>
+<p>Please hold off from this one. It currently is just a duplicate of content that
+is just the same in <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and not linked anywhere, so please ignore it
+for now.</p>
+<p>There is a plan to have a &#8222;feel good&#8220; cross road entry page, that will
+lead to the kind of page, that the home page is right now.</p>
 </section>
 <section id="page-pages-pyside2-rst">
 <h3>Page <code class="docutils literal notranslate"><span class="pre">pages/pyside2.rst</span></code><a class="headerlink" href="#page-pages-pyside2-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
@@ -285,21 +285,6 @@ serious update from my side, maybe ignore that, until I get there.
 Review applies here very much. I think Tutorial parts might be factored
 out to separate documents.</p>
 </section>
-</section>
-<section id="how-to-translate">
-<h2>How to translate<a class="headerlink" href="#how-to-translate" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate the .pot files</span>
-<span class="nb">cd</span> intl
-make gettext
-
-<span class="c1"># Generate .po files from .pot</span>
-sphinx-intl update -p ../output/gettext -l your_language_code
-</pre></div>
-</div>
-<p>Under locales in the folder with the language code you will then have many .po files.
-In the .po file you can see <code class="docutils literal notranslate"><span class="pre">msgid</span></code> and below it <code class="docutils literal notranslate"><span class="pre">msgstr</span></code>.
-<code class="docutils literal notranslate"><span class="pre">msgid</span></code> contains the english original, in <code class="docutils literal notranslate"><span class="pre">msgstr</span></code> you can write the translation.
-If you then want to transfer your changes via PR, please commit <strong>only</strong> the files you have translated.</p>
 </section>
 <section id="image-optimization">
 <h2>Image Optimization<a class="headerlink" href="#image-optimization" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
