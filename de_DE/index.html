@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuitka Website &#8212; Nuitka the Python Compiler  Dokumentation</title>
+  <title>Nuitka Webseite &#8212; Nuitka the Python Compiler  Dokumentation</title>
       <link rel="stylesheet" href="/_static/css/combined_2bd3294a7fc38a7b928624963c1d901b.css" type="text/css">
       <link rel="canonical" href="https://nuitka.net/index.html">
   <!--[if lt IE 9]>
@@ -37,7 +37,7 @@
         <script src="_static/clipboard.min.js" async=""></script>
         <script src="_static/copybutton.js" async=""></script>
         <link rel="index" title="Stichwortverzeichnis" href="genindex.html">
-    <link rel="next" title="Quick Start" href="doc/index.html">   
+    <link rel="next" title="Schnellstart" href="doc/index.html">   
 <link rel="alternate" type="application/atom+xml" href="blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
@@ -77,9 +77,9 @@
           </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="doc/index.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/index.html">Schnellstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pages/index.html">Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/index.html">Seiten</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more.html">More documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blog.html">Nuitka Blog</a></li>
 </ul>
@@ -99,20 +99,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-website">
-<h1>Nuitka Website<a class="headerlink" href="#nuitka-website" title="Link zu dieser &#220;berschrift">&#61633;</a></h1>
+<h1>Nuitka Webseite<a class="headerlink" href="#nuitka-website" title="Link zu dieser &#220;berschrift">&#61633;</a></h1>
 <img alt="Nuitka Logo" src="_images/nuitka-website-logo.png">
 <section id="thanks">
-<h2>Thanks<a class="headerlink" href="#thanks" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
-<p>Please help and improve this in all ways, typos, cooler tech, better
-looks, more information, etc. all is appreciated and necessary.</p>
-<p>Right now, this is very much possible to improve. Your turn!</p>
+<h2>Danke<a class="headerlink" href="#thanks" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>Bitte helfen Sie mit und verbessern Sie es in jeder Hinsicht, Tippfehler, coolere Technik, besseres Aussehen, mehr Informationen, usw. alles ist willkommen und notwendig.</p>
+<p>Im Moment ist es sehr gut m&#246;glich, dies zu verbessern. Sie sind dran!</p>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
-<p>This is used to build the Nuitka web site. Enhancements of all kinds are
-welcome. You will need python 3.9 and <code class="docutils literal notranslate"><span class="pre">pipenv</span></code> to build it, and so far
-this has only be done on Linux, but it ought to also work on Windows,
-you can make that work as part of your contribution.</p>
+<h2>Verwendung<a class="headerlink" href="#usage" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>Damit wird die Nuitka-Website aufgebaut. Erweiterungen aller Art sind willkommen. Du brauchst Python 3.9 und <code class="docutils literal notranslate"><span class="pre">pipenv</span></code>, um es zu bauen, und bis jetzt wurde es nur unter Linux gemacht, aber es sollte auch unter Windows funktionieren, du kannst das als Teil deines Beitrags machen.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a virtualenv with all that is needed to develop the</span>
 <span class="c1"># site.</span>
 python3 -m pip install -U invoke
@@ -143,53 +139,31 @@ explorer http://localhost:8080
 </div>
 </section>
 <section id="usage-of-sphinx">
-<h2>Usage of Sphinx<a class="headerlink" href="#usage-of-sphinx" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
-<p>So the site is basically mostly an automation of importing a few files
-from the Nuitka git repository, splitting up e.g. the <code class="docutils literal notranslate"><span class="pre">Changelog.rst</span></code>
-into pages, with otherwise using Sphinx to render it. Reference the
-Sphinx documentation and esp. the one for Read the Docs theme and ABlog.</p>
+<h2>Verwendung von Sphinx<a class="headerlink" href="#usage-of-sphinx" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>Die Seite ist also im Grunde eine Automatisierung des Imports einiger Dateien aus dem Nuitka git repository, die z.B. die <code class="docutils literal notranslate"><span class="pre">Changelog.rst</span></code> in Seiten aufteilt und ansonsten Sphinx zum Rendern verwendet. Siehe die Sphinx-Dokumentation, insbesondere die f&#252;r das Thema Read the Docs und ABlog.</p>
 </section>
 <section id="translation">
-<h2>Translation<a class="headerlink" href="#translation" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
-<p>Translations of the Nuitka website are very welcome. We have a team for
-those want to work on it, with push rights to the repository. Right now
-a <code class="docutils literal notranslate"><span class="pre">translation</span></code> branch is used, but the plan is for it to be merged,
-and to provide the infrastructure in the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p>
-<p>Here is a table of the files to translate and their styles. Everything
-that is not mentioned here, should be asked about if in doubt. Not all
-pages make sense to translate.</p>
+<h2>&#220;bersetzung<a class="headerlink" href="#translation" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<p>&#220;bersetzungen der Nuitka-Website sind sehr willkommen. Wir haben ein Team f&#252;r diejenigen, die daran arbeiten wollen, mit Push-Rechten f&#252;r das Repository. Im Moment wird ein <code class="docutils literal notranslate"><span class="pre">translation</span></code> Zweig verwendet, aber der Plan ist, diesen zusammenzuf&#252;hren und die Infrastruktur im <code class="docutils literal notranslate"><span class="pre">main</span></code> Zweig bereitzustellen.</p>
+<p>Hier ist eine Tabelle mit den zu &#252;bersetzenden Dateien und ihren Stilen. Alles, was hier nicht aufgef&#252;hrt ist, sollte im Zweifelsfall nachgefragt werden. Nicht alle Seiten sind sinnvoll zu &#252;bersetzen.</p>
 <div class="admonition important">
 <p class="admonition-title">Wichtig</p>
-<p>Before translating, I would love you to also actually review the
-content, if you agree it makes sense, if it can be better structured.
-This is very much needed unfortunately.</p>
+<p>Ich w&#252;rde mich freuen, wenn Sie vor der &#220;bersetzung auch den Inhalt &#252;berpr&#252;fen w&#252;rden, ob er sinnvoll ist und ob er besser strukturiert werden kann. Das ist leider sehr n&#246;tig.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>There are plans to get rid of <code class="docutils literal notranslate"><span class="pre">pages</span></code> and <code class="docutils literal notranslate"><span class="pre">doc</span></code> sub-folders of
-the site folder <code class="docutils literal notranslate"><span class="pre">doc</span></code>. For URLs, these are plain bad, and would
-e.g. be much better as <code class="docutils literal notranslate"><span class="pre">python-compiler</span></code> and the like. A plan will
-be devised and put into place, but it will just move and renamed
-pages.</p>
+<p>Es gibt Pl&#228;ne, die Unterordner <code class="docutils literal notranslate"><span class="pre">pages</span></code> und <code class="docutils literal notranslate"><span class="pre">doc</span></code> des Site-Ordners <code class="docutils literal notranslate"><span class="pre">doc</span></code> abzuschaffen. F&#252;r URLs sind diese einfach schlecht, und w&#228;ren z.B. viel besser als <code class="docutils literal notranslate"><span class="pre">python-compiler</span></code> und dergleichen. Es wird ein Plan ausgearbeitet und umgesetzt, aber es werden nur Seiten verschoben und umbenannt.</p>
 </div>
 <section id="directory-posts">
-<h3>Directory <code class="docutils literal notranslate"><span class="pre">posts/</span></code><a class="headerlink" href="#directory-posts" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>At this time, the blog posts, esp. old ones should not be translated. I
-believe often new content will be created in post form, and then moved
-over to pages for translation. A current example are tutorial style
-pages including screenshots, which depending on how the e.g. Python
-installer look in your language, Explorer and shell prompt, even
-screenshots might have to be translated. This will come only later
-though.</p>
+<h3>Ordner <code class="docutils literal notranslate"><span class="pre">posts/</span></code><a class="headerlink" href="#directory-posts" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Zur Zeit sollten die Blogeintr&#228;ge, vor allem die alten, nicht &#252;bersetzt werden. Ich glaube, dass neue Inhalte oft in Form von Beitr&#228;gen erstellt werden und dann zur &#220;bersetzung auf Seiten verschoben werden. Ein aktuelles Beispiel sind Seiten im Stil eines Tutorials mit Screenshots, die je nachdem, wie z.B. der Python-Installer in Ihrer Sprache, der Explorer und die Shell-Eingabeaufforderung aussehen, auch &#252;bersetzt werden m&#252;ssen. Das wird aber erst sp&#228;ter kommen.</p>
 </section>
 <section id="page-pages-donations-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">pages/donations.rst</span></code><a class="headerlink" href="#page-pages-donations-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Yes, please go ahead. Let me know if there is any need to hint Paypal,
-or when Paypal is not available in your country, what alternative ways
-we could use.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">pages/donations.rst</span></code><a class="headerlink" href="#page-pages-donations-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Ja, bitte machen Sie weiter. Lassen Sie mich wissen, ob es notwendig ist, auf Paypal hinzuweisen, oder wenn Paypal in Ihrem Land nicht verf&#252;gbar ist, welche alternativen M&#246;glichkeiten wir nutzen k&#246;nnen.</p>
 </section>
 <section id="page-pages-overview-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">pages/overview.rst</span></code><a class="headerlink" href="#page-pages-overview-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">pages/overview.rst</span></code><a class="headerlink" href="#page-pages-overview-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
 <p>Please hold off from this one. It currently is just a duplicate of content that
 is just the same in <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and not linked anywhere, so please ignore it
 for now.</p>
@@ -197,97 +171,68 @@ for now.</p>
 lead to the kind of page, that the home page is right now.</p>
 </section>
 <section id="page-pages-pyside2-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">pages/pyside2.rst</span></code><a class="headerlink" href="#page-pages-pyside2-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Very important kind of page, of which I want to have more. Nuitka links
-itself to this from the plugin, and it&#8217;s a landing page to inform users
-about troubles that can be expected. We want to have some boilerplate
-for this, and a general way of adding these. These user hint pages are
-where I think we ought to help the users from real Nuitka to find the
-information, and even localized for their needs.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">pages/pyside2.rst</span></code><a class="headerlink" href="#page-pages-pyside2-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Sehr wichtige Art von Seite, von der ich mehr haben m&#246;chte. Nuitka verlinkt sich selbst mit dieser Seite aus dem Plugin, und es ist eine Landing Page, um Benutzer &#252;ber zu erwartende Probleme zu informieren. Wir wollen daf&#252;r eine Art Boilerplate haben und eine allgemeine M&#246;glichkeit, diese hinzuzuf&#252;gen. Diese Benutzer-Hinweis-Seiten sind der Ort, an dem wir meiner Meinung nach den Benutzern von Nuitka helfen sollten, die Informationen zu finden.</p>
 </section>
 <section id="page-pages-support-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">pages/support.rst</span></code><a class="headerlink" href="#page-pages-support-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>This one is not mentioning the Discord server yet, I will add that soon
-though. Very important page that should be linked to from many places.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">pages/support.rst</span></code><a class="headerlink" href="#page-pages-support-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Hier wird der Discord-Server noch nicht erw&#228;hnt, ich werde das aber bald hinzuf&#252;gen. Sehr wichtige Seite, die von vielen Stellen aus verlinkt werden sollte.</p>
 </section>
 <section id="page-pages-gsoc2019-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">pages/gsoc2019.rst</span></code><a class="headerlink" href="#page-pages-gsoc2019-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>This is historical information, translation makes no sense, not sure
-what to do with it. But if Nuitka were to do it again, we would
-translate it ideally for the next time.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">pages/gsoc2019.rst</span></code><a class="headerlink" href="#page-pages-gsoc2019-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Das ist eine historische Information, die &#220;bersetzung macht keinen Sinn, wir wissen nicht, was wir damit anfangen sollen. Aber wenn Nuitka es noch einmal machen w&#252;rde, w&#252;rden wir es f&#252;r das n&#228;chste Mal idealerweise &#252;bersetzen.</p>
 </section>
 <section id="page-pages-impressum-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">pages/impressum.rst</span></code><a class="headerlink" href="#page-pages-impressum-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>This one is required by law in my country, translators might want to add
-their information here. I cannot take responsibility for the content of
-translations, as I cannot verify it in many cases.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">pages/impressum.rst</span></code><a class="headerlink" href="#page-pages-impressum-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Dies ist in meinem Land gesetzlich vorgeschrieben, &#220;bersetzer sollten hier ihre Informationen hinzuf&#252;gen. Ich kann keine Verantwortung f&#252;r den Inhalt der &#220;bersetzungen &#252;bernehmen, da ich ihn in vielen F&#228;llen nicht &#252;berpr&#252;fen kann.</p>
 </section>
 <section id="page-pages-presentations-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">pages/Presentations.rst</span></code><a class="headerlink" href="#page-pages-presentations-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>This one probably should get more love content wise. It&#8217;s under
-construction. I want to go over the blog and link all information from
-there. But if you are aware of material in your language, please go
-ahead and add it.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">pages/Presentations.rst</span></code><a class="headerlink" href="#page-pages-presentations-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Diesem sollte wahrscheinlich mehr Aufmerksamkeit geschenkt werden, was den Inhalt betrifft. Er befindet sich im Aufbau. Ich m&#246;chte den Blog &#252;berarbeiten und alle Informationen von dort verlinken. Aber wenn Sie Material in Ihrer Sprache kennen, f&#252;gen Sie es bitte hinzu.</p>
 </section>
 <section id="page-streaming-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">Streaming.rst</span></code><a class="headerlink" href="#page-streaming-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Since this about an English offer, not sure it makes sense, I will also
-update it in near future somewhat, but making clear it&#8217;s going to be an
-English content, I think it ought to be translated on a basic level at
-the beginning of the page, and then have untranslated content?</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">Streaming.rst</span></code><a class="headerlink" href="#page-streaming-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Da es sich um ein englisches Angebot handelt, bin ich mir nicht sicher, ob es Sinn macht, ich werde es in naher Zukunft auch etwas aktualisieren, aber um klarzustellen, dass es ein englischer Inhalt sein wird, denke ich, dass es auf einer grundlegenden Ebene am Anfang der Seite &#252;bersetzt werden sollte, der Rest nicht?</p>
 </section>
 <section id="page-doc-api-doc-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">doc/api-doc.rst</span></code><a class="headerlink" href="#page-doc-api-doc-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Translation makes no sense and cannot be done currently anyway. The API
-doc is going to be generated with Spinx, Doxygen docs are without love.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">doc/api-doc.rst</span></code><a class="headerlink" href="#page-doc-api-doc-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Eine &#220;bersetzung macht keinen Sinn und kann derzeit ohnehin nicht durchgef&#252;hrt werden. Die API-Dokumentation wird mit Sphinx erstellt, Doxygen-Dokumente sind lieblos.</p>
 </section>
 <section id="page-doc-commercial-rst-and-folder-commercial">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">doc/commercial.rst</span></code> and folder <code class="docutils literal notranslate"><span class="pre">commercial</span></code><a class="headerlink" href="#page-doc-commercial-rst-and-folder-commercial" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Translation is very welcome. There will be more content added over time.
-For payment options, please check out if they work for your country and
-if not, help me find alternatives. I was e.g. rejected for AliPay in
-China, but maybe other things can work. And Russia e.g. has no Paypal
-(which I mean to add as an alternative still).</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">doc/commercial.rst</span></code> und Ordner <code class="docutils literal notranslate"><span class="pre">commercial</span></code><a class="headerlink" href="#page-doc-commercial-rst-and-folder-commercial" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Die &#220;bersetzung ist sehr willkommen. Mit der Zeit werden weitere Inhalte hinzugef&#252;gt. Was die Zahlungsm&#246;glichkeiten angeht, so pr&#252;fen Sie bitte, ob sie in Ihrem Land funktionieren und wenn nicht, helfen Sie mir, Alternativen zu finden. Ich wurde z.B. f&#252;r AliPay in China abgelehnt, aber vielleicht funktionieren andere Dinge. Und Russland hat z.B. kein Paypal (was ich als Alternative noch hinzuf&#252;gen m&#246;chte).</p>
 </section>
 <section id="page-doc-factory-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">doc/factory.rst</span></code><a class="headerlink" href="#page-doc-factory-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Very useful to have it translated.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">doc/factory.rst</span></code><a class="headerlink" href="#page-doc-factory-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Es ist sehr n&#252;tzlich, es &#252;bersetzt zu haben.</p>
 </section>
 <section id="page-doc-welcome-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">doc/welcome.rst</span></code><a class="headerlink" href="#page-doc-welcome-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>This is just a playground for me, do not translate, unless we want to
-play around with translation mechanics. We will want to e.g. have an
-intelligent language switcher at some point, and could try it out there.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">doc/welcome.rst</span></code><a class="headerlink" href="#page-doc-welcome-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Das ist nur ein Spielplatz f&#252;r mich, nicht &#252;bersetzen, es sei denn, wir wollen mit &#220;bersetzungsmechanismen herumspielen. Wir werden z.B. irgendwann einen intelligenten Sprachwechsler haben wollen und k&#246;nnten ihn dort ausprobieren.</p>
 </section>
 <section id="page-doc-changelog-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">doc/Changelog.rst</span></code><a class="headerlink" href="#page-doc-changelog-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Do not translate, this is a bizarre amount of work.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">doc/Changelog.rst</span></code><a class="headerlink" href="#page-doc-changelog-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>&#220;bersetzen Sie nicht, das ist ein bizarrer Aufwand.</p>
 </section>
 <section id="page-download-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">download.rst</span></code><a class="headerlink" href="#page-download-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Very welcome, but beware that <code class="docutils literal notranslate"><span class="pre">download.rst.j2</span></code> is the real source.
-Tables are generated into the document, this is probably a harder case
-technically, so hold off until this is sorted out.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">download.rst</span></code><a class="headerlink" href="#page-download-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Sehr willkommen, aber Vorsicht, <code class="docutils literal notranslate"><span class="pre">download.rst.j2</span></code> ist die eigentliche Quelle. Tabellen werden in das Dokument generiert, dies ist wahrscheinlich ein technisch schwierigerer Fall, also warten Sie, bis dies gekl&#228;rt ist.</p>
 </section>
 <section id="page-developer-manual-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">developer-manual.rst</span></code><a class="headerlink" href="#page-developer-manual-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Makes no sense to translate. But potentially there is content that
-belongs to user manual in there or should be split off.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">developer-manual.rst</span></code><a class="headerlink" href="#page-developer-manual-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Es macht keinen Sinn, zu &#252;bersetzen. M&#246;glicherweise gibt es aber Inhalte, die in das Benutzerhandbuch geh&#246;ren oder abgetrennt werden sollten.</p>
 </section>
 <section id="page-roadmap-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">roadmap.rst</span></code><a class="headerlink" href="#page-roadmap-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>Much like changelog, not as much work, but also not as important.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">roadmap.rst</span></code><a class="headerlink" href="#page-roadmap-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>&#196;hnlich wie der Changelog, nicht so viel Arbeit, aber auch nicht so wichtig.</p>
 </section>
 <section id="page-doc-user-manual-rst">
-<h3>Page <code class="docutils literal notranslate"><span class="pre">doc/user-manual.rst</span></code><a class="headerlink" href="#page-doc-user-manual-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
-<p>This one is most important in my mind, optimization section needs a
-serious update from my side, maybe ignore that, until I get there.
-Review applies here very much. I think Tutorial parts might be factored
-out to separate documents.</p>
+<h3>Seite <code class="docutils literal notranslate"><span class="pre">doc/user-manual.rst</span></code><a class="headerlink" href="#page-doc-user-manual-rst" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<p>Das ist meiner Meinung nach das Wichtigste. Der Bereich Optimierung braucht ein ernsthaftes Update von meiner Seite, vielleicht ignoriere ich das, bis ich dazu komme. Review trifft hier sehr gut zu. Ich denke, dass die Tutorial-Teile in separate Dokumente ausgelagert werden k&#246;nnten.</p>
 </section>
 </section>
 <section id="how-to-translate">
-<h2>How to translate<a class="headerlink" href="#how-to-translate" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Wie wird &#252;bersetzt<a class="headerlink" href="#how-to-translate" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate the .pot files</span>
 <span class="nb">cd</span> intl
 make gettext
@@ -296,13 +241,10 @@ make gettext
 sphinx-intl update -p ../output/gettext -l your_language_code
 </pre></div>
 </div>
-<p>Under locales in the folder with the language code you will then have many .po files.
-In the .po file you can see <code class="docutils literal notranslate"><span class="pre">msgid</span></code> and below it <code class="docutils literal notranslate"><span class="pre">msgstr</span></code>.
-<code class="docutils literal notranslate"><span class="pre">msgid</span></code> contains the english original, in <code class="docutils literal notranslate"><span class="pre">msgstr</span></code> you can write the translation.
-If you then want to transfer your changes via PR, please commit <strong>only</strong> the files you have translated.</p>
+<p>Unter locales in dem Ordner mit dem Sprachk&#252;rzel sind viele .po Dateien. In der .po Datei kannst du <code class="docutils literal notranslate"><span class="pre">msgid</span></code> und darunter <code class="docutils literal notranslate"><span class="pre">msgstr</span></code> sehen. In <code class="docutils literal notranslate"><span class="pre">msgid</span></code> befindet sich das englische Original, in <code class="docutils literal notranslate"><span class="pre">msgstr</span></code> kannst du die &#220;bersetzung reinschreiben. Bitte committe <strong>nur</strong> die Dateien, die du &#252;bersetzt hast, wenn du deine &#196;nderungen per PR hochl&#228;dst.</p>
 </section>
 <section id="image-optimization">
-<h2>Image Optimization<a class="headerlink" href="#image-optimization" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Bild Optimierung<a class="headerlink" href="#image-optimization" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Optimize PNG files like this, normally not needed, this</span>
 <span class="c1"># is lossless.</span>
 sudo apt-get install optipng
@@ -384,8 +326,8 @@ find . -iname *.jpg -a -type f -exec jpegoptim <span class="o">{}</span> <span c
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/zh_CN/index.html">CN</a></div>
-                            <div class="line"><a class="reference external" href="/index.html">EN</a></div>
+                        <div><div class="line"><a class="reference external" href="/index.html">EN</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/index.html">CN</a></div>
                             </div></div>
                 </blockquote>
             </div>
