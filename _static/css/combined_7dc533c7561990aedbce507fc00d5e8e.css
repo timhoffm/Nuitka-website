@@ -171,7 +171,7 @@ html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}article,aside,det
 .socialbutton-wrapper a {
     text-decoration: none;
 }
-.share-button-container{
+.share-button-container {
     text-align: center;
     margin: 0 0;
     padding: 0 0;
@@ -192,9 +192,9 @@ html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}article,aside,det
 }
 @media screen and (max-width: 1000px) {
     .socialbutton {
-      display: none;
+        display: none;
     }
-  }
+}
 .socialbutton:hover {
     height: 70px;
     margin-bottom: 0;
@@ -241,7 +241,9 @@ html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}article,aside,det
         width: 85%;
         left: 0
     }
-    .wy-menu.wy-menu-vertical, .wy-side-nav-search, .wy-side-scroll {
+    .wy-menu.wy-menu-vertical,
+    .wy-side-nav-search,
+    .wy-side-scroll {
         width: auto
     }
     .wy-nav-content-wrap {

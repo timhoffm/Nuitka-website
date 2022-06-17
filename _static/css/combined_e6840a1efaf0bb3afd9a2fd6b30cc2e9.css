@@ -243,7 +243,7 @@ div.highlight  {
 .socialbutton-wrapper a {
     text-decoration: none;
 }
-.share-button-container{
+.share-button-container {
     text-align: center;
     margin: 0 0;
     padding: 0 0;
@@ -264,9 +264,9 @@ div.highlight  {
 }
 @media screen and (max-width: 1000px) {
     .socialbutton {
-      display: none;
+        display: none;
     }
-  }
+}
 .socialbutton:hover {
     height: 70px;
     margin-bottom: 0;
@@ -313,7 +313,9 @@ div.highlight  {
         width: 85%;
         left: 0
     }
-    .wy-menu.wy-menu-vertical, .wy-side-nav-search, .wy-side-scroll {
+    .wy-menu.wy-menu-vertical,
+    .wy-side-nav-search,
+    .wy-side-scroll {
         width: auto
     }
     .wy-nav-content-wrap {
