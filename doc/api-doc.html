@@ -492,7 +492,7 @@ from Anaconda.</p>
 <dt class="sig sig-object py" id="nuitka.Options.shallCreateCmdFileForExecution">
 <span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateCmdFileForExecution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateCmdFileForExecution" title="Permalink to this definition">&#61633;</a></dt>
 <dd><p><em>bool</em> = derived from Python installation and modes</p>
-<p>Notes: Most for accerated mode on Windows with uninstalled python, to
+<p>Notes: Mostly for accelerated mode on Windows with uninstalled python, to
 make sure they find their Python DLL.</p>
 </dd></dl>
 
@@ -676,6 +676,16 @@ make sure they find their Python DLL.</p>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.isAcceleratedMode">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isAcceleratedMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isAcceleratedMode" title="Permalink to this definition">&#61633;</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--standalone</span></code> and <cite>&#8211;module</cite></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1042,6 +1052,12 @@ options.</p>
 <dt class="sig sig-object py" id="nuitka.Options.getCompilationReportFilename">
 <span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getCompilationReportFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getCompilationReportFilename" title="Permalink to this definition">&#61633;</a></dt>
 <dd><p><em>str</em> filename to write XML report of compilation to</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getUserProvidedYamlFiles">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getUserProvidedYamlFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getUserProvidedYamlFiles" title="Permalink to this definition">&#61633;</a></dt>
+<dd><p><em>list</em> files with user provided Yaml files</p>
 </dd></dl>
 
 </section>
