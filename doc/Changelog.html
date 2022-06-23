@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuitka Release 0.9 (Draft) &#8212; Nuitka the Python Compiler  documentation</title>
+  <title>Nuitka Release 1.0 (Draft) &#8212; Nuitka the Python Compiler  documentation</title>
       <link rel="stylesheet" href="/_static/css/combined_e6840a1efaf0bb3afd9a2fd6b30cc2e9.css" type="text/css">
       <link rel="canonical" href="https://nuitka.net/doc/Changelog.html">
   <!--[if lt IE 9]>
@@ -88,7 +88,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Nuitka Release 0.9 (Draft)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#nuitka-release-0-9">Nuitka Release 0.9</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#new-features">New Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a></li>
@@ -108,17 +109,17 @@
 <li class="toctree-l2"><a class="reference internal" href="#id7">Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#nuitka-release-0-7">Nuitka Release 0.7</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id8">Bug Fixes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id9">New Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id10">Optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id11">Organisational</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id12">Cleanups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id13">Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id14">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#older-releases">Older Releases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nuitka-release-0-7">Nuitka Release 0.7</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#older-releases">Older Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#nuitka-release-0-6-19">Nuitka Release 0.6.19</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id15">Bug Fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id16">New Features</a></li>
@@ -1030,8 +1031,15 @@
           <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <section id="nuitka-release-0-9-draft">
-<h1>Nuitka Release 0.9 (Draft)<a class="headerlink" href="#nuitka-release-0-9-draft" title="Permalink to this headline">&#61633;</a></h1>
+              <section id="nuitka-release-1-0-draft">
+<h1>Nuitka Release 1.0 (Draft)<a class="headerlink" href="#nuitka-release-1-0-draft" title="Permalink to this headline">&#61633;</a></h1>
+<p>This release is not done yet.</p>
+</section>
+<section id="nuitka-release-0-9">
+<h1>Nuitka Release 0.9<a class="headerlink" href="#nuitka-release-0-9" title="Permalink to this headline">&#61633;</a></h1>
+<p>This release has a many optimization improvements, and scalability
+improvements, while also adding new features, with also some important
+bug fixes.</p>
 <section id="bug-fixes">
 <h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
 <ul>
@@ -1074,6 +1082,24 @@ restarting itself, could be used to execute arbitrary code at compile
 time.</p></li>
 <li><p>Anaconda: Fix, the torch plugin was not working on Linux due to
 missing DLL dependencies.</p></li>
+<li><p>Fix, static optimization of <code class="docutils literal notranslate"><span class="pre">importlib.import_module</span></code> with a
+package given, for an absolute import was optimized into the wrong
+import, package was not ignored as it should be.</p></li>
+<li><p>Windows: Installed Python scan could crash on trying installation
+paths from registry that were manually removed in the mean time, but
+not through an uninstaller.</p></li>
+<li><p>Standalone: Added missing implicit dependency for <code class="docutils literal notranslate"><span class="pre">pyreadstat</span></code>
+because parts of standard library it uses are no more automatically
+included.</p></li>
+<li><p>Windows: Could still crash when no <code class="docutils literal notranslate"><span class="pre">powershell</span></code> is available with
+symlinks, handle this more gracefully.</p></li>
+<li><p>Standalone: Added more missing Plotly dependencies, but more work
+will be needed to complete this.</p></li>
+<li><p>Standalone: Add missing stdlib dependency on <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> by
+<code class="docutils literal notranslate"><span class="pre">concurrent.futures.process</span></code>.</p></li>
+<li><p>Standalone: Fix, implicit dependencies assigned to <code class="docutils literal notranslate"><span class="pre">imageio</span></code> on PIL
+plugins should actually be assigned to <code class="docutils literal notranslate"><span class="pre">PIL.Image</span></code> that actually
+loads them, so it works outside of <code class="docutils literal notranslate"><span class="pre">imageio</span></code> too.</p></li>
 </ul>
 </section>
 <section id="new-features">
@@ -1085,8 +1111,6 @@ mechanism to add hidden dependencies, anti-bloat, or data files, for
 packages. This will be useful for developing PRs to the standard file
 of Nuitka. Currently the schema is available, but it is not
 documented very well yet, so not really ready for end users just yet.</p></li>
-<li><p>macOS: Signing now optionally uses hardened runtime as require for
-notarization (not complete yet.)</p></li>
 <li><p>Standalone: Added new <code class="docutils literal notranslate"><span class="pre">no-qt</span></code> plugin as an easy way to prevent all
 of the Qt bindings from being included in a compilation.</p></li>
 <li><p>Include module search path in compilation report.</p></li>
@@ -1105,8 +1129,8 @@ module presence influences optimization.</p></li>
 <li><p>Faster dictionary iteration with our own replacement for
 <code class="docutils literal notranslate"><span class="pre">PyDict_Next</span></code> that avoids the DLL call overhead (in case of
 non-static libpython) and does less unnecessary checks.</p></li>
-<li><p>Added optimization for <code class="docutils literal notranslate"><span class="pre">str.count</span></code> methods as well, this should
-help in some cases with compile time optimization.</p></li>
+<li><p>Added optimization for <code class="docutils literal notranslate"><span class="pre">str.count</span></code> and <code class="docutils literal notranslate"><span class="pre">str.format</span></code> methods as
+well, this should help in some cases with compile time optimization.</p></li>
 <li><p>The node for <code class="docutils literal notranslate"><span class="pre">dict.update</span></code> with only an iterable argument, but no
 keyword arguments, was in fact unused due to wrongly generated code.
 Also the form with no arguments wasn&#8217;t yet handled properly.</p></li>
@@ -1135,6 +1159,8 @@ optimization to resolve their argument values where possible.</p></li>
 Sometimes we can tell that <code class="docutils literal notranslate"><span class="pre">__del__</span></code> will not execute outside code
 ever, so this then avoids marking values as escaped, and taking the
 time to do so.</p></li>
+<li><p>Calls of methods through variables on <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">bytes</span></code>
+that have dedicated nodes are now also optimized through variables.</p></li>
 <li><p>Boolean tests through variables now also are optimized when the
 original assignment is a compile time constant that is not mutable.
 This is only basic, but will allow tests on <code class="docutils literal notranslate"><span class="pre">TYPE_CHECKING</span></code> coming
@@ -1158,6 +1184,11 @@ more cases.</p></li>
 <li><p>Continued spelling improvements, renaming identifiers used in the
 source that the cspell based extension doesn&#8217;t like. This aims at
 producing more readable and searchable code.</p></li>
+<li><p>Generated attribute nodes no longer do local imports of the operation
+nodes they refer to. This also avoids compile time penalties during
+optimization that are not necessary.</p></li>
+<li><p>Windows: Avoid useless bytecode of inline copy used by Python3 when
+installing for Python2, this spams just a lot of errors.</p></li>
 </ul>
 </section>
 <section id="organisational">
@@ -1174,10 +1205,12 @@ misnamed. The schema is in no way final and will see improvements in
 future releases.</p></li>
 <li><p>UI: Nicer progress bar layout that avoids flicker when optimizing
 modules.</p></li>
+<li><p>UI: When linking, output the total number of object files used, to
+have that knowledge after the progress bar for C compilation is gone.</p></li>
 <li><p>Quality: Auto-format the package configuration Yaml file for
 anti-bloat, implicit dependencies, etc.</p></li>
 <li><p>GitHub: Point out the commit hook in the PR template.</p></li>
-<li><p>UI: Nicer output in case of no commercial version is used</p></li>
+<li><p>UI: Nicer output in case of no commercial version is used.</p></li>
 <li><p>Updated the MinGW64 winlibs download used on Windows to the latest
 version based on gcc 11, the gcc 12 is not yet ready.</p></li>
 <li><p>Git: Make sure we are not affected by <code class="docutils literal notranslate"><span class="pre">core.autocrlf</span></code> setting, as
@@ -1189,11 +1222,27 @@ was only used by beginners, for which it was not intended.</p></li>
 precise command.</p></li>
 <li><p>UI: Warn about using Debian package contents. These can be
 non-portable to other OSes.</p></li>
+<li><p>Quality: The auto-format now floats imports to the top for
+consistency. With few exceptions, it was already done like this. But
+it makes things easier for generated code.</p></li>
 </ul>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
-<p>This release is not done yet.</p>
+<p>This release marks a point, that will allow us to open up the
+compatibility work for implicit dependencies and anti-bloat stuff even
+further. The Yaml format will need documentation and potentially more
+refinement, but will open up a future, where latest packages can be
+supported with just updating this configuration.</p>
+<p>The scalability improvements really make a difference for many libraries
+and are a welcome improvement on both memory usage and compile time.
+They are achieved by an accord of static optimization of</p>
+<p>One optimization aimed at optimizing tuple unpacking, was not finished
+in time for this release, but will be subject of a future release. It
+has driven many other improvements though.</p>
+<p>Generally, also from the UI, this is a huge step forward. With links to
+the website for complex topics being started, and the progress bar
+flicker being removed, the tool has yet again become more user friendly.</p>
 </section>
 </section>
 <section id="nuitka-release-0-8">
@@ -1507,13 +1556,16 @@ for <code class="docutils literal notranslate"><span class="pre">anti-bloat</spa
 more lean, but scalability is still an issue.</p>
 </section>
 </section>
+<section id="older-releases">
+<h1>Older Releases<a class="headerlink" href="#older-releases" title="Permalink to this headline">&#61633;</a></h1>
+<p>These are older releases of Nuitka.</p>
 <section id="nuitka-release-0-7">
-<h1>Nuitka Release 0.7<a class="headerlink" href="#nuitka-release-0-7" title="Permalink to this headline">&#61633;</a></h1>
+<h2>Nuitka Release 0.7<a class="headerlink" href="#nuitka-release-0-7" title="Permalink to this headline">&#61633;</a></h2>
 <p>This release is massively improving macOS support, esp. for M1 and the
 latest OS releases, but it also has massive improvements for usability
 and bug fixes in all areas.</p>
 <section id="id8">
-<h2>Bug Fixes<a class="headerlink" href="#id8" title="Permalink to this headline">&#61633;</a></h2>
+<h3>Bug Fixes<a class="headerlink" href="#id8" title="Permalink to this headline">&#61633;</a></h3>
 <ul class="simple">
 <li><p>Fix, <code class="docutils literal notranslate"><span class="pre">set</span></code> creation wasn&#8217;t annotating its possible exception exit
 from hashing values and is not as free of side effects as <code class="docutils literal notranslate"><span class="pre">list</span></code>
@@ -1592,7 +1644,7 @@ recognized automatically.</p></li>
 </ul>
 </section>
 <section id="id9">
-<h2>New Features<a class="headerlink" href="#id9" title="Permalink to this headline">&#61633;</a></h2>
+<h3>New Features<a class="headerlink" href="#id9" title="Permalink to this headline">&#61633;</a></h3>
 <ul>
 <li><p>We now disallow options that take arguments to be provided without
 using <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p></li>
@@ -1655,7 +1707,7 @@ be expected to never be an implicit dependency of anything, e.g.
 </ul>
 </section>
 <section id="id10">
-<h2>Optimization<a class="headerlink" href="#id10" title="Permalink to this headline">&#61633;</a></h2>
+<h3>Optimization<a class="headerlink" href="#id10" title="Permalink to this headline">&#61633;</a></h3>
 <ul class="simple">
 <li><p>Standalone: Do not include <code class="docutils literal notranslate"><span class="pre">encodings.bz2_codec</span></code> and
 <code class="docutils literal notranslate"><span class="pre">encodings.idna</span></code> anymore, these are not file system encodings, but
@@ -1693,7 +1745,7 @@ being included than necessary.</p></li>
 </ul>
 </section>
 <section id="id11">
-<h2>Organisational<a class="headerlink" href="#id11" title="Permalink to this headline">&#61633;</a></h2>
+<h3>Organisational<a class="headerlink" href="#id11" title="Permalink to this headline">&#61633;</a></h3>
 <ul>
 <li><p>There is now a <a class="reference external" href="https://discord.gg/nZ9hr9tUck" target="_blank">Discord server for Nuitka community</a> where you can hang out with the
 developers and ask questions. It is mirrored with the Gitter
@@ -1769,7 +1821,7 @@ actively during run-time, the tool will not be affected by that.</p></li>
 </ul>
 </section>
 <section id="id12">
-<h2>Cleanups<a class="headerlink" href="#id12" title="Permalink to this headline">&#61633;</a></h2>
+<h3>Cleanups<a class="headerlink" href="#id12" title="Permalink to this headline">&#61633;</a></h3>
 <ul class="simple">
 <li><p>Refactored Python scan previously used for Scons usage on versions
 that need to run in with another Python to be more generally usable.</p></li>
@@ -1794,7 +1846,7 @@ of DLLs during their copying.</p></li>
 </ul>
 </section>
 <section id="id13">
-<h2>Tests<a class="headerlink" href="#id13" title="Permalink to this headline">&#61633;</a></h2>
+<h3>Tests<a class="headerlink" href="#id13" title="Permalink to this headline">&#61633;</a></h3>
 <ul class="simple">
 <li><p>Better matching of relative filenames for search modes of the
 individual test suite runners.</p></li>
@@ -1803,7 +1855,7 @@ restored.</p></li>
 </ul>
 </section>
 <section id="id14">
-<h2>Summary<a class="headerlink" href="#id14" title="Permalink to this headline">&#61633;</a></h2>
+<h3>Summary<a class="headerlink" href="#id14" title="Permalink to this headline">&#61633;</a></h3>
 <p>This release is tremendous progress for macOS. Finally biting the bullet
 and paying obscene amounts of money to rent an M1 machine, it was
 possible to enhance the support for this platform. Currently typical
@@ -1820,9 +1872,6 @@ that now standalone distributions are often very minimal, with many
 extension modules from standard library no longer being present.</p>
 </section>
 </section>
-<section id="older-releases">
-<h1>Older Releases<a class="headerlink" href="#older-releases" title="Permalink to this headline">&#61633;</a></h1>
-<p>These are older releases of Nuitka.</p>
 <section id="nuitka-release-0-6-19">
 <h2>Nuitka Release 0.6.19<a class="headerlink" href="#nuitka-release-0-6-19" title="Permalink to this headline">&#61633;</a></h2>
 <p>This release adds support for 3.10 while also adding very many new
