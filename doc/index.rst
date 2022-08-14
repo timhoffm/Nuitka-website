@@ -48,6 +48,7 @@ here </pages/download.html>`_.
    :caption: Commercial Users
 
    doc/commercial
+   doc/bundles
 
 .. toctree::
    :hidden:
