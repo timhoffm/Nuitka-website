@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged quiz</title>
-  <updated>2022-06-25T16:25:55.840896+00:00</updated>
+  <updated>2022-08-16T07:21:58.653205+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/quiz/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/python-scope-quiz.html</id>
     <title>Quiz Question</title>
@@ -51,8 +51,8 @@ body work.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/python-scope-quiz.html" rel="alternate"/>
     <summary>Say you have the following module code:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="quiz" label="quiz"/>
     <published>2010-09-12T16:01:00+00:00</published>
   </entry>
@@ -91,8 +91,8 @@ type that breaks fundamental assumptions like “x == x”.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/python-float-quiz.html" rel="alternate"/>
     <summary>Say you have the following code:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="quiz" label="quiz"/>
     <published>2011-01-02T13:37:00+00:00</published>
   </entry>
@@ -202,8 +202,8 @@ and other things.&lt;/p&gt;
 re-formulations of Python into simpler Python. It is my intention to
 turn this into a series of Python quiz questions that you will hopefully
 enjoy.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="quiz" label="quiz"/>
     <published>2012-07-15T17:07:00+00:00</published>
   </entry>

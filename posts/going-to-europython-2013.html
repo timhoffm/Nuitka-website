@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="going-to-europython-2013">
-<h1><a class="toc-backref" href="#id1">Going to Europython 2013</a><a class="headerlink" href="#going-to-europython-2013" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id1">Going to Europython 2013</a><a class="headerlink" href="#going-to-europython-2013" title="Permalink to this heading">&#61633;</a></h1>
 <p>I am going to the wonderful city of Florence, and <a class="reference external" href="https://ep2013.europython.eu/" target="_blank">Europython 2013</a> and make a presentation there. This
 time, I am not introducing Nuitka anymore, I did that in 2012, this
 time, I will try and dive into static optimization and try to convey the
@@ -171,9 +172,9 @@ message why I believe it is possible.</p>
 </ul>
 </div>
 <section id="things-to-talk-about">
-<h2><a class="toc-backref" href="#id2">Things to talk about</a><a class="headerlink" href="#things-to-talk-about" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id2">Things to talk about</a><a class="headerlink" href="#things-to-talk-about" title="Permalink to this heading">&#61633;</a></h2>
 <section id="status">
-<h3><a class="toc-backref" href="#id3">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id3">Status</a><a class="headerlink" href="#status" title="Permalink to this heading">&#61633;</a></h3>
 <p>Only briefly this time, since I will be able to say that all current
 Python versions are fully supported (<a class="reference external" href="nuitka-needs-you-a-call-for-help.html">surely if you help me with
 Python3.3 yield from</a>), all
@@ -201,9 +202,9 @@ will support it, likely before the conference.</p>
 Kind of worked on this nearby.</p>
 </section>
 <section id="last-years-questions">
-<h3><a class="toc-backref" href="#id4">Last years questions</a><a class="headerlink" href="#last-years-questions" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id4">Last years questions</a><a class="headerlink" href="#last-years-questions" title="Permalink to this heading">&#61633;</a></h3>
 <section id="builtins">
-<h4><a class="toc-backref" href="#id5">Builtins</a><a class="headerlink" href="#builtins" title="Permalink to this headline">&#61633;</a></h4>
+<h4><a class="toc-backref" href="#id5">Builtins</a><a class="headerlink" href="#builtins" title="Permalink to this heading">&#61633;</a></h4>
 <p>For instance, writing to built-ins, what will/did happen.</p>
 <p>Changing builtins can be done in two ways. One is to set the value on
 the module level, which is something that has always worked. The other
@@ -226,7 +227,7 @@ and the optimization of it, that will be interesting to cover.</p>
 </div>
 </section>
 <section id="debugger-pdb">
-<h4><a class="toc-backref" href="#id6">Debugger - pdb</a><a class="headerlink" href="#debugger-pdb" title="Permalink to this headline">&#61633;</a></h4>
+<h4><a class="toc-backref" href="#id6">Debugger - pdb</a><a class="headerlink" href="#debugger-pdb" title="Permalink to this heading">&#61633;</a></h4>
 <p>The compiled binaries work the same as the normal Python code. So you
 will be able to simply use <code class="docutils literal notranslate"><span class="pre">pdb</span></code> on it instead.</p>
 <p>Interacting with <code class="docutils literal notranslate"><span class="pre">pdb</span></code> is not <em>totally</em> out of reach, but kind of
@@ -234,7 +235,7 @@ pointless mostly, unless you need to attach to long running operational
 programs. For now that use case is not supported though.</p>
 </section>
 <section id="threading">
-<h4><a class="toc-backref" href="#id7">Threading</a><a class="headerlink" href="#threading" title="Permalink to this headline">&#61633;</a></h4>
+<h4><a class="toc-backref" href="#id7">Threading</a><a class="headerlink" href="#threading" title="Permalink to this heading">&#61633;</a></h4>
 <p>I learned a whole lot about threading. Also thanks to the kind people of
 Stackless Python, who explained things to me. I am still amazed at how
 little I did know of these things, and still went so far. In my
@@ -246,7 +247,7 @@ than anything.</p>
 </section>
 </section>
 <section id="c-to-python-gaps">
-<h3><a class="toc-backref" href="#id8">C++ to Python gaps</a><a class="headerlink" href="#c-to-python-gaps" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id8">C++ to Python gaps</a><a class="headerlink" href="#c-to-python-gaps" title="Permalink to this heading">&#61633;</a></h3>
 <p>I consider all of these more or less solved.</p>
 <p>Well maybe except recently arose issues with MSVC for &#8220;function calls&#8221;.
 It appears that compiler highlights a weakness in one of my approaches.
@@ -257,7 +258,7 @@ sees fit. The fix for it, is now totally different and should be highly
 portable and even compliant to C++.</p>
 </section>
 <section id="performance">
-<h3><a class="toc-backref" href="#id9">Performance</a><a class="headerlink" href="#performance" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id9">Performance</a><a class="headerlink" href="#performance" title="Permalink to this heading">&#61633;</a></h3>
 <p>There are still slow exceptions. I would like to avoid raising C++
 exceptions in the future, because they are so slow (Python exceptions
 are much faster).</p>
@@ -275,7 +276,7 @@ most useful comparison in my eyes, as where Shedskin makes static type
 analysis, Nuitka also should do it, only hampered by guards at maximum.</p>
 </section>
 <section id="demos">
-<h3><a class="toc-backref" href="#id10">Demos</a><a class="headerlink" href="#demos" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id10">Demos</a><a class="headerlink" href="#demos" title="Permalink to this heading">&#61633;</a></h3>
 <p>The talk with start out with demonstration of Nuitka, something simple
 first, and then Mercurial as a more complex example, and then its test
 suite.</p>
@@ -286,11 +287,11 @@ instead of having a demo only at the end.</p>
 <code class="docutils literal notranslate"><span class="pre">recordmydesktop</span></code> so I can publish them separately too.</p>
 </section>
 <section id="future-work">
-<h3><a class="toc-backref" href="#id11">Future Work</a><a class="headerlink" href="#future-work" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id11">Future Work</a><a class="headerlink" href="#future-work" title="Permalink to this heading">&#61633;</a></h3>
 <p>Generally the talk will be more directed at the future, although this is
 kind of a dark area now. That&#8217;s its nature I guess.</p>
 <section id="ssa">
-<h4><a class="toc-backref" href="#id12">SSA</a><a class="headerlink" href="#ssa" title="Permalink to this headline">&#61633;</a></h4>
+<h4><a class="toc-backref" href="#id12">SSA</a><a class="headerlink" href="#ssa" title="Permalink to this heading">&#61633;</a></h4>
 <p>The talk will also be largely built SSA (static single assignment) and
 how it applies to Python. What everybody means, when they say &#8220;Python is
 too dynamic (to be statically compiled)&#8221; is that Python values may
@@ -302,7 +303,7 @@ possible. I will talk about how to decide, which branches we shall have
 and which not.</p>
 </section>
 <section id="compiled-modules">
-<h4><a class="toc-backref" href="#id13">Compiled Modules</a><a class="headerlink" href="#compiled-modules" title="Permalink to this headline">&#61633;</a></h4>
+<h4><a class="toc-backref" href="#id13">Compiled Modules</a><a class="headerlink" href="#compiled-modules" title="Permalink to this heading">&#61633;</a></h4>
 <p>And I believe with &#8220;compiled modules&#8221; potentially already in place, we
 can achieve very cheap guards in most cases. I can at least explain, why
 guards can be relatively cheap, where we need them.</p>
@@ -313,7 +314,7 @@ safe module variabls, are very tempting to have, and definitely make a
 difference for the Nuitka design.</p>
 </section>
 <section id="compiled-locals">
-<h4><a class="toc-backref" href="#id14">Compiled Locals</a><a class="headerlink" href="#compiled-locals" title="Permalink to this headline">&#61633;</a></h4>
+<h4><a class="toc-backref" href="#id14">Compiled Locals</a><a class="headerlink" href="#compiled-locals" title="Permalink to this heading">&#61633;</a></h4>
 <p>Who knows, we might even have a &#8220;compiled locals&#8221; as well, which as a
 side effect, also allows total interactivity with the most absurd codes.
 So far, each local variable is a C++ object, and as this is compiled,
@@ -323,7 +324,7 @@ it could try and interact with these when control escapes to code that
 we don&#8217;t know if it might use it.</p>
 </section>
 <section id="whole-program-analysis">
-<h4><a class="toc-backref" href="#id15">Whole Program Analysis</a><a class="headerlink" href="#whole-program-analysis" title="Permalink to this headline">&#61633;</a></h4>
+<h4><a class="toc-backref" href="#id15">Whole Program Analysis</a><a class="headerlink" href="#whole-program-analysis" title="Permalink to this heading">&#61633;</a></h4>
 <p>Big words. Can Nuitka avoid module objects entirely. Can it inline
 functions, specialize them according to the only types used (think
 including <code class="docutils literal notranslate"><span class="pre">os.path.dirname</span></code> in the binary, but with the constraint
@@ -333,7 +334,7 @@ program is known to use it any different.</p>
 </section>
 </section>
 <section id="perspective">
-<h2><a class="toc-backref" href="#id16">Perspective</a><a class="headerlink" href="#perspective" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id16">Perspective</a><a class="headerlink" href="#perspective" title="Permalink to this heading">&#61633;</a></h2>
 <p>Last time, I spent a lot of time on justification, &#8220;why a new project?&#8221;,
 &#8220;why not work with the others?&#8221;, what goals do I have that others do
 not. Giving examples of how code generation works. Generally to give
@@ -341,7 +342,7 @@ people an idea of the project.</p>
 <p>With this out of the way, I can now focus on inclusion, and success.</p>
 </section>
 <section id="funding">
-<h2><a class="toc-backref" href="#id17">Funding</a><a class="headerlink" href="#funding" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id17">Funding</a><a class="headerlink" href="#funding" title="Permalink to this heading">&#61633;</a></h2>
 <p>And, well yes, this time I may not have to pay for it all by myself.
 Last time I spent close to 1000 Euros for the trip (ticket to enter,
 hotel, flight, food), because I am <a class="reference external" href="/pages/donations.html">accepting donations</a> for this specific reason.</p>
@@ -353,7 +354,7 @@ they just consider it too important for me to loose interest. That kind
 of feels unlikely though. Too much fun.</p>
 </section>
 <section id="final-picture">
-<h2><a class="toc-backref" href="#id18">Final Picture</a><a class="headerlink" href="#final-picture" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id18">Final Picture</a><a class="headerlink" href="#final-picture" title="Permalink to this heading">&#61633;</a></h2>
 <p>And lets have an image I made during Europython 2012 in the city of
 Florence. It shows what a vibrant place this town is.</p>
 <img alt="../_images/europython-2012-07-img6319.jpg" src="../_images/europython-2012-07-img6319.jpg">
@@ -362,7 +363,7 @@ conference, but the whole city is very open minded and helpful. It was
 very easy to get adopted by strangers to their party.</p>
 </section>
 <section id="final-words">
-<h2><a class="toc-backref" href="#id19">Final Words</a><a class="headerlink" href="#final-words" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id19">Final Words</a><a class="headerlink" href="#final-words" title="Permalink to this heading">&#61633;</a></h2>
 <p>I am looking forward to meeting the friends I made there last time, and
 new friends. I kind of a great time there last time, one of these &#8220;times
 of my life&#8221;. Even if the reception was not always as warm as I had
@@ -455,8 +456,8 @@ experiences.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/going-to-europython-2013.html">CN</a></div>
-                            <div class="line"><a class="reference external" href="/de_DE/posts/going-to-europython-2013.html">DE</a></div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/going-to-europython-2013.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/going-to-europython-2013.html">CN</a></div>
                             </div></div>
                 </blockquote>
             </div>

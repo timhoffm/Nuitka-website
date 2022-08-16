@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged git</title>
-  <updated>2022-06-25T16:25:55.670148+00:00</updated>
+  <updated>2022-08-16T07:21:58.481102+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/git/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/new-git-repository-to-sync-with-nuitka-releases.html</id>
     <title>New git repository to sync with Nuitka releases</title>
@@ -43,8 +43,8 @@ real thing, and drop me a line about it, just so I know.&lt;/p&gt;
     <link href="https://nuitka.net/posts/new-git-repository-to-sync-with-nuitka-releases.html" rel="alternate"/>
     <summary>For you git fans out there I have just added a new method to download
 Nuitka from something I call the release git repository:</summary>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="git" label="git"/>
     <published>2010-08-26T23:06:00+00:00</published>
   </entry>
   <entry>
@@ -126,10 +126,10 @@ version here&lt;/a&gt; to get it.&lt;/p&gt;
     <summary>This pre-release of Nuitka has a focus on re-organizing the Nuitka
 generated source code. Please see the page “What is Nuitka?” for clarification of what it is now and what it
 wants to be.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
+    <category term="git" label="git"/>
     <published>2010-12-06T23:27:00+00:00</published>
   </entry>
   <entry>
@@ -211,9 +211,9 @@ whatever.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-has-a-new-home---nuitkanet.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="git" label="git"/>
     <published>2011-08-16T18:21:00+00:00</published>
   </entry>
   <entry>
@@ -304,9 +304,9 @@ may not be all that perfect yet.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-git-flow.html" rel="alternate"/>
     <summary>Hello there,</summary>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="git" label="git"/>
     <published>2011-10-01T08:37:00+00:00</published>
   </entry>
   <entry>
@@ -338,10 +338,10 @@ done.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka---pycon-de-video.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
+    <category term="git" label="git"/>
     <category term="presentation" label="presentation"/>
     <category term="video" label="video"/>
     <published>2011-10-22T06:39:00+00:00</published>
@@ -400,8 +400,8 @@ accounts on all those “social” platforms, that deal with code. So far I
 had resisted their terms (you pay us when we get sued), but I have given
 up on that stance, it’s likely irrelevant, as Nuitka won’t get sued, and
 if it is, those are not the issues.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="git" label="git"/>
     <published>2013-04-26T07:17:16+00:00</published>
   </entry>

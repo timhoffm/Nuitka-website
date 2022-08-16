@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-5-26">
-<h1>Nuitka Release 0.5.26<a class="headerlink" href="#nuitka-release-0-5-26" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.5.26<a class="headerlink" href="#nuitka-release-0-5-26" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release comes after a long time and contains large amounts of
@@ -139,7 +140,7 @@ changes in all areas. The driving goal was to prepare generating C
 specific code, which is still not the case, but this is very likely
 going to change soon. However this release improves all aspects.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Compatibility: Fix, for star imports didn&#8217;t check the values from the
 <code class="docutils literal notranslate"><span class="pre">__all__</span></code> iterable, if they were string values which could cause
@@ -189,7 +190,7 @@ overcome a potential Python3 virtualenv in which Nuitka is running.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Support for Python 3.6 with only few corner cases not supported yet.</p></li>
 <li><p>Added options <code class="docutils literal notranslate"><span class="pre">--python-arch</span></code> to pick 32 or 64 bits Python target
@@ -200,7 +201,7 @@ accelerated mode, except on Windows.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>The node tree children are no longer stored in a separate dictionary,
 but in the instance dictionary as attributes, making the tree more
@@ -249,7 +250,7 @@ it less memory intensive and faster.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Now always uses the <code class="docutils literal notranslate"><span class="pre">__import__</span></code> built-in node for all kinds of
 imports and directly optimizes and recursion into other modules based
@@ -302,7 +303,7 @@ everything in one single function call.</p></li>
 </ul>
 </section>
 <section id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>More robust deletion of directories, temporary stages used by CPython
 test suites, and standalone directories during test execution.</p></li>
@@ -314,7 +315,7 @@ the Python binary (some site.py files do that),</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added repository for Ubuntu Zesty (17.04) for download.</p></li>
 <li><p>Added support for testing with Travis to complement the internal
@@ -327,7 +328,7 @@ for both bit sizes still.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>This release marks huge progress. The node tree is now absolutely clean,
 the variable closure taking is fully represented, and code generation is
 prepared to add another type, e.g. for <code class="docutils literal notranslate"><span class="pre">bool</span></code> for which work has

@@ -2,27 +2,27 @@
 <html class="writer-html5" lang="de-DE">
 <head>
   <meta charset="utf-8"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
-    <link rel="icon" href="_static/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="_static/favicon.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="_static/favicon.ico" sizes="32x32" type="image/x-icon">
-    <link rel="icon" href="_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
-    <link rel="icon" href="_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
-    <link rel="icon" href="_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
-    <link rel="icon" href="_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
-    <link rel="apple-touch-icon" href="_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fabrikanweisungen &#8212; Nuitka the Python Compiler  Dokumentation</title>
       <link rel="stylesheet" href="/_static/css/combined_2bd3294a7fc38a7b928624963c1d901b.css" type="text/css">
-      <link rel="canonical" href="https://nuitka.net/factory.html">
+      <link rel="canonical" href="https://nuitka.net/doc/factory.html">
   <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
+    <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script>var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: './',
+    URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,13 +33,14 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
-        <script src="_static/clipboard.min.js" async=""></script>
-        <script src="_static/copybutton.js" async=""></script>
-        <link rel="index" title="Stichwortverzeichnis" href="genindex.html">
-    <link rel="next" title="Nuitka Blog" href="blog.html">
-    <link rel="prev" title="Nuitka Developer Manual" href="developer-manual.html">   
-<link rel="alternate" type="application/atom+xml" href="blog/atom.xml" title="Nuitka Blog">
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
+        <script src="../_static/clipboard.min.js" async=""></script>
+        <script src="../_static/copybutton.js" async=""></script>
+        <link rel="index" title="Stichwortverzeichnis" href="../genindex.html">
+    <link rel="next" title="Seiten" href="../pages/index.html">
+    <link rel="prev" title="Nuitka Commercial" href="commercial.html">   
+<link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
 <style type="text/css">
   ul.ablog-archive {
@@ -73,29 +74,26 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
-            <a href="index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <div class="logo_container"><img src="_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <div class="logo_container"><img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo" width="208" height="209">
           </div></a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="doc/index.html">Schnellstart</a></li>
-<li class="toctree-l1"><a class="reference internal fa fa-shopping-cart" href="commercial.html">&amp;nbsp;Nuitka Commercial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pages/index.html">Seiten</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="more.html">More documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="developer-manual.html">Developer Manual</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Fabrikanweisungen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#factory-rationale">F&#252;r was ist die Fabrik</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-to-get-factory">Wie bekommt man <code class="docutils literal notranslate"><span class="pre">factory</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#git">git</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pip">pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Schnellstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fabrikanweisungen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#factory-rationale">F&#252;r was ist die Fabrik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-get-factory">Wie bekommt man <code class="docutils literal notranslate"><span class="pre">factory</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#git">git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pip">pip</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#word-of-warning">Wort der Warnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#word-of-warning">Wort der Warnung</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="blog.html">Nuitka Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/index.html">Seiten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more.html">More documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog.html">Nuitka Blog</a></li>
 </ul>
 
         </div>
@@ -104,7 +102,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Nuitka the Python Compiler</a>
+          <a href="../index.html">Nuitka the Python Compiler</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -113,30 +111,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="factory-instructions">
-<h1>Fabrikanweisungen<a class="headerlink" href="#factory-instructions" title="Link zu dieser &#220;berschrift">&#61633;</a></h1>
+<h1>Fabrikanweisungen<a class="headerlink" href="#factory-instructions" title="Permalink to this heading">&#61633;</a></h1>
 <section id="factory-rationale">
-<h2>F&#252;r was ist die Fabrik<a class="headerlink" href="#factory-rationale" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>F&#252;r was ist die Fabrik<a class="headerlink" href="#factory-rationale" title="Permalink to this heading">&#61633;</a></h2>
 <p>Die <code class="docutils literal notranslate"><span class="pre">master</span></code> und <code class="docutils literal notranslate"><span class="pre">develop</span></code> Zweige sollte jederzeit funktionieren. F&#252;r Experimente die Probleme hervorrufen k&#246;nnten, wie zum Beispiel neue Features ist der <code class="docutils literal notranslate"><span class="pre">factory</span></code> Zweig geeignet.</p>
 <p>Du bist warscheinlich hier, weil eine &#196;nderung f&#252;r sie vorgenommen wurde.</p>
 </section>
 <section id="how-to-get-factory">
-<h2>Wie bekommt man <code class="docutils literal notranslate"><span class="pre">factory</span></code><a class="headerlink" href="#how-to-get-factory" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Wie bekommt man <code class="docutils literal notranslate"><span class="pre">factory</span></code><a class="headerlink" href="#how-to-get-factory" title="Permalink to this heading">&#61633;</a></h2>
 <p><a class="reference external" href="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml?query=branch%3Afactory" target="_blank"><img alt="Factory Status" src="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml/badge.svg?branch=factory"></a></p>
 <section id="git">
-<h3>git<a class="headerlink" href="#git" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>git<a class="headerlink" href="#git" title="Permalink to this heading">&#61633;</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone --branch factory https://github.com/Nuitka/Nuitka.git
 </pre></div>
 </div>
 </section>
 <section id="pip">
-<h3>pip<a class="headerlink" href="#pip" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>pip<a class="headerlink" href="#pip" title="Permalink to this heading">&#61633;</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U --force-reinstall <span class="s2">"https://github.com/Nuitka/Nuitka/archive/factory.zip"</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="word-of-warning">
-<h2>Wort der Warnung<a class="headerlink" href="#word-of-warning" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Wort der Warnung<a class="headerlink" href="#word-of-warning" title="Permalink to this heading">&#61633;</a></h2>
 <p>Dieser Zweig kann alle Arten von dummen Fehlern enthalten. Zum Beispiel ist es m&#246;glich, dass Nuitka nicht mit allen Python Versionen funktioniert, crasht, oder &#252;berhaupt nicht funktioniert. Hier werden auch &#196;nderungen ohne Hinweise vorgenommen. Sie sollten ihn nur benutzen wenn sie ihn wirklich ben&#246;tigen.</p>
 <p>Wenn die &#196;nderungen f&#252;r gut befunden werden, werden sie relativ schnell in den <code class="docutils literal notranslate"><span class="pre">develop</span></code> Zweig &#252;bernommen. Bei einem Fix sollten sie warten bis er dort verf&#252;gbar ist.</p>
 </section>
@@ -160,7 +158,7 @@
 <div class="share-button-container">
     <div class="socialbutton-wrapper">
 
-        <a href="https://twitter.com/share?url=https://nuitka.net/factory.html&amp;hashtags=nuitka" target="_blank">
+        <a href="https://twitter.com/share?url=https://nuitka.net/doc/factory.html&amp;hashtags=nuitka" target="_blank">
             <div class="socialbutton twitter">
                 <p class="icon">
                     <img src="/_static/icon-twitter.png" width="24" height="24">
@@ -170,7 +168,7 @@
             </div>
         </a>
 
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/factory.html&amp;hashtag=%23nuitka" target="_blank">
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/doc/factory.html&amp;hashtag=%23nuitka" target="_blank">
             <div class="socialbutton facebook">
                 <p class="icon">
                     <img src="/_static/icon-facebook.png" width="24" height="24">
@@ -180,7 +178,7 @@
             </div>
         </a>
 
-        <a href="http://www.reddit.com/submit?url=https://nuitka.net/factory.html" target="_blank">
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/doc/factory.html" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
                     <img src="/_static/icon-reddit.png" width="24" height="24">
@@ -207,8 +205,8 @@
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/zh_CN/factory.html">CN</a></div>
-                            <div class="line"><a class="reference external" href="/factory.html">EN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/doc/factory.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/doc/factory.html">EN</a></div>
                             </div></div>
                 </blockquote>
             </div>

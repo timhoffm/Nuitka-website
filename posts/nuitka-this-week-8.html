@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-8">
-<h1><a class="toc-backref" href="#id2">Nuitka this week #8</a><a class="headerlink" href="#nuitka-this-week-8" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id2">Nuitka this week #8</a><a class="headerlink" href="#nuitka-this-week-8" title="Permalink to this heading">&#61633;</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -159,7 +160,7 @@
 </ul>
 </div>
 <section id="public-private-ci-workflow">
-<h2><a class="toc-backref" href="#id3">Public / Private CI / Workflow</a><a class="headerlink" href="#public-private-ci-workflow" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id3">Public / Private CI / Workflow</a><a class="headerlink" href="#public-private-ci-workflow" title="Permalink to this heading">&#61633;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>I wrote this as part of a discussion recently, and I think it makes
@@ -201,7 +202,7 @@ its output, which will typically not change at all.</p>
 done wonders for Windows too, but I will want to investigate some more
 to avoid unnecessary cache misses.</p>
 <section id="workflow">
-<h3><a class="toc-backref" href="#id4">Workflow</a><a class="headerlink" href="#workflow" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id4">Workflow</a><a class="headerlink" href="#workflow" title="Permalink to this heading">&#61633;</a></h3>
 <p>As for my workflow with Nuitka, I often tend to let some commits settle
 in my private repo only until they become trusted. Other times I will
 make bigger changes and put them out to factory immediately, because it
@@ -226,7 +227,7 @@ will be on develop. Nuitka stable typically covers nearly all grounds
 already. No panic needed to add missing stuff and break others.</p>
 </section>
 <section id="hunting-bugs-with-bisect">
-<h3><a class="toc-backref" href="#id5">Hunting bugs with bisect</a><a class="headerlink" href="#hunting-bugs-with-bisect" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id5">Hunting bugs with bisect</a><a class="headerlink" href="#hunting-bugs-with-bisect" title="Permalink to this heading">&#61633;</a></h3>
 <p>For me the git bisect is very important. My private commit history is
 basically a total mess and worthless, but on factory I am making very
 nice organized commits that I will frequently amend, even for the random
@@ -243,7 +244,7 @@ backward amending develop and even stable.</p>
 it&#8217;s rare that kind of bug occurs, and I try not to do it.</p>
 </section>
 <section id="experimental-changes">
-<h3><a class="toc-backref" href="#id6">Experimental Changes</a><a class="headerlink" href="#experimental-changes" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id6">Experimental Changes</a><a class="headerlink" href="#experimental-changes" title="Permalink to this heading">&#61633;</a></h3>
 <p>As with recent changes, I sometimes make changes with the
 <code class="docutils literal notranslate"><span class="pre">isExperimental()</span></code> marker, activating breaking changes only gradually.
 The C <code class="docutils literal notranslate"><span class="pre">bool</span></code> type code generation has been there for months in a
@@ -270,7 +271,7 @@ that one to active before &#8220;heap generators&#8221; was ever fully workable,
 complete it, and actually reap some of its benefits already.</p>
 </section>
 <section id="hardware">
-<h3><a class="toc-backref" href="#id7">Hardware</a><a class="headerlink" href="#hardware" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id7">Hardware</a><a class="headerlink" href="#hardware" title="Permalink to this heading">&#61633;</a></h3>
 <p>Obviously this takes a lot of hardware and CPU to be able to compile
 this much Python code on a regular basis. And I really wish I could add
 one of the new AMD Threadripper 2 to the mix. Anybody donating one to
@@ -278,7 +279,7 @@ me? Yes I know, I am only dreaming. But it would really help the cause.</p>
 </section>
 </section>
 <section id="milestone-release">
-<h2><a class="toc-backref" href="#id8">Milestone Release</a><a class="headerlink" href="#milestone-release" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id8">Milestone Release</a><a class="headerlink" href="#milestone-release" title="Permalink to this heading">&#61633;</a></h2>
 <p>So the 0.6 is out, and already a hotfix that addresses mostly use cases
 of people that didn&#8217;t work. More people seemed to have tried out 0.6.0
 and as a result 0.6.0.1 is going to cover a few corner cases. So far I
@@ -287,7 +288,7 @@ contained ones for 0.5.33 which did have one that was not easy to fix.</p>
 <p>So that went really smooth.</p>
 </section>
 <section id="ui-rework">
-<h2><a class="toc-backref" href="#id9">UI rework</a><a class="headerlink" href="#ui-rework" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id9">UI rework</a><a class="headerlink" href="#ui-rework" title="Permalink to this heading">&#61633;</a></h2>
 <p>The UI needs more work still. Specifically that packages do not
 automatically include all stuff below them and have to be specified by
 file path instead of by name, is really annoying to me.</p>
@@ -295,7 +296,7 @@ file path instead of by name, is really annoying to me.</p>
 some. I will work on these things eventually.</p>
 </section>
 <section id="benchmarks">
-<h2><a class="toc-backref" href="#id10">Benchmarks</a><a class="headerlink" href="#benchmarks" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id10">Benchmarks</a><a class="headerlink" href="#benchmarks" title="Permalink to this heading">&#61633;</a></h2>
 <p>So I updated the website to state that PyStone is now 312% faster, from
 a number that was very old. I since then ran it with an updated version
 for Python3, and it&#8217;s much less there. That is pretty sad.</p>
@@ -309,7 +310,7 @@ put into a different state from some operations, which then making
 in-place extending in realloc fail more often, but I cannot know yet.</p>
 </section>
 <section id="inplace-operations">
-<h2><a class="toc-backref" href="#id11">Inplace Operations</a><a class="headerlink" href="#inplace-operations" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id11">Inplace Operations</a><a class="headerlink" href="#inplace-operations" title="Permalink to this heading">&#61633;</a></h2>
 <p>So more work has been put into those, adding more specialization, and
 esp. also applying them for module variables as well. CPython can do
 that, and actually is giving itself a hard time about it, and Nuitka
@@ -319,7 +320,7 @@ that. I was totally stupid about how I approached that, looking from the
 final solution, it was always easy. Just not for me apparently.</p>
 </section>
 <section id="new-use-cases">
-<h2><a class="toc-backref" href="#id12">New use cases</a><a class="headerlink" href="#new-use-cases" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id12">New use cases</a><a class="headerlink" href="#new-use-cases" title="Permalink to this heading">&#61633;</a></h2>
 <p>Talked about those above. So the top level <code class="docutils literal notranslate"><span class="pre">logging</span></code> module of your
 own was working fine in accelerated mode, but for standalone it failed
 and used the one from standard library instead. That kind of shadowing
@@ -332,14 +333,14 @@ was best working for sub-packages, but after 0.6.0.1 hotfix, now it will
 also work for the main module you compile to be that empty.</p>
 </section>
 <section id="tcl-tk-standalone">
-<h2><a class="toc-backref" href="#id13">Tcl/Tk Standalone</a><a class="headerlink" href="#tcl-tk-standalone" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id13">Tcl/Tk Standalone</a><a class="headerlink" href="#tcl-tk-standalone" title="Permalink to this heading">&#61633;</a></h2>
 <p>So instructions have been provided how to properly make that work for
 Python standalone on Windows. I have yet to live up to my promise and
 make Nuitka automatically include the necessary files. I hope to do it
 for 0.6.1 though.</p>
 </section>
 <section id="caching-examined">
-<h2><a class="toc-backref" href="#id14">Caching Examined</a><a class="headerlink" href="#caching-examined" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id14">Caching Examined</a><a class="headerlink" href="#caching-examined" title="Permalink to this heading">&#61633;</a></h2>
 <p>So I am looking at ccache on Linux right now, and found e.g. that it was
 reporting that <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">--version</span></code> was called a lot at startup of Scons
 and then <code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">--version</span></code> once. The later is particularly stupid,
@@ -359,7 +360,7 @@ run. That way I am hoping to notice and be able to know, if caching is
 used to its full effect.</p>
 </section>
 <section id="twitter">
-<h2><a class="toc-backref" href="#id15">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id15">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this heading">&#61633;</a></h2>
 <p>I continue to be very active there. I put out a poll about the comment
 system, and disabling Disqus comments as a result, I will focus on
 Twitter for web site comments too now.</p>
@@ -369,13 +370,13 @@ Twitter for web site comments too now.</p>
 also going to happen.</p>
 </section>
 <section id="help-wanted">
-<h2><a class="toc-backref" href="#id16">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id16">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this heading">&#61633;</a></h2>
 <p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22" target="_blank">help wanted</a>
 and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
 <p>Nuitka definitely needs more people to work on it.</p>
 </section>
 <section id="plans">
-<h2><a class="toc-backref" href="#id17">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id17">Plans</a><a class="headerlink" href="#plans" title="Permalink to this heading">&#61633;</a></h2>
 <p>Working on the 0.6.1 release, attacking more in-place add operations as
 a first goal, and now turning to binary operations, I am trying to shape
 how using different helper functions to different object types looks
@@ -392,7 +393,7 @@ closure, or module, is then faster in all cases would be a goal for the
 weekend for release.</p>
 </section>
 <section id="donations">
-<h2><a class="toc-backref" href="#id18">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id18">Donations</a><a class="headerlink" href="#donations" title="Permalink to this heading">&#61633;</a></h2>
 <p>If you want to help, but cannot spend the time, please consider to
 donate to Nuitka, and go here:</p>
 <p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>

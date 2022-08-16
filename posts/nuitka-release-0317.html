@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-17">
-<h1>Nuitka Release 0.3.17<a class="headerlink" href="#nuitka-release-0-3-17" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.17<a class="headerlink" href="#nuitka-release-0-3-17" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This is to inform you about the new stable release of Nuitka. This time
@@ -152,7 +153,7 @@ seems that CPython3.2 is going to work one day.</p>
 be cleaner and more complete, addressing issues that prevented it from
 entering the Debian repository.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Fixed the handling of modules and packages of the same name, but with
 different casing. Problem showed under Windows only. Released as
@@ -169,7 +170,7 @@ hot fix already.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Enhanced compatibility again, provide enough <code class="docutils literal notranslate"><span class="pre">co_varnames</span></code> in the
 code objects, so that slicing them up to <code class="docutils literal notranslate"><span class="pre">code_object.co_argcount</span></code>
@@ -184,7 +185,7 @@ some decorators as well.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The optimization of constant conditional expressions was not done
 yet. Added this missing constant propagation case.</p></li>
@@ -199,7 +200,7 @@ really necessary anymore.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added a <a class="reference external" href="https://nuitka.net/doc/developer-manual.html">Developer Manual</a> to the release.
 It&#8217;s incomplete, but it details some of the existing stuff, coding
@@ -245,7 +246,7 @@ download, but the stable package may lag behind a bit.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Changed <code class="docutils literal notranslate"><span class="pre">not</span></code> boolean operation to become a normal operator.
 Changed <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> boolean operators to a new base class, and
@@ -269,7 +270,7 @@ listed.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Make sure the basic tests pass with CPython or else fail the test.
 This is to prevent false positives, where a test passes, but only
@@ -300,7 +301,7 @@ included in the package (<code class="docutils literal notranslate"><span class=
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>The &#8220;git flow&#8221; was used again in this release cycle and proved to be
 useful not only for hot fix, but also for creating the branch
 <code class="docutils literal notranslate"><span class="pre">feature/ctypes_annotation</span></code> and rebasing it often while things are

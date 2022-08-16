@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,13 +132,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="static-compilation-that-is-the-point">
-<h1>Static Compilation - That is the point<a class="headerlink" href="#static-compilation-that-is-the-point" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Static Compilation - That is the point<a class="headerlink" href="#static-compilation-that-is-the-point" title="Permalink to this heading">&#61633;</a></h1>
 <p>In a recent post, Stefan Behnel questioned the point of static
 compilation and suggests that in order to be useful, a static compiler
 <strong>needs</strong> to add something on top.</p>
 <p>This is going to be a rebuttal.</p>
 <section id="compatibility-i-mean-it">
-<h2>Compatibility, I mean it<a class="headerlink" href="#compatibility-i-mean-it" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Compatibility, I mean it<a class="headerlink" href="#compatibility-i-mean-it" title="Permalink to this heading">&#61633;</a></h2>
 <p>First of all, let me start out, by saying that Nuitka is intended to be
 the fully optimizing compiler of Python. The optimizing part is not yet
 true. Right now, it&#8217;s probably a correct compiler of Python. Correct in
@@ -154,7 +155,7 @@ unused they are.</p></li>
 </ul>
 </section>
 <section id="compatibility-slower">
-<h2>Compatibility != Slower<a class="headerlink" href="#compatibility-slower" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Compatibility != Slower<a class="headerlink" href="#compatibility-slower" title="Permalink to this heading">&#61633;</a></h2>
 <p>While generally Nuitka will have a hard time to be faster <em>and</em>
 compatible to CPython, I don&#8217;t have much concern about that. Using
 guards between optimistic, and less optimistic variants of code, there
@@ -165,7 +166,7 @@ that the sentiment is that incompatible and fast <em>need</em> to go along. I
 totally dispute that.</p>
 </section>
 <section id="language-extensions">
-<h2>Language Extensions<a class="headerlink" href="#language-extensions" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Language Extensions<a class="headerlink" href="#language-extensions" title="Permalink to this heading">&#61633;</a></h2>
 <p>Now, the &#8220;in addition&#8221; stuff, that Stefan is talking about. I don&#8217;t see
 the point at all. It is quite obvious that everything you can say with
 <code class="docutils literal notranslate"><span class="pre">cdef</span></code> syntax, could also be said with a more Pythonic syntax. And if
@@ -196,7 +197,7 @@ inferior to plain Python, even from a practical point of view.</p>
 </div>
 </section>
 <section id="lack-of-interpreter-is-bad">
-<h2>Lack of Interpreter is bad<a class="headerlink" href="#lack-of-interpreter-is-bad" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Lack of Interpreter is bad<a class="headerlink" href="#lack-of-interpreter-is-bad" title="Permalink to this heading">&#61633;</a></h2>
 <p>Static compilation vs. interpretation as a discussion has little merits
 to me. I find it totally obvious that you don&#8217;t need static compilation,
 but 2 other things:</p>
@@ -216,7 +217,7 @@ all. Well, of course legacy users.</p>
 Nuitka should repeat.</p>
 </section>
 <section id="no-lock-in">
-<h2>No Lock-in<a class="headerlink" href="#no-lock-in" title="Permalink to this headline">&#61633;</a></h2>
+<h2>No Lock-in<a class="headerlink" href="#no-lock-in" title="Permalink to this heading">&#61633;</a></h2>
 <p>The Cython language is so underspecified, I doubt anybody could make a
 compatible implementation. Should you choose to use it, you will become
 locked in. That means, if Cython breaks or won&#8217;t work to begin with, you
@@ -239,7 +240,7 @@ of view, Cython has no point long term if a viable replacement that is
 Pythonic exists.</p>
 </section>
 <section id="python-alone-is-a-point">
-<h2>Python alone is a point<a class="headerlink" href="#python-alone-is-a-point" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Python alone is a point<a class="headerlink" href="#python-alone-is-a-point" title="Permalink to this heading">&#61633;</a></h2>
 <p>So, if you leave out static compilation vs. interpretation and JIT
 compilation, what would be the difference between PyPy and Nuitka? Well,
 obviously PyPy people are a lot cooler and cleverer. Their design is
@@ -255,7 +256,7 @@ that PyPy, Nuitka, and Jython have have as much of a point, as CPython
 does.</p>
 </section>
 <section id="type-annotations-done-right">
-<h2>Type Annotations done right<a class="headerlink" href="#type-annotations-done-right" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Type Annotations done right<a class="headerlink" href="#type-annotations-done-right" title="Permalink to this heading">&#61633;</a></h2>
 <p>And just for fun. This is making up a use cases of type annotations:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plong</span> <span class="o">=</span> <span class="n">long</span> <span class="k">if</span> <span class="n">python_version</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="k">else</span> <span class="nb">int</span>
 
@@ -338,7 +339,7 @@ there. And Nuitka will compile it and benefit from the hints.</p>
 not portable. It should die. It totally is anti-Pythonic to me.</p>
 </section>
 <section id="elsewhere">
-<h2>Elsewhere<a class="headerlink" href="#elsewhere" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Elsewhere<a class="headerlink" href="#elsewhere" title="Permalink to this heading">&#61633;</a></h2>
 <p>In Java land, people compile to machine code as well. They probably also
 - like stupid me - didn&#8217;t understand that static compilation would have
 no point. Why do they do it? Why am I using compiled binaries done with
@@ -355,7 +356,7 @@ that extends the interpreted language compiled, just so there is a point
 in having it.</p>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">&#61633;</a></h2>
 <p>Nuitka has a point. On top of that I enjoy doing it. It&#8217;s great to have
 the time to do this thing in the correct way.</p>
 <p>So far, things worked out pretty well. My earlier experimentations with

@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-10">
-<h1><a class="toc-backref" href="#id2">Nuitka this week #10</a><a class="headerlink" href="#nuitka-this-week-10" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id2">Nuitka this week #10</a><a class="headerlink" href="#nuitka-this-week-10" title="Permalink to this heading">&#61633;</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -162,7 +163,7 @@
 </ul>
 </div>
 <section id="communication-vs-coding">
-<h2><a class="toc-backref" href="#id3">Communication vs. Coding</a><a class="headerlink" href="#communication-vs-coding" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id3">Communication vs. Coding</a><a class="headerlink" href="#communication-vs-coding" title="Permalink to this heading">&#61633;</a></h2>
 <p>Recently it was a bit more tough to make that decision. First, there was
 much going privately, with me ill, then child ill, and ill again, and
 myself, and that made me have a much harder time to communicate about
@@ -175,7 +176,7 @@ straight from top of my head, even if really a lot of content. But I
 feel that esp. the optimization parts are worth reading.</p>
 </section>
 <section id="hotfixes">
-<h2><a class="toc-backref" href="#id4">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id4">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this heading">&#61633;</a></h2>
 <p>There has been another hotfix, 0.6.0.6 and there ought to be one
 0.6.0.7, at least on factory there is a bunch of stuff for it, but I
 didn&#8217;t actually do it yet. I was wandering between there will be a
@@ -185,14 +186,14 @@ regressions, so I might skip on that really.</p>
 next week.</p>
 </section>
 <section id="google-summer-of-code-for-nuitka">
-<h2><a class="toc-backref" href="#id5">Google Summer of Code for Nuitka</a><a class="headerlink" href="#google-summer-of-code-for-nuitka" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id5">Google Summer of Code for Nuitka</a><a class="headerlink" href="#google-summer-of-code-for-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <p>Nobody has stepped up, which means it will not happen unfortunately.
 This would be your last chance to step up. I know you will feel not
 qualified. But I just need a backup that will help a student around
 obstacles in case I go missing. Contact me and I will be very happy.</p>
 </section>
 <section id="pythran-and-nuitka">
-<h2><a class="toc-backref" href="#id6">Pythran and Nuitka</a><a class="headerlink" href="#pythran-and-nuitka" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id6">Pythran and Nuitka</a><a class="headerlink" href="#pythran-and-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <p>As suggested by @wuoulf (Wolf Vollprecht) we had a meeting at the side
 of the PyCon DE 2018 conference in Karlsruhe, abusing the C++ regular
 table as a forum for that, which was a very nice experience.</p>
@@ -210,9 +211,9 @@ to integrate with Pythran compilation.</p>
 <p>This was a huge success.</p>
 </section>
 <section id="performance-work">
-<h2><a class="toc-backref" href="#id7">Performance Work</a><a class="headerlink" href="#performance-work" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id7">Performance Work</a><a class="headerlink" href="#performance-work" title="Permalink to this heading">&#61633;</a></h2>
 <section id="adding-specialized-object-operations">
-<h3><a class="toc-backref" href="#id8">Adding specialized object operations</a><a class="headerlink" href="#adding-specialized-object-operations" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id8">Adding specialized object operations</a><a class="headerlink" href="#adding-specialized-object-operations" title="Permalink to this heading">&#61633;</a></h3>
 <p>See last week, this has seen more completion. Both <cite>+</cite> and <cite>+=</cite> are more
 or less covered for the selected subset. The CPython test suites were
 initially not finding uses, but with more and more optimization phase
@@ -220,7 +221,7 @@ improvements, it challenges code generation with missing ones, and then
 I added them more and more.</p>
 </section>
 <section id="controlflow-descriptions">
-<h3><a class="toc-backref" href="#id9">Controlflow Descriptions</a><a class="headerlink" href="#controlflow-descriptions" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id9">Controlflow Descriptions</a><a class="headerlink" href="#controlflow-descriptions" title="Permalink to this heading">&#61633;</a></h3>
 <p>Shapes were added for the <cite>+</cite> and <cite>&lt;</cite> operation so far, but didn&#8217;t
 influence anything else really but code generation, but of course they
 should also impact optimization phase.</p>
@@ -232,7 +233,7 @@ input values, things used in the code generation to avoid error checks,
 and in the optimization to not have to mark things as unknown.</p>
 </section>
 <section id="preparations-for-comparison-operations">
-<h3><a class="toc-backref" href="#id10">Preparations for comparison operations</a><a class="headerlink" href="#preparations-for-comparison-operations" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id10">Preparations for comparison operations</a><a class="headerlink" href="#preparations-for-comparison-operations" title="Permalink to this heading">&#61633;</a></h3>
 <p>So optimization now also has proper type shape functions for the <cite>&lt;</cite> and
 the warnings when they fail to know what to do for concrete types. This
 allows to actually remove checks, but so far this wasn&#8217;t exposed for
@@ -243,7 +244,7 @@ expression could raise.</p>
 far I didn&#8217;t quite get to it yet, but it has been started.</p>
 </section>
 <section id="comparison-conditions">
-<h3><a class="toc-backref" href="#id11">Comparison Conditions</a><a class="headerlink" href="#comparison-conditions" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id11">Comparison Conditions</a><a class="headerlink" href="#comparison-conditions" title="Permalink to this heading">&#61633;</a></h3>
 <p>Preparing <cite>&lt;</cite> optimization for the loop, I noticed that <cite>not</cite> was
 optimized for <cite>in</cite> to become <cite>not in</cite>, and also <cite>is</cite> to become <cite>is not</cite>,
 etc. but for comparisons, where we can not the result is of bool shape,
@@ -253,7 +254,7 @@ like <cite>if not a &lt; b: break</cite> as part of its re-formulation, that is 
 one step closer to optimizing my example loop.</p>
 </section>
 <section id="local-variable-escaping">
-<h3><a class="toc-backref" href="#id12">Local variable escaping</a><a class="headerlink" href="#local-variable-escaping" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id12">Local variable escaping</a><a class="headerlink" href="#local-variable-escaping" title="Permalink to this heading">&#61633;</a></h3>
 <p>Much to my shock, I noticed that the code which is responsible to handle
 escaping control flow (i.e. unknown code is executed), was not only
 doing what it was supposed to do, i.e. mark closure variables as
@@ -270,7 +271,7 @@ becomes either <cite>int</cite> or <cite>long</cite> there, where Python3 only h
 renamed it <cite>int</cite>.</p>
 </section>
 <section id="benchmarks-missing">
-<h3><a class="toc-backref" href="#id13">Benchmarks Missing</a><a class="headerlink" href="#benchmarks-missing" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id13">Benchmarks Missing</a><a class="headerlink" href="#benchmarks-missing" title="Permalink to this heading">&#61633;</a></h3>
 <p>Speedcenter got repaired, but I need to add the loop examples I am using
 as test cases before next release, so I can show what Nuitka 0.6.1 will
 have achieved or at least have improved somewhat already.</p>
@@ -281,7 +282,7 @@ impact on their own.</p>
 </section>
 </section>
 <section id="static-linking">
-<h2><a class="toc-backref" href="#id14">Static Linking</a><a class="headerlink" href="#static-linking" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id14">Static Linking</a><a class="headerlink" href="#static-linking" title="Permalink to this heading">&#61633;</a></h2>
 <p>So static linking works now, provided it&#8217;s not a <cite>pyenv</cite> crappy
 <cite>libpython.a</cite> but one that can actually work. I got this to work on
 Linux and using the Conda CC, even LTO will work with it. Interestingly
@@ -293,7 +294,7 @@ slower than the one that lives in the python binary. For acceleration
 this is great news.</p>
 </section>
 <section id="conda-cc">
-<h2><a class="toc-backref" href="#id15">Conda CC</a><a class="headerlink" href="#conda-cc" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id15">Conda CC</a><a class="headerlink" href="#conda-cc" title="Permalink to this heading">&#61633;</a></h2>
 <p>Using Conda CC by default as a fallback in <cite>&#8211;mingw</cite> mode on Windows is
 something that was easy to add. So when no other <cite>gcc</cite> is found, and
 MSVC is not tried in this mode, and the right directory is added to
@@ -306,7 +307,7 @@ think static linking on Windows is not supported by CPython, but I am
 not entirely sure of that.</p>
 </section>
 <section id="annotations-future-feature">
-<h2><a class="toc-backref" href="#id16">Annotations Future Feature</a><a class="headerlink" href="#annotations-future-feature" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id16">Annotations Future Feature</a><a class="headerlink" href="#annotations-future-feature" title="Permalink to this heading">&#61633;</a></h2>
 <p>Found a 3.7 feature that is not covered by the test suite, the
 <cite>__future__</cite> flag <cite>annotations</cite> wasn&#8217;t working as expected. In this,
 strings are to be used for <cite>__annotations__</cite> where they show up (many
@@ -317,13 +318,13 @@ but that was only very hard to get at, and with evil hackery.</p>
 but for now my hack must suffice.</p>
 </section>
 <section id="msi-files">
-<h2><a class="toc-backref" href="#id17">MSI files</a><a class="headerlink" href="#msi-files" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id17">MSI files</a><a class="headerlink" href="#msi-files" title="Permalink to this heading">&#61633;</a></h2>
 <p>Following the 3.7.1 release, there are MSI files again, as the
 regression of 3.7.0 to build them has been fixed in that release. The
 MSI files will work with 3.7.0 also, just the building was broken.</p>
 </section>
 <section id="overall">
-<h2><a class="toc-backref" href="#id18">Overall</a><a class="headerlink" href="#overall" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id18">Overall</a><a class="headerlink" href="#overall" title="Permalink to this heading">&#61633;</a></h2>
 <p>So 0.6.1 is in still in full swing in terms of optimization. I think I
 need to make a release soon, simply because there is too much
 unreleased, but useful stuff already.</p>
@@ -332,7 +333,7 @@ loop until next release. No harm in that. There already are plenty of
 performance improvements across the board.</p>
 </section>
 <section id="twitter">
-<h2><a class="toc-backref" href="#id19">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id19">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this heading">&#61633;</a></h2>
 <p>I continue to be very active there.</p>
 <p><a class="reference external" href="https://twitter.com/kayhayen?ref_src=twsrc%5Etfw" target="_blank">Follow @kayhayen</a></p>
 <p>And lets not forget, having followers make me happy. So do re-tweets.</p>
@@ -340,13 +341,13 @@ performance improvements across the board.</p>
 also going to happen.</p>
 </section>
 <section id="help-wanted">
-<h2><a class="toc-backref" href="#id20">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id20">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this heading">&#61633;</a></h2>
 <p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22" target="_blank">help wanted</a>
 and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
 <p>Nuitka definitely needs more people to work on it.</p>
 </section>
 <section id="donations">
-<h2><a class="toc-backref" href="#id21">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id21">Donations</a><a class="headerlink" href="#donations" title="Permalink to this heading">&#61633;</a></h2>
 <p>If you want to help, but cannot spend the time, please consider to
 donate to Nuitka, and go here:</p>
 <p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
@@ -437,8 +438,8 @@ donate to Nuitka, and go here:</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-10.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-10.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-10.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-10.html">DE</a></div>
                             </div></div>
                 </blockquote>
             </div>

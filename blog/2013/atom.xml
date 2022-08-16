@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2013</title>
-  <updated>2022-06-25T16:25:50.062628+00:00</updated>
+  <updated>2022-08-16T07:21:52.655684+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2013/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/python-3-nuitka-support-is-upcoming.html</id>
     <title>Python3 support by Nuitka is upcoming</title>
@@ -113,8 +113,8 @@ finding a proper re-formulation for “yield from” too.&lt;/p&gt;
 “Python compiler Nuitka” has been supporting
 the language somewhat, but in the next release it’s going to be
 complete.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2013-02-09T08:38:37+00:00</published>
   </entry>
   <entry>
@@ -378,9 +378,9 @@ my own diagrams.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-040.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-02-25T17:39:00+00:00</published>
   </entry>
   <entry>
@@ -592,9 +592,9 @@ optimization.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-041.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-03-05T22:13:00+00:00</published>
   </entry>
   <entry>
@@ -622,8 +622,8 @@ a 0.4.2 pre-release. That is only until 0.4.2 final will be released.&lt;/p&gt;
     <summary>Thanks to a contribution, Nuitka now has a proper RPM spec file. And
 using openSUSE Build Service, we
 can now enjoy RPMs for all major distributions.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2013-03-16T18:44:45+00:00</published>
   </entry>
@@ -864,9 +864,9 @@ support, consolidation all around.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-042.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-03-29T14:32:00+00:00</published>
   </entry>
   <entry>
@@ -995,8 +995,8 @@ am still sentimental about it. I had installed it last about 8 years
 ago. And I still like it. Back in the days, it was the first UNIX to
 encounter for me, running on Amiga hardware, first of a friend, then on
 my own.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2013-04-06T12:58:37+00:00</published>
   </entry>
   <entry>
@@ -1058,10 +1058,10 @@ optimization.&lt;/p&gt;
     <summary>This post is about a feature often requested, but so far not available
 feature of Nuitka. Please see the page “What is Nuitka?” for clarification of what it is now and what it
 wants to be.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-04-07T13:52:44+00:00</published>
   </entry>
   <entry>
@@ -1228,8 +1228,8 @@ you want to help with those, feel free to do so. Nuitka needs you.&lt;/p&gt;
     <summary>The good news are lately coming in high density, although I barely have
 the opportunity to work on Nuitka. Check the page What is Nuitka? for clarification of what it is now and what it
 wants to be.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
     <published>2013-04-10T20:30:11+00:00</published>
   </entry>
@@ -1488,8 +1488,8 @@ experiences.&lt;/p&gt;
 time, I am not introducing Nuitka anymore, I did that in 2012, this
 time, I will try and dive into static optimization and try to convey the
 message why I believe it is possible.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <category term="europython" label="europython"/>
     <published>2013-04-16T09:58:34+00:00</published>
@@ -1548,8 +1548,8 @@ accounts on all those “social” platforms, that deal with code. So far I
 had resisted their terms (you pay us when we get sued), but I have given
 up on that stance, it’s likely irrelevant, as Nuitka won’t get sued, and
 if it is, those are not the issues.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="git" label="git"/>
     <published>2013-04-26T07:17:16+00:00</published>
   </entry>
@@ -1728,9 +1728,9 @@ visible progress with optimization.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-043.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-05-18T10:17:00+00:00</published>
   </entry>
   <entry>
@@ -1924,9 +1924,9 @@ into a development version later.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-044.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-06-27T00:16:00+00:00</published>
   </entry>
   <entry>
@@ -1947,8 +1947,8 @@ to support the full Python language.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/changing-python-faq.html" rel="alternate"/>
     <summary>The Python FAQ changed a while ago:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2013-08-15T08:15:17+00:00</published>
   </entry>
   <entry>
@@ -2073,13 +2073,13 @@ presentation about my Python compiler Nuitka.
 You can watch the Video on Youtube. I believe it’s absolutely worth your
 time. I was not doing a lot of “why” at all now, only “what”, and demo
 times, and answering questions:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <category term="conference" label="conference"/>
+    <category term="europython" label="europython"/>
     <category term="presentation" label="presentation"/>
     <category term="video" label="video"/>
-    <category term="europython" label="europython"/>
     <published>2013-08-15T08:15:17+00:00</published>
   </entry>
   <entry>
@@ -2196,9 +2196,9 @@ priority to restore it.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-045.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-08-20T17:50:00+00:00</published>
   </entry>
   <entry>
@@ -2253,8 +2253,8 @@ started to realize that weak nuclear force and electromagnetic force
 were the same sort. That was after discovering that electricity and
 magnetism were the same, and that is the pattern. It’s called symmetry,
 equivalence, and so on.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="physics" label="physics"/>
     <published>2013-10-04T09:54:45+00:00</published>
   </entry>
@@ -2397,9 +2397,9 @@ list (since closed) or &lt;a class="reference external" href="https://nuitka.net
     <link href="https://nuitka.net/posts/nuitka-release-046.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-10-28T08:52:00+00:00</published>
   </entry>
   <entry>
@@ -2435,8 +2435,8 @@ showing that the eco system around Nuitka is indeed warming up.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-and-guis.html" rel="alternate"/>
     <summary>Please see the page “What is Nuitka?” for
 clarification of what it is now and what it wants to be.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2013-11-26T09:35:53+00:00</published>
   </entry>
@@ -2464,9 +2464,9 @@ maintaining the Nuitka packages inside Arch and on AUR.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-in-arch-linux.html" rel="alternate"/>
     <summary>Got this message:</summary>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <published>2013-11-30T14:17:59+00:00</published>
   </entry>
   <entry>
@@ -2639,9 +2639,9 @@ of this kind of integration in the future.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-047.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-12-05T01:45:00+00:00</published>
   </entry>
   <entry>
@@ -2700,10 +2700,10 @@ closed). And help if you can. And yes you can.&lt;/p&gt;
     <summary>Many of you who turn to my easy to use, highly compatible Python
 compiler Nuitka, do this mostly because they
 seek to solve the deployment problem that Python suffers from.</summary>
-    <category term="Python" label="Python"/>
-    <category term="compiler" label="compiler"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-12-27T10:48:22+00:00</published>
   </entry>
   <entry>

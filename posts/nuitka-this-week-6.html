@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-6">
-<h1><a class="toc-backref" href="#id2">Nuitka this week #6</a><a class="headerlink" href="#nuitka-this-week-6" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id2">Nuitka this week #6</a><a class="headerlink" href="#nuitka-this-week-6" title="Permalink to this heading">&#61633;</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -157,14 +158,14 @@
 </ul>
 </div>
 <section id="holiday">
-<h2><a class="toc-backref" href="#id3">Holiday</a><a class="headerlink" href="#holiday" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id3">Holiday</a><a class="headerlink" href="#holiday" title="Permalink to this heading">&#61633;</a></h2>
 <p>In my 2 weeks holiday, I indeed focused on a really big thing, and got
 more done that I had hoped for. For C types, <code class="docutils literal notranslate"><span class="pre">nuitka_bool</span></code>, which is a
 tri-state boolean with true, false and unassigned, can be used for some
 variables, and executes some operations without going through objects
 anymore.</p>
 <section id="bool">
-<h3><a class="toc-backref" href="#id4">bool</a><a class="headerlink" href="#bool" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id4">bool</a><a class="headerlink" href="#bool" title="Permalink to this heading">&#61633;</a></h3>
 <p>Condition codes are no longer special. They all need a boolean value
 from the expression used as a condition, and there was a special paths
 for some popular expressions for conditions, but of course not all. That
@@ -181,7 +182,7 @@ actual performance, but for structure. Other C types are going to follow
 soon and will give massive performance gains.</p>
 </section>
 <section id="void">
-<h3><a class="toc-backref" href="#id5">void</a><a class="headerlink" href="#void" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id5">void</a><a class="headerlink" href="#void" title="Permalink to this heading">&#61633;</a></h3>
 <p>And what was really good, is that not only did I get <code class="docutils literal notranslate"><span class="pre">bool</span></code> to work
 almost perfectly, I also started work on the <code class="docutils literal notranslate"><span class="pre">void</span></code> C target type and
 finished that after my return from holiday last weekend, which lead to
@@ -215,7 +216,7 @@ it the default, which is why this will probably become part of 0.6.1 to
 be the default.</p>
 </section>
 <section id="module-var">
-<h3><a class="toc-backref" href="#id6">module_var</a><a class="headerlink" href="#module-var" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id6">module_var</a><a class="headerlink" href="#module-var" title="Permalink to this heading">&#61633;</a></h3>
 <p>Previously variable codes were making a hard distinction for module
 variables and make them use their own helper codes. Now this is
 encapsulated in a normal C type class like <code class="docutils literal notranslate"><span class="pre">nuitka_bool</span></code>, or the one
@@ -224,7 +225,7 @@ better. A sign things are going smooth.</p>
 </section>
 </section>
 <section id="goto-generators">
-<h2><a class="toc-backref" href="#id7">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id7">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this heading">&#61633;</a></h2>
 <p>Still not released. I delayed it after my holiday, and due to the heap
 generator change, after stabilizing the C types work, I want to first
 finish a <code class="docutils literal notranslate"><span class="pre">tests/library/compile_python_module.py</span> <span class="pre">resume</span></code> run, which
@@ -237,7 +238,7 @@ that <code class="docutils literal notranslate"><span class="pre">develop</span>
 optimization will be yet faster, and often noteworthy.</p>
 </section>
 <section id="benchmarks">
-<h2><a class="toc-backref" href="#id8">Benchmarks</a><a class="headerlink" href="#benchmarks" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id8">Benchmarks</a><a class="headerlink" href="#benchmarks" title="Permalink to this heading">&#61633;</a></h2>
 <p>The Speedcenter of Nuitka is what I use right now, but it&#8217;s only showing
 the state of 3 branches and compared to CPython, not as much historical
 information. Also the organization of tests is poor. At least there is
@@ -247,7 +248,7 @@ to focus on making it easier to understand. Therefore no link right now,
 google if you are so keen. ;-)</p>
 </section>
 <section id="twitter">
-<h2><a class="toc-backref" href="#id9">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id9">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this heading">&#61633;</a></h2>
 <p>During the holiday sprint, and even after, I am going to Tweet a lot
 about what is going on for Nuitka. So follow me on twitter if you like,
 I will post important stuff as it happens there:</p>
@@ -255,12 +256,12 @@ I will post important stuff as it happens there:</p>
 <p>And lets not forget, having followers make me happy. So do re-tweets.</p>
 </section>
 <section id="poll-on-executable-names">
-<h2><a class="toc-backref" href="#id10">Poll on Executable Names</a><a class="headerlink" href="#poll-on-executable-names" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id10">Poll on Executable Names</a><a class="headerlink" href="#poll-on-executable-names" title="Permalink to this heading">&#61633;</a></h2>
 <p>So I put e.g. poll up on Twitter, which is now over. But it made me
 implement a new scheme, due to <a class="reference external" href="https://twitter.com/KayHayen/status/1037591355319640065" target="_blank">popular consensus</a></p>
 </section>
 <section id="hotfixes">
-<h2><a class="toc-backref" href="#id11">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id11">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this heading">&#61633;</a></h2>
 <p>Even more hotfixes. I even did 2 during my holiday, however packages
 built only later.</p>
 <p>Threaded imports on 3.4 or higher of modules were not using the locking
@@ -272,13 +273,13 @@ for them, but not added it to the parser. Result: Option works. Just
 does not show up in help output. Really?</p>
 </section>
 <section id="help-wanted">
-<h2><a class="toc-backref" href="#id12">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id12">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this heading">&#61633;</a></h2>
 <p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22" target="_blank">help wanted</a>
 and there is a bunch, and very like one you can help with.</p>
 <p>Nuitka definitely needs more people to work on it.</p>
 </section>
 <section id="plans">
-<h2><a class="toc-backref" href="#id13">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id13">Plans</a><a class="headerlink" href="#plans" title="Permalink to this heading">&#61633;</a></h2>
 <p>Working down the release backlog. Things should be out. I am already
 working on what should become 0.6.1, but it&#8217;s not yet 0.5.33 released.
 Not a big deal, but 0.6.0 has 2 really important fixes for performance
@@ -299,7 +300,7 @@ or at least much closer to it. That will make noticeable effects in many
 of the benchmarks. More C types will then follow one by one.</p>
 </section>
 <section id="donations">
-<h2><a class="toc-backref" href="#id14">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id14">Donations</a><a class="headerlink" href="#donations" title="Permalink to this heading">&#61633;</a></h2>
 <p>If you want to help, but cannot spend the time, please consider to
 donate to Nuitka, and go here:</p>
 <p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
@@ -390,8 +391,8 @@ donate to Nuitka, and go here:</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-6.html">CN</a></div>
-                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-6.html">DE</a></div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-6.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-6.html">CN</a></div>
                             </div></div>
                 </blockquote>
             </div>

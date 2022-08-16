@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2016</title>
-  <updated>2022-06-25T16:25:49.761376+00:00</updated>
+  <updated>2022-08-16T07:21:52.351369+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2016/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/nuitka-release-0518.html</id>
     <title>Nuitka Release 0.5.18</title>
@@ -108,9 +108,9 @@ from these scalability improvements.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0518.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-01-16T11:41:00+00:00</published>
   </entry>
   <entry>
@@ -427,9 +427,9 @@ I will get the funding to go to EuroPython 2016, that would be great.&lt;/p&gt;
 but a lot has happened indeed. I just seem to post a lot more to the
 mailing list than I do here. Especially about unfinished stuff, which is
 essentially for a project like Nuitka everything that’s going on.</summary>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <category term="europython" label="europython"/>
     <published>2016-01-29T08:08:54+00:00</published>
   </entry>
@@ -522,9 +522,9 @@ specific shape tracing will be needed.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0519.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-02-02T09:04:00+00:00</published>
   </entry>
   <entry>
@@ -610,9 +610,9 @@ Nuitka core to easier hacks and more user contribution for these topics.&lt;/p&g
     <link href="https://nuitka.net/posts/nuitka-release-0520.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-03-21T09:34:00+00:00</published>
   </entry>
   <entry>
@@ -702,9 +702,9 @@ that is going to remain the focus for some time.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0521.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-04-25T12:54:00+00:00</published>
   </entry>
   <entry>
@@ -803,9 +803,9 @@ operations.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0522.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-08-17T14:35:00+00:00</published>
   </entry>
   <entry>
@@ -962,9 +962,9 @@ generation, which will make Nuitka improve speed.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0523.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-10-03T16:55:00+00:00</published>
   </entry>
   <entry>
@@ -1057,9 +1057,9 @@ even faster. This will be for future releases to expand.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0524.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-11-15T09:43:00+00:00</published>
   </entry>
 </feed>

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged presentation</title>
-  <updated>2022-06-25T16:25:55.808442+00:00</updated>
+  <updated>2022-08-16T07:21:58.620306+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/presentation/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/nuitka---pycon-de-video.html</id>
     <title>Nuitka - PyCON DE Video</title>
@@ -35,10 +35,10 @@ done.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka---pycon-de-video.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
+    <category term="git" label="git"/>
     <category term="presentation" label="presentation"/>
     <category term="video" label="video"/>
     <published>2011-10-22T06:39:00+00:00</published>
@@ -165,13 +165,13 @@ presentation about my Python compiler Nuitka.
 You can watch the Video on Youtube. I believe it’s absolutely worth your
 time. I was not doing a lot of “why” at all now, only “what”, and demo
 times, and answering questions:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <category term="conference" label="conference"/>
+    <category term="europython" label="europython"/>
     <category term="presentation" label="presentation"/>
     <category term="video" label="video"/>
-    <category term="europython" label="europython"/>
     <published>2013-08-15T08:15:17+00:00</published>
   </entry>
 </feed>

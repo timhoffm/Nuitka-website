@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-5-14">
-<h1>Nuitka Release 0.5.14<a class="headerlink" href="#nuitka-release-0-5-14" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.5.14<a class="headerlink" href="#nuitka-release-0-5-14" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release is an intermediate step towards value propagation, which is
@@ -141,7 +142,7 @@ to SSA. The <code class="docutils literal notranslate"><span class="pre">try</sp
 <p>There are also a lot of bug fixes, and enhancements to code generation,
 as well as major cleanups of code base.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Python3: Added support assignments trailing star assignment.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
@@ -198,7 +199,7 @@ objects that could not be encoded with <code class="docutils literal notranslate
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added support for Windows 10.</p></li>
 <li><p>Followed changes for Python 3.5 beta 2. Still only usable as a Python
@@ -213,7 +214,7 @@ tree, this is intended to help debug things on Windows.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Function in-lining is now present in the code, but still disabled,
 because it needs more changes in other areas, before we can generally
@@ -269,7 +270,7 @@ e.g. when printed.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Removed gitorious mirror of the git repository, they shut down.</p></li>
 <li><p>Make it more clear in the documentation that Python2 is needed at
@@ -277,7 +278,7 @@ compile time to create Python3 executables.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Moved more parts of code generation to their own modules, and used
 registry for code generation for more expression kinds.</p></li>
@@ -324,7 +325,7 @@ tools like <code class="docutils literal notranslate"><span class="pre">rpm</spa
 </ul>
 </section>
 <section id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Added the CPython3.4 test suite.</p></li>
 <li><p>The CPython3.2, CPython3.3, and CPython3.4 test suite now run with
@@ -347,7 +348,7 @@ ongoing effort.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>This release is clearly major. It represents a huge step forward for
 Nuitka as it improves nearly every aspect of code generation and
 analysis. Removing the <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">finally</span></code> expression nodes proved to be

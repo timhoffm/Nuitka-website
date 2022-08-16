@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,13 +130,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-2-1">
-<h1>Nuitka Release 0.2.1<a class="headerlink" href="#nuitka-release-0-2-1" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.2.1<a class="headerlink" href="#nuitka-release-0-2-1" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>The march goes on, this is another minor release with a bunch of
 substantial improvements:</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Packages now also can be embedded with the <code class="docutils literal notranslate"><span class="pre">--deep</span></code> option too,
 before they could not be imported from the executable.</p></li>
@@ -144,13 +145,13 @@ surrounding code.</p></li>
 </ul>
 </section>
 <section id="reduced-differences">
-<h2>Reduced Differences<a class="headerlink" href="#reduced-differences" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Reduced Differences<a class="headerlink" href="#reduced-differences" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The future print function import is now supported too.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Independence of the compiled function type. When I started it was
 merely <code class="docutils literal notranslate"><span class="pre">PyCFunction</span></code> and then a copy of it patched at run time,
@@ -163,7 +164,7 @@ bugs, also helping to identify some dead code.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>The major difference now is the lack of a throw method for generator
 functions. I will try to address that in a 0.2.2 release if possible.
 The plan is that the 0.2.x series will complete these tasks, and 0.3

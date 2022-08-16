@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="next" title="Factory Instructions" href="factory.html">
     <link rel="prev" title="Nuitka Developer Manual" href="developer-manual.html">   
@@ -82,13 +83,13 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal fa fa-shopping-cart" href="commercial.html">&amp;nbsp;Nuitka Commercial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="module-nuitka.Options">
-<span id="api-documentation"></span><h1>API documentation<a class="headerlink" href="#module-nuitka.Options" title="Permalink to this headline">&#61633;</a></h1>
+<span id="api-documentation"></span><h1>API documentation<a class="headerlink" href="#module-nuitka.Options" title="Permalink to this heading">&#61633;</a></h1>
 <p>Options module</p>
 <p>This exposes the choices made by the user. Defaults will be applied here, and
 some handling of defaults.</p>
@@ -176,11 +177,11 @@ some handling of defaults.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="nuitka.Options.shallDumpBuiltTreeXML">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDumpBuiltTreeXML</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDumpBuiltTreeXML" title="Permalink to this definition">&#61633;</a></dt>
+<dt class="sig sig-object py" id="nuitka.Options.getXMLDumpOutputFilename">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getXMLDumpOutputFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getXMLDumpOutputFilename" title="Permalink to this definition">&#61633;</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--xml</span></code></p>
+<dd class="field-odd"><p>str derived from <code class="docutils literal notranslate"><span class="pre">--xml</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -336,6 +337,12 @@ otherwise original is kept.</p>
 <dt class="sig sig-object py" id="nuitka.Options.getShallNotIncludeDataFilePatterns">
 <span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallNotIncludeDataFilePatterns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallNotIncludeDataFilePatterns" title="Permalink to this definition">&#61633;</a></dt>
 <dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--noinclude-data-files=</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getShallNotIncludeDllFilePatterns">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getShallNotIncludeDllFilePatterns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getShallNotIncludeDllFilePatterns" title="Permalink to this definition">&#61633;</a></dt>
+<dd><p><em>list</em>, items of <code class="docutils literal notranslate"><span class="pre">--noinclude-dlls=</span></code></p>
 </dd></dl>
 
 <dl class="py function">
@@ -695,13 +702,12 @@ make sure they find their Python DLL.</p>
 <span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isOnefileTempDirMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isOnefileTempDirMode" title="Permalink to this definition">&#61633;</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile-tempdir</span></code> and OS</p>
+<dd class="field-odd"><p>bool derived from <code class="docutils literal notranslate"><span class="pre">--onefile-tempdir-spec</span></code></p>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Notes:</dt><dd><p>On all but Linux, using a bootstrap binary that does unpack is mandatory,
-but on Linux, the AppImage tool is used by default, this enforces using
-a bootstrap binary there too.</p>
+<dt>Notes:</dt><dd><p>Using cached onefile execution when the spec doesn&#8217;t contain
+volatile things.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -929,12 +935,6 @@ a bootstrap binary there too.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="nuitka.Options.getWindowsDependencyTool">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getWindowsDependencyTool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getWindowsDependencyTool" title="Permalink to this definition">&#61633;</a></dt>
-<dd><p><em>str</em>, value of <code class="docutils literal notranslate"><span class="pre">--windows-dependency-tool=</span></code></p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallNotUseDependsExeCachedResults">
 <span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallNotUseDependsExeCachedResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallNotUseDependsExeCachedResults" title="Permalink to this definition">&#61633;</a></dt>
 <dd><dl class="field-list simple">
@@ -1060,6 +1060,12 @@ options.</p>
 <dd><p><em>list</em> files with user provided Yaml files</p>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.shallDisplayWarningMnemonic">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallDisplayWarningMnemonic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mnemonic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallDisplayWarningMnemonic" title="Permalink to this definition">&#61633;</a></dt>
+<dd><p><em>bool</em>&#8221; derived from &#8211;nowarn-mnemonic</p>
+</dd></dl>
+
 </section>
 
 <div class="section">
@@ -1127,8 +1133,8 @@ options.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/de_DE/doc/api-doc.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/doc/api-doc.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/doc/api-doc.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/doc/api-doc.html">DE</a></div>
                             </div></div>
                 </blockquote>
             </div>

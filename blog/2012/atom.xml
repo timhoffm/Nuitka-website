@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2012</title>
-  <updated>2022-06-25T16:25:50.212304+00:00</updated>
+  <updated>2022-08-16T07:21:52.806921+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2012/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/nuitka-release-0317.html</id>
     <title>Nuitka Release 0.3.17</title>
@@ -216,9 +216,9 @@ discover improvements and regressions more clearly.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0317.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-01-09T07:59:00+00:00</published>
   </entry>
   <entry>
@@ -342,9 +342,9 @@ possible, and to immediately benefit from such improvements.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0318.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-01-14T11:34:00+00:00</published>
   </entry>
   <entry>
@@ -574,9 +574,9 @@ worth to get out.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0319.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-01-26T20:49:00+00:00</published>
   </entry>
   <entry>
@@ -867,9 +867,9 @@ effective Python compiler this project is all about.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0320.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-02-27T22:48:00+00:00</published>
   </entry>
   <entry>
@@ -1112,9 +1112,9 @@ significant, and makes those appears as if they are achievable.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0321.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-04-13T10:19:00+00:00</published>
   </entry>
   <entry>
@@ -1321,9 +1321,9 @@ long, and looking at numbers will make sense.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0322.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-05-13T13:17:00+00:00</published>
   </entry>
   <entry>
@@ -1359,8 +1359,8 @@ on. But this is a good base.&lt;/p&gt;
     <summary>Some time ago, I asked about static site generators and tried a few, but nothing was
 as ReST friendly as I would like to. To me, ReST is to text publishing,
 what Python is to programming.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nikola" label="Nikola"/>
+    <category term="Python" label="Python"/>
     <published>2012-05-26T13:06:00+00:00</published>
   </entry>
   <entry>
@@ -1383,8 +1383,8 @@ this is what Google Webmaster tool says about it.&lt;/p&gt;
     <summary>At end the end of May, I switched my website from a W3 Total Cache
 enhanced wordpress installation to static generated with Nikola, and
 this is what Google Webmaster tool says about it.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nikola" label="Nikola"/>
+    <category term="Python" label="Python"/>
     <published>2012-06-12T13:15:00+00:00</published>
   </entry>
   <entry>
@@ -1473,11 +1473,11 @@ want) to there.&lt;/p&gt;
     <summary>Once a long time ago, I was benchmarking Nuitka more often. Check “What
 is Nuitka?” in case you don’t know what it
 is.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <category term="Nikola" label="Nikola"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="benchmark" label="benchmark"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-06-30T16:39:00+00:00</published>
   </entry>
   <entry>
@@ -1564,9 +1564,9 @@ preparation to &lt;a class="reference external" href="https://ep2012.europython.
     <link href="https://nuitka.net/posts/nuitka-release-0323.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-06-30T23:40:00+00:00</published>
   </entry>
   <entry>
@@ -1704,8 +1704,8 @@ and other things.&lt;/p&gt;
 re-formulations of Python into simpler Python. It is my intention to
 turn this into a series of Python quiz questions that you will hopefully
 enjoy.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="quiz" label="quiz"/>
     <published>2012-07-15T17:07:00+00:00</published>
   </entry>
@@ -1775,8 +1775,8 @@ raise an error.&lt;/p&gt;&lt;/li&gt;
 amount of CPython code. For a while now, it’s also CPython3.2 that I
 look at. Checking out __future__ handling, I was surprised the other
 day though, this really works:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2012-07-23T06:56:41+00:00</published>
   </entry>
   <entry>
@@ -2023,9 +2023,9 @@ for Python3 and also for Python2. So I wanted to get this out now.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0324.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-08-18T21:30:00+00:00</published>
   </entry>
   <entry>
@@ -2123,11 +2123,11 @@ part of it.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/letting-go-of-c11.html" rel="alternate"/>
     <summary>How Nuitka came to use C++11 and then stop it.</summary>
+    <category term="Android" label="Android"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="compiler" label="compiler"/>
     <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
-    <category term="Android" label="Android"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-10-27T08:59:07+00:00</published>
   </entry>
   <entry>
@@ -2295,9 +2295,9 @@ gains.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0325.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-11-11T16:29:00+00:00</published>
   </entry>
   <entry>
@@ -2573,8 +2573,8 @@ to justify that, it’s actually quite obvious, isn’t it?&lt;/p&gt;
     <summary>In a recent post, Stefan Behnel questioned the point of static
 compilation and suggests that in order to be useful, a static compiler
 needs to add something on top.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2012-12-02T12:23:32+00:00</published>
   </entry>

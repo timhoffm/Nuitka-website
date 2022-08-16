@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged gsoc2019</title>
-  <updated>2022-06-25T16:25:55.694919+00:00</updated>
+  <updated>2022-08-16T07:21:58.505964+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/gsoc2019/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/batakrishna-sahu-intro.html</id>
     <title>Batakrishna Sahu</title>
@@ -35,8 +35,8 @@ this summer.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/batakrishna-sahu-intro.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="portrait" label="portrait"/>
     <published>2019-05-14T08:31:00+00:00</published>
   </entry>
@@ -70,11 +70,11 @@ summer!&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-intro.html" rel="alternate"/>
     <summary>Hi all! :)</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="tests" label="tests"/>
-    <category term="standalone" label="standalone"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="portrait" label="portrait"/>
+    <category term="standalone" label="standalone"/>
+    <category term="tests" label="tests"/>
     <published>2019-05-15T10:00:00+00:00</published>
   </entry>
   <entry>
@@ -328,9 +328,9 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
     <link href="https://nuitka.net/posts/urllib3-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of urllib3 to its nuitka-built
 .whl counterpart.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-06-19T16:00:00+00:00</published>
   </entry>
@@ -490,9 +490,9 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
     <link href="https://nuitka.net/posts/dateutil-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of dateutil to its nuitka-built
 .whl counterpart.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-07-12T18:00:00+00:00</published>
   </entry>
@@ -675,13 +675,13 @@ amazing program possible.&lt;/p&gt;
     <summary>As Google Summer of Code (GSoC) is coming to an end, I am writing this
 blog post as a final summary describing all the work I have done as well
 as my experiences in this program.</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="tests" label="tests"/>
+    <category term="automation" label="automation"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="pypi" label="pypi"/>
     <category term="pytest" label="pytest"/>
-    <category term="automation" label="automation"/>
     <category term="standalone" label="standalone"/>
+    <category term="tests" label="tests"/>
     <published>2019-08-23T07:00:00+00:00</published>
   </entry>
   <entry>
@@ -925,8 +925,8 @@ professional career in Software engineering.&lt;/p&gt;&lt;/li&gt;
 </content>
     <link href="https://nuitka.net/posts/bksahus-gsoc-wrap-up.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-08-25T19:55:00+00:00</published>
   </entry>
 </feed>

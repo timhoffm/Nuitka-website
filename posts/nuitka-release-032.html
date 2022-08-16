@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-2">
-<h1>Nuitka Release 0.3.2<a class="headerlink" href="#nuitka-release-0-3-2" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.2<a class="headerlink" href="#nuitka-release-0-3-2" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release of Nuitka continues the focus on performance. But this
@@ -142,7 +143,7 @@ thing, but you know there is always more, e.g. Python 2.7.</p>
 release, Nuitka is approaching Python support for 2.7, and then there
 are some bug fixes.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Calling a function with <code class="docutils literal notranslate"><span class="pre">**</span></code> and using a non-dict for it was
 leading to wrong behavior.</p>
@@ -175,7 +176,7 @@ now.</p>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The local and shared local variable C++ classes have a flag
 &#8220;free_value&#8221; to indicate if an &#8220;PY_DECREF&#8221; needs to be done when
@@ -188,7 +189,7 @@ are immutable anyway.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Improved more of the indentation of the generated C++ which was not
 very good for contractions so far. Now it is. Also assignments should
@@ -201,7 +202,7 @@ regarding indentation.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>There is now a script to extract the &#8220;doctests&#8221; from the CPython test
 suite and it generates Python source code from them. This can be
@@ -217,7 +218,7 @@ to cover this case as well.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>The <a class="reference external" href="https://nuitka.net/gitweb">gitweb interface</a> (since disabled)
 might be considered an alternative to downloading the source if you
@@ -236,7 +237,7 @@ for the time being, I document the known differences there.</p>
 </ul>
 </section>
 <section id="numbers">
-<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this heading">&#61633;</a></h2>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
 <span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mf">76923.1</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>

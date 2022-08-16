@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -87,9 +88,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -185,7 +186,7 @@
 </ul>
 </div>
 <section id="google-summer-of-code-2019">
-<h1><a class="toc-backref" href="#id1">Google Summer of Code 2019</a><a class="headerlink" href="#google-summer-of-code-2019" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id1">Google Summer of Code 2019</a><a class="headerlink" href="#google-summer-of-code-2019" title="Permalink to this heading">&#61633;</a></h1>
 <p>Nuitka team is happy to see your interest in helping out by applying for
 <a class="reference external" href="https://summerofcode.withgoogle.com/" target="_blank">Google Summer of Code 2019</a>
 and helping develop it.</p>
@@ -194,7 +195,7 @@ to be joined by the students in this. We are experienced coders and have
 mentored during day jobs. And definitely we look forward to having fun
 with this.</p>
 <section id="about-nuitka">
-<h2><a class="toc-backref" href="#id2">About Nuitka</a><a class="headerlink" href="#about-nuitka" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id2">About Nuitka</a><a class="headerlink" href="#about-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <p>Nuitka is a project to write a Python compiler in Python. Unlike PyPy,
 it is about static compilation, and aims to be less complex, but fully
 compatible with gradual degradation of performance, up to C level.</p>
@@ -203,7 +204,7 @@ consider reading the <a class="reference external" href="/doc/user-manual.html">
 <a class="reference external" href="/doc/developer-manual.html">Developer Manual</a> for further
 clarification.</p>
 <section id="what-we-do">
-<h3><a class="toc-backref" href="#id3">What we do</a><a class="headerlink" href="#what-we-do" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id3">What we do</a><a class="headerlink" href="#what-we-do" title="Permalink to this heading">&#61633;</a></h3>
 <p>The software created is a compiler that is a drop-in replacement for
 CPython and derivatives like Anaconda.</p>
 <p>It aims at accelerating Python closer to C level while maintaining the
@@ -211,39 +212,39 @@ full compatibility, while also delivering an option for deployment of
 applications in a standalone fashion.</p>
 </section>
 <section id="why-is-it-interesting">
-<h3><a class="toc-backref" href="#id4">Why is it interesting?</a><a class="headerlink" href="#why-is-it-interesting" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id4">Why is it interesting?</a><a class="headerlink" href="#why-is-it-interesting" title="Permalink to this heading">&#61633;</a></h3>
 <p>Python is used in a lot of places, but when it comes to performance,
 other languages are used, have to be used. Nuitka aims at changing it.
 Making Python even more of a choice for high performance computing will
 make us famous, rich, or loved. Maybe even all of that.</p>
 </section>
 <section id="who-uses-it">
-<h3><a class="toc-backref" href="#id5">Who uses it?</a><a class="headerlink" href="#who-uses-it" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id5">Who uses it?</a><a class="headerlink" href="#who-uses-it" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka already has a lot of users. Many of these are most interested in
 the packaging side, but also some care about even tiny performance
 improvements, like the roughly 2x-3x speed up achieved in most cases.</p>
 </section>
 <section id="what-languages-is-it-written-in">
-<h3><a class="toc-backref" href="#id6">What languages is it written in?</a><a class="headerlink" href="#what-languages-is-it-written-in" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id6">What languages is it written in?</a><a class="headerlink" href="#what-languages-is-it-written-in" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka is written in Python. It has a C run time, that for some ideas
 you would have to touch, for some you absolutely do not. There is a lot
 to be done in pure Python, esp. static optimization.</p>
 </section>
 <section id="how-is-it-going-to-change-the-world">
-<h3><a class="toc-backref" href="#id7">How is it going to change the world?</a><a class="headerlink" href="#how-is-it-going-to-change-the-world" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id7">How is it going to change the world?</a><a class="headerlink" href="#how-is-it-going-to-change-the-world" title="Permalink to this heading">&#61633;</a></h3>
 <p>Being able to write C speed code in a language as simple as Python. What
 else to say. This is taking Python where it currently cannot be.</p>
 </section>
 </section>
 <section id="contacting-nuitka">
-<h2><a class="toc-backref" href="#id8">Contacting Nuitka</a><a class="headerlink" href="#contacting-nuitka" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id8">Contacting Nuitka</a><a class="headerlink" href="#contacting-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <p>For the purpose of GSoC the Nuitka development mailing list (since
 closed) can be used, as well as private email. We will be reachable via
 Hangout/Duo calls on a regular basis.</p>
 <p>We will be able to accommodate all time zones somehow.</p>
 </section>
 <section id="getting-started">
-<h2><a class="toc-backref" href="#id9">Getting Started</a><a class="headerlink" href="#getting-started" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id9">Getting Started</a><a class="headerlink" href="#getting-started" title="Permalink to this heading">&#61633;</a></h2>
 <p>Nuitka setup is trivial and explained in the <a class="reference external" href="/doc/user-manual.html">User Manual</a>. Using Anaconda Python on Windows, or a normal
 Linux system, and you are good to go with a git clone of Nuitka in a
 minute. See <a class="reference external" href="/pages/download.html">Download page</a> how to do that.</p>
@@ -253,7 +254,7 @@ guide you through that, it&#8217;s easy. We are not very formal, but helpful.</p
 will not know what it is about.</p>
 </section>
 <section id="mentors">
-<h2><a class="toc-backref" href="#id10">Mentors</a><a class="headerlink" href="#mentors" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id10">Mentors</a><a class="headerlink" href="#mentors" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Kay Hayen &lt;<a class="reference external" href="mailto:kay.hayen%40gmail.com">kay<span>.</span>hayen<span>@</span>gmail<span>.</span>com</a>&gt;, creator of Nuitka</p></li>
 <li><p>Kamran Ghanaat &lt;<a class="reference external" href="mailto:kamran.ghanaat%40uni-oldenburg.de">kamran<span>.</span>ghanaat<span>@</span>uni-oldenburg<span>.</span>de</a>&gt;, seasoned all around
@@ -264,9 +265,9 @@ Nuitka-Utilities repo.</p></li>
 </ul>
 </section>
 <section id="ideas">
-<h2><a class="toc-backref" href="#id11">Ideas</a><a class="headerlink" href="#ideas" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id11">Ideas</a><a class="headerlink" href="#ideas" title="Permalink to this heading">&#61633;</a></h2>
 <section id="nuitka-support-for-pypi-top-50">
-<h3><a class="toc-backref" href="#id12">1. Nuitka support for PyPI top 50</a><a class="headerlink" href="#nuitka-support-for-pypi-top-50" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id12">1. Nuitka support for PyPI top 50</a><a class="headerlink" href="#nuitka-support-for-pypi-top-50" title="Permalink to this heading">&#61633;</a></h3>
 <p>Project description: Nuitka works with most software. The aim of this
 project is to make sure it&#8217;s true for the top 50 packages on PyPI, by
 compiling and using their example codes.</p>
@@ -329,7 +330,7 @@ questions and clarifications there.</p>
 McKie</p>
 </section>
 <section id="nuitka-one-file-standalone-option">
-<h3><a class="toc-backref" href="#id13">2. Nuitka one file standalone option</a><a class="headerlink" href="#nuitka-one-file-standalone-option" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id13">2. Nuitka one file standalone option</a><a class="headerlink" href="#nuitka-one-file-standalone-option" title="Permalink to this heading">&#61633;</a></h3>
 <p>Project description: Nuitka has a mode meant for distribution to another
 system that puts everything needed in a single folder with a <code class="docutils literal notranslate"><span class="pre">.dist</span></code>
 suffix. This folder is then essentially the distribution.</p>
@@ -351,7 +352,7 @@ questions and clarifications there.</p>
 <p>Potential mentors: Jorj X. McKie, Kay Hayen, Kamran Ghanaat</p>
 </section>
 <section id="nuitka-benchmarks">
-<h3><a class="toc-backref" href="#id14">3. Nuitka benchmarks</a><a class="headerlink" href="#nuitka-benchmarks" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id14">3. Nuitka benchmarks</a><a class="headerlink" href="#nuitka-benchmarks" title="Permalink to this heading">&#61633;</a></h3>
 <p>Project description: Nuitka has too little in the way of measuring the
 actual performance gains one has. You would change that.</p>
 <p>In a first stage, you would enhance the existing <a class="reference external" href="https://speedcenter.nuitka.net">speedcenter</a> to provide a more complete set of
@@ -376,7 +377,7 @@ questions and clarifications there.</p>
 McKie</p>
 </section>
 <section id="nuitka-all-built-ins">
-<h3><a class="toc-backref" href="#id15">4. Nuitka all built-ins</a><a class="headerlink" href="#nuitka-all-built-ins" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id15">4. Nuitka all built-ins</a><a class="headerlink" href="#nuitka-all-built-ins" title="Permalink to this heading">&#61633;</a></h3>
 <p>Project description: Nuitka has support for many built-ins, e.g. <code class="docutils literal notranslate"><span class="pre">len</span></code>
 already, which means dedicated C code, compile time evaluation, type
 shapes produced (in this case an <code class="docutils literal notranslate"><span class="pre">int</span></code>), but there are some notable
@@ -421,7 +422,7 @@ questions and clarifications there.</p>
 McKie</p>
 </section>
 <section id="nuitka-macos-ci">
-<h3><a class="toc-backref" href="#id16">5. Nuitka macOS CI</a><a class="headerlink" href="#nuitka-macos-ci" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id16">5. Nuitka macOS CI</a><a class="headerlink" href="#nuitka-macos-ci" title="Permalink to this heading">&#61633;</a></h3>
 <p>Project description: Nuitka has currently no CI for macOS, which means
 it can be broken in any release.</p>
 <p>Your task would be to enhance the Travis configuration to introduce that
@@ -443,7 +444,7 @@ valuable.</p>
 </section>
 </section>
 <section id="timeline">
-<h2><a class="toc-backref" href="#id17">Timeline</a><a class="headerlink" href="#timeline" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id17">Timeline</a><a class="headerlink" href="#timeline" title="Permalink to this heading">&#61633;</a></h2>
 <p>This is time line as relevant for the students:</p>
 <ul class="simple">
 <li><p>February 26 - organizations announced (PSF is going to be part of it)</p></li>

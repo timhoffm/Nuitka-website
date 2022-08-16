@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-24">
-<h1>Nuitka Release 0.3.24<a class="headerlink" href="#nuitka-release-0-3-24" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.24<a class="headerlink" href="#nuitka-release-0-3-24" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release contains progress on many fronts, except performance.</p>
@@ -148,7 +149,7 @@ on this.</p>
 definitions are now mere simple functions. This and later function
 references, is the important and only progress towards type inference.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>The compiled method type can now be used with <code class="docutils literal notranslate"><span class="pre">copy</span></code> module. That
 means, instances with methods can now be copied too. Fixed in
@@ -176,7 +177,7 @@ gives a <code class="docutils literal notranslate"><span class="pre">TypeError</
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added support creating compiled packages. If you give Nuitka a
 directory with an &#8220;__init__.py&#8221; file, it will compile that package
@@ -200,7 +201,7 @@ monkey patching classes works.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Migrated &#8220;bin/benchmark.sh&#8221; to Python as &#8220;misc/run-valgrind.py&#8221; and
 made it a bit more portable that way. Prefers &#8220;/var/tmp&#8221; if it exists
@@ -230,7 +231,7 @@ integrates with the web site.</p>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>The creation of the class dictionaries is now done with normal
 function bodies, that only needed to learn how to throw an exception
@@ -251,7 +252,7 @@ and less.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Updated CPython2.6 test suite &#8220;tests/CPython26&#8221; to 2.6.8, adding
 tests for recent bug fixes in CPython. No changes to Nuitka were
@@ -273,7 +274,7 @@ working.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>This release brought forward the most important remaining re-formulation
 changes needed for Nuitka. Removing class bodies, makes optimization yet
 again simpler. Still, making function references, so they can be copied,

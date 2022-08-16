@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-3">
-<h1>Nuitka Release 0.3.3<a class="headerlink" href="#nuitka-release-0-3-3" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.3<a class="headerlink" href="#nuitka-release-0-3-3" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release of Nuitka continues the focus on performance. It also
@@ -143,9 +144,9 @@ versions of the tests.</p>
 <p>This means an even higher level of compatibility has been achieved, then
 there is performance improvements, and ever cleaner structure.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <section id="generators">
-<h3>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Generators<a class="headerlink" href="#generators" title="Permalink to this heading">&#61633;</a></h3>
 <ul class="simple">
 <li><p>Generator functions tracked references to the common and the instance
 context independently, now the common context is not released before
@@ -159,7 +160,7 @@ error messages.</p></li>
 </ul>
 </section>
 <section id="function-calls">
-<h3>Function Calls<a class="headerlink" href="#function-calls" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Function Calls<a class="headerlink" href="#function-calls" title="Permalink to this heading">&#61633;</a></h3>
 <ul class="simple">
 <li><p>Extended call syntax with <code class="docutils literal notranslate"><span class="pre">**</span></code> allows that to use a mapping, and it
 is now checked if it really is a mapping and if the contents has
@@ -175,7 +176,7 @@ compatible with CPython.</p></li>
 </ul>
 </section>
 <section id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">&#61633;</a></h3>
 <ul class="simple">
 <li><p>The &#8220;locals()&#8221; built-in when used in the class scope (not in a
 method) now is correctly writable and writes to it change the
@@ -185,7 +186,7 @@ correct.</p></li>
 </ul>
 </section>
 <section id="others">
-<h3>Others<a class="headerlink" href="#others" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Others<a class="headerlink" href="#others" title="Permalink to this heading">&#61633;</a></h3>
 <ul class="simple">
 <li><p>Exceptions didn&#8217;t always have the correct stack reported.</p></li>
 <li><p>The pickling of some tuples showed that &#8220;cPickle&#8221; can have
@@ -194,7 +195,7 @@ non-reproducible results, using &#8220;pickle&#8221; to stream constants now</p>
 </section>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Access to instance attributes has become faster by writing specific
 code for the case. This is done in JIT way, attempting at run time to
@@ -207,7 +208,7 @@ constants, now that is true for every tuple usage.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The static helper classes, and the prelude code needed have been
 moved to separate C++ files and are now accessed &#8220;#include&#8221;. This
@@ -216,14 +217,14 @@ therefore easier to read and or change.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The generator functions and generator expressions have the attribute
 &#8220;gi_running&#8221; now. These indicate if they are currently running.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The script to extract the &#8220;doctests&#8221; from the CPython test suite has
 been rewritten entirely and works with more doctests now. Running
@@ -232,7 +233,7 @@ these tests created increased the test coverage a lot.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>One can now run multiple &#8220;compare_with_cpython&#8221; instances in
 parallel, which enables background test runs.</p></li>
@@ -242,7 +243,7 @@ the &#8220;create-environment.sh&#8221; script generates that for you easily.</p
 </ul>
 </section>
 <section id="numbers">
-<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this heading">&#61633;</a></h2>
 <p>python 2.6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pystone</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span> <span class="n">time</span> <span class="k">for</span> <span class="mi">50000</span> <span class="n">passes</span> <span class="o">=</span> <span class="mf">0.65</span>
 <span class="n">This</span> <span class="n">machine</span> <span class="n">benchmarks</span> <span class="n">at</span> <span class="mf">76923.1</span> <span class="n">pystones</span><span class="o">/</span><span class="n">second</span>

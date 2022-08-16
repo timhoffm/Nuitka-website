@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,12 +130,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-2">
-<h1>Nuitka Release 0.2<a class="headerlink" href="#nuitka-release-0-2" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.2<a class="headerlink" href="#nuitka-release-0-2" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>Good day, this is a major step ahead, improvements everywhere.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Migrated the Python parser from the deprecated and problematic
 <code class="docutils literal notranslate"><span class="pre">compiler</span></code> module to the <code class="docutils literal notranslate"><span class="pre">ast</span></code> module which fixes the <code class="docutils literal notranslate"><span class="pre">d[a,]</span> <span class="pre">=</span>
@@ -152,7 +153,7 @@ loop.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>I now maintain the &#8220;README.txt&#8221; in org-mode, and intend to use it as
 the issue tracker, but I am still a beginner at that.</p>
@@ -171,7 +172,7 @@ and a pull request. When you make your clones of Nuitka public, use
 </ul>
 </section>
 <section id="reduced-differences">
-<h2>Reduced Differences<a class="headerlink" href="#reduced-differences" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Reduced Differences<a class="headerlink" href="#reduced-differences" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Did you know you could write <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">:</span> <span class="pre">(yield</span> <span class="pre">something)</span></code> and it
 gives you a lambda that creates a generator that produces that one
@@ -184,7 +185,7 @@ that use this already.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">Python</span></code> binary provided and <code class="docutils literal notranslate"><span class="pre">Nuitka.py</span></code> are now capable of
 accepting parameters for the program executed, in order to make it
@@ -198,7 +199,7 @@ probably in a minor release.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>So give it a whirl. I consider it to be substantially better than
 before, and the list of differences to CPython is getting small enough,
 plus there is already a fair bit of polish to it. Just watch out that it
@@ -290,8 +291,8 @@ needs gcc-4.5 or higher now.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/release-nuitka-02.html">CN</a></div>
-                            <div class="line"><a class="reference external" href="/de_DE/posts/release-nuitka-02.html">DE</a></div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/release-nuitka-02.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/release-nuitka-02.html">CN</a></div>
                             </div></div>
                 </blockquote>
             </div>

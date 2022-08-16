@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-5-13">
-<h1>Nuitka Release 0.5.13<a class="headerlink" href="#nuitka-release-0-5-13" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.5.13<a class="headerlink" href="#nuitka-release-0-5-13" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release contains the first use of SSA for value propagation and
@@ -139,7 +140,7 @@ massive amounts of bug fixes and optimization. Some of the bugs that
 were delivered as hotfixes, were only revealed when doing the value
 propagation as they still could apply to real code.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Fix, relative imports in packages were not working with absolute
 imports enabled via future flags. Fixed in 0.5.12.1 already.</p></li>
@@ -181,7 +182,7 @@ guidance.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Make direct calls out of called function creations. Initially this
 applies to lambda functions only, but it&#8217;s expected to become common
@@ -220,7 +221,7 @@ looking statements using the last trace collection.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added experimental support for Python 3.5, which seems to be passing
 the test suites just fine. The new <code class="docutils literal notranslate"><span class="pre">@</span></code> matrix multiplicator
@@ -232,7 +233,7 @@ detect.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added repository for Ubuntu Vivid (15.04) for download. Removed
 Ubuntu Saucy and Ubuntu Raring package downloads, these are no longer
@@ -246,7 +247,7 @@ command line, and whitelists an error that is Windows only.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Split up standalone code further, moving <code class="docutils literal notranslate"><span class="pre">depends.exe</span></code> handling to
 a separate module.</p></li>
@@ -261,7 +262,7 @@ as much in the way of standalone code.</p></li>
 </ul>
 </section>
 <section id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Made <code class="docutils literal notranslate"><span class="pre">BuiltinsTest</span></code> directly executable with Python3.</p></li>
 <li><p>Added construct test to demonstrate the speed up of direct lambda
@@ -275,7 +276,7 @@ future flag enabled.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>This release is major due to amount of ground covered. The reduction in
 memory usage of Nuitka itself (the C++ compiler will still use much
 memory) is very massive and an important aspect of scalability too.</p>
@@ -373,8 +374,8 @@ of progress now.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0513.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0513.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0513.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0513.html">DE</a></div>
                             </div></div>
                 </blockquote>
             </div>

@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-2">
-<h1><a class="toc-backref" href="#id1">Nuitka this week #2</a><a class="headerlink" href="#nuitka-this-week-2" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id1">Nuitka this week #2</a><a class="headerlink" href="#nuitka-this-week-2" title="Permalink to this heading">&#61633;</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -148,13 +149,13 @@
 </ul>
 </div>
 <section id="new-series-rationale">
-<h2><a class="toc-backref" href="#id2">New Series Rationale</a><a class="headerlink" href="#new-series-rationale" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id2">New Series Rationale</a><a class="headerlink" href="#new-series-rationale" title="Permalink to this heading">&#61633;</a></h2>
 <p>As discussed last week in <a class="reference external" href="./nuitka-this-week-1.html">TWN #1</a> this is
 a new series that I am using to highlight things that are going on,
 newly found issues, hotfixes, all the things Nuitka.</p>
 </section>
 <section id="python-3-7">
-<h2><a class="toc-backref" href="#id3">Python 3.7</a><a class="headerlink" href="#python-3-7" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id3">Python 3.7</a><a class="headerlink" href="#python-3-7" title="Permalink to this heading">&#61633;</a></h2>
 <p>I made the first release with official 3.7 support, huge milestone in
 terms of catching up. Generic classes posed a few puzzles, and need more
 refinements for error handling, but good code works now.</p>
@@ -163,7 +164,7 @@ even hard to know the exact base classes to be used. But eventually we
 will manage to overcome this and statically optimize that.</p>
 </section>
 <section id="msi-3-7-files-for-nuitka">
-<h2><a class="toc-backref" href="#id4">MSI 3.7 files for Nuitka</a><a class="headerlink" href="#msi-3-7-files-for-nuitka" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id4">MSI 3.7 files for Nuitka</a><a class="headerlink" href="#msi-3-7-files-for-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <p>Building the MSI files for Nuitka ran into a 3.7.0 regression of CPython
 failing to build them, that I reported and seems to be valid bug of
 theirs.</p>
@@ -174,14 +175,14 @@ so it would be nice to keep them for those who use them for deployment
 internally.</p>
 </section>
 <section id="planned-mode">
-<h2><a class="toc-backref" href="#id5">Planned Mode</a><a class="headerlink" href="#planned-mode" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id5">Planned Mode</a><a class="headerlink" href="#planned-mode" title="Permalink to this heading">&#61633;</a></h2>
 <p>I have a change here. This is going to be a draft post until I publish
 it, so I might the link, or mention it on the list, but I do not think I
 will wait for feedback, where there is not going to be all that much.</p>
 <p>So I am shooting this off the web site.</p>
 </section>
 <section id="goto-generators">
-<h2><a class="toc-backref" href="#id6">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id6">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this heading">&#61633;</a></h2>
 <p>This is an exciting field of work, that I have been busy with this week.
 I will briefly describe the issue at hand.</p>
 <p>So generators in Python are more generally called coroutines in other
@@ -221,7 +222,7 @@ and they were generalized into one thing now, making for cleaner and
 easier to understand Nuitka code.</p>
 </section>
 <section id="python3-enumerators">
-<h2><a class="toc-backref" href="#id7">Python3 Enumerators</a><a class="headerlink" href="#python3-enumerators" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id7">Python3 Enumerators</a><a class="headerlink" href="#python3-enumerators" title="Permalink to this heading">&#61633;</a></h2>
 <p>On interesting thing, is that an incompatibility related to <code class="docutils literal notranslate"><span class="pre">__new__</span></code>
 will go away now.</p>
 <p>The automatic <code class="docutils literal notranslate"><span class="pre">staticmethod</span></code> that we had to hack into it, because the
@@ -236,7 +237,7 @@ factory testing and will probably become part of a hotfix if it turns
 out good.</p>
 </section>
 <section id="hotfixes">
-<h2><a class="toc-backref" href="#id8">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id8">Hotfixes</a><a class="headerlink" href="#hotfixes" title="Permalink to this heading">&#61633;</a></h2>
 <p>Immediately after the release, some rarely run test, where I compiled
 all the code on my machine, found 2 older bugs, obscure ones arguably,
 that I made into a hotfix, also because the test runner was having a
@@ -250,7 +251,7 @@ to reproduce anything. I bundled a 3.7 improvement for error cases in
 class creation with it. So that was the 0.5.32.2 release.</p>
 </section>
 <section id="plans">
-<h2><a class="toc-backref" href="#id9">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id9">Plans</a><a class="headerlink" href="#plans" title="Permalink to this heading">&#61633;</a></h2>
 <p>Finishing goto generators is my top priority, but I am also going over
 minor issues with the 3.7 test suite, fixing test cases there, and as
 with e.g. the enum issue, even known issues this now finds.</p>
@@ -342,8 +343,8 @@ with e.g. the enum issue, even known issues this now finds.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-2.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-2.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-2.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-2.html">DE</a></div>
                             </div></div>
                 </blockquote>
             </div>

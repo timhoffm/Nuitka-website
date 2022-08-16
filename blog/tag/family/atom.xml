@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged family</title>
-  <updated>2022-06-25T16:25:55.656043+00:00</updated>
+  <updated>2022-08-16T07:21:58.467068+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/family/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/family-photo.html</id>
     <title>Family Photo</title>
@@ -144,8 +144,8 @@ sleeping, getting caressed by me.&lt;/p&gt;
     <summary>The new cat has become indispensable for just about anything. She
 follows throughout the hous, and is just too lovely, here two photos of
 her in typical spots.</summary>
-    <category term="family" label="family"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="family" label="family"/>
     <published>2011-10-18T17:36:00+00:00</published>
   </entry>
   <entry>
@@ -172,8 +172,8 @@ from PyCON DE, and the family loves it.&lt;/p&gt;
     <link href="https://nuitka.net/posts/puting-a-conference-t-shirt-to-good-use.html" rel="alternate"/>
     <summary>This is my 7rd old son in his “Halloween” outfit. It is the first time,
 he was allowed to do it and so he was very excited.</summary>
-    <category term="family" label="family"/>
     <category term="Python" label="Python"/>
+    <category term="family" label="family"/>
     <published>2011-11-01T09:11:00+00:00</published>
   </entry>
   <entry>

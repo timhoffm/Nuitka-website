@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2018</title>
-  <updated>2022-06-25T16:25:49.549129+00:00</updated>
+  <updated>2022-08-16T07:21:52.135188+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2018/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/nuitka-release-0529.html</id>
     <title>Nuitka Release 0.5.29</title>
@@ -170,9 +170,9 @@ With that work in place, a lot of improvements will happen.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0529.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-03-28T00:45:00+00:00</published>
   </entry>
   <entry>
@@ -333,9 +333,9 @@ to statically optimize those better anyway.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0530.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-05-01T11:53:00+00:00</published>
   </entry>
   <entry>
@@ -511,9 +511,9 @@ dependency walker.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0531.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-07-10T15:37:00+00:00</published>
   </entry>
   <entry>
@@ -729,10 +729,10 @@ generators and coroutines that I will talk about next week then.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-1.html" rel="alternate"/>
     <summary>Nuitka this week #1</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-07-27T07:08:54+00:00</published>
   </entry>
   <entry>
@@ -866,9 +866,9 @@ variables.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0532.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-07-29T22:46:00+00:00</published>
   </entry>
   <entry>
@@ -1010,10 +1010,10 @@ with e.g. the enum issue, even known issues this now finds.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-2.html" rel="alternate"/>
     <summary>Nuitka this week #2</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-08-02T07:08:54+00:00</published>
   </entry>
   <entry>
@@ -1159,10 +1159,10 @@ about how it also enables C types work next week.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-3.html" rel="alternate"/>
     <summary>Nuitka this week #3</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-08-11T11:58:00+00:00</published>
   </entry>
   <entry>
@@ -1250,10 +1250,10 @@ the goto generator work to finish.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-4.html" rel="alternate"/>
     <summary>Nuitka this week #4</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-08-17T14:55:00+00:00</published>
   </entry>
   <entry>
@@ -1424,10 +1424,10 @@ further its development. Go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-5.html" rel="alternate"/>
     <summary>Nuitka this week #5</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-08-24T12:55:00+00:00</published>
   </entry>
   <entry>
@@ -1619,10 +1619,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-6.html" rel="alternate"/>
     <summary>Nuitka this week #6</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-09-12T12:05:00+00:00</published>
   </entry>
   <entry>
@@ -1841,9 +1841,9 @@ avoid and/or find.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0533.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-09-14T19:54:00+00:00</published>
   </entry>
   <entry>
@@ -2055,10 +2055,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-7.html" rel="alternate"/>
     <summary>Nuitka this week #7</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-09-22T11:05:00+00:00</published>
   </entry>
   <entry>
@@ -2242,9 +2242,9 @@ many more programs are going to benefiting from this.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-060.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-09-27T18:24:00+00:00</published>
   </entry>
   <entry>
@@ -2531,10 +2531,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-8.html" rel="alternate"/>
     <summary>Nuitka this week #8</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-10-02T06:05:00+00:00</published>
   </entry>
   <entry>
@@ -2874,10 +2874,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-9.html" rel="alternate"/>
     <summary>Nuitka this week #9</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-10-20T06:17:00+00:00</published>
   </entry>
   <entry>
@@ -3118,10 +3118,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-10.html" rel="alternate"/>
     <summary>Nuitka this week #10</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-11-21T06:06:00+00:00</published>
   </entry>
   <entry>
@@ -3289,10 +3289,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-11.html" rel="alternate"/>
     <summary>Nuitka this week #11</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-12-10T07:09:00+00:00</published>
   </entry>
 </feed>

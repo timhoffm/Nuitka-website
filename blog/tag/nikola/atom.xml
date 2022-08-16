@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged Nikola</title>
-  <updated>2022-06-25T16:25:50.740190+00:00</updated>
+  <updated>2022-08-16T07:21:53.342846+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/nikola/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/nikola-for-nuitka.html</id>
     <title>Nikola for nuitka.net</title>
@@ -39,8 +39,8 @@ on. But this is a good base.&lt;/p&gt;
     <summary>Some time ago, I asked about static site generators and tried a few, but nothing was
 as ReST friendly as I would like to. To me, ReST is to text publishing,
 what Python is to programming.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nikola" label="Nikola"/>
+    <category term="Python" label="Python"/>
     <published>2012-05-26T13:06:00+00:00</published>
   </entry>
   <entry>
@@ -63,8 +63,8 @@ this is what Google Webmaster tool says about it.&lt;/p&gt;
     <summary>At end the end of May, I switched my website from a W3 Total Cache
 enhanced wordpress installation to static generated with Nikola, and
 this is what Google Webmaster tool says about it.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nikola" label="Nikola"/>
+    <category term="Python" label="Python"/>
     <published>2012-06-12T13:15:00+00:00</published>
   </entry>
   <entry>
@@ -153,11 +153,11 @@ want) to there.&lt;/p&gt;
     <summary>Once a long time ago, I was benchmarking Nuitka more often. Check “What
 is Nuitka?” in case you don’t know what it
 is.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <category term="Nikola" label="Nikola"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="benchmark" label="benchmark"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-06-30T16:39:00+00:00</published>
   </entry>
 </feed>

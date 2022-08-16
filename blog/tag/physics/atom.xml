@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged physics</title>
-  <updated>2022-06-25T16:25:55.794622+00:00</updated>
+  <updated>2022-08-16T07:21:58.608135+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/physics/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/nuitka-python-research-and-physics.html</id>
     <title>Nuitka, Python research and Physics</title>
@@ -58,8 +58,8 @@ started to realize that weak nuclear force and electromagnetic force
 were the same sort. That was after discovering that electricity and
 magnetism were the same, and that is the pattern. It’s called symmetry,
 equivalence, and so on.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="physics" label="physics"/>
     <published>2013-10-04T09:54:45+00:00</published>
   </entry>

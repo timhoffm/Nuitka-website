@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="python3-support-by-nuitka-is-upcoming">
-<h1>Python3 support by Nuitka is upcoming<a class="headerlink" href="#python3-support-by-nuitka-is-upcoming" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Python3 support by Nuitka is upcoming<a class="headerlink" href="#python3-support-by-nuitka-is-upcoming" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is kind of semi-interesting news for you Python3 lovers. My
 <a class="reference external" href="/pages/overview.html">&#8220;Python compiler Nuitka&#8221;</a> has been supporting
 the language somewhat, but in the next release it&#8217;s going to be
@@ -148,7 +149,7 @@ this writing, there is pre-releases there, but after next release, there
 will only stable releases published.</p>
 <p>My quick take on the Python3 that I saw:</p>
 <section id="keyword-only-arguments">
-<h2>Keyword Only Arguments<a class="headerlink" href="#keyword-only-arguments" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Keyword Only Arguments<a class="headerlink" href="#keyword-only-arguments" title="Permalink to this heading">&#61633;</a></h2>
 <p>Now seriously. I didn&#8217;t miss that. And I am going to hate the extra
 effort it causes to implement argument parsing. And when I looked into
 default handling, I was just shocked:</p>
@@ -160,7 +161,7 @@ a CPython <a class="reference external" href="http://bugs.python.org/issue16967"
 And I am kind of shocked this could be wrong.</p>
 </section>
 <section id="annotations">
-<h2>Annotations<a class="headerlink" href="#annotations" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Annotations<a class="headerlink" href="#annotations" title="Permalink to this heading">&#61633;</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span> <span class="n">arg1</span> <span class="p">:</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_int</span><span class="p">,</span> <span class="n">arg2</span> <span class="p">:</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_int</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">c_types</span><span class="o">.</span><span class="n">c_long</span>
    <span class="k">return</span> <span class="n">arg1</span><span class="o">+</span><span class="n">arg2</span>
 </pre></div>
@@ -173,7 +174,7 @@ come last. Coming last, they kind of come too late to accept do anything
 with defaults.</p>
 </section>
 <section id="unicode-variables">
-<h2>Unicode Variables<a class="headerlink" href="#unicode-variables" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Unicode Variables<a class="headerlink" href="#unicode-variables" title="Permalink to this heading">&#61633;</a></h2>
 <p>Now great. While it&#8217;s one step closer to &#8220;you can&#8217;t re-enter any
 identifier without copy&amp;paste&#8221;, it is also a whole lot more consistent,
 if you come e.g. from German or French and need only a few extra
@@ -181,7 +182,7 @@ letters. And there has to be at least one advantage to making everything
 unicode, right?</p>
 </section>
 <section id="exception-chaining">
-<h2>Exception Chaining<a class="headerlink" href="#exception-chaining" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Exception Chaining<a class="headerlink" href="#exception-chaining" title="Permalink to this heading">&#61633;</a></h2>
 <p>Gotta love that. Exception handlers are often subject to bit rot. They
 will themselves contain errors, when they are actually used, hiding the
 important thing that happened. No more. That&#8217;s great.</p>
@@ -189,24 +190,24 @@ important thing that happened. No more. That&#8217;s great.</p>
 see them a lot yet. That&#8217;s probably because they are too new.</p>
 </section>
 <section id="starred-assigns">
-<h2>Starred Assigns<a class="headerlink" href="#starred-assigns" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Starred Assigns<a class="headerlink" href="#starred-assigns" title="Permalink to this heading">&#61633;</a></h2>
 <p>I was wondering already, why that didn&#8217;t work before.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">something</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="metaclass-prepare">
-<h2>Metaclass __prepare__<a class="headerlink" href="#metaclass-prepare" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Metaclass __prepare__<a class="headerlink" href="#metaclass-prepare" title="Permalink to this heading">&#61633;</a></h2>
 <p>That&#8217;s great stuff. Wish somebody had thought about meta classes that
 way from the outset.</p>
 </section>
 <section id="nonlocal">
-<h2>nonlocal<a class="headerlink" href="#nonlocal" title="Permalink to this headline">&#61633;</a></h2>
+<h2>nonlocal<a class="headerlink" href="#nonlocal" title="Permalink to this heading">&#61633;</a></h2>
 <p>Yeah, big stuff. I love it. Also being able to write closure variables
 is great for consistency.</p>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">&#61633;</a></h2>
 <p>Nothing ground breaking. Nothing that makes me give up on Python2.7 yet,
 but a bunch of surprises. And for Nuitka, this also found bugs and
 corner cases, where things were not yet properly tested. The Python3
@@ -309,8 +310,8 @@ finding a proper re-formulation for &#8220;yield from&#8221; too.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/de_DE/posts/python-3-nuitka-support-is-upcoming.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/posts/python-3-nuitka-support-is-upcoming.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/python-3-nuitka-support-is-upcoming.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/python-3-nuitka-support-is-upcoming.html">DE</a></div>
                             </div></div>
                 </blockquote>
             </div>

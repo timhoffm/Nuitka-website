@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-7">
-<h1><a class="toc-backref" href="#id2">Nuitka this week #7</a><a class="headerlink" href="#nuitka-this-week-7" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id2">Nuitka this week #7</a><a class="headerlink" href="#nuitka-this-week-7" title="Permalink to this heading">&#61633;</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -151,7 +152,7 @@
 </ul>
 </div>
 <section id="nuitka-design-philosophy">
-<h2><a class="toc-backref" href="#id3">Nuitka Design Philosophy</a><a class="headerlink" href="#nuitka-design-philosophy" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id3">Nuitka Design Philosophy</a><a class="headerlink" href="#nuitka-design-philosophy" title="Permalink to this heading">&#61633;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>I wrote this as part of a discussion recently, and I think it makes
@@ -239,7 +240,7 @@ untrue, lets say not for optimizing compilers, not for type inference,
 etc.</p>
 </section>
 <section id="ui-rework">
-<h2><a class="toc-backref" href="#id4">UI rework</a><a class="headerlink" href="#ui-rework" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id4">UI rework</a><a class="headerlink" href="#ui-rework" title="Permalink to this heading">&#61633;</a></h2>
 <p>Following up on discussion on the mailing list, the user interface of
 Nuitka will become more clear with <code class="docutils literal notranslate"><span class="pre">--include-*</span></code> options and
 <code class="docutils literal notranslate"><span class="pre">--[no]follow-import*</span></code> options that better express what is going to
@@ -249,13 +250,13 @@ what you say, as going beyond what you intend to deliver makes no sense
 in the normal case.</p>
 </section>
 <section id="goto-generators">
-<h2><a class="toc-backref" href="#id5">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id5">Goto Generators</a><a class="headerlink" href="#goto-generators" title="Permalink to this heading">&#61633;</a></h2>
 <p>Now release as 0.5.33 and there has been little regressions so far, but
 the one found is only in the pre-release of 0.6.0 so use that instead if
 you encounter a C compilation error.</p>
 </section>
 <section id="benchmarks">
-<h2><a class="toc-backref" href="#id6">Benchmarks</a><a class="headerlink" href="#benchmarks" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id6">Benchmarks</a><a class="headerlink" href="#benchmarks" title="Permalink to this heading">&#61633;</a></h2>
 <p>The performance regressions fixed for 0.6.0 impact <code class="docutils literal notranslate"><span class="pre">pystone</span></code> by a lot,
 loops were slower, so were subscripts with constant integer indexes. It
 is a pity these were introduced in previous releases during refactorings
@@ -266,7 +267,7 @@ said, after 0.6.0 release, this will be a priority, to make them more
 useful.</p>
 </section>
 <section id="twitter">
-<h2><a class="toc-backref" href="#id7">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id7">Twitter</a><a class="headerlink" href="#twitter" title="Permalink to this heading">&#61633;</a></h2>
 <p>I continue to be active there. I just put out a poll about the comment
 system, and disabling Disqus comments I will focus on Twitter for web
 site comments too now.</p>
@@ -274,13 +275,13 @@ site comments too now.</p>
 <p>And lets not forget, having followers make me happy. So do re-tweets.</p>
 </section>
 <section id="help-wanted">
-<h2><a class="toc-backref" href="#id8">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id8">Help Wanted</a><a class="headerlink" href="#help-wanted" title="Permalink to this heading">&#61633;</a></h2>
 <p>If you are interested, I am tagging issues <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22" target="_blank">help wanted</a>
 and there is a bunch, and very likely at least one <em>you</em> can help with.</p>
 <p>Nuitka definitely needs more people to work on it.</p>
 </section>
 <section id="egg-files-in-pythonpath">
-<h2><a class="toc-backref" href="#id9">Egg files in PYTHONPATH</a><a class="headerlink" href="#egg-files-in-pythonpath" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id9">Egg files in PYTHONPATH</a><a class="headerlink" href="#egg-files-in-pythonpath" title="Permalink to this heading">&#61633;</a></h2>
 <p>This is a relatively old issue that now got addressed. Basically these
 should be loaded from for compilation. Nuitka now unpacks them to a
 cache folder so it can read source code from them, so this apparently
@@ -288,12 +289,12 @@ rare use case works now, yet again improving compatibility.</p>
 <p>Will be there for 0.6.0 release.</p>
 </section>
 <section id="certifi">
-<h2><a class="toc-backref" href="#id10">Certifi</a><a class="headerlink" href="#certifi" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id10">Certifi</a><a class="headerlink" href="#certifi" title="Permalink to this heading">&#61633;</a></h2>
 <p>Seems request module sometimes uses that. Nuitka now includes that data
 file starting with 0.6.0 release.</p>
 </section>
 <section id="compatibility-with-pkg-resources">
-<h2><a class="toc-backref" href="#id11">Compatibility with pkg_resources</a><a class="headerlink" href="#compatibility-with-pkg-resources" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id11">Compatibility with pkg_resources</a><a class="headerlink" href="#compatibility-with-pkg-resources" title="Permalink to this heading">&#61633;</a></h2>
 <p>It seems that getting &#8220;distributions&#8221; and taking versions from there, is
 really a thing, and Nuitka fails pkg_resources requirement checks in
 standalone mode at least, and that is of course sad.</p>
@@ -305,7 +306,7 @@ own makings, but there is always a monkey patch possible to make it
 better.</p>
 </section>
 <section id="plans">
-<h2><a class="toc-backref" href="#id12">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id12">Plans</a><a class="headerlink" href="#plans" title="Permalink to this heading">&#61633;</a></h2>
 <p>Still working on the 0.6.0 release, cleaning up open ends only. Release
 tests seem to be pretty good looking. The UI changes and stuff are a
 good time to be done now, but delay things, and there is a bunch of
@@ -317,7 +318,7 @@ because it feels very nice, and improves some operations by a lot too.
 Initially I had made a cut for 0.6.1 already, but that is no more.</p>
 </section>
 <section id="donations">
-<h2><a class="toc-backref" href="#id13">Donations</a><a class="headerlink" href="#donations" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id13">Donations</a><a class="headerlink" href="#donations" title="Permalink to this heading">&#61633;</a></h2>
 <p>If you want to help, but cannot spend the time, please consider to
 donate to Nuitka, and go here:</p>
 <p><a class="reference external" href="/pages/donations.html">Donate to Nuitka</a></p>
@@ -408,8 +409,8 @@ donate to Nuitka, and go here:</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-7.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-7.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-this-week-7.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-this-week-7.html">DE</a></div>
                             </div></div>
                 </blockquote>
             </div>

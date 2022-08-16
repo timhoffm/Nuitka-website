@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged Nuitka</title>
-  <updated>2022-06-25T16:25:50.749034+00:00</updated>
+  <updated>2022-08-16T07:21:53.351745+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/nuitka/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/starting-to-blog-who-and-why.html</id>
     <title>Starting to blog, who and why?</title>
@@ -106,9 +106,9 @@ today. Finally. For a long time I knew I would, but actually doing it,
 is a different beast. Reaching my goals for release turned out to be
 less far away than I hope, so instead of end of August, I can already
 release it now.</summary>
-    <category term="compiler" label="compiler"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-08-18T07:49:00+00:00</published>
   </entry>
   <entry>
@@ -158,9 +158,9 @@ think in the comments section.&lt;/p&gt;
     <link href="https://nuitka.net/posts/minor-release-nuitka-011.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-08-22T15:45:00+00:00</published>
   </entry>
   <entry>
@@ -200,8 +200,8 @@ real thing, and drop me a line about it, just so I know.&lt;/p&gt;
     <link href="https://nuitka.net/posts/new-git-repository-to-sync-with-nuitka-releases.html" rel="alternate"/>
     <summary>For you git fans out there I have just added a new method to download
 Nuitka from something I call the release git repository:</summary>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="git" label="git"/>
     <published>2010-08-26T23:06:00+00:00</published>
   </entry>
   <entry>
@@ -292,9 +292,9 @@ needs gcc-4.5 or higher now.&lt;/p&gt;
     <link href="https://nuitka.net/posts/release-nuitka-02.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-08-28T17:12:00+00:00</published>
   </entry>
   <entry>
@@ -350,9 +350,9 @@ could aim at some basic optimization finally.&lt;/p&gt;
     <link href="https://nuitka.net/posts/release-nuitka-021.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-09-05T14:00:00+00:00</published>
   </entry>
   <entry>
@@ -469,9 +469,9 @@ introduce a decicated type for these too, possibly in the next release.&lt;/p&gt
     <link href="https://nuitka.net/posts/release-nuitka-022.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-09-11T09:41:00+00:00</published>
   </entry>
   <entry>
@@ -519,8 +519,8 @@ body work.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/python-scope-quiz.html" rel="alternate"/>
     <summary>Say you have the following module code:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="quiz" label="quiz"/>
     <published>2010-09-12T16:01:00+00:00</published>
   </entry>
@@ -591,9 +591,9 @@ feature.&lt;/p&gt;&lt;/li&gt;
     <link href="https://nuitka.net/posts/release-nuitka-023.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-09-17T19:42:00+00:00</published>
   </entry>
   <entry>
@@ -652,8 +652,8 @@ type code as well. :-)&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/python-exec-in-nested-functions-quiz.html" rel="alternate"/>
     <summary>Say you have the following module code:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2010-09-20T20:51:00+00:00</published>
   </entry>
   <entry>
@@ -730,9 +730,9 @@ with statement works as expected.&lt;/p&gt;&lt;/li&gt;
     <link href="https://nuitka.net/posts/release-nuitka-024.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-09-22T18:29:00+00:00</published>
   </entry>
   <entry>
@@ -825,9 +825,9 @@ regression fix.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-030.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-09-26T17:38:00+00:00</published>
   </entry>
   <entry>
@@ -936,9 +936,9 @@ somewhere. As always you will find its latest version here.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-031.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-09-30T09:28:00+00:00</published>
   </entry>
   <entry>
@@ -1074,9 +1074,9 @@ also more cleanups, not the big things.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-032.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-10-10T21:10:00+00:00</published>
   </entry>
   <entry>
@@ -1216,9 +1216,9 @@ the “create-environment.sh” script generates that for you easily.&lt;/p&gt;&
     <link href="https://nuitka.net/posts/nuitka-release-033.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-11-15T00:17:00+00:00</published>
   </entry>
   <entry>
@@ -1373,10 +1373,10 @@ version here&lt;/a&gt; to get it.&lt;/p&gt;
     <summary>This pre-release of Nuitka has a focus on re-organizing the Nuitka
 generated source code. Please see the page “What is Nuitka?” for clarification of what it is now and what it
 wants to be.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
+    <category term="git" label="git"/>
     <published>2010-12-06T23:27:00+00:00</published>
   </entry>
   <entry>
@@ -1531,9 +1531,9 @@ by default delete the build results.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-034.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2010-12-24T14:01:00+00:00</published>
   </entry>
   <entry>
@@ -1571,8 +1571,8 @@ type that breaks fundamental assumptions like “x == x”.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/python-float-quiz.html" rel="alternate"/>
     <summary>Say you have the following code:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="quiz" label="quiz"/>
     <published>2011-01-02T13:37:00+00:00</published>
   </entry>
@@ -1805,9 +1805,9 @@ Time to rejoice.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-035.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-01-22T14:52:00+00:00</published>
   </entry>
   <entry>
@@ -1931,9 +1931,9 @@ implemented. Stay tuned for future release for actual progress.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-036.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-02-28T21:45:00+00:00</published>
   </entry>
   <entry>
@@ -2077,9 +2077,9 @@ should have covered.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-037.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-03-19T14:05:00+00:00</published>
   </entry>
   <entry>
@@ -2243,9 +2243,9 @@ compared to the previous release.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-038---windows-support.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-04-03T00:30:00+00:00</published>
   </entry>
   <entry>
@@ -2684,10 +2684,10 @@ separately.&lt;/p&gt;&lt;/li&gt;
 Over the 0.3.x release cycle, I have mostly looked at its performance
 with “pystone”. I merely wanted to have a target to look at and enjoy
 the progress we have made there.</summary>
-    <category term="benchmark" label="benchmark"/>
-    <category term="compiler" label="compiler"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="benchmark" label="benchmark"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-04-16T11:52:00+00:00</published>
   </entry>
   <entry>
@@ -2941,9 +2941,9 @@ optimization level, assertions, etc.) and instead a clear view.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-039.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-04-24T11:19:00+00:00</published>
   </entry>
   <entry>
@@ -3105,9 +3105,9 @@ speedups.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0310.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-07-31T17:12:00+00:00</published>
   </entry>
   <entry>
@@ -3189,9 +3189,9 @@ whatever.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-has-a-new-home---nuitkanet.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="git" label="git"/>
     <published>2011-08-16T18:21:00+00:00</published>
   </entry>
   <entry>
@@ -3233,9 +3233,9 @@ Lets hope it’s good. :-)&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/going-to-pycon-de.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
-    <category term="compiler" label="compiler"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-08-18T13:02:00+00:00</published>
   </entry>
   <entry>
@@ -3365,9 +3365,9 @@ on ARM.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0311.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-09-17T02:41:00+00:00</published>
   </entry>
   <entry>
@@ -3458,9 +3458,9 @@ may not be all that perfect yet.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-git-flow.html" rel="alternate"/>
     <summary>Hello there,</summary>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="git" label="git"/>
     <published>2011-10-01T08:37:00+00:00</published>
   </entry>
   <entry>
@@ -3686,8 +3686,8 @@ sleeping, getting caressed by me.&lt;/p&gt;
     <summary>The new cat has become indispensable for just about anything. She
 follows throughout the hous, and is just too lovely, here two photos of
 her in typical spots.</summary>
-    <category term="family" label="family"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="family" label="family"/>
     <published>2011-10-18T17:36:00+00:00</published>
   </entry>
   <entry>
@@ -3719,10 +3719,10 @@ done.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka---pycon-de-video.html" rel="alternate"/>
     <summary>Hello everybody,</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="git" label="git"/>
     <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
+    <category term="git" label="git"/>
     <category term="presentation" label="presentation"/>
     <category term="video" label="video"/>
     <published>2011-10-22T06:39:00+00:00</published>
@@ -3890,9 +3890,9 @@ to improve the Windows support which appears to have some issues.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0312.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-10-24T20:43:00+00:00</published>
   </entry>
   <entry>
@@ -4021,9 +4021,9 @@ meaningful benchmarks and resume work on optimization.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0313.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-11-01T15:07:00+00:00</published>
   </entry>
   <entry>
@@ -4134,9 +4134,9 @@ benchmarks and resume work on optimization.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0314.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-11-07T20:52:00+00:00</published>
   </entry>
   <entry>
@@ -4342,9 +4342,9 @@ change too.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0315.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-12-01T20:24:00+00:00</published>
   </entry>
   <entry>
@@ -4523,9 +4523,9 @@ its direction, but it won’t be enough yet.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0316.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2011-12-18T17:24:00+00:00</published>
   </entry>
   <entry>
@@ -4738,9 +4738,9 @@ discover improvements and regressions more clearly.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0317.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-01-09T07:59:00+00:00</published>
   </entry>
   <entry>
@@ -4864,9 +4864,9 @@ possible, and to immediately benefit from such improvements.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0318.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-01-14T11:34:00+00:00</published>
   </entry>
   <entry>
@@ -5027,9 +5027,9 @@ worth to get out.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0319.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-01-26T20:49:00+00:00</published>
   </entry>
   <entry>
@@ -5300,9 +5300,9 @@ effective Python compiler this project is all about.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0320.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-02-27T22:48:00+00:00</published>
   </entry>
   <entry>
@@ -5545,9 +5545,9 @@ significant, and makes those appears as if they are achievable.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0321.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-04-13T10:19:00+00:00</published>
   </entry>
   <entry>
@@ -5754,9 +5754,9 @@ long, and looking at numbers will make sense.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0322.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-05-13T13:17:00+00:00</published>
   </entry>
   <entry>
@@ -5845,11 +5845,11 @@ want) to there.&lt;/p&gt;
     <summary>Once a long time ago, I was benchmarking Nuitka more often. Check “What
 is Nuitka?” in case you don’t know what it
 is.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <category term="Nikola" label="Nikola"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="benchmark" label="benchmark"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-06-30T16:39:00+00:00</published>
   </entry>
   <entry>
@@ -5936,9 +5936,9 @@ preparation to &lt;a class="reference external" href="https://ep2012.europython.
     <link href="https://nuitka.net/posts/nuitka-release-0323.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-06-30T23:40:00+00:00</published>
   </entry>
   <entry>
@@ -6076,8 +6076,8 @@ and other things.&lt;/p&gt;
 re-formulations of Python into simpler Python. It is my intention to
 turn this into a series of Python quiz questions that you will hopefully
 enjoy.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="quiz" label="quiz"/>
     <published>2012-07-15T17:07:00+00:00</published>
   </entry>
@@ -6147,8 +6147,8 @@ raise an error.&lt;/p&gt;&lt;/li&gt;
 amount of CPython code. For a while now, it’s also CPython3.2 that I
 look at. Checking out __future__ handling, I was surprised the other
 day though, this really works:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2012-07-23T06:56:41+00:00</published>
   </entry>
   <entry>
@@ -6321,9 +6321,9 @@ for Python3 and also for Python2. So I wanted to get this out now.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0324.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-08-18T21:30:00+00:00</published>
   </entry>
   <entry>
@@ -6421,11 +6421,11 @@ part of it.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/letting-go-of-c11.html" rel="alternate"/>
     <summary>How Nuitka came to use C++11 and then stop it.</summary>
+    <category term="Android" label="Android"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="compiler" label="compiler"/>
     <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
-    <category term="Android" label="Android"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-10-27T08:59:07+00:00</published>
   </entry>
   <entry>
@@ -6593,9 +6593,9 @@ gains.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0325.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-11-11T16:29:00+00:00</published>
   </entry>
   <entry>
@@ -6871,8 +6871,8 @@ to justify that, it’s actually quite obvious, isn’t it?&lt;/p&gt;
     <summary>In a recent post, Stefan Behnel questioned the point of static
 compilation and suggests that in order to be useful, a static compiler
 needs to add something on top.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2012-12-02T12:23:32+00:00</published>
   </entry>
@@ -6983,8 +6983,8 @@ finding a proper re-formulation for “yield from” too.&lt;/p&gt;
 “Python compiler Nuitka” has been supporting
 the language somewhat, but in the next release it’s going to be
 complete.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2013-02-09T08:38:37+00:00</published>
   </entry>
   <entry>
@@ -7248,9 +7248,9 @@ my own diagrams.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-040.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-02-25T17:39:00+00:00</published>
   </entry>
   <entry>
@@ -7462,9 +7462,9 @@ optimization.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-041.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-03-05T22:13:00+00:00</published>
   </entry>
   <entry>
@@ -7492,8 +7492,8 @@ a 0.4.2 pre-release. That is only until 0.4.2 final will be released.&lt;/p&gt;
     <summary>Thanks to a contribution, Nuitka now has a proper RPM spec file. And
 using openSUSE Build Service, we
 can now enjoy RPMs for all major distributions.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2013-03-16T18:44:45+00:00</published>
   </entry>
@@ -7734,9 +7734,9 @@ support, consolidation all around.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-042.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-03-29T14:32:00+00:00</published>
   </entry>
   <entry>
@@ -7865,8 +7865,8 @@ am still sentimental about it. I had installed it last about 8 years
 ago. And I still like it. Back in the days, it was the first UNIX to
 encounter for me, running on Amiga hardware, first of a friend, then on
 my own.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2013-04-06T12:58:37+00:00</published>
   </entry>
   <entry>
@@ -7928,10 +7928,10 @@ optimization.&lt;/p&gt;
     <summary>This post is about a feature often requested, but so far not available
 feature of Nuitka. Please see the page “What is Nuitka?” for clarification of what it is now and what it
 wants to be.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="compiler" label="compiler"/>
+    <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-04-07T13:52:44+00:00</published>
   </entry>
   <entry>
@@ -8098,8 +8098,8 @@ you want to help with those, feel free to do so. Nuitka needs you.&lt;/p&gt;
     <summary>The good news are lately coming in high density, although I barely have
 the opportunity to work on Nuitka. Check the page What is Nuitka? for clarification of what it is now and what it
 wants to be.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
     <published>2013-04-10T20:30:11+00:00</published>
   </entry>
@@ -8358,8 +8358,8 @@ experiences.&lt;/p&gt;
 time, I am not introducing Nuitka anymore, I did that in 2012, this
 time, I will try and dive into static optimization and try to convey the
 message why I believe it is possible.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <category term="europython" label="europython"/>
     <published>2013-04-16T09:58:34+00:00</published>
@@ -8418,8 +8418,8 @@ accounts on all those “social” platforms, that deal with code. So far I
 had resisted their terms (you pay us when we get sued), but I have given
 up on that stance, it’s likely irrelevant, as Nuitka won’t get sued, and
 if it is, those are not the issues.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="git" label="git"/>
     <published>2013-04-26T07:17:16+00:00</published>
   </entry>
@@ -8598,9 +8598,9 @@ visible progress with optimization.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-043.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-05-18T10:17:00+00:00</published>
   </entry>
   <entry>
@@ -8794,9 +8794,9 @@ into a development version later.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-044.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-06-27T00:16:00+00:00</published>
   </entry>
   <entry>
@@ -8817,8 +8817,8 @@ to support the full Python language.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/changing-python-faq.html" rel="alternate"/>
     <summary>The Python FAQ changed a while ago:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <published>2013-08-15T08:15:17+00:00</published>
   </entry>
   <entry>
@@ -8943,13 +8943,13 @@ presentation about my Python compiler Nuitka.
 You can watch the Video on Youtube. I believe it’s absolutely worth your
 time. I was not doing a lot of “why” at all now, only “what”, and demo
 times, and answering questions:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <category term="conference" label="conference"/>
+    <category term="europython" label="europython"/>
     <category term="presentation" label="presentation"/>
     <category term="video" label="video"/>
-    <category term="europython" label="europython"/>
     <published>2013-08-15T08:15:17+00:00</published>
   </entry>
   <entry>
@@ -9066,9 +9066,9 @@ priority to restore it.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-045.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-08-20T17:50:00+00:00</published>
   </entry>
   <entry>
@@ -9123,8 +9123,8 @@ started to realize that weak nuclear force and electromagnetic force
 were the same sort. That was after discovering that electricity and
 magnetism were the same, and that is the pattern. It’s called symmetry,
 equivalence, and so on.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="physics" label="physics"/>
     <published>2013-10-04T09:54:45+00:00</published>
   </entry>
@@ -9267,9 +9267,9 @@ list (since closed) or &lt;a class="reference external" href="https://nuitka.net
     <link href="https://nuitka.net/posts/nuitka-release-046.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-10-28T08:52:00+00:00</published>
   </entry>
   <entry>
@@ -9305,8 +9305,8 @@ showing that the eco system around Nuitka is indeed warming up.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-and-guis.html" rel="alternate"/>
     <summary>Please see the page “What is Nuitka?” for
 clarification of what it is now and what it wants to be.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2013-11-26T09:35:53+00:00</published>
   </entry>
@@ -9334,9 +9334,9 @@ maintaining the Nuitka packages inside Arch and on AUR.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-in-arch-linux.html" rel="alternate"/>
     <summary>Got this message:</summary>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <published>2013-11-30T14:17:59+00:00</published>
   </entry>
   <entry>
@@ -9509,9 +9509,9 @@ of this kind of integration in the future.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-047.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-12-05T01:45:00+00:00</published>
   </entry>
   <entry>
@@ -9570,10 +9570,10 @@ closed). And help if you can. And yes you can.&lt;/p&gt;
     <summary>Many of you who turn to my easy to use, highly compatible Python
 compiler Nuitka, do this mostly because they
 seek to solve the deployment problem that Python suffers from.</summary>
-    <category term="Python" label="Python"/>
-    <category term="compiler" label="compiler"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
+    <category term="compiler" label="compiler"/>
     <published>2013-12-27T10:48:22+00:00</published>
   </entry>
   <entry>
@@ -9743,9 +9743,9 @@ correctness fixes stemming from that work already.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-050.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2014-01-04T10:05:00+00:00</published>
   </entry>
   <entry>
@@ -9773,10 +9773,10 @@ the best way to create the community at this time anyway.&lt;/p&gt;
 didn’t get accepted. Quite a surprise to me, but likely mostly logical.
 These are the accepted talks (link since became unavailable) and well,
 it surely didn’t fit in, right.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="europython" label="europython"/>
+    <category term="Python" label="Python"/>
     <category term="conference" label="conference"/>
+    <category term="europython" label="europython"/>
     <published>2014-01-18T20:48:53+00:00</published>
   </entry>
   <entry>
@@ -9857,9 +9857,9 @@ are waiting for these to complete.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-051.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2014-03-08T04:21:00+00:00</published>
   </entry>
   <entry>
@@ -10086,8 +10086,8 @@ complete over the summer.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/state-of-nuitka.html" rel="alternate"/>
     <summary>State of Nuitka</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2014-06-17T05:35:48+00:00</published>
   </entry>
@@ -10284,9 +10284,9 @@ in greater detail.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-052.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2014-06-23T08:49:00+00:00</published>
   </entry>
   <entry>
@@ -10390,9 +10390,9 @@ changes aimed at making this next step in Nuitka evolution smaller.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-053.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2014-07-07T23:25:00+00:00</published>
   </entry>
   <entry>
@@ -10492,9 +10492,9 @@ for those cases, where MSVC is too slow.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-054.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2014-08-11T10:29:00+00:00</published>
   </entry>
   <entry>
@@ -10857,9 +10857,9 @@ this as happening this year.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-shaping-up.html" rel="alternate"/>
     <summary>Not much has happened publicly to Nuitka, so it’s time to make a kind of
 status post, about the exciting news there is.</summary>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <published>2014-10-02T07:08:54+00:00</published>
   </entry>
   <entry>
@@ -11038,9 +11038,9 @@ optimizations.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-055.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2014-10-05T23:15:00+00:00</published>
   </entry>
   <entry>
@@ -11194,9 +11194,9 @@ more bugs in existing code, that we need to address before we continue.&lt;/p&gt
     <link href="https://nuitka.net/posts/nuitka-release-056.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2014-12-19T07:54:00+00:00</published>
   </entry>
   <entry>
@@ -11281,9 +11281,9 @@ they are made in this new release.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-057.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-01-02T09:49:00+00:00</published>
   </entry>
   <entry>
@@ -11316,8 +11316,8 @@ folder, so that the SWIG workaround may become no longer necessary.&lt;/p&gt;
     <link href="https://nuitka.net/posts/article-over-nuitka-standalone.html" rel="alternate"/>
     <summary>There is a really well written article about Nuitka written by Tom
 Sheffler.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2015-01-06T12:46:50+00:00</published>
   </entry>
@@ -11426,9 +11426,9 @@ next releases.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-058.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-01-16T05:04:00+00:00</published>
   </entry>
   <entry>
@@ -11550,9 +11550,9 @@ accumulated out. Expect more actual changes in the next releases.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-059.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-01-30T07:37:00+00:00</published>
   </entry>
   <entry>
@@ -11806,9 +11806,9 @@ things happen faster.&lt;/p&gt;
 releases, so it’s time to make a kind of status post, about the really
 exciting news there is, also looking back at 2014 for Nuitka, and
 forward of course.</summary>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <published>2015-03-02T07:08:54+00:00</published>
   </entry>
   <entry>
@@ -11944,9 +11944,9 @@ major gains to be had.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0510.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-03-06T07:07:00+00:00</published>
   </entry>
   <entry>
@@ -12150,9 +12150,9 @@ ahead.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0511.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-03-19T20:54:00+00:00</published>
   </entry>
   <entry>
@@ -12295,9 +12295,9 @@ optimization changes have been postponed to be next release.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0512.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-04-07T17:55:00+00:00</published>
   </entry>
   <entry>
@@ -12553,9 +12553,9 @@ things happen faster. Nuitka will become more and more important only.&lt;/p&gt;
     <summary>It’s absolutely time to speak about what’s going on with Nuitka, there
 have been a few releases, and big things are going to happen now. The
 ones I have always talked of, it’s happening now.</summary>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <published>2015-04-30T16:08:54+00:00</published>
   </entry>
   <entry>
@@ -12727,9 +12727,9 @@ of progress now.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0513.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-05-02T09:45:00+00:00</published>
   </entry>
   <entry>
@@ -12974,9 +12974,9 @@ things, and for that reason is going to get its own release cycle.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0514.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-08-28T07:03:00+00:00</published>
   </entry>
   <entry>
@@ -13275,9 +13275,9 @@ things happen faster. Nuitka will become more and more important only.&lt;/p&gt;
     <summary>A long time has passed again without me speaking about what’s going on
 with Nuitka, and that although definitely a lot has happened. I would
 contend it’s even because so much is going on.</summary>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <published>2015-10-05T08:08:54+00:00</published>
   </entry>
   <entry>
@@ -13445,9 +13445,9 @@ compiler, but only if you help, it will arrive in your life time.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0515.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-10-15T08:44:00+00:00</published>
   </entry>
   <entry>
@@ -13477,8 +13477,8 @@ day.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-podcast-init.html" rel="alternate"/>
     <summary>So, if you want to get to know Nuitka or me, there is a really good
 interview from the popular podcast “__init__” online.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2015-10-25T11:02:56+00:00</published>
   </entry>
@@ -13628,9 +13628,9 @@ type specific code generation a reality.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0516.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-11-11T17:39:00+00:00</published>
   </entry>
   <entry>
@@ -13753,9 +13753,9 @@ so the cleanup has to continue.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0517.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2015-12-28T21:56:00+00:00</published>
   </entry>
   <entry>
@@ -13860,9 +13860,9 @@ from these scalability improvements.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0518.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-01-16T11:41:00+00:00</published>
   </entry>
   <entry>
@@ -14179,9 +14179,9 @@ I will get the funding to go to EuroPython 2016, that would be great.&lt;/p&gt;
 but a lot has happened indeed. I just seem to post a lot more to the
 mailing list than I do here. Especially about unfinished stuff, which is
 essentially for a project like Nuitka everything that’s going on.</summary>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
     <category term="europython" label="europython"/>
     <published>2016-01-29T08:08:54+00:00</published>
   </entry>
@@ -14274,9 +14274,9 @@ specific shape tracing will be needed.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0519.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-02-02T09:04:00+00:00</published>
   </entry>
   <entry>
@@ -14362,9 +14362,9 @@ Nuitka core to easier hacks and more user contribution for these topics.&lt;/p&g
     <link href="https://nuitka.net/posts/nuitka-release-0520.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-03-21T09:34:00+00:00</published>
   </entry>
   <entry>
@@ -14454,9 +14454,9 @@ that is going to remain the focus for some time.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0521.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-04-25T12:54:00+00:00</published>
   </entry>
   <entry>
@@ -14555,9 +14555,9 @@ operations.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0522.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-08-17T14:35:00+00:00</published>
   </entry>
   <entry>
@@ -14714,9 +14714,9 @@ generation, which will make Nuitka improve speed.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0523.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-10-03T16:55:00+00:00</published>
   </entry>
   <entry>
@@ -14809,9 +14809,9 @@ even faster. This will be for future releases to expand.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0524.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2016-11-15T09:43:00+00:00</published>
   </entry>
   <entry>
@@ -15010,9 +15010,9 @@ iterations really necessary to use quick iteration code.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0525.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2017-01-25T06:27:00+00:00</published>
   </entry>
   <entry>
@@ -15246,9 +15246,9 @@ already had, as well as preparing the big jump in speed.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0526.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2017-06-11T09:10:00+00:00</published>
   </entry>
   <entry>
@@ -15490,9 +15490,9 @@ come in a later release.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0527.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2017-07-23T17:42:00+00:00</published>
   </entry>
   <entry>
@@ -15694,9 +15694,9 @@ versions that still retain the issue are not very widespread.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0528.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2017-10-18T11:00:00+00:00</published>
   </entry>
   <entry>
@@ -15863,9 +15863,9 @@ With that work in place, a lot of improvements will happen.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0529.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-03-28T00:45:00+00:00</published>
   </entry>
   <entry>
@@ -16026,9 +16026,9 @@ to statically optimize those better anyway.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0530.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-05-01T11:53:00+00:00</published>
   </entry>
   <entry>
@@ -16204,9 +16204,9 @@ dependency walker.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0531.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-07-10T15:37:00+00:00</published>
   </entry>
   <entry>
@@ -16422,10 +16422,10 @@ generators and coroutines that I will talk about next week then.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-1.html" rel="alternate"/>
     <summary>Nuitka this week #1</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-07-27T07:08:54+00:00</published>
   </entry>
   <entry>
@@ -16559,9 +16559,9 @@ variables.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0532.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-07-29T22:46:00+00:00</published>
   </entry>
   <entry>
@@ -16703,10 +16703,10 @@ with e.g. the enum issue, even known issues this now finds.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-2.html" rel="alternate"/>
     <summary>Nuitka this week #2</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-08-02T07:08:54+00:00</published>
   </entry>
   <entry>
@@ -16852,10 +16852,10 @@ about how it also enables C types work next week.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-3.html" rel="alternate"/>
     <summary>Nuitka this week #3</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-08-11T11:58:00+00:00</published>
   </entry>
   <entry>
@@ -16943,10 +16943,10 @@ the goto generator work to finish.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-4.html" rel="alternate"/>
     <summary>Nuitka this week #4</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-08-17T14:55:00+00:00</published>
   </entry>
   <entry>
@@ -17117,10 +17117,10 @@ further its development. Go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-5.html" rel="alternate"/>
     <summary>Nuitka this week #5</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-08-24T12:55:00+00:00</published>
   </entry>
   <entry>
@@ -17312,10 +17312,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-6.html" rel="alternate"/>
     <summary>Nuitka this week #6</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-09-12T12:05:00+00:00</published>
   </entry>
   <entry>
@@ -17534,9 +17534,9 @@ avoid and/or find.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0533.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-09-14T19:54:00+00:00</published>
   </entry>
   <entry>
@@ -17748,10 +17748,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-7.html" rel="alternate"/>
     <summary>Nuitka this week #7</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-09-22T11:05:00+00:00</published>
   </entry>
   <entry>
@@ -17935,9 +17935,9 @@ many more programs are going to benefiting from this.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-060.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2018-09-27T18:24:00+00:00</published>
   </entry>
   <entry>
@@ -18224,10 +18224,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-8.html" rel="alternate"/>
     <summary>Nuitka this week #8</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-10-02T06:05:00+00:00</published>
   </entry>
   <entry>
@@ -18567,10 +18567,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-9.html" rel="alternate"/>
     <summary>Nuitka this week #9</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-10-20T06:17:00+00:00</published>
   </entry>
   <entry>
@@ -18811,10 +18811,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-10.html" rel="alternate"/>
     <summary>Nuitka this week #10</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-11-21T06:06:00+00:00</published>
   </entry>
   <entry>
@@ -18982,10 +18982,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-11.html" rel="alternate"/>
     <summary>Nuitka this week #11</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2018-12-10T07:09:00+00:00</published>
   </entry>
   <entry>
@@ -19156,9 +19156,9 @@ Nuitka and graphs with more history.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-061.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-01-08T10:31:00+00:00</published>
   </entry>
   <entry>
@@ -19297,10 +19297,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-12.html" rel="alternate"/>
     <summary>Nuitka this week #12</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2019-02-08T14:09:00+00:00</published>
   </entry>
   <entry>
@@ -19405,9 +19405,9 @@ temporary contributors in (relatively) high numbers.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-062.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-02-20T11:03:00+00:00</published>
   </entry>
   <entry>
@@ -19538,9 +19538,9 @@ contributed!&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-063.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-04-07T08:21:00+00:00</published>
   </entry>
   <entry>
@@ -19740,10 +19740,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-13.html" rel="alternate"/>
     <summary>Nuitka this week #13</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2019-05-12T11:07:00+00:00</published>
   </entry>
   <entry>
@@ -19775,8 +19775,8 @@ this summer.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/batakrishna-sahu-intro.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="portrait" label="portrait"/>
     <published>2019-05-14T08:31:00+00:00</published>
   </entry>
@@ -19810,11 +19810,11 @@ summer!&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-intro.html" rel="alternate"/>
     <summary>Hi all! :)</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="tests" label="tests"/>
-    <category term="standalone" label="standalone"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="portrait" label="portrait"/>
+    <category term="standalone" label="standalone"/>
+    <category term="tests" label="tests"/>
     <published>2019-05-15T10:00:00+00:00</published>
   </entry>
   <entry>
@@ -20060,9 +20060,9 @@ infrastructure for it is in place.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-064.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-06-10T19:28:00+00:00</published>
   </entry>
   <entry>
@@ -20233,9 +20233,9 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
     <link href="https://nuitka.net/posts/urllib3-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of urllib3 to its nuitka-built
 .whl counterpart.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-06-19T16:00:00+00:00</published>
   </entry>
@@ -20395,9 +20395,9 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
     <link href="https://nuitka.net/posts/dateutil-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of dateutil to its nuitka-built
 .whl counterpart.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-07-12T18:00:00+00:00</published>
   </entry>
@@ -20564,9 +20564,9 @@ of the infrastructure getting there.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-065.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-07-30T21:52:00+00:00</published>
   </entry>
   <entry>
@@ -20748,13 +20748,13 @@ amazing program possible.&lt;/p&gt;
     <summary>As Google Summer of Code (GSoC) is coming to an end, I am writing this
 blog post as a final summary describing all the work I have done as well
 as my experiences in this program.</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="tests" label="tests"/>
+    <category term="automation" label="automation"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="pypi" label="pypi"/>
     <category term="pytest" label="pytest"/>
-    <category term="automation" label="automation"/>
     <category term="standalone" label="standalone"/>
+    <category term="tests" label="tests"/>
     <published>2019-08-23T07:00:00+00:00</published>
   </entry>
   <entry>
@@ -20998,8 +20998,8 @@ professional career in Software engineering.&lt;/p&gt;&lt;/li&gt;
 </content>
     <link href="https://nuitka.net/posts/bksahus-gsoc-wrap-up.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-08-25T19:55:00+00:00</published>
   </entry>
   <entry>
@@ -21235,9 +21235,9 @@ seems not far away.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-066.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2020-01-06T08:34:00+00:00</published>
   </entry>
   <entry>
@@ -21355,9 +21355,9 @@ to see actual performance improvements in the next release again.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-067.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2020-01-25T08:42:00+00:00</published>
   </entry>
   <entry>
@@ -21565,9 +21565,9 @@ actual jump in performance can be expected.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-068.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2020-05-18T09:11:00+00:00</published>
   </entry>
   <entry>
@@ -21731,9 +21731,9 @@ again as well as on scalability for generated C code.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-069.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2020-10-15T10:34:00+00:00</published>
   </entry>
   <entry>
@@ -22053,9 +22053,9 @@ many technical debts of Nuitka and preparing more optimization to come.&lt;/p&gt
     <link href="https://nuitka.net/posts/nuitka-release-0610.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2020-12-22T15:38:00+00:00</published>
   </entry>
   <entry>
@@ -22314,9 +22314,9 @@ include virtually everything installed as an option for it to use.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0611.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2021-01-25T10:17:00+00:00</published>
   </entry>
   <entry>
@@ -22513,9 +22513,9 @@ backend.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0612.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2021-02-16T09:24:00+00:00</published>
   </entry>
   <entry>
@@ -22811,9 +22811,9 @@ performance.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0613.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2021-04-03T10:05:00+00:00</published>
   </entry>
   <entry>
@@ -23034,9 +23034,9 @@ code, which is of course always a good thing.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0614.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2021-05-01T09:19:00+00:00</published>
   </entry>
   <entry>
@@ -23206,9 +23206,9 @@ later releases.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0615.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2021-06-05T17:18:00+00:00</published>
   </entry>
   <entry>
@@ -23337,9 +23337,9 @@ and have onefile on all OSes practically.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0616.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2021-09-09T11:01:00+00:00</published>
   </entry>
   <entry>
@@ -23656,9 +23656,9 @@ any annotations used. Benchmarks will become more fun clearly.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0617.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2021-11-11T13:40:00+00:00</published>
   </entry>
   <entry>
@@ -24114,9 +24114,9 @@ usable at least, for now please stay on 3.9 if you can.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0618.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2021-12-11T17:21:00+00:00</published>
   </entry>
   <entry>
@@ -24509,9 +24509,9 @@ be very good.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-0619.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2022-01-12T10:51:00+00:00</published>
   </entry>
   <entry>
@@ -24547,8 +24547,8 @@ You know you want to do it. I know I want you to do to it!&lt;/p&gt;
 stream of me coding on Nuitka, and talking and chatting with visitors in
 the Discord channel created specifically for this. I will go from 9-12
 CEST and from 17-20 CEST.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2022-01-14T00:00:00+00:00</published>
   </entry>
@@ -24620,8 +24620,8 @@ coding on Nuitka, and talking and chatting with visitors in the Discord
 channel created specifically for this. I will go from 9-12 CEST and from
 18 CEST until probably at least 20 CEST, but it seems I tend to go
 overtime.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2022-01-30T00:00:00+00:00</published>
   </entry>
@@ -24951,9 +24951,9 @@ extension modules from standard library no longer being present.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-07.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2022-02-21T13:10:00+00:00</published>
   </entry>
   <entry>
@@ -25280,9 +25280,9 @@ more lean, but scalability is still an issue.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-08.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2022-05-26T10:54:00+00:00</published>
   </entry>
   <entry>
@@ -25341,9 +25341,732 @@ You know you want to do it. I know I want you to do to it!&lt;/p&gt;
 streams of me coding on Nuitka, and talking and chatting with visitors
 in the Discord channel created specifically for this. I will go from
 10-14 CEST and potentially also one in the evening.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <published>2022-05-27T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-09.html</id>
+    <title>Nuitka Release 0.9</title>
+    <updated>2022-07-02T08:17:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;section id="nuitka-release-0-9"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release has a many optimization improvements, and scalability
+improvements, while also adding new features, with also some important
+bug fixes.&lt;/p&gt;
+&lt;section id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Fix, hard module name lookups leaked a reference to that object.
+Fixed in 0.8.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python2: Fix, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.decode&lt;/span&gt;&lt;/code&gt; with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;errors&lt;/span&gt;&lt;/code&gt; as the only argument
+wasn’t working. Fixed in 0.8.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, could corrupt created uncompiled class objects &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__init__&lt;/span&gt;&lt;/code&gt;
+functions in case of descriptors being used.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added support for newer &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;torch&lt;/span&gt;&lt;/code&gt;. Fixed in 0.8.1
+already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added support for newer &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;torchvision&lt;/span&gt;&lt;/code&gt;. Fixed in 0.8.1
+already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, could compile time crash during initial parsing phase on
+constant dictionary literals with non-hashable keys.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;{}:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, hard imported sub-modules of hard imports were falsely resolved
+to their parent. Fixed in 0.8.3 already.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;importlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_bytes&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# gave importlib has no attribute...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Fix, outputs with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--force-stdout-spec&lt;/span&gt;&lt;/code&gt; or
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--force-stderr-spec&lt;/span&gt;&lt;/code&gt; were created with the file system encoding on
+Python3, but they nee to be &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;utf-8&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, didn’t allow zero spaces in Nuitka project options, which is not
+expected.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Modules: Fix, the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;del&lt;/span&gt; &lt;span class="pre"&gt;__file__&lt;/span&gt;&lt;/code&gt; in the top level module in module
+mode caused crashes at runtime, when trying to restore the original
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__file__&lt;/span&gt;&lt;/code&gt; value, after the loading CPython corrupted it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python2.6: Fixes for installations without &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pkg_resources&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Fix for very old Python 2.6 versions, these didn’t have a
+language assigned that could be used.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Security: Fix for &lt;a class="reference external" href="https://security-tracker.debian.org/tracker/CVE-2022-2054"&gt;CVE-2022-2054&lt;/a&gt; where
+environment variables used for transfer of information between Nuitka
+restarting itself, could be used to execute arbitrary code at compile
+time.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Anaconda: Fix, the torch plugin was not working on Linux due to
+missing DLL dependencies.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, static optimization of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;importlib.import_module&lt;/span&gt;&lt;/code&gt; with a
+package given, for an absolute import was optimized into the wrong
+import, package was not ignored as it should be.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Installed Python scan could crash on trying installation
+paths from registry that were manually removed in the mean time, but
+not through an uninstaller.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added missing implicit dependency for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pyreadstat&lt;/span&gt;&lt;/code&gt;
+because parts of standard library it uses are no more automatically
+included.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Could still crash when no &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;powershell&lt;/span&gt;&lt;/code&gt; is available with
+symlinks, handle this more gracefully.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added more missing Plotly dependencies, but more work
+will be needed to complete this.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Add missing stdlib dependency on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;multiprocessing&lt;/span&gt;&lt;/code&gt; by
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;concurrent.futures.process&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Fix, implicit dependencies assigned to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;imageio&lt;/span&gt;&lt;/code&gt; on PIL
+plugins should actually be assigned to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PIL.Image&lt;/span&gt;&lt;/code&gt; that actually
+loads them, so it works outside of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;imageio&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
+&lt;h2&gt;New Features&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;UI: Added new option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--user-package-configuration-file&lt;/span&gt;&lt;/code&gt; to allow
+users to provide extra Yaml configuration files for the Nuitka plugin
+mechanism to add hidden dependencies, anti-bloat, or data files, for
+packages. This will be useful for developing PRs to the standard file
+of Nuitka. Currently the schema is available, but it is not
+documented very well yet, so not really ready for end users just yet.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added new &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;no-qt&lt;/span&gt;&lt;/code&gt; plugin as an easy way to prevent all
+of the Qt bindings from being included in a compilation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Include module search path in compilation report.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
+&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Faster dictionary iteration with our own replacement for
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PyDict_Next&lt;/span&gt;&lt;/code&gt; that avoids the DLL call overhead (in case of
+non-static libpython) and does less unnecessary checks.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added optimization for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.count&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.format&lt;/span&gt;&lt;/code&gt; methods as
+well, this should help in some cases with compile time optimization.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The node for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict.update&lt;/span&gt;&lt;/code&gt; with only an iterable argument, but no
+keyword arguments, was in fact unused due to wrongly generated code.
+Also the form with no arguments wasn’t yet handled properly.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scalability: Use specialized nodes for pair values, i.e. the
+representation of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;x&lt;/span&gt; &lt;span class="pre"&gt;=&lt;/span&gt; &lt;span class="pre"&gt;y&lt;/span&gt;&lt;/code&gt; in e.g. dictionary creations. With
+constant keys, and values, these avoid full constant value nodes, and
+therefore save memory and compile time for a lot of code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Anti-bloat: Added more scalability work to avoid including modules
+that make compilation unnecessarily big.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3.9+: Faster calls in case of mixed code, i.e. compiled code
+calling uncompiled code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Removing duplicates and non-existent entries from modules search path
+should improve performance when locating modules.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Optimize calls through variables as well. These are needed for the
+package resource nodes to properly resolve at compile time from their
+hard imports to the called function.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hard imported names should also be considered very trusted
+themselves, so they are e.g. also optimized in calls.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Anti-bloat: Avoid more useless imports in Pandas, Numba, Plotly, and
+other packages, improving the scalability some more.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added dedicated nodes for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pkg_resources.require&lt;/span&gt;&lt;/code&gt;,
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pkg_resources.get_distribution&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;importlib.metadata.version&lt;/span&gt;&lt;/code&gt;,
+and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;importlib_metadata.version&lt;/span&gt;&lt;/code&gt;, so we can use compile time
+optimization to resolve their argument values where possible.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Avoid annotating control flow escape for all release statements.
+Sometimes we can tell that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__del__&lt;/span&gt;&lt;/code&gt; will not execute outside code
+ever, so this then avoids marking values as escaped, and taking the
+time to do so.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Calls of methods through variables on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bytes&lt;/span&gt;&lt;/code&gt;
+that have dedicated nodes are now also optimized through variables.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Boolean tests through variables now also are optimized when the
+original assignment is a compile time constant that is not mutable.
+This is only basic, but will allow tests on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;TYPE_CHECKING&lt;/span&gt;&lt;/code&gt; coming
+from a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;from&lt;/span&gt; &lt;span class="pre"&gt;typing&lt;/span&gt; &lt;span class="pre"&gt;import&lt;/span&gt; &lt;span class="pre"&gt;TYPE_CHECKING&lt;/span&gt;&lt;/code&gt; statement to be
+optimized, avoiding this overhead.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
+&lt;h2&gt;Cleanups&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Changed to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;torch&lt;/span&gt;&lt;/code&gt; plugin to Yaml based configuration, making it
+obsolete, it only remains there for a few releases, to not crash
+existing build scripts.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Moved older package specific hacks to the Yaml file. Some of these
+were from hotfixes where the Yaml file wasn’t yet used by default,
+but now there is no need for them anymore.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Removed most of the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pkg-resources&lt;/span&gt;&lt;/code&gt; plugin work. This is now done
+during optimization phase and rather than being based on source code
+matches, it uses actual value tracing, so it immediately covers many
+more cases.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Continued spelling improvements, renaming identifiers used in the
+source that the cspell based extension doesn’t like. This aims at
+producing more readable and searchable code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Generated attribute nodes no longer do local imports of the operation
+nodes they refer to. This also avoids compile time penalties during
+optimization that are not necessary.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Avoid useless bytecode of inline copy used by Python3 when
+installing for Python2, this spams just a lot of errors.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
+&lt;h2&gt;Organisational&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Removed MSI installers from the download page. The MSI installers are
+discontinued as Python has deprecated their support for them, as well
+as Windows 10 is making it harder for users to install them. Using
+the PyPI installation is recommended on Windows.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Merged our Yaml files into one and added schema description, for
+completion and checking in Visual Code while editing. Also check the
+schema in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;check-nuitka-with-yamllint&lt;/span&gt;&lt;/code&gt; which is now slightly
+misnamed. The schema is in no way final and will see improvements in
+future releases.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Nicer progress bar layout that avoids flicker when optimizing
+modules.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: When linking, output the total number of object files used, to
+have that knowledge after the progress bar for C compilation is gone.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Quality: Auto-format the package configuration Yaml file for
+anti-bloat, implicit dependencies, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GitHub: Point out the commit hook in the PR template.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Nicer output in case of no commercial version is used.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Updated the MinGW64 winlibs download used on Windows to the latest
+version based on gcc 11, the gcc 12 is not yet ready.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Git: Make sure we are not affected by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;core.autocrlf&lt;/span&gt;&lt;/code&gt; setting, as
+it interferes with auto-format enforcing Unix newlines.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Removed the MSI downloads. Windows 10 has made them harder to install
+and Python itself is discontinuing support for them, while often it
+was only used by beginners, for which it was not intended.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Anaconda: Make it more clear how to install static libpython with
+precise command.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Warn about using Debian package contents. These can be
+non-portable to other OSes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Quality: The auto-format now floats imports to the top for
+consistency. With few exceptions, it was already done like this. But
+it makes things easier for generated code.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="tests"&gt;
+&lt;h2&gt;Tests&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The reflected test was adapted to preserve &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PYTHONPATH&lt;/span&gt;&lt;/code&gt; now that
+module presence influences optimization.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This release marks a point, that will allow us to open up the
+compatibility work for implicit dependencies and anti-bloat stuff even
+further. The Yaml format will need documentation and potentially more
+refinement, but will open up a future, where latest packages can be
+supported with just updating this configuration.&lt;/p&gt;
+&lt;p&gt;The scalability improvements really make a difference for many libraries
+and are a welcome improvement on both memory usage and compile time.
+They are achieved by an accord of static optimization of&lt;/p&gt;
+&lt;p&gt;One optimization aimed at optimizing tuple unpacking, was not finished
+in time for this release, but will be subject of a future release. It
+has driven many other improvements though.&lt;/p&gt;
+&lt;p&gt;Generally, also from the UI, this is a huge step forward. With links to
+the website for complex topics being started, and the progress bar
+flicker being removed, the tool has yet again become more user friendly.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-09.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
+    <published>2022-07-02T08:17:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://nuitka.net/posts/nuitka-release-10.html</id>
+    <title>Nuitka Release 1.0</title>
+    <updated>2022-08-16T13:45:00+00:00</updated>
+    <author>
+      <name>Kay Hayen</name>
+    </author>
+    <content type="html">&lt;section id="nuitka-release-1-0"&gt;
+
+&lt;p&gt;This is to inform you about the new stable release of &lt;a class="reference external" href="https://nuitka.net"&gt;Nuitka&lt;/a&gt;. It is the extremely compatible Python compiler,
+&lt;a class="reference external" href="/doc/download.html"&gt;“download now”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release contains a large amount of new features, while
+consolidating what we have with many bug fixes. Scalability should be
+dramatically better, as well as new optimization that will accelerate
+some code quite a bit. See the summary, how this release is paving the
+way forward.&lt;/p&gt;
+&lt;section id="bug-fixes"&gt;
+&lt;h2&gt;Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Python3: Fix, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bytes.decode&lt;/span&gt;&lt;/code&gt; with only &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;errors&lt;/span&gt;&lt;/code&gt; argument given
+was not working. Fixed in 0.9.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;MSYS2: Fix, the accelerate mode &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.cmd&lt;/span&gt;&lt;/code&gt; file was not working
+correctly. Fixed in 0.9.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Onefile: Fix, the bootstrap when waiting for the child, didn’t
+protect against signals that interrupt this call. This only affected
+users of the non-public &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--onefile-tempdir&lt;/span&gt;&lt;/code&gt; option on Linux, but
+with that becoming the default in 1.0, this was discovered. Fixed in
+0.9.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pkg_resources&lt;/span&gt;&lt;/code&gt; compile time generated &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Distribution&lt;/span&gt;&lt;/code&gt; values
+could cause issues with code that put it into calls, or in tried
+blocks. Fixed in 0.9.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added implicit dependencies of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Xlib&lt;/span&gt;&lt;/code&gt; package. Fixed in
+0.9.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;macOS: Fix, the package configuration for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;wx&lt;/span&gt;&lt;/code&gt; had become invalid
+when restructuring the Yaml with code and schema disagreeing on
+allowed values. Fixed in 0.9.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix: The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.format&lt;/span&gt;&lt;/code&gt; with a single positional argument didn’t
+generate proper code and failed to compile on the C level. Fixed in
+0.9.1 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, the type shape of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.count&lt;/span&gt;&lt;/code&gt; result was wrong. Fixed in 0.9.1
+already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Fix, the warning about collision of just compiled package and
+original package in the same folder hiding the compiled package
+should not apply to packages without an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__init__.py&lt;/span&gt;&lt;/code&gt; file, as
+those do &lt;strong&gt;not&lt;/strong&gt; take precedence. Fixed in 0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Debugging: Fix, the fallback to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lldb&lt;/span&gt;&lt;/code&gt; from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gdb&lt;/span&gt;&lt;/code&gt; when using the
+option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--debugger&lt;/span&gt;&lt;/code&gt; was broken on anything but Windows. Fixed in
+0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3.8: The module &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;importlib.metadata&lt;/span&gt;&lt;/code&gt; was not recognized
+before 3.9, but actually 3.8 already has it, causing the compile time
+resolution of package versions to not work there. Fixed in 0.9.3
+already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Fix, at least on macOS we should also scan from parent
+folders of DLLs, since they may contain sub-directories in their
+names. This is mostly the case, when using frameworks. Fixed in 0.9.2
+already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added package configuration for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PyQt5&lt;/span&gt;&lt;/code&gt; to require
+onefile bundle mode on macOS, and recommend to disable console for
+PyQt6. This is same as we already do for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PySide2&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PySide6&lt;/span&gt;&lt;/code&gt;.
+Fixed in 0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Removed stray macOS onefile bundle package configuration
+for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pickle&lt;/span&gt;&lt;/code&gt; module which must have been added in error. Fixed in
+0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Catch user error of attempting to compile the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__init__.py&lt;/span&gt;&lt;/code&gt;
+rather than the package directory. Fixed in 0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, hard name import nodes failed to clone, causing issues in
+optimization phase. Fixed in 0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, avoid warnings given with gcc 11. Fixed in 0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, dictionary nodes where the operation itself has no effect, e.g.
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict.copy&lt;/span&gt;&lt;/code&gt; were not properly annotating that their dictionary
+argument could still cause a raise and have side effects, triggering
+an assertion violation in Nuitka. Fixed in 0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pynput&lt;/span&gt;&lt;/code&gt; implicit dependencies on Linux. Fixed in
+0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, boolean condition checks on variables converted immutable
+constant value assignments to boolean values, leading to incorrect
+code execution. Fixed in 0.9.2 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3.9: Fix, could crash on generic aliases with non-hashable
+values. Fixed in 0.9.3 already.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;any&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3: Fix, an iteration over &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sys.version_info&lt;/span&gt;&lt;/code&gt; was falsely
+optimized into a tuple, which is not always compatible. Fixed in
+0.9.3 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added support for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xgboost&lt;/span&gt;&lt;/code&gt; package. Fixed in 0.9.3
+already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added data file for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;text_unidecode&lt;/span&gt;&lt;/code&gt; package. Fixed in
+0.9.4 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added data files for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;swagger_ui_bundle&lt;/span&gt;&lt;/code&gt; package. Fixed
+in 0.9.4 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added data files for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;connexion&lt;/span&gt;&lt;/code&gt; package. Fixed in
+0.9.4 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added implicit dependencies for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sklearn.utils&lt;/span&gt;&lt;/code&gt; and
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rapidfuzz&lt;/span&gt;&lt;/code&gt;. Fixed in 0.9.4 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python3.10: Fix, the reformulation of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;match&lt;/span&gt;&lt;/code&gt; statements could
+create nodes that are used twice, causing code generation to assert.
+Fixed in 0.9.4 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, module objects removed from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sys.modules&lt;/span&gt;&lt;/code&gt; but still used could
+lack a reference to themselves, and therefore crash due to working on
+a released module variables dictionary. Fixed in 0.9.5 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, the MSVC compiles code generated for SciPy 1.8 wrongly. Added a
+workaround for that code to avoid triggering it. Fixed in 0.9.6
+already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, calls to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.format&lt;/span&gt;&lt;/code&gt; where the result is not used, could
+crash the compiler during code generation. Fixed in 0.9.6 already.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: For DLLs on macOS and Anaconda, also consider the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lib&lt;/span&gt;&lt;/code&gt;
+directory of the root environment, as some DLLs are otherwise not
+found.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, allow &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nonlocal&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;global&lt;/span&gt;&lt;/code&gt; for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__class__&lt;/span&gt;&lt;/code&gt; to be used
+on the class level.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xrange&lt;/span&gt;&lt;/code&gt; with large values didn’t work on all platforms. This
+affected at least Python2 on macOS, but potentially others as well.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: When scanning for installed Pythons to e.g. run Scons or
+onefile compression, it was attempting to use installations that got
+deleted manually and could crash.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;macOS: Fix, DLL conflicts are now resolved by checking the version
+information too, also all cases that previously errored out after a
+conflict was reported, will now work.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, conditional expressions whose statically decided condition
+picking a branch will raise an exception could crash the compilation.&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Would previously crash Nuitka during optimization.&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;nt&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Make sure we set C level standard file handles too&lt;/p&gt;
+&lt;p&gt;At least newer subprocess was affected by this, being unable to
+provide working handles to child processes that pass their current
+handles through, and also this should help DLL code to use it as
+level.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added support for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pyqtgraph&lt;/span&gt;&lt;/code&gt; data files.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added support for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dipy&lt;/span&gt;&lt;/code&gt; by anti-bloat removal of its
+testing framework that wants to do unsupported stuff.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Could still give warnings about modules not being followed, where
+that was not true.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--include-module&lt;/span&gt;&lt;/code&gt; was not working for non-automatic standard
+library paths.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="new-features"&gt;
+&lt;h2&gt;New Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Onefile: Recognize a non-changing path from
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--onefile-tempdir-spec&lt;/span&gt;&lt;/code&gt; and then use cached mode. By default a
+temporary folder is used in the spec value, make it delete the files
+afterwards.&lt;/p&gt;
+&lt;p&gt;The cached mode is not necessarily faster, but it is not going to
+change files already there, leaving the binaries there intact. In the
+future it may also become faster to execute, but right now checking
+the validity of the file takes about as long as re-creating it,
+therefore no gain yet. The main point, is to not change where it runs
+from.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Added option to exclude DLLs. You can npw use
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--noinclude-dlls&lt;/span&gt;&lt;/code&gt; to exclude DLLs by filename patterns.&lt;/p&gt;
+&lt;p&gt;The may e.g. come from Qt plugins, where you know, or experimented,
+that it is not going to be used in your specific application. Use
+with care, removing DLLs will lead to very hard to recognize errors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Anaconda: Use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CondaCC&lt;/span&gt;&lt;/code&gt; from environment variables for Linux and
+macOS, in case it is installed. This can be done with e.g. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;conda&lt;/span&gt;
+&lt;span class="pre"&gt;install&lt;/span&gt; &lt;span class="pre"&gt;gcc-linux-64&lt;/span&gt;&lt;/code&gt; on Linux or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;conda&lt;/span&gt; &lt;span class="pre"&gt;install&lt;/span&gt; &lt;span class="pre"&gt;clang_osx-64&lt;/span&gt;&lt;/code&gt; on
+macOS.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added new option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--nowarn-mnemonic&lt;/span&gt;&lt;/code&gt; to disable warnings that use
+mnemonics, there is currently not that many yet, but it’s going to
+expand. You can use this to acknowledge the ones you accept, and not
+get that warning with the information pointer anymore.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added method for resolving DLL conflicts on macOS too. This is using
+version information and picks the newer one where possible.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--user-package-configuration-file&lt;/span&gt;&lt;/code&gt; for user provided
+Yaml files, which can be used to provide package configuration to
+Nuitka, to e.g. add DLLs, data files, do some anti-bloat work, or add
+missing dependencies locally. The documentation for this does not yet
+exist though, but Nuitka contains a Yaml schema in the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;misc/nuitka-package-config-schema.json&lt;/span&gt;&lt;/code&gt; file.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka-project-else&lt;/span&gt;&lt;/code&gt; to avoid repeating conditions in Nuitka
+project configuration, this can e.g. be used like this:&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# nuitka-project-if: os.getenv(&amp;quot;TEST_VARIANT&amp;quot;, &amp;quot;pyside2&amp;quot;) == &amp;quot;pyside2&amp;quot;:&lt;/span&gt;
+&lt;span class="c1"&gt;#   nuitka-project: --enable-plugin=no-qt&lt;/span&gt;
+&lt;span class="c1"&gt;# nuitka-project-else:&lt;/span&gt;
+&lt;span class="c1"&gt;#   nuitka-project: --enable-plugin=no-qt&lt;/span&gt;
+&lt;span class="c1"&gt;#   nuitka-project: --noinclude-data-file=*.svg&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Previously, the inverted condition had to be used in another
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka-project-if&lt;/span&gt;&lt;/code&gt; which is no big deal, but less readable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added support for deep copying uncompiled functions. There is now a
+section in the User Manual that explains how to clone compiled
+functions. This allows a workaround like this:&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;binder&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+   &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;clone&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+   &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;AttributeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;types&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FunctionType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__code__&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__globals__&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;argdefs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__defaults__&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;closure&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__closure__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;functools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update_wrapper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__kwdefaults__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__kwdefaults__&lt;/span&gt;
+
+   &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins: Added explicit deprecation status of a plugin. We now have a
+few that do nothing, and are just there for compatibility with
+existing users, and this now informs the user properly rather than
+just saying it is not relevant.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix, some Python installations crash when attempting to import
+modules, such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;os&lt;/span&gt;&lt;/code&gt; with a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ModuleName&lt;/span&gt;&lt;/code&gt; object, because we
+limit string operations done, and e.g. refuse to do &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.startswith&lt;/span&gt;&lt;/code&gt;
+which of course, other loaders that your installation has added,
+might still use.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: In case of not found DLLs, we can still examine the run time
+of the currently compiling Python process of Nuitka, and locate them
+that way, which helps for some Python configurations to support
+standalone, esp. to find CPython DLL in unusual spots.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Debian: Workaround for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lib2to3&lt;/span&gt;&lt;/code&gt; data files. These are from stdlib
+and therefore the patched code from Debian needs to be undone, to
+make these portable again.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="optimization"&gt;
+&lt;h2&gt;Optimization&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Scalability: Avoid merge traces of initial variable versions, which
+came into play when merging a variable used in only one branch. These
+are useless and only made other optimization slower or impossible.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scalability: Also avoid merge traces of merge traces, instead flatten
+merge traces and avoid the duplication doing so. There were
+pathological cases, where this reduced optimization time for
+functions from infinite to instant.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For comparison helpers, switch comparison where possible, such that
+there are only 3 variants, rather than 6. Instead the boolean result
+is inverted, e.g. changing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;gt;=&lt;/span&gt;&lt;/code&gt; into &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;not&lt;/span&gt; &lt;span class="pre"&gt;&amp;lt;&lt;/span&gt;&lt;/code&gt; effectively. Of
+course this can only be done for types, where we know that nothing
+special, i.e. no method overloads of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__gte__&lt;/span&gt;&lt;/code&gt; is going on.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For binary operations that are commutative with the selected types,
+in mixed type cases, swap the arguments during code generation, such
+that e.g. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long_a&lt;/span&gt; &lt;span class="pre"&gt;+&lt;/span&gt; &lt;span class="pre"&gt;float_b&lt;/span&gt;&lt;/code&gt; is actually computed as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;float_b&lt;/span&gt; &lt;span class="pre"&gt;+&lt;/span&gt;
+&lt;span class="pre"&gt;long_a&lt;/span&gt;&lt;/code&gt;. This again avoids many helpers. It also can be done for
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;*&lt;/span&gt;&lt;/code&gt; with integers and container types.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In cases, where a comparison (or one of the few binary operation
+where we consider it useful), is used in a boolean context, but we
+know it is impossible to raise an exception, a C boolean result type
+is used rather than a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka_bool&lt;/span&gt;&lt;/code&gt; which is now only used when
+necessary, because it can indicate the exception result.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Anti-Bloat: More anti-bloat work was done for popular packages,
+covering also uses of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;setuptools_scm&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nose&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nose2&lt;/span&gt;&lt;/code&gt;
+package removals and warnings. There was also a focus on making
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mmvc&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensorflow&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tifffile&lt;/span&gt;&lt;/code&gt; compile well, removing e.g.
+the uses of the tensorflow testing framework.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Faster comparison of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt; values with constant values, this uses
+helpers that work with C &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt; values that represent a single
+“digit” of a value, or ones that use the full value space of C
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Faster comparison of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;float&lt;/span&gt;&lt;/code&gt; values with constant values, this uses
+helpers that work with C &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;float&lt;/span&gt;&lt;/code&gt; values, avoiding the useless
+Python level constant objects.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python2: Comparison of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt; now has specialized
+helpers that avoids converting the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt; to a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt; through
+coercion. This takes advantage of code to compare C &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt; values
+(which are at the core of Python2 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt; objects, with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt;
+objects.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For binary operation on mixed types, e.g. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt; &lt;span class="pre"&gt;*&lt;/span&gt; &lt;span class="pre"&gt;bytes&lt;/span&gt;&lt;/code&gt; the slot of
+the first function was still considered, and called to give a
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Py_NotImplemented&lt;/span&gt;&lt;/code&gt; return value for no good reason. This also
+applies to mixed operations of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;int&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;long&lt;/span&gt;&lt;/code&gt;, and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;float&lt;/span&gt;&lt;/code&gt;
+types, and for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;unicode&lt;/span&gt;&lt;/code&gt; values on Python2.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added missing helper for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;**&lt;/span&gt;&lt;/code&gt; operation with floats, this had been
+overlooked so far.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added dedicated nodes for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ctypes.CDLL&lt;/span&gt;&lt;/code&gt; which aims to allow us to
+detect used DLLs at compile time in the future, and to move closer to
+support its bindings more efficiently.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added specialized nodes for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict.popitem&lt;/span&gt;&lt;/code&gt; as well. With this, now
+all of the dictionary methods are specialized.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added specialized nodes for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.expandtabs&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.translate&lt;/span&gt;&lt;/code&gt;,
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.ljust&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.rjust&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.center&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.zfill&lt;/span&gt;&lt;/code&gt;, and
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.splitlines&lt;/span&gt;&lt;/code&gt;. While these are barely performance relevant, this
+completes all &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt; methods, except &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;removeprefix&lt;/span&gt;&lt;/code&gt; and
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;removesuffix&lt;/span&gt;&lt;/code&gt; that are Python3.9 or higher.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added type shape for result of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.index&lt;/span&gt;&lt;/code&gt; operation as well, this
+was missing so far.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Optimize &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bytes&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict&lt;/span&gt;&lt;/code&gt; method calls through
+variables.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Optimize calls through variables containing e.g. mutable constant
+values, these will be rare, because they all become exceptions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Optimize calls through variables containing built-in values,
+unlocking optimization of such calls, where it is assigned to a local
+variable.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For generated attribute nodes, avoid local doing import statements on
+the function level. While these were easier to generate, they can
+only be slow at runtime.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt; built-in annotate its value as derived from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt;,
+which unfortunately does not allow much optimization, since that can
+still change many things, but it was still a missing attribute.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For variable value release nodes, specialize them by value type as
+well, enhancing the scalability, because e.g. parameter variable
+specific tests, need not be considered for all other variable types
+as well.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="organisational"&gt;
+&lt;h2&gt;Organisational&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Plugins: Major changes to the Yaml file content, cleaning up some of
+the DLL configuration to more easy to use.&lt;/p&gt;
+&lt;p&gt;The DLL configuration has two flavors, one from code and one from
+filename matching, and these got separated into distinct items in the
+Yaml configuration. Also how source and dest paths get provided got
+simplified, with a relative path now being used consistently and with
+sane defaults, deriving the destination path from where the module
+lives. Also what we called patterns, are actually prefixes, as there
+is still the platform specific DLL file naming appended.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins: Move mode checks to dedicated plugin called
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;options-nanny&lt;/span&gt;&lt;/code&gt; that is always enabled, giving also much cleaner
+Yaml configuration with a new section added specifically for these.
+It controls advice on the optional or required use of
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--disable-console&lt;/span&gt;&lt;/code&gt; and the like. Some packages, e.g. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;wx&lt;/span&gt;&lt;/code&gt; are
+known to crash on macOS when the console is enabled, so this advice
+is now done with saner configuration.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins: Also for all Yaml configuration sub-items where is now a
+consistent &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;when&lt;/span&gt;&lt;/code&gt; field, that allows checking Python version, OS,
+Nuitka modes such as standalone, and only apply configuration when
+matching this criterion, with that the anti-bloat options to allow
+certain bloat, should now have proper effect as well.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The use of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;AppImage&lt;/span&gt;&lt;/code&gt; on Linux is no more. The performance for
+startup was always slower, while having lost the main benefit of
+avoiding IO at startup, due to new cached mode, so now we always use
+the same bootstrap binary as on macOS and Windows.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Do not display implicit reports reported by plugins by default
+anymore. These have become far too many, esp. with the recent stdlib
+work, and often do not add any value. The compilation report will
+become where to turn to find out why a module in included.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Ask the user to install the ordered set package that will
+actually work for the specific Python version, rather than making him
+try one of two, where sometimes only one can work, esp. with Python
+3.10 allowing only one.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GitHub: More clear wording in the issue template that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;python&lt;/span&gt; &lt;span class="pre"&gt;-m&lt;/span&gt;
+&lt;span class="pre"&gt;nuitka&lt;/span&gt; &lt;span class="pre"&gt;--version&lt;/span&gt;&lt;/code&gt; output is really required for support to given.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Attempt to use Anaconda &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ccache&lt;/span&gt;&lt;/code&gt; binary if installed on
+non-Windows. This is esp. handy on macOS, where it is harder to get
+it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows: Avoid byte-compiling the inline copy of Scons that uses
+Python3 when installing for Python2.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added experimental switches to disable certain optimization in order
+to try out their impact, e.g. on corruption bugs.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Reports: Added included DLLs for standalone mode to compilation
+report.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Reports: Added control tags influencing plugin decisions to the
+compilation report.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins: Make the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;implicit-imports&lt;/span&gt;&lt;/code&gt; dependency section in the Yaml
+package configuration a list, for consistency with other blocks.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins: Added checking of tags such from the package configuration,
+so that for things dependent on python version (e.g.
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;python39_or_higher&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;before_python39&lt;/span&gt;&lt;/code&gt;), the usage of Anaconda
+(&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;anaconda&lt;/span&gt;&lt;/code&gt;) or certain OS (e.g. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;macos&lt;/span&gt;&lt;/code&gt;), or modes (e.g.
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;standalone&lt;/span&gt;&lt;/code&gt;), expressions in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;when&lt;/span&gt;&lt;/code&gt; can limit a configuration
+item.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Quality: Re-enabled string normalization from black, the issues with
+changes that are breaking to Python2 have been worked around.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;User Manual: Describe using a minimal virtualenv as a possible help
+low memory situations as well.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Quality: The yaml auto-format now properly preserves comments, being
+based on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ruamel.yaml&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Nuitka-Python: Added support for the Linux build with Nuitka-Python
+for our own CPython fork as well, previously only Windows was
+working, amd macOS will follow later.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The commit hook when installed from git bash was working, but doing
+so from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cmd.exe&lt;/span&gt;&lt;/code&gt; didn’t find a proper path for shell from the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;git&lt;/span&gt;&lt;/code&gt; location.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Debugging: A lot of experimental toggles were added, that allow
+control over the use of certain optimization, e.g. use of dict, list,
+iterators, subscripts, etc. internals, to aid in debugging in
+situations where it’s not clear, if these are causing the issue or
+not.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added support for Fedora 36, which requires some specific linker
+options, also recognize Fedora based distributions as such.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Removed long deprecated option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--noinclude-matplotlib&lt;/span&gt;&lt;/code&gt; from numpy
+plugin, as it hasn’t had an effect for a long time now.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Visual Code: Added extension for editing Jinja2 templates. This one
+even detects that we are editing C or Python and properly highlights
+accordingly.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="cleanups"&gt;
+&lt;h2&gt;Cleanups&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Standalone: Major cleanup of the dependency analysis for standalone.
+There is no longer a distinction between entry points (main binary,
+extension modules) and DLLs that they depend on. The OS specific
+parts got broken out into dedicated modules as well and decisions are
+now taken immediately.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins: Split the Yaml package configuration files into 3 files. One
+contains now Python2 only stdlib configuration, and another one
+general stdlib.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins: Also cleanup the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;zmq&lt;/span&gt;&lt;/code&gt; plugin, which was one the last
+holdouts of now removed plugin method, moving parts to the Yaml
+configuration. We therefore no longer have &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;considerExtraDlls&lt;/span&gt;&lt;/code&gt;
+which used to work on the standalone folder, but instead only plugin
+code that provides included DLL or binary objects from
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;getExtraDlls&lt;/span&gt;&lt;/code&gt; which gives Nuitka much needed control over DLL
+copying. This was a long lasting battle finally won, and will allow
+many new features to come.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UI: Avoid changing whitespace in warnings, where we have intended
+line breaks, e.g. in case of duplicate DLLs. Went over all warnings
+and made sure to either avoid new-lines or have them, depending on
+wanted output.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Iterator end check code now uses the same code as rich comparison
+expressions and can benefit from optimization being done there as
+well.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Solved TODO item about code generation time C types to specify if
+they have error checking or not, rather than hard coding it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Production of binary helper function set was cleaned up massively,
+but still needs more work, comparison helper function set was also
+redesigned.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Changing the spelling of our container package to become more clear.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Used &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;namedtuple&lt;/span&gt;&lt;/code&gt; objects for storing used DLL information for more
+clear code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added spellchecker ignores for all attribute and argument names of
+generated fixed attribute nodes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In auto-format make sure the imports float to the top. That very much
+cleans up generated attribute nodes code, allowing also to combine
+the many ones it makes, but also cleans up some of our existing code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The package configuration Yaml files are now sorted according to
+module names. This will help to avoid merge conflicts during hotfixes
+merge back to develop and automatically group related entries in a
+sane way.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Moved large amounts of code producing implicit imports to Yaml
+configuration files.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Changed the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensorflow&lt;/span&gt;&lt;/code&gt; plugin to Yaml based configuration, making
+it a deprecated do nothing plugin, that only remains there for a few
+releases, to not crash existing build scripts.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Lots of spelling cleanups, e.g. renaming &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.codegen&lt;/span&gt;&lt;/code&gt; to
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nuitka.code_generation&lt;/span&gt;&lt;/code&gt; for clarity.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="tests"&gt;
+&lt;h2&gt;Tests&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Added generated test to cover &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bytes&lt;/span&gt;&lt;/code&gt; method. This would have found
+the issue with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;decode&lt;/span&gt;&lt;/code&gt; potentially.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enhanced standalone test for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ctypes&lt;/span&gt;&lt;/code&gt; on Linux to actually have
+something to test.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This release improves on many things at once. A lot of work has been put
+into polishing the Yaml configuration that now only lacks documentation
+and examples, such that the community as a whole should become capable
+of adding missing dependencies, data files, DLLs, and even anti-bloat
+patches.&lt;/p&gt;
+&lt;p&gt;Then a lot of new optimization has been done, to close the missing gaps
+with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dict&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str&lt;/span&gt;&lt;/code&gt; methods, but before completing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;list&lt;/span&gt;&lt;/code&gt; which
+is already a work in progress pull request, and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bytes&lt;/span&gt;&lt;/code&gt;, we want to
+start and generate the node classes that form the link or basis of
+dedicated nodes. This will be an area to work on more.&lt;/p&gt;
+&lt;p&gt;The many improvements to existing code helpers, and them being able to
+pick target types for the arguments of comparisons and binary
+operations, is a pre-cursor to universal optimization of this kind. What
+is currently only done for constant values, will in the future be
+interesting for picking specific C types for use. That will then be a
+huge difference from what we are doing now, where most things still have
+to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PyObject&lt;/span&gt; &lt;span class="pre"&gt;*&lt;/span&gt;&lt;/code&gt; based types.&lt;/p&gt;
+&lt;p&gt;Scalability has again seen very real improvements, memory usage of
+Nuitka itself, as well as compile time inside Nuitka are down by a lot
+for some cases, very noticeable. There is never enough of this, but it
+appears, in many cases now, large compilations run much faster.&lt;/p&gt;
+&lt;p&gt;For macOS specifically, the new DLL dependency analysis, is much more
+capable or resolving conflicts all by itself. Many of the more complex
+packages with some variants of Python, specifically Anaconda will now be
+working a lot better.&lt;/p&gt;
+&lt;p&gt;And then, of course there is the big improvement for Onefile, that
+allows to use cached paths. This will make it more usable in the general
+case, e.g. where the firewall of Windows hate binaries that change their
+path each time they run.&lt;/p&gt;
+&lt;p&gt;Future directions will aim to make the compilation report more concise,
+and given reasons and dependencies as they are known on the inside more
+clearly, such that is can be a major tool for testing, bug reporting and
+analysis of the compilation result.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://nuitka.net/posts/nuitka-release-10.html" rel="alternate"/>
+    <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
+“download now”.</summary>
+    <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
+    <published>2022-08-16T13:45:00+00:00</published>
   </entry>
 </feed>

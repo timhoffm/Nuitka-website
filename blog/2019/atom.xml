@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2019</title>
-  <updated>2022-06-25T16:25:49.387036+00:00</updated>
+  <updated>2022-08-16T07:21:51.972549+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/2019/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/nuitka-release-061.html</id>
     <title>Nuitka Release 0.6.1</title>
@@ -174,9 +174,9 @@ Nuitka and graphs with more history.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-061.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-01-08T10:31:00+00:00</published>
   </entry>
   <entry>
@@ -315,10 +315,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-12.html" rel="alternate"/>
     <summary>Nuitka this week #12</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2019-02-08T14:09:00+00:00</published>
   </entry>
   <entry>
@@ -423,9 +423,9 @@ temporary contributors in (relatively) high numbers.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-062.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-02-20T11:03:00+00:00</published>
   </entry>
   <entry>
@@ -556,9 +556,9 @@ contributed!&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-063.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-04-07T08:21:00+00:00</published>
   </entry>
   <entry>
@@ -758,10 +758,10 @@ donate to Nuitka, and go here:&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/nuitka-this-week-13.html" rel="alternate"/>
     <summary>Nuitka this week #13</summary>
+    <category term="NTW" label="NTW"/>
+    <category term="Nuitka" label="Nuitka"/>
     <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
-    <category term="Nuitka" label="Nuitka"/>
-    <category term="NTW" label="NTW"/>
     <published>2019-05-12T11:07:00+00:00</published>
   </entry>
   <entry>
@@ -793,8 +793,8 @@ this summer.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/batakrishna-sahu-intro.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="portrait" label="portrait"/>
     <published>2019-05-14T08:31:00+00:00</published>
   </entry>
@@ -828,11 +828,11 @@ summer!&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/tommy-gsoc-intro.html" rel="alternate"/>
     <summary>Hi all! :)</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="tests" label="tests"/>
-    <category term="standalone" label="standalone"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="portrait" label="portrait"/>
+    <category term="standalone" label="standalone"/>
+    <category term="tests" label="tests"/>
     <published>2019-05-15T10:00:00+00:00</published>
   </entry>
   <entry>
@@ -1078,9 +1078,9 @@ infrastructure for it is in place.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-064.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-06-10T19:28:00+00:00</published>
   </entry>
   <entry>
@@ -1251,9 +1251,9 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
     <link href="https://nuitka.net/posts/urllib3-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of urllib3 to its nuitka-built
 .whl counterpart.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-06-19T16:00:00+00:00</published>
   </entry>
@@ -1413,9 +1413,9 @@ nuitka-built wheel pytest for dateutil.&lt;/p&gt;&lt;/li&gt;
     <link href="https://nuitka.net/posts/dateutil-wheel-with-nuitka.html" rel="alternate"/>
     <summary>This post compares the pytest results of dateutil to its nuitka-built
 .whl counterpart.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-07-12T18:00:00+00:00</published>
   </entry>
@@ -1582,9 +1582,9 @@ of the infrastructure getting there.&lt;/p&gt;
     <link href="https://nuitka.net/posts/nuitka-release-065.html" rel="alternate"/>
     <summary>This is to inform you about the new stable release of Nuitka. It is the extremely compatible Python compiler,
 “download now”.</summary>
-    <category term="compiler" label="compiler"/>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
+    <category term="compiler" label="compiler"/>
     <published>2019-07-30T21:52:00+00:00</published>
   </entry>
   <entry>
@@ -1766,13 +1766,13 @@ amazing program possible.&lt;/p&gt;
     <summary>As Google Summer of Code (GSoC) is coming to an end, I am writing this
 blog post as a final summary describing all the work I have done as well
 as my experiences in this program.</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="tests" label="tests"/>
+    <category term="automation" label="automation"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="pypi" label="pypi"/>
     <category term="pytest" label="pytest"/>
-    <category term="automation" label="automation"/>
     <category term="standalone" label="standalone"/>
+    <category term="tests" label="tests"/>
     <published>2019-08-23T07:00:00+00:00</published>
   </entry>
   <entry>
@@ -2016,8 +2016,8 @@ professional career in Software engineering.&lt;/p&gt;&lt;/li&gt;
 </content>
     <link href="https://nuitka.net/posts/bksahus-gsoc-wrap-up.html" rel="alternate"/>
     <summary>Hello everyone!</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <published>2019-08-25T19:55:00+00:00</published>
   </entry>
 </feed>

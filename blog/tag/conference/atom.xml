@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged conference</title>
-  <updated>2022-06-25T16:25:55.609272+00:00</updated>
+  <updated>2022-08-16T07:21:58.420203+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/conference/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/pycon-de-2011-my-report.html</id>
     <title>PyCON DE 2011 - My Report</title>
@@ -324,13 +324,13 @@ presentation about my Python compiler Nuitka.
 You can watch the Video on Youtube. I believe it’s absolutely worth your
 time. I was not doing a lot of “why” at all now, only “what”, and demo
 times, and answering questions:</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
+    <category term="Python" label="Python"/>
     <category term="compiler" label="compiler"/>
     <category term="conference" label="conference"/>
+    <category term="europython" label="europython"/>
     <category term="presentation" label="presentation"/>
     <category term="video" label="video"/>
-    <category term="europython" label="europython"/>
     <published>2013-08-15T08:15:17+00:00</published>
   </entry>
   <entry>
@@ -358,10 +358,10 @@ the best way to create the community at this time anyway.&lt;/p&gt;
 didn’t get accepted. Quite a surprise to me, but likely mostly logical.
 These are the accepted talks (link since became unavailable) and well,
 it surely didn’t fit in, right.</summary>
-    <category term="Python" label="Python"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="europython" label="europython"/>
+    <category term="Python" label="Python"/>
     <category term="conference" label="conference"/>
+    <category term="europython" label="europython"/>
     <published>2014-01-18T20:48:53+00:00</published>
   </entry>
 </feed>

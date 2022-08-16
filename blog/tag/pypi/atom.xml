@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged pypi</title>
-  <updated>2022-06-25T16:25:55.815918+00:00</updated>
+  <updated>2022-08-16T07:21:58.627941+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/pypi/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/tommy-gsoc-summary.html</id>
     <title>Intro</title>
@@ -185,13 +185,13 @@ amazing program possible.&lt;/p&gt;
     <summary>As Google Summer of Code (GSoC) is coming to an end, I am writing this
 blog post as a final summary describing all the work I have done as well
 as my experiences in this program.</summary>
-    <category term="gsoc2019" label="gsoc2019"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="tests" label="tests"/>
+    <category term="automation" label="automation"/>
+    <category term="gsoc2019" label="gsoc2019"/>
     <category term="pypi" label="pypi"/>
     <category term="pytest" label="pytest"/>
-    <category term="automation" label="automation"/>
     <category term="standalone" label="standalone"/>
+    <category term="tests" label="tests"/>
     <published>2019-08-23T07:00:00+00:00</published>
   </entry>
 </feed>

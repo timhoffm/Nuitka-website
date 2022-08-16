@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,13 +132,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="compile-python-on-windows">
-<h1>Compile Python on Windows<a class="headerlink" href="#compile-python-on-windows" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Compile Python on Windows<a class="headerlink" href="#compile-python-on-windows" title="Permalink to this heading">&#61633;</a></h1>
 <p>Looking to create an executable from Python script? Let me show you the
 full steps to achieve it on <em>Windows</em>.</p>
 <section id="steps-to-create-a-windows-executable-from-a-python-script-using-nuitka">
-<h2>Steps to create a Windows executable from a Python script using Nuitka<a class="headerlink" href="#steps-to-create-a-windows-executable-from-a-python-script-using-nuitka" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Steps to create a Windows executable from a Python script using Nuitka<a class="headerlink" href="#steps-to-create-a-windows-executable-from-a-python-script-using-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <section id="step-1-add-python-to-windows-path">
-<h3>Step 1: Add Python to Windows Path<a class="headerlink" href="#step-1-add-python-to-windows-path" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Step 1: Add Python to Windows Path<a class="headerlink" href="#step-1-add-python-to-windows-path" title="Permalink to this heading">&#61633;</a></h3>
 <p>The simple way to add Python to the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> do this is to check the box
 during installation of CPython. You just <a class="reference external" href="https://www.python.org/downloads/" target="_blank">download python</a> and install or modify Python by
 checking the box in the installer:</p>
@@ -153,14 +154,14 @@ but that can become inconvenient.</p>
 </div>
 </section>
 <section id="step-2-open-a-windows-prompt">
-<h3>Step 2: Open a Windows Prompt<a class="headerlink" href="#step-2-open-a-windows-prompt" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Step 2: Open a Windows Prompt<a class="headerlink" href="#step-2-open-a-windows-prompt" title="Permalink to this heading">&#61633;</a></h3>
 <p>This can be <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> or Windows Terminal, or from an IDE like Visual
 Code or PyCharm. And then type <code class="docutils literal notranslate"><span class="pre">python</span></code> to verify the correct
 installation, and <code class="docutils literal notranslate"><span class="pre">exit</span></code> to leave the Python prompt again.</p>
 <img alt="Launch Python in Windows prompt to verify" src="../_images/Python-Installation-CMD.png">
 </section>
 <section id="step-3-install-the-nuitka-python-compiler-package">
-<h3>Step 3: Install the Nuitka Python Compiler package<a class="headerlink" href="#step-3-install-the-nuitka-python-compiler-package" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Step 3: Install the Nuitka Python Compiler package<a class="headerlink" href="#step-3-install-the-nuitka-python-compiler-package" title="Permalink to this heading">&#61633;</a></h3>
 <p>Now install Nuitka with the following command.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install nuitka
 </pre></div>
@@ -168,7 +169,7 @@ installation, and <code class="docutils literal notranslate"><span class="pre">e
 <img alt="Install Nuitka in Python" src="../_images/Nuitka-Installation-CMD.png">
 </section>
 <section id="step-4-run-your-program">
-<h3>Step 4: Run your Program<a class="headerlink" href="#step-4-run-your-program" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Step 4: Run your Program<a class="headerlink" href="#step-4-run-your-program" title="Permalink to this heading">&#61633;</a></h3>
 <p>Now run your program from the terminal. Convince yourself that
 everything is working.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python fancy-program.py
@@ -181,7 +182,7 @@ going to make Python know it&#8217;s one.</p>
 </div>
 </section>
 <section id="step-5-create-the-executable-using-nuitka">
-<h3>Step 5: Create the Executable using Nuitka<a class="headerlink" href="#step-5-create-the-executable-using-nuitka" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Step 5: Create the Executable using Nuitka<a class="headerlink" href="#step-5-create-the-executable-using-nuitka" title="Permalink to this heading">&#61633;</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --onefile fancy-program.py
 </pre></div>
 </div>
@@ -193,7 +194,7 @@ to adapt for platform specifics, e.g. program icon, and so on.</p>
 <p>This will create <code class="docutils literal notranslate"><span class="pre">fancy-program.exe</span></code>.</p>
 </section>
 <section id="step-6-run-the-executable">
-<h3>Step 6: Run the Executable<a class="headerlink" href="#step-6-run-the-executable" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Step 6: Run the Executable<a class="headerlink" href="#step-6-run-the-executable" title="Permalink to this heading">&#61633;</a></h3>
 <p>Your executable should appear right near <code class="docutils literal notranslate"><span class="pre">fancy-program.py</span></code> and
 opening the explorer or running <code class="docutils literal notranslate"><span class="pre">fancy-program.exe</span></code> from the Terminal
 should be good.</p>

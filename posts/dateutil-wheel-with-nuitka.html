@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="intro">
-<h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Intro<a class="headerlink" href="#intro" title="Permalink to this heading">&#61633;</a></h1>
 <p>This post compares the pytest results of dateutil to its nuitka-built
 <code class="docutils literal notranslate"><span class="pre">.whl</span></code> counterpart.</p>
 <p>Dateutil standalone test have already been covered. Manual testing is
@@ -149,7 +150,7 @@ pollution.</p>
 </div>
 </section>
 <section id="steps-to-reproduce">
-<h1>Steps to Reproduce<a class="headerlink" href="#steps-to-reproduce" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Steps to Reproduce<a class="headerlink" href="#steps-to-reproduce" title="Permalink to this heading">&#61633;</a></h1>
 <ol class="arabic simple">
 <li><p>Clone dateutil and nuitka into a new folder</p></li>
 <li><p>Inside the dateutil folder, issue <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span>
@@ -167,7 +168,7 @@ nuitka-built wheel pytest for dateutil.</p></li>
 </ol>
 </section>
 <section id="uncompile-python">
-<h1>Uncompile Python<a class="headerlink" href="#uncompile-python" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Uncompile Python<a class="headerlink" href="#uncompile-python" title="Permalink to this heading">&#61633;</a></h1>
 <p>dateutil regular pytest:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">=============================</span> <span class="n">test</span> <span class="n">session</span> <span class="n">starts</span> <span class="o">=============================</span>
 <span class="n">platform</span> <span class="n">win32</span> <span class="o">--</span> <span class="n">Python</span> <span class="mf">3.7.0</span><span class="p">,</span> <span class="n">pytest</span><span class="o">-</span><span class="mf">4.6.3</span><span class="p">,</span> <span class="n">py</span><span class="o">-</span><span class="mf">1.8.0</span><span class="p">,</span> <span class="n">pluggy</span><span class="o">-</span><span class="mf">0.12.0</span>
@@ -222,7 +223,7 @@ nuitka-built wheel pytest for dateutil.</p></li>
 </div>
 </section>
 <section id="compiled-with-nuitka">
-<h1>Compiled with Nuitka<a class="headerlink" href="#compiled-with-nuitka" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Compiled with Nuitka<a class="headerlink" href="#compiled-with-nuitka" title="Permalink to this heading">&#61633;</a></h1>
 <p>nuitka wheel pytest:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">=============================</span> <span class="n">test</span> <span class="n">session</span> <span class="n">starts</span> <span class="o">=============================</span>
 <span class="n">platform</span> <span class="n">win32</span> <span class="o">--</span> <span class="n">Python</span> <span class="mf">3.7.0</span><span class="p">,</span> <span class="n">pytest</span><span class="o">-</span><span class="mf">4.6.3</span><span class="p">,</span> <span class="n">py</span><span class="o">-</span><span class="mf">1.8.0</span><span class="p">,</span> <span class="n">pluggy</span><span class="o">-</span><span class="mf">0.12.0</span>

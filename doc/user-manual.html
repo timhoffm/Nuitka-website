@@ -24,7 +24,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -35,7 +35,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -123,6 +124,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#memory-issues-and-compiler-bugs">Memory issues and compiler bugs</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ask-nuitka-to-use-less-memory">Ask Nuitka to use less memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#avoid-32-bit-c-compiler-assembler-memory-limits">Avoid 32 bit C compiler/assembler memory limits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-a-minimal-virtualenv">Use a minimal virtualenv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#use-lto-compilation-or-not">Use LTO compilation or not</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#switch-the-c-compiler-to-clang">Switch the C compiler to clang</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#add-a-larger-swap-file-to-your-embedded-linux">Add a larger swap file to your embedded Linux</a></li>
@@ -138,6 +140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#dependency-creep-in-standalone">Dependency creep in standalone</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#onefile-finding-files">Onefile: Finding files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows-programs-without-console-give-no-errors">Windows Programs without console give no errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deep-copying-uncompiled-functions">Deep copying uncompiled functions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tips">Tips</a><ul>
@@ -195,13 +198,13 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal fa fa-shopping-cart" href="commercial.html">&amp;nbsp;Nuitka Commercial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
 </ul>
@@ -244,9 +247,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-user-manual">
-<h1>Nuitka User Manual<a class="headerlink" href="#nuitka-user-manual" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka User Manual<a class="headerlink" href="#nuitka-user-manual" title="Permalink to this heading">&#61633;</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">&#61633;</a></h2>
 <p>This document is the recommended first read if you are interested in
 using Nuitka, understand its use cases, check what you can expect,
 license, requirements, credits, etc.</p>
@@ -267,9 +270,9 @@ emulated, e.g. more complete error messages are given, but there is a
 full compatibility mode to disable even that.</p>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">&#61633;</a></h2>
 <section id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">&#61633;</a></h3>
 <ul>
 <li><p>C Compiler: You need a compiler with support for C11 or alternatively
 for C++03 <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
@@ -380,7 +383,7 @@ commercial users.</p>
 </dl>
 </section>
 <section id="command-line">
-<h3>Command Line<a class="headerlink" href="#command-line" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Command Line<a class="headerlink" href="#command-line" title="Permalink to this heading">&#61633;</a></h3>
 <p>The recommended way of executing Nuitka is <code class="docutils literal notranslate"><span class="pre">&lt;the_right_python&gt;</span> <span class="pre">-m</span>
 <span class="pre">nuitka</span></code> to be absolutely certain which Python interpreter you are
 using, so it is easier to match with what Nuitka has.</p>
@@ -413,14 +416,14 @@ after the first non-option to the created binary, so it is somewhat more
 similar to what plain <code class="docutils literal notranslate"><span class="pre">python</span></code> will do.</p>
 </section>
 <section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">&#61633;</a></h3>
 <p>For most systems, there will be packages on the <a class="reference external" href="https://nuitka.net/doc/download.html">download page</a> of Nuitka. But you can also
 install it from source code as described above, but also like any other
 Python program it can be installed via the normal <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span>
 <span class="pre">install</span></code> routine.</p>
 </section>
 <section id="license">
-<h3>License<a class="headerlink" href="#license" title="Permalink to this headline">&#61633;</a></h3>
+<h3>License<a class="headerlink" href="#license" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka is licensed under the Apache License, Version 2.0; you may not
 use it except in compliance with the License.</p>
 <p>You may obtain a copy of the License at
@@ -433,13 +436,13 @@ limitations under the License.</p>
 </section>
 </section>
 <section id="tutorial-setup-and-build-on-windows">
-<h2>Tutorial Setup and build on Windows<a class="headerlink" href="#tutorial-setup-and-build-on-windows" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Tutorial Setup and build on Windows<a class="headerlink" href="#tutorial-setup-and-build-on-windows" title="Permalink to this heading">&#61633;</a></h2>
 <p>This is basic steps if you have nothing installed, of course if you have
 any of the parts, just skip it.</p>
 <section id="setup">
-<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">&#61633;</a></h3>
 <section id="install-python">
-<h4>Install Python<a class="headerlink" href="#install-python" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Install Python<a class="headerlink" href="#install-python" title="Permalink to this heading">&#61633;</a></h4>
 <ul class="simple">
 <li><p>Download and install Python from
 <a class="reference external" href="https://www.python.org/downloads/windows" target="_blank">https://www.python.org/downloads/windows</a></p></li>
@@ -449,7 +452,7 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 </ul>
 </section>
 <section id="install-nuitka">
-<h4>Install Nuitka<a class="headerlink" href="#install-nuitka" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Install Nuitka<a class="headerlink" href="#install-nuitka" title="Permalink to this heading">&#61633;</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">nuitka</span></code></p></li>
 <li><p>Verify using command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">nuitka</span> <span class="pre">--version</span></code></p></li>
@@ -457,9 +460,9 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 </section>
 </section>
 <section id="write-some-code-and-test">
-<h3>Write some code and test<a class="headerlink" href="#write-some-code-and-test" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Write some code and test<a class="headerlink" href="#write-some-code-and-test" title="Permalink to this heading">&#61633;</a></h3>
 <section id="create-a-folder-for-the-python-code">
-<h4>Create a folder for the Python code<a class="headerlink" href="#create-a-folder-for-the-python-code" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Create a folder for the Python code<a class="headerlink" href="#create-a-folder-for-the-python-code" title="Permalink to this heading">&#61633;</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> HelloWorld</p></li>
 <li><p>make a python file named <strong>hello.py</strong></p></li>
@@ -478,7 +481,7 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 </div>
 </section>
 <section id="test-your-program">
-<h4>Test your program<a class="headerlink" href="#test-your-program" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Test your program<a class="headerlink" href="#test-your-program" title="Permalink to this heading">&#61633;</a></h4>
 <p>Do as you normally would. Running Nuitka on code that works incorrectly
 is not easier to debug.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python hello.py
@@ -487,7 +490,7 @@ is not easier to debug.</p>
 </section>
 <hr class="docutils">
 <section id="build-it-using">
-<h4>Build it using<a class="headerlink" href="#build-it-using" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Build it using<a class="headerlink" href="#build-it-using" title="Permalink to this heading">&#61633;</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka hello.py
 </pre></div>
 </div>
@@ -500,11 +503,11 @@ both those questions.</p>
 </div>
 </section>
 <section id="run-it">
-<h4>Run it<a class="headerlink" href="#run-it" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Run it<a class="headerlink" href="#run-it" title="Permalink to this heading">&#61633;</a></h4>
 <p>Execute the <code class="docutils literal notranslate"><span class="pre">hello.exe</span></code> created near <code class="docutils literal notranslate"><span class="pre">hello.py</span></code>.</p>
 </section>
 <section id="distribute">
-<h4>Distribute<a class="headerlink" href="#distribute" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Distribute<a class="headerlink" href="#distribute" title="Permalink to this heading">&#61633;</a></h4>
 <p>To distribute, build with <code class="docutils literal notranslate"><span class="pre">--standalone</span></code> option, which will not output
 a single executable, but a whole folder. Copy the resulting
 <code class="docutils literal notranslate"><span class="pre">hello.dist</span></code> folder to the other machine and run it.</p>
@@ -515,9 +518,9 @@ will make the debugging only harder, e.g. in case of missing data files.</p>
 </section>
 </section>
 <section id="use-cases">
-<h2>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this heading">&#61633;</a></h2>
 <section id="use-case-1-program-compilation-with-all-modules-embedded">
-<h3>Use Case 1 - Program compilation with all modules embedded<a class="headerlink" href="#use-case-1-program-compilation-with-all-modules-embedded" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Use Case 1 - Program compilation with all modules embedded<a class="headerlink" href="#use-case-1-program-compilation-with-all-modules-embedded" title="Permalink to this heading">&#61633;</a></h3>
 <p>If you want to compile a whole program recursively, and not only the
 single file that is the main program, do it like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --follow-imports program.py
@@ -563,7 +566,7 @@ platforms) put inside.</p>
 </div>
 </section>
 <section id="use-case-2-extension-module-compilation">
-<h3>Use Case 2 - Extension Module compilation<a class="headerlink" href="#use-case-2-extension-module-compilation" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Use Case 2 - Extension Module compilation<a class="headerlink" href="#use-case-2-extension-module-compilation" title="Permalink to this heading">&#61633;</a></h3>
 <p>If you want to compile a single extension module, all you have to do is
 this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --module some_module.py
@@ -589,7 +592,7 @@ the same version and doesn&#8217;t include other extension modules.</p>
 </div>
 </section>
 <section id="use-case-3-package-compilation">
-<h3>Use Case 3 - Package compilation<a class="headerlink" href="#use-case-3-package-compilation" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Use Case 3 - Package compilation<a class="headerlink" href="#use-case-3-package-compilation" title="Permalink to this heading">&#61633;</a></h3>
 <p>If you need to compile a whole package and embed all modules, that is
 also feasible, use Nuitka like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --module some_package --include-package<span class="o">=</span>some_package
@@ -605,7 +608,7 @@ yourself with this approach.</p>
 </div>
 </section>
 <section id="use-case-4-program-distribution">
-<h3>Use Case 4 - Program Distribution<a class="headerlink" href="#use-case-4-program-distribution" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Use Case 4 - Program Distribution<a class="headerlink" href="#use-case-4-program-distribution" title="Permalink to this heading">&#61633;</a></h3>
 <p>For distribution to other systems, there is the standalone mode which
 produces a folder for which you can specify <code class="docutils literal notranslate"><span class="pre">--standalone</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m nuitka --standalone program.py
@@ -722,7 +725,7 @@ conventions.</p>
 </div>
 </section>
 <section id="use-case-5-setuptools-wheels">
-<h3>Use Case 5 - Setuptools Wheels<a class="headerlink" href="#use-case-5-setuptools-wheels" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Use Case 5 - Setuptools Wheels<a class="headerlink" href="#use-case-5-setuptools-wheels" title="Permalink to this heading">&#61633;</a></h3>
 <p>If you have a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> or <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> driven
 creation of wheels for your software in place, putting Nuitka to use is
 extremely easy.</p>
@@ -822,9 +825,9 @@ with <em>two</em> leading slashes, e.g. <code class="docutils literal notranslat
 </section>
 </section>
 <section id="tweaks">
-<h2>Tweaks<a class="headerlink" href="#tweaks" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Tweaks<a class="headerlink" href="#tweaks" title="Permalink to this heading">&#61633;</a></h2>
 <section id="icons">
-<h3>Icons<a class="headerlink" href="#icons" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Icons<a class="headerlink" href="#icons" title="Permalink to this heading">&#61633;</a></h3>
 <p>For good looks, you may specify icons. On Windows, you can provide an
 icon file, a template executable, or a PNG file. All of these will work
 and may even be combined:</p>
@@ -836,7 +839,7 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 </div>
 </section>
 <section id="splash-screen">
-<h3>Splash screen<a class="headerlink" href="#splash-screen" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Splash screen<a class="headerlink" href="#splash-screen" title="Permalink to this heading">&#61633;</a></h3>
 <p>Splash screens are useful when program startup is slow. Onefile startup
 itself is not slow, but your program may be, and you cannot really know
 how fast the computer used will be, so it might be a good idea to have
@@ -873,28 +876,38 @@ syntax to combine the code with the creation, compile this:</p>
 </section>
 </section>
 <section id="typical-problems">
-<h2>Typical Problems<a class="headerlink" href="#typical-problems" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Typical Problems<a class="headerlink" href="#typical-problems" title="Permalink to this heading">&#61633;</a></h2>
 <section id="memory-issues-and-compiler-bugs">
-<h3>Memory issues and compiler bugs<a class="headerlink" href="#memory-issues-and-compiler-bugs" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Memory issues and compiler bugs<a class="headerlink" href="#memory-issues-and-compiler-bugs" title="Permalink to this heading">&#61633;</a></h3>
 <p>Sometimes the C compilers will crash saying they cannot allocate memory
 or that some input was truncated, or similar error messages, clearly
 from it. There are several options you can explore here:</p>
 <section id="ask-nuitka-to-use-less-memory">
-<h4>Ask Nuitka to use less memory<a class="headerlink" href="#ask-nuitka-to-use-less-memory" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Ask Nuitka to use less memory<a class="headerlink" href="#ask-nuitka-to-use-less-memory" title="Permalink to this heading">&#61633;</a></h4>
 <p>There is a dedicated option <code class="docutils literal notranslate"><span class="pre">--low-memory</span></code> which influences decisions
 of Nuitka, such that it avoids high usage of memory during compilation
 at the cost of increased compile time.</p>
 </section>
 <section id="avoid-32-bit-c-compiler-assembler-memory-limits">
-<h4>Avoid 32 bit C compiler/assembler memory limits<a class="headerlink" href="#avoid-32-bit-c-compiler-assembler-memory-limits" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Avoid 32 bit C compiler/assembler memory limits<a class="headerlink" href="#avoid-32-bit-c-compiler-assembler-memory-limits" title="Permalink to this heading">&#61633;</a></h4>
 <p>Do not use a 32 bits compiler, but a 64 bit one. If you are using Python
 with 32 bits on Windows, you most definitely ought to use MSVC as the C
 compiler, and not MinGW64. The MSVC is a cross compiler, and can use
 more memory than gcc on that platform. If you are not on Windows, that
 is not an option of course. Also using the 64 bits Python will work.</p>
 </section>
+<section id="use-a-minimal-virtualenv">
+<h4>Use a minimal virtualenv<a class="headerlink" href="#use-a-minimal-virtualenv" title="Permalink to this heading">&#61633;</a></h4>
+<p>When you compile from a living installation, that may well have many
+optional dependencies of your software installed. Some software, will
+then have imports on these, and Nuitka will compile them as well. Not
+only may these be just the trouble makers, they also require more
+memory, so get rid of that. Of course you do have to check that your
+program has all needed dependencies before you attempt to compile, or
+else the compiled program will equally not run.</p>
+</section>
 <section id="use-lto-compilation-or-not">
-<h4>Use LTO compilation or not<a class="headerlink" href="#use-lto-compilation-or-not" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Use LTO compilation or not<a class="headerlink" href="#use-lto-compilation-or-not" title="Permalink to this heading">&#61633;</a></h4>
 <p>With <code class="docutils literal notranslate"><span class="pre">--lto=yes</span></code> or <code class="docutils literal notranslate"><span class="pre">--lto=no</span></code> you can switch the C compilation to
 only produce bytecode, and not assembler code and machine code directly,
 but make a whole program optimization at the end. This will change the
@@ -902,7 +915,7 @@ memory usage pretty dramatically, and if you error is coming from the
 assembler, using LTO will most definitely avoid that.</p>
 </section>
 <section id="switch-the-c-compiler-to-clang">
-<h4>Switch the C compiler to clang<a class="headerlink" href="#switch-the-c-compiler-to-clang" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Switch the C compiler to clang<a class="headerlink" href="#switch-the-c-compiler-to-clang" title="Permalink to this heading">&#61633;</a></h4>
 <p>People have reported that programs that fail to compile with gcc due to
 its bugs or memory usage work fine with clang on Linux. On Windows, this
 could still be an option, but it needs to be implemented first for the
@@ -911,7 +924,7 @@ be more memory effective anyway, you should go there, and if you want to
 use Clang, there is support for the one contained in MSVC.</p>
 </section>
 <section id="add-a-larger-swap-file-to-your-embedded-linux">
-<h4>Add a larger swap file to your embedded Linux<a class="headerlink" href="#add-a-larger-swap-file-to-your-embedded-linux" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Add a larger swap file to your embedded Linux<a class="headerlink" href="#add-a-larger-swap-file-to-your-embedded-linux" title="Permalink to this heading">&#61633;</a></h4>
 <p>On systems with not enough RAM, you need to use swap space. Running out
 of it is possibly a cause, and adding more swap space, or one at all,
 might solve the issue, but beware that it will make things extremely
@@ -919,7 +932,7 @@ slow when the compilers swap back and forth, so consider the next tip
 first or on top of it.</p>
 </section>
 <section id="limit-the-amount-of-compilation-jobs">
-<h4>Limit the amount of compilation jobs<a class="headerlink" href="#limit-the-amount-of-compilation-jobs" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Limit the amount of compilation jobs<a class="headerlink" href="#limit-the-amount-of-compilation-jobs" title="Permalink to this heading">&#61633;</a></h4>
 <p>With the <code class="docutils literal notranslate"><span class="pre">--jobs</span></code> option of Nuitka, it will not start many C compiler
 instances at once, each competing for the scarce resource of RAM. By
 picking a value of one, only one C compiler instance will be running,
@@ -928,14 +941,14 @@ so that&#8217;s a natural choice right there.</p>
 </section>
 </section>
 <section id="dynamic-sys-path">
-<h3>Dynamic <code class="docutils literal notranslate"><span class="pre">sys.path</span></code><a class="headerlink" href="#dynamic-sys-path" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Dynamic <code class="docutils literal notranslate"><span class="pre">sys.path</span></code><a class="headerlink" href="#dynamic-sys-path" title="Permalink to this heading">&#61633;</a></h3>
 <p>If your script modifies <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> to e.g. insert directories with
 source code relative to it, Nuitka will not be able to see those.
 However, if you set the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> to the resulting value, it will
 be able to compile it and find the used modules from these paths as
 well.</p>
 <section id="manual-python-file-loading">
-<h4>Manual Python File Loading<a class="headerlink" href="#manual-python-file-loading" title="Permalink to this headline">&#61633;</a></h4>
+<h4>Manual Python File Loading<a class="headerlink" href="#manual-python-file-loading" title="Permalink to this heading">&#61633;</a></h4>
 <p>A very frequent pattern with private code is that it scans plugin
 directories of some kind, and uses <code class="docutils literal notranslate"><span class="pre">os.listdir</span></code>, checks filenames, and
 then opens a file and does <code class="docutils literal notranslate"><span class="pre">exec</span></code> on them. This approach is working
@@ -976,7 +989,7 @@ approach, that works for pure Python code and is a lot less vulnerable.</p>
 </section>
 </section>
 <section id="missing-data-files-in-standalone">
-<h3>Missing data files in standalone<a class="headerlink" href="#missing-data-files-in-standalone" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Missing data files in standalone<a class="headerlink" href="#missing-data-files-in-standalone" title="Permalink to this heading">&#61633;</a></h3>
 <p>If your program fails to file data, it can cause all kinds of different
 behaviors, e.g. a package might complain it is not the right version,
 because a <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> file check defaulted to unknown. The absence of
@@ -988,7 +1001,7 @@ cause. If you program works without standalone, chances are data files
 might be cause.</p>
 </section>
 <section id="missing-dlls-in-standalone">
-<h3>Missing DLLs in standalone<a class="headerlink" href="#missing-dlls-in-standalone" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Missing DLLs in standalone<a class="headerlink" href="#missing-dlls-in-standalone" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka has plugins that deal with copying DLLs. For NumPy, SciPy,
 Tkinter, etc.</p>
 <p>These need special treatment to be able to run on other systems.
@@ -997,7 +1010,7 @@ Sometimes newer version of packages, esp. NumPy can be unsupported. In
 this case you will have to raise an issue, and use the older one.</p>
 </section>
 <section id="dependency-creep-in-standalone">
-<h3>Dependency creep in standalone<a class="headerlink" href="#dependency-creep-in-standalone" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Dependency creep in standalone<a class="headerlink" href="#dependency-creep-in-standalone" title="Permalink to this heading">&#61633;</a></h3>
 <p>Some packages are a single import, but to Nuitka mean that more than a
 thousand packages (literally) are to be included. The prime example of
 Pandas, which does want to plug and use just about everything you can
@@ -1020,7 +1033,7 @@ can contribute to, removing typical bloat from packages. Feel free to
 enhance it and make PRs towards Nuitka with it.</p>
 </section>
 <section id="onefile-finding-files">
-<h3>Onefile: Finding files<a class="headerlink" href="#onefile-finding-files" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Onefile: Finding files<a class="headerlink" href="#onefile-finding-files" title="Permalink to this heading">&#61633;</a></h3>
 <p>There is a difference between <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">__file__</span></code> of the
 main module for onefile more, that is caused by using a bootstrap to a
 temporary location. The first one will be the original executable path,
@@ -1038,17 +1051,46 @@ which you expect to be inside the onefile binary, access them like this.</p>
 </div>
 </section>
 <section id="windows-programs-without-console-give-no-errors">
-<h3>Windows Programs without console give no errors<a class="headerlink" href="#windows-programs-without-console-give-no-errors" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Windows Programs without console give no errors<a class="headerlink" href="#windows-programs-without-console-give-no-errors" title="Permalink to this heading">&#61633;</a></h3>
 <p>For debugging purposes, remove <code class="docutils literal notranslate"><span class="pre">--windows-disable-console</span></code> or use the
 options <code class="docutils literal notranslate"><span class="pre">--windows-force-stdout-spec</span></code> and
 <code class="docutils literal notranslate"><span class="pre">--windows-force-stderr-spec</span></code> with paths as documented for
 <code class="docutils literal notranslate"><span class="pre">--windows-onefile-tempdir-spec</span></code> above.</p>
 </section>
+<section id="deep-copying-uncompiled-functions">
+<h3>Deep copying uncompiled functions<a class="headerlink" href="#deep-copying-uncompiled-functions" title="Permalink to this heading">&#61633;</a></h3>
+<p>Sometimes people use this kind of code, which for packages on PyPI, we
+deal with by doing source code patches on the fly. If this is in your
+own code, here is what you can do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">binder</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">FunctionType</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="vm">__code__</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="vm">__globals__</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">argdefs</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="vm">__defaults__</span><span class="p">,</span> <span class="n">closure</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="vm">__closure__</span><span class="p">)</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">update_wrapper</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span>
+   <span class="n">result</span><span class="o">.</span><span class="vm">__kwdefaults__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__kwdefaults__</span>
+   <span class="n">result</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">name</span>
+   <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>Compiled functions cannot be used to create uncompiled ones from, so the
+above code, will not work. However, there is a dedicated <code class="docutils literal notranslate"><span class="pre">clone</span></code>
+method, that is specific to them, so use this instead.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">binder</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+   <span class="k">try</span><span class="p">:</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+   <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">FunctionType</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="vm">__code__</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="vm">__globals__</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">argdefs</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="vm">__defaults__</span><span class="p">,</span> <span class="n">closure</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="vm">__closure__</span><span class="p">)</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">update_wrapper</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span>
+      <span class="n">result</span><span class="o">.</span><span class="vm">__kwdefaults__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__kwdefaults__</span>
+
+   <span class="n">result</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">name</span>
+   <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="tips">
-<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this heading">&#61633;</a></h2>
 <section id="nuitka-options-in-the-code">
-<h3>Nuitka Options in the code<a class="headerlink" href="#nuitka-options-in-the-code" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Nuitka Options in the code<a class="headerlink" href="#nuitka-options-in-the-code" title="Permalink to this heading">&#61633;</a></h3>
 <p>There is support for conditional options, and options using pre-defined
 variables, this is an example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compilation mode, support OS specific.</span>
@@ -1113,14 +1155,14 @@ for a pre-defined set of variables:</p>
 </table>
 </section>
 <section id="python-command-line-flags">
-<h3>Python command line flags<a class="headerlink" href="#python-command-line-flags" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Python command line flags<a class="headerlink" href="#python-command-line-flags" title="Permalink to this heading">&#61633;</a></h3>
 <p>For passing things like <code class="docutils literal notranslate"><span class="pre">-O</span></code> or <code class="docutils literal notranslate"><span class="pre">-S</span></code> to Python, to your compiled
 program, there is a command line option name <code class="docutils literal notranslate"><span class="pre">--python-flag=</span></code> which
 makes Nuitka emulate these options.</p>
 <p>The most important ones are supported, more can certainly be added.</p>
 </section>
 <section id="caching-compilation-results">
-<h3>Caching compilation results<a class="headerlink" href="#caching-compilation-results" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Caching compilation results<a class="headerlink" href="#caching-compilation-results" title="Permalink to this heading">&#61633;</a></h3>
 <p>The C compiler, when invoked with the same input files, will take a long
 time and much CPU to compile over and over. Make sure you are having
 <code class="docutils literal notranslate"><span class="pre">ccache</span></code> installed and configured when using gcc (even on Windows). It
@@ -1139,7 +1181,7 @@ in CI systems where things might be non-standard.</p>
 automatic and included in Nuitka.</p>
 </section>
 <section id="control-where-caches-live">
-<h3>Control where Caches live<a class="headerlink" href="#control-where-caches-live" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Control where Caches live<a class="headerlink" href="#control-where-caches-live" title="Permalink to this heading">&#61633;</a></h3>
 <p>The storage for cache results of all kinds, downloads, cached
 compilation results from C and Nuitka, is done in a platform dependent
 directory as determined by the <code class="docutils literal notranslate"><span class="pre">appdirs</span></code> package. However, you can
@@ -1148,7 +1190,7 @@ to a base directory. This is for use in environments where the home
 directory is not persisted, but other paths are.</p>
 </section>
 <section id="runners">
-<h3>Runners<a class="headerlink" href="#runners" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Runners<a class="headerlink" href="#runners" title="Permalink to this heading">&#61633;</a></h3>
 <p>Avoid running the <code class="docutils literal notranslate"><span class="pre">nuitka</span></code> binary, doing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">nuitka</span></code> will
 make a 100% sure you are using what you think you are. Using the wrong
 Python will make it give you <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> for good code or
@@ -1158,7 +1200,7 @@ calling the same Python interpreter binary, you avoid that issue
 entirely.</p>
 </section>
 <section id="fastest-c-compilers">
-<h3>Fastest C Compilers<a class="headerlink" href="#fastest-c-compilers" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Fastest C Compilers<a class="headerlink" href="#fastest-c-compilers" title="Permalink to this heading">&#61633;</a></h3>
 <p>The fastest binaries of <code class="docutils literal notranslate"><span class="pre">pystone.exe</span></code> on Windows with 64 bits Python
 proved to be significantly faster with MinGW64, roughly 20% better
 score. So it is recommended for use over MSVC. Using <code class="docutils literal notranslate"><span class="pre">clang-cl.exe</span></code> of
@@ -1170,7 +1212,7 @@ more often already installed, that is recommended to use for now.</p>
 <p>Differences in C compilation times have not yet been examined.</p>
 </section>
 <section id="unexpected-slowdowns">
-<h3>Unexpected Slowdowns<a class="headerlink" href="#unexpected-slowdowns" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Unexpected Slowdowns<a class="headerlink" href="#unexpected-slowdowns" title="Permalink to this heading">&#61633;</a></h3>
 <p>Using the Python DLL, like standard CPython does can lead to unexpected
 slowdowns, e.g. in uncompiled code that works with Unicode strings. This
 is because calling to the DLL rather than residing in the DLL causes
@@ -1187,7 +1229,7 @@ created with <code class="docutils literal notranslate"><span class="pre">pyenv<
 </div>
 </section>
 <section id="standalone-executables-and-dependencies">
-<h3>Standalone executables and dependencies<a class="headerlink" href="#standalone-executables-and-dependencies" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Standalone executables and dependencies<a class="headerlink" href="#standalone-executables-and-dependencies" title="Permalink to this heading">&#61633;</a></h3>
 <p>The process of making standalone executables for Windows traditionally
 involves using an external dependency walker in order to copy necessary
 libraries along with the compiled executables to the distribution
@@ -1198,7 +1240,7 @@ to work. Instead make bug reports to get these handled by Nuitka
 properly.</p>
 </section>
 <section id="windows-errors-with-resources">
-<h3>Windows errors with resources<a class="headerlink" href="#windows-errors-with-resources" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Windows errors with resources<a class="headerlink" href="#windows-errors-with-resources" title="Permalink to this heading">&#61633;</a></h3>
 <p>On Windows, the Windows Defender tool and the Windows Indexing Service
 both scan the freshly created binaries, while Nuitka wants to work with
 it, e.g. adding more resources, and then preventing operations randomly
@@ -1206,7 +1248,7 @@ due to holding locks. Make sure to exclude your compilation stage from
 these services.</p>
 </section>
 <section id="windows-standalone-program-redistribution">
-<h3>Windows standalone program redistribution<a class="headerlink" href="#windows-standalone-program-redistribution" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Windows standalone program redistribution<a class="headerlink" href="#windows-standalone-program-redistribution" title="Permalink to this heading">&#61633;</a></h3>
 <p>Whether compiling with MingW or MSVC, the standalone programs have
 external dependencies to Visual C Runtime libraries. Nuitka tries to
 ship those dependent DLLs by copying them from your system.</p>
@@ -1278,13 +1320,13 @@ system, you may remove all <code class="docutils literal notranslate"><span clas
 compiled dist folder.</p>
 </section>
 <section id="detecting-nuitka-at-run-time">
-<h3>Detecting Nuitka at run time<a class="headerlink" href="#detecting-nuitka-at-run-time" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Detecting Nuitka at run time<a class="headerlink" href="#detecting-nuitka-at-run-time" title="Permalink to this heading">&#61633;</a></h3>
 <p>It doesn&#8217;t set <code class="docutils literal notranslate"><span class="pre">sys.frozen</span></code> unlike other tools. For Nuitka, we have
 the module attribute <code class="docutils literal notranslate"><span class="pre">__compiled__</span></code> to test if a specific module was
 compiled.</p>
 </section>
 <section id="providing-extra-options-to-nuitka-c-compilation">
-<h3>Providing extra Options to Nuitka C compilation<a class="headerlink" href="#providing-extra-options-to-nuitka-c-compilation" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Providing extra Options to Nuitka C compilation<a class="headerlink" href="#providing-extra-options-to-nuitka-c-compilation" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka will apply values from the environment variables <code class="docutils literal notranslate"><span class="pre">CCFLAGS</span></code>,
 <code class="docutils literal notranslate"><span class="pre">LDFLAGS</span></code> during the compilation on top of what it determines to be
 necessary. Beware of course, that is this is only useful if you know
@@ -1293,13 +1335,13 @@ perfect information.</p>
 </section>
 </section>
 <section id="performance">
-<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this heading">&#61633;</a></h2>
 <p>This chapter gives an overview, of what to currently expect in terms of
 performance from Nuitka. It&#8217;s a work in progress and is updated as we
 go. The current focus for performance measurements is Python 2.7, but
 3.x is going to follow later.</p>
 <section id="pystone-results">
-<h3>pystone results<a class="headerlink" href="#pystone-results" title="Permalink to this headline">&#61633;</a></h3>
+<h3>pystone results<a class="headerlink" href="#pystone-results" title="Permalink to this heading">&#61633;</a></h3>
 <p>The results are the top value from this kind of output, running pystone
 1000 times and taking the minimal value. The idea is that the fastest
 run is most meaningful, and eliminates usage spikes.</p>
@@ -1346,19 +1388,19 @@ python3 -m nuitka --lto<span class="o">=</span>yes --pgo<span class="o">=</span>
 </section>
 </section>
 <section id="where-to-go-next">
-<h2>Where to go next<a class="headerlink" href="#where-to-go-next" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Where to go next<a class="headerlink" href="#where-to-go-next" title="Permalink to this heading">&#61633;</a></h2>
 <p>Remember, this project needs constant work. Although the Python
 compatibility is insanely high, and test suite works near perfectly,
 there is still more work needed, esp. to make it do more optimization.
 Try it out, and when popular packages do not work, please make reports
 on GitHub.</p>
 <section id="follow-me-on-twitter">
-<h3>Follow me on Twitter<a class="headerlink" href="#follow-me-on-twitter" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Follow me on Twitter<a class="headerlink" href="#follow-me-on-twitter" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka announcements and interesting stuff is pointed to on the Twitter
 account, but obviously with not too many details. <a class="reference external" href="https://twitter.com/KayHayen" target="_blank">@KayHayen</a>.</p>
 </section>
 <section id="report-issues-or-bugs">
-<h3>Report issues or bugs<a class="headerlink" href="#report-issues-or-bugs" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Report issues or bugs<a class="headerlink" href="#report-issues-or-bugs" title="Permalink to this heading">&#61633;</a></h3>
 <p>Should you encounter any issues, bugs, or ideas, please visit the
 <a class="reference external" href="https://github.com/kayhayen/Nuitka/issues" target="_blank">Nuitka bug tracker</a> and
 report them.</p>
@@ -1389,14 +1431,14 @@ capture text outputs from the console.</p></li>
 </ul>
 </section>
 <section id="word-of-warning">
-<h3>Word of Warning<a class="headerlink" href="#word-of-warning" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Word of Warning<a class="headerlink" href="#word-of-warning" title="Permalink to this heading">&#61633;</a></h3>
 <p>Consider using this software with caution. Even though many tests are
 applied before releases, things are potentially breaking. Your feedback
 and patches to Nuitka are very welcome.</p>
 </section>
 </section>
 <section id="join-nuitka">
-<h2>Join Nuitka<a class="headerlink" href="#join-nuitka" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Join Nuitka<a class="headerlink" href="#join-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <p>You are more than welcome to join Nuitka development and help to
 complete the project in all minor and major ways.</p>
 <p>The development of Nuitka occurs in git. We currently have these 3
@@ -1419,8 +1461,8 @@ frequently subject to <code class="docutils literal notranslate"><span class="pr
 where my work for develop branch lives first. It is intended for
 testing only and recommended to base any of your own development on.
 When updating it, you very often will get merge conflicts. Simply
-resolve those by doing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">origin/factory</span></code> and switch
-to the latest version.</p>
+resolve those by doing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">&amp;&amp;</span> <span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span>
+<span class="pre">origin/factory</span></code> and switch to the latest version.</p>
 </li>
 </ul>
 <div class="admonition note">
@@ -1432,27 +1474,27 @@ become a contributor. This document is intended for Nuitka users.</p>
 </div>
 </section>
 <section id="donations">
-<h2>Donations<a class="headerlink" href="#donations" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Donations<a class="headerlink" href="#donations" title="Permalink to this heading">&#61633;</a></h2>
 <p>Should you feel that you cannot help Nuitka directly, but still want to
 support, please consider <a class="reference external" href="https://nuitka.net/pages/donations.html">making a donation</a> and help this way.</p>
 </section>
 <section id="unsupported-functionality">
-<h2>Unsupported functionality<a class="headerlink" href="#unsupported-functionality" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Unsupported functionality<a class="headerlink" href="#unsupported-functionality" title="Permalink to this heading">&#61633;</a></h2>
 <section id="the-co-code-attribute-of-code-objects">
-<h3>The <code class="docutils literal notranslate"><span class="pre">co_code</span></code> attribute of code objects<a class="headerlink" href="#the-co-code-attribute-of-code-objects" title="Permalink to this headline">&#61633;</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">co_code</span></code> attribute of code objects<a class="headerlink" href="#the-co-code-attribute-of-code-objects" title="Permalink to this heading">&#61633;</a></h3>
 <p>The code objects are empty for native compiled functions. There is no
 bytecode with Nuitka&#8217;s compiled function objects, so there is no way to
 provide it.</p>
 </section>
 <section id="pdb">
-<h3>PDB<a class="headerlink" href="#pdb" title="Permalink to this headline">&#61633;</a></h3>
+<h3>PDB<a class="headerlink" href="#pdb" title="Permalink to this heading">&#61633;</a></h3>
 <p>There is no tracing of compiled functions to attach a debugger to.</p>
 </section>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <section id="constant-folding">
-<h3>Constant Folding<a class="headerlink" href="#constant-folding" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Constant Folding<a class="headerlink" href="#constant-folding" title="Permalink to this heading">&#61633;</a></h3>
 <p>The most important form of optimization is the constant folding. This is
 when an operation can be fully predicted at compile time. Currently,
 Nuitka does these for some built-ins (but not all yet, somebody to look
@@ -1479,7 +1521,7 @@ constants as input and is not folded.</p>
 </div>
 </section>
 <section id="constant-propagation">
-<h3>Constant Propagation<a class="headerlink" href="#constant-propagation" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Constant Propagation<a class="headerlink" href="#constant-propagation" title="Permalink to this heading">&#61633;</a></h3>
 <p>At the core of optimizations, there is an attempt to determine the
 values of variables at run time and predictions of assignments. It
 determines if their inputs are constants or of similar values. An
@@ -1502,7 +1544,7 @@ future, this may improve as SSA is expanded to module variables.</p>
 </div>
 </section>
 <section id="built-in-name-lookups">
-<h3>Built-in Name Lookups<a class="headerlink" href="#built-in-name-lookups" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Built-in Name Lookups<a class="headerlink" href="#built-in-name-lookups" title="Permalink to this heading">&#61633;</a></h3>
 <p>Also, built-in exception name references are optimized if they are used
 as a module level read-only variables:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -1518,7 +1560,7 @@ a name, or it&#8217;s even local, then, of course, it is not done.</p>
 </div>
 </section>
 <section id="built-in-call-prediction">
-<h3>Built-in Call Prediction<a class="headerlink" href="#built-in-call-prediction" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Built-in Call Prediction<a class="headerlink" href="#built-in-call-prediction" title="Permalink to this heading">&#61633;</a></h3>
 <p>For built-in calls like <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, or <code class="docutils literal notranslate"><span class="pre">range</span></code> it is often
 possible to predict the result at compile time, esp. for constant inputs
 the resulting value often can be precomputed by Nuitka. It can simply
@@ -1551,7 +1593,7 @@ compile time with specific values.</p>
 </div>
 </section>
 <section id="conditional-statement-prediction">
-<h3>Conditional Statement Prediction<a class="headerlink" href="#conditional-statement-prediction" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Conditional Statement Prediction<a class="headerlink" href="#conditional-statement-prediction" title="Permalink to this heading">&#61633;</a></h3>
 <p>For conditional statements, some branches may not ever be taken, because
 of the conditions being possible to predict. In these cases, the branch
 not taken and the condition check is removed.</p>
@@ -1581,7 +1623,7 @@ constants need to be determined at compile time.</p>
 </div>
 </section>
 <section id="exception-propagation">
-<h3>Exception Propagation<a class="headerlink" href="#exception-propagation" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Exception Propagation<a class="headerlink" href="#exception-propagation" title="Permalink to this heading">&#61633;</a></h3>
 <p>For exceptions that are determined at compile time, there is an
 expression that will simply do raise the exception. These can be
 propagated upwards, collecting potentially &#8220;side effects&#8221;, i.e. parts of
@@ -1613,7 +1655,7 @@ examples.</p>
 </div>
 </section>
 <section id="exception-scope-reduction">
-<h3>Exception Scope Reduction<a class="headerlink" href="#exception-scope-reduction" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Exception Scope Reduction<a class="headerlink" href="#exception-scope-reduction" title="Permalink to this heading">&#61633;</a></h3>
 <p>Consider the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">b</span> <span class="o">=</span> <span class="mi">8</span>
@@ -1642,7 +1684,7 @@ can do a <code class="docutils literal notranslate"><span class="pre">ValueError
 </div>
 </section>
 <section id="exception-block-inlining">
-<h3>Exception Block Inlining<a class="headerlink" href="#exception-block-inlining" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Exception Block Inlining<a class="headerlink" href="#exception-block-inlining" title="Permalink to this heading">&#61633;</a></h3>
 <p>With the exception propagation, it then becomes possible to transform
 this code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -1671,7 +1713,7 @@ of the exception, making it:</p>
 </div>
 </section>
 <section id="empty-branch-removal">
-<h3>Empty Branch Removal<a class="headerlink" href="#empty-branch-removal" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Empty Branch Removal<a class="headerlink" href="#empty-branch-removal" title="Permalink to this heading">&#61633;</a></h3>
 <p>For loops and conditional statements that contain only code without
 effect, it should be possible to remove the whole construct:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
@@ -1702,7 +1744,7 @@ and checked for truth (in cases that could raise an exception).</p>
 </div>
 </section>
 <section id="unpacking-prediction">
-<h3>Unpacking Prediction<a class="headerlink" href="#unpacking-prediction" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Unpacking Prediction<a class="headerlink" href="#unpacking-prediction" title="Permalink to this heading">&#61633;</a></h3>
 <p>When the length of the right-hand side of an assignment to a sequence
 can be predicted, the unpacking can be replaced with multiple
 assignments.</p>
@@ -1726,7 +1768,7 @@ there yet, but we will get there.</p>
 </div>
 </section>
 <section id="built-in-type-inference">
-<h3>Built-in Type Inference<a class="headerlink" href="#built-in-type-inference" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Built-in Type Inference<a class="headerlink" href="#built-in-type-inference" title="Permalink to this heading">&#61633;</a></h3>
 <p>When a construct like <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">xrange()</span></code> or <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">range()</span></code> is used, it is
 possible to know what the iteration does and represent that so that
 iterator users can use that instead.</p>
@@ -1744,7 +1786,7 @@ assigned from there, this could be a nice case for a dedicated class.</p>
 </div>
 </section>
 <section id="quicker-function-calls">
-<h3>Quicker Function Calls<a class="headerlink" href="#quicker-function-calls" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Quicker Function Calls<a class="headerlink" href="#quicker-function-calls" title="Permalink to this heading">&#61633;</a></h3>
 <p>Functions are structured so that their parameter parsing and <code class="docutils literal notranslate"><span class="pre">tp_call</span></code>
 interface is separate from the actual function code. This way the call
 can be optimized away. One problem is that the evaluation order can
@@ -1770,7 +1812,7 @@ analysis.</p>
 </div>
 </section>
 <section id="lowering-of-iterated-container-types">
-<h3>Lowering of iterated Container Types<a class="headerlink" href="#lowering-of-iterated-container-types" title="Permalink to this headline">&#61633;</a></h3>
+<h3>Lowering of iterated Container Types<a class="headerlink" href="#lowering-of-iterated-container-types" title="Permalink to this heading">&#61633;</a></h3>
 <p>In some cases, accesses to <code class="docutils literal notranslate"><span class="pre">list</span></code> constants can become <code class="docutils literal notranslate"><span class="pre">tuple</span></code>
 constants instead.</p>
 <p>Consider that:</p>
@@ -1800,7 +1842,7 @@ constants of these types, they change to <code class="docutils literal notransla
 </section>
 </section>
 <section id="updates-for-this-manual">
-<h2>Updates for this Manual<a class="headerlink" href="#updates-for-this-manual" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Updates for this Manual<a class="headerlink" href="#updates-for-this-manual" title="Permalink to this heading">&#61633;</a></h2>
 <p>This document is written in REST. That is an ASCII format which is
 readable to human, but easily used to generate PDF or HTML documents.</p>
 <p>You will find the current version at:
@@ -1873,8 +1915,8 @@ readable to human, but easily used to generate PDF or HTML documents.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/de_DE/doc/user-manual.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/doc/user-manual.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/doc/user-manual.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/doc/user-manual.html">DE</a></div>
                             </div></div>
                 </blockquote>
             </div>

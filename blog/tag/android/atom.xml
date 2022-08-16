@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posts tagged Android</title>
-  <updated>2022-06-25T16:25:50.612909+00:00</updated>
+  <updated>2022-08-16T07:21:53.214403+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/blog/tag/android/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://nuitka.net/posts/letting-go-of-c11.html</id>
     <title>Letting go of C++11</title>
@@ -101,11 +101,11 @@ part of it.&lt;/p&gt;
 </content>
     <link href="https://nuitka.net/posts/letting-go-of-c11.html" rel="alternate"/>
     <summary>How Nuitka came to use C++11 and then stop it.</summary>
+    <category term="Android" label="Android"/>
     <category term="Nuitka" label="Nuitka"/>
-    <category term="compiler" label="compiler"/>
     <category term="Python" label="Python"/>
     <category term="Windows" label="Windows"/>
-    <category term="Android" label="Android"/>
+    <category term="compiler" label="compiler"/>
     <published>2012-10-27T08:59:07+00:00</published>
   </entry>
 </feed>

@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-progress-in-spring-2015">
-<h1><a class="toc-backref" href="#id1">Nuitka Progress in Spring 2015</a><a class="headerlink" href="#nuitka-progress-in-spring-2015" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id1">Nuitka Progress in Spring 2015</a><a class="headerlink" href="#nuitka-progress-in-spring-2015" title="Permalink to this heading">&#61633;</a></h1>
 <p>It&#8217;s absolutely time to speak about what&#8217;s going on with Nuitka, there
 have been a few releases, and big things are going to happen now. The
 ones I have always talked of, it&#8217;s happening now.</p>
@@ -173,7 +174,7 @@ different.</p>
 </ul>
 </div>
 <section id="ssa-single-state-assignment-form">
-<h2><a class="toc-backref" href="#id2">SSA (Single State Assignment Form)</a><a class="headerlink" href="#ssa-single-state-assignment-form" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id2">SSA (Single State Assignment Form)</a><a class="headerlink" href="#ssa-single-state-assignment-form" title="Permalink to this heading">&#61633;</a></h2>
 <p>For a long, long time already, each release of Nuitka has worked towards
 increasing <a class="reference external" href="http://en.wikipedia.org/wiki/Static_single_assignment_form" target="_blank">&#8220;SSA&#8221;</a> usage in
 Nuitka.</p>
@@ -204,7 +205,7 @@ function objects for local functions, becoming able to in-line, etc.</p>
 that do this.</p>
 </section>
 <section id="scalability">
-<h2><a class="toc-backref" href="#id3">Scalability</a><a class="headerlink" href="#scalability" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id3">Scalability</a><a class="headerlink" href="#scalability" title="Permalink to this heading">&#61633;</a></h2>
 <p>The focus has also been lately, to reduce Nuitka&#8217;s own memory usage. It
 has gone down by a large factor, often by avoiding cyclic dependencies
 in the data structures, that the garbage collector of Python failed to
@@ -216,11 +217,11 @@ be really slow, but it&#8217;s noteworthy that Nuitka works not just with 2008
 edition, but with the latest MSVC, which appears to be better.</p>
 </section>
 <section id="compatibility">
-<h2><a class="toc-backref" href="#id4">Compatibility</a><a class="headerlink" href="#compatibility" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id4">Compatibility</a><a class="headerlink" href="#compatibility" title="Permalink to this heading">&#61633;</a></h2>
 <p>There was not a whole lot to gain in the compatibility domain anymore.
 Nothing important certainly. But there are import changes.</p>
 <section id="python-3-5">
-<h3><a class="toc-backref" href="#id5">Python 3.5</a><a class="headerlink" href="#python-3-5" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id5">Python 3.5</a><a class="headerlink" href="#python-3-5" title="Permalink to this heading">&#61633;</a></h3>
 <p>The next release has changes to compile and run the Python3.4 test suite
 successfully. Passing here means, to pass/fail in the same way as does
 the uncompiled Python. Failures are of course expected, and a nice way
@@ -233,13 +234,13 @@ and still not perfectly handled (<code class="docutils literal notranslate"><spa
 e.g.), I wanted to know what is coming a bit sooner.</p>
 </section>
 <section id="cells-for-closure">
-<h3><a class="toc-backref" href="#id6">Cells for Closure</a><a class="headerlink" href="#cells-for-closure" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id6">Cells for Closure</a><a class="headerlink" href="#cells-for-closure" title="Permalink to this heading">&#61633;</a></h3>
 <p>We now provide a <code class="docutils literal notranslate"><span class="pre">__closure__</span></code> value for compiled functions too. These
 are not writable in Python, so it&#8217;s only a view. Having moved storage
 into the compiled function object, that was easy.</p>
 </section>
 <section id="importing-enhancements">
-<h3><a class="toc-backref" href="#id7">Importing Enhancements</a><a class="headerlink" href="#importing-enhancements" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id7">Importing Enhancements</a><a class="headerlink" href="#importing-enhancements" title="Permalink to this heading">&#61633;</a></h3>
 <p>The the past couple of releases, the import logic was basically
 re-written with compatibility much increased. The handling of file case
 during import, multiple occurrences in the path, and absolute import
@@ -253,9 +254,9 @@ solid.</p>
 </section>
 </section>
 <section id="performance">
-<h2><a class="toc-backref" href="#id8">Performance</a><a class="headerlink" href="#performance" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id8">Performance</a><a class="headerlink" href="#performance" title="Permalink to this heading">&#61633;</a></h2>
 <section id="graphs-and-benchmarks">
-<h3><a class="toc-backref" href="#id9">Graphs and Benchmarks</a><a class="headerlink" href="#graphs-and-benchmarks" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id9">Graphs and Benchmarks</a><a class="headerlink" href="#graphs-and-benchmarks" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka, users don&#8217;t know what to expect regarding the speed of their
 code after compilation through Nuitka, neither now nor after type
 inference (possibly hard to guess). Nuitka does a bunch of optimizations
@@ -291,7 +292,7 @@ need your help. Let me know if you want to.</p>
 </section>
 </section>
 <section id="standalone">
-<h2><a class="toc-backref" href="#id10">Standalone</a><a class="headerlink" href="#standalone" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id10">Standalone</a><a class="headerlink" href="#standalone" title="Permalink to this heading">&#61633;</a></h2>
 <p>The standalone mode of Nuitka is pretty good, and as usual it continued
 to improve only.</p>
 <p>Nothing all that important going on there, except the work on a plug-in
@@ -301,16 +302,16 @@ PyQt plug-ins, or known issues with certain packages.</p>
 many more libraries successfully than before.</p>
 </section>
 <section id="other-stuff">
-<h2><a class="toc-backref" href="#id11">Other Stuff</a><a class="headerlink" href="#other-stuff" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id11">Other Stuff</a><a class="headerlink" href="#other-stuff" title="Permalink to this heading">&#61633;</a></h2>
 <section id="debian-stable">
-<h3><a class="toc-backref" href="#id12">Debian Stable</a><a class="headerlink" href="#debian-stable" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id12">Debian Stable</a><a class="headerlink" href="#debian-stable" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka is now part of Debian stable, aka Jessie. Debian and Python are
 the two things closest to my heart in the tech field. You can imagine
 that being an upstream worthy of inclusion into Debian stable is an
 import milestone to Nuitka for me.</p>
 </section>
 <section id="funding">
-<h3><a class="toc-backref" href="#id13">Funding</a><a class="headerlink" href="#funding" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id13">Funding</a><a class="headerlink" href="#funding" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka receives the occasional <a class="reference external" href="/pages/donations.html">donation</a> and those make me very happy.
 As there is no support from organization like the PSF, I am all on my
 own there.</p>
@@ -318,7 +319,7 @@ own there.</p>
 support me with that, it&#8217;s going to be expensive.</p>
 </section>
 <section id="europython-2015">
-<h3><a class="toc-backref" href="#id14">EuroPython 2015</a><a class="headerlink" href="#europython-2015" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id14">EuroPython 2015</a><a class="headerlink" href="#europython-2015" title="Permalink to this heading">&#61633;</a></h3>
 <p>I have plans to present Nuitka&#8217;s function in-lining there, real stuff,
 on a fully and functional compiler that works as a drop-in replacement.</p>
 <p>Not 100% sure if I can make it by the time, but things look good.
@@ -327,7 +328,7 @@ easily change at any point. But Nuitka stands on very stable grounds
 code wise.</p>
 </section>
 <section id="collaborators">
-<h3><a class="toc-backref" href="#id15">Collaborators</a><a class="headerlink" href="#collaborators" title="Permalink to this headline">&#61633;</a></h3>
+<h3><a class="toc-backref" href="#id15">Collaborators</a><a class="headerlink" href="#collaborators" title="Permalink to this heading">&#61633;</a></h3>
 <p>Things are coming along nicely. When I started out, I was fully aware
 that the project is something that I can do on my own if necessary, and
 that has not changed. Things are going slower than necessary though, but
@@ -341,7 +342,7 @@ it. Now.</p>
 </section>
 </section>
 <section id="future">
-<h2><a class="toc-backref" href="#id16">Future</a><a class="headerlink" href="#future" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id16">Future</a><a class="headerlink" href="#future" title="Permalink to this heading">&#61633;</a></h2>
 <p>So, there is multiple things going on:</p>
 <ul>
 <li><p>More SSA usage</p>
@@ -456,8 +457,8 @@ things happen faster. Nuitka will become more and more important only.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-progress-spring-2015.html">DE</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-progress-spring-2015.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-progress-spring-2015.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-progress-spring-2015.html">DE</a></div>
                             </div></div>
                 </blockquote>
             </div>

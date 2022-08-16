@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-6-0">
-<h1>Nuitka Release 0.6.0<a class="headerlink" href="#nuitka-release-0-6-0" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.6.0<a class="headerlink" href="#nuitka-release-0-6-0" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This release adds massive improvements for optimization and a couple of
@@ -141,7 +142,7 @@ options to control recursion into modules have all been renamed, some
 now have different defaults, and finally the filenames output have
 changed.</p>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Python3.5: Fix, the awaiting flag was not removed for exceptions
 thrown into a coroutine, so next time it appeared to be awaiting
@@ -161,7 +162,7 @@ some cases as a data file.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Enabled C target type <code class="docutils literal notranslate"><span class="pre">nuitka_bool</span></code> for variables that are stored
 with boolean shape only, and generate C code for those</p></li>
@@ -200,7 +201,7 @@ to the target shape bool during optimization.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Added support for using <code class="docutils literal notranslate"><span class="pre">.egg</span></code> files in <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>, one of the
 more rare uses, where Nuitka wasn&#8217;t yet compatible.</p></li>
@@ -220,7 +221,7 @@ infancy. Subsequent releases will add more like these.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Disabled comments on the web site, we are going to use Twitter
 instead, once the site is migrated to an updated Nikola.</p></li>
@@ -253,7 +254,7 @@ incompatibilty.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Moved command line arguments to dedicated module, adding checks was
 becoming too difficult.</p></li>
@@ -275,7 +276,7 @@ would also like.</p></li>
 </ul>
 </section>
 <section id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Avoid using <code class="docutils literal notranslate"><span class="pre">2to3</span></code> for basic operators test, removing test of some
 Python2 only stuff, that is covered elsewhere.</p></li>
@@ -285,7 +286,7 @@ to get the same value to compare with. This is not enabled yet.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>This release marks a point, from which on performance improvements are
 likely in every coming release. The C target types are a major
 milestone. More C target types are in the work, e.g. <code class="docutils literal notranslate"><span class="pre">void</span></code> is coming
@@ -383,8 +384,8 @@ many more programs are going to benefiting from this.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-060.html">CN</a></div>
-                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-060.html">DE</a></div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-060.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-060.html">CN</a></div>
                             </div></div>
                 </blockquote>
             </div>

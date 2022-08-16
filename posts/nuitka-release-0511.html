@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="../_static/clipboard.min.js" async=""></script>
         <script src="../_static/copybutton.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
@@ -86,9 +87,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -131,7 +132,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-5-11">
-<h1>Nuitka Release 0.5.11<a class="headerlink" href="#nuitka-release-0-5-11" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.5.11<a class="headerlink" href="#nuitka-release-0-5-11" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>The last release represented a significant change and introduced a few
@@ -139,7 +140,7 @@ regressions, which got addressed with hot fix releases. But it also had
 a focus on cleaning up open optimization issues that were postponed in
 the last release.</p>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>The filenames of source files as found in the <code class="docutils literal notranslate"><span class="pre">__file__</span></code> attribute
 are now made relative for all modes, not just standalone mode.</p>
@@ -149,7 +150,7 @@ in a deployment.</p>
 </ul>
 </section>
 <section id="bug-fixes">
-<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Local functions that reference themselves were not released. They now
 are.</p>
@@ -199,7 +200,7 @@ must not be done though, <code class="docutils literal notranslate"><span class=
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Variables that need not be shared, because the uses in closure taking
 functions were eliminated, no longer use cell objects.</p></li>
@@ -266,7 +267,7 @@ cached, speeding up the use of many modules as well.</p>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Nuitka used to have &#8220;variable usage profiles&#8221; and still used them to
 decide if a global variable is written to, in which case, it stays
@@ -284,7 +285,7 @@ future.</p></li>
 </ul>
 </section>
 <section id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The use of deep hashing of constants allows us to check if constants
 become mutated during the run-time of a program. This allows to
@@ -297,14 +298,14 @@ attribute, were reactivated.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Since Google Code has shutdown, it has been removed from the Nuitka
 git mirrors.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>This release brings exciting new optimization with the focus on the
 <code class="docutils literal notranslate"><span class="pre">try</span></code> constructs, now being done more optimal. It is also a
 maintenance release, bringing out compatibility improvements, and
@@ -405,8 +406,8 @@ ahead.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0511.html">CN</a></div>
-                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0511.html">DE</a></div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0511.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0511.html">CN</a></div>
                             </div></div>
                 </blockquote>
             </div>

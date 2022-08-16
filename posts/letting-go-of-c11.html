@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -130,11 +131,11 @@
            <div itemprop="articleBody">
               <p>How Nuitka came to use C++11 and then stop it.</p>
 <section id="letting-go-of-c-11">
-<h1>Letting go of C++11<a class="headerlink" href="#letting-go-of-c-11" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Letting go of C++11<a class="headerlink" href="#letting-go-of-c-11" title="Permalink to this heading">&#61633;</a></h1>
 <p>This post is about Nuitka the Python compiler started out using C++0x
 which is now C++11, and then chose to stop it.</p>
 <section id="in-the-beginning">
-<h2>In the Beginning<a class="headerlink" href="#in-the-beginning" title="Permalink to this headline">&#61633;</a></h2>
+<h2>In the Beginning<a class="headerlink" href="#in-the-beginning" title="Permalink to this heading">&#61633;</a></h2>
 <p>Very early on, when I considered how to generate code from the node
 tree, in a way, that mistakes should practically be impossible to make,
 I made the fundamental decision, that every Python expression, which
@@ -156,7 +157,7 @@ that way easily.</p>
 was really quick to get Nuitka code generation off the ground this way.</p>
 </section>
 <section id="reality-strikes">
-<h2>Reality Strikes<a class="headerlink" href="#reality-strikes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Reality Strikes<a class="headerlink" href="#reality-strikes" title="Permalink to this heading">&#61633;</a></h2>
 <p>But then, as time went on, I found that the order of evaluation was
 becoming an issue. It became apparent that for more and more things, I
 needed to reverse it, so it works. Porting to ARM, it then became clear,
@@ -172,21 +173,21 @@ less causing evaluation order bugs. So that most of their uses were
 already removed. And so I basically knew they couldn&#8217;t stay that way.</p>
 </section>
 <section id="other-features">
-<h2>Other Features<a class="headerlink" href="#other-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Other Features<a class="headerlink" href="#other-features" title="Permalink to this heading">&#61633;</a></h2>
 <p>Also, things I initially assumed, e.g. that lambda functions of C++11
 may prove useful, or even &#8220;auto&#8221;, didn&#8217;t turn out to be true. There
 seemingly is a wealth of new features, besides variadic templates that I
 didn&#8217;t see how Nuitka would benefit from it at all.</p>
 </section>
 <section id="new-wishes">
-<h2>New Wishes<a class="headerlink" href="#new-wishes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Wishes<a class="headerlink" href="#new-wishes" title="Permalink to this heading">&#61633;</a></h2>
 <p>Then, at Europython, I realized, that Android is still stuck with
 g++-4.4 and as such, that an important target platform will be
 unavailable to me. This platform will become even more important, as I
 intend to buy an device now.</p>
 </section>
 <section id="biting-it">
-<h2>Biting it<a class="headerlink" href="#biting-it" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Biting it<a class="headerlink" href="#biting-it" title="Permalink to this heading">&#61633;</a></h2>
 <p>So what I did, was to remove all variadic functions and instead generate
 code for them as necessary. I just need to trace the used argument
 counts, and then provide those, simple enough.</p>
@@ -196,7 +197,7 @@ give up on these a bit.</p>
 problems, although I don&#8217;t recall seeing them.</p>
 </section>
 <section id="the-present">
-<h2>The Present<a class="headerlink" href="#the-present" title="Permalink to this headline">&#61633;</a></h2>
+<h2>The Present<a class="headerlink" href="#the-present" title="Permalink to this heading">&#61633;</a></h2>
 <p>The current stable release still requires C++11, but the next release
 will work on g++-4.4 and compiles fine with MSVC from Visual Studio
 2008, although at this time, there is still the issue of generators not
@@ -207,7 +208,7 @@ from App developers, because there, even the relatively unimportant 2x
 speedup, that Nuitka might give for some code, may matter.</p>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">&#61633;</a></h2>
 <p>So that is a detour, I have taken, expanding the base of Nuitka even
 further. I felt, this was important enough to write down the history
 part of it.</p>

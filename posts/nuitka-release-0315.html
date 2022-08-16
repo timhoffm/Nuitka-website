@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-release-0-3-15">
-<h1>Nuitka Release 0.3.15<a class="headerlink" href="#nuitka-release-0-3-15" title="Permalink to this headline">&#61633;</a></h1>
+<h1>Nuitka Release 0.3.15<a class="headerlink" href="#nuitka-release-0-3-15" title="Permalink to this heading">&#61633;</a></h1>
 <p>This is to inform you about the new stable release of <a class="reference external" href="https://nuitka.net">Nuitka</a>. It is the extremely compatible Python compiler,
 <a class="reference external" href="/doc/download.html">&#8220;download now&#8221;</a>.</p>
 <p>This is to inform you about the new stable release of Nuitka. This time
@@ -147,7 +148,7 @@ release. It won&#8217;t link, but there will be later releases.</p>
 <p>And there is a lot of cleanup going on, geared towards compatibility
 with line numbers in the frame object.</p>
 <section id="bug-fixes">
-<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>The main module was using <code class="docutils literal notranslate"><span class="pre">__main__</span></code> in tracebacks, but it must be
 <code class="docutils literal notranslate"><span class="pre">&lt;module&gt;</span></code>. Released as 0.3.14a hot fix already.</p></li>
@@ -172,7 +173,7 @@ related to traceback line numbers.</p></li>
 </ul>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Guesses the location of the MinGW compiler under Windows to default
 install location, so it need not be added to <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment
@@ -184,7 +185,7 @@ plus that didn&#8217;t work. It now works perfect.</p></li>
 </ul>
 </section>
 <section id="organisational">
-<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Organisational<a class="headerlink" href="#organisational" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>You can now download a Windows installer and a Debian package that
 works on Debian Testing, current Ubuntu and Mint Linux.</p></li>
@@ -210,7 +211,7 @@ changing the code.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>Implemented <code class="docutils literal notranslate"><span class="pre">swapcontext</span></code> alike (<code class="docutils literal notranslate"><span class="pre">swapFiber</span></code>) for x64 to achieve
 8 times speedup for Generators. It doesn&#8217;t do useless syscalls to
@@ -219,7 +220,7 @@ CPython on x64, which is already good by design.</p></li>
 </ul>
 </section>
 <section id="cleanups">
-<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Cleanups<a class="headerlink" href="#cleanups" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Using the frame objects to store current line of execution avoids the
 need to store it away in helper code at all. It ought to also help a
@@ -244,7 +245,7 @@ in one place.</p></li>
 </ul>
 </section>
 <section id="new-tests">
-<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this headline">&#61633;</a></h2>
+<h2>New Tests<a class="headerlink" href="#new-tests" title="Permalink to this heading">&#61633;</a></h2>
 <ul class="simple">
 <li><p>The tests are now executed by Python scripts and cover <code class="docutils literal notranslate"><span class="pre">stderr</span></code>
 output too. Before we only checked <code class="docutils literal notranslate"><span class="pre">stdout</span></code>. This unveiled a bunch
@@ -256,7 +257,7 @@ no more MinGW shell is needed to execute the tests.</p></li>
 </ul>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">&#61633;</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">&#61633;</a></h2>
 <p>The Debian package, Windows installer, etc. are now automatically
 updated and uploaded. From here on, there can be such packages for the
 hot fix releases too.</p>
@@ -365,8 +366,8 @@ change too.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0315.html">CN</a></div>
-                            <div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0315.html">DE</a></div>
+                        <div><div class="line"><a class="reference external" href="/de_DE/posts/nuitka-release-0315.html">DE</a></div>
+                            <div class="line"><a class="reference external" href="/zh_CN/posts/nuitka-release-0315.html">CN</a></div>
                             </div></div>
                 </blockquote>
             </div>

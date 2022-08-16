@@ -22,7 +22,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: '../',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -33,7 +33,8 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <link rel="index" title="Index" href="../genindex.html">
     <link rel="alternate" type="application/atom+xml" href="../blog/atom.xml" title="Nuitka Blog">
  
@@ -84,9 +85,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.0 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 1.1 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-1-0">Nuitka Release 1.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-9">Nuitka Release 0.9</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-8">Nuitka Release 0.8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
@@ -129,7 +130,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-this-week-1">
-<h1><a class="toc-backref" href="#id1">Nuitka this week #1</a><a class="headerlink" href="#nuitka-this-week-1" title="Permalink to this headline">&#61633;</a></h1>
+<h1><a class="toc-backref" href="#id1">Nuitka this week #1</a><a class="headerlink" href="#nuitka-this-week-1" title="Permalink to this heading">&#61633;</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -152,7 +153,7 @@
 </ul>
 </div>
 <section id="new-series-rationale">
-<h2><a class="toc-backref" href="#id2">New Series Rationale</a><a class="headerlink" href="#new-series-rationale" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id2">New Series Rationale</a><a class="headerlink" href="#new-series-rationale" title="Permalink to this heading">&#61633;</a></h2>
 <p>I think I tend to prefer coding over communication too much. I think I
 need to make more transparent what I am doing. Also things, will be
 getting exciting continuously for a while now.</p>
@@ -165,7 +166,7 @@ bi-weekly reports, where I highlight things that are going on, newly
 found issues, hotfixes, all the things Nuitka.</p>
 </section>
 <section id="planned-mode">
-<h2><a class="toc-backref" href="#id3">Planned Mode</a><a class="headerlink" href="#planned-mode" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id3">Planned Mode</a><a class="headerlink" href="#planned-mode" title="Permalink to this heading">&#61633;</a></h2>
 <p>I will do it this fashion. I will write a post to the mailing list,
 right about wednesday every week or so. I need to pick a day. I am
 working from home that day, saving me commute time. I will invest that
@@ -179,7 +180,7 @@ links to previous issues where applicable. Therefore also the TOC, which
 makes for link targets in the pages.</p>
 </section>
 <section id="locals-dict">
-<h2><a class="toc-backref" href="#id4">Locals Dict</a><a class="headerlink" href="#locals-dict" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id4">Locals Dict</a><a class="headerlink" href="#locals-dict" title="Permalink to this heading">&#61633;</a></h2>
 <p>When I am speaking of locals dict, I am talking of class scopes (and
 functions with <code class="docutils literal notranslate"><span class="pre">exec</span></code> statements). These started to use actual
 dictionary a while ago, which was a severe setback to optimization.</p>
@@ -205,7 +206,7 @@ to help scaling at all.</p>
 <p>Solution is finalization</p>
 </section>
 <section id="nodes-need-finalization">
-<h2><a class="toc-backref" href="#id5">Nodes need Finalization</a><a class="headerlink" href="#nodes-need-finalization" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id5">Nodes need Finalization</a><a class="headerlink" href="#nodes-need-finalization" title="Permalink to this heading">&#61633;</a></h2>
 <p>So replaced nodes reference a parent, and then the locals scope
 references variables, and trace collections referencing variables, which
 reference locals scopes, and accesses referencing traces, and so on. The
@@ -222,7 +223,7 @@ manual, because part of the node is to be released, but one child is
 re-used. That is messy.</p>
 </section>
 <section id="impact-on-memory-usage">
-<h2><a class="toc-backref" href="#id6">Impact on Memory Usage</a><a class="headerlink" href="#impact-on-memory-usage" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id6">Impact on Memory Usage</a><a class="headerlink" href="#impact-on-memory-usage" title="Permalink to this heading">&#61633;</a></h2>
 <p>The result was a bit disappointing. Yes, memory usage of mercurial
 compilation went back again, but mostly to what it had been. Some
 classes are now having their locals dict forward propagated, but the
@@ -234,7 +235,7 @@ without using any variables at all anymore, which should make it really
 lean.</p>
 </section>
 <section id="type-hints-question">
-<h2><a class="toc-backref" href="#id7">Type Hints Question</a><a class="headerlink" href="#type-hints-question" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id7">Type Hints Question</a><a class="headerlink" href="#type-hints-question" title="Permalink to this heading">&#61633;</a></h2>
 <p>Then, asking about type hints, I got the usual question about Nuitka
 going to use it. And my stance is unchanged. They are just hints, not
 reliable. Need to behave the same if users do it wrong. Suggested to
@@ -245,7 +246,7 @@ independently. Right now Nuitka is not yet there anyway yet, to take
 full advantage.</p>
 </section>
 <section id="python-3-7">
-<h2><a class="toc-backref" href="#id8">Python 3.7</a><a class="headerlink" href="#python-3-7" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id8">Python 3.7</a><a class="headerlink" href="#python-3-7" title="Permalink to this heading">&#61633;</a></h2>
 <p>Then, for Python 3.7, I have long gotten the 3.6 test suite to pass. I
 raised 2 bugs with CPython, one of which lead to update of a failing
 test. Nuitka had with large delay, caught of with what <code class="docutils literal notranslate"><span class="pre">del</span>
@@ -270,7 +271,7 @@ happening inside a generator declared inside of it. Also <code class="docutils l
 was added to coroutines, but that is mostly it.</p>
 </section>
 <section id="coroutine-compatibility">
-<h2><a class="toc-backref" href="#id9">Coroutine Compatibility</a><a class="headerlink" href="#coroutine-compatibility" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id9">Coroutine Compatibility</a><a class="headerlink" href="#coroutine-compatibility" title="Permalink to this heading">&#61633;</a></h2>
 <p>A bigger thing was that I debugged coroutines and their interaction with
 uncompiled and compiled coroutines awaiting one another, and turns out,
 there was a lot to improve.</p>
@@ -282,7 +283,7 @@ uncompiled coroutine, as they don&#8217;t work with <code class="docutils litera
 everything else has to.</p>
 </section>
 <section id="pylint-troubles">
-<h2><a class="toc-backref" href="#id10">PyLint Troubles</a><a class="headerlink" href="#pylint-troubles" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id10">PyLint Troubles</a><a class="headerlink" href="#pylint-troubles" title="Permalink to this heading">&#61633;</a></h2>
 <p>For PyLint, the 2.0.0 release found new things, but unfortunately for
 2.0.1 there is a lot of regressions that I had to report. I fixed the
 versions of first PyLint, and now also Astroid, so Travis cannot
@@ -295,7 +296,7 @@ to check for Nuitka dependencies. But since 1.9.2 is still needed for
 Python2, that kind of is bound to give alarms for now.</p>
 </section>
 <section id="todo-solving">
-<h2><a class="toc-backref" href="#id11">TODO solving</a><a class="headerlink" href="#todo-solving" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id11">TODO solving</a><a class="headerlink" href="#todo-solving" title="Permalink to this heading">&#61633;</a></h2>
 <p>I have a habit of doing off tasks, when I am with my notebook in some
 place, and don&#8217;t know what to work on. So I have some 2 hours recently
 like this, and used it to look at <code class="docutils literal notranslate"><span class="pre">TODO</span></code> and resolve them.</p>
@@ -305,7 +306,7 @@ required a local array with one element to put the arg into. That makes
 using code ugly.</p>
 </section>
 <section id="issues-encountered">
-<h2><a class="toc-backref" href="#id12">Issues Encountered</a><a class="headerlink" href="#issues-encountered" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id12">Issues Encountered</a><a class="headerlink" href="#issues-encountered" title="Permalink to this heading">&#61633;</a></h2>
 <p>So the <code class="docutils literal notranslate"><span class="pre">enum</span></code> module of Python3 hates compiled classes and their
 <code class="docutils literal notranslate"><span class="pre">staticmethod</span></code> around <code class="docutils literal notranslate"><span class="pre">__new__</span></code>. Since it manually unwraps
 <code class="docutils literal notranslate"><span class="pre">__new__</span></code> and then calls it itself, it then finds that a
@@ -323,7 +324,7 @@ burden. But it would need no change. And maybe there is more core
 wanting to call <code class="docutils literal notranslate"><span class="pre">__new__</span></code> manually</p>
 </section>
 <section id="plans">
-<h2><a class="toc-backref" href="#id13">Plans</a><a class="headerlink" href="#plans" title="Permalink to this headline">&#61633;</a></h2>
+<h2><a class="toc-backref" href="#id13">Plans</a><a class="headerlink" href="#plans" title="Permalink to this heading">&#61633;</a></h2>
 <p>I intend to make a release, probably this weekend. It might not contain
 full 3.7 compatibility yet, although I am aiming at that.</p>
 <p>Then I want to turn to &#8220;goto generators&#8221;, a scalability improvement of

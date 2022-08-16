@@ -24,7 +24,7 @@
         <script>var DOCUMENTATION_OPTIONS = {
     URL_ROOT: './',
     VERSION: '',
-    LANGUAGE: 'None',
+    LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
     FILE_SUFFIX: '.html',
@@ -35,11 +35,12 @@
     SHOW_SEARCH_SUMMARY: true,
     ENABLE_SEARCH_SHORTCUTS: true,
 };</script>
-        <script src="/_static/combined_9d0826dfcf5ca364c4baefd34061e656.js" async=""></script>
+        <script src="/_static/combined_1f3d291568f0d25fd5e0e83c3075a3a3.js" async=""></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js" async=""></script>
         <script src="_static/clipboard.min.js" async=""></script>
         <script src="_static/copybutton.js" async=""></script>
         <link rel="index" title="Stichwortverzeichnis" href="genindex.html">
-    <link rel="next" title="Fabrikanweisungen" href="factory.html">
+    <link rel="next" title="Nuitka Blog" href="blog.html">
     <link rel="prev" title="More documentation" href="more.html">   
 <link rel="alternate" type="application/atom+xml" href="blog/atom.xml" title="Nuitka Blog">
  
@@ -81,7 +82,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="doc/index.html">Schnellstart</a></li>
-<li class="toctree-l1"><a class="reference internal fa fa-shopping-cart" href="commercial.html">&amp;nbsp;Nuitka Commercial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/commercial.html">Nuitka Commercial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/factory.html">Fabrikanweisungen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/index.html">Seiten</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="more.html">More documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Developer Manual</a><ul>
@@ -186,7 +188,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#updates-for-this-manual">Updates for this Manual</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="factory.html">Fabrikanweisungen</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="blog.html">Nuitka Blog</a></li>
@@ -207,7 +208,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="nuitka-developer-manual">
-<h1>Nuitka Developer Manual<a class="headerlink" href="#nuitka-developer-manual" title="Link zu dieser &#220;berschrift">&#61633;</a></h1>
+<h1>Nuitka Developer Manual<a class="headerlink" href="#nuitka-developer-manual" title="Permalink to this heading">&#61633;</a></h1>
 <p>The purpose of this Developer Manual is to present the current design of
 Nuitka, the project rules, and the motivations for choices made. It is
 intended to be a guide to the source code, and to give explanations that
@@ -219,7 +220,7 @@ proceed.</p>
 <p>It grows out of discussions and presentations made at conferences as
 well as private conversations or issue tracker.</p>
 <section id="milestones">
-<h2>Milestones<a class="headerlink" href="#milestones" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Milestones<a class="headerlink" href="#milestones" title="Permalink to this heading">&#61633;</a></h2>
 <ol class="arabic">
 <li><p>Feature parity with CPython, understand all the language construct
 and behave absolutely compatible.</p>
@@ -258,21 +259,22 @@ compiler can use to learn about types from the programmer.</p>
 </ol>
 </section>
 <section id="version-numbers">
-<h2>Version Numbers<a class="headerlink" href="#version-numbers" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Version Numbers<a class="headerlink" href="#version-numbers" title="Permalink to this heading">&#61633;</a></h2>
 <p>For Nuitka we use semantic versioning, initially with a leading zero
 still, once we pass release <code class="docutils literal notranslate"><span class="pre">0.9</span></code>, the scheme will indicate the <code class="docutils literal notranslate"><span class="pre">10</span></code>
 through using <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
 </section>
 <section id="current-state">
-<h2>Current State<a class="headerlink" href="#current-state" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Current State<a class="headerlink" href="#current-state" title="Permalink to this heading">&#61633;</a></h2>
 <p>Nuitka top level works like this:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">nuitka.tree.Building</span></code> outputs node tree</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nuitka.optimization</span></code> enhances it as best as it can</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nuitka.finalization</span></code> prepares the tree for code generation</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nuitka.codegen.CodeGeneration</span></code> orchestrates the creation of code
-snippets</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nuitka.codegen.*Codes</span></code> knows how specific code kinds are created</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nuitka.code_generation.CodeGeneration</span></code> orchestrates the creation
+of code snippets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nuitka.code_generation.*Codes</span></code> knows how specific code kinds are
+created</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nuitka.MainControl</span></code> keeps it all together</p></li>
 </ul>
 <p>This design is intended to last.</p>
@@ -298,12 +300,12 @@ code will be available that can avoid creating the <code class="docutils literal
 unless the later overflows.</p>
 </section>
 <section id="setting-up-the-development-environment-for-nuitka">
-<h2>Setting up the Development Environment for Nuitka<a class="headerlink" href="#setting-up-the-development-environment-for-nuitka" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Setting up the Development Environment for Nuitka<a class="headerlink" href="#setting-up-the-development-environment-for-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <p>Currently there are very different kinds of files that we need support
 for. This is best addressed with an IDE. We cover here how to setup the
 most common one.</p>
 <section id="visual-studio-code">
-<h3>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this heading">&#61633;</a></h3>
 <p>Download Visual Studio Code from here:
 <a class="reference external" href="https://code.visualstudio.com/download" target="_blank">https://code.visualstudio.com/download</a></p>
 <p>At this time, this is the recommended IDE for Linux and Windows. This is
@@ -316,13 +318,13 @@ recommendations in <code class="docutils literal notranslate"><span class="pre">
 about that and ought to install these.</p>
 </section>
 <section id="eclipse-pycharm">
-<h3>Eclipse / PyCharm<a class="headerlink" href="#eclipse-pycharm" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Eclipse / PyCharm<a class="headerlink" href="#eclipse-pycharm" title="Permalink to this heading">&#61633;</a></h3>
 <p>Don&#8217;t use these anymore, we consider Visual Studio Code to be far
 superior for delivering a nice out of the box environment.</p>
 </section>
 </section>
 <section id="commit-and-code-hygiene">
-<h2>Commit and Code Hygiene<a class="headerlink" href="#commit-and-code-hygiene" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Commit and Code Hygiene<a class="headerlink" href="#commit-and-code-hygiene" title="Permalink to this heading">&#61633;</a></h2>
 <p>In Nuitka we have tools to auto format code, you can execute them
 manually, but it&#8217;s probably best to execute them at commit time, to make
 sure when we share code, it&#8217;s already well format, and to avoid noise
@@ -348,12 +350,12 @@ out file, you can always execute it with <code class="docutils literal notransla
 environment set.</p>
 </section>
 <section id="coding-rules-python">
-<h2>Coding Rules Python<a class="headerlink" href="#coding-rules-python" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Coding Rules Python<a class="headerlink" href="#coding-rules-python" title="Permalink to this heading">&#61633;</a></h2>
 <p>These rules should generally be adhered when working on Nuitka code.
 It&#8217;s not library code and it&#8217;s optimized for readability, and avoids all
 performance optimization for itself.</p>
 <section id="tool-to-format">
-<h3>Tool to format<a class="headerlink" href="#tool-to-format" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Tool to format<a class="headerlink" href="#tool-to-format" title="Permalink to this heading">&#61633;</a></h3>
 <p>There is a tool <code class="docutils literal notranslate"><span class="pre">bin/autoformat-nuitka-source</span></code> which is to apply
 automatic formatting to code as much as possible. It uses <code class="docutils literal notranslate"><span class="pre">black</span></code>
 (internally) for consistent code formatting. The imports are sorted with
@@ -365,9 +367,9 @@ deals with Windows new lines, trailing space, etc. and even sorts PyLint
 disable statements.</p>
 </section>
 <section id="identifiers">
-<h3>Identifiers<a class="headerlink" href="#identifiers" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this heading">&#61633;</a></h3>
 <section id="classes">
-<h4>Classes<a class="headerlink" href="#classes" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">&#61633;</a></h4>
 <p>Classes are camel case with leading upper case. Functions and methods
 are with leading verb in lower case, but also camel case. Variables and
 arguments are lower case with <code class="docutils literal notranslate"><span class="pre">_</span></code> as a separator.</p>
@@ -381,7 +383,7 @@ that a meta class can use that convention, and readers immediately know,
 that it will not be instantiated like that.</p>
 </section>
 <section id="functions">
-<h4>Functions<a class="headerlink" href="#functions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">&#61633;</a></h4>
 <p>Function calls use keyword argument preferably. These are slower in
 CPython, but more readable:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getSequenceCreationCode</span><span class="p">(</span>
@@ -399,7 +401,7 @@ still better to add them. But in this instance, the variable name
 already indicates that it is.</p>
 </section>
 <section id="module-package-names">
-<h4>Module/Package Names<a class="headerlink" href="#module-package-names" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Module/Package Names<a class="headerlink" href="#module-package-names" title="Permalink to this heading">&#61633;</a></h4>
 <p>Normal modules are named in camel case with leading upper case, because
 of their role as singleton classes. The difference between a module and
 a class is small enough and in the source code they are also used
@@ -407,17 +409,17 @@ similarly.</p>
 <p>For the packages, no real code is allowed in their <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> and
 they must be lower case, like e.g. <code class="docutils literal notranslate"><span class="pre">nuitka</span></code> or <code class="docutils literal notranslate"><span class="pre">codegen</span></code>. This is to
 distinguish them from the modules.</p>
-<p>Packages shall only be used to group things. In <code class="docutils literal notranslate"><span class="pre">nuitka.codegen</span></code> the
-code generation packages are located, while the main interface is
-<code class="docutils literal notranslate"><span class="pre">nuitka.codegen.CodeGeneration</span></code> and may then use most of the entries
-as local imports.</p>
+<p>Packages shall only be used to group things. In
+<code class="docutils literal notranslate"><span class="pre">nuitka.code_generation</span></code> the code generation packages are located,
+while the main interface is <code class="docutils literal notranslate"><span class="pre">nuitka.code_generation.CodeGeneration</span></code>
+and may then use most of the entries as local imports.</p>
 <p>There is no code in packages themselves. For programs, we use
 <code class="docutils literal notranslate"><span class="pre">__main__</span></code> package to carry the actual code.</p>
 <p>Names of modules should be plurals if they contain classes. Example is
 that a <code class="docutils literal notranslate"><span class="pre">Nodes</span></code> module that contains a <code class="docutils literal notranslate"><span class="pre">Node</span></code> class.</p>
 </section>
 <section id="context-managers">
-<h4>Context Managers<a class="headerlink" href="#context-managers" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Context Managers<a class="headerlink" href="#context-managers" title="Permalink to this heading">&#61633;</a></h4>
 <p>Names for context manages start with <code class="docutils literal notranslate"><span class="pre">with</span></code></p>
 <p>In order to easily recognize that something is to be used as a context
 manager, we follow a pattern of naming them <code class="docutils literal notranslate"><span class="pre">withSomething</span></code>, to make
@@ -431,7 +433,7 @@ that easily recognized.</p>
 </section>
 </section>
 <section id="prefer-list-contractions-over-built-ins">
-<h3>Prefer list contractions over built-ins<a class="headerlink" href="#prefer-list-contractions-over-built-ins" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Prefer list contractions over built-ins<a class="headerlink" href="#prefer-list-contractions-over-built-ins" title="Permalink to this heading">&#61633;</a></h3>
 <p>This concerns <code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, and <code class="docutils literal notranslate"><span class="pre">apply</span></code>. Usage of these
 built-ins is highly discouraged within Nuitka source code. Using them is
 considered worth a warning by &#8222;PyLint&#8220; e.g. &#8222;Used built-in function
@@ -484,7 +486,7 @@ easier write syntax.</p>
 </section>
 </section>
 <section id="coding-rules-c">
-<h2>Coding Rules C<a class="headerlink" href="#coding-rules-c" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Coding Rules C<a class="headerlink" href="#coding-rules-c" title="Permalink to this heading">&#61633;</a></h2>
 <p>For the static C parts, e.g. compiled types, helper codes, the
 <code class="docutils literal notranslate"><span class="pre">clang-format</span></code> from LLVM project is used, the tool
 <code class="docutils literal notranslate"><span class="pre">autoformat-nuitka-source</span></code> does this for us.</p>
@@ -493,7 +495,7 @@ mistakes made by adding a statement to a branch, forgetting to make it a
 block.</p>
 </section>
 <section id="the-git-flow-model">
-<h2>The &#8222;git flow&#8220; model<a class="headerlink" href="#the-git-flow-model" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>The &#8222;git flow&#8220; model<a class="headerlink" href="#the-git-flow-model" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>The flow is used for releases and occasionally subsequent hot fixes.</p>
 <p>A few feature branches were used so far. It allows for quick delivery
@@ -533,7 +535,7 @@ in releases or delay making those changes.</p>
 </ul>
 </section>
 <section id="nuitka-git-github-workflow">
-<h2>Nuitka &#8222;git/github&#8220; Workflow<a class="headerlink" href="#nuitka-git-github-workflow" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Nuitka &#8222;git/github&#8220; Workflow<a class="headerlink" href="#nuitka-git-github-workflow" title="Permalink to this heading">&#61633;</a></h2>
 <ul>
 <li><p>Forking and cloning</p>
 <p>You need to have git installed and GitHub account. Goto Nuitka
@@ -586,18 +588,18 @@ git push
 </ul>
 </section>
 <section id="api-documentation-and-guidelines">
-<h2>API Documentation and Guidelines<a class="headerlink" href="#api-documentation-and-guidelines" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>API Documentation and Guidelines<a class="headerlink" href="#api-documentation-and-guidelines" title="Permalink to this heading">&#61633;</a></h2>
 <p>There is API documentation generated with <code class="docutils literal notranslate"><span class="pre">doxygen</span></code>, available at
 <a class="reference external" href="https://nuitka.net/apidoc">this location</a> .</p>
 <p>To ensure meaningful <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> output, the following guidelines must
 be observed when creating or updating Python source:</p>
 <section id="use-of-standard-python-doc-strings">
-<h3>Use of Standard Python <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> Strings<a class="headerlink" href="#use-of-standard-python-doc-strings" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Use of Standard Python <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> Strings<a class="headerlink" href="#use-of-standard-python-doc-strings" title="Permalink to this heading">&#61633;</a></h3>
 <p>Every class and every method should be documented via the standard
 Python delimiters (<code class="docutils literal notranslate"><span class="pre">"""</span> <span class="pre">...</span> <span class="pre">"""</span></code>) in the usual way.</p>
 </section>
 <section id="special-doxygen-anatomy-of-doc">
-<h3>Special <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> Anatomy of <code class="docutils literal notranslate"><span class="pre">__doc__</span></code><a class="headerlink" href="#special-doxygen-anatomy-of-doc" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Special <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> Anatomy of <code class="docutils literal notranslate"><span class="pre">__doc__</span></code><a class="headerlink" href="#special-doxygen-anatomy-of-doc" title="Permalink to this heading">&#61633;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>We are replacing Doxygen with sphinx, this is all obsolete</p>
@@ -670,7 +672,7 @@ double hash <code class="docutils literal notranslate"><span class="pre">--</spa
 </section>
 </section>
 <section id="checking-the-source">
-<h2>Checking the Source<a class="headerlink" href="#checking-the-source" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Checking the Source<a class="headerlink" href="#checking-the-source" title="Permalink to this heading">&#61633;</a></h2>
 <p>The static checking for errors is currently done with <code class="docutils literal notranslate"><span class="pre">PyLint</span></code>. In the
 future, Nuitka itself will gain the ability to present its findings in a
 similar way, but this is not a priority, and we are not there yet.</p>
@@ -682,10 +684,10 @@ similar way, but this is not a priority, and we are not there yet.</p>
 CI and we will not merge branches that do not pass.</p>
 </section>
 <section id="running-the-tests">
-<h2>Running the Tests<a class="headerlink" href="#running-the-tests" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this heading">&#61633;</a></h2>
 <p>This section describes how to run Nuitka tests.</p>
 <section id="running-all-tests">
-<h3>Running all Tests<a class="headerlink" href="#running-all-tests" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Running all Tests<a class="headerlink" href="#running-all-tests" title="Permalink to this heading">&#61633;</a></h3>
 <p>The top level access to the tests is as simple as this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./tests/run-tests
 </pre></div>
@@ -791,7 +793,7 @@ release, but of course, depending on changes going on, that might have
 to be expanded.</p>
 </section>
 <section id="basic-tests">
-<h3>Basic Tests<a class="headerlink" href="#basic-tests" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Basic Tests<a class="headerlink" href="#basic-tests" title="Permalink to this heading">&#61633;</a></h3>
 <p>You can run the &#8222;basic&#8220; tests like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./tests/basics/run_all.py search
 </pre></div>
@@ -806,7 +808,7 @@ intended version, as it is portable across all supported Python
 versions, and defaults testing with the Python version is run with.</p>
 </section>
 <section id="syntax-tests">
-<h3>Syntax Tests<a class="headerlink" href="#syntax-tests" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Syntax Tests<a class="headerlink" href="#syntax-tests" title="Permalink to this heading">&#61633;</a></h3>
 <p>Then there are &#8222;syntax&#8220; tests, i.e. language constructs that need to
 give a syntax error.</p>
 <p>It sometimes so happens that Nuitka must do this itself, because the
@@ -821,7 +823,7 @@ totally the same for this:</p>
 </div>
 </section>
 <section id="program-tests">
-<h3>Program Tests<a class="headerlink" href="#program-tests" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Program Tests<a class="headerlink" href="#program-tests" title="Permalink to this heading">&#61633;</a></h3>
 <p>Then there are small &#8222;programs&#8220; tests, that e.g. exercise many kinds of
 import tricks and are designed to reveal problems with inter-module
 behavior. These can be run like this:</p>
@@ -830,7 +832,7 @@ behavior. These can be run like this:</p>
 </div>
 </section>
 <section id="generated-tests">
-<h3>Generated Tests<a class="headerlink" href="#generated-tests" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Generated Tests<a class="headerlink" href="#generated-tests" title="Permalink to this heading">&#61633;</a></h3>
 <p>There are tests, which are generated from Jinja2 templates. They aim at
 e.g. combining at types with operations, in-place or not, or large
 constants. These can be run like this:</p>
@@ -839,7 +841,7 @@ constants. These can be run like this:</p>
 </div>
 </section>
 <section id="compile-nuitka-with-nuitka">
-<h3>Compile Nuitka with Nuitka<a class="headerlink" href="#compile-nuitka-with-nuitka" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Compile Nuitka with Nuitka<a class="headerlink" href="#compile-nuitka-with-nuitka" title="Permalink to this heading">&#61633;</a></h3>
 <p>And there is the &#8222;compile itself&#8220; or &#8222;reflected&#8220; test. This test makes
 Nuitka compile itself and compare the resulting C++ when running
 compiled to non-compiled, which helps to find in-determinism.</p>
@@ -853,7 +855,7 @@ because Nuitka uses a lot of packages and imports between them.</p>
 </section>
 </section>
 <section id="internal-plugin-api">
-<h2>Internal/Plugin API<a class="headerlink" href="#internal-plugin-api" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Internal/Plugin API<a class="headerlink" href="#internal-plugin-api" title="Permalink to this heading">&#61633;</a></h2>
 <p>The documentation from the source code for both the Python and the C
 parts are published as <a class="reference external" href="https://nuitka.net/apidoc">Nuitka API</a> and
 arguably in a relatively bad shape as we started generating those with
@@ -873,7 +875,7 @@ a detailed description of how to write your own plugin.</p>
 <p>To learn about plugin option specification consult <a class="reference external" href="https://github.com/Nuitka/Nuitka/blob/develop/Using-Plugin-Options.rst" target="_blank">this document</a>.</p>
 </section>
 <section id="working-with-the-cpython-suites">
-<h2>Working with the CPython suites<a class="headerlink" href="#working-with-the-cpython-suites" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Working with the CPython suites<a class="headerlink" href="#working-with-the-cpython-suites" title="Permalink to this heading">&#61633;</a></h2>
 <p>The CPython test suites are different branches of the same submodule.
 When you update your git checkout, they will frequently become detached.
 In this case, simply execute this command:</p>
@@ -935,11 +937,11 @@ git push
 </div>
 </section>
 <section id="design-descriptions">
-<h2>Design Descriptions<a class="headerlink" href="#design-descriptions" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Design Descriptions<a class="headerlink" href="#design-descriptions" title="Permalink to this heading">&#61633;</a></h2>
 <p>These should be a lot more and contain graphics from presentations
 given. It will be filled in, but not now.</p>
 <section id="nuitka-logo">
-<h3>Nuitka Logo<a class="headerlink" href="#nuitka-logo" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Nuitka Logo<a class="headerlink" href="#nuitka-logo" title="Permalink to this heading">&#61633;</a></h3>
 <p>The logo was submitted by &#8222;dr. Equivalent&#8220;. It&#8217;s source is contained in
 <code class="docutils literal notranslate"><span class="pre">doc/Logo</span></code> where 3 variants of the logo in SVG are placed.</p>
 <ul class="simple">
@@ -978,7 +980,7 @@ optipng -o2 doc/images/Nuitka-Logo-Horizontal.png
 </div>
 </section>
 <section id="choice-of-the-target-language">
-<h3>Choice of the Target Language<a class="headerlink" href="#choice-of-the-target-language" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Choice of the Target Language<a class="headerlink" href="#choice-of-the-target-language" title="Permalink to this heading">&#61633;</a></h3>
 <ul class="simple">
 <li><p>Choosing the target language was important decision. factors were:</p>
 <ul>
@@ -1000,7 +1002,7 @@ using any C++ features, just the allowances of C++ features that made it
 into C11, which is e.g. allowing late definitions of variables.</p>
 </section>
 <section id="use-of-scons-internally">
-<h3>Use of Scons internally<a class="headerlink" href="#use-of-scons-internally" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Use of Scons internally<a class="headerlink" href="#use-of-scons-internally" title="Permalink to this heading">&#61633;</a></h3>
 <p>Nuitka does not involve Scons in its user interface at all; Scons is
 purely used internally. Nuitka itself, being pure Python, will run
 without any build process just fine.</p>
@@ -1119,7 +1121,7 @@ find the folders for Python installations on some systems.</p>
 </ul>
 </section>
 <section id="locating-modules-and-packages">
-<h3>Locating Modules and Packages<a class="headerlink" href="#locating-modules-and-packages" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Locating Modules and Packages<a class="headerlink" href="#locating-modules-and-packages" title="Permalink to this heading">&#61633;</a></h3>
 <p>The search for modules used is driven by <code class="docutils literal notranslate"><span class="pre">nuitka.importing.Importing</span></code>
 module.</p>
 <ul>
@@ -1155,7 +1157,7 @@ cached), and we need to obey lots of user choices, e.g. to compile a
 standard library or not.</p>
 </section>
 <section id="hooking-for-module-import-process">
-<h3>Hooking for module <code class="docutils literal notranslate"><span class="pre">import</span></code> process<a class="headerlink" href="#hooking-for-module-import-process" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Hooking for module <code class="docutils literal notranslate"><span class="pre">import</span></code> process<a class="headerlink" href="#hooking-for-module-import-process" title="Permalink to this heading">&#61633;</a></h3>
 <p>Currently, in generated code, for every <code class="docutils literal notranslate"><span class="pre">import</span></code> a normal
 <code class="docutils literal notranslate"><span class="pre">__import__()</span></code> built-in call is executed. The
 <code class="docutils literal notranslate"><span class="pre">nuitka/build/static_src/MetaPathBasedLoader.c</span></code> file provides the
@@ -1171,7 +1173,7 @@ become easy to add.</p>
 </div>
 </section>
 <section id="supporting-class-of-python3">
-<h3>Supporting <code class="docutils literal notranslate"><span class="pre">__class__</span></code> of Python3<a class="headerlink" href="#supporting-class-of-python3" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Supporting <code class="docutils literal notranslate"><span class="pre">__class__</span></code> of Python3<a class="headerlink" href="#supporting-class-of-python3" title="Permalink to this heading">&#61633;</a></h3>
 <p>In Python3 the handling of <code class="docutils literal notranslate"><span class="pre">__class__</span></code> and <code class="docutils literal notranslate"><span class="pre">super</span></code> is different from
 Python2. It used to be a normal variable, and now the following things
 have changed.</p>
@@ -1241,7 +1243,7 @@ class is built, then it will be the <code class="docutils literal notranslate"><
 </ul>
 </section>
 <section id="frame-stack">
-<h3>Frame Stack<a class="headerlink" href="#frame-stack" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Frame Stack<a class="headerlink" href="#frame-stack" title="Permalink to this heading">&#61633;</a></h3>
 <p>In Python, every function, class, and module has a frame. It is created
 when the scope is entered, and there is a stack of these at run time,
 which becomes visible in tracebacks in case of exceptions.</p>
@@ -1289,19 +1291,19 @@ presence.</p>
 </div>
 </section>
 <section id="parameter-parsing">
-<h3>Parameter Parsing<a class="headerlink" href="#parameter-parsing" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Parameter Parsing<a class="headerlink" href="#parameter-parsing" title="Permalink to this heading">&#61633;</a></h3>
 <p>The parsing of parameters is very convoluted in Python, and doing it in
 a compatible way is not that easy. This is a description of the required
 process, for an easier overview.</p>
 <section id="input">
-<h4>Input<a class="headerlink" href="#input" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Input<a class="headerlink" href="#input" title="Permalink to this heading">&#61633;</a></h4>
 <p>The input is an argument <code class="docutils literal notranslate"><span class="pre">tuple</span></code> (the type is fixed), which contains
 the positional arguments, and potentially an argument <code class="docutils literal notranslate"><span class="pre">dict</span></code> (type is
 fixed as well, but could also be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, indicating that there are no
 keyword arguments.</p>
 </section>
 <section id="keyword-dictionary">
-<h4>Keyword dictionary<a class="headerlink" href="#keyword-dictionary" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Keyword dictionary<a class="headerlink" href="#keyword-dictionary" title="Permalink to this heading">&#61633;</a></h4>
 <p>The keyword argument dictionary is checked first. Anything in there,
 that cannot be associated, either raise an error, or is added to a
 potentially given star dict argument. So there are two major cases.</p>
@@ -1326,7 +1328,7 @@ string <code class="docutils literal notranslate"><span class="pre">==</span></c
 code, but also a lot faster code in the positive case.</p>
 </section>
 <section id="argument-tuple">
-<h4>Argument tuple<a class="headerlink" href="#argument-tuple" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Argument tuple<a class="headerlink" href="#argument-tuple" title="Permalink to this heading">&#61633;</a></h4>
 <p>After this completed, the argument tuple is up for processing. The first
 thing it needs to do is to check if it&#8217;s too many of them, and then to
 complain.</p>
@@ -1339,7 +1341,7 @@ already set (from the keyword dictionary), raise an error instead.</p>
 </section>
 </section>
 <section id="ssa-form-for-nuitka">
-<h3>SSA form for Nuitka<a class="headerlink" href="#ssa-form-for-nuitka" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>SSA form for Nuitka<a class="headerlink" href="#ssa-form-for-nuitka" title="Permalink to this heading">&#61633;</a></h3>
 <p>The SSA form is critical to how optimization works. The so called trace
 collections builds up traces. These are facts about how this works:</p>
 <ul>
@@ -1431,7 +1433,7 @@ It&#8217;s e.g. of some interest, if a variable must have a value or must not.
 This allows to e.g. omit checks, know what exceptions might raise.</p>
 </section>
 <section id="loop-ssa">
-<h3>Loop SSA<a class="headerlink" href="#loop-ssa" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Loop SSA<a class="headerlink" href="#loop-ssa" title="Permalink to this heading">&#61633;</a></h3>
 <p>For loops we have the addition difficulty that we need would need to
 look ahead what types a variable has at loop exit, but that is a cyclic
 dependency.</p>
@@ -1450,9 +1452,9 @@ ones derived from this to the starting values, and see if this gives
 more types.</p>
 </section>
 <section id="python-slots-in-optimization">
-<h3>Python Slots in Optimization<a class="headerlink" href="#python-slots-in-optimization" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Python Slots in Optimization<a class="headerlink" href="#python-slots-in-optimization" title="Permalink to this heading">&#61633;</a></h3>
 <section id="basic-slot-idea">
-<h4>Basic Slot Idea<a class="headerlink" href="#basic-slot-idea" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Basic Slot Idea<a class="headerlink" href="#basic-slot-idea" title="Permalink to this heading">&#61633;</a></h4>
 <p>For almost all the operations in Python, a form of overloading is
 available. That is what makes it so powerful.</p>
 <p>So when you write an expression like this one:</p>
@@ -1490,7 +1492,7 @@ back (<code class="docutils literal notranslate"><span class="pre">__iter__</spa
 and tends to grow with Python releases, but it is not endless.</p>
 </section>
 <section id="representation-in-nuitka">
-<h4>Representation in Nuitka<a class="headerlink" href="#representation-in-nuitka" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Representation in Nuitka<a class="headerlink" href="#representation-in-nuitka" title="Permalink to this heading">&#61633;</a></h4>
 <p>So a slot in Nuitka typically has an owning node. We use <code class="docutils literal notranslate"><span class="pre">__len__</span></code> as
 an example here. In the <code class="docutils literal notranslate"><span class="pre">computeExpression</span></code> the <code class="docutils literal notranslate"><span class="pre">len</span></code> node named
 <code class="docutils literal notranslate"><span class="pre">ExpressionBuiltinLen</span></code> has to defer the decision what it computes to
@@ -1575,7 +1577,7 @@ typical know their element counts.</p>
 </section>
 </section>
 <section id="the-c-side">
-<h3>The C side<a class="headerlink" href="#the-c-side" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>The C side<a class="headerlink" href="#the-c-side" title="Permalink to this heading">&#61633;</a></h3>
 <p>When a slot is not optimized away at compile time however, we need to
 generate actual code for it. We figure out what this could be by looking
 at the original CPython implementation.</p>
@@ -1638,7 +1640,7 @@ assumed that currently all slots are supported on at least a very
 defensive level, to avoid unnoticed escapes of control flow.</p>
 </section>
 <section id="built-in-call-optimization">
-<h3>Built-in call optimization<a class="headerlink" href="#built-in-call-optimization" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Built-in call optimization<a class="headerlink" href="#built-in-call-optimization" title="Permalink to this heading">&#61633;</a></h3>
 <p>For calls to built-in names, there is typically a function in Python
 that delegates to the type constructor (e.g. when we talk about <code class="docutils literal notranslate"><span class="pre">int</span></code>
 that just creates an object passing the arguments of the call) or its
@@ -1654,13 +1656,13 @@ the actually assigned in other code, and then when the call comes,
 arguments are checked and a relatively static node is created.</p>
 </section>
 <section id="code-generation-towards-c">
-<h3>Code Generation towards C<a class="headerlink" href="#code-generation-towards-c" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Code Generation towards C<a class="headerlink" href="#code-generation-towards-c" title="Permalink to this heading">&#61633;</a></h3>
 <p>Currently, Nuitka uses Pure C and no C++ patterns at all. The use of C11
 requires on some platforms to compile the C11 using a C++ compiler,
 which works relatively well, but also limits the amount of C11 that can
 be used.</p>
 <section id="exceptions">
-<h4>Exceptions<a class="headerlink" href="#exceptions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this heading">&#61633;</a></h4>
 <p>To handle and work with exceptions, every construct that can raise has
 either a <code class="docutils literal notranslate"><span class="pre">bool</span></code> or <code class="docutils literal notranslate"><span class="pre">int</span></code> return code or <code class="docutils literal notranslate"><span class="pre">PyObject</span> <span class="pre">*</span></code> with <code class="docutils literal notranslate"><span class="pre">NULL</span></code>
 return value. This is very much in line with that the Python C-API does.</p>
@@ -1673,7 +1675,7 @@ return from C-API without a set exception means e.g. <code class="docutils liter
 to do so, for whatever reason, could only be asserted to not do so.</p>
 </section>
 <section id="statement-temporary-variables">
-<h4>Statement Temporary Variables<a class="headerlink" href="#statement-temporary-variables" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Statement Temporary Variables<a class="headerlink" href="#statement-temporary-variables" title="Permalink to this heading">&#61633;</a></h4>
 <p>For statements and larger constructs the context object track temporary
 values, that represent references. For some, these should be released at
 the end of the statement, or they represent a leak.</p>
@@ -1682,7 +1684,7 @@ module context, where they are supposed to have explicit <code class="docutils l
 release their references.</p>
 </section>
 <section id="local-variables-storage">
-<h4>Local Variables Storage<a class="headerlink" href="#local-variables-storage" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Local Variables Storage<a class="headerlink" href="#local-variables-storage" title="Permalink to this heading">&#61633;</a></h4>
 <p>Closure variables taken are to be released when the function object is
 later destroyed. For in-lined calls, variables are just passed, and it
 does not become an issue to release anything.</p>
@@ -1694,7 +1696,7 @@ we need a special operation that simply releases the reference to the
 cell or object variable.</p>
 </section>
 <section id="exit-targets">
-<h4>Exit Targets<a class="headerlink" href="#exit-targets" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Exit Targets<a class="headerlink" href="#exit-targets" title="Permalink to this heading">&#61633;</a></h4>
 <p>Each error or other exit releases statement temporary values and then
 executes a <code class="docutils literal notranslate"><span class="pre">goto</span></code> to the exit target. These targets need to be setup.
 The <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> will e.g. catch error exits.</p>
@@ -1706,7 +1708,7 @@ exit, and a contained <code class="docutils literal notranslate"><span class="pr
 final code should it be needed.</p>
 </section>
 <section id="frames">
-<h4>Frames<a class="headerlink" href="#frames" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Frames<a class="headerlink" href="#frames" title="Permalink to this heading">&#61633;</a></h4>
 <p>Frames are containers for variable declarations and cleanups. As such,
 frames provide error exits and success exits, which remove the frame
 from the frame stack, and then proceed to the parent exit.</p>
@@ -1717,7 +1719,7 @@ exception exits, there is a need to trace the active type, so it can be
 used in the correct form.</p>
 </section>
 <section id="abortive-statements">
-<h4>Abortive Statements<a class="headerlink" href="#abortive-statements" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Abortive Statements<a class="headerlink" href="#abortive-statements" title="Permalink to this heading">&#61633;</a></h4>
 <p>The way <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">finally</span></code> is handled, copies of the <code class="docutils literal notranslate"><span class="pre">finally</span></code> block
 are made, and optimized independently for each abort method. The ones
 there are of course, <code class="docutils literal notranslate"><span class="pre">return</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code>, and <code class="docutils literal notranslate"><span class="pre">break</span></code>, but also
@@ -1727,7 +1729,7 @@ flow will follow these &#8222;exits&#8220;.</p>
 </section>
 </section>
 <section id="constant-preparation">
-<h3>Constant Preparation<a class="headerlink" href="#constant-preparation" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Constant Preparation<a class="headerlink" href="#constant-preparation" title="Permalink to this heading">&#61633;</a></h3>
 <p>Early versions of Nuitka, created all constants for the whole program
 for ready access to generated code, before the program launches. It did
 so in a single file, but that approach didn&#8217;t scale well.</p>
@@ -1752,12 +1754,12 @@ use <code class="docutils literal notranslate"><span class="pre">static</span></
 values that others use.</p>
 </section>
 <section id="language-conversions-to-make-things-simpler">
-<h3>Language Conversions to make things simpler<a class="headerlink" href="#language-conversions-to-make-things-simpler" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Language Conversions to make things simpler<a class="headerlink" href="#language-conversions-to-make-things-simpler" title="Permalink to this heading">&#61633;</a></h3>
 <p>There are some cases, where the Python language has things that can in
 fact be expressed in a simpler or more general way, and where we choose
 to do that at either tree building or optimization time.</p>
 <section id="the-assert-statement">
-<h4>The <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement<a class="headerlink" href="#the-assert-statement" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>The <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement<a class="headerlink" href="#the-assert-statement" title="Permalink to this heading">&#61633;</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement is a special statement in Python, allowed by
 the syntax. It has two forms, with and without a second argument. The
 later is probably less known, as is the fact that raise statements can
@@ -1784,7 +1786,7 @@ conditional statement will have the branch statically executed or
 removed.</p>
 </section>
 <section id="the-comparison-chain-expressions">
-<h4>The &#8222;comparison chain&#8220; expressions<a class="headerlink" href="#the-comparison-chain-expressions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>The &#8222;comparison chain&#8220; expressions<a class="headerlink" href="#the-comparison-chain-expressions" title="Permalink to this heading">&#61633;</a></h4>
 <p>In Nuitka we have the concept of an outline, and therefore we can make
 the following re-formulation instead:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">d</span>
@@ -1823,7 +1825,7 @@ explicit and comparisons in Nuitka to be internally always about two
 operands only.</p>
 </section>
 <section id="the-execfile-built-in">
-<h4>The <code class="docutils literal notranslate"><span class="pre">execfile</span></code> built-in<a class="headerlink" href="#the-execfile-built-in" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>The <code class="docutils literal notranslate"><span class="pre">execfile</span></code> built-in<a class="headerlink" href="#the-execfile-built-in" title="Permalink to this heading">&#61633;</a></h4>
 <p>Handling is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">execfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="c1"># Basically the same as:</span>
@@ -1839,7 +1841,7 @@ and apply file embedding or whatever we will have there one day.</p>
 detected as such during optimization.</p>
 </section>
 <section id="generator-expressions-with-yield">
-<h4>Generator expressions with <code class="docutils literal notranslate"><span class="pre">yield</span></code><a class="headerlink" href="#generator-expressions-with-yield" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Generator expressions with <code class="docutils literal notranslate"><span class="pre">yield</span></code><a class="headerlink" href="#generator-expressions-with-yield" title="Permalink to this heading">&#61633;</a></h4>
 <p>These are converted at tree building time into a generator function body
 that yields from the iterator given, which is the put into a for loop to
 iterate, created a lambda function of and then called with the first
@@ -1858,7 +1860,7 @@ unexpected cases:</p>
 </div>
 </section>
 <section id="function-decorators">
-<h4>Function Decorators<a class="headerlink" href="#function-decorators" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Function Decorators<a class="headerlink" href="#function-decorators" title="Permalink to this heading">&#61633;</a></h4>
 <p>When one learns about decorators, you see that:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@decorator</span>
 <span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
@@ -1885,7 +1887,7 @@ decorators at all. And it should make the two variants optimize equally
 well.</p>
 </section>
 <section id="functions-nested-arguments">
-<h4>Functions nested arguments<a class="headerlink" href="#functions-nested-arguments" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Functions nested arguments<a class="headerlink" href="#functions-nested-arguments" title="Permalink to this heading">&#61633;</a></h4>
 <p>Nested arguments are a Python2 only feature supported by Nuitka.
 Consider this example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)):</span>
@@ -1910,7 +1912,7 @@ the need from the code that does parameter parsing to deal with these.</p>
 we do not use local variables, but temporary functions.</p>
 </section>
 <section id="in-place-assignments">
-<h4>In-place Assignments<a class="headerlink" href="#in-place-assignments" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>In-place Assignments<a class="headerlink" href="#in-place-assignments" title="Permalink to this heading">&#61633;</a></h4>
 <p>In-place assignments are re-formulated to an expression using temporary
 variables.</p>
 <p>These are not as much a reformulation of <code class="docutils literal notranslate"><span class="pre">+=</span></code> to <code class="docutils literal notranslate"><span class="pre">+</span></code>, but instead
@@ -1929,7 +1931,7 @@ variant <code class="docutils literal notranslate"><span class="pre">iadd</span>
 depending on type and value knowledge later on.</p>
 </section>
 <section id="complex-assignments">
-<h4>Complex Assignments<a class="headerlink" href="#complex-assignments" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Complex Assignments<a class="headerlink" href="#complex-assignments" title="Permalink to this heading">&#61633;</a></h4>
 <p>Complex assignments are defined as those with multiple targets to assign
 from a single source and are re-formulated to such using a temporary
 variable and multiple simple assignments instead.</p>
@@ -1950,7 +1952,7 @@ takes care of. Were <code class="docutils literal notranslate"><span class="pre"
 assigned.</p>
 </section>
 <section id="unpacking-assignments">
-<h4>Unpacking Assignments<a class="headerlink" href="#unpacking-assignments" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Unpacking Assignments<a class="headerlink" href="#unpacking-assignments" title="Permalink to this heading">&#61633;</a></h4>
 <p>Unpacking assignments are re-formulated to use temporary variables as
 well.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">attr</span><span class="p">,</span> <span class="n">c</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span> <span class="o">=</span> <span class="n">e</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">g</span> <span class="o">=</span> <span class="n">h</span><span class="p">()</span>
@@ -1997,7 +1999,7 @@ construct the error message.</p>
 </div>
 </section>
 <section id="with-statements">
-<h4>With Statements<a class="headerlink" href="#with-statements" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>With Statements<a class="headerlink" href="#with-statements" title="Permalink to this heading">&#61633;</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">with</span></code> statements are re-formulated to use temporary variables as
 well. The taking and calling of <code class="docutils literal notranslate"><span class="pre">__enter__</span></code> and <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> with
 arguments, is presented with standard operations instead. The promise to
@@ -2054,7 +2056,7 @@ could use the same transformation, but right now we don&#8217;t have it.</p>
 </div>
 </section>
 <section id="for-loops">
-<h4>For Loops<a class="headerlink" href="#for-loops" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">&#61633;</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loops use normal assignments and handle the iterator that is
 implicit in the code explicitly.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
@@ -2103,7 +2105,7 @@ handling is happening in this case.</p>
 </div>
 </section>
 <section id="while-loops">
-<h4>While Loops<a class="headerlink" href="#while-loops" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this heading">&#61633;</a></h4>
 <p>Quoting the <code class="docutils literal notranslate"><span class="pre">nuitka.tree.ReformulationWhileLoopStatements</span></code>
 documentation:</p>
 <p>Reformulation of while loop statements.</p>
@@ -2140,7 +2142,7 @@ start and loop conditions are the same.</p>
 documentation:</p>
 </section>
 <section id="exception-handlers">
-<h4>Exception Handlers<a class="headerlink" href="#exception-handlers" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Exception Handlers<a class="headerlink" href="#exception-handlers" title="Permalink to this heading">&#61633;</a></h4>
 <p>Exception handlers in Python may assign the caught exception value to a
 variable in the handler definition. And the different handlers are
 represented as conditional checks on the result of comparison
@@ -2213,7 +2215,7 @@ use special references, that access the C++ and don&#8217;t go via
 behavior are all explicit and reduced the branches.</p>
 </section>
 <section id="statement-try-except-with-else">
-<h4>Statement <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> with <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#statement-try-except-with-else" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Statement <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> with <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#statement-try-except-with-else" title="Permalink to this heading">&#61633;</a></h4>
 <p>Much like <code class="docutils literal notranslate"><span class="pre">else</span></code> branches of loops, an indicator variable is used to
 indicate the entry into any of the exception handlers.</p>
 <p>Therefore, the <code class="docutils literal notranslate"><span class="pre">else</span></code> becomes a real conditional statement in the node
@@ -2221,7 +2223,7 @@ tree, checking the indicator variable and guarding the execution of the
 <code class="docutils literal notranslate"><span class="pre">else</span></code> branch.</p>
 </section>
 <section id="class-creation-python2">
-<h4>Class Creation (Python2)<a class="headerlink" href="#class-creation-python2" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Class Creation (Python2)<a class="headerlink" href="#class-creation-python2" title="Permalink to this heading">&#61633;</a></h4>
 <p>Classes in Python2 have a body that only serves to build the class
 dictionary and is a normal function otherwise. This is expressed with
 the following re-formulation:</p>
@@ -2265,7 +2267,7 @@ become able to understand <code class="docutils literal notranslate"><span class
 the created class again.</p>
 </section>
 <section id="class-creation-python3">
-<h4>Class Creation (Python3)<a class="headerlink" href="#class-creation-python3" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Class Creation (Python3)<a class="headerlink" href="#class-creation-python3" title="Permalink to this heading">&#61633;</a></h4>
 <p>In Python3, classes are a complicated way to write a function call, that
 can interact with its body. The body starts with a dictionary provided
 by the metaclass, so that is different, because it can <code class="docutils literal notranslate"><span class="pre">__prepare__</span></code> a
@@ -2320,7 +2322,7 @@ below.</p>
 </div>
 </section>
 <section id="generator-expressions">
-<h4>Generator Expressions<a class="headerlink" href="#generator-expressions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Generator Expressions<a class="headerlink" href="#generator-expressions" title="Permalink to this heading">&#61633;</a></h4>
 <p>There are re-formulated as functions.</p>
 <p>Generally they are turned into calls of function bodies with
 (potentially nested) for loops:</p>
@@ -2338,7 +2340,7 @@ below.</p>
 </div>
 </section>
 <section id="list-contractions">
-<h4>List Contractions<a class="headerlink" href="#list-contractions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>List Contractions<a class="headerlink" href="#list-contractions" title="Permalink to this heading">&#61633;</a></h4>
 <p>The list contractions of Python2 are different from those of Python3, in
 that they don&#8217;t actually do any closure variable taking, and that no
 function object ever exists.</p>
@@ -2364,7 +2366,7 @@ Python3.7 or higher), whereas with Python2 the function is only an
 outline, so it can readily access the containing name space.</p>
 </section>
 <section id="set-contractions">
-<h4>Set Contractions<a class="headerlink" href="#set-contractions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Set Contractions<a class="headerlink" href="#set-contractions" title="Permalink to this heading">&#61633;</a></h4>
 <p>The set contractions of Python2.7 are like list contractions in Python3,
 in that they produce an actual helper function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">set_value</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">if</span> <span class="n">cond</span><span class="p">()}</span>
@@ -2385,7 +2387,7 @@ in that they produce an actual helper function:</p>
 </div>
 </section>
 <section id="dictionary-contractions">
-<h4>Dictionary Contractions<a class="headerlink" href="#dictionary-contractions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Dictionary Contractions<a class="headerlink" href="#dictionary-contractions" title="Permalink to this heading">&#61633;</a></h4>
 <p>The dictionary contractions of are like list contractions in Python3, in
 that they produce an actual helper function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dict_value</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">if</span> <span class="n">cond</span><span class="p">()}</span>
@@ -2406,7 +2408,7 @@ that they produce an actual helper function:</p>
 </div>
 </section>
 <section id="boolean-expressions-and-and-or">
-<h4>Boolean expressions <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#boolean-expressions-and-and-or" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Boolean expressions <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#boolean-expressions-and-and-or" title="Permalink to this heading">&#61633;</a></h4>
 <p>The short circuit operators <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">and</span></code> tend to be only less
 general that the <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> expressions, but have dedicated nodes.
 We used to have a re-formulation towards those, but we now do these via
@@ -2416,7 +2418,7 @@ its truth value, and depending on it, to pick it, or use the right
 value.</p>
 </section>
 <section id="simple-calls">
-<h4>Simple Calls<a class="headerlink" href="#simple-calls" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Simple Calls<a class="headerlink" href="#simple-calls" title="Permalink to this heading">&#61633;</a></h4>
 <p>As seen below, even complex calls are simple calls. In simple calls of
 Python there is still some hidden semantic going on, that we expose.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">func</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">named1</span><span class="o">=</span><span class="n">arg3</span><span class="p">,</span> <span class="n">named2</span><span class="o">=</span><span class="n">arg4</span><span class="p">)</span>
@@ -2437,7 +2439,7 @@ checks are needed for the types of the star arguments and it&#8217;s directly
 translated to <code class="docutils literal notranslate"><span class="pre">PyObject_Call</span></code>.</p>
 </section>
 <section id="complex-calls">
-<h4>Complex Calls<a class="headerlink" href="#complex-calls" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Complex Calls<a class="headerlink" href="#complex-calls" title="Permalink to this heading">&#61633;</a></h4>
 <p>The call operator in Python allows to provide arguments in 4 forms.</p>
 <ul class="simple">
 <li><p>Positional (or normal) arguments</p></li>
@@ -2499,7 +2501,7 @@ parameter parsing overhead. And the call in its end, is a special call
 operation, which relates to the <code class="docutils literal notranslate"><span class="pre">PyObject_Call</span></code> C-API.</p>
 </section>
 <section id="assignment-expressions">
-<h4>Assignment Expressions<a class="headerlink" href="#assignment-expressions" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Assignment Expressions<a class="headerlink" href="#assignment-expressions" title="Permalink to this heading">&#61633;</a></h4>
 <p>In Python 3.8 or higher, you assign inside expressions.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">:=</span> <span class="n">cond</span><span class="p">()):</span>
    <span class="n">do_something</span><span class="p">()</span>
@@ -2525,7 +2527,7 @@ statement, but they do not cause much difficulties for code generation,
 since they are transparent.</p>
 </section>
 <section id="match-statements">
-<h4>Match Statements<a class="headerlink" href="#match-statements" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Match Statements<a class="headerlink" href="#match-statements" title="Permalink to this heading">&#61633;</a></h4>
 <p>In Python 3.10 or higher, you can write things like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">match</span> <span class="n">something</span><span class="p">():</span>
     <span class="k">case</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="p">:</span>
@@ -2563,7 +2565,7 @@ since they are transparent.</p>
 </div>
 </section>
 <section id="print-statements">
-<h4>Print Statements<a class="headerlink" href="#print-statements" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Print Statements<a class="headerlink" href="#print-statements" title="Permalink to this heading">&#61633;</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement exists only in Python2. It implicitly converts
 its arguments to strings before printing them. In order to make this
 accessible and compile time optimized, this is made visible in the node
@@ -2608,9 +2610,9 @@ way (no variable look-ups involved).</p>
 </section>
 </section>
 <section id="reformulations-during-optimization">
-<h3>Reformulations during Optimization<a class="headerlink" href="#reformulations-during-optimization" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Reformulations during Optimization<a class="headerlink" href="#reformulations-during-optimization" title="Permalink to this heading">&#61633;</a></h3>
 <section id="builtin-zip-for-python2">
-<h4>Builtin <code class="docutils literal notranslate"><span class="pre">zip</span></code> for Python2<a class="headerlink" href="#builtin-zip-for-python2" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Builtin <code class="docutils literal notranslate"><span class="pre">zip</span></code> for Python2<a class="headerlink" href="#builtin-zip-for-python2" title="Permalink to this heading">&#61633;</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>  <span class="c1"># Potentially more arguments.</span>
    <span class="c1"># First assign, to preserve the order of execution, the arguments might be</span>
    <span class="c1"># complex expressions with side effects.</span>
@@ -2655,7 +2657,7 @@ way (no variable look-ups involved).</p>
 </pre></div>
 </div>
 <section id="builtin-zip-for-python3">
-<h5>Builtin <code class="docutils literal notranslate"><span class="pre">zip</span></code> for Python3<a class="headerlink" href="#builtin-zip-for-python3" title="Link zu dieser &#220;berschrift">&#61633;</a></h5>
+<h5>Builtin <code class="docutils literal notranslate"><span class="pre">zip</span></code> for Python3<a class="headerlink" href="#builtin-zip-for-python3" title="Permalink to this heading">&#61633;</a></h5>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="o">...</span>
 </pre></div>
@@ -2684,7 +2686,7 @@ way (no variable look-ups involved).</p>
 </section>
 </section>
 <section id="builtin-map-for-python2">
-<h4>Builtin <code class="docutils literal notranslate"><span class="pre">map</span></code> for Python2<a class="headerlink" href="#builtin-map-for-python2" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Builtin <code class="docutils literal notranslate"><span class="pre">map</span></code> for Python2<a class="headerlink" href="#builtin-map-for-python2" title="Permalink to this heading">&#61633;</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_map</span><span class="p">():</span>
     <span class="c1"># TODO: Not done yet.</span>
     <span class="k">pass</span>
@@ -2692,7 +2694,7 @@ way (no variable look-ups involved).</p>
 </div>
 </section>
 <section id="builtin-min">
-<h4>Builtin <code class="docutils literal notranslate"><span class="pre">min</span></code><a class="headerlink" href="#builtin-min" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Builtin <code class="docutils literal notranslate"><span class="pre">min</span></code><a class="headerlink" href="#builtin-min" title="Permalink to this heading">&#61633;</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: keyfunc (Python2/3), defaults (Python3)</span>
 <span class="k">def</span> <span class="nf">_min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>  <span class="c1"># Potentially more arguments.</span>
     <span class="n">tmp_arg1</span> <span class="o">=</span> <span class="n">a</span>
@@ -2724,16 +2726,16 @@ way (no variable look-ups involved).</p>
 </div>
 </section>
 <section id="builtin-max">
-<h4>Builtin <code class="docutils literal notranslate"><span class="pre">max</span></code><a class="headerlink" href="#builtin-max" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Builtin <code class="docutils literal notranslate"><span class="pre">max</span></code><a class="headerlink" href="#builtin-max" title="Permalink to this heading">&#61633;</a></h4>
 <p>See <code class="docutils literal notranslate"><span class="pre">min</span></code> just with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> instead of <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>.</p>
 </section>
 <section id="call-to-dir-without-arguments">
-<h4>Call to <code class="docutils literal notranslate"><span class="pre">dir</span></code> without arguments<a class="headerlink" href="#call-to-dir-without-arguments" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Call to <code class="docutils literal notranslate"><span class="pre">dir</span></code> without arguments<a class="headerlink" href="#call-to-dir-without-arguments" title="Permalink to this heading">&#61633;</a></h4>
 <p>This expression is reformulated to <code class="docutils literal notranslate"><span class="pre">locals().keys()</span></code> for Python2, and
 <code class="docutils literal notranslate"><span class="pre">list(locals.keys())</span></code> for Python3.</p>
 </section>
 <section id="calls-to-functions-with-known-signatures">
-<h4>Calls to functions with known signatures<a class="headerlink" href="#calls-to-functions-with-known-signatures" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Calls to functions with known signatures<a class="headerlink" href="#calls-to-functions-with-known-signatures" title="Permalink to this heading">&#61633;</a></h4>
 <p>As a necessary step for inlining function calls, we need to change calls
 to variable references to function references.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
@@ -2845,9 +2847,9 @@ tracing away.</p>
 </section>
 </section>
 <section id="nodes-that-serve-special-purposes">
-<h3>Nodes that serve special purposes<a class="headerlink" href="#nodes-that-serve-special-purposes" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Nodes that serve special purposes<a class="headerlink" href="#nodes-that-serve-special-purposes" title="Permalink to this heading">&#61633;</a></h3>
 <section id="try-statements">
-<h4>Try statements<a class="headerlink" href="#try-statements" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Try statements<a class="headerlink" href="#try-statements" title="Permalink to this heading">&#61633;</a></h4>
 <p>In Python, there is <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code> and <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">finally</span></code>. In
 Nuitka there is only a <code class="docutils literal notranslate"><span class="pre">try</span></code>, which then has blocks to handle
 exceptions, <code class="docutils literal notranslate"><span class="pre">continue</span></code>, or <code class="docutils literal notranslate"><span class="pre">break</span></code>, or <code class="docutils literal notranslate"><span class="pre">return</span></code>. There is no
@@ -2857,7 +2859,7 @@ can be different. User provided <code class="docutils literal notranslate"><span
 the different handlers.</p>
 </section>
 <section id="releases">
-<h4>Releases<a class="headerlink" href="#releases" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Releases<a class="headerlink" href="#releases" title="Permalink to this heading">&#61633;</a></h4>
 <p>When a function exits, the local variables are to be released. The same
 applies to temporary variables used in re-formulations. These releases
 cause a reference to the object to the released, but no value change.
@@ -2866,7 +2868,7 @@ They are typically the last use of the object in the function.</p>
 variables this effect is most visible.</p>
 </section>
 <section id="side-effects">
-<h4>Side Effects<a class="headerlink" href="#side-effects" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Side Effects<a class="headerlink" href="#side-effects" title="Permalink to this heading">&#61633;</a></h4>
 <p>When an exception is bound to occur, and this can be determined at
 compile time, Nuitka will not generate the code the leads to the
 exception, but directly just raise it. But not in all cases, this is the
@@ -2905,14 +2907,14 @@ easily and allowing to drop the call to the tuple building and checking
 its length, only to release it.</p>
 </section>
 <section id="caught-exception-type-value-references">
-<h4>Caught Exception Type/Value References<a class="headerlink" href="#caught-exception-type-value-references" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Caught Exception Type/Value References<a class="headerlink" href="#caught-exception-type-value-references" title="Permalink to this heading">&#61633;</a></h4>
 <p>When catching an exception, these are not directly put to
 <code class="docutils literal notranslate"><span class="pre">sys.exc_info()</span></code>, but remain as mere C variables. From there, they can
 be accessed with these nodes, or if published then from the thread
 state.</p>
 </section>
 <section id="hard-module-imports">
-<h4>Hard Module Imports<a class="headerlink" href="#hard-module-imports" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Hard Module Imports<a class="headerlink" href="#hard-module-imports" title="Permalink to this heading">&#61633;</a></h4>
 <p>These are module look-ups that don&#8217;t depend on any local variable for
 the module to be looked up, but with hard-coded names. These may be the
 result of optimization gaining such level of certainty.</p>
@@ -2920,7 +2922,7 @@ result of optimization gaining such level of certainty.</p>
 statements, but other usages will follow.</p>
 </section>
 <section id="locals-dict-update-statement">
-<h4>Locals Dict Update Statement<a class="headerlink" href="#locals-dict-update-statement" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Locals Dict Update Statement<a class="headerlink" href="#locals-dict-update-statement" title="Permalink to this heading">&#61633;</a></h4>
 <p>For the <code class="docutils literal notranslate"><span class="pre">exec</span></code> re-formulation, we apply an explicit sync back to
 locals as an explicit node. It helps us to tell the affected local
 variable traces that they might be affected. It represents the bit of
@@ -2929,7 +2931,7 @@ indication to copy back.</p>
 </section>
 </section>
 <section id="optimizing-attribute-lookups-into-method-calls-for-built-ins-types">
-<h3>Optimizing Attribute Lookups into Method Calls for Built-ins types<a class="headerlink" href="#optimizing-attribute-lookups-into-method-calls-for-built-ins-types" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Optimizing Attribute Lookups into Method Calls for Built-ins types<a class="headerlink" href="#optimizing-attribute-lookups-into-method-calls-for-built-ins-types" title="Permalink to this heading">&#61633;</a></h3>
 <p>The attribute lookup node <code class="docutils literal notranslate"><span class="pre">ExpressionAttributeLookup</span></code> represents
 looking up an attribute name, that is known to be a string. That&#8217;s
 already a bit more special, than say what <code class="docutils literal notranslate"><span class="pre">ExpressionBuiltinGetattr</span></code>
@@ -2970,12 +2972,12 @@ the list, etc.</p>
 </section>
 </section>
 <section id="plan-to-add-ctypes-support">
-<h2>Plan to add &#8222;ctypes&#8220; support<a class="headerlink" href="#plan-to-add-ctypes-support" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Plan to add &#8222;ctypes&#8220; support<a class="headerlink" href="#plan-to-add-ctypes-support" title="Permalink to this heading">&#61633;</a></h2>
 <p>Add interfacing to C code, so Nuitka can turn a <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> binding into
 an efficient binding as if it were written manually with Python C-API or
 better.</p>
 <section id="goals-allowances-to-the-task">
-<h3>Goals/Allowances to the task<a class="headerlink" href="#goals-allowances-to-the-task" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Goals/Allowances to the task<a class="headerlink" href="#goals-allowances-to-the-task" title="Permalink to this heading">&#61633;</a></h3>
 <ol class="arabic">
 <li><p>Goal: Must not directly use any pre-existing C/C++ language file
 headers, only generate declarations in generated C code ourselves. We
@@ -3002,7 +3004,7 @@ the same thing.</p>
 </ol>
 </section>
 <section id="type-inference-the-discussion">
-<h3>Type Inference - The Discussion<a class="headerlink" href="#type-inference-the-discussion" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Type Inference - The Discussion<a class="headerlink" href="#type-inference-the-discussion" title="Permalink to this heading">&#61633;</a></h3>
 <p>Main initial goal is to forward value knowledge. When you have <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span>
 <span class="pre">b</span></code>, that means that a and b now &#8222;alias&#8220;. And if you know the value of
 <code class="docutils literal notranslate"><span class="pre">b</span></code> you can assume to know the value of <code class="docutils literal notranslate"><span class="pre">a</span></code>. This is called
@@ -3127,7 +3129,7 @@ kinds of container creation and ranges.</p>
 </div>
 </section>
 <section id="applying-this-to-ctypes">
-<h3>Applying this to &#8222;ctypes&#8220;<a class="headerlink" href="#applying-this-to-ctypes" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Applying this to &#8222;ctypes&#8220;<a class="headerlink" href="#applying-this-to-ctypes" title="Permalink to this heading">&#61633;</a></h3>
 <p>The <em>not so specific</em> problem to be solved to understand <code class="docutils literal notranslate"><span class="pre">ctypes</span></code>
 declarations is maybe as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ctypes</span>
@@ -3185,7 +3187,7 @@ one design goal of Nuitka was always to cover these two cases with the
 same code.</p>
 </section>
 <section id="excursion-to-functions">
-<h3>Excursion to Functions<a class="headerlink" href="#excursion-to-functions" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Excursion to Functions<a class="headerlink" href="#excursion-to-functions" title="Permalink to this heading">&#61633;</a></h3>
 <p>In order to decide what this means to functions and their call
 boundaries, if we propagate forward, how to handle this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_append</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -3253,7 +3255,7 @@ that many of them.</p>
 and therefore long term. We will try it that way.</p>
 </section>
 <section id="excursion-to-loops">
-<h3>Excursion to Loops<a class="headerlink" href="#excursion-to-loops" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Excursion to Loops<a class="headerlink" href="#excursion-to-loops" title="Permalink to this heading">&#61633;</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># think loop: here</span>
@@ -3285,7 +3287,7 @@ unknown part of the loop entry state. The loop end is considered a
 <code class="docutils literal notranslate"><span class="pre">continue</span></code> for this purpose.</p>
 </section>
 <section id="excursion-to-conditions">
-<h3>Excursion to Conditions<a class="headerlink" href="#excursion-to-conditions" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Excursion to Conditions<a class="headerlink" href="#excursion-to-conditions" title="Permalink to this heading">&#61633;</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">cond</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">else</span><span class="p">:</span>
@@ -3358,7 +3360,7 @@ type list. With that knowledge the <code class="docutils literal notranslate"><s
 the <code class="docutils literal notranslate"><span class="pre">list</span></code> built-in type operation.</p>
 </section>
 <section id="excursion-to-return-statements">
-<h3>Excursion to <code class="docutils literal notranslate"><span class="pre">return</span></code> statements<a class="headerlink" href="#excursion-to-return-statements" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Excursion to <code class="docutils literal notranslate"><span class="pre">return</span></code> statements<a class="headerlink" href="#excursion-to-return-statements" title="Permalink to this heading">&#61633;</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">return</span></code> statement (like <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code>, <code class="docutils literal notranslate"><span class="pre">raise</span></code>) is
 &#8222;aborting&#8220; to control flow. It is always the last statement of inspected
 block. When there statements to follow it, optimization will remove it
@@ -3368,7 +3370,7 @@ is decided &#8222;aborting&#8220; too. If a loop doesn&#8217;t abort with a brea
 should be considered &#8222;aborting&#8220; too.</p>
 </section>
 <section id="excursion-to-yield-expressions">
-<h3>Excursion to <code class="docutils literal notranslate"><span class="pre">yield</span></code> expressions<a class="headerlink" href="#excursion-to-yield-expressions" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Excursion to <code class="docutils literal notranslate"><span class="pre">yield</span></code> expressions<a class="headerlink" href="#excursion-to-yield-expressions" title="Permalink to this heading">&#61633;</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">yield</span></code> expression can be treated like a normal function call, and
 as such invalidates some known constraints just as much as they do. It
 executes outside code for an unknown amount of time, and then returns,
@@ -3376,7 +3378,7 @@ with little about the outside world known anymore, if it&#8217;s accessible
 from there.</p>
 </section>
 <section id="mixed-types">
-<h3>Mixed Types<a class="headerlink" href="#mixed-types" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Mixed Types<a class="headerlink" href="#mixed-types" title="Permalink to this heading">&#61633;</a></h3>
 <p>Consider the following inside a function or module:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">cond</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">something</span><span class="p">()</span> <span class="k">if</span> <span class="n">cond</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
@@ -3415,7 +3417,7 @@ commonality between values.</p>
 </div>
 </section>
 <section id="back-to-ctypes">
-<h3>Back to &#8222;ctypes&#8220;<a class="headerlink" href="#back-to-ctypes" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Back to &#8222;ctypes&#8220;<a class="headerlink" href="#back-to-ctypes" title="Permalink to this heading">&#61633;</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -3428,7 +3430,7 @@ default. This should be enforced by a base class and give a warning or
 note.</p>
 </section>
 <section id="now-to-the-interface">
-<h3>Now to the interface<a class="headerlink" href="#now-to-the-interface" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Now to the interface<a class="headerlink" href="#now-to-the-interface" title="Permalink to this heading">&#61633;</a></h3>
 <p>The following is the intended interface:</p>
 <ul>
 <li><p>Iteration with node methods <code class="docutils literal notranslate"><span class="pre">computeStatement</span></code> and
@@ -3526,7 +3528,7 @@ afterwards.</p>
 </ul>
 </section>
 <section id="discussing-with-examples">
-<h3>Discussing with examples<a class="headerlink" href="#discussing-with-examples" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Discussing with examples<a class="headerlink" href="#discussing-with-examples" title="Permalink to this heading">&#61633;</a></h3>
 <p>The following examples:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assignment, the source decides the type of the assigned expression</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
@@ -3564,7 +3566,7 @@ considered known value again.</p>
 </div>
 </section>
 <section id="code-generation-impact">
-<h3>Code Generation Impact<a class="headerlink" href="#code-generation-impact" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Code Generation Impact<a class="headerlink" href="#code-generation-impact" title="Permalink to this heading">&#61633;</a></h3>
 <p>Right now, code generation assumes that everything is a <code class="docutils literal notranslate"><span class="pre">PyObject</span> <span class="pre">*</span></code>,
 i.e. a Python object, and does not take knowledge of <code class="docutils literal notranslate"><span class="pre">int</span></code> or other
 types into consideration at all, and it should remain like that for some
@@ -3590,12 +3592,12 @@ compiler performed its in-lining.</p>
 the history of values throughout a function or part of it.</p>
 </section>
 <section id="initial-implementation">
-<h3>Initial Implementation<a class="headerlink" href="#initial-implementation" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Initial Implementation<a class="headerlink" href="#initial-implementation" title="Permalink to this heading">&#61633;</a></h3>
 <p>The basic interface will be added to <em>all</em> expressions and a node may
 override it, potentially using trace collection state, as attached
 during <code class="docutils literal notranslate"><span class="pre">computeExpression</span></code>.</p>
 <section id="goal-1-reached">
-<h4>Goal 1 (Reached)<a class="headerlink" href="#goal-1-reached" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Goal 1 (Reached)<a class="headerlink" href="#goal-1-reached" title="Permalink to this heading">&#61633;</a></h4>
 <p>Initially most things will only be able to give up on about anything.
 And it will be little more than a tool to do simple look-ups in a
 general form. It will then be the first goal to turn the following code
@@ -3632,7 +3634,7 @@ into better performing one:</p>
 propagated at no cost.</p>
 </section>
 <section id="goal-2-reached">
-<h4>Goal 2 (Reached)<a class="headerlink" href="#goal-2-reached" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Goal 2 (Reached)<a class="headerlink" href="#goal-2-reached" title="Permalink to this heading">&#61633;</a></h4>
 <p>The assignments to <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code> shall all become prey to
 &#8222;unused&#8220; assignment analysis in the next step. They are all only
 assigned to, and the assignment source has no effect, so they can be
@@ -3680,7 +3682,7 @@ the other versions are also only assigned to, and can be removed. These
 merges of course appear as usages of the <code class="docutils literal notranslate"><span class="pre">x</span></code> versions.</p>
 </section>
 <section id="goal-3">
-<h4>Goal 3<a class="headerlink" href="#goal-3" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Goal 3<a class="headerlink" href="#goal-3" title="Permalink to this heading">&#61633;</a></h4>
 <p>Then third goal is to understand all of this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
@@ -3730,7 +3732,7 @@ constant value propagation in place, handle loops at least correctly,
 and while it is not much, it is important demonstration of the concept.</p>
 </section>
 <section id="goal-4">
-<h4>Goal 4<a class="headerlink" href="#goal-4" title="Link zu dieser &#220;berschrift">&#61633;</a></h4>
+<h4>Goal 4<a class="headerlink" href="#goal-4" title="Permalink to this heading">&#61633;</a></h4>
 <p>The fourth goal is to understand the following:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">cond</span><span class="p">):</span>
     <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
@@ -3783,7 +3785,7 @@ completely analyzed at compile time.</p>
 </section>
 </section>
 <section id="limitations-for-now">
-<h3>Limitations for now<a class="headerlink" href="#limitations-for-now" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Limitations for now<a class="headerlink" href="#limitations-for-now" title="Permalink to this heading">&#61633;</a></h3>
 <ul>
 <li><p>Aim only for limited examples. For <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> that means to compile
 time evaluate:</p>
@@ -3826,19 +3828,19 @@ should not block us.</p>
 </section>
 </section>
 <section id="how-to-make-features-experimental">
-<h2>How to make Features Experimental<a class="headerlink" href="#how-to-make-features-experimental" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>How to make Features Experimental<a class="headerlink" href="#how-to-make-features-experimental" title="Permalink to this heading">&#61633;</a></h2>
 <p>Every experimental feature needs a name. We have a rule to pick a name
 with lower case and <code class="docutils literal notranslate"><span class="pre">_</span></code> as separators. An example of with would be the
 name <code class="docutils literal notranslate"><span class="pre">jinja_generated_add</span></code> that has been used in the past.</p>
 <section id="command-line">
-<h3>Command Line<a class="headerlink" href="#command-line" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Command Line<a class="headerlink" href="#command-line" title="Permalink to this heading">&#61633;</a></h3>
 <p>Experimental features are enabled with the command line argument</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nuitka --experimental<span class="o">=</span>jinja_generated_add ...
 </pre></div>
 </div>
 </section>
 <section id="in-c-code">
-<h3>In C code<a class="headerlink" href="#in-c-code" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>In C code<a class="headerlink" href="#in-c-code" title="Permalink to this heading">&#61633;</a></h3>
 <p>In Scons, all experimental features automatically are converted into C
 defines, and can be used like this:</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifdef _NUITKA_EXPERIMENTAL_JINJA_GENERATED_ADD</span>
@@ -3852,7 +3854,7 @@ defines, and can be used like this:</p>
 usable.</p>
 </section>
 <section id="in-python">
-<h3>In Python<a class="headerlink" href="#in-python" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>In Python<a class="headerlink" href="#in-python" title="Permalink to this heading">&#61633;</a></h3>
 <p>You can query experimental features using <code class="docutils literal notranslate"><span class="pre">Options.isExperimental()</span></code>
 with e.g. code like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">Options</span><span class="o">.</span><span class="n">isExperimental</span><span class="p">(</span><span class="s2">"use_feature"</span><span class="p">):</span>
@@ -3863,7 +3865,7 @@ with e.g. code like this:</p>
 </div>
 </section>
 <section id="when-to-use-it">
-<h3>When to use it<a class="headerlink" href="#when-to-use-it" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>When to use it<a class="headerlink" href="#when-to-use-it" title="Permalink to this heading">&#61633;</a></h3>
 <p>Often we need to keep feature in parallel because they are not finished,
 or need to be tested after merge and should not break. Then we can do
 code changes that will not make a difference except when the
@@ -3873,7 +3875,7 @@ compiled, and very often, it is interesting to compare behavior with and
 without a change.</p>
 </section>
 <section id="when-to-remove-it">
-<h3>When to remove it<a class="headerlink" href="#when-to-remove-it" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>When to remove it<a class="headerlink" href="#when-to-remove-it" title="Permalink to this heading">&#61633;</a></h3>
 <p>When a feature becomes default, we might choose to keep the old variant
 around, but normally we do not. Then we remove the <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">#if</span></code>
 checks and drop the old code.</p>
@@ -3882,12 +3884,12 @@ of the code.</p>
 </section>
 </section>
 <section id="adding-dependencies-to-nuitka">
-<h2>Adding dependencies to Nuitka<a class="headerlink" href="#adding-dependencies-to-nuitka" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Adding dependencies to Nuitka<a class="headerlink" href="#adding-dependencies-to-nuitka" title="Permalink to this heading">&#61633;</a></h2>
 <p>First of all, there is an important distinction to make, runtime or
 development time. The first kind of dependency is used when Nuitka is
 executing.</p>
 <section id="adding-a-runtime-dependency">
-<h3>Adding a Runtime Dependency<a class="headerlink" href="#adding-a-runtime-dependency" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Adding a Runtime Dependency<a class="headerlink" href="#adding-a-runtime-dependency" title="Permalink to this heading">&#61633;</a></h3>
 <p>This is the kind of dependency that is the most scrutinized. As we want
 Nuitka to run on latest greatest Python as well as relatively old ones,
 we have to be very careful with these ones.</p>
@@ -3921,7 +3923,7 @@ with <code class="docutils literal notranslate"><span class="pre">@Nuitka-pusher
 </div>
 </section>
 <section id="adding-a-development-dependency">
-<h3>Adding a Development Dependency<a class="headerlink" href="#adding-a-development-dependency" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Adding a Development Dependency<a class="headerlink" href="#adding-a-development-dependency" title="Permalink to this heading">&#61633;</a></h3>
 <p>A typical example of a development dependency is <code class="docutils literal notranslate"><span class="pre">black</span></code> which is used
 by our autoformat tool, and then in turn by the git pre-commit hook. It
 is used to format source code, and doesn&#8217;t have a role at run time of
@@ -3947,7 +3949,7 @@ like <code class="docutils literal notranslate"><span class="pre">autoformat-nui
 </section>
 </section>
 <section id="idea-bin">
-<h2>Idea Bin<a class="headerlink" href="#idea-bin" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Idea Bin<a class="headerlink" href="#idea-bin" title="Permalink to this heading">&#61633;</a></h2>
 <p>This an area where to drop random ideas on our minds, to later sort it
 out, and out it into action, which could be code changes, plan changes,
 issues created, etc.</p>
@@ -4078,11 +4080,11 @@ module values are written to, that we don&#8217;t support.</p>
 </ul>
 </section>
 <section id="prongs-of-action">
-<h2>Prongs of Action<a class="headerlink" href="#prongs-of-action" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Prongs of Action<a class="headerlink" href="#prongs-of-action" title="Permalink to this heading">&#61633;</a></h2>
 <p>In this chapter, we keep track of prongs of action currently ongoing.
 This can get detailed and shows things we strive for.</p>
 <section id="builtin-optimization">
-<h3>Builtin optimization<a class="headerlink" href="#builtin-optimization" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Builtin optimization<a class="headerlink" href="#builtin-optimization" title="Permalink to this heading">&#61633;</a></h3>
 <p>Definitely want to get built-in names under full control, so that
 variable references to module variables do not have a twofold role.
 Currently they reference the module variable and also the potential
@@ -4096,7 +4098,7 @@ certain what is what there on module level, will enable more definitely
 knowledge about data flows and module interfaces.</p>
 </section>
 <section id="class-creation-overhead-reduction">
-<h3>Class Creation Overhead Reduction<a class="headerlink" href="#class-creation-overhead-reduction" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Class Creation Overhead Reduction<a class="headerlink" href="#class-creation-overhead-reduction" title="Permalink to this heading">&#61633;</a></h3>
 <p>This is more of a meta goal. Some work for the metaclass has already
 been done, but that is Python2 only currently. Being able to to decide
 built-ins and to distinguish between global only variables, and
@@ -4107,7 +4109,7 @@ creation function is also needed for this, but on Python3 cannot happen
 yet.</p>
 </section>
 <section id="memory-usage-at-compile-time">
-<h3>Memory Usage at Compile Time<a class="headerlink" href="#memory-usage-at-compile-time" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Memory Usage at Compile Time<a class="headerlink" href="#memory-usage-at-compile-time" title="Permalink to this heading">&#61633;</a></h3>
 <p>We will need to store more and more information in the future. Getting
 the tree to be tight shaped is therefore an effort, where we will be
 spending time too.</p>
@@ -4117,13 +4119,13 @@ thinking of even generating code in the meta class, so it&#8217;s both optimal
 and doesn&#8217;t need that mix-in any more. This is going to be ugly then.</p>
 </section>
 <section id="coverage-testing">
-<h3>Coverage Testing<a class="headerlink" href="#coverage-testing" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Coverage Testing<a class="headerlink" href="#coverage-testing" title="Permalink to this heading">&#61633;</a></h3>
 <p>And then there is coverage, it should be taken and merged from all
 Python versions and OSes, but I never managed to merge between Windows
 and Linux for unknown reasons.</p>
 </section>
 <section id="python3-performance">
-<h3>Python3 Performance<a class="headerlink" href="#python3-performance" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Python3 Performance<a class="headerlink" href="#python3-performance" title="Permalink to this heading">&#61633;</a></h3>
 <p>The Python3 lock for thread state is making it slower by a lot. I have
 only experimental code that just ignores the lock, but it likely only
 works on Linux, and I wonder why there is that lock in the first place.</p>
@@ -4137,14 +4139,14 @@ restoring an exception will be much faster, not to mention checking and
 dropping non interesting, or rewriting exceptions.</p>
 </section>
 <section id="caching-of-python-level-compilation">
-<h3>Caching of Python level compilation<a class="headerlink" href="#caching-of-python-level-compilation" title="Link zu dieser &#220;berschrift">&#61633;</a></h3>
+<h3>Caching of Python level compilation<a class="headerlink" href="#caching-of-python-level-compilation" title="Permalink to this heading">&#61633;</a></h3>
 <p>While the C compilation result is already cached with <cite>ccache</cite> and
 friends now, we need to also cover our bases and save the resulting node
 tree of potential expensive optimization on the module level.</p>
 </section>
 </section>
 <section id="updates-for-this-manual">
-<h2>Updates for this Manual<a class="headerlink" href="#updates-for-this-manual" title="Link zu dieser &#220;berschrift">&#61633;</a></h2>
+<h2>Updates for this Manual<a class="headerlink" href="#updates-for-this-manual" title="Permalink to this heading">&#61633;</a></h2>
 <p>This document is written in REST. That is an ASCII format which is
 readable to human, but easily used to generate PDF or HTML documents.</p>
 <p>You will find the current source under:
@@ -4218,8 +4220,8 @@ readable to human, but easily used to generate PDF or HTML documents.</p>
             <div class="sd-summary-content sd-card-body switcher-body docutils">
                 <blockquote>
                     <div>
-                        <div><div class="line"><a class="reference external" href="/developer-manual.html">EN</a></div>
-                            <div class="line"><a class="reference external" href="/zh_CN/developer-manual.html">CN</a></div>
+                        <div><div class="line"><a class="reference external" href="/zh_CN/developer-manual.html">CN</a></div>
+                            <div class="line"><a class="reference external" href="/developer-manual.html">EN</a></div>
                             </div></div>
                 </blockquote>
             </div>
